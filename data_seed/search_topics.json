@@ -1,0 +1,50 @@
+{
+  "_doc": "논문(OpenAlex)·특허(KIPRIS) 수집 에이전트 공용 검색주제. 원칙: 7개 연구소 기술도메인 × 물(water) 결합. K-water 소속 문서 + 관련 트렌드·위크시그널 문서를 함께 수집. 키워드 추가는 배열에 append만 하면 됨.",
+  "_version": "2026-07-13",
+  "kwater_affiliation": {
+    "openalex_ror": "04dtgat87",
+    "kipris_applicant": ["한국수자원공사", "케이워터", "K-water"]
+  },
+  "institutes": [
+    {
+      "code": "INST-01", "name_ko": "경영연구소", "name_en": "Management Research Institute",
+      "openalex_keywords": ["water utility management", "water policy governance", "water economics pricing", "water industry innovation", "integrated water resources management policy"],
+      "kipris_keywords": ["물관리 정책", "물산업", "수도 요금", "물 거버넌스", "물시장"]
+    },
+    {
+      "code": "INST-02", "name_ko": "수자원환경연구소", "name_en": "Water Resources & Environment Research Institute",
+      "openalex_keywords": ["water resources hydrology", "watershed management", "river water quality", "harmful algal bloom reservoir", "aquatic ecosystem restoration", "drought flood risk water"],
+      "kipris_keywords": ["수자원 관리", "유역 관리", "하천 수질", "녹조 저감", "수생태 복원", "가뭄 홍수 예측"]
+    },
+    {
+      "code": "INST-03", "name_ko": "상하수도연구소", "name_en": "Water Supply & Sewerage Research Institute",
+      "openalex_keywords": ["drinking water treatment", "water distribution network", "membrane filtration water", "sewage wastewater treatment", "water quality sensor pipeline", "non-revenue water leakage"],
+      "kipris_keywords": ["정수 처리", "상수도 관망", "막여과 수처리", "하수 처리", "수질 센서", "누수 탐지 상수도"]
+    },
+    {
+      "code": "INST-04", "name_ko": "물인프라안전연구소", "name_en": "Water Infrastructure Safety Research Institute",
+      "openalex_keywords": ["dam safety monitoring", "water infrastructure resilience", "pipeline structural health water", "seismic safety dam", "aging water infrastructure", "levee embankment safety"],
+      "kipris_keywords": ["댐 안전 계측", "수리시설 안전", "상수관로 진단", "내진 댐", "노후 관로", "제방 안전"]
+    },
+    {
+      "code": "INST-05", "name_ko": "물에너지연구소", "name_en": "Water Energy Research Institute",
+      "openalex_keywords": ["hydropower generation", "pumped storage hydropower", "floating photovoltaic reservoir", "small hydro turbine", "water energy nexus", "green hydrogen water"],
+      "kipris_keywords": ["수력 발전", "양수 발전", "수상 태양광", "소수력 터빈", "물 에너지", "수전해 수소"]
+    },
+    {
+      "code": "INST-06", "name_ko": "수자원위성연구소", "name_en": "Water Resources Satellite Research Institute",
+      "openalex_keywords": ["satellite remote sensing water", "SAR flood mapping", "water body detection satellite", "soil moisture satellite", "river discharge remote sensing", "water quality remote sensing"],
+      "kipris_keywords": ["위성 수자원", "SAR 홍수 탐지", "수체 탐지 위성", "토양 수분 위성", "원격탐사 수질"]
+    },
+    {
+      "code": "INST-07", "name_ko": "AI연구소", "name_en": "AI Research Institute",
+      "openalex_keywords": ["machine learning hydrology", "deep learning water quality prediction", "digital twin water system", "AI water management", "large language model water", "anomaly detection water infrastructure"],
+      "kipris_keywords": ["인공지능 물관리", "딥러닝 수질 예측", "디지털트윈 물", "머신러닝 수문", "스마트 물관리 AI"]
+    }
+  ],
+  "collection_scope": {
+    "years": [2020, 2026],
+    "purpose": ["k-water 소속 성과", "관련 기술 트렌드", "위크 시그널 탐지", "협업 후보 기관 발굴"],
+    "note": "1차: 소속(ROR/출원인) 기준 전수 + 2차: 위 키워드 기준 관련 문헌. 기사 파이프라인도 동일 키워드 재사용."
+  }
+}
