@@ -28,7 +28,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="🛰️",
                    layout="wide", initial_sidebar_state="expanded")
 
-GITHUB_REPO = "newcave/newcave/water-tech-agent"   # 클라우드 모드에서 data_seed/ft_logs를 읽을 repo
+GITHUB_REPO = "newcave/water-tech-agent"   # 클라우드 모드에서 data_seed/ft_logs를 읽을 repo
 LOCAL_SEED = Path("data_seed")
 
 INST_COLORS = {"INST-01": "#8b5cf6", "INST-02": "#0ea5e9", "INST-03": "#10b981",
