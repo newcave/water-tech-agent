@@ -249,7 +249,7 @@ elif page == "🏢 7개 연구소":
 
 # ═══════════════ 페이지 4: FT 모니터 ═══════════════
 elif page == "🔥 FT 모니터":
-    st.markdown("### 🔥 파인튜닝 학습 모니터 (코랩 A100)")
+    st.markdown("### 🔥 파인튜닝 학습 모니터 (코랩 GPU)")
     runs = load_ft_runs()
     if not runs:
         st.info("아직 학습 run이 없습니다. 코랩에서 colab_train_kwater.ipynb를 실행하면 "
