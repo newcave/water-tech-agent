@@ -1,0 +1,6 @@
+{"event": "start", "model": "smoke-test/plumbing-check", "ts": 1783868777}
+{"ts": 1783868837, "step": 10, "loss": 2.5}
+{"ts": 1783868897, "step": 20, "loss": 2.1}
+{"ts": 1783868957, "step": 30, "loss": 1.85, "eval_loss": 1.95}
+{"ts": 1783869017, "step": 40, "loss": 1.7, "eval_loss": 1.8}
+{"event": "end", "ts": 1783869077}
