@@ -1,0 +1,368 @@
+[
+ {
+  "cid": "X:kwater",
+  "name": "K-water internal DBs",
+  "avail": "internal_only",
+  "n_docs": 62,
+  "n_inst": 7,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-04",
+   "INST-05",
+   "INST-06",
+   "INST-07"
+  ]
+ },
+ {
+  "cid": "WEIS",
+  "name": "물환경정보시스템",
+  "avail": "open",
+  "n_docs": 21,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "KMA_ASOS",
+  "name": "기상청 종관기상관측",
+  "avail": "open",
+  "n_docs": 20,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "WAMIS",
+  "name": "국가수자원관리종합정보시스템",
+  "avail": "open",
+  "n_docs": 19,
+  "n_inst": 5,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "MODIS",
+  "name": "MODIS 위성영상",
+  "avail": "open",
+  "n_docs": 19,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "MyWater",
+  "name": "물정보포털",
+  "avail": "open",
+  "n_docs": 17,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "SCADA",
+  "name": "수도 SCADA 운영데이터",
+  "avail": "internal_only",
+  "n_docs": 13,
+  "n_inst": 6,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06",
+   "INST-07"
+  ]
+ },
+ {
+  "cid": "X:kwaterinternaldbs",
+  "name": "K-water internal DBs",
+  "avail": "internal_only",
+  "n_docs": 13,
+  "n_inst": 6,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-04",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "Landsat",
+  "name": "Landsat 위성영상",
+  "avail": "open",
+  "n_docs": 12,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "Sentinel",
+  "name": "Sentinel 위성영상",
+  "avail": "open",
+  "n_docs": 12,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "X:kma",
+  "name": "KMA",
+  "avail": "open",
+  "n_docs": 11,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-04",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "RWIS",
+  "name": "실시간수도정보시스템",
+  "avail": "internal_only",
+  "n_docs": 10,
+  "n_inst": 3,
+  "institutes": [
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "X:kwater내부db",
+  "name": "K-water 내부 DB",
+  "avail": "internal_only",
+  "n_docs": 10,
+  "n_inst": 5,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-04",
+   "INST-05"
+  ]
+ },
+ {
+  "cid": "X:null",
+  "name": "금강수계 생명잇기를 위한 멸종위기어류 복원 용역(2차년)",
+  "avail": "internal_only",
+  "n_docs": 9,
+  "n_inst": 3,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-04"
+  ]
+ },
+ {
+  "cid": "GIMS",
+  "name": "국가지하수정보센터",
+  "avail": "open",
+  "n_docs": 9,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "KOSIS",
+  "name": "국가통계포털",
+  "avail": "open",
+  "n_docs": 9,
+  "n_inst": 4,
+  "institutes": [
+   "INST-01",
+   "INST-02",
+   "INST-03",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "X:hspf",
+  "name": "HSPF (Hydrological Simulation Program - FORTRAN)",
+  "avail": "internal_only",
+  "n_docs": 8,
+  "n_inst": 2,
+  "institutes": [
+   "INST-02",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "HDAPS",
+  "name": "수문자료관리시스템",
+  "avail": "internal_only",
+  "n_docs": 6,
+  "n_inst": 4,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-05",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "X:waternet",
+  "name": "water-NET",
+  "avail": "internal_only",
+  "n_docs": 5,
+  "n_inst": 1,
+  "institutes": [
+   "INST-03"
+  ]
+ },
+ {
+  "cid": "X:iwater",
+  "name": "i-water",
+  "avail": "internal_only",
+  "n_docs": 5,
+  "n_inst": 3,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-07"
+  ]
+ },
+ {
+  "cid": "X:aem3d",
+  "name": "AEM3D 수질모델",
+  "avail": "internal_only",
+  "n_docs": 5,
+  "n_inst": 1,
+  "institutes": [
+   "INST-02"
+  ]
+ },
+ {
+  "cid": "X:kwaterdb",
+  "name": "K-water internal DB",
+  "avail": "internal_only",
+  "n_docs": 4,
+  "n_inst": 2,
+  "institutes": [
+   "INST-02",
+   "INST-04"
+  ]
+ },
+ {
+  "cid": "RIVER_BASIC_PLAN",
+  "name": "하천기본계획 보고서(문헌자료)",
+  "avail": "restricted",
+  "n_docs": 4,
+  "n_inst": 1,
+  "institutes": [
+   "INST-02"
+  ]
+ },
+ {
+  "cid": "X:cequalw2",
+  "name": "CE-QUAL-W2",
+  "avail": "open",
+  "n_docs": 4,
+  "n_inst": 2,
+  "institutes": [
+   "INST-02",
+   "INST-06"
+  ]
+ },
+ {
+  "cid": "X:waterqualitymonitoringdata",
+  "name": "Water quality monitoring data",
+  "avail": "unclear",
+  "n_docs": 3,
+  "n_inst": 2,
+  "institutes": [
+   "INST-02",
+   "INST-03"
+  ]
+ },
+ {
+  "cid": "X:gwi",
+  "name": "GWI",
+  "avail": "open",
+  "n_docs": 3,
+  "n_inst": 1,
+  "institutes": [
+   "INST-01"
+  ]
+ },
+ {
+  "cid": "X:cosfim",
+  "name": "COSFIM",
+  "avail": "internal_only",
+  "n_docs": 3,
+  "n_inst": 1,
+  "institutes": [
+   "INST-02"
+  ]
+ },
+ {
+  "cid": "X:충주댐",
+  "name": "충주댐",
+  "avail": "internal_only",
+  "n_docs": 3,
+  "n_inst": 1,
+  "institutes": [
+   "INST-02"
+  ]
+ },
+ {
+  "cid": "X:주암댐",
+  "name": "주암댐",
+  "avail": "internal_only",
+  "n_docs": 3,
+  "n_inst": 1,
+  "institutes": [
+   "INST-02"
+  ]
+ },
+ {
+  "cid": "X:gist",
+  "name": "GIST",
+  "avail": "internal_only",
+  "n_docs": 3,
+  "n_inst": 3,
+  "institutes": [
+   "INST-02",
+   "INST-03",
+   "INST-07"
+  ]
+ }
+]

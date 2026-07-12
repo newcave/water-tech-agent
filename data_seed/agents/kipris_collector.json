@@ -1,0 +1,16 @@
+{
+ "agent": "kipris_collector",
+ "state": "standby",
+ "summary": "특허 수집(KIPRIS) — 출원인 한국수자원공사",
+ "counts": {
+  "수집 특허": 0
+ },
+ "last_run": 1783865336.8415148,
+ "next_run": "키 승인 후",
+ "events": [
+  {
+   "ts": 1783861736.8415148,
+   "msg": "data.go.kr 서비스키 신청 대기"
+  }
+ ]
+}

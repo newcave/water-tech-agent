@@ -1,0 +1,221 @@
+{
+ "generated_at": 1783865336.8415148,
+ "totals": {
+  "alio_collected": 121,
+  "alio_parsed_ok": 105,
+  "alio_errors": 16,
+  "mentions": 1695,
+  "unique_datasources": 1285,
+  "papers": 0,
+  "patents": 0
+ },
+ "inst_docs": {
+  "INST-01": 8,
+  "INST-02": 49,
+  "INST-03": 15,
+  "INST-04": 7,
+  "INST-05": 9,
+  "INST-06": 8,
+  "INST-07": 3
+ },
+ "inst_names": {
+  "INST-01": "경영연구소",
+  "INST-02": "수자원환경연구소",
+  "INST-03": "상하수도연구소",
+  "INST-04": "물인프라안전연구소",
+  "INST-05": "물에너지연구소",
+  "INST-06": "수자원위성연구소",
+  "INST-07": "AI연구소"
+ },
+ "inst_top_ds": {
+  "INST-02": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 26
+   },
+   {
+    "cid": "WEIS",
+    "name": "물환경정보시스템",
+    "n": 17
+   },
+   {
+    "cid": "WAMIS",
+    "name": "국가수자원관리종합정보시스템",
+    "n": 15
+   },
+   {
+    "cid": "KMA_ASOS",
+    "name": "기상청 종관기상관측",
+    "n": 12
+   },
+   {
+    "cid": "MyWater",
+    "name": "물정보포털",
+    "n": 10
+   }
+  ],
+  "INST-07": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 2
+   },
+   {
+    "cid": "X:citygml",
+    "name": "CityGML",
+    "n": 1
+   },
+   {
+    "cid": "X:sensorthingsapi",
+    "name": "SensorThings API",
+    "n": 1
+   },
+   {
+    "cid": "X:restfulapi",
+    "name": "RESTful API",
+    "n": 1
+   },
+   {
+    "cid": "X:smartvillageai·iotdatacenter",
+    "name": "Smart Village AI·IoT Data Center",
+    "n": 1
+   }
+  ],
+  "INST-03": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 10
+   },
+   {
+    "cid": "SCADA",
+    "name": "수도 SCADA 운영데이터",
+    "n": 7
+   },
+   {
+    "cid": "RWIS",
+    "name": "실시간수도정보시스템",
+    "n": 5
+   },
+   {
+    "cid": "X:waternet",
+    "name": "water-NET",
+    "n": 5
+   },
+   {
+    "cid": "X:null",
+    "name": "금강수계 생명잇기를 위한 멸종위기어류 복원 용역(2차년)",
+    "n": 3
+   }
+  ],
+  "INST-01": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 5
+   },
+   {
+    "cid": "X:gwi",
+    "name": "GWI",
+    "n": 4
+   },
+   {
+    "cid": "SCADA",
+    "name": "수도 SCADA 운영데이터",
+    "n": 2
+   },
+   {
+    "cid": "X:mdpi",
+    "name": "MDPI",
+    "n": 2
+   },
+   {
+    "cid": "X:mrc",
+    "name": "Mekong River Commission",
+    "n": 2
+   }
+  ],
+  "INST-06": [
+   {
+    "cid": "Sentinel",
+    "name": "Sentinel 위성영상",
+    "n": 13
+   },
+   {
+    "cid": "MODIS",
+    "name": "MODIS 위성영상",
+    "n": 10
+   },
+   {
+    "cid": "KMA_ASOS",
+    "name": "기상청 종관기상관측",
+    "n": 7
+   },
+   {
+    "cid": "Landsat",
+    "name": "Landsat 위성영상",
+    "n": 7
+   },
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 6
+   }
+  ],
+  "INST-05": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 7
+   },
+   {
+    "cid": "SCADA",
+    "name": "수도 SCADA 운영데이터",
+    "n": 2
+   },
+   {
+    "cid": "GIMS",
+    "name": "국가지하수정보센터",
+    "n": 2
+   },
+   {
+    "cid": "X:kwater내부db",
+    "name": "K-water 내부 DB",
+    "n": 2
+   },
+   {
+    "cid": "KMA_ASOS",
+    "name": "기상청 종관기상관측",
+    "n": 2
+   }
+  ],
+  "INST-04": [
+   {
+    "cid": "X:kwater",
+    "name": "K-water internal DBs",
+    "n": 3
+   },
+   {
+    "cid": "X:life365",
+    "name": "Life-365",
+    "n": 2
+   },
+   {
+    "cid": "X:가상현실을이용한kwater건설현장안전사고예방기술연구",
+    "name": "가상현실을 이용한 K-water 건설현장 안전사고 예방기술 연구",
+    "n": 1
+   },
+   {
+    "cid": "X:kwaterdb",
+    "name": "K-water internal DB",
+    "n": 1
+   },
+   {
+    "cid": "X:vrsafetytrainingcontent",
+    "name": "VR safety training content",
+    "n": 1
+   }
+  ]
+ }
+}

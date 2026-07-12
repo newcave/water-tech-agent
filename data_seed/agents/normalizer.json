@@ -1,0 +1,17 @@
+{
+ "agent": "normalizer",
+ "state": "idle",
+ "summary": "정규화(5단계) — 인벤토리 dim/fact 생성",
+ "counts": {
+  "고유 데이터소스": 1285,
+  "연구소 협업 edge": 21
+ },
+ "last_run": 1783865336.8415148,
+ "next_run": null,
+ "events": [
+  {
+   "ts": 1783796936.8415148,
+   "msg": "canonical 정규화: 고유 소스 1285개"
+  }
+ ]
+}

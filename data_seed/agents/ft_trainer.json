@@ -1,0 +1,16 @@
+{
+ "agent": "ft_trainer",
+ "state": "standby",
+ "summary": "FT 학습(코랩 A100, KONI/Qwen QLoRA)",
+ "counts": {
+  "학습 run": 0
+ },
+ "last_run": 1783865336.8415148,
+ "next_run": "코랩 세션 시작 시",
+ "events": [
+  {
+   "ts": 1783863536.8415148,
+   "msg": "학습 노트북·모니터 배치 완료, run_001 대기"
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+[
+ {
+  "src": "INST-02",
+  "dst": "INST-03",
+  "w": 22
+ },
+ {
+  "src": "INST-02",
+  "dst": "INST-06",
+  "w": 19
+ },
+ {
+  "src": "INST-02",
+  "dst": "INST-05",
+  "w": 18
+ },
+ {
+  "src": "INST-03",
+  "dst": "INST-05",
+  "w": 15
+ },
+ {
+  "src": "INST-03",
+  "dst": "INST-06",
+  "w": 14
+ },
+ {
+  "src": "INST-05",
+  "dst": "INST-06",
+  "w": 14
+ },
+ {
+  "src": "INST-02",
+  "dst": "INST-07",
+  "w": 11
+ },
+ {
+  "src": "INST-03",
+  "dst": "INST-07",
+  "w": 10
+ },
+ {
+  "src": "INST-02",
+  "dst": "INST-04",
+  "w": 8
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-02",
+  "w": 7
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-03",
+  "w": 6
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-05",
+  "w": 5
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-06",
+  "w": 5
+ },
+ {
+  "src": "INST-03",
+  "dst": "INST-04",
+  "w": 4
+ },
+ {
+  "src": "INST-04",
+  "dst": "INST-05",
+  "w": 4
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-04",
+  "w": 3
+ },
+ {
+  "src": "INST-04",
+  "dst": "INST-06",
+  "w": 3
+ },
+ {
+  "src": "INST-01",
+  "dst": "INST-07",
+  "w": 2
+ },
+ {
+  "src": "INST-04",
+  "dst": "INST-07",
+  "w": 2
+ },
+ {
+  "src": "INST-05",
+  "dst": "INST-07",
+  "w": 2
+ },
+ {
+  "src": "INST-06",
+  "dst": "INST-07",
+  "w": 2
+ }
+]

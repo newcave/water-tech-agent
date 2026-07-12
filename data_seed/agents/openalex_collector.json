@@ -1,0 +1,16 @@
+{
+ "agent": "openalex_collector",
+ "state": "standby",
+ "summary": "논문 수집(OpenAlex) — K-water 소속(ROR 04dtgat87)+물 주제",
+ "counts": {
+  "수집 논문": 0
+ },
+ "last_run": 1783865336.8415148,
+ "next_run": "홈서버 스케줄 등록 예정",
+ "events": [
+  {
+   "ts": 1783861736.8415148,
+   "msg": "수집기 코드 배치 완료, 첫 실행 대기"
+  }
+ ]
+}
