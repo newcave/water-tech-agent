@@ -30,7 +30,7 @@ st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="�
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.0 · 2026-07-13"
+APP_VERSION = "v2.2 · 2026-07-13"
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -57,13 +57,21 @@ STATE_LABEL = {"run": ("가동 중", GREEN), "idle": ("정상 대기", GREEN),
 st.markdown("""<style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun Gothic',sans-serif;}
-.stApp {background:#F4F7FB;}
+.stApp {background:#F3F7FC;}
+[data-testid="stSidebar"] {background:linear-gradient(180deg,#17549A 0%,#3E8ED0 100%);}
+[data-testid="stSidebar"] * {color:#fff !important;}
+[data-testid="stSidebar"] label[data-baseweb="radio"] {background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.28); border-radius:12px; padding:9px 12px;
+  margin-bottom:7px; width:100%;}
+[data-testid="stSidebar"] label[data-baseweb="radio"]:has(input:checked)
+  {background:rgba(255,255,255,.30); font-weight:700;}
+[data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
 .block-container {padding-top:1.1rem; max-width:1500px;}
 
 /* 헤더 밴드 */
-.hdr {background:linear-gradient(100deg,#0A3D74 0%,#0B5FAE 62%,#1FA8C9 100%);
+.hdr {background:linear-gradient(100deg,#0F3A73 0%,#17549A 55%,#2E77C6 100%);
       border-radius:16px; padding:20px 26px; color:#fff; margin-bottom:16px;
-      box-shadow:0 6px 18px rgba(10,61,116,.25);}
+      box-shadow:0 6px 18px rgba(15,58,115,.25);}
 .hdr .org {font-size:.8rem; letter-spacing:.14em; opacity:.85; font-weight:500;}
 .hdr .ttl {font-size:1.5rem; font-weight:900; margin-top:2px;}
 .hdr .sub {font-size:.85rem; opacity:.85; margin-top:4px;}
@@ -72,18 +80,18 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 
 /* KPI 카드 */
 .kpis {display:flex; gap:12px; flex-wrap:wrap; margin-bottom:4px;}
-.kpi {flex:1 1 150px; background:#fff; border:1px solid #E3EAF3; border-radius:14px;
-      padding:14px 16px; box-shadow:0 2px 6px rgba(15,40,80,.05);}
+.kpi {flex:1 1 150px; background:#fff; border:1px solid #E8EBF8; border-radius:14px;
+      padding:14px 16px; box-shadow:0 3px 8px rgba(15,58,115,.08); border-left:6px solid #17549A;}
 .kpi .k-lab {font-size:.78rem; color:#64748B; font-weight:500;}
-.kpi .k-val {font-size:1.55rem; font-weight:900; color:#0A3D74; line-height:1.25;}
+.kpi .k-val {font-size:1.7rem; font-weight:900; color:#17427C; line-height:1.2;}
 .kpi .k-sub {font-size:.74rem; color:#94A3B8; margin-top:2px;}
 
 /* 파이프라인 플로우 */
 .flow {display:flex; align-items:stretch; gap:0; overflow-x:auto; padding:4px 0 8px;}
 .stage {background:#fff; border:1px solid #E3EAF3; border-radius:12px; padding:10px 14px;
         min-width:128px; text-align:center; box-shadow:0 2px 5px rgba(15,40,80,.05);}
-.stage .s-t {font-size:.8rem; font-weight:700; color:#0A3D74;}
-.stage .s-v {font-size:.95rem; font-weight:900; color:#0B5FAE; margin-top:2px;}
+.stage .s-t {font-size:.8rem; font-weight:700; color:#17427C;}
+.stage .s-v {font-size:.95rem; font-weight:900; color:#2E77C6; margin-top:2px;}
 .stage .s-s {font-size:.7rem; color:#94A3B8;}
 .arr {align-self:center; color:#9DB6D4; font-weight:900; padding:0 7px; font-size:1.05rem;}
 
@@ -110,10 +118,14 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 .feed .t {color:#5B7A9D;}
 .feed .a {color:#7FD1E8; font-weight:700;}
 
-.sect {font-size:1.02rem; font-weight:800; color:#0A3D74; margin:6px 0 8px;}
+.sect {font-size:1.02rem; font-weight:800; color:#17427C; margin:6px 0 8px;}
 .note {color:#94A3B8; font-size:.78rem;}
 .card {background:#fff; border:1px solid #E3EAF3; border-radius:14px; padding:14px 16px;
        box-shadow:0 2px 6px rgba(15,40,80,.05);}
+.livedot {display:inline-block; width:8px; height:8px; border-radius:50%;
+  background:#3DDC84; animation:pulse 1.6s infinite; margin:0 4px 1px 2px;}
+.gchip {font-size:.66rem; background:#EAF1FA; color:#17549A; border-radius:6px;
+  padding:1px 7px; margin-left:6px; font-weight:700; vertical-align:middle;}
 .ftr {text-align:center; color:#94A3B8; font-size:.75rem; margin-top:22px;}
 </style>""", unsafe_allow_html=True)
 
@@ -274,6 +286,17 @@ n_run = sum(1 for a in agents.values() if state_of(a) == "run")
 n_idle = sum(1 for a in agents.values() if state_of(a) == "idle")
 n_wait = len(agents) - n_run - n_idle
 
+
+def next_heartbeat_kst() -> str:
+    """GitHub Actions cron(17 */6 UTC) 기준 다음 심박 시각(KST)."""
+    u = dt.datetime.now(dt.timezone.utc)
+    cand = u.replace(minute=17, second=0, microsecond=0, hour=(u.hour // 6) * 6)
+    if cand <= u:
+        cand += dt.timedelta(hours=6)
+    return (cand + dt.timedelta(hours=9)).strftime("%H:%M")
+
+last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
+
 # ═══════════════════════ 사이드바 ═══════════════════════
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
@@ -294,7 +317,9 @@ st.markdown(f"""<div class="hdr">
     <span class="badge">🟢 가동 {n_run}</span>
     <span class="badge">🟡 대기·예정 {n_wait}</span>
     <span class="badge">에이전트 {len(agents)}</span>
-    <span class="badge">🕐 {dt.datetime.now().strftime('%m-%d %H:%M')}</span>
+    <span class="badge"><span class="livedot"></span>LIVE · 30초 갱신</span>
+    <span class="badge">💓 최근 심박 {ago(last_hb)}</span>
+    <span class="badge">⏱️ 다음 자율심박 ~{next_heartbeat_kst()} KST</span>
   </div></div>""", unsafe_allow_html=True)
 
 # ═══════════════ 페이지 1: 관제센터 ═══════════════
@@ -308,9 +333,11 @@ if page == "🛰️ 관제센터":
         ("특허 KIPRIS", f"{T.get('patents', 0)}건", "키 승인 대기"),
         ("기사·아티클", f"{T.get('articles', 0)}건", "파이프라인 설계"),
     ]
+    ACC = ["#17549A", "#2E77C6", "#3B82F6", "#C0392B", "#1E8449", "#0EA5E9"]
     st.markdown('<div class="kpis">' + "".join(
-        f'<div class="kpi"><div class="k-lab">{k}</div><div class="k-val">{v}</div>'
-        f'<div class="k-sub">{s}</div></div>' for k, v, s in kpis) + "</div>",
+        f'<div class="kpi" style="border-left-color:{ACC[i % len(ACC)]}">'
+        f'<div class="k-val">{v}</div><div class="k-lab">{k}</div>'
+        f'<div class="k-sub">{s}</div></div>' for i, (k, v, s) in enumerate(kpis)) + "</div>",
         unsafe_allow_html=True)
 
     # 파이프라인 플로우 — "에이전트가 돌아가는 이미지"
@@ -346,7 +373,7 @@ if page == "🛰️ 관제센터":
             nxt = f"다음: {a['next_run']}" if a.get("next_run") else ""
             cards += f"""<div class="agent" style="border-left-color:{color}">
               <div class="a-top">
-                <span class="a-name">{meta['icon']} {meta['ko']} <span class="a-id">{name}</span></span>
+                <span class="a-name">{meta['icon']} {meta['ko']} <span class="a-id">{name}</span><span class="gchip">{meta.get('grp','')}</span></span>
                 <span class="pill" style="background:{color}1A;color:{color}">
                   <span class="pulse {on}" style="background:{color}"></span>{label}</span>
               </div>
@@ -360,16 +387,19 @@ if page == "🛰️ 관제센터":
                     unsafe_allow_html=True)
 
     with right:
-        st.markdown('<div class="sect">활동 피드</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sect">활동 피드 <span class="livedot"></span>'
+                    '<span style="font-size:.72rem;color:#1E8449;font-weight:800">LIVE</span></div>',
+                    unsafe_allow_html=True)
         events = []
         for name, a in agents.items():
             for e in (a.get("events") or []):
                 events.append((e.get("ts", 0), name, e.get("msg", "")))
         events.sort(reverse=True)
         rows = "".join(
-            f'<div><span class="t">[{dt.datetime.fromtimestamp(ts).strftime("%m-%d %H:%M")}]</span> '
+            f'<div{" style=\"background:rgba(127,209,232,.14);border-radius:6px;padding:1px 5px\"" if i == 0 else ""}>'
+            f'<span class="t">[{dt.datetime.fromtimestamp(ts).strftime("%m-%d %H:%M")}]</span> '
             f'<span class="a">{AGENT_META.get(n, {}).get("icon", "")} {n}</span> ▸ {m}</div>'
-            for ts, n, m in events[:50])
+            for i, (ts, n, m) in enumerate(events[:50]))
         st.markdown(f'<div class="feed">{rows or "이벤트 없음"}</div>', unsafe_allow_html=True)
         st.markdown('<div class="note" style="margin-top:6px">에이전트가 report() 한 줄로 status를 '
                     'push하면 이 콘솔에 실시간으로 흐릅니다.</div>', unsafe_allow_html=True)
