@@ -1,12 +1,12 @@
 {
  "agent": "openalex_collector",
  "state": "idle",
- "summary": "OpenAlex 실측 감시 — K-water 논문 0건(2020~) · 7개 소 키워드 트렌드 추적",
+ "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 0건(2020~) · 7개 소 키워드 트렌드 추적",
  "counts": {
   "K-water 논문(실측)": 0,
-  "관련논문(최근1년)": 13696
+  "관련논문(최근1년)": 13720
  },
- "last_run": 1783902103,
+ "last_run": 1783936152,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
   {
@@ -16,6 +16,10 @@
   {
    "ts": 1783902103,
    "msg": "☁️ 정기 실측 — K-water 0건 · 관련(최근1년) 13,696건"
+  },
+  {
+   "ts": 1783936152,
+   "msg": "☁️ 정기 실측 — K-water 0건 · 관련(최근1년) 13,720건 · 일부 오류 1"
   }
  ]
 }
