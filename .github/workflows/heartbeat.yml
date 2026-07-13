@@ -1,0 +1,46 @@
+name: agents-heartbeat
+
+# 컴퓨터 없이 GitHub 서버가 6시간마다 에이전트를 깨움 (+ Actions 탭에서 수동 실행 가능)
+on:
+  schedule:
+    - cron: "17 */6 * * *"      # 매 6시간 (17분 — 정시 혼잡 회피, UTC 기준)
+  workflow_dispatch: {}          # Actions 탭의 "Run workflow" 버튼
+
+permissions:
+  contents: write                # data_seed 커밋용 (자동 제공 GITHUB_TOKEN 사용, PAT 불필요)
+
+concurrency:
+  group: agents-heartbeat
+  cancel-in-progress: false
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 준비
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 의존성
+        run: pip install --quiet requests
+
+      - name: 🤖 openalex_lite 실행 (실측 심박)
+        run: python agents/openalex_lite.py
+
+      - name: 결과 커밋·푸시
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add data_seed
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git commit -m "🤖 heartbeat: openalex_lite $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git pull --rebase origin main
+          git push
