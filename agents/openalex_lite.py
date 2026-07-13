@@ -43,6 +43,19 @@ def save(p: Path, obj):
     p.write_text(json.dumps(obj, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
+def resolve_institution(ror: str):
+    """ROR → OpenAlex 기관 ID·이름 해석 (축약 ROR 필터가 0건을 내는 문제의 근본 해결)."""
+    try:
+        r = requests.get(f"https://api.openalex.org/institutions/ror:{ror}",
+                         params={"mailto": MAILTO}, timeout=30)
+        if r.status_code == 200:
+            j = r.json()
+            return j["id"].rsplit("/", 1)[-1], j.get("display_name")
+    except Exception:
+        pass
+    return None, None
+
+
 def oa_count(filter_expr: str) -> int:
     """OpenAlex works 카운트 (per-page=1로 meta.count만)."""
     r = requests.get(API, params={"filter": filter_expr, "per-page": 1, "mailto": MAILTO},
@@ -57,11 +70,18 @@ def main():
     ror = (topics.get("kwater_affiliation") or {}).get("openalex_ror", "04dtgat87")
     errors = []
 
-    # ── 1. K-water 소속 논문 (2020~) ──
-    n_kwater = None
+    # ── 1. K-water 소속 논문 (2020~): ROR → 기관ID 해석 후 검색 ──
+    n_kwater, inst_name = None, None
+    inst_id, inst_name = resolve_institution(ror)
     try:
-        n_kwater = oa_count(f"institutions.ror:{ror},from_publication_date:2020-01-01")
-        print(f"✅ K-water 소속 논문(2020~): {n_kwater:,}건")
+        if inst_id:
+            n_kwater = oa_count(f"institutions.id:{inst_id},from_publication_date:2020-01-01")
+            print(f"✅ 기관 해석: {inst_name} ({inst_id}) → 소속 논문(2020~) {n_kwater:,}건")
+        else:  # 폴백: ROR 전체 URL 필터
+            n_kwater = oa_count(f"institutions.ror:https://ror.org/{ror},from_publication_date:2020-01-01")
+            print(f"✅ K-water 소속 논문(2020~, ROR 폴백): {n_kwater:,}건")
+        if n_kwater == 0:
+            errors.append("소속검색 0건 — ROR/기관ID 확인 필요")
     except Exception as e:
         errors.append(f"소속검색: {e}")
 
@@ -89,7 +109,7 @@ def main():
     ev = ag.get("events") or []
     if n_kwater is not None:
         ag.update(state="idle", last_run=now, next_run="6시간 주기 (GitHub Actions)",
-                  summary=f"OpenAlex 실측 감시 — K-water 논문 {n_kwater:,}건(2020~) · "
+                  summary=f"OpenAlex 실측 감시 [{inst_name or 'ROR 폴백'}] — 논문 {n_kwater:,}건(2020~) · "
                           f"7개 소 키워드 트렌드 추적",
                   counts={"K-water 논문(실측)": n_kwater, "관련논문(최근1년)": n_related})
         msg = (f"☁️ 정기 실측 — K-water {n_kwater:,}건 · 관련(최근1년) {n_related:,}건"
