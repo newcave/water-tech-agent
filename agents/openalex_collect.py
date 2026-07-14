@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-openalex_collect — 논문 실수집 에이전트 (매 1분 100편, 누적·재개형)
+openalex_collect — 논문 실수집 에이전트 (매 10분 100편, 누적·재개형)
 
 동작:
   · GitHub Actions에서 실행 (기본 55분/회, 매시 자동 + 수동 시작 가능)
-  · 1분마다 OpenAlex에서 100편 수집 → `data` 브랜치 live/에 즉시 push
-    → 관제센터가 재배포 없이 1분 단위로 실시간 갱신 (main 커밋 아님!)
+  · 10분마다 OpenAlex에서 100편 수집 → `data` 브랜치 live/에 즉시 push
+    → 관제센터가 재배포 없이 10분 단위로 실시간 갱신 (main 커밋 아님!)
   · 수집 순서: ① K-water 소속 전체(2020~) → ② 7개 연구소 대표키워드 최근1년
   · 커서(cursor)를 state.json에 저장 → 끊겨도/재시작해도 이어서 누적
   · 전 작업 완료 시 이후 실행은 심박만 남기고 조기 종료 (정직)
@@ -30,10 +30,10 @@ REPO_DIR = Path(__file__).resolve().parents[1]
 API = "https://api.openalex.org/works"
 MAILTO = "newcave.kwater@gmail.com"
 PAGE = 100                                   # 1회 100편
-INTERVAL = 60                                # 1분 주기
+INTERVAL = 600                               # 10분 주기
 RUN_MINUTES = int(os.environ.get("RUN_MINUTES", "55"))
 RECENT_FROM = "2025-07-01"                   # 관련논문 최근 1년 창
-HB_EVENT_EVERY = 5                           # 활동피드 이벤트는 5분마다 (심박은 매분)
+HB_EVENT_EVERY = 1                           # 수집 1회당 피드 이벤트 1개 (10분 간격)
 
 LIVE = Path("/tmp/live_wt")                  # data 브랜치 워크트리
 
@@ -149,7 +149,7 @@ def heartbeat(state, cur_name, note, running=True, event=False):
     target = sum(t.get("target", 0) for t in state["tasks"].values())
     done = sum(1 for t in state["tasks"].values() if t.get("done"))
     ag.update(state="run" if running else "idle", last_run=now,
-              next_run="매시 자동 (GitHub Actions)" if not running else "1분 후",
+              next_run="매시 자동 (GitHub Actions)" if not running else "10분 후",
               summary=f"논문 실수집 {'가동' if running else '대기'} — {cur_name or '전 작업 완료'}",
               counts={"누적 논문": total, "목표": target,
                       "작업": f"{done}/{len(state['tasks'])}"})
@@ -185,7 +185,7 @@ def main():
 
     deadline = time.monotonic() + RUN_MINUTES * 60
     it = 0
-    print(f"▶ 수집 시작 — 최대 {RUN_MINUTES}분, 1분당 {PAGE}편")
+    print(f"▶ 수집 시작 — 최대 {RUN_MINUTES}분, 10분당 {PAGE}편")
 
     while time.monotonic() < deadline:
         tick = time.monotonic()
