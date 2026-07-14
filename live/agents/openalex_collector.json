@@ -1,8 +1,8 @@
 {
- "state": "idle",
- "last_run": 1784003100,
- "next_run": "매시 자동 (GitHub Actions)",
- "summary": "논문 실수집 대기 — 전 작업 완료",
+ "state": "run",
+ "last_run": 1784010013,
+ "next_run": "10분 후",
+ "summary": "논문 실수집 가동 — K-water 생산논문 (Korea Water Resources Corporation (South Korea))",
  "counts": {
   "K-water 생산": 0,
   "관련(도메인)": 5752,
@@ -72,6 +72,10 @@
   {
    "ts": 1784003100,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
+  },
+  {
+   "ts": 1784010013,
+   "msg": "📥 K-water 생산논문 (Korea Water Resources Corporation (South Korea)) — +0편, 작업누적 0/0 ⚠️ 0건 종료 — 필터 확인 필요"
   }
  ]
 }
