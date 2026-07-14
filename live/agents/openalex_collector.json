@@ -1,8 +1,8 @@
 {
- "state": "run",
- "last_run": 1783990791,
- "next_run": "1분 후",
- "summary": "논문 실수집 가동 — 상하수도연구소 'drinking water treatment'",
+ "state": "idle",
+ "last_run": 1783990851,
+ "next_run": "매시 자동 (GitHub Actions)",
+ "summary": "논문 실수집 대기 — 전 작업 완료",
  "counts": {
   "누적 논문": 5252,
   "목표": 7124,
@@ -60,6 +60,10 @@
   {
    "ts": 1783990551,
    "msg": "📥 상하수도연구소 'drinking water treatment' — +100편, 작업누적 2,400/4,672"
+  },
+  {
+   "ts": 1783990851,
+   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
   }
  ]
 }
