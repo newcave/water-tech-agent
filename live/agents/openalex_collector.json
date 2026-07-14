@@ -1,18 +1,14 @@
 {
- "state": "run",
- "last_run": 1784046612,
- "next_run": "10분 후",
- "summary": "논문 실수집 가동 — [관련·도메인] 물에너지연구소 'hydropower generation'",
+ "state": "idle",
+ "last_run": 1784047212,
+ "next_run": "매시 자동 (GitHub Actions)",
+ "summary": "논문 실수집 대기 — 전 작업 완료",
  "counts": {
   "K-water 생산": 0,
   "관련(도메인)": 8131,
   "작업": "5/8"
  },
  "events": [
-  {
-   "ts": 1783989111,
-   "msg": "📥 수자원환경연구소 'water resources hydrology' — +30편, 작업누적 830/830 ✅ 작업 완료"
-  },
   {
    "ts": 1783989351,
    "msg": "📥 상하수도연구소 'drinking water treatment' — +100편, 작업누적 400/4,672"
@@ -88,6 +84,10 @@
   {
    "ts": 1784044212,
    "msg": "📥 [관련·도메인] 물인프라안전연구소 'dam safety monitoring' — +7편, 작업누적 607/607 ✅ 작업 완료"
+  },
+  {
+   "ts": 1784047212,
+   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
   }
  ]
 }
