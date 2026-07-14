@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-openalex_collect — 논문 실수집 에이전트 (매 10분 100편, 누적·재개형)
+openalex_collect — 논문 실수집 에이전트 (매 1분 100편, 누적·재개형)
 
 동작:
   · GitHub Actions에서 실행 (기본 55분/회, 매시 자동 + 수동 시작 가능)
@@ -130,12 +130,14 @@ def build_tasks(topics):
     cands = ([f"authorships.institutions.lineage:{inst_id}{since}",   # 본체+산하기관 (권장)
               f"institutions.id:{inst_id}{since}"] if inst_id else []) + \
             [f"institutions.ror:https://ror.org/{ror}{since}"]        # 공식 예시 형태
-    tasks.append({"tag": "kwater", "name": f"K-water 소속 ({inst_name or 'ROR'})",
+    tasks.append({"tag": "kwater", "kind": "kwater",
+                  "name": f"K-water 생산논문 ({inst_name or 'ROR'})",
                   "filter": cands[0], "candidates": cands})
     for inst in topics.get("institutes", []):
         kws = inst.get("openalex_keywords") or []
         if kws:
-            tasks.append({"tag": inst["code"], "name": f"{inst.get('name_ko')} '{kws[0]}'",
+            tasks.append({"tag": inst["code"], "kind": "related",
+                          "name": f"[관련·도메인] {inst.get('name_ko')} '{kws[0]}'",
                           "filter": f"title_and_abstract.search:{kws[0]},"
                                     f"from_publication_date:{RECENT_FROM}"})
     return tasks
@@ -147,11 +149,13 @@ def heartbeat(state, cur_name, note, running=True, event=False):
     now = int(time.time())
     total = sum(t.get("count", 0) for t in state["tasks"].values())
     target = sum(t.get("target", 0) for t in state["tasks"].values())
+    kw_c = state["tasks"].get("kwater", {}).get("count", 0)
+    kw_t = state["tasks"].get("kwater", {}).get("target", 0)
     done = sum(1 for t in state["tasks"].values() if t.get("done"))
     ag.update(state="run" if running else "idle", last_run=now,
               next_run="매시 자동 (GitHub Actions)" if not running else "10분 후",
               summary=f"논문 실수집 {'가동' if running else '대기'} — {cur_name or '전 작업 완료'}",
-              counts={"누적 논문": total, "목표": target,
+              counts={"K-water 생산": kw_c, "관련(도메인)": total - kw_c,
                       "작업": f"{done}/{len(state['tasks'])}"})
     ev = ag.get("events") or []
     if event and note:
@@ -160,6 +164,8 @@ def heartbeat(state, cur_name, note, running=True, event=False):
     jsave(p, ag)
     jsave(LIVE / "live" / "openalex" / "stats.json",
           {"collected_total": total, "target_total": target, "updated": now,
+           "kwater_collected": kw_c, "kwater_target": kw_t,
+           "related_collected": total - kw_c, "related_target": target - kw_t,
            "tasks": {k: {"count": v.get("count", 0), "target": v.get("target", 0),
                          "done": v.get("done", False)}
                      for k, v in state["tasks"].items()}})
