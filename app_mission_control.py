@@ -30,7 +30,7 @@ st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="�
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.3.2 · 2026-07-13"
+APP_VERSION = "v2.4 · 2026-07-13"
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -346,8 +346,12 @@ if page == "🛰️ 관제센터":
          f"파싱 {T.get('alio_parsed_ok', 0)} · 오류 {T.get('alio_errors', 0)}"),
         ("데이터소스 mention", f"{T.get('mentions', 0):,}건", "페이지 근거 100%"),
         ("고유 데이터소스", f"{T.get('unique_datasources', 0):,}개", "canonical 정규화"),
-        ("논문 OpenAlex", f"{T.get('papers', 0):,}건",
-         f"실수집 {live_oa.get('collected_total', 0):,}/{live_oa.get('target_total', 0):,}"
+        ("논문 K-water 생산", f"{live_oa.get('kwater_collected', 0):,}건"
+         if live_oa and "kwater_collected" in live_oa else f"{T.get('papers', 0):,}건",
+         (f"관련(도메인) {live_oa.get('related_collected', 0):,}"
+          f"/{live_oa.get('related_target', 0):,} 별도 수집"
+          if "kwater_collected" in live_oa else
+          f"실수집 {live_oa.get('collected_total', 0):,}/{live_oa.get('target_total', 0):,}")
          if live_oa else "수집 대기"),
         ("특허 KIPRIS", f"{T.get('patents', 0)}건", "키 승인 대기"),
         ("기사·아티클", f"{T.get('articles', 0)}건", "파이프라인 설계"),
@@ -430,7 +434,7 @@ elif page == "📚 수집 현황":
     st.markdown('<div class="sect">소스별 수집 현황</div>', unsafe_allow_html=True)
     rows = [
         ("📥 보고서① ALIO 공공보고서", T.get("alio_collected", 0), 121, "🟢 완료 (오류 16건 재처리 대기)"),
-        ("📄 논문 OpenAlex — 7개 연구소 키워드×물", T.get("papers", 0),
+        ("📄 논문 OpenAlex — K-water 생산 + 도메인 관련(트렌드용)", T.get("papers", 0),
          (live_oa.get("target_total") if live_oa and live_oa.get("target_total") else 3000),
          ("🟢 누적 수집 중 — 10분당 100편" if live_oa and T.get("papers", 0) < live_oa.get("target_total", 0)
           else "✅ 1차 수집 완료") if live_oa else "🟡 수집기 배치 · search_topics.json 준비"),
