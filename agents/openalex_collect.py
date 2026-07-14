@@ -94,6 +94,12 @@ def resolve_institution(ror: str):
     return None, None
 
 
+def probe_count(filt: str) -> int:
+    r = requests.get(API, params={"filter": filt, "per-page": 1, "mailto": MAILTO}, timeout=30)
+    r.raise_for_status()
+    return (r.json().get("meta") or {}).get("count", 0)
+
+
 def fetch_page(filt: str, cursor):
     """100편 1페이지. → (records, next_cursor, total)"""
     r = requests.get(API, params={
@@ -120,9 +126,12 @@ def build_tasks(topics):
     ror = (topics.get("kwater_affiliation") or {}).get("openalex_ror", "04dtgat87")
     inst_id, inst_name = resolve_institution(ror)
     tasks = []
-    if inst_id:
-        tasks.append({"tag": "kwater", "name": f"K-water 소속 ({inst_name})",
-                      "filter": f"institutions.id:{inst_id},from_publication_date:2020-01-01"})
+    since = ",from_publication_date:2020-01-01"
+    cands = ([f"authorships.institutions.lineage:{inst_id}{since}",   # 본체+산하기관 (권장)
+              f"institutions.id:{inst_id}{since}"] if inst_id else []) + \
+            [f"institutions.ror:https://ror.org/{ror}{since}"]        # 공식 예시 형태
+    tasks.append({"tag": "kwater", "name": f"K-water 소속 ({inst_name or 'ROR'})",
+                  "filter": cands[0], "candidates": cands})
     for inst in topics.get("institutes", []):
         kws = inst.get("openalex_keywords") or []
         if kws:
@@ -168,8 +177,11 @@ def main():
     state_p = LIVE / "live" / "openalex" / "state.json"
     state = jload(state_p, {"tasks": {}})
     for t in tasks:
-        state["tasks"].setdefault(t["tag"], {"cursor": None, "count": 0,
-                                             "target": 0, "done": False})
+        st = state["tasks"].setdefault(t["tag"], {"cursor": None, "count": 0,
+                                                  "target": 0, "done": False})
+        if st.get("done") and st.get("count", 0) == 0:           # 과거 오탐 자동 복구
+            st.update(done=False, cursor=None, probed=False)
+            print(f"↻ self-heal: {t['tag']} 재시도 (0건 완료 이력)")
 
     deadline = time.monotonic() + RUN_MINUTES * 60
     it = 0
@@ -186,6 +198,18 @@ def main():
             return 0
 
         st = state["tasks"][task["tag"]]
+        if task.get("candidates") and not st.get("probed"):      # 0건 아닌 필터 자동 선택
+            for f in task["candidates"]:
+                try:
+                    c = probe_count(f)
+                except Exception:
+                    continue
+                print(f"· 필터 후보({c:,}건): {f[:70]}")
+                if c > 0:
+                    task["filter"], st["target"] = f, c
+                    break
+                time.sleep(0.3)
+            st["probed"] = True
         try:
             recs, nxt, total_cnt = fetch_page(task["filter"], st["cursor"])
             st["target"] = total_cnt or st["target"]
@@ -201,7 +225,7 @@ def main():
             it += 1
             note = (f"📥 {task['name']} — +{len(recs)}편, "
                     f"작업누적 {st['count']:,}/{st['target']:,}"
-                    + (" ✅ 작업 완료" if st["done"] else ""))
+                    + ((" ✅ 작업 완료" if st["count"] else " ⚠️ 0건 종료 — 필터 확인 필요") if st["done"] else ""))
             print(f"[{it:03d}]", note)
             heartbeat(state, task["name"], note,
                       event=(it % HB_EVENT_EVERY == 1 or st["done"]))
