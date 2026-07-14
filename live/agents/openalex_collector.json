@@ -1,10 +1,10 @@
 {
  "state": "run",
- "last_run": 1783987731,
+ "last_run": 1783987791,
  "next_run": "1분 후",
  "summary": "논문 실수집 가동 — 경영연구소 'water utility management'",
  "counts": {
-  "누적 논문": 300,
+  "누적 논문": 400,
   "목표": 1622,
   "작업": "1/8"
  },
