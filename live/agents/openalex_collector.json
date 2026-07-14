@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1784051626,
+ "last_run": 1784052226,
  "next_run": "10분 후",
  "summary": "논문 실수집 가동 — [관련·도메인] 물에너지연구소 'hydropower generation'",
  "counts": {
   "K-water 생산": 0,
-  "관련(도메인)": 8431,
+  "관련(도메인)": 8531,
   "작업": "5/8"
  },
  "events": [
