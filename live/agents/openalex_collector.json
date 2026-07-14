@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1784011812,
+ "last_run": 1784012413,
  "next_run": "10분 후",
  "summary": "논문 실수집 가동 — [관련·도메인] 상하수도연구소 'drinking water treatment'",
  "counts": {
   "K-water 생산": 0,
-  "관련(도메인)": 6052,
+  "관련(도메인)": 6152,
   "작업": "3/8"
  },
  "events": [
