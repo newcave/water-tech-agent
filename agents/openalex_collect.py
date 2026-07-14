@@ -105,7 +105,7 @@ def fetch_page(filt: str, cursor):
     r = requests.get(API, params={
         "filter": filt, "per-page": PAGE, "cursor": cursor or "*",
         "sort": "publication_date:desc", "mailto": MAILTO,
-        "select": "id,doi,title,publication_year,cited_by_count,type,primary_location",
+        "select": "id,doi,title,publication_year,publication_date,cited_by_count,type,primary_location",
     }, timeout=30)
     r.raise_for_status()
     j = r.json()
@@ -115,6 +115,7 @@ def fetch_page(filt: str, cursor):
         recs.append({"id": (w.get("id") or "").rsplit("/", 1)[-1],
                      "doi": w.get("doi"), "title": w.get("title"),
                      "year": w.get("publication_year"),
+                     "date": w.get("publication_date"),
                      "cited": w.get("cited_by_count"),
                      "venue": src.get("display_name"), "type": w.get("type")})
     meta = j.get("meta") or {}
