@@ -1,7 +1,7 @@
 {
- "collected_total": 4252,
+ "collected_total": 4352,
  "target_total": 7124,
- "updated": 1783990191,
+ "updated": 1783990251,
  "tasks": {
   "kwater": {
    "count": 0,
@@ -19,7 +19,7 @@
    "done": true
   },
   "INST-03": {
-   "count": 1800,
+   "count": 1900,
    "target": 4672,
    "done": false
   },
