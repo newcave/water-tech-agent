@@ -1,10 +1,10 @@
 {
  "state": "run",
- "last_run": 1783988871,
+ "last_run": 1783988931,
  "next_run": "1분 후",
  "summary": "논문 실수집 가동 — 수자원환경연구소 'water resources hydrology'",
  "counts": {
-  "누적 논문": 2122,
+  "누적 논문": 2222,
   "목표": 2452,
   "작업": "2/8"
  },
