@@ -74,12 +74,15 @@ def main():
     n_kwater, inst_name = None, None
     inst_id, inst_name = resolve_institution(ror)
     try:
-        if inst_id:
-            n_kwater = oa_count(f"institutions.id:{inst_id},from_publication_date:2020-01-01")
-            print(f"✅ 기관 해석: {inst_name} ({inst_id}) → 소속 논문(2020~) {n_kwater:,}건")
-        else:  # 폴백: ROR 전체 URL 필터
-            n_kwater = oa_count(f"institutions.ror:https://ror.org/{ror},from_publication_date:2020-01-01")
-            print(f"✅ K-water 소속 논문(2020~, ROR 폴백): {n_kwater:,}건")
+        since = ",from_publication_date:2020-01-01"
+        cands = ([f"authorships.institutions.lineage:{inst_id}{since}",
+                  f"institutions.id:{inst_id}{since}"] if inst_id else []) + \
+                [f"institutions.ror:https://ror.org/{ror}{since}"]
+        for f in cands:                                   # 0건 아닌 필터 채택 (3단 폴백)
+            n_kwater = oa_count(f)
+            print(f"· {n_kwater:,}건 ← {f[:70]}")
+            if n_kwater:
+                break
         if n_kwater == 0:
             errors.append("소속검색 0건 — ROR/기관ID 확인 필요")
     except Exception as e:
