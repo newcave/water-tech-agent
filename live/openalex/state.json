@@ -1,0 +1,52 @@
+{
+ "tasks": {
+  "kwater": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": true
+  },
+  "INST-01": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-02": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-03": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-04": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-05": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-06": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-07": {
+   "cursor": null,
+   "count": 0,
+   "target": 0,
+   "done": false
+  }
+ }
+}

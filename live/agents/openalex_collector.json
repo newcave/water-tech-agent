@@ -1,0 +1,17 @@
+{
+ "state": "run",
+ "last_run": 1783987551,
+ "next_run": "1분 후",
+ "summary": "논문 실수집 가동 — K-water 소속 (Korea Water Resources Corporation (South Korea))",
+ "counts": {
+  "누적 논문": 0,
+  "목표": 0,
+  "작업": "1/8"
+ },
+ "events": [
+  {
+   "ts": 1783987551,
+   "msg": "📥 K-water 소속 (Korea Water Resources Corporation (South Korea)) — +0편, 작업누적 0/0 ✅ 작업 완료"
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "collected_total": 0,
+ "target_total": 0,
+ "updated": 1783987551,
+ "tasks": {
+  "kwater": {
+   "count": 0,
+   "target": 0,
+   "done": true
+  },
+  "INST-01": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-02": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-03": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-04": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-05": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-06": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "INST-07": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  }
+ }
+}
