@@ -1,18 +1,14 @@
 {
- "state": "run",
- "last_run": 1784066317,
- "next_run": "10분 후",
- "summary": "논문 실수집 가동 — [관련·도메인] 물에너지연구소 'hydropower generation'",
+ "state": "idle",
+ "last_run": 1784066917,
+ "next_run": "매시 자동 (GitHub Actions)",
+ "summary": "논문 실수집 대기 — 전 작업 완료",
  "counts": {
   "K-water 생산": 0,
   "관련(도메인)": 9131,
   "작업": "5/8"
  },
  "events": [
-  {
-   "ts": 1784020302,
-   "msg": "📥 K-water 생산논문 (Korea Water Resources Corporation (South Korea)) — +0편, 작업누적 0/0 ⚠️ 0건 종료 — 필터 확인 필요"
-  },
   {
    "ts": 1784023900,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
@@ -88,6 +84,10 @@
   {
    "ts": 1784066317,
    "msg": "⚠️ 일시 오류: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filt"
+  },
+  {
+   "ts": 1784066917,
+   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
   }
  ]
 }
