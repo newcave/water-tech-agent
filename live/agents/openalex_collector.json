@@ -1,10 +1,10 @@
 {
  "state": "run",
- "last_run": 1783989351,
+ "last_run": 1783989411,
  "next_run": "1분 후",
  "summary": "논문 실수집 가동 — 상하수도연구소 'drinking water treatment'",
  "counts": {
-  "누적 논문": 2852,
+  "누적 논문": 2952,
   "목표": 7124,
   "작업": "3/8"
  },
