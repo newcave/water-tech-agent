@@ -30,7 +30,7 @@ st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="�
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.3 · 2026-07-13"
+APP_VERSION = "v2.3.1 · 2026-07-13"
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -388,7 +388,9 @@ if page == "🛰️ 관제센터":
             s = state_of(a)
             label, color = STATE_LABEL[s]
             on = "on" if s == "run" else ""
-            counts = " · ".join(f"{k} <b>{v:,}</b>" for k, v in (a.get("counts") or {}).items()) or "&nbsp;"
+            counts = " · ".join(                       # 숫자·문자 혼용 안전 (에이전트가 "1/8" 등도 보냄)
+                f"{k} <b>{v:,}</b>" if isinstance(v, (int, float)) else f"{k} <b>{v}</b>"
+                for k, v in (a.get("counts") or {}).items()) or "&nbsp;"
             nxt = f"다음: {a['next_run']}" if a.get("next_run") else ""
             cards += f"""<div class="agent" style="border-left-color:{color}">
               <div class="a-top">
