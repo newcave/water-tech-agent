@@ -1,7 +1,11 @@
 {
  "collected_total": 5252,
  "target_total": 7124,
- "updated": 1783990851,
+ "updated": 1783999501,
+ "kwater_collected": 0,
+ "kwater_target": 0,
+ "related_collected": 5252,
+ "related_target": 7124,
  "tasks": {
   "kwater": {
    "count": 0,

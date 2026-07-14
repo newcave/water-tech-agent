@@ -4,7 +4,8 @@
    "cursor": null,
    "count": 0,
    "target": 0,
-   "done": true
+   "done": true,
+   "probed": true
   },
   "INST-01": {
    "cursor": null,
