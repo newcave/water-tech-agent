@@ -26,10 +26,10 @@
    "done": true
   },
   "INST-04": {
-   "cursor": "IlsxNzUxNzYwMDAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0NDEyMDU5MTg3J10i",
-   "count": 600,
+   "cursor": null,
+   "count": 607,
    "target": 607,
-   "done": false
+   "done": true
   },
   "INST-05": {
    "cursor": null,
