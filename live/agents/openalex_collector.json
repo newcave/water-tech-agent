@@ -1,18 +1,14 @@
 {
  "state": "run",
- "last_run": 1784150416,
+ "last_run": 1784151016,
  "next_run": "10분 후",
  "summary": "논문 실수집 가동 — [관련·도메인] AI연구소 'machine learning hydrology'",
  "counts": {
   "K-water 생산": 0,
-  "관련(도메인)": 13659,
-  "작업": "7/8"
+  "관련(도메인)": 13746,
+  "작업": "8/8"
  },
  "events": [
-  {
-   "ts": 1784075674,
-   "msg": "📥 [관련·도메인] 물에너지연구소 'hydropower generation' — +88편, 작업누적 1,688/1,688 ✅ 작업 완료"
-  },
   {
    "ts": 1784077474,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
@@ -88,6 +84,10 @@
   {
    "ts": 1784149817,
    "msg": "📥 K-water 생산논문 (Korea Water Resources Corporation (South Korea)) — +0편, 작업누적 0/0 ⚠️ 0건 종료 — 필터 확인 필요"
+  },
+  {
+   "ts": 1784151016,
+   "msg": "📥 [관련·도메인] AI연구소 'machine learning hydrology' — +87편, 작업누적 687/689 ✅ 작업 완료"
   }
  ]
 }
