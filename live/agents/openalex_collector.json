@@ -1,18 +1,14 @@
 {
- "state": "idle",
- "last_run": 1784073859,
- "next_run": "매시 자동 (GitHub Actions)",
- "summary": "논문 실수집 대기 — 전 작업 완료",
+ "state": "run",
+ "last_run": 1784073875,
+ "next_run": "10분 후",
+ "summary": "논문 실수집 가동 — K-water 생산논문 (Korea Water Resources Corporation (South Korea))",
  "counts": {
   "K-water 생산": 0,
   "관련(도메인)": 9131,
   "작업": "5/8"
  },
  "events": [
-  {
-   "ts": 1784044212,
-   "msg": "📥 [관련·도메인] 물인프라안전연구소 'dam safety monitoring' — +7편, 작업누적 607/607 ✅ 작업 완료"
-  },
   {
    "ts": 1784047212,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
@@ -88,6 +84,10 @@
   {
    "ts": 1784073859,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
+  },
+  {
+   "ts": 1784073875,
+   "msg": "📥 K-water 생산논문 (Korea Water Resources Corporation (South Korea)) — +0편, 작업누적 0/0 ⚠️ 0건 종료 — 필터 확인 필요"
   }
  ]
 }
