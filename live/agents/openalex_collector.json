@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1784073875,
+ "last_run": 1784074474,
  "next_run": "10분 후",
- "summary": "논문 실수집 가동 — K-water 생산논문 (Korea Water Resources Corporation (South Korea))",
+ "summary": "논문 실수집 가동 — [관련·도메인] 물에너지연구소 'hydropower generation'",
  "counts": {
   "K-water 생산": 0,
-  "관련(도메인)": 9131,
+  "관련(도메인)": 9231,
   "작업": "5/8"
  },
  "events": [
