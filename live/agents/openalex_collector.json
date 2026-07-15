@@ -1,18 +1,14 @@
 {
- "state": "run",
- "last_run": 1784139378,
- "next_run": "10분 후",
- "summary": "논문 실수집 가동 — [관련·도메인] 수자원위성연구소 'satellite remote sensing water'",
+ "state": "idle",
+ "last_run": 1784139977,
+ "next_run": "매시 자동 (GitHub Actions)",
+ "summary": "논문 실수집 대기 — 전 작업 완료",
  "counts": {
   "K-water 생산": 0,
   "관련(도메인)": 13059,
   "작업": "7/8"
  },
  "events": [
-  {
-   "ts": 1784072660,
-   "msg": "⚠️ 일시 오류: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filt"
-  },
   {
    "ts": 1784073260,
    "msg": "⚠️ 일시 오류: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filt"
@@ -88,6 +84,10 @@
   {
    "ts": 1784139378,
    "msg": "📥 [관련·도메인] 수자원위성연구소 'satellite remote sensing water' — +40편, 작업누적 3,640/3,640 ✅ 작업 완료"
+  },
+  {
+   "ts": 1784139977,
+   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
   }
  ]
 }
