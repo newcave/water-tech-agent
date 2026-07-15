@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1784144715,
+ "last_run": 1784145315,
  "next_run": "10분 후",
  "summary": "논문 실수집 가동 — [관련·도메인] AI연구소 'machine learning hydrology'",
  "counts": {
   "K-water 생산": 0,
-  "관련(도메인)": 13259,
+  "관련(도메인)": 13359,
   "작업": "7/8"
  },
  "events": [
