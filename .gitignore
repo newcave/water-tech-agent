@@ -1,1 +1,6 @@
 HANDOFF_water_coscientist.md
+.env
+live_local/
+__pycache__/
+*.pyc
+.venv/
