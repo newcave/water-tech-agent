@@ -164,9 +164,14 @@
    "ts": 1784605721,
    "kwater": 0,
    "related_1y": 14037
+  },
+  {
+   "ts": 1784623659,
+   "kwater": 0,
+   "related_1y": 14040
   }
  ],
- "updated": 1784605721,
+ "updated": 1784623659,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -182,7 +187,7 @@
   "INST-03": {
    "name": "상하수도연구소",
    "keyword": "drinking water treatment",
-   "recent_1y": 4786
+   "recent_1y": 4787
   },
   "INST-04": {
    "name": "물인프라안전연구소",
@@ -197,12 +202,12 @@
   "INST-06": {
    "name": "수자원위성연구소",
    "keyword": "satellite remote sensing water",
-   "recent_1y": 3702
+   "recent_1y": 3703
   },
   "INST-07": {
    "name": "AI연구소",
    "keyword": "machine learning hydrology",
-   "recent_1y": 692
+   "recent_1y": 693
   }
  }
 }
