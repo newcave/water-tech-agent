@@ -4,15 +4,11 @@
  "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 0건(2020~) · 7개 소 키워드 트렌드 추적",
  "counts": {
   "K-water 논문(실측)": 0,
-  "관련논문(최근1년)": 14310
+  "관련논문(최근1년)": 14349
  },
- "last_run": 1785074394,
+ "last_run": 1785094609,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1784663647,
-   "msg": "☁️ 정기 실측 — K-water 0건 · 관련(최근1년) 14,087건 · 일부 오류 1"
-  },
   {
    "ts": 1784692193,
    "msg": "⚠️ OpenAlex API 오류: 소속검색: 429 Client Error: Too Many Requests for url: https://a; INST-01: 429 Client Error: Too Many Requests for url: https:"
@@ -88,6 +84,10 @@
   {
    "ts": 1785074394,
    "msg": "☁️ 정기 실측 — K-water 0건 · 관련(최근1년) 14,310건 · 일부 오류 1"
+  },
+  {
+   "ts": 1785094609,
+   "msg": "☁️ 정기 실측 — K-water 0건 · 관련(최근1년) 14,349건 · 일부 오류 1"
   }
  ]
 }
