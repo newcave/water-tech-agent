@@ -156,6 +156,18 @@ def load_json(rel_path: str):
         pass
     return None
 
+@st.cache_data(ttl=60, show_spinner=False)
+def load_labels(rel_path: str):
+    """`data` 브랜치 labels/ — 분류·집계 결과 (도메인 트렌드용)."""
+    try:
+        r = requests.get(
+            f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/labels/{rel_path}",
+            params={"t": int(time.time() // 60)}, timeout=8)
+        if r.status_code == 200:
+            return r.json()
+    except Exception:
+        pass
+    return None
 
 @st.cache_data(ttl=25, show_spinner=False)
 def load_live(rel_path: str):
@@ -540,6 +552,87 @@ elif page == "📄 논문 트렌드":
                                   "cited": "피인용", "doi": "DOI"}))
         st.dataframe(top, hide_index=True, width="stretch",
                      column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
+
+    # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
+    st.divider()
+    st.markdown('<div class="sect">🧭 도메인축 트렌드 (K-water 물 도메인 v0.1)</div>',
+                unsafe_allow_html=True)
+    dsum = load_labels("domain/domain_summary_v0.1.json")
+    if not dsum:
+        st.info("도메인 집계 파일이 아직 없습니다 (labels/domain/domain_summary_v0.1.json).")
+    else:
+        DOM_ORDER = ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W0"]
+        UNC = "W0_UNCLASSIFIED"
+        doms = dsum["domains"]
+        insts_d = dsum["institutes"]
+        inst_ids = sorted(insts_d)
+        total = dsum["total"]
+        unc_all = doms[UNC]["count"]
+
+        st.caption(f"기준: {dsum.get('source','')} · 총 {total:,}건 배정 · "
+                   f"체계 {dsum.get('domain_ver','')} ({dsum.get('status','')})")
+
+        k1, k2, k3 = st.columns(3)
+        k1.metric("배정 문헌", f"{total:,}건")
+        top_dom = max(DOM_ORDER, key=lambda c: doms[c]["count"])
+        k2.metric("최다 도메인", f"{top_dom} {doms[top_dom]['name']}",
+                  f"{doms[top_dom]['pct']}%")
+        k3.metric("미분류(물 밖 유입)", f"{unc_all:,}건", f"{doms[UNC]['pct']}%",
+                  delta_color="off")
+
+        a, b = st.columns(2)
+        with a:  # 전체 도메인 분포 (물 도메인만, 미분류 제외)
+            st.markdown('<div class="sect">물 도메인 분포</div>', unsafe_allow_html=True)
+            pairs = sorted(((c, doms[c]["count"]) for c in DOM_ORDER),
+                           key=lambda x: x[1])
+            fig = go.Figure(go.Bar(
+                x=[n for _, n in pairs],
+                y=[f"{c} {doms[c]['name']}" for c, _ in pairs],
+                orientation="h", marker_color=BLUE,
+                text=[f"{doms[c]['pct']}%" for c, _ in pairs], textposition="auto"))
+            fig.update_layout(height=340, **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+        with b:  # 기관별 미분류율
+            st.markdown('<div class="sect">연구소별 미분류율 (수집 물-외 유입)</div>',
+                        unsafe_allow_html=True)
+            ids2 = sorted(inst_ids, key=lambda i: insts_d[i]["unclassified_pct"])
+            fig = go.Figure(go.Bar(
+                x=[insts_d[i]["unclassified_pct"] for i in ids2],
+                y=[insts_d[i]["name"] for i in ids2],
+                orientation="h",
+                marker_color=[INST_COLORS.get(i, GRAY) for i in ids2],
+                text=[f'{insts_d[i]["unclassified_pct"]}%' for i in ids2],
+                textposition="auto"))
+            fig.update_layout(height=340, xaxis_title="미분류 %", **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+
+        # 기관 × 도메인 히트맵 (행 정규화 %, 미분류 제외)
+        st.markdown('<div class="sect">연구소 × 도메인 히트맵 (행 기준 %, 미분류 제외)</div>',
+                    unsafe_allow_html=True)
+        z, txt = [], []
+        for i in inst_ids:
+            bd = insts_d[i]["by_domain"]
+            base = sum(bd[c] for c in DOM_ORDER) or 1
+            z.append([round(bd[c] * 100 / base, 1) for c in DOM_ORDER])
+            txt.append([str(bd[c]) for c in DOM_ORDER])
+        fig = go.Figure(go.Heatmap(
+            z=z, x=[f"{c}<br>{doms[c]['name']}" for c in DOM_ORDER],
+            y=[insts_d[i]["name"] for i in inst_ids],
+            text=txt, texttemplate="%{text}", colorscale="Blues",
+            hovertemplate="%{y} · %{x}<br>비중 %{z}%<br>건수 %{text}<extra></extra>"))
+        fig.update_layout(height=360, **PLOTLY_LAYOUT)
+        st.plotly_chart(fig, width="stretch")
+
+        # 미분류 원인 메모 (물 밖 유입 근거)
+        ua = dsum.get("unclassified_analysis", {})
+        if ua:
+            with st.expander(f"❓ 미분류 {doms[UNC]['pct']}%는 무엇인가 — 물 도메인 밖 유입 분석"):
+                st.markdown(f"**판정:** {ua.get('verdict','')}")
+                for code in ("INST-03", "INST-06", "INST-01"):
+                    if code in ua:
+                        st.markdown(f"- **{code}**: {ua[code]}")
+                if ua.get("next_action"):
+                    st.caption(f"다음 조치: {ua['next_action']}")
 
 # ═══════════════ 페이지 3: 7개 연구소 ═══════════════
 elif page == "🏢 7개 연구소":
