@@ -1,0 +1,592 @@
+{"id": "W7166829088", "object": "브라마푸트라 강 어류", "problem": "미세플라스틱 생물축적 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167895272", "object": "토양 염분", "problem": "표면 토양 염분 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167805060", "object": "수문학 데이터셋", "problem": "대규모 수문학 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167831936", "object": "수문학 데이터셋", "problem": "대규모 수문학 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167473737", "object": "침입종인 황소개구리", "problem": "황소개구리의 울음 활동 패턴 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167505093", "object": "국가 강수 동위원소 제품", "problem": "국가 강수 동위원소 데이터의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167335355", "object": "페루의 수문학적 데이터셋", "problem": "대규모 수문학 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167343617", "object": "전 세계 강 유량 데이터", "problem": "정확한 유량 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167619679", "object": "하천 유출 예측", "problem": "상류 유출 불확실성 공동 분포 샘플링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167746943", "object": "하천 유출량 예측", "problem": "상류 유출량의 공동 분포 샘플링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166890982", "object": "브라마푸트라 강 어류", "problem": "미세플라스틱 생물축적 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167604126", "object": "강우 측정", "problem": "정확하고 효율적인 강우 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167614143", "object": "사이클론 형성 및 대기 불안정성", "problem": "고대 천문 기상학 원칙과 현대 기상 데이터 비교 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167783474", "object": "기상 관측 및 예보 시스템", "problem": "AI를 활용한 기상 데이터 품질 개선 및 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166660660", "object": "산불 모니터링", "problem": "산불 전주기 이해 및 감시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166319722", "object": "식생 구조 변수인 엽면적지수 (LAI)", "problem": "고해상도 LAI 정보 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166355267", "object": "식생 구조 변수인 엽면적지수 (LAI)", "problem": "고해상도 LAI 정보 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166073876", "object": "미국의 수문학적 비정상성", "problem": "인간 개입에 의한 수문학적 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166135979", "object": "미국의 수문학적 비정상성", "problem": "인간 개입의 주요 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166140028", "object": "홍수 취약성 평가", "problem": "홍수 위험 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166433489", "object": "경사면 안정성", "problem": "경사면 안정성 예측 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165920287", "object": "카르스트 대수층", "problem": "지하수 방출 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165924957", "object": "석회암 대수층의 지하수 방출", "problem": "지하수 방출 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166591773", "object": "수중 서식지 조건", "problem": "서식지 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165661245", "object": "제약 오염물질", "problem": "제약 오염물질의 환경적 운명 예측 및 정화 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165676666", "object": "운영 수문학", "problem": "디지털 전환 가속화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166816082", "object": "수자원 관리", "problem": "홍수 예측 및 저수지 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165491148", "object": "지구의 육상 수자원 저장량(TWS)", "problem": "TWS 변화 이해 및 인간 수자원 관리 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165535169", "object": "수문학 및 수자원 분야의 과학 연구", "problem": "연구 동향 및 주요 주제 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165536235", "object": "홍수 예측 및 경고 시스템", "problem": "기상 및 홍수 예측 간 협력 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165554600", "object": "소규모 유역의 홍수 예측", "problem": "홍수 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166869471", "object": "수자원 및 수문학 연구", "problem": "연구 동향 및 우선 분야 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165444554", "object": "카르스트 유역의 수문학", "problem": "극단적인 강우-유출 과정 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165460764", "object": "카르스트 유역의 수문학", "problem": "극단적인 강우-유출 과정 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165112976", "object": "겨울 밀-옥수수 순환 재배", "problem": "작물 생장 예측 정확도 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165135260", "object": "전 세계 하천 유량 데이터셋", "problem": "비정상 저유량 문제 수정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165151376", "object": "티베트 고원 토양 수분 저장", "problem": "토양 수분 저장의 체계적 과대 추정 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165164895", "object": "수문 모델", "problem": "효율적인 매개변수 학습", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165422566", "object": "화성 거주 가능성", "problem": "과학 문헌에서 정보 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165423850", "object": "화성 거주 가능성", "problem": "과학 문헌에서 정보 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415144360", "object": "프랑스 리비에라 유역의 홍수 취약성", "problem": "홍수 취약성 및 철도 노선 노출 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164885044", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7164895222", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7164929099", "object": "프랑스 리비에라의 홍수 취약성", "problem": "홍수 위험 지역 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164943191", "object": "프랑스 리비에라의 홍수 취약성", "problem": "홍수 위험 지역 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155012810", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7164155930", "object": "브라질의 3시간 단위 강수량 예측", "problem": "예측 정확도 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164810053", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7164813707", "object": "아시아 고산 지역의 기온 데이터셋", "problem": "기후 변동성 및 고산 수문학 연구를 위한 고해상도 기온 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164817974", "object": "중앙아시아 고산 지역의 기온 데이터셋", "problem": "기후 변화 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164844390", "object": "브라질의 3시간 단위 강수량 예측", "problem": "예측 정확도 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164741853", "object": "지구의 수자원 저장량", "problem": "수자원 저장량 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164677412", "object": "지구의 육상 수자원 저장(TWS)", "problem": "TWS 변화 이해 및 인간 수자원 관리 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164317086", "object": "응집성 토양 침식", "problem": "기후 변화에 따른 침식 과정 이해 및 모델링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164521405", "object": "고해상도 토양 수분 데이터", "problem": "고해상도 토양 수분 제품의 신뢰성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164524009", "object": "센서 기반 시계열 데이터", "problem": "자동화된 데이터 전처리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164553498", "object": "히말라야 하천의 퇴적물 농도", "problem": "퇴적물 농도 예측을 위한 데이터 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7168028024", "object": "Upper Indus Basin의 유량 예측", "problem": "유량 변동성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403198916", "object": "오를레앙 카르스트 지역의 다중 재해 취약성", "problem": "홍수로 유발된 싱크홀 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159747339", "object": "토양 수분", "problem": "정확한 토양 수분 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164124593", "object": "지구의 수자원 저장량", "problem": "수자원 저장량 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164945934", "object": "레온 카운티의 한계 및 미활용 토지", "problem": "한계 및 미활용 토지 식별 및 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165004469", "object": "환경 시나리오 관리", "problem": "공간 분석 기법을 통한 불확실성 정량화 및 자원 배분 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164939707", "object": "나린 강의 월간 유량", "problem": "정확한 유량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162723726", "object": "홍수 위험 지도 작성", "problem": "모델 일반화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163734976", "object": "일일 유출 예측", "problem": "정확한 유출 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163760025", "object": "강수-유출 모델링", "problem": "기후 변화에 따른 유출 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163705949", "object": "남극 빙상 흐름", "problem": "기초 마찰 변화에 따른 효과적 압력 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163571033", "object": "지구의 육상 수자원 저장(TWS)", "problem": "TWS 변화 이해 및 인간 수자원 관리 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162933573", "object": "고대 촉 도로", "problem": "산사태 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163004244", "object": "극지 식생 및 수문학적 상호작용", "problem": "극지 환경에서의 생태 변화 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163023541", "object": "다이하이 호수의 수질 및 수량", "problem": "온도 변화에 대한 단기 반응 메커니즘 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163185112", "object": "파나마 운하 수문 운영", "problem": "운하 운영 제한으로 인한 대기 시간 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165180206", "object": "기후 변화 연구와 기계 학습의 교차점", "problem": "기후 변화에 대한 기계 학습의 역할 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165381624", "object": "Eşen 강 유역의 일일 유량 예측", "problem": "단기 유량 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162938127", "object": "지구의 수자원 저장량", "problem": "수자원 저장량 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162866849", "object": "수문학적 분석", "problem": "AI 지원 과학적 워크플로우 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162851144", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162853025", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162863887", "object": "강수 예측", "problem": "강수 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162890344", "object": "수문학 기계 학습 모델", "problem": "모델 공유 및 재현성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388744820", "object": "토양 수분 보유 특성", "problem": "대규모에서의 수분 보유 특성 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162514567", "object": "얕은 지하수 수위 변동", "problem": "수위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162524285", "object": "제흘룸 분지의 홍수 취약성", "problem": "홍수 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162562947", "object": "얕은 지하수 수위 변동", "problem": "수위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162136528", "object": "산사태 영향", "problem": "산사태로 인한 잠재적 피해 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162143290", "object": "농경지-산림 경관", "problem": "경관 구성 변화가 기후 조절 기능에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161989782", "object": "북유럽 눈 수문학 데이터셋", "problem": "눈 수문학 모델 성능 평가 및 훈련을 위한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162000884", "object": "북유럽 눈 수문학 데이터셋", "problem": "눈 수문학 모델 성능 평가 및 훈련을 위한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162023677", "object": "전 세계 탄소 싱크", "problem": "탄소 싱크 플럭스 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162039769", "object": "토양 수분 함량", "problem": "일일 토양 수분 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161790105", "object": "기후 변화 탐지", "problem": "다양한 원격 감지 기법의 효과적 적용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161744063", "object": "동결 주변 호수의 수자원", "problem": "호수 수심 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161182755", "object": "지하수 자원 관리", "problem": "GRACE 데이터의 다운스케일링 및 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161251902", "object": "양쯔강 유역의 수생태계 서비스 흐름", "problem": "수요와 공급 불일치 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160992665", "object": "유역 반응 예측", "problem": "이벤트 기반 유출 계수 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161036346", "object": "산사태 취약성", "problem": "산사태 발생 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160765388", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160776277", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160779487", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161569975", "object": "프랙탈 확산-수송 방정식", "problem": "정확한 해석 및 수렴 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165981882", "object": "중부 아디론댁 산맥의 산림 수목과 눈 덮임", "problem": "눈 덮임 분포에 대한 수관 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160608919", "object": "지표수 저장 변화", "problem": "지표수 저장 감소 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160611608", "object": "토양 수분", "problem": "근실시간 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160503961", "object": "중국 농경지의 눈 물 등가물(SWE)", "problem": "얕은 눈 과소 추정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160557207", "object": "중국 농경지의 눈 물 등가물(SWE)", "problem": "얕은 눈 과소 추정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163879565", "object": "이스탄불 저수지 저장량", "problem": "저수지 저장량 예측 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163938534", "object": "이스탄불 저수지 저장량", "problem": "저수지 수위 예측 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160378512", "object": "페루의 유역", "problem": "대규모 수문학 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160451515", "object": "페루의 유역 및 수문 관측소", "problem": "대규모 수문학 연구 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160297716", "object": "농업 유역의 수질", "problem": "인산염 산소 동위원소 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160314806", "object": "토양 수분", "problem": "근실시간 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160327752", "object": "토양 유기 탄소 및 수위", "problem": "토양 유기 탄소 및 수위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164171059", "object": "Nathsagar 저수지 조류 다양성", "problem": "조류 종 식별 및 분포 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164174855", "object": "Nathsagar 저수지 조류 다양성", "problem": "조류 종 식별 및 분포 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160103839", "object": "건조 지역의 증발산 동역학", "problem": "기후 변화에 따른 증발산 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161114253", "object": "미국 옥수수 벨트의 관개 확대", "problem": "관개 확장의 농작물 수확량 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161806643", "object": "중국 알타이 산맥의 토양 수분", "problem": "원격 감지 데이터 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163782913", "object": "토양 수분 모델 매개변수", "problem": "모델 매개변수의 스케일 간 전이 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167675303", "object": "유량 예측", "problem": "측정되지 않은 유역에서의 유량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167707820", "object": "개념적 수문 모델", "problem": "다변수 보정의 한계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159814822", "object": "산림 생태계의 생물물리적 요소", "problem": "생물적 및 비생물적 요소 간의 상호작용 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159817140", "object": "하천 유량", "problem": "정확한 하천 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160209898", "object": "홍수 예측", "problem": "홍수 위험 요인 분류 및 예측 도구 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160285178", "object": "도시 홍수", "problem": "도시 홍수 동적 시뮬레이션", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160299833", "object": "키쿠 유역의 홍수 취약성", "problem": "홍수 취약성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160389076", "object": "산림 생태계의 생물물리적 요소", "problem": "생물적 및 비생물적 요소 간의 상호작용 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160441375", "object": "산림 생태계의 생물물리적 요소", "problem": "생물적 및 비생물적 요소 간의 상호작용 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161754426", "object": "바위 빙하의 속도", "problem": "환경 변수에 따른 바위 빙하 속도 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162685451", "object": "자연 자원 관리", "problem": "자연 자원 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162694771", "object": "자연 자원 관리", "problem": "자연 자원 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159065417", "object": "파키스탄의 강우 예측 시스템", "problem": "정확한 강우 사건 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159683209", "object": "해안 지역의 지하수 위험 평가", "problem": "지하수 위험 평가 도구 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160044680", "object": "도시 홍수 회복력", "problem": "극한 강우에 따른 물빠짐 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160439410", "object": "수자원 관리", "problem": "수자원 시스템의 변화 이해 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160313527", "object": "망그로브 생태계", "problem": "효과적인 보전 및 복원 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7158035210", "object": "산사태 취약성 평가", "problem": "중요 요소 효율적 선별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155354263", "object": "환경 및 기후 시스템의 불확실성", "problem": "불확실성 정량화 및 예측 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155405272", "object": "환경 및 기후 시스템", "problem": "불확실성 정량화 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155045508", "object": "전 세계 홍수 예측 시스템", "problem": "중기 홍수 예측 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155094708", "object": "전 세계 홍수 예측 시스템", "problem": "중기 홍수 예측 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154982440", "object": "카르스트 수원 관리", "problem": "수원량 및 수질 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406597217", "object": "유럽 숲의 구조적 다양성", "problem": "구조적 다양성의 연속적 정보 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154565855", "object": "남극 빙상 흐름", "problem": "기초 마찰 변화에 따른 효과적인 압력 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154472995", "object": "남극 빙상 흐름", "problem": "기초 마찰 변화에 따른 효과적인 압력 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7153569362", "object": "지하수 자원", "problem": "기후 변동성이 지하수 재충전 및 농업 생산성에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7153596611", "object": "지하수 자원", "problem": "기후 변동성이 지하수 재충전 및 농업 생산성에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7151409884", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7151862014", "object": "홍수 취약성 지도", "problem": "홍수 위험 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7168177577", "object": "중국 본토의 강수 δ²H 및 δ¹⁸O", "problem": "고해상도 월별 예측 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7110634591", "object": "토양 수분 측정", "problem": "생물량 변동에 따른 수분 신호 보정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124520570", "object": "일리노이 강 유역의 수질", "problem": "인공적 인자에 의한 인산염 오염 추세 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7146948024", "object": "타림강 유역의 중금속 오염", "problem": "중금속 오염 정량화 및 지도화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7152576240", "object": "지구 시스템", "problem": "지구의 자연 과정의 행동을 단순한 수학적 표현으로 포착하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7144356091", "object": "강우 유발 집단 산사태", "problem": "산사태 취약성 고도화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7147191800", "object": "형광 용해 유기물 동역학", "problem": "환경적 요인 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7147597007", "object": "형광 용해 유기물(fDOM) 역학", "problem": "환경적 요인 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148333265", "object": "미국 유역의 수문학 데이터셋", "problem": "수문학 모델링 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148559429", "object": "미국 유역의 수문 데이터셋", "problem": "수문 모델링 및 기후 분석 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154831679", "object": "비정상 홍수 빈도 분석", "problem": "홍수 위험 평가의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167020050", "object": "지구 과학 연구", "problem": "환경 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167048396", "object": "지구 과학 연구", "problem": "환경 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7143299028", "object": "터판-하미 분지의 지반 붕괴", "problem": "지반 붕괴 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160167243", "object": "우드무르트 공화국의 디지털 고도 모델", "problem": "디지털 고도 모델의 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7141278265", "object": "수자원 관리", "problem": "AI 기반 수자원 모델링 발전", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140580150", "object": "석회암 산악 지역의 토양 유기 탄소", "problem": "토양 유기 탄소의 공간적 변동성 이해 및 환경적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140722363", "object": "지구 시스템", "problem": "물리적 일관성 및 해석 가능성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7149979326", "object": "산사태 위험 지역", "problem": "산사태 조기 경고 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140303775", "object": "단기 수력 발전 조정", "problem": "수력 발전과 에너지 시스템의 통합 모델링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140487698", "object": "하천 수온", "problem": "하천 수온 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140640424", "object": "하천 수온", "problem": "하천 수온 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7141683107", "object": "Qaidam Basin의 강수 데이터", "problem": "고해상도 강수 데이터 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140275494", "object": "티베트 고원 토양 수분 저장", "problem": "토양 수분 저장의 체계적 과대 추정 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140297190", "object": "티베트 고원 토양 수분 저장", "problem": "전통적인 고정 깊이 방법의 체계적 과대 추정 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140194356", "object": "강 유역 내 항생제 오염", "problem": "항생제 농도 공간적 패턴 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148280925", "object": "지하수 변화 및 습지 동태 모니터링", "problem": "물 부족 및 가뭄 감지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7139975236", "object": "산림 관리", "problem": "산림 생장 모니터링 및 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7139992071", "object": "산림 관리", "problem": "산림 생장 모니터링 및 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7139088653", "object": "하천 유량 예측", "problem": "데이터 부족 문제 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140145996", "object": "국경을 초월한 하천 유역", "problem": "하천 유역 주권 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140146183", "object": "국경을 초월한 하천 유역", "problem": "하천 유역의 주권 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140258634", "object": "수자원 관리", "problem": "저수량 예측 및 가뭄 대응 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7136497720", "object": "해안 대수층", "problem": "조수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137868769", "object": "열대 숲에서의 Noah-MP 지표 모델링", "problem": "모델 성능 개선을 위한 사이트별 보정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137876969", "object": "해안 대수층", "problem": "조수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7138094588", "object": "카르스트 유역의 수문학적 반응", "problem": "극단적인 강우-유출 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7138182111", "object": "카르스트 유역의 수문학적 반응", "problem": "극단적인 강우-유출 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7136785860", "object": "도시 유출수 홍수", "problem": "홍수 전파 경로 진단 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137018644", "object": "해안 대수층", "problem": "조수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137258808", "object": "해안 대수층", "problem": "조수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135172058", "object": "농업 배수 시스템", "problem": "정확한 배수 시스템 자동 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135179419", "object": "전 세계 뿌리 깊이", "problem": "전 세계 뿌리 깊이 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135181545", "object": "남극 빙붕의 수빙 수문학", "problem": "표면 수빙 특성의 체계적 분류 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135183963", "object": "대륙 규모 수문 예측 시스템", "problem": "수자원 관리의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135190801", "object": "강수-유출 모델링", "problem": "모델 성능 향상 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135193665", "object": "남동 티베트 고원 내 빙하 호수", "problem": "빙하 호수의 부피 정밀 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135194367", "object": "대규모 토양 수분 함량 평가", "problem": "측정 데이터 품질 제어 및 수정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135197866", "object": "유럽의 계절별 수문 예측", "problem": "수문 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135200543", "object": "개념적 수문 모델", "problem": "정확하고 확장 가능한 기울기 계산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135203238", "object": "물 수질 데이터", "problem": "수질 변화 분석 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135203250", "object": "습지의 온실가스 배출", "problem": "온실가스 배출의 불확실성 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135203763", "object": "대규모 수리 지구 물리학적 역전", "problem": "고해상도 수리 모델 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135205578", "object": "지하수 방출 잠재력", "problem": "기후 변동에 대한 재충전 지역 반응 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135209604", "object": "아마존 유역의 수문학적 모델", "problem": "강수량과 증발산으로부터 수문 상태 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135221867", "object": "전 세계 홍수 예측을 위한 수위계 분포", "problem": "지리적 편향이 예측 성능에 미치는 영향 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135223274", "object": "유럽 알프스의 가뭄 위험 관리", "problem": "가뭄 영향 이해 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135223544", "object": "하천 유량 예측", "problem": "예측 불확실성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135228761", "object": "아일랜드의 퇴적지", "problem": "퇴적지 복원 시나리오 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135229073", "object": "지구 회전", "problem": "수문학적 기여의 변동성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135240978", "object": "지하수 재충전", "problem": "재충전 동역학 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135243118", "object": "토지 침하", "problem": "침하 취약성 평가 및 추세 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135371570", "object": "하천 유량 예측", "problem": "단기에서 준계절 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135390378", "object": "차가운 지역 유역의 계절적 유량", "problem": "계절적 유량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135394004", "object": "수문학적 시스템", "problem": "모델 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135423996", "object": "프랑스의 비계측 유역", "problem": "홍수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135174605", "object": "수문기상 시스템", "problem": "인과 관계 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135182127", "object": "전 세계 강수량 추정", "problem": "정확한 강수량 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135182453", "object": "계절 유량 예측", "problem": "모델 복잡성에 따른 예측 성능 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135186772", "object": "도시 수자원 관리", "problem": "강수량 추정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135188767", "object": "고해상도 강수 데이터", "problem": "시간 해상도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135201124", "object": "인더스 강 유역의 동적 하천 네트워크", "problem": "정확한 하천 모델링 및 홍수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135204609", "object": "눈 표면 특성", "problem": "레이저 신호에 대한 눈 특성의 상대적 영향 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135205037", "object": "지구 물리학적 시계열 예측", "problem": "예측 오류 누적 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135208579", "object": "내륙 수역 분류", "problem": "정확한 내륙 수역 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135209327", "object": "인도 강 유역의 질산 플럭스", "problem": "농업 집약화와 강 유역 질산의 연관성 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135212110", "object": "청정 물과 에너지 시스템", "problem": "기후 변화와 극단적 사건의 복합 위험 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135213046", "object": "서아프리카 저수지", "problem": "저수지 면적 변동성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135213241", "object": "소규모 유역", "problem": "유역 취약성 정확한 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135216973", "object": "극지 해양 모니터링", "problem": "얼음 분류 및 두께 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135219041", "object": "야생화재", "problem": "기후 변화에 따른 야생화재의 주요 원인 분석 및 조기 경고 신호 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135222070", "object": "데이터 관리 인프라", "problem": "데이터 관리 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135227119", "object": "수문학 하이브리드 모델", "problem": "모델의 재사용성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135227842", "object": "물 저장 시스템", "problem": "인간 행동 모델 통합을 통한 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135230327", "object": "하천 유역", "problem": "부유토 농도와 유량의 시간 의존적 결합 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135231673", "object": "아일랜드 고산지대 블랭킷 이탄지", "problem": "인공 배수로 매핑 및 복원 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135231952", "object": "식물 건강", "problem": "가뭄의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135242982", "object": "산사태 취약성", "problem": "산사태 발생 예측 정확도 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135243392", "object": "알프스 지역의 수표면 유출 생성", "problem": "스키 슬로프 개발에 따른 수분 침투 능력 감소 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135245383", "object": "도시 홍수", "problem": "홍수 위험 예측 및 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148418909", "object": "토양 수분 및 수문학적 과정", "problem": "정확한 수분 추정 및 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135058018", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134930882", "object": "캐나다 대륙의 산불 위험 예측", "problem": "산불 위험 평가의 데이터 복잡성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134974892", "object": "캐나다 대륙의 산불 위험 예측", "problem": "산불 위험 평가의 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135032364", "object": "북서부 중국의 관개 기반 지역 녹화", "problem": "녹화 지속 가능성 평가 및 위험 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135049437", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135062547", "object": "한국 반도의 증발산 예측", "problem": "증발산 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134246087", "object": "홍수 역학 모델", "problem": "고차원 데이터 동화 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134284348", "object": "홍수 역학 모델", "problem": "고차원 데이터 동화 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134048191", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7134065903", "object": "강우-유출 과정", "problem": "이벤트 기반 유출 계수 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134076696", "object": "강우-유출 과정", "problem": "이벤트 기반 유출 계수 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135178572", "object": "브라질 강수 데이터베이스", "problem": "강수 데이터의 단일화 및 표준화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135180592", "object": "브라질 강수 데이터베이스", "problem": "강수 데이터의 단편화 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133490021", "object": "버킷형 개념 수문 모델", "problem": "전문가 정의 방정식 없이 수문 과정 추론", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7157720534", "object": "응용 지구과학", "problem": "AI를 활용한 데이터 처리 및 분석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7158326901", "object": "응용 지구과학", "problem": "AI를 활용한 데이터 처리 및 분석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163531158", "object": "홍수 예측 시스템", "problem": "홍수 조기 경고 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133339685", "object": "남극 빙상 유동", "problem": "기본 압력 예측 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133500116", "object": "산사태 취약성 평가", "problem": "약한 분류 능력 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133213062", "object": "도시 홍수", "problem": "홍수 위험 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7139066101", "object": "중국 로에스 고원에서의 테라스 건설", "problem": "미래 테라스 건설을 위한 적합 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7149229215", "object": "산사태 위험 지역", "problem": "산사태 조기 경고 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154991441", "object": "고고학적 맥락에서의 미세 분석 기법", "problem": "고고학적 접근법의 지속적인 격차 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7132827703", "object": "하천 수역", "problem": "정확한 하천 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134056903", "object": "서부 자바의 홍수 위험 지역", "problem": "홍수 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134173632", "object": "지하수 수위", "problem": "모델 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131113423", "object": "미시시피 강 삼각주 내 포트 세인트 필립 크레바스", "problem": "크레바스 스플레이의 형태 동역학 진화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130950519", "object": "일일 강수량 추정", "problem": "강수량 추정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131126702", "object": "토양 수분", "problem": "공간적 해상도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130349470", "object": "수문 모델", "problem": "모델 파라미터의 효율적 학습", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7129101478", "object": "영구 동토층 내 근표면 지하 얼음", "problem": "지하 얼음 분포 맵 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128953096", "object": "도시 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128922392", "object": "칭하이 호수 수위", "problem": "비선형 임계점 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128928802", "object": "홍수 취약성 및 예측 유량", "problem": "정확한 조기 경고 시스템 개발을 위한 심층 연구 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128776507", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7128807298", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7128467571", "object": "산사태 취약성", "problem": "산사태 예측 모델 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128617406", "object": "전 세계 하천 유량", "problem": "기후대별 수문 변동성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128633317", "object": "전 세계 하천 유량", "problem": "수문학적 변동성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128639942", "object": "수면 포인트 자동 분류", "problem": "수면 포인트 식별 및 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128705481", "object": "전 세계 하천 유량", "problem": "수문학적 변동성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128912975", "object": "전 세계 하천 유량", "problem": "기후대별 수문 변동성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128551110", "object": "온대 초원", "problem": "실제 증발산 감소 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128433008", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128442485", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128444563", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155168896", "object": "뿌리대역 수분 역학", "problem": "뿌리 수분 흡수 패턴 추론", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127629281", "object": "본우민-팔메라이 유역", "problem": "도시 홍수 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124556062", "object": "이라크 주요 호수", "problem": "수면 수역의 의미론적 분할", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126184139", "object": "남부 이라크 습지의 수면 수역", "problem": "수면 수역의 이진 의미 분할을 위한 데이터셋 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127297025", "object": "이라크 주요 호수", "problem": "수면 수역의 의미론적 분할", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127306938", "object": "이라크 주요 호수", "problem": "수면 수역의 의미론적 분할", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127371711", "object": "티에테 강 유역의 수문 데이터", "problem": "강 유입 및 방출 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127382885", "object": "남부 이라크 습지의 수면 수역", "problem": "수면 수역의 이진 의미 분할을 위한 데이터셋 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127386365", "object": "티에테 강 유입 및 방출 추정", "problem": "강 유입 및 방출 값 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127397197", "object": "티에테 강 유입 및 방출", "problem": "강 유입 및 방출 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127415338", "object": "티에테 강 유역의 수문 데이터", "problem": "강 유입 및 방출 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127444766", "object": "전 세계 하천 유량 데이터셋", "problem": "전 세계 하천 유량 시뮬레이션 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128527356", "object": "이라크 주요 호수", "problem": "수면 수역의 의미론적 분할", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128540680", "object": "남부 이라크 습지의 수면 수역", "problem": "수면 수역의 이진 의미 분할을 위한 데이터셋 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127041553", "object": "기초 공간 데이터", "problem": "공간 데이터 유지 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130660719", "object": "유역 유량 지역화", "problem": "비선형 관계 포착 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128170017", "object": "바르틴 강 유역의 안전 집결 지역", "problem": "도시 급류 홍수 시 안전 집결 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130333209", "object": "습지 자원", "problem": "습지 자원 변화에 따른 수조류 서식지 감소 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148972920", "object": "누르장 강 중류 지역의 산사태", "problem": "산사태 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127054154", "object": "홍수 및 산사태 취약성", "problem": "재해로 인한 사회적·경제적 영향 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126238140", "object": "지구 시스템 내의 통합된 육상 수문", "problem": "수문 과학의 일관된 이해 발전", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126246187", "object": "티그리스-유프라테스 유역의 물 자원", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126036977", "object": "전 세계 총 물 저장량(TWSA)", "problem": "장기 기후 및 수문학 연구를 위한 데이터 연장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134891673", "object": "전 세계 총 수자원 저장 이상", "problem": "장기 기후 및 수문학 연구를 위한 데이터 확장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164000332", "object": "타이포이드 고위험 지역", "problem": "타이포이드 발생 예측 및 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125942749", "object": "유역 수중 조사", "problem": "수중 이질성 특성화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125901773", "object": "동부 인도의 쌀 작물 수확량", "problem": "가뭄 지역 변화에 따른 작물 수확량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125958367", "object": "동부 인도의 쌀 작물 수확량", "problem": "가뭄 지역 변화에 따른 작물 수확량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125972502", "object": "지하수 재충전율 및 오염물 이동", "problem": "예측 정확도 향상 및 해석 가능성 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130773889", "object": "식생 회복력", "problem": "식생 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125797304", "object": "Lake Balkhash", "problem": "기후 변화와 인간 활동의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125804556", "object": "발하쉬 호수의 수자원 관리", "problem": "기후 변화와 인간 활동의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125837757", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7125859284", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7126256594", "object": "그레이터 자브 유역의 수자원 관리", "problem": "유역의 수자원 가용성 예측 및 대안적 댐 사이트 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125579686", "object": "수문학 유역 모사", "problem": "예측 불확실성 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125614184", "object": "수문학 유역 모사", "problem": "예측 불확실성 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125476462", "object": "인도-태평양 수렴대의 규산염 풍화", "problem": "규산염 풍화 플럭스 재구성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125497192", "object": "하천 유량 예측", "problem": "하천 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125545393", "object": "하천 유량 예측", "problem": "정확한 유량 예측을 위한 하이브리드 모델 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125566273", "object": "하천 유량 예측", "problem": "하천 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127369644", "object": "무측정 유역의 일일 유량 지속 곡선", "problem": "일일 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125365455", "object": "호주 전역의 강수 이소토프", "problem": "강수 이소토프의 공간적 및 시간적 변동성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125404333", "object": "말다 지역의 홍수 취약성 및 회복력", "problem": "홍수 위험 및 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125204476", "object": "미국 본토의 하천 유량 가뭄", "problem": "하천 유량 가뭄 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125236866", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7124682272", "object": "하천 유량 예측", "problem": "하천 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126246124", "object": "남부 이라크 습지의 수면 수역", "problem": "수면 수역의 이진 의미 분할을 위한 데이터셋 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124543771", "object": "이라크 주요 호수", "problem": "수면 수역의 의미론적 분할", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124437272", "object": "오를레앙 카르스트 지역의 다중 재해 시나리오", "problem": "홍수 유발 싱크홀 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124461150", "object": "오를레앙 카르스트 지역의 홍수 유발 싱크홀", "problem": "홍수 유발 싱크홀의 공간 확률 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124467115", "object": "수마트라의 이탄지", "problem": "이탄지 덮개 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123502220", "object": "내륙 호수 수질", "problem": "정확한 수질 매개변수 원격 감지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124162015", "object": "글로벌 저수지 데이터베이스", "problem": "저수지 퇴적 속도 및 저장 용량 손실 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124159649", "object": "전 세계 저수지", "problem": "저수지 퇴적률 및 저장 손실 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124168680", "object": "증발산 추정 정확도", "problem": "정확한 ET 데이터셋 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124170420", "object": "증발산 추정 정확도", "problem": "정확한 ET 데이터셋 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163349248", "object": "전 세계 저수지", "problem": "저수지 퇴적 속도 및 저장 손실 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123270519", "object": "수자원 시스템", "problem": "수자원 붕괴 조기 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123270891", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7123278386", "object": "수자원 시스템", "problem": "수자원 붕괴 조기 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123259341", "object": "수문학 모델링", "problem": "유량 및 증발산 동시 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123311160", "object": "수문학 모델링", "problem": "유량 및 증발산 동시 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119466201", "object": "일일 강수 예측", "problem": "정확한 강수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119499583", "object": "일일 강수 예측", "problem": "정확한 강수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119508063", "object": "일일 강수 예측", "problem": "정확한 강수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119531298", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119112419", "object": "핵폐기물 관리", "problem": "데이터 기반 모델을 통한 성능 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118268965", "object": "진바산의 홍수 위험", "problem": "홍수 위험 평가 및 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118918942", "object": "식물의 수분 요구량 예측", "problem": "맞춤형 PET 예측 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118169957", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118172914", "object": "지구 연안의 중요한 구역", "problem": "정확한 경계 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118188126", "object": "해안 지구의 중요 구역", "problem": "해안 지구의 경계 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118075028", "object": "발하쉬 호수", "problem": "기후 변화와 인간 활동의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117997691", "object": "발하쉬 호수", "problem": "수자원 관리의 지속 가능성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125560463", "object": "소규모 및 중규모 내륙 수역", "problem": "수역의 월별 수량 변화 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119480234", "object": "진바산의 홍수 위험", "problem": "홍수 위험 평가 및 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119530944", "object": "진바산의 홍수 위험", "problem": "홍수 위험 평가 및 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123335237", "object": "라오스와 태국의 뎅기열 위험", "problem": "LULC 변화에 따른 뎅기 매개체 증식 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124439718", "object": "경사면 붕괴", "problem": "조기 탐지 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124718350", "object": "대형 초식동물 군집", "problem": "나트륨 가용성에 따른 대형 초식동물 밀도 제약", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125482926", "object": "민간 우물의 비소 오염 위험", "problem": "비소 노출 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125945786", "object": "중국의 눈 물 등가물(SWE)", "problem": "눈 덮임 동역학 이해 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128613129", "object": "수면 수역 자동 분류", "problem": "수면 포인트 식별 및 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7129000415", "object": "강수량 예측을 위한 수증기", "problem": "정확한 수증기 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7129507880", "object": "전 세계 총 수자원 저장 이상", "problem": "장기 기후 및 수문학 연구를 위한 데이터 확장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133261205", "object": "독일 농업 및 산림의 토양 유기 탄소", "problem": "토지 이용 변화에 따른 토양 유기 탄소 반응 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7142584272", "object": "수돗물 누수 탐지 및 강수 예측", "problem": "누수 위치 탐지 및 강수량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7158121389", "object": "환경 시스템 및 극한 현상", "problem": "물리적 일관성 및 불확실성 정량화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159981249", "object": "킥우 유역의 홍수 취약성", "problem": "홍수 취약성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160227431", "object": "산사태 취약성", "problem": "광산 유발 침하가 산사태에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160419243", "object": "산사태 취약성", "problem": "채굴로 인한 침하가 산사태에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162994011", "object": "상류 황하의 활성 산사태", "problem": "산사태 발생 메커니즘 이해 및 제어 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164713261", "object": "강의 수질 및 유량 모니터링", "problem": "비접촉식 방법으로 SSC 및 유량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165093058", "object": "싱크홀 밀도 및 특성", "problem": "싱크홀 관련 위험 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165255261", "object": "비가측 유역의 유량 예측", "problem": "유량 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165373883", "object": "싱크홀 밀도 및 특성", "problem": "싱크홀 관련 위험 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165574385", "object": "브라티슬라바 강 유량", "problem": "월간 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166856465", "object": "눈에 의해 공급되는 유역의 월간 유량", "problem": "유량 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117736648", "object": "유럽 숲의 캐노피 구조 다양성", "problem": "캐노피 구조 다양성의 벽면 지도 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117779586", "object": "유럽 숲의 캐노피 구조 다양성", "problem": "캐노피 구조 다양성의 연속 정보 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117529796", "object": "수문 예측 정확도", "problem": "단기 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117546108", "object": "하천 유량 예측", "problem": "하천 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117558594", "object": "하이드롤로지의 불완전한 시계열 데이터", "problem": "누락된 값 복원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117408653", "object": "영구 동토층 두께", "problem": "영구 동토층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117424962", "object": "북극 툰드라의 영구 동토층 두께", "problem": "영구 동토층 두께의 공간적 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117311987", "object": "겨울 강수 유형 예측", "problem": "겨울 강수 유형 및 동결 비 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117253941", "object": "강수 예측", "problem": "정확한 강수 예측을 위한 데이터 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117301482", "object": "미국 내 강수량 및 온도 데이터", "problem": "기후 분석을 위한 완전한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117328146", "object": "미국 연속 지역의 강수 및 온도 데이터", "problem": "기후 분석을 위한 완전한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116779664", "object": "눈 물 등가물 예측", "problem": "정확한 눈 물 등가물 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116732311", "object": "오만 알바티나 지역의 강수 데이터", "problem": "일일 강수 데이터 결측치 보완", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116049680", "object": "도시 홍수 예측", "problem": "홍수 예측 시스템의 효과성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116083659", "object": "알프스 하천 시스템의 용해 유기 탄소(DOC) 및 총 부유 고형물(TSS)", "problem": "기후 변화에 따른 DOC 및 TSS 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116425301", "object": "수자원 관리", "problem": "기후 변화에 따른 수자원 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417473477", "object": "가뭄 평가", "problem": "장기 가뭄 모니터링 및 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417433057", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417436702", "object": "오를레앙 카르스트 지역의 다중 재해 시나리오", "problem": "홍수 유발 싱크홀 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417442891", "object": "수문 예측 정확도", "problem": "단기 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115924467", "object": "유럽 숲의 캐노피 구조 다양성", "problem": "캐노피 구조 다양성의 벽면 지도 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131902214", "object": "제룰럼 분지의 영구 동토", "problem": "영구 동토 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115593127", "object": "다공성 암석", "problem": "유체 저장 및 전송 특성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115179755", "object": "침입종인 카인 두꺼비", "problem": "소리 활동 패턴 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154507262", "object": "미티자 평원의 침투 모델링", "problem": "침투율 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417306460", "object": "수면수-지하수 상호작용", "problem": "수면수-지하수 상호작용 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115184416", "object": "다공성 매질 내 모세관 흐름", "problem": "모델 및 물리적 매개변수 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417293631", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115000808", "object": "콜롬비아 수력 발전소의 입찰", "problem": "일일 입찰 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115021716", "object": "지하수 자원", "problem": "지하수 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417306489", "object": "저수지 특성", "problem": "비가우시안 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417252209", "object": "국경을 초월한 수자원 관리", "problem": "수문 데이터의 공정한 접근 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7114999280", "object": "농작물 뿌리대 토양 수분", "problem": "정확한 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7115021264", "object": "농작물 재배지의 뿌리층 토양 수분", "problem": "정확한 뿌리층 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417191719", "object": "유량 추정", "problem": "비정상적인 수문학적 조건에서의 유량 곡선 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123923582", "object": "수자원 예측 모델", "problem": "모델 최적화 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417175789", "object": "증발산 추정 정확도", "problem": "정확한 증발산 데이터 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417102446", "object": "습지, 이탄지, 호수의 brGDGT", "problem": "brGDGT 기원 변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7111415768", "object": "산불 피해 지역의 수자원 회복", "problem": "산불 후 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125479393", "object": "습지, 이탄지, 호수의 brGDGT", "problem": "brGDGT 기원 변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125887535", "object": "수자원 연구의 재현성", "problem": "재현성 향상 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7109700163", "object": "하천 시스템", "problem": "인간 활동에 의한 체계 변화 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7109721141", "object": "하천 시스템", "problem": "인간 활동에 의한 체계 변화 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417058590", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416975733", "object": "강우 하이엣그래프", "problem": "실시간 강우 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416930825", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416932702", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117295571", "object": "도시 홍수 관리", "problem": "기후 변화에 따른 도시 홍수 대응 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117306290", "object": "도시 홍수 관리", "problem": "기후 변화에 따른 도시 홍수 적응 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7151519508", "object": "토양 수분 모델링 및 산사태 평가", "problem": "산사태 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7108455888", "object": "모든 과학적 시스템과 구조", "problem": "모든 과학적 현상의 통합 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7108462548", "object": "모든 과학적 시스템과 구조", "problem": "모든 시스템의 통합 분석 및 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416848506", "object": "수자원 관리", "problem": "기후 변화에 따른 수자원 전략 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417438873", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4416833505", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417398241", "object": "고산 생태계 복원 및 물 안전성", "problem": "디지털 솔루션 공동 창출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7129018897", "object": "Razavar 강 유량", "problem": "월별 유량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7129049037", "object": "Abgendi 유역의 토양 손실", "problem": "계곡 침식으로 인한 토양 손실량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7107943855", "object": "수문학 모델링", "problem": "차별화된 유량 집적", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7107960561", "object": "수문 모델링", "problem": "유량 경로 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416746592", "object": "강수량 분해", "problem": "시간별 강수량 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416569661", "object": "도시 및 비도시 산사태", "problem": "산사태 취약성 맵 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118732764", "object": "해양 메소스케일 역학", "problem": "기후 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118815052", "object": "해양 메소스케일 역학", "problem": "기후 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118896750", "object": "해양 메소스케일 역학", "problem": "기후 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7106218878", "object": "물의 질", "problem": "센티넬-2 밴드의 민감도 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7106224280", "object": "물의 질", "problem": "센티넬-2 밴드의 민감도 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416649766", "object": "증발산 추정 정확도", "problem": "정확한 증발산 데이터 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416664176", "object": "영구 동토층", "problem": "영구 동토층 동태 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416396235", "object": "발하쉬 호수의 수자원 균형", "problem": "기후 변화와 인간 활동의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7106609532", "object": "수문 예측 성능", "problem": "운영 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7106143417", "object": "영구 동토층", "problem": "영구 동토층 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416300908", "object": "영구 동토층", "problem": "영구 동토층 동태 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416301635", "object": "유역 보전", "problem": "효율적인 유역 관리 및 보전 계획 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416305813", "object": "생태계 건강", "problem": "생태계 건강 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162151408", "object": "중앙 아시아의 건조 환경", "problem": "기후-식생-사회 연계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105832964", "object": "지구 관측 기술", "problem": "지구 시스템 분석을 위한 원격 감지 기술의 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105844274", "object": "지구 관측 기술", "problem": "지구 시스템 분석을 위한 원격 감지 기술의 통합 및 응용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105738481", "object": "이란의 수자원 관리", "problem": "극심한 건조성 이해 및 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105763724", "object": "이란의 수자원 관리", "problem": "극단적인 건조성 이해 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416644950", "object": "호주 대륙의 강수량", "problem": "물리적 수치 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416644955", "object": "호주 대륙의 강수량", "problem": "물리적 수치 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416073518", "object": "강 수질 샘플링", "problem": "샘플링 시기 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416097400", "object": "댐 유역의 수자원 관리", "problem": "효과적인 수자원 관리 및 홍수 통제 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416647122", "object": "영구 동토층 두께", "problem": "영구 동토층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416647124", "object": "북극 툰드라의 영구 동토층 두께", "problem": "영구 동토층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416018688", "object": "수자원 과학 질문에 대한 LLM 응답", "problem": "LLM 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415982995", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4415973470", "object": "Gumara-Maksegnit 유역", "problem": "강우 침식성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124959040", "object": "산림 피복 유형", "problem": "정확한 산림 피복 유형 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415908028", "object": "증발산 추정", "problem": "정확한 증발산 데이터 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416112198", "object": "비가측 유역의 홍수 피크 유량", "problem": "홍수 피크 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415682013", "object": "지하수-하천 상호작용", "problem": "홍수 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7103887468", "object": "금융 예측 시스템", "problem": "예측 시스템의 신뢰성 및 확장성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7103892831", "object": "재무 예측 시스템", "problem": "예측 시스템의 신뢰성 및 확장성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415641456", "object": "서부 시베리아의 퇴행성 해빙 슬럼프", "problem": "퇴행성 해빙 슬럼프의 분포 및 환경적 요인 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155033408", "object": "수문학적 시간 시계열 데이터", "problem": "누락된 데이터 복원 및 예측 모델 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415619157", "object": "토양 수분", "problem": "정확한 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415568324", "object": "산악 지역의 경사면", "problem": "태풍에 적응한 위험 경고 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415599720", "object": "호주 대륙의 강수량 이소토프 변동", "problem": "강수량 이소토프의 공간적 연속성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415557515", "object": "수문 예측 정확도", "problem": "단기 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415532070", "object": "수자원 관리", "problem": "다양한 시간 규모의 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415502622", "object": "Cochin Backwater (CBW) 하구", "problem": "계절별 담수 유입량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128703949", "object": "토양 수분 재충전", "problem": "정확한 예측 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415429234", "object": "지하수 자원 관리", "problem": "지하수 잠재력 맵 작성 및 수질 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7104452238", "object": "전 세계 하천 유량 데이터셋", "problem": "전 세계 하천 유량 시뮬레이션 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348593", "object": "지하수 잠재력 구역", "problem": "과학적 지하수 잠재력 구역 매핑을 위한 방법론적 접근 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348209", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348597", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348608", "object": "지하수 잠재력 구역(GWPZ)", "problem": "효과적인 GWPZ 매핑 전략 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415144550", "object": "도시 우수 홍수 예측", "problem": "데이터셋 특성에 따른 예측 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415176945", "object": "지구 표면 변화 모니터링", "problem": "기계 학습을 통한 변화 탐지 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416894577", "object": "환경 지속 가능성", "problem": "AI의 이중 역할 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162871923", "object": "수문학 모델", "problem": "극한 사건 동안의 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415768651", "object": "증발산 모델링", "problem": "증발산 추정 과정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415987236", "object": "타르벨라 댐", "problem": "저수지 유입량 정확한 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348188", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 근거 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415717764", "object": "산사태 취약성 지도", "problem": "산사태 위험 지역 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414736117", "object": "도시 및 비도시 산사태 메커니즘", "problem": "산사태 취약성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414736134", "object": "도시 및 비도시 지역의 산사태 메커니즘", "problem": "산사태 취약성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414736481", "object": "도시 및 비도시 지역의 산사태 메커니즘", "problem": "산사태 취약성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416533255", "object": "하천 유역의 용존 산소 수준", "problem": "용존 산소 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131888743", "object": "상수원 수자원 관리 및 농업 지속 가능성", "problem": "기후 변화가 수자원 및 농업에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414671647", "object": "지하수 품질", "problem": "지하수 품질 연구의 주요 주제 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414667343", "object": "단기 유량 예측", "problem": "예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348221", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117111558", "object": "지리 정보 시스템", "problem": "지리적 데이터의 효율적 분석 및 활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117140114", "object": "지리 정보 시스템", "problem": "지리적 데이터의 효율적 분석 및 활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414610379", "object": "수자원 예측 및 자연재해 완화", "problem": "기계 학습과 수문학 통합을 통한 연구 정확도 및 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414522152", "object": "수문 모델 초기화", "problem": "모델 스핀업 시간 단축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414523028", "object": "제방 및 경사면 안정성", "problem": "토양 안정성 분석 및 실패 메커니즘 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414523405", "object": "수문 모델 평가", "problem": "모델 성능 해석 명확화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348591", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414444325", "object": "수면수 잠재 구역", "problem": "수질 평가 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414430876", "object": "홍수 예측 신뢰성", "problem": "데이터 부족 지역에서 홍수 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414430975", "object": "홍수 예측 시스템", "problem": "홍수 예측 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414385349", "object": "대규모 수문 모델의 매개변수", "problem": "매개변수 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414404613", "object": "강수 단계 감지 시스템", "problem": "강수 단계 정확한 실시간 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348571", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348578", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414349310", "object": "유역 생태계", "problem": "지속 가능한 수자원 관리 위한 통합 평가 체계 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414343053", "object": "토양 탄소 및 질소 순환", "problem": "작물 수확량 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414297015", "object": "대규모 수문 모델", "problem": "모델 성능 향상을 위한 프로세스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414290088", "object": "산악 지역의 경사면", "problem": "태풍에 적응한 위험 경고 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414257023", "object": "도시 및 비도시 지역의 산사태 메커니즘", "problem": "산사태 취약성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414208914", "object": "지질재해", "problem": "지질재해 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414590488", "object": "메콩 델타의 강변 침식", "problem": "강변 침식 취약 지역 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118192545", "object": "샌프란시스코 만 지역의 해안 홍수 시뮬레이션 데이터", "problem": "해안 보호 시나리오에 따른 홍수 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161156213", "object": "토양 관리 및 생태계", "problem": "지속 가능한 토양 관리 및 환경 보전", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414144559", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4414159123", "object": "오아시스 생태계", "problem": "지하수 고갈 및 식생 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414051047", "object": "아바이 강 유역의 지하수", "problem": "지하수 잠재력 지역 식별 및 저장 역학 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413919277", "object": "농업 토양 유기탄소", "problem": "정확한 토양 유기탄소 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413942750", "object": "수문 변수 예측", "problem": "정확한 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413877302", "object": "호수 수위 예측", "problem": "정확한 수위 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414374837", "object": "뉴질랜드 하천의 수문학적 반응", "problem": "젊은 수분 비율 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413874553", "object": "영구 동토층 두께", "problem": "영구 동토층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415449303", "object": "아우페이스 지역", "problem": "아우페이스 동적 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7123730351", "object": "염습지-숲 생태계 전이 구역", "problem": "염습지 이동과 숲 후퇴의 생태적 및 수문학적 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413839286", "object": "산악 유역의 강수량 추정", "problem": "위성 데이터의 지연 시간 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413777051", "object": "통합 물 시스템 모델링", "problem": "분야 간 단절 극복 및 인간-물 동역학 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413740014", "object": "홍수 예측 시스템", "problem": "홍수 예측 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413740270", "object": "산악 지역의 경사면", "problem": "태풍에 적응한 위험 경고 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413694151", "object": "산악 지역의 경사면", "problem": "태풍에 적응한 위험 경고 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413504461", "object": "영구 동토층 두께", "problem": "영구 동토층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348219", "object": "지하수 잠재력 구역", "problem": "과학적 지하수 잠재력 구역 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413370442", "object": "서부 시베리아의 영구 동토층", "problem": "영구 동토층의 급격한 해빙 현상 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413303206", "object": "수질 모니터링", "problem": "수질 개선을 위한 원격 탐지 기술 활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413294807", "object": "토양 수분", "problem": "정밀 관개 및 가뭄 모니터링 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413272520", "object": "도시 및 비도시 산사태 메커니즘", "problem": "산사태 취약성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413341603", "object": "홍수 예측 시스템", "problem": "홍수 예측 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413381080", "object": "생태적 가뭄", "problem": "생태적 가뭄 평가 프레임워크 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413193096", "object": "강수량 데이터", "problem": "결측 강수량 데이터 보완", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413208216", "object": "호주 대륙의 강수량 이소토프 변동", "problem": "강수량 이소토프의 공간적 연속성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413226565", "object": "북극 기슭 툰드라의 활성층 두께", "problem": "활성층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413221776", "object": "산사태 경고 시스템", "problem": "태풍에 적응한 위험 경고 시스템 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416348592", "object": "지하수 잠재력 구역(GWPZ)", "problem": "과학적 기반의 GWPZ 매핑 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413002524", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4412979330", "object": "눈이 지배적인 유역의 수문학적 반응", "problem": "기후 변동성에 대한 수문학적 귀속 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412979290", "object": "모하 카운티의 온도 카르스트 호수", "problem": "온도 카르스트 호수의 변화 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412931518", "object": "중국의 습지", "problem": "습지 식생의 생체량 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416726353", "object": "인도 강의 연간 최대 유량", "problem": "홍수 예측 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413455858", "object": "유역 동역학", "problem": "유역 특성과 동역학 간의 관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412810860", "object": "대규모 수문학", "problem": "수문학적 예측 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412810918", "object": "수자원 관리", "problem": "기후 변화에 따른 수문학적 극단 현상 대응", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412905651", "object": "위성 이미지의 눈과 구름 분할", "problem": "눈과 구름의 정확한 구분", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412682641", "object": "시간별 수문기상 데이터셋", "problem": "단기 유량 예측 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412645231", "object": "지표면 모델에서의 하천 유량 경로 설정", "problem": "하천 유량 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412630012", "object": "하천 유량", "problem": "유량 예측 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412585145", "object": "소규모 저수지", "problem": "청색조류 발생 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416585103", "object": "에토샤 호수", "problem": "계절적 배수 과정 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412976966", "object": "수자원 시스템의 설계 홍수 변화", "problem": "설계 홍수 변화 추정의 불확실성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413075581", "object": "강수량 추정", "problem": "강수량 변동성 이해 및 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412702201", "object": "하천 유량 예측", "problem": "계절별 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412490415", "object": "북극 하천 유량", "problem": "데이터 격차 해소 및 수문학적 이해 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413082525", "object": "토양 수분 평가", "problem": "정확한 토양 수분 측정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413083083", "object": "홍수로 인한 사회적 위험", "problem": "사회적 위험의 통합 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412430060", "object": "카르스트 지역의 수질 및 수문", "problem": "수질 및 수문 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412374558", "object": "서부 시베리아의 퇴적 슬럼프", "problem": "퇴적 슬럼프 분포 및 환경적 요인 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412177915", "object": "토양 수분", "problem": "정확한 토양 수분 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128196169", "object": "티베트 고원 호수 수위", "problem": "기후 변화에 따른 수위 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412059608", "object": "강수 단계 감지 시스템", "problem": "정확한 강수 단계 실시간 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412100512", "object": "토양 및 수자원 관리", "problem": "물 부족 및 토양 악화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411960972", "object": "하류 지역의 홍수 패턴", "problem": "홍수 위험 지역 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411921684", "object": "대규모 수문 모델에서 인간 행동의 표현", "problem": "인간-물 상호작용의 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413152341", "object": "도시 홍수", "problem": "정확한 홍수 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414404661", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

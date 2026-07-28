@@ -1,0 +1,468 @@
+{"id": "W7167885954", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "진동 제어를 위한 구조물", "problem": "구조물의 안전성과 신뢰성 향상"}
+{"id": "W7167817691", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 침투 예측", "problem": "비정상적인 침투 반응 추적 개선"}
+{"id": "W7167853399", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐의 파손", "problem": "파손 형상 및 유량의 시간 의존적 변화 모니터링"}
+{"id": "W7167636935", "domain_primary": "W2", "domain_secondary": ["W3", "W7"], "confidence": 0.85, "domain_ver": "v0.1", "object": "Areh 댐 수원", "problem": "수질 오염 개선 및 안전성 확보"}
+{"id": "W7167642731", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인공 암석 및 토양 덩어리", "problem": "수위 변화에 따른 위험 지역 식별 및 국지화"}
+{"id": "W7167984625", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지상 레이저 스캐너(TLS) 측정", "problem": "법적 추적 가능성 확보"}
+{"id": "W7167408878", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중요한 토목 인프라", "problem": "구조적 건강 상태 실시간 모니터링"}
+{"id": "W7167364499", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.85, "domain_ver": "v0.1", "object": "댐 변형 예측", "problem": "환경 변수의 시공간 결합 효과 포착"}
+{"id": "W7167461671", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수위 관리", "problem": "자동화된 댐 셔터 제어"}
+{"id": "W7167465663", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수위 관리", "problem": "자동화된 댐 셔터 제어"}
+{"id": "W7167517136", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 운영 안전 행동", "problem": "종합적인 안전 평가 방법 제안"}
+{"id": "W7167209729", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토팔랑 흙댐", "problem": "댐 변형 모니터링"}
+{"id": "W7167240565", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토팔랑 댐", "problem": "댐의 지속적인 변형 모니터링"}
+{"id": "W7167243352", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토팔랑 댐", "problem": "지속적인 변형 모니터링을 통한 안전성 평가"}
+{"id": "W7167255880", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토팔랑 흙댐", "problem": "댐 변형 모니터링"}
+{"id": "W7167367152", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 댐", "problem": "댐 표면의 변형 분석 및 모니터링"}
+{"id": "W7167215603", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 댐", "problem": "구조적 이상 탐지 및 매핑 개선"}
+{"id": "W7167624222", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도로 경사면 안정성", "problem": "경사면 안정성 평가"}
+{"id": "W7166641966", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지질학적 이산화탄소 저장", "problem": "이산화탄소 저장 최적화 및 모니터링 개선"}
+{"id": "W7166725058", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "교량 및 기타 토목 구조물", "problem": "구조물 건강 모니터링"}
+{"id": "W7166172963", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Deriner Arch Dam", "problem": "주파수 변동 예측"}
+{"id": "W7166344348", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변위", "problem": "다중 지점 변위 예측"}
+{"id": "W7166568740", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "겸상적혈구병 및 지중해빈혈", "problem": "생화학적 원인 해결"}
+{"id": "W7165733552", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "자동화된 검사 시스템 개발"}
+{"id": "W7165636503", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Alau Dam 수水", "problem": "석유 탄화수소(PHC) 노출 평가"}
+{"id": "W7165646145", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중소형 저수지", "problem": "저수지 운영 안전성 개선"}
+{"id": "W7165671577", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jibia Dam의 식용 어류", "problem": "중금속 노출로 인한 건강 위험 평가"}
+{"id": "W7166578997", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "구조적 이상 탐지"}
+{"id": "W7165549712", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고산 터널 건설 안전", "problem": "안전 위험 평가 및 완화 전략 수립"}
+{"id": "W7166799849", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "댐 실패 위험 조기 경고"}
+{"id": "W7165031991", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고압 콘크리트 면암거더 댐", "problem": "수문 실패 시 삼차원 침투 반응 및 안전성 평가"}
+{"id": "W7164841282", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 댐", "problem": "변위 예측"}
+{"id": "W7164910189", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 댐", "problem": "변위 예측"}
+{"id": "W7164923675", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 댐", "problem": "변형 예측"}
+{"id": "W7165614127", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "위험 감소를 위한 행동 모니터링 시스템 도입"}
+{"id": "W7164160741", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nagarjuna Sagar 댐", "problem": "지진 취약성 완화"}
+{"id": "W7163902863", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다공성 매질의 침투 모델링", "problem": "물리적 경계 조건 불완전성 해결"}
+{"id": "W7163737896", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 제방댐", "problem": "제방댐 안전성 및 노후 인프라 관리 개선"}
+{"id": "W7163752352", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 제방댐", "problem": "제방댐 안전성 및 노후 인프라 문제 해결"}
+{"id": "W7163592000", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐의 누수 위험", "problem": "누수 실패 모니터링"}
+{"id": "W7163387186", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 누수", "problem": "주요 누수 영향 요인 식별"}
+{"id": "W7163403587", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 붕괴 파도에서의 잔해 모니터링", "problem": "잔해 자동 탐지 및 추적"}
+{"id": "W7163126125", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "펌프 저장식 댐", "problem": "댐 변형 모니터링 개선"}
+{"id": "W7163138896", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 구조물 균열 탐지", "problem": "효율적인 균열 검사 방법론 개발"}
+{"id": "W7163063627", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대형 토목 구조물", "problem": "구조물 손상 조기 탐지"}
+{"id": "W7167829193", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안정성", "problem": "지반 액상화로 인한 실패 확률 감소"}
+{"id": "W7163052941", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 은행 경사", "problem": "경사 변형 예측"}
+{"id": "W7162873515", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karun-4 댐", "problem": "댐 변형 행동 모델링 및 해석"}
+{"id": "W7165864655", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카호프카 저수지", "problem": "저수지의 공간적 변화 감지 및 식생 식민지화 평가"}
+{"id": "W7162649681", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 및 제방의 구조적 안전성", "problem": "터미트 활동 징후 자동 탐지"}
+{"id": "W7162654391", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수력 댐", "problem": "구조적 무결성 평가"}
+{"id": "W7162295153", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐 안전 관리", "problem": "내부 침식 및 파이핑 조기 경고 제공"}
+{"id": "W7162305942", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐 안전 관리", "problem": "내부 침식 및 파이핑 조기 경고 제공"}
+{"id": "W7162679771", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.85, "domain_ver": "v0.1", "object": "오스킬 저수지 생태계", "problem": "환경 안전성 평가 및 생태계 복원 전망 분석"}
+{"id": "W7161833515", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "암석댐 변형", "problem": "결측 변형 데이터 수리"}
+{"id": "W7161704642", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "저수지 수위 변화", "problem": "지각 수직 변형 모니터링 및 메커니즘 분석"}
+{"id": "W7161589570", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 균열", "problem": "정확한 균열 탐지"}
+{"id": "W7162468341", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 물 수확 댐", "problem": "안전성 및 기능성 향상"}
+{"id": "W7161639506", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 댐", "problem": "댐의 열화 메커니즘 이해"}
+{"id": "W7161050600", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 제방 구조", "problem": "내부 구조 변화 조기 탐지"}
+{"id": "W7161239447", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IoMT 센서 스트림", "problem": "잘못된 데이터 주입 공격 탐지"}
+{"id": "W7161452707", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IoMT 센서 스트림", "problem": "잘못된 데이터 주입 공격 탐지"}
+{"id": "W7160912295", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 누수", "problem": "누수 조기 탐지"}
+{"id": "W7160952301", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "점토 불투수 토양 댐", "problem": "침투 손상 경고 지표 제시"}
+{"id": "W7162005316", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반댐 경사 안정성", "problem": "저수지 수위 변동에 따른 경사 안정성 저하"}
+{"id": "W7160618486", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "암석 채움 댐", "problem": "변형 필드 재구성"}
+{"id": "W7160385731", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브루마딘유 제방", "problem": "정적 액상화 유발 요인 분석"}
+{"id": "W7160517165", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중력댐", "problem": "기계적 설계 매개변수의 실제 값과의 편차 해결"}
+{"id": "W7163721083", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "석탄 재활용 잔여물 연못 폐쇄", "problem": "지반 침하 모니터링"}
+{"id": "W7160288604", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동질 토사 댐", "problem": "기술 상태 평가 최적화"}
+{"id": "W7164295811", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인프라 시스템", "problem": "정확한 3D 공간 데이터 수집"}
+{"id": "W7164304405", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건설 프로젝트의 환경 영향", "problem": "부정적 환경 영향 예측 및 완화"}
+{"id": "W7164339439", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인프라 시스템", "problem": "정확한 3D 공간 데이터 수집"}
+{"id": "W7164357622", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 및 인프라 시스템", "problem": "구조물의 신뢰성 및 안전성 평가"}
+{"id": "W7164394598", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 및 인프라 시스템", "problem": "구조물의 신뢰성 및 안전성 평가"}
+{"id": "W7164405253", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건설 프로젝트의 환경 영향", "problem": "부정적 환경 영향 평가 및 완화"}
+{"id": "W7164476919", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 안전성", "problem": "구조물 상태 실시간 모니터링"}
+{"id": "W7164486575", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 댐", "problem": "댐 안전성 향상"}
+{"id": "W7164541580", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 댐", "problem": "댐 안전성 확보 및 구조적 안정성 향상"}
+{"id": "W7164597573", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 안전성", "problem": "구조물 상태 실시간 모니터링"}
+{"id": "W7157508066", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산후 수면/각성 활동 및 모성 행동", "problem": "모성 행동에 대한 에스시탈로프람의 영향 조사"}
+{"id": "W7160164064", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 유지보수", "problem": "댐 안전성 확보 및 효율적 운영"}
+{"id": "W7160258400", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 침투 안전 모니터링", "problem": "모니터링 데이터 예측"}
+{"id": "W7164191968", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 구조물", "problem": "실시간 모니터링을 통한 안전성 및 효율성 개선"}
+{"id": "W7164198678", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 구조물", "problem": "실시간 모니터링을 통한 안전성 및 효율성 개선"}
+{"id": "W7164356814", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건축 구조물", "problem": "결함 있는 건축 자재의 영향 분석"}
+{"id": "W7164393427", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건축 구조물", "problem": "결함 있는 건축 자재의 영향 분석"}
+{"id": "W7164490151", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "철근 콘크리트 구조물", "problem": "구조물 성능 및 안전성 향상"}
+{"id": "W7164529792", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기초 설계", "problem": "지반 조사로 기초 안전성 향상"}
+{"id": "W7164529961", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "철근 콘크리트 구조물", "problem": "구조물 성능 및 안전성 향상"}
+{"id": "W7164539930", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기초 설계", "problem": "지반 조사로 기초 안전성 향상"}
+{"id": "W7160433454", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "셰르바키프스키 폐기물 저수지", "problem": "환경 오염 위험 조기 탐지"}
+{"id": "W7159622765", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 자동화 및 안전 모니터링 시스템", "problem": "홍수 예방 및 자원 최대 활용"}
+{"id": "W7156208227", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 및 저수지 시스템", "problem": "기후 변화에 따른 위험 평가"}
+{"id": "W7155522643", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고압 코어 록필 댐의 습윤 변형 매개변수", "problem": "정확한 습윤 변형 매개변수 결정"}
+{"id": "W7154606709", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모레인 댐의 안정성", "problem": "빙하 호수 범람 위험 평가"}
+{"id": "W4402391833", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신한 쌍둥이 양의 생리적 및 생화학적 매개변수", "problem": "SC와 아미노산의 병용 효과 이해"}
+{"id": "W7154714859", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lagdo 댐", "problem": "안전 모니터링 시스템 구축"}
+{"id": "W7154750778", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 변형", "problem": "변형 예측 정확도 향상"}
+{"id": "W7154665030", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 하천 생태계", "problem": "댐 제거에 따른 수질 변화 평가"}
+{"id": "W7154508633", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 데이터", "problem": "이상 데이터 식별 및 재구성"}
+{"id": "W7154236427", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "개에서의 보르데텔라 브론키세프티카 백신", "problem": "백신의 안전성 및 효능 평가"}
+{"id": "W7154029052", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Souapiti 수력 발전 댐", "problem": "운영 효율성 평가"}
+{"id": "W7154147796", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "롤러 압축 콘크리트(RCC) 이중 곡선 아치 댐", "problem": "지진 후 구조적 거동 평가"}
+{"id": "W7154173001", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화이수관 저수지 댐", "problem": "투수 안전성 평가"}
+{"id": "W7152369031", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "이상 탐지 정확도 향상"}
+{"id": "W7152636602", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변위", "problem": "변위 조기 탐지 및 경고"}
+{"id": "W7151784822", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산 피에트로 댐 주변 지역", "problem": "산사태 취약성 평가"}
+{"id": "W7151477603", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "코이나 댐", "problem": "댐 안정성 모니터링"}
+{"id": "W7150190521", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "다양한 원천 데이터 기반 변형 예측"}
+{"id": "W7150885566", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 및 저수지 시스템", "problem": "기후 변화에 따른 위험 평가"}
+{"id": "W7153107564", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조물", "problem": "표면 균열 조기 탐지"}
+{"id": "W7154100346", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 안전", "problem": "실시간 이상 탐지 및 변형 모니터링 개선"}
+{"id": "W7163737055", "domain_primary": "W2", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "모술 댐", "problem": "침식 위험 감소를 위한 유출 및 퇴적물 동역학 모델링"}
+{"id": "W7164744706", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "탕갑 댐의 지하수 수준", "problem": "지하수 수준 추정"}
+{"id": "W7165917331", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링 시스템", "problem": "조기 손상 탐지 및 유지보수 최적화"}
+{"id": "W7147591629", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형", "problem": "변형 예측 및 위험 조기 경고"}
+{"id": "W7143654404", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 모니터링", "problem": "고정밀 변형 탐지"}
+{"id": "W7146977816", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 자산", "problem": "예측 유지보수 시스템 구축"}
+{"id": "W7167957163", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 및 터널", "problem": "구조적 실패에 대한 위험 감소"}
+{"id": "W7148278841", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "철광석 폐기물 댐", "problem": "수질 오염 최소화"}
+{"id": "W7153540940", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Zobe 댐의 수질 및 생태계", "problem": "중금속 오염 평가 및 인간 건강 위험 분석"}
+{"id": "W7168170559", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아스타나 저수지의 수리 구조물", "problem": "신뢰성 및 운영 효율성 개선"}
+{"id": "W7160520257", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "키예프 쿠레니프카 지역의 댐", "problem": "댐 붕괴 원인 분석 및 예방 솔루션 도출"}
+{"id": "W7160677464", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "키예프 쿠레니프카 지역의 댐", "problem": "댐 붕괴 원인 분석 및 예방 솔루션 도출"}
+{"id": "W7140287748", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "광산 탐사", "problem": "자동화된 드론을 통한 효율적인 조사 및 안전성 향상"}
+{"id": "W7140183170", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폴리할리 콘크리트 면암거더 댐", "problem": "유한 요소 모델 수정"}
+{"id": "W7143331340", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중대형 건설 구조물", "problem": "균열 자동 탐지 및 분석"}
+{"id": "W7143366166", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중대형 건설 구조물", "problem": "균열 자동 탐지 및 분석"}
+{"id": "W7137941240", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 저수지", "problem": "퇴적물 관리 최적화"}
+{"id": "W7137922690", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 계곡 수축", "problem": "장기적인 하천 계곡 수축 예측"}
+{"id": "W7135167744", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 댐", "problem": "댐 구조의 지진 변화 추적"}
+{"id": "W7135226363", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상류 황하의 산사태 위험", "problem": "산사태로 인한 재해 연쇄 위험 평가"}
+{"id": "W7135229814", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조물", "problem": "댐 변형 모니터링 및 예측"}
+{"id": "W7137076136", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심부 석탄광의 격리 댐", "problem": "댐 파손 원인 규명"}
+{"id": "W7135168175", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유산 폐기물 저장 시설", "problem": "지질적 무결성 평가 및 재활용 가능성 탐색"}
+{"id": "W7135201717", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tiga 댐의 어류", "problem": "다환 방향족 탄화수소의 생물 축적 및 건강 위험 평가"}
+{"id": "W7135217493", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 저수지", "problem": "저수지 안전 관리 개선"}
+{"id": "W7135230323", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산사태 댐 호수", "problem": "재해 대응을 위한 위험 지역 평가"}
+{"id": "W7135236996", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Attabad 산사태 댐", "problem": "댐 안정성 평가"}
+{"id": "W7135103122", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임자 빙하 호수의 말단 모레인 댐", "problem": "댐의 안정성 평가 및 위험 완화 전략 수립"}
+{"id": "W7134963226", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치댐", "problem": "잔여 수화열 추정 개선"}
+{"id": "W7134985889", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전", "problem": "댐 overflow 및 구조적 위험 예측"}
+{"id": "W7134986251", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전", "problem": "댐 overflow 및 구조적 위험 예측"}
+{"id": "W7134258815", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "말람푸자 댐", "problem": "청색조류의 과도한 성장으로 인한 수질 악화 방지"}
+{"id": "W7134281235", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알라우 댐 수질", "problem": "석유 탄화수소 오염 평가"}
+{"id": "W7134056421", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "퇴적물 관리", "problem": "퇴적물 동역학 모니터링 개선"}
+{"id": "W7134071415", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기존 이중 곡선 콘크리트 얇은 아치 댐", "problem": "극한 온도 하중에 따른 구조적 반응 분석"}
+{"id": "W7133661877", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "웨스턴 호수 댐의 지하수 관리", "problem": "지하수 저하를 통한 댐 안전성 개선"}
+{"id": "W7133511322", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐의 침투 압력", "problem": "침투 행동의 정확한 예측 및 해석"}
+{"id": "W7141483840", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반댐의 누수 문제", "problem": "누수 원인 분석 및 효과적인 보수 대책 제안"}
+{"id": "W7143519830", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ringlet 및 Jor 저수지", "problem": "퇴적물 관리 전략 평가"}
+{"id": "W7133317223", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성 및 구조 건강 모니터링", "problem": "댐 위험 조기 탐지 및 분석"}
+{"id": "W7131652518", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 구조물", "problem": "정확한 기하학적 문서화 및 상태 평가"}
+{"id": "W7131672298", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "롤러 압축 콘크리트 중력 댐", "problem": "온도 제어 및 균열 예방"}
+{"id": "W7131363494", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아스팔트 콘크리트 코어", "problem": "힘과 변형 특성 분석"}
+{"id": "W2340378098", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "채움형 댐", "problem": "건설 중 안정성 분석"}
+{"id": "W7131235485", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "교량 및 수로", "problem": "홍수 수준 실시간 모니터링 및 자동 경고 시스템 구축"}
+{"id": "W7155071844", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cikalumpang 댐", "problem": "홍수 위험 감소를 위한 신속한 경고 제공"}
+{"id": "W7131074680", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반댐 안전성", "problem": "강우에 의한 불안정성 예측"}
+{"id": "W7160587178", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스키 리조트의 인공 눈 생산 저수지", "problem": "생태적 품질 향상"}
+{"id": "W7128952144", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐", "problem": "장기 성능 모니터링 및 내구성 향상"}
+{"id": "W7128767210", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "댐 고장 원인 조기 탐지"}
+{"id": "W7128791135", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대형 댐 및 역사적 기념물", "problem": "안전 기준에 맞춘 성공적인 재활"}
+{"id": "W7128821543", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dhron 곡선 중력댐", "problem": "노후 댐의 안전성 평가 및 보수"}
+{"id": "W7128700362", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 구조물", "problem": "균열 조기 탐지"}
+{"id": "W7128710591", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 예측", "problem": "비선형 환경 요인의 기여도 정량화 및 해석 제공"}
+{"id": "W7128590713", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "롱양샤 수력발전소", "problem": "댐 안전 모니터링 지원"}
+{"id": "W7128538705", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 아치 댐", "problem": "구조적 손상 조기 탐지"}
+{"id": "W7147122927", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 누수", "problem": "누수 탐지"}
+{"id": "W7128447911", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 누수 관리", "problem": "누수 조기 탐지"}
+{"id": "W7128062208", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "그랜드 에티오피아 부흥 댐 보조 댐", "problem": "댐의 구조적 취약성 및 누수 위험 평가"}
+{"id": "W7128467375", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cabean 댐 기초", "problem": "침투 및 경사 불안정성 위험 지역 식별"}
+{"id": "W7160036176", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "데이터 정합성 향상"}
+{"id": "W7127891081", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변위 예측", "problem": "정확한 변위 예측을 위한 복잡한 관계 모델링"}
+{"id": "W7127988357", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 콘크리트 내부 온도 필드", "problem": "비정상 온도 구역 조기 탐지"}
+{"id": "W7127584195", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "람 프라 플롱 토석댐", "problem": "침투 거동 평가 및 수리 경사 조건 분석"}
+{"id": "W7127634126", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아스팔트-콘크리트 코어 록필 댐", "problem": "비균일 크리프 변형의 장기 안전성 분석"}
+{"id": "W7127363970", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 정상부 평면 변형", "problem": "변형 및 균열 분석 개선"}
+{"id": "W7127324088", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지", "problem": "구조적 및 생태적 위험 조기 탐지"}
+{"id": "W7140190951", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 건설 구조물", "problem": "균열 변형 측정 정확도 향상"}
+{"id": "W7127171272", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sukhachivske tailing dam", "problem": "기술적 상태 및 환경 안전성 종합 평가"}
+{"id": "W7127985996", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노인 영양 불균형", "problem": "영양 불균형 해소"}
+{"id": "W7128685527", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치 댐", "problem": "변형 거동 분석 및 안전 모니터링 연구"}
+{"id": "W7126018444", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "황강댐", "problem": "구조적 안정성 장기 모니터링"}
+{"id": "W7126033858", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "운영 중인 초고층 아치 댐", "problem": "변형 안전 모니터링 개선"}
+{"id": "W7125794909", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소아 알레르기 기관지 천식 환자의 치과 치료", "problem": "심리적 스트레스에 의한 급성 기관지 경련 예방"}
+{"id": "W7125597535", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "하이브리드 에너지 생태계", "problem": "공공 안전을 보장하는 에너지 시스템 설계"}
+{"id": "W7125607798", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "하이브리드 에너지 생태계", "problem": "공공 안전을 보장하는 에너지 시스템 설계"}
+{"id": "W7125484127", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 댐", "problem": "댐 변위 예측"}
+{"id": "W7125522335", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "야롱강 유역의 댐 안전성", "problem": "지진 후 댐 안전성 신속 평가"}
+{"id": "W7125599676", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알라우 댐의 어류 오염", "problem": "폴리사이클릭 방향족 탄화수소의 건강 위험 평가"}
+{"id": "W7125376766", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "절벽의 암석 변위", "problem": "암석 변위 조사"}
+{"id": "W7124935358", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐기된 광산 폐기물 저장 시설", "problem": "오염 위험 관리 및 안정성 확보"}
+{"id": "W7140180995", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 저수지 운영", "problem": "홍수 심각도 예측"}
+{"id": "W7124547398", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bendo 댐", "problem": "침투 문제 분석"}
+{"id": "W7124599478", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karian 댐", "problem": "저수지 수위 변동에 따른 침투 및 간극수 압력 반응 평가"}
+{"id": "W7124302257", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Meninting 댐", "problem": "댐 초기 저수 시 수압 변동 및 침투 이상 탐지 개선"}
+{"id": "W7124320609", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 어버트먼트 경사", "problem": "안정성 및 변형 메커니즘 분석"}
+{"id": "W7123345678", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성 및 회복력", "problem": "PMP 및 PMF 재평가"}
+{"id": "W7123681364", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "삼협 프로젝트 3단계 RCC 코퍼댐", "problem": "파괴된 블록의 수중 이동 메커니즘 이해"}
+{"id": "W7123875679", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고지 토석댐의 변형 모니터링", "problem": "대기 굴절 오차 보정"}
+{"id": "W7123896634", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지대형 토담", "problem": "지진 안전성 평가"}
+{"id": "W7123914103", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 시스템", "problem": "비상 상황에 대한 신속한 대응 개선"}
+{"id": "W7123340960", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 경사면", "problem": "크리프 슬라이딩 및 장력 파괴 메커니즘 탐구"}
+{"id": "W7119466737", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 안전성", "problem": "다중 모니터링 데이터 통합 평가"}
+{"id": "W7119482735", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sillamäe 방사성 폐기물 저수지", "problem": "안전한 안정화 및 건식 해체"}
+{"id": "W7119595955", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알마티 지역의 댐 및 저수지", "problem": "구조적 안정성 평가"}
+{"id": "W7119910981", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "댐 실패 원인 분석 및 예방"}
+{"id": "W7118811939", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 계곡 변형", "problem": "댐 임수 후 계곡 변형 예측"}
+{"id": "W7120053600", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chasqueiro 댐", "problem": "댐 모니터링을 위한 지오데틱 기법 적용 평가"}
+{"id": "W7119134731", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "삼峡 저수지의 지류 만", "problem": "조류 발생 패턴 이해 및 조절"}
+{"id": "W7119061211", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알프스 고산 습지", "problem": "중금속 오염 평가"}
+{"id": "W7118187232", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 데이터", "problem": "데이터 품질 평가"}
+{"id": "W7118917065", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수위 모니터링", "problem": "홍수 위험 조기 탐지"}
+{"id": "W7118030962", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "시민 인프라", "problem": "실시간 손상 탐지"}
+{"id": "W7118076076", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "암석댐의 침하", "problem": "온도 영향 정량 평가"}
+{"id": "W7123345273", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조물 모니터링", "problem": "구조적 이상 조기 탐지"}
+{"id": "W7124576089", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리 시스템", "problem": "수자원 붕괴 조기 예측"}
+{"id": "W7125489814", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 변형 이상", "problem": "변형 이상 확률 평가 개선"}
+{"id": "W7127120379", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐기물 댐", "problem": "자동 탐지 개선"}
+{"id": "W7127306468", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고수압 아치댐", "problem": "변형 모니터링을 위한 이상 탐지"}
+{"id": "W7127334678", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "누오자두 수력발전소 스마트 저수지", "problem": "저수지 운영 및 유지 관리의 통합적 디지털화 및 지능화"}
+{"id": "W7127365275", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전", "problem": "이상 조기 탐지 및 예방 조치"}
+{"id": "W7127369013", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고층 콘크리트 면암거더 댐", "problem": "안전성 향상 및 설계 정확도 개선"}
+{"id": "W7127382973", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "이상 징후 조기 탐지"}
+{"id": "W7127625433", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 모니터링 기기", "problem": "모니터링 기기 자동화로 안전성 향상"}
+{"id": "W7130654260", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 닭의 조직 내 농약 잔여물", "problem": "농약 잔여물의 존재 및 농도 조사"}
+{"id": "W7134123742", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shardara 저수지", "problem": "댐 붕괴 위험 평가"}
+{"id": "W7134167684", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 변형 안전 모니터링", "problem": "정확한 변형 예측 및 지속적 모니터링"}
+{"id": "W7134167975", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "민간 인프라 구조물", "problem": "실시간 구조적 건강 모니터링"}
+{"id": "W7140281653", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "레드 블러프 다이버전 댐의 유 juvenile Chinook Salmon", "problem": "어린 연어의 통과량 모니터링"}
+{"id": "W7149517946", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "철광석 폐기물 슬러리", "problem": "폐기물 특성 지속적 모니터링"}
+{"id": "W7153263373", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "리시체 댐", "problem": "댐 안정성 장기 모니터링"}
+{"id": "W7155747261", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 안전성", "problem": "안전성 요인 정확한 추정"}
+{"id": "W7157191301", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 변형", "problem": "정확한 변형 예측"}
+{"id": "W7160491262", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "온도, 변형, 습도 동시 측정"}
+{"id": "W7160883390", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비버 댐", "problem": "비버 댐의 수리적 안정성 평가"}
+{"id": "W7161555292", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 관리 시스템", "problem": "수위 초과 시 경고 및 자동 개폐"}
+{"id": "W7162326960", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐 안전성", "problem": "실시간 안전성 평가 및 조기 경고"}
+{"id": "W7162328079", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐 안전성", "problem": "내부 침식 및 경사 불안정 조기 탐지"}
+{"id": "W7162822765", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐 누수", "problem": "누수 조기 탐지 및 경고 시스템 구축"}
+{"id": "W7162832589", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "정강산사태", "problem": "산사태의 안정성 평가 및 운동 예측"}
+{"id": "W7162842264", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "계곡 변형 예측", "problem": "비정상적 변형 예측의 불확실성 정량화"}
+{"id": "W7162845596", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형", "problem": "정확한 변형 예측"}
+{"id": "W7163184750", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 및 제어", "problem": "실시간 댐 안전성 향상"}
+{"id": "W7164804137", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Diamer Basha Dam", "problem": "지반 변형 예측 향상"}
+{"id": "W7164874731", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 비상 모니터링 시스템", "problem": "지진 발생 시 댐 구조 안전성 신속 평가"}
+{"id": "W7165148081", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Masaka Earthfill Dam", "problem": "침투수 탐지"}
+{"id": "W7165992731", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중앙아시아의 국경을 초월한 수자원 조약", "problem": "조약 성과의 차이 설명"}
+{"id": "W7167387790", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐", "problem": "변형 예측 및 기여 분석"}
+{"id": "W7167440975", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐의 미끄러짐 안정성", "problem": "상승 압력의 변동성 평가"}
+{"id": "W7167732380", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐의 파손", "problem": "파손 형상 및 유량의 시간 의존적 변화 모니터링"}
+{"id": "W7167983855", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 불안정성", "problem": "조기 탐지"}
+{"id": "W7117671932", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카라칸카테스 댐 주변의 단층 지역", "problem": "재해 잠재력 분석"}
+{"id": "W7117760090", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 아치 댐", "problem": "변위 예측 정확도 향상"}
+{"id": "W7117780000", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대형 인프라 구조물", "problem": "소규모 변위 모니터링"}
+{"id": "W7125155822", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반댐", "problem": "공극수압 반응 개선"}
+{"id": "W7127312640", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업용 댐 안전 관리", "problem": "노후화된 댐의 재해 관리 개선"}
+{"id": "W7117558286", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대형 댐", "problem": "구조적 안정성 조기 탐지"}
+{"id": "W7125964899", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 신뢰성", "problem": "AI를 통한 인프라 고장 예측"}
+{"id": "W7127168107", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 처리 시설 운영", "problem": "운영 리스크 체계적 분석 및 완화"}
+{"id": "W7117324300", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tupalang 저수지 댐", "problem": "댐 안전 수준 실시간 모니터링 및 비상 위험 예측"}
+{"id": "W7117327862", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tupalang 저수지 댐", "problem": "댐 안전 수준 실시간 모니터링 및 비상 위험 예측"}
+{"id": "W7129049896", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 내 댐 및 배수 구조물", "problem": "구조물의 기능성 및 안정성 개선"}
+{"id": "W7116288470", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Pungu-Gumongo 교량", "problem": "단기 변형 행동 탐지"}
+{"id": "W7116378460", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Pungu-Gumongo 교량", "problem": "단기 변형 행동 탐지"}
+{"id": "W7117255219", "domain_primary": "W2", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "고미트 소규모 댐", "problem": "댐 붕괴로 인한 홍수 예측 및 영향 평가"}
+{"id": "W7160449673", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수중 모니터링을 위한 자율 수중 차량(AUV)", "problem": "저비용 수중 모니터링 기술 개발"}
+{"id": "W7165762790", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 응력", "problem": "공사 안전성 향상"}
+{"id": "W7115932600", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "롤러 압축 콘크리트 댐의 인터레이어 강도", "problem": "습도 변화를 통한 강도 예측"}
+{"id": "W4417529224", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "광산 폐기물 댐 폐쇄", "problem": "폐쇄 과정의 거버넌스 평가"}
+{"id": "W4417415799", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 건강", "problem": "무장 갈등의 환경 건강 영향 분석"}
+{"id": "W4417400990", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전", "problem": "댐 안전성 극대화"}
+{"id": "W7115677258", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가르시아 댐", "problem": "지진에 대한 댐의 반응 분석"}
+{"id": "W7115701583", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "지진 시 구조물 변형 측정"}
+{"id": "W7115733616", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 중력댐", "problem": "비선형 동적 해석 수행"}
+{"id": "W7115739858", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성 평가", "problem": "비선형 모델을 통한 잠재적 실패 모드 분석"}
+{"id": "W7117870658", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 구조물 균열", "problem": "자동화된 균열 탐지"}
+{"id": "W4417329784", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지의 건조 해변", "problem": "건조 해변 추출"}
+{"id": "W4417280354", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐", "problem": "계절적 변형과 수문기상 변수 간의 상관관계 분석"}
+{"id": "W4417198551", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변위 모니터링", "problem": "구조 안전성 평가를 위한 변위 예측 개선"}
+{"id": "W7161247044", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 시스템", "problem": "모니터링 시스템 보완을 위한 적절한 전략 선택"}
+{"id": "W4417160953", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4417161888", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄 기둥 댐", "problem": "미네랄화된 광산수에 의한 미세구조 손상 및 안정성 저하"}
+{"id": "W4417166871", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 관리", "problem": "홍수 위험 및 구조적 실패 감소"}
+{"id": "W4417131316", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지의 변위 모니터링 시스템", "problem": "배수지 변위 조기 탐지"}
+{"id": "W4417183791", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 저수로의 슬로프 안정성", "problem": "슬로프 변형 모니터링 및 안정성 분석 개선"}
+{"id": "W4417299888", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스마트 댐", "problem": "자동화된 수자원 관리"}
+{"id": "W4417026954", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W7109604818", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 열섬 현상 및 습도 개선 시스템", "problem": "도시 열파 완화 및 습도 증가"}
+{"id": "W7147415644", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방 및 댐의 안전 모니터링", "problem": "신뢰할 수 있는 원격 통신 보장"}
+{"id": "W7108448071", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Oldman River Dam", "problem": "댐 변형 예측"}
+{"id": "W4417009589", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구분된 제방댐", "problem": "침투량 정확한 추정"}
+{"id": "W4416909138", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W7125601985", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고비야 댐 주변 농업 토양 및 채소", "problem": "중금속 오염으로 인한 식품 안전 위험 평가"}
+{"id": "W4416922061", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "측량 제어망의 위치 정확도", "problem": "관측 손실이 위치 오차에 미치는 영향 분석"}
+{"id": "W4417493848", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 행동 예측", "problem": "온도 변화에 따른 댐 안전성 관리"}
+{"id": "W4417493864", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 변형", "problem": "변형 예측 성능 향상"}
+{"id": "W7110870827", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 흙댐", "problem": "안전성 수준 예측"}
+{"id": "W7116629363", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다목적 댐 연쇄 고장", "problem": "댐 고장에 따른 수리적 영향 분석"}
+{"id": "W7110031708", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건설 현장 안전 및 건강 관리 시스템", "problem": "OSH-MS 일관된 구현 개선"}
+{"id": "W7138178466", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 댐", "problem": "내부 이질성 및 누수 경로 탐지"}
+{"id": "W7138432451", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "국가 댐 네트워크", "problem": "지출 효율성 개선"}
+{"id": "W7159923781", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방댐", "problem": "조기 이상 탐지 지원"}
+{"id": "W7128493832", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신당 헤울라 댐", "problem": "조기 경고 시스템 설계"}
+{"id": "W4416782999", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐", "problem": "댐 변형 예측 모델 성능 비교"}
+{"id": "W4416779071", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방댐의 침투 필드", "problem": "침투 정보 정확한 획득"}
+{"id": "W7140640060", "domain_primary": "W2", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수위 모니터링", "problem": "실시간 수위 데이터 제공 및 홍수 위험 감소"}
+{"id": "W4416744830", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4416770080", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "尾矿库", "problem": "지진 위험 평가 및 관리"}
+{"id": "W4416580858", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 모니터링", "problem": "대기 지연 보정 최적화"}
+{"id": "W7106099562", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수문 자동 제어 시스템", "problem": "홍수 예방 및 안전한 수위 유지"}
+{"id": "W4416366106", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mtibwa Sugar Estates Earthfill Dam", "problem": "댐 안전성 평가 및 개선 방안 제시"}
+{"id": "W7129300004", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 예측", "problem": "정확도 및 신뢰성 향상"}
+{"id": "W4416235199", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "데이터 무결성 검증"}
+{"id": "W4416197148", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수중 댐 구조물", "problem": "이미지 품질 개선"}
+{"id": "W4416153414", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "테일링 댐", "problem": "모니터링 방법 개선"}
+{"id": "W7123341970", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전", "problem": "유입량 예측"}
+{"id": "W4416105153", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 변형 안전", "problem": "변형 이상 조기 탐지"}
+{"id": "W4416540339", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "벽 균열 조기 탐지"}
+{"id": "W4416093014", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "츠산에리–나게바 빙하 시스템", "problem": "빙하 축소 및 신생 전빙호의 발전 이해"}
+{"id": "W7130532188", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "자연 생태계의 토양 미생물군", "problem": "토양의 위생 상태 평가 및 오염물질 제거"}
+{"id": "W4415981112", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 및 위험 관리", "problem": "위험 탐지 및 예방 시스템 개선"}
+{"id": "W7133325875", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고 콘크리트 면을 가진 암석 충전 댐", "problem": "다짐 품질 실시간 모니터링 및 관리"}
+{"id": "W7133341918", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건물 표면 균열", "problem": "자동화된 균열 탐지 및 정밀 분할"}
+{"id": "W7130423671", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "예측 유지보수 시스템 구축"}
+{"id": "W4415928661", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링", "problem": "지반 움직임 감지 정확성 평가"}
+{"id": "W4415906771", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "광산 폐기물 관리", "problem": "안전성 향상 및 자원 재활용 최적화"}
+{"id": "W4415850060", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시화된 충적 팬", "problem": "홍수 및 잔해 유출 위험 감소"}
+{"id": "W4415847927", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "표면 결함 조기 탐지 및 정량 분석"}
+{"id": "W4417006295", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신 중 크로발리맙 노출", "problem": "임신 결과 특성화"}
+{"id": "W4416320816", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모술 댐", "problem": "댐의 동적 불안정성 평가"}
+{"id": "W4417109189", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 관리", "problem": "실시간 모니터링 개선"}
+{"id": "W7125693536", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 댐", "problem": "댐 모니터링 및 안전성 향상"}
+{"id": "W7125703609", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "광산 폐기물 처리 지역", "problem": "토양 오염 수준 평가"}
+{"id": "W7125705614", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "구조 변화 조기 탐지"}
+{"id": "W7125715899", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Serra Grande 댐", "problem": "댐 안전성 지원을 위한 불안정 지역 식별"}
+{"id": "W7125717288", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조", "problem": "구조적 결함 탐지 및 누수 식별"}
+{"id": "W7125738955", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세라 그란데 제방", "problem": "제방 안전성 평가 및 모니터링"}
+{"id": "W7159621026", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 누수", "problem": "누수 조기 탐지"}
+{"id": "W4417355532", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "광업 시설의 환경 및 공학적 안전", "problem": "전기 저항을 통한 안전성 모니터링"}
+{"id": "W7161177123", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "양수 발전 프로젝트", "problem": "건설 과정의 협업 및 품질 관리 개선"}
+{"id": "W4415671686", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "La Luciana Tailings Storage Facility", "problem": "재해 원인 규명 및 예방 대책 제시"}
+{"id": "W4415700688", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 수원지의 중금속 오염", "problem": "채소의 중금속 축적 수준 평가"}
+{"id": "W7125925763", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 기름 유출 감지", "problem": "기름 유출 조기 탐지 및 분류"}
+{"id": "W4415566047", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐의 지지대 안정성", "problem": "시간에 따른 물질 특성 변동을 고려한 안정성 평가"}
+{"id": "W7115571627", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신선수산물", "problem": "미세플라스틱 오염 조사"}
+{"id": "W4415460544", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "구조적 이상 탐지"}
+{"id": "W4415490671", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐", "problem": "댐의 누수 위험률 정량화 및 조기 경고"}
+{"id": "W4415278695", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 수력 발전 시설", "problem": "구조 변위 정확한 예측"}
+{"id": "W4415271164", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4415744744", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수중 댐 구조", "problem": "균열 정확한 분할"}
+{"id": "W4415190285", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 및 건축물", "problem": "변형 예측 정확도 향상"}
+{"id": "W7162228331", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반댐의 발파 배수 시스템", "problem": "배수 시스템의 조기 열화 징후 탐지"}
+{"id": "W4415146582", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 변형", "problem": "정확한 변형 예측"}
+{"id": "W7112987148", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Mwambashi 강", "problem": "환경 재난에 대한 대응 및 회복력 향상"}
+{"id": "W4415029394", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 중력댐", "problem": "다중 지점 변형 모니터링 모델 개발"}
+{"id": "W4415017217", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 데이터", "problem": "정확한 데이터 재구성"}
+{"id": "W4415030582", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 구조물의 스마트 콘크리트", "problem": "균열 변화 모니터링 및 수리"}
+{"id": "W4415046440", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 관리", "problem": "홍수 위험 완화"}
+{"id": "W4414947630", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "변위 예측"}
+{"id": "W4414925430", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 자원 지속 가능한 개발", "problem": "극한 채굴 조건에서의 안전하고 효율적인 자원 추출"}
+{"id": "W4414947221", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 면석회댐", "problem": "투수 안전성 확보를 위한 준비 방법 제안"}
+{"id": "W7111853095", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기존의 사석 댐", "problem": "안전성 평가 개선"}
+{"id": "W4414853720", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4414829438", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4414829464", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 사이트", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4414818141", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "펌프 저장 발전소 댐", "problem": "댐 변형 조기 탐지 및 경고 시스템 구축"}
+{"id": "W4414894008", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "교량 구조", "problem": "구조적 결함 조기 탐지"}
+{"id": "W4414753891", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "구조적 이상 조기 탐지"}
+{"id": "W4414681552", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 아치 댐", "problem": "구조적 행동 예측"}
+{"id": "W4415267548", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치 댐", "problem": "안전 모니터링을 위한 마이크로세이즘 데이터 통합"}
+{"id": "W4415973906", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "광산 폐기물 관리", "problem": "탐사 단계에서의 위험 완화 및 계획 수립"}
+{"id": "W7160474752", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 모니터링 시스템", "problem": "이상 조기 탐지 및 효과적 통신 지원"}
+{"id": "W4414656316", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Batu Dam", "problem": "오버토핑 위험 평가"}
+{"id": "W4414663225", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다르반디칸 댐", "problem": "구조 변형 모니터링"}
+{"id": "W7133134473", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "퇴역한 폐기물 저장소", "problem": "오염물질 분포 불확실성 감소"}
+{"id": "W4414600149", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W7113572118", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dutchman’s Ridge 암반사태", "problem": "슬로프 안정성 개선 및 이해"}
+{"id": "W7124126212", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "엔지니어링 구조물의 기술적 상태", "problem": "정확한 모니터링 및 신뢰성 예측"}
+{"id": "W7157117229", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "엔지니어링 구조물의 기술적 상태", "problem": "정확한 실시간 모니터링을 통한 신뢰성 예측"}
+{"id": "W4416356717", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 자원", "problem": "환경 위협 조기 진단"}
+{"id": "W4414305472", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "암석채움댐의 변형 분석", "problem": "모델 파라미터 업데이트 정확도 향상"}
+{"id": "W4414330442", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치 댐의 변위 모니터링", "problem": "댐 변위 예측 정확도 향상"}
+{"id": "W4414284245", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조 건강 모니터링", "problem": "구조적 이상 조기 탐지"}
+{"id": "W4414279436", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4414202263", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 필터의 누수 모니터링", "problem": "누수 조기 탐지"}
+{"id": "W4415811109", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kafin Gana Dam", "problem": "중금속 오염 상태 평가"}
+{"id": "W4414131766", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 사이트", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4414164275", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4415217240", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조물", "problem": "구조적 변화 탐지 및 3D 모델 업데이트"}
+{"id": "W4415342402", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 인프라의 부식", "problem": "부식 조기 탐지 및 정량화"}
+{"id": "W4415342458", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 방수문", "problem": "구조적 건강 모니터링을 위한 검증 데이터 확보"}
+{"id": "W4414062695", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 중력댐", "problem": "지진 후 댐 성능 평가"}
+{"id": "W7111734645", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방댐", "problem": "내부 침식 조기 탐지"}
+{"id": "W4414078159", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "민간 인프라 구조물", "problem": "실시간 이상 탐지"}
+{"id": "W4414016789", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4413985394", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우라늄 폐기물 관리", "problem": "우라늄 폐기물의 장기 관리 및 안전성 확보"}
+{"id": "W4413951127", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프린스 무라야 압델라 댐", "problem": "지진 하중 하의 댐 거동 평가"}
+{"id": "W4413941281", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구역형 토담", "problem": "기존 토담의 건강 상태 평가"}
+{"id": "W4413955092", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 안전성 및 복원력", "problem": "구조물의 동적 하중에 대한 안정성 향상"}
+{"id": "W4413955165", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4413968100", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 인프라 시스템", "problem": "통합 설계 프로세스 개선"}
+{"id": "W4413889553", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 안전 모니터링", "problem": "이상 탐지 정확도 향상"}
+{"id": "W4414410142", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "철광석 폐기물", "problem": "폐기물 재사용 및 관리 개선"}
+{"id": "W4416033341", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "시아데 댐", "problem": "댐의 잠재적 실패 조기 경고"}
+{"id": "W4413855741", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "자동 경고 시스템 구축"}
+{"id": "W7106806110", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소 저수지", "problem": "영양소 농도에 따른 세균 분포 평가"}
+{"id": "W7106840669", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소 저수지", "problem": "영양소 농도에 따른 세균 분포 평가"}
+{"id": "W4413835700", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 댐", "problem": "표면 침식 조기 탐지"}
+{"id": "W4413834514", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소 저수지", "problem": "영양소 농도에 따른 세균 분포 평가"}
+{"id": "W4413764978", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 변형 모니터링 시스템", "problem": "실시간 변형 측정"}
+{"id": "W4413761061", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물의 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4413699849", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 변형", "problem": "실시간 변형 동역학 분석"}
+{"id": "W4413996960", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "무작위 암석 댐 제방", "problem": "품질 관리 요인 분석"}
+{"id": "W4413433372", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄 광산의 지하 저수지", "problem": "댐 본체의 안정성 변화 분석"}
+{"id": "W4413428507", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 아치댐", "problem": "변위 예측 정확도 향상"}
+{"id": "W4413397584", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 내부 침식", "problem": "위험 평가 개선"}
+{"id": "W4413896238", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐", "problem": "구조적 이상 탐지"}
+{"id": "W4413308890", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기존 인프라 및 유산 건축물", "problem": "구조적 건강 모니터링 및 결함 진단"}
+{"id": "W4413334014", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "보소 댐", "problem": "댐 안전성 결함 개선"}
+{"id": "W4413456980", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 댐", "problem": "댐 안전성 확보를 위한 모니터링 및 유지 관리 강화"}
+{"id": "W4413381268", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 중력댐", "problem": "댐 변위 예측"}
+{"id": "W4413465073", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "댐 및 철도 인프라", "problem": "예측 모니터링 및 이상 탐지"}
+{"id": "W4415223109", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 균열 감지 시스템", "problem": "균열 조기 탐지"}
+{"id": "W4413113583", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "실린 수력발전소 댐", "problem": "댐 구조 안전성 평가를 위한 모니터링 방식의 상관관계 분석"}
+{"id": "W4413184837", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력발전 댐 모니터링 시스템", "problem": "동적 제어 한계 정의"}
+{"id": "W4414940951", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 운영", "problem": "안전성 및 효율성 향상"}
+{"id": "W4413210130", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 구조물의 대규모 변형", "problem": "대규모 변형 모니터링의 정확도 향상"}
+{"id": "W4413217863", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "방파제 및 매립지", "problem": "해안 구조물의 변형 모니터링"}
+{"id": "W4416421885", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 구조물", "problem": "구조물의 건강 모니터링 및 유지보수 개선"}
+{"id": "W4413122565", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 건강 모니터링", "problem": "안전성 및 성능 평가를 위한 데이터 활용 개선"}
+{"id": "W4413231922", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고준위 방사성 폐기물 처분장", "problem": "지하수 흐름 특성 파악"}
+{"id": "W4413896083", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치형 댐", "problem": "구조적 이상 조기 탐지"}
+{"id": "W4413002973", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사성 폐기물 장기 처분 장소", "problem": "미래 화산 활동 가능성 평가"}
+{"id": "W4412870511", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "나세르 호수 퇴적물", "problem": "라돈 노출 위험 평가"}
+{"id": "W4416727370", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 모니터링", "problem": "구조적 이상 조기 탐지"}
+{"id": "W4413029258", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라운 송어에서의 인수공통 기생충", "problem": "인수공통 기생충 존재 조사"}
+{"id": "W4412845556", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력발전소", "problem": "댐 안전 종합 평가"}
+{"id": "W7128472195", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모체 및 자손의 근골격 건강", "problem": "모체 근육 약화 개선 및 임신 중 골 손실 예방"}
+{"id": "W4412747492", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고강도 아치 댐", "problem": "댐 안전성 종합 평가"}
+{"id": "W4412743809", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐", "problem": "구조물의 손상 모니터링"}
+{"id": "W4412756525", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "시민 인프라 관리 시스템", "problem": "인프라 모니터링 및 유지보수 개선"}
+{"id": "W4413777493", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 및 수리 구조물", "problem": "사고로 인한 경제적 손실 최소화"}
+{"id": "W4412677385", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Eyvashan 댐", "problem": "공극 압력 예측 최적화"}
+{"id": "W4412998093", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 댐", "problem": "내부 누수 구역 탐지 개선"}
+{"id": "W4413271143", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐의 센서 고장 진단", "problem": "모니터링 데이터 왜곡 방지"}
+{"id": "W4412926449", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Yusufeli 아치 댐", "problem": "구조적 안전성 모니터링"}
+{"id": "W4412500413", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대기 온도가 높은 환경에서의 대기 잠수사", "problem": "열 스트레스와 탈수 문제 해결"}
+{"id": "W4412522900", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 댐", "problem": "배수 댐의 압력 및 응집도 변화 이해"}
+{"id": "W4412967954", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐", "problem": "모델 매개변수의 사전 지식 개선"}
+{"id": "W4412873122", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄 기둥 댐", "problem": "장기 안정성 평가"}
+{"id": "W4412965049", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 구조의 콘크리트 균열", "problem": "침투 조기 탐지"}
+{"id": "W4413079153", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kiri 댐 저수지", "problem": "퇴적물 문제와 수질 저하 해결"}
+{"id": "W4412455245", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방 유지관리", "problem": "termite 탐지 기술 개선"}
+{"id": "W4412433953", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 저수지 수위 모니터링", "problem": "홍수 위험 조기 탐지"}
+{"id": "W4414957172", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수중 댐 균열 탐지", "problem": "정확한 균열 탐지 성능 향상"}
+{"id": "W4412183285", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐", "problem": "시간 의존적 변형 특성화"}
+{"id": "W4412200681", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인프라 구조물의 변형 모니터링", "problem": "잔여 체계적 오류로 인한 불확실성 경계 설정"}
+{"id": "W4412410206", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사댐", "problem": "댐의 누수 위험 정량화 및 조기 경고"}
+{"id": "W7111061559", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "딥 소프트 토양 복합 기초", "problem": "댐 안정성 및 안전성 개선"}
+{"id": "W4412150173", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄 기둥 댐", "problem": "기둥 댐의 안정성 향상"}
+{"id": "W4412140289", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수지 안전", "problem": "배수지 안전성 향상"}
+{"id": "W4412059187", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 유지보수", "problem": "유지보수 효율성 향상"}
+{"id": "W7128244899", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 관리", "problem": "홍수 위험 감소 및 예방"}
+{"id": "W7132230979", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 구조물", "problem": "안전성과 신뢰성 향상"}
+{"id": "W4416265869", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 시설의 기술적 상태", "problem": "변형 및 파손 모니터링"}
