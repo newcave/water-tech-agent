@@ -1,0 +1,206 @@
+{
+  "domain_ver": "v0.1",
+  "status": "v0.1 confirmed",
+  "source": "OpenAlex 2025-07~2026 (최근 1년), 7개 연구소 관련문헌",
+  "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
+  "total": 11205,
+  "domains": {
+    "W1": {
+      "name": "유역·수문",
+      "count": 2012,
+      "pct": 18.0
+    },
+    "W2": {
+      "name": "댐·저수지 운영",
+      "count": 299,
+      "pct": 2.7
+    },
+    "W3": {
+      "name": "수질·수생태",
+      "count": 2407,
+      "pct": 21.5
+    },
+    "W4": {
+      "name": "취·정수 공정",
+      "count": 633,
+      "pct": 5.6
+    },
+    "W5": {
+      "name": "관망·급수",
+      "count": 378,
+      "pct": 3.4
+    },
+    "W6": {
+      "name": "하수·재이용",
+      "count": 248,
+      "pct": 2.2
+    },
+    "W7": {
+      "name": "물인프라 안전·자산",
+      "count": 440,
+      "pct": 3.9
+    },
+    "W8": {
+      "name": "물에너지",
+      "count": 724,
+      "pct": 6.5
+    },
+    "W9": {
+      "name": "관측 인프라",
+      "count": 103,
+      "pct": 0.9
+    },
+    "W0": {
+      "name": "경영·정책·서비스",
+      "count": 621,
+      "pct": 5.5
+    },
+    "W0_UNCLASSIFIED": {
+      "name": "미분류",
+      "count": 3340,
+      "pct": 29.8
+    }
+  },
+  "institutes": {
+    "INST-01": {
+      "name": "경영연구소",
+      "total": 1351,
+      "unclassified": 394,
+      "unclassified_pct": 29.2,
+      "by_domain": {
+        "W1": 162,
+        "W2": 22,
+        "W3": 168,
+        "W4": 21,
+        "W5": 168,
+        "W6": 56,
+        "W7": 46,
+        "W8": 22,
+        "W9": 1,
+        "W0": 291,
+        "W0_UNCLASSIFIED": 394
+      }
+    },
+    "INST-02": {
+      "name": "수자원환경연구소",
+      "total": 700,
+      "unclassified": 88,
+      "unclassified_pct": 12.6,
+      "by_domain": {
+        "W1": 391,
+        "W2": 24,
+        "W3": 110,
+        "W4": 0,
+        "W5": 7,
+        "W6": 1,
+        "W7": 3,
+        "W8": 7,
+        "W9": 1,
+        "W0": 68,
+        "W0_UNCLASSIFIED": 88
+      }
+    },
+    "INST-03": {
+      "name": "상하수도연구소",
+      "total": 3733,
+      "unclassified": 1204,
+      "unclassified_pct": 32.3,
+      "by_domain": {
+        "W1": 21,
+        "W2": 22,
+        "W3": 1397,
+        "W4": 611,
+        "W5": 152,
+        "W6": 183,
+        "W7": 6,
+        "W8": 15,
+        "W9": 0,
+        "W0": 122,
+        "W0_UNCLASSIFIED": 1204
+      }
+    },
+    "INST-04": {
+      "name": "물인프라안전연구소",
+      "total": 468,
+      "unclassified": 52,
+      "unclassified_pct": 11.1,
+      "by_domain": {
+        "W1": 11,
+        "W2": 39,
+        "W3": 24,
+        "W4": 1,
+        "W5": 0,
+        "W6": 0,
+        "W7": 330,
+        "W8": 4,
+        "W9": 5,
+        "W0": 2,
+        "W0_UNCLASSIFIED": 52
+      }
+    },
+    "INST-05": {
+      "name": "물에너지연구소",
+      "total": 1310,
+      "unclassified": 300,
+      "unclassified_pct": 22.9,
+      "by_domain": {
+        "W1": 116,
+        "W2": 109,
+        "W3": 22,
+        "W4": 0,
+        "W5": 10,
+        "W6": 2,
+        "W7": 29,
+        "W8": 667,
+        "W9": 0,
+        "W0": 55,
+        "W0_UNCLASSIFIED": 300
+      }
+    },
+    "INST-06": {
+      "name": "수자원위성연구소",
+      "total": 3068,
+      "unclassified": 1180,
+      "unclassified_pct": 38.5,
+      "by_domain": {
+        "W1": 943,
+        "W2": 71,
+        "W3": 638,
+        "W4": 0,
+        "W5": 40,
+        "W6": 6,
+        "W7": 19,
+        "W8": 7,
+        "W9": 92,
+        "W0": 72,
+        "W0_UNCLASSIFIED": 1180
+      }
+    },
+    "INST-07": {
+      "name": "AI연구소",
+      "total": 575,
+      "unclassified": 122,
+      "unclassified_pct": 21.2,
+      "by_domain": {
+        "W1": 368,
+        "W2": 12,
+        "W3": 48,
+        "W4": 0,
+        "W5": 1,
+        "W6": 0,
+        "W7": 7,
+        "W8": 2,
+        "W9": 4,
+        "W0": 11,
+        "W0_UNCLASSIFIED": 122
+      }
+    }
+  },
+  "unclassified_analysis": {
+    "verdict": "미분류는 물 도메인 밖 문헌(수집 검색식 유입). 스트로맨이 놓친 물 축 아님. v0.1 확정.",
+    "INST-03": "의학·생물·축산 (treatment/removal/exposure 용어 겹침)",
+    "INST-06": "지구관측 일반 (숲·열섬·농업·토지피복·대기; 위성은 수단, 대상 비물)",
+    "INST-01": "농업 관개 (작물 재배·water use; 대상은 농작물)",
+    "next_action": "수집 검색식 조정: INST-03 의학용어 배제, INST-06 지구관측 분리, INST-01 농업 구분"
+  }
+}
