@@ -685,3 +685,20 @@
 {"id": "W4411871298", "abstract": "", "abstract_ok": false}
 {"id": "W4413152341", "abstract": "Urban flooding, exacerbated by climate change and rapid urbanization, poses significant threats to infrastructure and public safety. This study addresses the critical need for accurate flood prediction by integrating the Storm Water Management Model (SWMM) with machine learning techniques, specifically the Backpropagation (BP) neural network and Long Short-Term Memory (LSTM) network. These models were chosen due to their respective strengths: BP's robustness in handling nonlinear relationships and LSTM's capability to capture temporal dependencies, which are crucial for accurately modeling the complex dynamics of urban hydrology. A hybrid SWMM-LSTM model was developed, leveraging the physical mechanisms of SWMM and the adaptive learning capabilities of LSTM to capture complex nonlinear dynamics in urban hydrology. Through multi-scenario simulations under real and synthetic rainfall conditions, the model demonstrated superior performance compared to the standalone SWMM and SWMM-BP models. Evaluation metrics, including root mean square error (RMSE), mean relative error (MRE), and Nash-Sutcliffe efficiency (NSE), revealed that the SWMM-LSTM model achieved the lowest prediction errors (e.g., RMSE: 0.431–1.438 × 10³ m³; MRE: 9.25–79.26 %) and highest NSE values (0.979–0.986) across five flood-prone areas in Zhongshan City, Guangzhou. The model’s robustness under varying rainfall intensities and its ability to accurately simulate overflow dynamics highlight its potential as a reliable tool for urban flood risk mitigation.", "abstract_ok": true}
 {"id": "W4414404661", "abstract": "At the ninth European Seminar on Computing (ESCO 2024) (https://esco2024.femhub.com/), an interdisciplinary conference dedicated to modern methods and practices of scientific computing, more than 200 participants from 17 countries gathered in Pilsen, Czech Republic on 10–14 June 2024. The conference began in 2008 and recurs every two years. Its primary significance is that it brings together, in a relatively small and intimate setting, cutting-edge computational science and real-world applications. Under the overarching theme of “Modern Methods and Practices of Scientific Computing,” the 2024 installment of ESCO convened researchers in advanced computational methods across a diverse range of scientific domains. The program featured seven minisymposia, four software workshops, and a diverse set of thematic areas, including computational electromagnetics, fluid–structure interaction, multiphase flows, computational chemistry and quantum physics, computational civil and structural engineering, computational biology and bioinformatics, computational geometry and topology, mathematics education and outreach, petascale and exascale computing, hydrology, wave propagation, climate and weather modeling, GPU and cloud computing, uncertainty quantification, applied statistics, and stochastic models in machine learning.", "abstract_ok": true}
+{"id": "W7171321072", "abstract": "", "abstract_ok": false}
+{"id": "W7170136596", "abstract": "", "abstract_ok": false}
+{"id": "W7170160990", "abstract": "", "abstract_ok": false}
+{"id": "W7170164421", "abstract": "", "abstract_ok": false}
+{"id": "W7170075683", "abstract": "", "abstract_ok": false}
+{"id": "W7169885056", "abstract": "", "abstract_ok": false}
+{"id": "W7169885199", "abstract": "", "abstract_ok": false}
+{"id": "W7170204084", "abstract": "", "abstract_ok": false}
+{"id": "W7169756472", "abstract": "", "abstract_ok": false}
+{"id": "W7169771001", "abstract": "", "abstract_ok": false}
+{"id": "W7169806643", "abstract": "", "abstract_ok": false}
+{"id": "W7170361072", "abstract": "", "abstract_ok": false}
+{"id": "W7168379783", "abstract": "", "abstract_ok": false}
+{"id": "W7168266955", "abstract": "", "abstract_ok": false}
+{"id": "W7168924684", "abstract": "", "abstract_ok": false}
+{"id": "W7168170181", "abstract": "", "abstract_ok": false}
+{"id": "W7171041356", "abstract": "", "abstract_ok": false}

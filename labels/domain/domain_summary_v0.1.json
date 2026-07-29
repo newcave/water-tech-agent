@@ -1,9 +1,9 @@
 {
   "domain_ver": "v0.1",
   "status": "v0.1 confirmed",
-  "source": "OpenAlex, 7개 연구소 관련문헌 (심박 최근1년 + 파이프라인 확장수집)",
+  "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-07-29 04:49 UTC",
+  "generated_at": "2026-07-29 07:39 UTC",
   "total": 11205,
   "domains": {
     "W1": {
