@@ -554,8 +554,48 @@ elif page == "📄 논문 트렌드":
                      column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
 
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
+    # ═══════════════ K-water 연구기록 (16-25) ═══════════════
     st.divider()
-    st.markdown('<div class="sect">🧭 도메인축 트렌드 (K-water 물 도메인 v0.1)</div>',
+    st.markdown('<div class="sect">🏛️ K-water 연구기록 (16-25) — 도메인축 v0.1</div>',
+                unsafe_allow_html=True)
+    ksum = load_labels("domain/kwater_pubs_summary.json")
+    if not ksum:
+        st.info("K-water 성과 집계 파일이 아직 없습니다 (labels/domain/kwater_pubs_summary.json).")
+    else:
+        KDOM = ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W0"]
+        KUNC = "W0_UNCLASSIFIED"
+        KCOL = {"W1": "#2563EB", "W2": "#0EA5E9", "W3": "#10B981", "W4": "#14B8A6",
+                "W5": "#8B5CF6", "W6": "#6366F1", "W7": "#F59E0B", "W8": "#EF4444",
+                "W9": "#64748B", "W0": "#94A3B8"}
+        kd = ksum["domains"]
+        st.caption(f"{ksum.get('source','')} · 총 {ksum['total']:,}건 · {ksum.get('method','')}")
+
+        m1, m2, m3 = st.columns(3)
+        m1.metric("성과 건수", f"{ksum['total']:,}건")
+        ktop = max(KDOM, key=lambda c: kd[c]["count"])
+        m2.metric("최다 도메인", f"{ktop} {kd[ktop]['name']}", f"{kd[ktop]['pct']}%")
+        m3.metric("미분류(비물 주제)", f"{kd[KUNC]['pct']}%", delta_color="off")
+
+        byd = ksum.get("by_year_domain", {})
+        years = [y for y in sorted(byd) if 2016 <= int(y) <= 2025]
+        if years:
+            fig = go.Figure()
+            for c in KDOM:
+                tot = {y: sum(byd[y].get(d, 0) for d in KDOM) for y in years}
+                fig.add_trace(go.Bar(
+                    name=f"{c} {kd[c]['name']}", x=years,
+                    y=[round(byd[y].get(c, 0) * 100 / max(tot[y], 1), 1) for y in years],
+                    marker_color=KCOL[c],
+                    customdata=[byd[y].get(c, 0) for y in years],
+                    hovertemplate="%{x} · " + kd[c]["name"] + " %{y}% (%{customdata}건)<extra></extra>"))
+            fig.update_layout(barmode="stack", height=380,
+                              yaxis_title="도메인 구성비 %",
+                              legend=dict(orientation="h", y=-0.18), **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+            st.caption("연도별 도메인 구성비(100% 기준, 미분류 제외) — 등록 누락 연도가 있어 건수 대신 비중으로 표시")
+
+    st.divider()
+    st.markdown('<div class="sect">🌍 글로벌 물연구 현황 (25 기준) — 도메인축 v0.1</div>',
                 unsafe_allow_html=True)
     dsum = load_labels("domain/domain_summary_v0.1.json")
     if not dsum:
@@ -622,6 +662,28 @@ elif page == "📄 논문 트렌드":
             hovertemplate="%{y} · %{x}<br>비중 %{z}%<br>건수 %{text}<extra></extra>"))
         fig.update_layout(height=360, **PLOTLY_LAYOUT)
         st.plotly_chart(fig, width="stretch")
+
+        # K-water vs 글로벌 도메인 비중 비교 (물 도메인만 100% 정규화)
+        if ksum:
+            st.markdown('<div class="sect">⚖️ K-water 연구기록 vs 글로벌 — 도메인 비중 비교</div>',
+                        unsafe_allow_html=True)
+            kw_base = sum(ksum["domains"][c]["count"] for c in DOM_ORDER) or 1
+            gl_base = sum(doms[c]["count"] for c in DOM_ORDER) or 1
+            fig = go.Figure()
+            fig.add_trace(go.Bar(
+                name="K-water 연구기록 (16-25)",
+                x=[f"{c}<br>{doms[c]['name']}" for c in DOM_ORDER],
+                y=[round(ksum["domains"][c]["count"] * 100 / kw_base, 1) for c in DOM_ORDER],
+                marker_color=BLUE))
+            fig.add_trace(go.Bar(
+                name="글로벌 (25 기준)",
+                x=[f"{c}<br>{doms[c]['name']}" for c in DOM_ORDER],
+                y=[round(doms[c]["count"] * 100 / gl_base, 1) for c in DOM_ORDER],
+                marker_color="#94A3B8"))
+            fig.update_layout(barmode="group", height=360, yaxis_title="비중 %",
+                              legend=dict(orientation="h", y=1.12), **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+            st.caption("양쪽 모두 미분류 제외 후 100% 정규화 — 같은 W축 좌표계 비교")
 
         # 미분류 원인 메모 (물 밖 유입 근거)
         ua = dsum.get("unclassified_analysis", {})
