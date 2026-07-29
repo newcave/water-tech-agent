@@ -588,11 +588,15 @@ elif page == "📄 논문 트렌드":
                     marker_color=KCOL[c],
                     customdata=[byd[y].get(c, 0) for y in years],
                     hovertemplate="%{x} · " + kd[c]["name"] + " %{y}% (%{customdata}건)<extra></extra>"))
+            for y in years:
+                fig.add_annotation(x=y, y=105, text=f"n={tot[y]}", showarrow=False,
+                                   font=dict(size=10, color="#94A3B8"))
             fig.update_layout(barmode="stack", height=380,
-                              yaxis_title="도메인 구성비 %",
+                              yaxis=dict(title="도메인 구성비 %", range=[0, 112]),
                               legend=dict(orientation="h", y=-0.18), **PLOTLY_LAYOUT)
             st.plotly_chart(fig, width="stretch")
-            st.caption("연도별 도메인 구성비(100% 기준, 미분류 제외) — 등록 누락 연도가 있어 건수 대신 비중으로 표시")
+            st.caption("연도별 도메인 구성비(100%, 미분류 제외) · 막대 위 n=해당 연도 등록 건수 — "
+                       "n이 작은 연도(2016 n=13 등)는 특정 학회 일괄등록만 남아 구성비 해석에 주의")
 
     st.divider()
     st.markdown('<div class="sect">🌍 글로벌 물연구 현황 (25 기준) — 도메인축 v0.1</div>',
