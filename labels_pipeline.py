@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""labels_pipeline.py — 지속 수집·라벨링 파이프라인 (data 브랜치 상주, Actions/로컬 겸용)"""
-import argparse, json, os, re, sys, time, urllib.parse, urllib.request
+"""labels_pipeline.py (v3) — 자율 수집·라벨링 에이전트 (GitHub Actions 상주)"""
+import argparse, calendar, json, os, sys, time, urllib.parse, urllib.request
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
@@ -11,8 +11,11 @@ PAGE = 100
 BATCH = 50
 RETRY = 4
 DOMAIN_VER = "v0.1"
-SCOPE_YEARS = {"small": 1, "medium": 3, "large": 5}
-MAX_PAGES_PER_INST = 120
+FORWARD_SWEEP_DAYS = 45
+HISTORY_START_YEAR = 2025      # 첫 역사 수집 연도 (2025 상반기 공백 보완)
+HISTORY_FLOOR_YEAR = 2015      # 여기까지 후진하면 역사 수집 완료
+MAX_PAGES_FORWARD = 120
+MAX_PAGES_PER_MONTH = 60
 TOPICS_URL = ("https://raw.githubusercontent.com/newcave/water-tech-agent/"
               "main/data_seed/search_topics.json")
 
@@ -162,33 +165,53 @@ def paper_ids_by_inst(repo):
     return out
 
 
-def stage_expand(repo, years, log):
-    if years <= 1:
-        log("확장수집: 소폭(1년) — 심박 수집분만 사용, 건너뜀"); return 0
-    topics = None
+def load_topics(repo, log):
     tj = repo / "data_seed" / "search_topics.json"
     if tj.exists():
-        topics = json.loads(tj.read_text(encoding="utf-8"))
-    else:
+        return json.loads(tj.read_text(encoding="utf-8"))
+    try:
+        with urllib.request.urlopen(TOPICS_URL, timeout=30) as r:
+            return json.load(r)
+    except Exception as e:
+        log(f"수집: search_topics 로드 실패({e})"); return None
+
+
+def state_path(repo):
+    return repo / "labels" / "pipeline_state.json"
+
+
+def load_state(repo):
+    p = state_path(repo)
+    if p.exists():
         try:
-            with urllib.request.urlopen(TOPICS_URL, timeout=30) as r:
-                topics = json.load(r)
-        except Exception as e:
-            log(f"확장수집: search_topics 로드 실패({e}) — 건너뜀"); return 0
-    since = (date.today() - timedelta(days=365 * years)).isoformat()
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {"last_collect_date": "", "history_next_year": HISTORY_START_YEAR}
+
+
+def save_state(repo, st):
+    p = state_path(repo)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(st, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def collect_range(repo, topics, since, until, cap_pages, log, tag):
     ext_dir = repo / "labels" / "openalex_extended"; ext_dir.mkdir(parents=True, exist_ok=True)
     existing = paper_ids_by_inst(repo)
-    added_total = 0
+    total = 0
     for inst in topics.get("institutes", []):
         code = inst.get("code"); kws = inst.get("openalex_keywords") or []
         if not code or not kws:
             continue
         filt = f"title_and_abstract.search:{kws[0]},from_publication_date:{since}"
+        if until:
+            filt += f",to_publication_date:{until}"
         have = set(existing.get(code, {}))
         out = ext_dir / f"papers_{code}.jsonl"
         cursor, pages, added = "*", 0, 0
         with out.open("a", encoding="utf-8") as f:
-            while cursor and pages < MAX_PAGES_PER_INST:
+            while cursor and pages < cap_pages:
                 j = oa_get({"filter": filt, "per-page": PAGE, "cursor": cursor,
                             "sort": "publication_date:desc",
                             "select": "id,doi,title,publication_year,publication_date,"
@@ -208,9 +231,44 @@ def stage_expand(repo, years, log):
                     have.add(rid); added += 1
                 cursor = (j.get("meta") or {}).get("next_cursor")
                 pages += 1
-        log(f"확장수집 {code}: +{added} (창 {since}~, {pages}p)")
-        added_total += added
-    return added_total
+        existing.setdefault(code, {}).update({h: {} for h in have})
+        if added:
+            log(f"  {tag} {code}: +{added}")
+        total += added
+    return total
+
+
+def stage_collect_daily(repo, log):
+    st = load_state(repo)
+    today = date.today().isoformat()
+    if st.get("last_collect_date") == today:
+        log("수집: 오늘 이미 완료 — 라벨링만 진행"); return 0, None, 0
+    topics = load_topics(repo, log)
+    if not topics:
+        return 0, None, 0
+    since_f = (date.today() - timedelta(days=FORWARD_SWEEP_DAYS)).isoformat()
+    log(f"수집(전진): 최근 {FORWARD_SWEEP_DAYS}일 ({since_f}~)")
+    n_fwd = collect_range(repo, topics, since_f, None, MAX_PAGES_FORWARD, log, "전진")
+
+    y = int(st.get("history_next_year", HISTORY_START_YEAR))
+    n_hist, hist_year = 0, None
+    if y >= HISTORY_FLOOR_YEAR:
+        hist_year = y
+        log(f"수집(후진): {y}년 (월 단위 12조각)")
+        for m in range(12, 0, -1):
+            last = calendar.monthrange(y, m)[1]
+            n_hist += collect_range(repo, topics, f"{y}-{m:02d}-01",
+                                    f"{y}-{m:02d}-{last:02d}",
+                                    MAX_PAGES_PER_MONTH, log, f"{y}-{m:02d}")
+        st["history_next_year"] = y - 1
+        nxt = y - 1
+        log(f"수집(후진): {y}년 +{n_hist} — 다음 회차는 "
+            + (f"{nxt}년" if nxt >= HISTORY_FLOOR_YEAR else "없음(완주)"))
+    else:
+        log(f"수집(후진): {HISTORY_FLOOR_YEAR}년까지 완주 — 종료 상태")
+    st["last_collect_date"] = today
+    save_state(repo, st)
+    return n_fwd, hist_year, n_hist
 
 
 def stage_backfill(repo, log):
@@ -257,7 +315,7 @@ def stage_extract(repo, client, model, cap, log):
         with out.open("a", encoding="utf-8") as f:
             for r in jsonl_iter(abs_p):
                 if n >= cap:
-                    log(f"추출: 회당 상한 {cap} 도달"); return n
+                    log(f"추출: 상한 {cap} 도달"); return n
                 if not r.get("abstract_ok") or r["id"] in have:
                     continue
                 res = llm_json(client, model, EXTRACT_SYSTEM, EXTRACT_SCHEMA,
@@ -283,7 +341,7 @@ def stage_assign(repo, client, model, cap, log):
         with out.open("a", encoding="utf-8") as f:
             for r in jsonl_iter(ext_p):
                 if n >= cap:
-                    log(f"배정: 회당 상한 {cap} 도달"); return n
+                    log(f"배정: 상한 {cap} 도달"); return n
                 if not r.get("relevant") or r["id"] in have:
                     continue
                 res = llm_json(client, model, ASSIGN_SYSTEM, ASSIGN_SCHEMA,
@@ -321,11 +379,11 @@ def stage_summary(repo, log):
         per_inst[inst] = c
     grand = sum(sum(c.values()) for c in per_inst.values())
     if not grand:
-        log("집계: 라벨 없음 — 건너뜀"); return None
+        log("집계: 라벨 없음"); return None
     dom_tot = {d: sum(per_inst[i].get(d, 0) for i in per_inst) for d in DOM_ORDER}
     summary = {
         "domain_ver": DOMAIN_VER, "status": "v0.1 confirmed",
-        "source": "OpenAlex, 7개 연구소 관련문헌 (심박 최근1년 + 파이프라인 확장수집)",
+        "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
         "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
         "generated_at": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
         "total": grand,
@@ -346,14 +404,13 @@ def stage_summary(repo, log):
     }
     out = repo / "labels" / "domain" / "domain_summary_v0.1.json"
     json.dump(summary, out.open("w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    log(f"집계: 총 {grand:,}건 → {out}")
+    log(f"집계: 총 {grand:,}건")
     return summary
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--scope", default="small", choices=list(SCOPE_YEARS))
     ap.add_argument("--max-items", type=int, default=3000)
     ap.add_argument("--model", default="gpt-4o-mini")
     args = ap.parse_args()
@@ -361,14 +418,24 @@ def main():
     if not (repo / "live" / "openalex").exists():
         sys.exit(f"[중단] {repo}/live/openalex 없음 — data 브랜치인지 확인")
     log = lambda m: print(m, flush=True)
-    years = SCOPE_YEARS[args.scope]
-    log(f"=== labels_pipeline · scope={args.scope}({years}년) · cap={args.max_items} ===")
-    stage_expand(repo, years, log)
-    stage_backfill(repo, log)
+    log(f"=== labels_pipeline v3 · cap={args.max_items} ===")
+    t0 = time.time()
+    n_fwd, hist_year, n_hist = stage_collect_daily(repo, log)
+    n_bf = stage_backfill(repo, log)
     client = get_client()
-    stage_extract(repo, client, args.model, args.max_items, log)
-    stage_assign(repo, client, args.model, args.max_items, log)
-    stage_summary(repo, log)
+    n_ex = stage_extract(repo, client, args.model, args.max_items, log)
+    n_as = stage_assign(repo, client, args.model, args.max_items, log)
+    s = stage_summary(repo, log)
+    rec = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+           "forward": n_fwd, "hist_year": hist_year, "hist": n_hist,
+           "backfilled": n_bf, "extracted": n_ex, "assigned": n_as,
+           "total": (s or {}).get("total", 0),
+           "duration_s": int(time.time() - t0)}
+    runs = repo / "labels" / "pipeline_runs.jsonl"
+    runs.parent.mkdir(parents=True, exist_ok=True)
+    with runs.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    log(f"런로그: {rec}")
     log("=== 완료 ===")
 
 
