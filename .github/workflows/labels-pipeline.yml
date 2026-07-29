@@ -2,14 +2,9 @@
 
 on:
   schedule:
-    - cron: "23 20 * * *"          # 매일 05:23 KST (UTC 20:23)
+    - cron: "53 */6 * * *"          # 6시간마다 (심박 :17 수집 후 :53, KST 03:53/09:53/15:53/21:53)
   workflow_dispatch:
     inputs:
-      scope:
-        description: "수집 깊이 (small=1년 증분 / medium=3년 / large=5년)"
-        type: choice
-        options: [small, medium, large]
-        default: small
       max_items:
         description: "이번 실행의 mini 처리 상한 (추출·배정 각각)"
         default: "3000"
@@ -42,9 +37,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
         run: |
-          python labels_pipeline.py \
-            --scope "${{ inputs.scope || 'small' }}" \
-            --max-items "${{ inputs.max_items || '3000' }}"
+          python labels_pipeline.py --max-items "${{ inputs.max_items || '3000' }}"
 
       - name: commit & push (data)
         run: |
@@ -54,7 +47,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "변경 없음 — 커밋 생략"; exit 0
           fi
-          git commit -m "labels: pipeline ${{ inputs.scope || 'small' }} $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "labels: pipeline auto $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3; do
             git pull --rebase origin data && git push origin HEAD:data && exit 0
             sleep 15

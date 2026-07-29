@@ -169,6 +169,28 @@ def load_labels(rel_path: str):
         pass
     return None
 
+@st.cache_data(ttl=60, show_spinner=False)
+def load_labels_jsonl(rel_path: str):
+    """`data` 브랜치 labels/ 의 JSONL → list[dict] (파이프라인 런로그 등)."""
+    try:
+        r = requests.get(
+            f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/labels/{rel_path}",
+            params={"t": int(time.time() // 60)}, timeout=8)
+        if r.status_code == 200:
+            out = []
+            for line in r.text.splitlines():
+                line = line.strip()
+                if line:
+                    try:
+                        out.append(json.loads(line))
+                    except Exception:
+                        pass
+            return out
+    except Exception:
+        pass
+    return []
+
+
 @st.cache_data(ttl=25, show_spinner=False)
 def load_live(rel_path: str):
     """`data` 브랜치 live/ — 수집 에이전트가 분 단위 push (main 무커밋 → 앱 재부팅 없음)."""
@@ -344,7 +366,7 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
     st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
-    page = st.radio("메뉴", ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🏢 7개 연구소",
+    page = st.radio("메뉴", ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
                             "🔥 FT 모니터", "🗂️ 인벤토리"], label_visibility="collapsed")
     st.divider()
     auto = st.toggle("실시간 갱신 (30초)", value=True)
@@ -388,6 +410,25 @@ if page == "🛰️ 관제센터":
         f'<div class="k-val">{v}</div><div class="k-lab">{k}</div>'
         f'<div class="k-sub">{s}</div></div>' for i, (k, v, s) in enumerate(kpis)) + "</div>",
         unsafe_allow_html=True)
+
+    # 🏷️ 라벨링 봇 상태 배지
+    _runs = load_labels_jsonl("pipeline_runs.jsonl")
+    if _runs:
+        _r = _runs[-1]
+        try:
+            _t = dt.datetime.strptime(_r["ts"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc)
+            _h = int((dt.datetime.now(dt.timezone.utc) - _t).total_seconds() // 3600)
+            _when = "1시간 이내" if _h < 1 else f"{_h}시간 전"
+        except Exception:
+            _when = str(_r.get("ts", ""))
+        st.markdown(
+            '<div style="margin:6px 0 4px;padding:8px 14px;border-radius:10px;'
+            'background:linear-gradient(90deg,#EEF2FF,#F0F9FF);border:1px solid #C7D2FE;'
+            'font-size:0.85rem;color:#1E293B;">🏷️ <b>라벨링 봇</b> 최근 실행 ' + _when +
+            f' · 신규 수집 +{_r.get("forward", 0) + _r.get("hist", 0)} · 신규 라벨 +{_r.get("assigned", 0)}'
+            f' · 누적 {_r.get("total", 0):,}건'
+            ' <span style="color:#64748B">— 상세: [🏷️ 라벨링 로그] 메뉴</span></div>',
+            unsafe_allow_html=True)
 
     # 파이프라인 플로우 — "에이전트가 돌아가는 이미지"
     st.markdown('<div class="sect">데이터 파이프라인</div>', unsafe_allow_html=True)
@@ -699,6 +740,65 @@ elif page == "📄 논문 트렌드":
                         st.markdown(f"- **{code}**: {ua[code]}")
                 if ua.get("next_action"):
                     st.caption(f"다음 조치: {ua['next_action']}")
+
+# ═══════════════ 페이지: 라벨링 로그 ═══════════════
+elif page == "🏷️ 라벨링 로그":
+    st.markdown('<div class="sect">🏷️ 라벨링 파이프라인 실행 로그</div>', unsafe_allow_html=True)
+    st.caption("수집(하루 1회): 전진 45일 스윕 + 역사 1년/일 후진(2025→2015) · 라벨링: 6시간마다 자동")
+    runs = load_labels_jsonl("pipeline_runs.jsonl")
+    if not runs:
+        st.info("아직 실행 로그가 없습니다 — 파이프라인 v2 첫 실행 후 이곳에 기록이 쌓입니다.")
+    else:
+        df_r = pd.DataFrame(runs)
+        for c in ["forward", "hist", "backfilled", "extracted", "assigned", "total", "duration_s"]:
+            if c not in df_r:
+                df_r[c] = 0
+            df_r[c] = pd.to_numeric(df_r[c], errors="coerce").fillna(0).astype(int)
+        if "hist_year" not in df_r:
+            df_r["hist_year"] = None
+        df_r["collected"] = df_r["forward"] + df_r["hist"]
+
+        def _kst(s):
+            try:
+                return (dt.datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ")
+                        + dt.timedelta(hours=9)).strftime("%m-%d %H:%M")
+            except Exception:
+                return str(s)
+        df_r["시각(KST)"] = df_r["ts"].map(_kst)
+
+        last = df_r.iloc[-1]
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("최근 실행 (KST)", last["시각(KST)"])
+        c2.metric("이번 신규 라벨", f"+{int(last['assigned'])}")
+        c3.metric("누적 라벨", f"{int(last['total']):,}건")
+        c4.metric("총 실행 횟수", f"{len(df_r)}회")
+
+        a, b = st.columns(2)
+        with a:
+            st.markdown('<div class="sect">누적 라벨 성장</div>', unsafe_allow_html=True)
+            fig = go.Figure(go.Scatter(x=df_r["시각(KST)"], y=df_r["total"],
+                                       mode="lines+markers", fill="tozeroy",
+                                       line=dict(color=BLUE, width=2)))
+            fig.update_layout(height=300, **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+        with b:
+            st.markdown('<div class="sect">회차별 처리량</div>', unsafe_allow_html=True)
+            fig = go.Figure()
+            fig.add_trace(go.Bar(name="수집+", x=df_r["시각(KST)"], y=df_r["collected"],
+                                 marker_color="#0EA5E9"))
+            fig.add_trace(go.Bar(name="라벨+", x=df_r["시각(KST)"], y=df_r["assigned"],
+                                 marker_color=BLUE))
+            fig.update_layout(barmode="group", height=300,
+                              legend=dict(orientation="h", y=1.15), **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+
+        st.markdown('<div class="sect">실행 이력 (최근 30회)</div>', unsafe_allow_html=True)
+        show = df_r.tail(30).iloc[::-1][["시각(KST)", "forward", "hist_year", "hist", "backfilled",
+                                         "extracted", "assigned", "total", "duration_s"]]
+        show = show.rename(columns={"forward": "전진+", "hist_year": "역사연도", "hist": "역사+", "backfilled": "초록+",
+                                    "extracted": "추출+", "assigned": "배정+",
+                                    "total": "누적", "duration_s": "소요(초)"})
+        st.dataframe(show, hide_index=True, width="stretch")
 
 # ═══════════════ 페이지 3: 7개 연구소 ═══════════════
 elif page == "🏢 7개 연구소":
