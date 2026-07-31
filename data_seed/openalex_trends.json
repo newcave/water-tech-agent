@@ -359,9 +359,14 @@
    "ts": 1785489527,
    "kwater": 0,
    "related_1y": 14584
+  },
+  {
+   "ts": 1785508694,
+   "kwater": 0,
+   "related_1y": 14585
   }
  ],
- "updated": 1785489527,
+ "updated": 1785508694,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -397,7 +402,7 @@
   "INST-07": {
    "name": "AI연구소",
    "keyword": "machine learning hydrology",
-   "recent_1y": 716
+   "recent_1y": 717
   }
  }
 }
