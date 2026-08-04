@@ -3,83 +3,83 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-08-03 20:19 UTC",
-  "total": 11205,
+  "generated_at": "2026-08-04 04:11 UTC",
+  "total": 11523,
   "domains": {
     "W1": {
       "name": "유역·수문",
-      "count": 2012,
-      "pct": 18.0
+      "count": 2034,
+      "pct": 17.7
     },
     "W2": {
       "name": "댐·저수지 운영",
-      "count": 299,
-      "pct": 2.7
+      "count": 304,
+      "pct": 2.6
     },
     "W3": {
       "name": "수질·수생태",
-      "count": 2407,
-      "pct": 21.5
+      "count": 2443,
+      "pct": 21.2
     },
     "W4": {
       "name": "취·정수 공정",
-      "count": 633,
-      "pct": 5.6
+      "count": 638,
+      "pct": 5.5
     },
     "W5": {
       "name": "관망·급수 서비스",
-      "count": 378,
-      "pct": 3.4
+      "count": 418,
+      "pct": 3.6
     },
     "W6": {
       "name": "하수·재이용",
-      "count": 248,
-      "pct": 2.2
+      "count": 262,
+      "pct": 2.3
     },
     "W7": {
       "name": "물인프라 안전·자산",
-      "count": 440,
-      "pct": 3.9
+      "count": 456,
+      "pct": 4.0
     },
     "W8": {
       "name": "물에너지",
-      "count": 724,
-      "pct": 6.5
+      "count": 733,
+      "pct": 6.4
     },
     "W9": {
       "name": "관측 인프라",
-      "count": 103,
+      "count": 104,
       "pct": 0.9
     },
     "W0": {
       "name": "경영·정책·서비스",
-      "count": 621,
-      "pct": 5.5
+      "count": 741,
+      "pct": 6.4
     },
     "W0_UNCLASSIFIED": {
       "name": "위 어디에도 명확히 속하지 않음",
-      "count": 3340,
-      "pct": 29.8
+      "count": 3390,
+      "pct": 29.4
     }
   },
   "institutes": {
     "INST-01": {
       "name": "경영연구소",
-      "total": 1351,
-      "unclassified": 394,
-      "unclassified_pct": 29.2,
+      "total": 1669,
+      "unclassified": 444,
+      "unclassified_pct": 26.6,
       "by_domain": {
-        "W1": 162,
-        "W2": 22,
-        "W3": 168,
-        "W4": 21,
-        "W5": 168,
-        "W6": 56,
-        "W7": 46,
-        "W8": 22,
-        "W9": 1,
-        "W0": 291,
-        "W0_UNCLASSIFIED": 394
+        "W1": 184,
+        "W2": 27,
+        "W3": 204,
+        "W4": 26,
+        "W5": 208,
+        "W6": 70,
+        "W7": 62,
+        "W8": 31,
+        "W9": 2,
+        "W0": 411,
+        "W0_UNCLASSIFIED": 444
       }
     },
     "INST-02": {
@@ -198,6 +198,19 @@
     }
   },
   "by_year_domain": {
+    "2019": {
+      "W3": 36,
+      "W0_UNCLASSIFIED": 50,
+      "W5": 40,
+      "W7": 16,
+      "W0": 119,
+      "W1": 22,
+      "W2": 5,
+      "W4": 5,
+      "W8": 9,
+      "W6": 14,
+      "W9": 1
+    },
     "2025": {
       "W4": 269,
       "W1": 736,
@@ -214,7 +227,7 @@
     "2026": {
       "W5": 228,
       "W3": 1333,
-      "W0": 380,
+      "W0": 381,
       "W0_UNCLASSIFIED": 1889,
       "W7": 244,
       "W8": 407,
