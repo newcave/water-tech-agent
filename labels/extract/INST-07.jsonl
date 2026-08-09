@@ -590,3 +590,7 @@
 {"id": "W4411921684", "object": "대규모 수문 모델에서 인간 행동의 표현", "problem": "인간-물 상호작용의 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413152341", "object": "도시 홍수", "problem": "정확한 홍수 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4414404661", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7197021556", "object": "활동층 두께(ALT)", "problem": "활동층 두께의 공간 이질성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196986904", "object": "미국 유역의 수문학 데이터셋", "problem": "공간적으로 분산된 모델링을 위한 데이터의 적용성 제한", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7197030652", "object": "헤드워터 유역의 유량 예측", "problem": "유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7197049810", "object": "수자원 위기", "problem": "부정적 피드백 루프 해결하기", "relevant": true, "model": "gpt-4o-mini"}

@@ -738,3 +738,11 @@
 {"id": "W4411869309", "object": "스페인의 원자력 발전", "problem": "물 부족으로 인한 발전 중단 위험", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4411973496", "object": "파르파 강의 수질 및 수량", "problem": "지하수와 표면수 상호작용의 정량적 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4412203353", "object": "Hunza 강 유역", "problem": "기후 변화에 따른 수문학적 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201865001", "object": "캐나다의 산림 생태계 서비스", "problem": "산림 황폐화 평가를 위한 지표 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196925722", "object": "Swift River–Quabbin 수문학 연구", "problem": "안정 동위원소 데이터 처리 및 시각화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196954911", "object": "Swift River–Quabbin 수문학 연구", "problem": "안정 동위원소 데이터 처리 및 시각화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172547526", "object": "아프리카의 물 안전성", "problem": "물 부족과 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7197049810", "object": "수자원 위기", "problem": "부정적 피드백 루프를 끊다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172496031", "object": "히말라야 지역의 수원 관리", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196943226", "object": "식생 커버리지", "problem": "식생 커버리지의 임계값 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198958452", "object": "Cartaro 샘의 수리 지질 시스템", "problem": "수리 지질 시스템의 수리학적, 화학적, 동위원소적 특성 이해", "relevant": true, "model": "gpt-4o-mini"}

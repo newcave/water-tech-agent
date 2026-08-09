@@ -1667,3 +1667,15 @@
 {"id": "W2944627784", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "주거 에너지 관리 시스템", "problem": "자체 에너지 자급률 증가"}
 {"id": "W3210414661", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jacksonville의 하수 처리 시스템", "problem": "하수 처리 시스템의 효율성 및 유연성 향상"}
 {"id": "W4229578003", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리 관행", "problem": "자산 관리 문제 해결"}
+{"id": "W7196949358", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7201856381", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조개 양식 산업", "problem": "미생물 병원체로 인한 문제 해결"}
+{"id": "W7201881919", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7171243067", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "버지니아 해안 평야의 지하수 공급", "problem": "지하수 공급의 신뢰성과 충분성 부족"}
+{"id": "W7196930193", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "버지니아 해안 평원 대수층 시스템의 지하수 공급", "problem": "신뢰할 수 있는 충분한 지하수 공급 찾기"}
+{"id": "W7196957990", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7196963317", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 기술 인력", "problem": "데이터 기반 도구 채택을 위한 교육 경로 부족"}
+{"id": "W7196968401", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산림 생태계의 생물 다양성", "problem": "산림 관리가 생태적 과정에 미치는 영향 평가"}
+{"id": "W7201866595", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7197020104", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아의 주거 커뮤니티", "problem": "주거 커뮤니티 서비스 개선"}
+{"id": "W7196956920", "domain_primary": "W5", "domain_secondary": ["W7"], "confidence": 0.8, "domain_ver": "v0.1", "object": "노후 수도 인프라", "problem": "파이프 고장 확률 예측"}
+{"id": "W7201855624", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄재 관리", "problem": "환경 영향을 최소화하고 지속 가능한 자원 활용 촉진"}

@@ -3731,3 +3731,23 @@
 {"id": "W7142182158", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 오염", "problem": "나노물질을 이용한 수질 정화 효율 개선"}
 {"id": "W7155122208", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시설", "problem": "유기물 제거 및 트리할로메탄 형성 잠재력 감소"}
 {"id": "W7161152256", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유아 보조식품", "problem": "영양 적합성 확보"}
+{"id": "W7201835055", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Noiler 수탉의 정액 품질", "problem": "정액 품질 향상 및 산화 저항력 개선"}
+{"id": "W7201839713", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Oyo 주의 지하수", "problem": "지하수의 품질 평가 및 지속 가능성 확보"}
+{"id": "W7201847091", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Microcystis aeruginosa", "problem": "수처리 성능 향상"}
+{"id": "W7201867734", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bovilla 저수지", "problem": "저수지 수위 및 수량 예측"}
+{"id": "W7201876042", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Epe 지역의 지하수", "problem": "지하수의 음용 및 관개 적합성 평가"}
+{"id": "W7201882267", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브리더 수탉의 생식 효율과 건강", "problem": "자연 대체물의 효과 평가"}
+{"id": "W7201888097", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bovilla 저수지", "problem": "저수지 수위 및 수량 예측"}
+{"id": "W7201896838", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 어류", "problem": "염료 배출로 인한 스트레스 반응 이해"}
+{"id": "W7196929825", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 냄새 물질", "problem": "계절별 냄새 물질의 발생 및 분해"}
+{"id": "W7196967950", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이토리 지역의 지하수", "problem": "수질 비교 및 오염 평가"}
+{"id": "W7196974798", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자연 수자원", "problem": "탁도 감소"}
+{"id": "W7197020462", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인공 오염 수용액의 생물학적 오염 상태", "problem": "생물학적 오염물질의 비활성화"}
+{"id": "W7197003504", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Izhia 지역의 지하수 자원", "problem": "지하수의 물리화학적 품질 평가 및 음용수 적합성 이해"}
+{"id": "W7197018434", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "보링수원", "problem": "지하수 오염 문제 해결"}
+{"id": "W7201937740", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 세균 부하", "problem": "세균 부하 감소"}
+{"id": "W7196958708", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐 손상", "problem": "면역 신호 전달의 이상 조절"}
+{"id": "W7197036130", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Anbar 지역의 수인성 질병", "problem": "WASH 관행과 수인성 질병의 연관성 설명"}
+{"id": "W7196923255", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심층 우물의 수질", "problem": "미생물 오염 문제 해결"}
+{"id": "W7201880232", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "킨샤사의 수돗물 신뢰도", "problem": "가정의 수돗물 품질에 대한 불신 해결"}
+{"id": "W7201884707", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산업용 초순수수(水)", "problem": "물 부족 문제 해결"}

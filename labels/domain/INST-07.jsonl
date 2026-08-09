@@ -573,3 +573,7 @@
 {"id": "W4411960972", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하류 지역의 홍수 패턴", "problem": "홍수 위험 지역 예측"}
 {"id": "W4411921684", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 수문 모델에서 인간 행동의 표현", "problem": "인간-물 상호작용의 개선"}
 {"id": "W4413152341", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수", "problem": "정확한 홍수 예측"}
+{"id": "W7197021556", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.85, "domain_ver": "v0.1", "object": "활동층 두께(ALT)", "problem": "활동층 두께의 공간 이질성 정량화"}
+{"id": "W7196986904", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국 유역의 수문학 데이터셋", "problem": "공간적으로 분산된 모델링을 위한 데이터의 적용성 제한"}
+{"id": "W7197030652", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "헤드워터 유역의 유량 예측", "problem": "유량 예측 개선"}
+{"id": "W7197049810", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 위기", "problem": "부정적 피드백 루프 해결하기"}

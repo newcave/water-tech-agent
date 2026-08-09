@@ -1329,3 +1329,14 @@
 {"id": "W4412706008", "object": "산티아고 섬 전력 시스템", "problem": "재생 가능 에너지 통합 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413479701", "object": "우크라이나 수력발전소 전력시장 참여 관리", "problem": "전력시장 참여 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7111770545", "object": "Folsom 저수지 운영", "problem": "예측 기반 저수지 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196929077", "object": "소규모 수력 발전 시스템", "problem": "최적의 터빈과 발전기 조합 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196949358", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201843605", "object": "유럽의 수력 발전 프로필", "problem": "정상화된 시간별 수력 발전 데이터 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201852543", "object": "네팔의 수력 발전 부문", "problem": "구조적 취약성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201853719", "object": "네팔의 수력 발전 부문", "problem": "구조적 취약성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201855104", "object": "유럽의 수력 발전 프로필", "problem": "정상화된 시간별 수력 발전 데이터 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201881919", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196957990", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7196971578", "object": "하이브리드 플로팅 태양광-수력-배터리 시스템", "problem": "경제적 영향 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201866595", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171813254", "object": "수단으로서의 수력 발전 및 관개 개발", "problem": "기후 변화에 따른 수자원 개발의 경제적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}

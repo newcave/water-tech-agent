@@ -3066,3 +3066,21 @@
 {"id": "W7135392736", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "골레스탄 주의 히르카니 넓은 잎 숲", "problem": "숲의 정량적 특성 추정"}
 {"id": "W7164571227", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 이란의 논밭", "problem": "정확한 논밭 매핑"}
 {"id": "W7167167806", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "행성의 수열 및 열수 서식지", "problem": "행성에서 수열 및 열수 서식지 인식"}
+{"id": "W7196949358", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7196992476", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Methana 반도체의 지하수 및 지표수 화학", "problem": "지하수 화학의 원인 및 진화 이해"}
+{"id": "W7201861119", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "차오후 호수 유역의 습지 생태계", "problem": "습지 동태와 수질 변화 이해"}
+{"id": "W7201875984", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "방글라데시의 내수면", "problem": "자동 탐지"}
+{"id": "W7201876865", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "방글라데시의 내수면", "problem": "자동 탐지 개선"}
+{"id": "W7201877302", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 핀란드의 환경 변화", "problem": "환경 특성 변화 조사"}
+{"id": "W7201881919", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7196928615", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지표 토양 수분", "problem": "딥러닝 모델 선택의 어려움"}
+{"id": "W7196944444", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물의 물 사용 효율성", "problem": "물 사용 효율성을 개선하려는 연구"}
+{"id": "W7196954895", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "로네 강 유역의 눈 덮임 데이터", "problem": "눈 녹은 물의 흐름 예측 개선"}
+{"id": "W7196957990", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7196997498", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "로네 강 유역의 눈 덮임 데이터", "problem": "눈 녹은 물의 흐름 예측 개선"}
+{"id": "W7197049742", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "혼합 수역의 스펙트럼", "problem": "순수한 수역 스펙트럼 추출"}
+{"id": "W7201866595", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W4410703769", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "증발산(ET)", "problem": "고해상도 ET 추정 개선"}
+{"id": "W7197053069", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Ibu Kota Nusantara (IKN) 지역의 환경", "problem": "토지 이용 및 식생 변화 평가"}
+{"id": "W7172498448", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "알프스 지역의 영구 동토 환경", "problem": "영구 동토 상태 및 눈 녹는 시기 모니터링"}
+{"id": "W7198916655", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동아시아의 상층 대기에서 오존과 수증기", "problem": "우주선과 오존, 수증기 간의 관계 분석"}
