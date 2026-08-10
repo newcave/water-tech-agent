@@ -549,15 +549,20 @@
    "ts": 1786329380,
    "kwater": 0,
    "related_1y": 15144
+  },
+  {
+   "ts": 1786369612,
+   "kwater": 0,
+   "related_1y": 15167
   }
  ],
- "updated": 1786329380,
+ "updated": 1786369612,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
    "name": "경영연구소",
    "keyword": "water utility management",
-   "recent_1y": 1811
+   "recent_1y": 1813
   },
   "INST-02": {
    "name": "수자원환경연구소",
@@ -567,22 +572,22 @@
   "INST-03": {
    "name": "상하수도연구소",
    "keyword": "drinking water treatment",
-   "recent_1y": 5149
+   "recent_1y": 5156
   },
   "INST-04": {
    "name": "물인프라안전연구소",
    "keyword": "dam safety monitoring",
-   "recent_1y": 663
+   "recent_1y": 664
   },
   "INST-05": {
    "name": "물에너지연구소",
    "keyword": "hydropower generation",
-   "recent_1y": 1872
+   "recent_1y": 1878
   },
   "INST-06": {
    "name": "수자원위성연구소",
    "keyword": "satellite remote sensing water",
-   "recent_1y": 3975
+   "recent_1y": 3982
   },
   "INST-07": {
    "name": "AI연구소",
