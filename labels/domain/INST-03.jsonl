@@ -3751,3 +3751,8 @@
 {"id": "W7196923255", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심층 우물의 수질", "problem": "미생물 오염 문제 해결"}
 {"id": "W7201880232", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "킨샤사의 수돗물 신뢰도", "problem": "가정의 수돗물 품질에 대한 불신 해결"}
 {"id": "W7201884707", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산업용 초순수수(水)", "problem": "물 부족 문제 해결"}
+{"id": "W7201951666", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "체중 관리", "problem": "지속 가능한 체중 감소를 위한 건강한 습관 개발"}
+{"id": "W7201961641", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "체중 관리", "problem": "지속 가능한 체중 감소를 위한 건강한 습관 개발"}
+{"id": "W7202000365", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Okaba-Odagbo 석탄 채굴 지역의 수 surface 및 groundwater", "problem": "중금속 오염과 음용수 적합성 평가"}
+{"id": "W7201880329", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 공정의 지속 가능성", "problem": "물 처리 과정의 환경적 영향을 평가하기"}
+{"id": "W7201997096", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 지하수 품질", "problem": "지하수 오염 문제 해결"}

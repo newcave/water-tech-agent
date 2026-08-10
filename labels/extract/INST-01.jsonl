@@ -1743,3 +1743,5 @@
 {"id": "W7197020104", "object": "사우디 아라비아의 주거 커뮤니티", "problem": "주거 커뮤니티 서비스 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7196956920", "object": "노후 수도 인프라", "problem": "파이프 고장 확률 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201855624", "object": "석탄재 관리", "problem": "환경 영향을 최소화하고 지속 가능한 자원 활용 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201988333", "object": "네덜란드 폴더-부에젬 시스템", "problem": "기후 변화에 적응하기 위한 재평가 및 문화적 공간으로의 전환", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201990707", "object": "간접 음용수 재사용 시스템의 PFAS 및 iPMT 화합물", "problem": "PFAS 및 iPMT 화합물의 노출 평가 및 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}

@@ -1340,3 +1340,4 @@
 {"id": "W7196971578", "object": "하이브리드 플로팅 태양광-수력-배터리 시스템", "problem": "경제적 영향 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201866595", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7171813254", "object": "수단으로서의 수력 발전 및 관개 개발", "problem": "기후 변화에 따른 수자원 개발의 경제적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201997191", "object": "저수지의 퇴적물 문제", "problem": "퇴적물 축적 방지", "relevant": true, "model": "gpt-4o-mini"}

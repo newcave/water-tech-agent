@@ -3118,3 +3118,6 @@
 {"id": "W7197053069", "object": "Ibu Kota Nusantara (IKN) 지역의 환경", "problem": "토지 이용 및 식생 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7172498448", "object": "알프스 지역의 영구 동토 환경", "problem": "영구 동토 상태 및 눈 녹는 시기 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7198916655", "object": "동아시아의 상층 대기에서 오존과 수증기", "problem": "우주선과 오존, 수증기 간의 관계 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201964544", "object": "카나리아 제도의 숲 탄소 저장량", "problem": "탄소 저장량의 공간적 변동 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201972567", "object": "카나리아 제도의 숲 탄소 저장량", "problem": "탄소 저장량의 공간적 변동 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201834905", "object": "중동의 환경", "problem": "먼지 폭풍의 환경적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}

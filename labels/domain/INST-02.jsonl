@@ -706,3 +706,4 @@
 {"id": "W7172496031", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "히말라야 지역의 수원 관리", "problem": "물 부족 문제 해결"}
 {"id": "W7196943226", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "식생 커버리지", "problem": "식생 커버리지의 임계값 식별"}
 {"id": "W7198958452", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cartaro 샘의 수리 지질 시스템", "problem": "수리 지질 시스템의 수리학적, 화학적, 동위원소적 특성 이해"}
+{"id": "W7201978773", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "페루의 수자원 분포와 거버넌스 격차", "problem": "수자원 불균형 해소"}

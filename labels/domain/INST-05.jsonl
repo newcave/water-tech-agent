@@ -1319,3 +1319,4 @@
 {"id": "W7196971578", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "하이브리드 플로팅 태양광-수력-배터리 시스템", "problem": "경제적 영향 평가하기"}
 {"id": "W7201866595", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
 {"id": "W7171813254", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수단으로서의 수력 발전 및 관개 개발", "problem": "기후 변화에 따른 수자원 개발의 경제적 영향 평가"}
+{"id": "W7201997191", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지의 퇴적물 문제", "problem": "퇴적물 축적 방지"}
