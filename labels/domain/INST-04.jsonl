@@ -466,3 +466,4 @@
 {"id": "W7128244899", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 관리", "problem": "홍수 위험 감소 및 예방"}
 {"id": "W7132230979", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 구조물", "problem": "안전성과 신뢰성 향상"}
 {"id": "W4416265869", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 시설의 기술적 상태", "problem": "변형 및 파손 모니터링"}
+{"id": "W7202042467", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석유 및 가스 시설의 화재 안전성", "problem": "화재 및 폭발 사고로 인한 인명 피해 감소"}

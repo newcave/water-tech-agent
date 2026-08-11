@@ -1681,3 +1681,4 @@
 {"id": "W7201855624", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "석탄재 관리", "problem": "환경 영향을 최소화하고 지속 가능한 자원 활용 촉진"}
 {"id": "W7201988333", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "네덜란드 폴더-부에젬 시스템", "problem": "기후 변화에 적응하기 위한 재평가 및 문화적 공간으로의 전환"}
 {"id": "W7201990707", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "간접 음용수 재사용 시스템의 PFAS 및 iPMT 화합물", "problem": "PFAS 및 iPMT 화합물의 노출 평가 및 우선순위 설정"}
+{"id": "W7202030368", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비수익수(水) 손실", "problem": "비수익수 손실 감소"}

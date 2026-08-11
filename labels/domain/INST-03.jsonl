@@ -3756,3 +3756,8 @@
 {"id": "W7202000365", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Okaba-Odagbo 석탄 채굴 지역의 수 surface 및 groundwater", "problem": "중금속 오염과 음용수 적합성 평가"}
 {"id": "W7201880329", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 공정의 지속 가능성", "problem": "물 처리 과정의 환경적 영향을 평가하기"}
 {"id": "W7201997096", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 지하수 품질", "problem": "지하수 오염 문제 해결"}
+{"id": "W7202023112", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 정화용 선택적 결정 필터", "problem": "안전한 식수 접근 부족 문제 해결"}
+{"id": "W7202038940", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 정화용 선택적 결정 필터", "problem": "안전한 식수 접근 부족 해결"}
+{"id": "W7202052704", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "HSPB8 관련 근육병증", "problem": "HSPB8의 발현 감소 및 자가포식 조절"}
+{"id": "W7202039861", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아 토종 수탉의 생식 호르몬 프로필", "problem": "마늘 보충이 생식 호르몬에 미치는 영향"}
+{"id": "W7202037204", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 음용수 공급", "problem": "재해 지역에서의 수질 개선"}

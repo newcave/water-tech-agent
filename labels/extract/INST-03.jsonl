@@ -3832,3 +3832,8 @@
 {"id": "W7202000365", "object": "Okaba-Odagbo 석탄 채굴 지역의 수 surface 및 groundwater", "problem": "중금속 오염과 음용수 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201880329", "object": "물 처리 공정의 지속 가능성", "problem": "물 처리 과정의 환경적 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201997096", "object": "인도의 지하수 품질", "problem": "지하수 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202023112", "object": "물 정화용 선택적 결정 필터", "problem": "안전한 식수 접근 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202038940", "object": "물 정화용 선택적 결정 필터", "problem": "안전한 식수 접근 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202052704", "object": "HSPB8 관련 근육병증", "problem": "HSPB8의 발현 감소 및 자가포식 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202039861", "object": "나이지리아 토종 수탉의 생식 호르몬 프로필", "problem": "마늘 보충이 생식 호르몬에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202037204", "object": "안전한 음용수 공급", "problem": "재해 지역에서의 수질 개선", "relevant": true, "model": "gpt-4o-mini"}

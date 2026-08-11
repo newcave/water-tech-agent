@@ -469,3 +469,4 @@
 {"id": "W7132230979", "object": "수리 구조물", "problem": "안전성과 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4416265869", "object": "수리 시설의 기술적 상태", "problem": "변형 및 파손 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413757728", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7202042467", "object": "석유 및 가스 시설의 화재 안전성", "problem": "화재 및 폭발 사고로 인한 인명 피해 감소", "relevant": true, "model": "gpt-4o-mini"}

@@ -1341,3 +1341,9 @@
 {"id": "W7201866595", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7171813254", "object": "수단으로서의 수력 발전 및 관개 개발", "problem": "기후 변화에 따른 수자원 개발의 경제적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201997191", "object": "저수지의 퇴적물 문제", "problem": "퇴적물 축적 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202025843", "object": "리버스 주의 농촌 전력 공급", "problem": "전력 공급의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202025565", "object": "수력 발전을 위한 휠 프로펠러", "problem": "효율적인 추진 기술의 부재", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202042128", "object": "수력 발전을 위한 휠 프로펠러", "problem": "효율적인 추진 기술의 부재", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202048996", "object": "인도의 전력 부문", "problem": "전력 생산 및 CO₂ 배출 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201839913", "object": "계층적 다중 규모 캐스케이드 저수지 스케줄링 프레임워크", "problem": "효율적인 수자원 관리 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7201869240", "object": "계층적 다중 규모 캐스케이드 저수지 스케줄링 프레임워크", "problem": "효율적인 수자원 관리 최적화", "relevant": true, "model": "gpt-4o-mini"}

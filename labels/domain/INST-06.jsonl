@@ -3087,3 +3087,6 @@
 {"id": "W7201964544", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카나리아 제도의 숲 탄소 저장량", "problem": "탄소 저장량의 공간적 변동 이해하기"}
 {"id": "W7201972567", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카나리아 제도의 숲 탄소 저장량", "problem": "탄소 저장량의 공간적 변동 이해하기"}
 {"id": "W7201834905", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중동의 환경", "problem": "먼지 폭풍의 환경적 영향 이해하기"}
+{"id": "W7202038036", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수중 환경의 원거리 관측 품질", "problem": "태양 반사광 문제 해결"}
+{"id": "W7202045887", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "실렛 지역의 토지 피복 변화와 도시 열섬", "problem": "도시 열섬의 확산과 토지 표면 온도 증가 이해하기"}
+{"id": "W7202035740", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Aydar-Arnasay lake system", "problem": "생태계 안정성 위협 해결"}
