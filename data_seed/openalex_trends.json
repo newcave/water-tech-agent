@@ -594,9 +594,14 @@
    "ts": 1786542630,
    "kwater": 0,
    "related_1y": 15247
+  },
+  {
+   "ts": 1786562926,
+   "kwater": 0,
+   "related_1y": 15247
   }
  ],
- "updated": 1786542630,
+ "updated": 1786562926,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
