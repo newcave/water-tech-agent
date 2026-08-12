@@ -594,3 +594,5 @@
 {"id": "W7196986904", "object": "미국 유역의 수문학 데이터셋", "problem": "공간적으로 분산된 모델링을 위한 데이터의 적용성 제한", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7197030652", "object": "헤드워터 유역의 유량 예측", "problem": "유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7197049810", "object": "수자원 위기", "problem": "부정적 피드백 루프 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202116525", "object": "지구 시스템", "problem": "지구 상태를 이해하고 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202149051", "object": "지구 시스템", "problem": "지구 시스템의 상태를 이해하고 개선하려는", "relevant": true, "model": "gpt-4o-mini"}

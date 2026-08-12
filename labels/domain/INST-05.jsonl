@@ -1326,3 +1326,9 @@
 {"id": "W7202048996", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 전력 부문", "problem": "전력 생산 및 CO₂ 배출 모니터링"}
 {"id": "W7201839913", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "계층적 다중 규모 캐스케이드 저수지 스케줄링 프레임워크", "problem": "효율적인 수자원 관리 최적화"}
 {"id": "W7201869240", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "계층적 다중 규모 캐스케이드 저수지 스케줄링 프레임워크", "problem": "효율적인 수자원 관리 최적화"}
+{"id": "W7202117108", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 수력 발전소의 수문학적 노출", "problem": "수문학적 노출의 공간적 집합체를 분리"}
+{"id": "W7202120411", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 수력 발전소의 수문학적 노출", "problem": "수문학적 노출의 공간적 집합체를 분리"}
+{"id": "W7202076200", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kotmale Hydropower Station의 에너지 생산", "problem": "일일 수력 발전을 위한 물 방출량과 에너지 생산 간의 관계 분석"}
+{"id": "W7202061867", "domain_primary": "W8", "domain_secondary": ["W7"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전 자산의 신뢰성 및 가용성", "problem": "고장 모드 분석 및 자산 관리 의사결정 개선"}
+{"id": "W7202135221", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "마하라슈트라의 수자원 관광지", "problem": "관광 잠재력과 지속 가능성 문제 평가"}
+{"id": "W7202148095", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "마하라슈트라의 수자원 관광지", "problem": "관광 잠재력과 지속 가능성 문제 평가"}

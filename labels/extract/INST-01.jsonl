@@ -1746,3 +1746,9 @@
 {"id": "W7201988333", "object": "네덜란드 폴더-부에젬 시스템", "problem": "기후 변화에 적응하기 위한 재평가 및 문화적 공간으로의 전환", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201990707", "object": "간접 음용수 재사용 시스템의 PFAS 및 iPMT 화합물", "problem": "PFAS 및 iPMT 화합물의 노출 평가 및 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202030368", "object": "비수익수(水) 손실", "problem": "비수익수 손실 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202118404", "object": "수돗물 배급 파이프의 상태", "problem": "상태 평가를 위한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202136991", "object": "수돗물 배급 파이프의 상태", "problem": "상태 평가를 위한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202084302", "object": "직원 성과", "problem": "근무 환경과 근무 규율의 영향을 분석하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202149934", "object": "캠프 라푸라푸의 물 관리 시스템", "problem": "물 관리 관행의 개선 및 지속 가능성 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202071849", "object": "스마트 시티 유틸리티", "problem": "공정성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202107910", "object": "미국 카운티의 지역 경제 구성", "problem": "지역 경제 구성에 따른 담수 사용 분석", "relevant": true, "model": "gpt-4o-mini"}

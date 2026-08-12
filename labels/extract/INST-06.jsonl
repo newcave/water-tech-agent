@@ -3124,3 +3124,11 @@
 {"id": "W7202038036", "object": "수중 환경의 원거리 관측 품질", "problem": "태양 반사광 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202045887", "object": "실렛 지역의 토지 피복 변화와 도시 열섬", "problem": "도시 열섬의 확산과 토지 표면 온도 증가 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202035740", "object": "Aydar-Arnasay lake system", "problem": "생태계 안정성 위협 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202142843", "object": "유프라테스 강의 수면 온도", "problem": "수면 온도 변화 모델링 및 추적", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202082106", "object": "지하수 방출 지역", "problem": "지하수 방출 지역을 식별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202138406", "object": "한국 연안 수역의 총 부유물(TSM)", "problem": "정확한 모니터링을 위한 알고리즘 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202141130", "object": "한국 연안 수역의 총 부유물(TSM)", "problem": "정확한 모니터링을 위한 알고리즘 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202073999", "object": "수역(강, 호수, 저수지)", "problem": "정확한 수역 분할 및 버퍼 존 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202070816", "object": "Nidnegal 미소 유역의 토지 이용 및 토지 피복", "problem": "효과적인 지속 가능한 자연 자원 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202098836", "object": "해안 블루카본 분포", "problem": "해안 블루카본 분포를 이해하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202102163", "object": "수질 및 유해 조류 발생 모니터링", "problem": "유해 조류 발생 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}

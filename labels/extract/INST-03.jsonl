@@ -3837,3 +3837,11 @@
 {"id": "W7202052704", "object": "HSPB8 관련 근육병증", "problem": "HSPB8의 발현 감소 및 자가포식 조절", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202039861", "object": "나이지리아 토종 수탉의 생식 호르몬 프로필", "problem": "마늘 보충이 생식 호르몬에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202037204", "object": "안전한 음용수 공급", "problem": "재해 지역에서의 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202089950", "object": "오데사 지역의 음용수에서의 불소 분포", "problem": "불소 분포의 불균형으로 인한 공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202105870", "object": "코코리의 번식 효율", "problem": "꿀 농도가 번식 효율에 미치는 영향 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202084724", "object": "음용수의 중금속 오염", "problem": "중금속 농도 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202081048", "object": "식수 처리 시설의 수질", "problem": "환경 오염 물질의 존재 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202084164", "object": "Vocational Building at Campus II ITP", "problem": "비가 harvested rainwater의 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202100180", "object": "열 스트레스를 받은 육계의 장벽 기능", "problem": "장벽 손상 회복 및 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202096062", "object": "아크릴 인공치아", "problem": "표면 거칠기 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169592964", "object": "음용수의 질", "problem": "저비용의 효과적인 수처리 시스템 설계 및 평가", "relevant": true, "model": "gpt-4o-mini"}
