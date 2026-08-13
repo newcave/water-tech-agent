@@ -1353,3 +1353,8 @@
 {"id": "W7202061867", "object": "수력 발전 자산의 신뢰성 및 가용성", "problem": "고장 모드 분석 및 자산 관리 의사결정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202135221", "object": "마하라슈트라의 수자원 관광지", "problem": "관광 잠재력과 지속 가능성 문제 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202148095", "object": "마하라슈트라의 수자원 관광지", "problem": "관광 잠재력과 지속 가능성 문제 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202175137", "object": "에너지 기술 잠재력", "problem": "에너지 기술 잠재력 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202187841", "object": "눈이 지배적인 유역의 수자원 예측", "problem": "모델 기반 수자원 예측의 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202202627", "object": "수력 발전소 작업 티켓의 안전 조치", "problem": "안전 조치의 비효율성과 오류 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202216074", "object": "H1 산사태", "problem": "산사태로 인한 충격파 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202163384", "object": "중앙아시아의 전력 소비와 탄소 배출", "problem": "전력 소비가 CO₂ 배출을 증가시키는지 여부를 조사", "relevant": true, "model": "gpt-4o-mini"}

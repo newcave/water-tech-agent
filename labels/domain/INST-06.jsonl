@@ -3098,3 +3098,8 @@
 {"id": "W7202070816", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nidnegal 미소 유역의 토지 이용 및 토지 피복", "problem": "효과적인 지속 가능한 자연 자원 관리 전략 개발"}
 {"id": "W7202098836", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안 블루카본 분포", "problem": "해안 블루카본 분포를 이해하려는 문제"}
 {"id": "W7202102163", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 및 유해 조류 발생 모니터링", "problem": "유해 조류 발생 모니터링 개선"}
+{"id": "W7202174707", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "하층 대기", "problem": "수분 분포의 3D 특성 개선"}
+{"id": "W7202179599", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "텔랑가나 주 싱가레니 노천 석탄 광산 지역의 토지 이용 및 토지 피복", "problem": "노천 석탄 채굴로 인한 토지 이용 변화 탐지"}
+{"id": "W7202187169", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계 회복력", "problem": "생태계 회복 및 수질 변화 이해하기"}
+{"id": "W7202192471", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전통 농업", "problem": "기후 변화의 영향 분석"}
+{"id": "W7202169839", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파키스탄의 해안 지역", "problem": "사이클론의 비정상적 행동 이해 및 재난 대비 개선"}

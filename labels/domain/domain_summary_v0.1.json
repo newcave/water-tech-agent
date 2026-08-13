@@ -3,22 +3,22 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-08-12 19:53 UTC",
-  "total": 11655,
+  "generated_at": "2026-08-13 03:19 UTC",
+  "total": 11683,
   "domains": {
     "W1": {
       "name": "유역·수문",
-      "count": 2054,
+      "count": 2057,
       "pct": 17.6
     },
     "W2": {
       "name": "댐·저수지 운영",
       "count": 321,
-      "pct": 2.8
+      "pct": 2.7
     },
     "W3": {
       "name": "수질·수생태",
-      "count": 2471,
+      "count": 2480,
       "pct": 21.2
     },
     "W4": {
@@ -38,12 +38,12 @@
     },
     "W7": {
       "name": "물인프라 안전·자산",
-      "count": 457,
+      "count": 459,
       "pct": 3.9
     },
     "W8": {
       "name": "물에너지",
-      "count": 745,
+      "count": 747,
       "pct": 6.4
     },
     "W9": {
@@ -53,12 +53,12 @@
     },
     "W0": {
       "name": "경영·정책·서비스",
-      "count": 756,
+      "count": 760,
       "pct": 6.5
     },
     "W0_UNCLASSIFIED": {
       "name": "위 어디에도 명확히 속하지 않음",
-      "count": 3416,
+      "count": 3424,
       "pct": 29.3
     }
   },
@@ -84,47 +84,47 @@
     },
     "INST-02": {
       "name": "수자원환경연구소",
-      "total": 710,
+      "total": 714,
       "unclassified": 90,
-      "unclassified_pct": 12.7,
+      "unclassified_pct": 12.6,
       "by_domain": {
         "W1": 395,
         "W2": 24,
-        "W3": 110,
+        "W3": 113,
         "W4": 0,
         "W5": 7,
         "W6": 1,
         "W7": 3,
         "W8": 7,
         "W9": 1,
-        "W0": 72,
+        "W0": 73,
         "W0_UNCLASSIFIED": 90
       }
     },
     "INST-03": {
       "name": "상하수도연구소",
-      "total": 3771,
-      "unclassified": 1213,
+      "total": 3782,
+      "unclassified": 1218,
       "unclassified_pct": 32.2,
       "by_domain": {
         "W1": 21,
         "W2": 24,
-        "W3": 1416,
+        "W3": 1420,
         "W4": 616,
         "W5": 154,
         "W6": 183,
         "W7": 6,
         "W8": 15,
         "W9": 0,
-        "W0": 123,
-        "W0_UNCLASSIFIED": 1213
+        "W0": 125,
+        "W0_UNCLASSIFIED": 1218
       }
     },
     "INST-04": {
       "name": "물인프라안전연구소",
-      "total": 469,
+      "total": 471,
       "unclassified": 52,
-      "unclassified_pct": 11.1,
+      "unclassified_pct": 11.0,
       "by_domain": {
         "W1": 11,
         "W2": 39,
@@ -132,7 +132,7 @@
         "W4": 1,
         "W5": 0,
         "W6": 0,
-        "W7": 331,
+        "W7": 333,
         "W8": 4,
         "W9": 5,
         "W0": 2,
@@ -141,32 +141,32 @@
     },
     "INST-05": {
       "name": "물에너지연구소",
-      "total": 1334,
+      "total": 1339,
       "unclassified": 301,
-      "unclassified_pct": 22.6,
+      "unclassified_pct": 22.5,
       "by_domain": {
-        "W1": 118,
+        "W1": 120,
         "W2": 116,
         "W3": 22,
         "W4": 0,
         "W5": 10,
         "W6": 2,
         "W7": 29,
-        "W8": 679,
+        "W8": 681,
         "W9": 0,
-        "W0": 57,
+        "W0": 58,
         "W0_UNCLASSIFIED": 301
       }
     },
     "INST-06": {
       "name": "수자원위성연구소",
-      "total": 3100,
-      "unclassified": 1189,
+      "total": 3105,
+      "unclassified": 1192,
       "unclassified_pct": 38.4,
       "by_domain": {
-        "W1": 952,
+        "W1": 953,
         "W2": 75,
-        "W3": 646,
+        "W3": 647,
         "W4": 0,
         "W5": 40,
         "W6": 6,
@@ -174,18 +174,18 @@
         "W8": 7,
         "W9": 93,
         "W0": 73,
-        "W0_UNCLASSIFIED": 1189
+        "W0_UNCLASSIFIED": 1192
       }
     },
     "INST-07": {
       "name": "AI연구소",
-      "total": 581,
+      "total": 582,
       "unclassified": 125,
       "unclassified_pct": 21.5,
       "by_domain": {
         "W1": 371,
         "W2": 12,
-        "W3": 48,
+        "W3": 49,
         "W4": 0,
         "W5": 1,
         "W6": 0,
@@ -226,12 +226,12 @@
     },
     "2026": {
       "W5": 234,
-      "W3": 1361,
-      "W0": 396,
-      "W0_UNCLASSIFIED": 1915,
-      "W7": 245,
-      "W8": 419,
-      "W1": 1296,
+      "W3": 1370,
+      "W0": 400,
+      "W0_UNCLASSIFIED": 1923,
+      "W7": 247,
+      "W8": 421,
+      "W1": 1299,
       "W6": 129,
       "W4": 369,
       "W2": 193,
