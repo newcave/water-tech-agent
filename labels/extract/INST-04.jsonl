@@ -472,3 +472,7 @@
 {"id": "W7202042467", "object": "석유 및 가스 시설의 화재 안전성", "problem": "화재 및 폭발 사고로 인한 인명 피해 감소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202196220", "object": "배수관의 구조적 건강", "problem": "내부 변형 감지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202209637", "object": "댐 변형", "problem": "정확한 다중 수평 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202268023", "object": "임신 중 서양식 식단의 대사 결과", "problem": "DMF 치료의 안전성과 효능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202276083", "object": "구조물 건강 모니터링", "problem": "AI를 활용한 손상 탐지 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202258652", "object": "점토 필터 재료의 침투 변형 특성", "problem": "균열 형태에 따른 침투 변형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202282604", "object": "댐 운영의 효율성과 안전성", "problem": "물 흐름 조절 자동화", "relevant": true, "model": "gpt-4o-mini"}

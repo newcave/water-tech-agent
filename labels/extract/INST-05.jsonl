@@ -1358,3 +1358,5 @@
 {"id": "W7202202627", "object": "수력 발전소 작업 티켓의 안전 조치", "problem": "안전 조치의 비효율성과 오류 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202216074", "object": "H1 산사태", "problem": "산사태로 인한 충격파 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202163384", "object": "중앙아시아의 전력 소비와 탄소 배출", "problem": "전력 소비가 CO₂ 배출을 증가시키는지 여부를 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202252344", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202276725", "object": "Marsyangdi River Basin의 퇴적물 생성 및 분포", "problem": "퇴적물 부하 추정 및 관리 필요성", "relevant": true, "model": "gpt-4o-mini"}

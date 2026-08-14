@@ -1752,3 +1752,8 @@
 {"id": "W7202149934", "object": "캠프 라푸라푸의 물 관리 시스템", "problem": "물 관리 관행의 개선 및 지속 가능성 증진", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202071849", "object": "스마트 시티 유틸리티", "problem": "공정성 확보", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202107910", "object": "미국 카운티의 지역 경제 구성", "problem": "지역 경제 구성에 따른 담수 사용 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202260361", "object": "유방암 관련 림프부종", "problem": "지방흡입 효과 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202252344", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202254111", "object": "리마콩의 탄저병", "problem": "추가적인 병원균 식별 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202280476", "object": "도시 인프라", "problem": "물 관리와 배출 회복력 통합 계획", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202204299", "object": "영국의 물 관리 시스템", "problem": "물 관리 접근 방식을 재구성하기", "relevant": true, "model": "gpt-4o-mini"}

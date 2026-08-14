@@ -1337,3 +1337,5 @@
 {"id": "W7202202627", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전소 작업 티켓의 안전 조치", "problem": "안전 조치의 비효율성과 오류 문제 해결"}
 {"id": "W7202216074", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "H1 산사태", "problem": "산사태로 인한 충격파 위험 평가"}
 {"id": "W7202163384", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중앙아시아의 전력 소비와 탄소 배출", "problem": "전력 소비가 CO₂ 배출을 증가시키는지 여부를 조사"}
+{"id": "W7202252344", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7202276725", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Marsyangdi River Basin의 퇴적물 생성 및 분포", "problem": "퇴적물 부하 추정 및 관리 필요성"}

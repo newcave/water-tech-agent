@@ -597,3 +597,5 @@
 {"id": "W7202116525", "object": "지구 시스템", "problem": "지구 상태를 이해하고 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202149051", "object": "지구 시스템", "problem": "지구 시스템의 상태를 이해하고 개선하려는", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202187169", "object": "해양 생태계 회복력", "problem": "생태계 회복 및 수질 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202269991", "object": "다중 재해 위험 지역", "problem": "다중 재해 위험을 식별하고 매핑하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202298133", "object": "지구 관측 시스템", "problem": "AI를 활용한 환경 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}

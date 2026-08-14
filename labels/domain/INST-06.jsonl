@@ -3103,3 +3103,8 @@
 {"id": "W7202187169", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계 회복력", "problem": "생태계 회복 및 수질 변화 이해하기"}
 {"id": "W7202192471", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전통 농업", "problem": "기후 변화의 영향 분석"}
 {"id": "W7202169839", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파키스탄의 해안 지역", "problem": "사이클론의 비정상적 행동 이해 및 재난 대비 개선"}
+{"id": "W7202252344", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 및 수자원 관리", "problem": "저수지 유입량 예측 및 모니터링"}
+{"id": "W7202272182", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해수면 염분 제품", "problem": "LASMR SSS 제품의 검증 및 불확실성 분석"}
+{"id": "W7202275481", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남수마트라의 이탄 화재 사건", "problem": "위성 감지 이전의 환경 조건 분석"}
+{"id": "W7202303328", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남수마트라의 이탄 화재 사건", "problem": "위성 감지 이전의 단기 환경 조건 분석"}
+{"id": "W7202291901", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "말라리아 매개체 Anopheles stephensi", "problem": "서식지 관리 전략 지원을 위한 서식지 분포 평가"}

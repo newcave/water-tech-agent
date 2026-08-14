@@ -3780,3 +3780,17 @@
 {"id": "W7202216534", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "육계의 성장 성능과 장 건강", "problem": "옥수수의 부분 대체로 성장 성능 개선"}
 {"id": "W7202112756", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동맥경화증", "problem": "CBD의 성별 의존적 효과 이해하기"}
 {"id": "W7202238100", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "궤양성 대장염에서 면역 세포 분포와 사이토카인", "problem": "taVNS의 효과를 조사하다"}
+{"id": "W7202242621", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남성 생식 건강", "problem": "환경 비소 노출로 인한 생식 독성 문제 해결"}
+{"id": "W7202247397", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mahanadi 강의 수면 수질", "problem": "수질 오염의 주요 원인 규명 및 예측"}
+{"id": "W7202257760", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "구강 및 전신 건강 결과", "problem": "설탕 섭취 감소 및 안전한 음용수 접근성 향상"}
+{"id": "W7202266411", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다기능 폴리머 흡착막", "problem": "오염물질에 대한 선택적 흡착 성능 개선"}
+{"id": "W7202275418", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Auchi의 안전한 식수 공급", "problem": "식수 공급의 지속 가능성 확보"}
+{"id": "W7202284307", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Auchi의 안전한 식수 공급", "problem": "식수 공급의 지속 가능성 확보"}
+{"id": "W7202284414", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다기능 폴리머 흡착막", "problem": "오염물질에 대한 선택적 흡착 성능 개선"}
+{"id": "W7202285086", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 품질과 안전성", "problem": "품질 관리 데이터 처리 자동화"}
+{"id": "W7202290664", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "폴란드의 온천 및 광물수", "problem": "온천수의 치료 효과와 활용 방안 개선"}
+{"id": "W7202253723", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Okofia Community의 수질", "problem": "미생물 오염 문제 해결"}
+{"id": "W7202333877", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오데사 지역의 수돗물에서의 불소 분포", "problem": "불소의 불균형 분포로 인한 공중 보건 문제 해결"}
+{"id": "W7202241483", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 대사 효율과 면역 상태", "problem": "대사 효율과 면역 상태 개선"}
+{"id": "W7202251014", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미세플라스틱 오염", "problem": "인간 건강에 미치는 잠재적 위험 평가"}
+{"id": "W7202291298", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 혈중 지질 프로필", "problem": "지질 대사 개선"}
