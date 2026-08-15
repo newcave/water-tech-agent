@@ -754,3 +754,5 @@
 {"id": "W7202204930", "object": "Hulaskhera Wetland", "problem": "생태적 상태와 생계 의존도 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202298133", "object": "지구 관측 시스템", "problem": "AI를 활용한 환경 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202331867", "object": "우크라이나의 물리적 지리 상태", "problem": "최적의 자연 자원 관리 방향 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202353687", "object": "낙동강의 총 부유 고형물(TSS)", "problem": "TSS를 재구성하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202376218", "object": "낙동강의 총 부유 고형물(TSS)", "problem": "TSS를 재구성하기", "relevant": true, "model": "gpt-4o-mini"}

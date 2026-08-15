@@ -1757,3 +1757,6 @@
 {"id": "W7202254111", "object": "리마콩의 탄저병", "problem": "추가적인 병원균 식별 및 관리", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202280476", "object": "도시 인프라", "problem": "물 관리와 배출 회복력 통합 계획", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202204299", "object": "영국의 물 관리 시스템", "problem": "물 관리 접근 방식을 재구성하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202352102", "object": "지하수 재충전", "problem": "토지 이용 변화와 인프라 개발의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202365986", "object": "스마트 물 시스템", "problem": "사이버 보안 취약점 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202383373", "object": "수자원 관리", "problem": "실시간 모니터링을 통한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

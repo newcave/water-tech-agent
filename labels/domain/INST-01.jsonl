@@ -1693,3 +1693,6 @@
 {"id": "W7202254111", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "리마콩의 탄저병", "problem": "추가적인 병원균 식별 및 관리"}
 {"id": "W7202280476", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 인프라", "problem": "물 관리와 배출 회복력 통합 계획"}
 {"id": "W7202204299", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "영국의 물 관리 시스템", "problem": "물 관리 접근 방식을 재구성하기"}
+{"id": "W7202352102", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 재충전", "problem": "토지 이용 변화와 인프라 개발의 영향 분석"}
+{"id": "W7202365986", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스마트 물 시스템", "problem": "사이버 보안 취약점 해결"}
+{"id": "W7202383373", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "실시간 모니터링을 통한 문제 해결"}

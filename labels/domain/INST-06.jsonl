@@ -3108,3 +3108,16 @@
 {"id": "W7202275481", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남수마트라의 이탄 화재 사건", "problem": "위성 감지 이전의 환경 조건 분석"}
 {"id": "W7202303328", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남수마트라의 이탄 화재 사건", "problem": "위성 감지 이전의 단기 환경 조건 분석"}
 {"id": "W7202291901", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "말라리아 매개체 Anopheles stephensi", "problem": "서식지 관리 전략 지원을 위한 서식지 분포 평가"}
+{"id": "W7202348041", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Abaya ecosystem", "problem": "물 수면 면적 감소와 생태계 균형 파괴"}
+{"id": "W7202359553", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방글라데시의 수질", "problem": "수질 개선을 위한 인공지능 활용 방안 모색"}
+{"id": "W7202371576", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수역의 클로로필-a 농도", "problem": "원격 탐사 기법을 통한 농도 추정"}
+{"id": "W7202373432", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 모니터링 및 경고 시스템", "problem": "실시간 홍수 감지 및 경고 제공"}
+{"id": "W7202377128", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수문학적 모델링", "problem": "정확한 수문학적 시뮬레이션 개선"}
+{"id": "W7202386297", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분", "problem": "정확한 수분 수준 예측"}
+{"id": "W7202393846", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 모니터링 및 경고 시스템", "problem": "실시간 홍수 감지 및 경고 개선"}
+{"id": "W7202252027", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 핀란드의 환경 변화", "problem": "환경 특성 변화 조사"}
+{"id": "W7202266586", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 핀란드의 팔사 미르", "problem": "환경 변화 조사"}
+{"id": "W7202361516", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다카 지역의 토지 사용 및 식생 변화", "problem": "체계적인 모니터링 필요성"}
+{"id": "W7202345573", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오징어 서식지", "problem": "서식지 적합성 모델링"}
+{"id": "W7202350891", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Gunjur 지역의 어업 및 FMFO 산업", "problem": "FMFO 생산의 영향 분석 및 어업 활동 모니터링"}
+{"id": "W7202373431", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "감비아의 어업 및 어분/어유 산업", "problem": "FMFO 생산의 영향을 모니터링하고 문서화하기"}

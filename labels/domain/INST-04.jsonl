@@ -473,3 +473,4 @@
 {"id": "W7202276083", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 건강 모니터링", "problem": "AI를 활용한 손상 탐지 및 예측 개선"}
 {"id": "W7202258652", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "점토 필터 재료의 침투 변형 특성", "problem": "균열 형태에 따른 침투 변형 이해"}
 {"id": "W7202282604", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 운영의 효율성과 안전성", "problem": "물 흐름 조절 자동화"}
+{"id": "W7202365790", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문 수위 측정", "problem": "수동 데이터 입력으로 인한 인지 부담 감소"}

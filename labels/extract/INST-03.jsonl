@@ -3870,3 +3870,11 @@
 {"id": "W7202241483", "object": "브로일러 치킨의 대사 효율과 면역 상태", "problem": "대사 효율과 면역 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202251014", "object": "음용수의 미세플라스틱 오염", "problem": "인간 건강에 미치는 잠재적 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202291298", "object": "브로일러 닭의 혈중 지질 프로필", "problem": "지질 대사 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202362582", "object": "수돗물 처리", "problem": "응집 및 플록큘레이션의 투입 전략 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202395290", "object": "이온 음료", "problem": "최적의 조합 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202250702", "object": "PFAS 오염된 수원", "problem": "MOF의 PFAS 흡착 성능 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202255905", "object": "카비르 닭의 영양소 소화율과 장내 미생물군", "problem": "항생제 대체물질로서의 효과 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202361094", "object": "XDR 장티푸스", "problem": "질병의 심각성을 평가하기 위한 환경 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202429250", "object": "음용수의 소독 부산물 전구체", "problem": "소독 부산물 형성 제어", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202349182", "object": "맥주 품질", "problem": "향상시키려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202367709", "object": "맥주 품질", "problem": "맥주 생산 효율성 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
