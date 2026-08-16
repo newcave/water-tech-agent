@@ -1696,3 +1696,4 @@
 {"id": "W7202352102", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 재충전", "problem": "토지 이용 변화와 인프라 개발의 영향 분석"}
 {"id": "W7202365986", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스마트 물 시스템", "problem": "사이버 보안 취약점 해결"}
 {"id": "W7202383373", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "실시간 모니터링을 통한 문제 해결"}
+{"id": "W7203445809", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 슬러지 관리", "problem": "슬러지 생산 감소"}

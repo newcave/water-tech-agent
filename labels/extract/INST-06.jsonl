@@ -3155,3 +3155,16 @@
 {"id": "W7202345573", "object": "오징어 서식지", "problem": "서식지 적합성 모델링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202350891", "object": "Gunjur 지역의 어업 및 FMFO 산업", "problem": "FMFO 생산의 영향 분석 및 어업 활동 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202373431", "object": "감비아의 어업 및 어분/어유 산업", "problem": "FMFO 생산의 영향을 모니터링하고 문서화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203439842", "object": "내륙 및 연안 수역의 수질 데이터", "problem": "수질 데이터의 정확한 매칭 및 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203446928", "object": "중앙 이란의 PM₂.₅ 노출 및 먼지 오염", "problem": "조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203450981", "object": "내륙 및 연안 수역의 수질 데이터", "problem": "수질 데이터의 정확한 매칭 및 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203458957", "object": "인도의 지하수 품질", "problem": "지하수 품질 예측 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203460694", "object": "도시의 지속 가능성", "problem": "도시화가 온도에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203468285", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203470724", "object": "Macrocystis pyrifera 켈프 숲", "problem": "켈프 덮개 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203473833", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203485309", "object": "Strait of Magellan의 Macrocystis pyrifera 켈프 숲", "problem": "켈프 덮개 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203495084", "object": "중앙 이란의 PM₂.₅ 노출 및 먼지 오염", "problem": "조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203495997", "object": "수질 모니터링", "problem": "원격 감지 데이터와 현장 측정의 통합 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203484363", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203439876", "object": "수중 성분", "problem": "위성 관측의 방사계측 오류 해결", "relevant": true, "model": "gpt-4o-mini"}

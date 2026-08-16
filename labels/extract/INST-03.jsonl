@@ -3878,3 +3878,15 @@
 {"id": "W7202429250", "object": "음용수의 소독 부산물 전구체", "problem": "소독 부산물 형성 제어", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202349182", "object": "맥주 품질", "problem": "향상시키려는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202367709", "object": "맥주 품질", "problem": "맥주 생산 효율성 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203448951", "object": "홍수 피해 지역의 어린이 건강", "problem": "물리적 오염과 설사 발생 간의 관계 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203443389", "object": "음용수 처리 시설 샘플", "problem": "16S rRNA 유전자 합의 서열 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203450601", "object": "지속 가능한 수처리 시스템", "problem": "수처리 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203454574", "object": "음용수 처리 시설 샘플", "problem": "16S rRNA 유전자 합의 서열 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203456427", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203459911", "object": "Issa brown commercial layers", "problem": "사이퍼메트린 독성으로 인한 건강 악화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203476151", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203481683", "object": "Issa brown commercial layers", "problem": "사이퍼메트린 독성으로 인한 건강 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203483775", "object": "음용수 내 석면 섬유 오염", "problem": "석면 제거 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203502882", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202371018", "object": "음용수의 납(Pb) 및 카드뮴(Cd) 오염", "problem": "미량 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203497502", "object": "상하이의 음용수 위생 관리", "problem": "소독 기술 개선", "relevant": true, "model": "gpt-4o-mini"}

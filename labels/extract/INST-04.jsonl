@@ -477,3 +477,7 @@
 {"id": "W7202258652", "object": "점토 필터 재료의 침투 변형 특성", "problem": "균열 형태에 따른 침투 변형 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202282604", "object": "댐 운영의 효율성과 안전성", "problem": "물 흐름 조절 자동화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202365790", "object": "수문 수위 측정", "problem": "수동 데이터 입력으로 인한 인지 부담 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203454797", "object": "콘크리트 면판의 수중 손상 구역", "problem": "수중 손상 구역 진단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203471797", "object": "구조물 건강 모니터링", "problem": "자동화된 손상 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203477796", "object": "저수지 안전", "problem": "유사 사건 예방을 위한 구조물 성능 이해 및 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203492498", "object": "우루와티 댐의 안전 모니터링 및 조기 경고 지표 시스템", "problem": "댐 안전 상태 진단 개선", "relevant": true, "model": "gpt-4o-mini"}

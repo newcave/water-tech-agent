@@ -1362,3 +1362,4 @@
 {"id": "W7202276725", "object": "Marsyangdi River Basin의 퇴적물 생성 및 분포", "problem": "퇴적물 부하 추정 및 관리 필요성", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202374942", "object": "브라질 수력 발전소 시스템", "problem": "중기 수력 열병합 발송 계산", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202375083", "object": "분산 발전 시스템", "problem": "전압 및 주파수 안정성 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203449627", "object": "청정 및 친환경 에너지", "problem": "지속 가능한 에너지 생산 및 활용을 위한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}

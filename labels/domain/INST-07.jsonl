@@ -584,3 +584,5 @@
 {"id": "W7202298133", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구 관측 시스템", "problem": "AI를 활용한 환경 모니터링 개선"}
 {"id": "W7202367443", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수질 및 유역 특성", "problem": "일일 탁도 패턴 이해하기"}
 {"id": "W7202372700", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수질 및 유역 특성", "problem": "일일 탁도 패턴 이해하기"}
+{"id": "W7203455175", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강물 수질", "problem": "장기 추세 및 단기 사건 예측"}
+{"id": "W7202387813", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지표면 모델의 매개변수", "problem": "매개변수의 효과적인 값을 이해하고 개선하기"}

@@ -3802,3 +3802,15 @@
 {"id": "W7202429250", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 소독 부산물 전구체", "problem": "소독 부산물 형성 제어"}
 {"id": "W7202349182", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "맥주 품질", "problem": "향상시키려는 문제"}
 {"id": "W7202367709", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "맥주 품질", "problem": "맥주 생산 효율성 및 지속 가능성 향상"}
+{"id": "W7203448951", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 피해 지역의 어린이 건강", "problem": "물리적 오염과 설사 발생 간의 관계 분석"}
+{"id": "W7203443389", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시설 샘플", "problem": "16S rRNA 유전자 합의 서열 생성"}
+{"id": "W7203450601", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지속 가능한 수처리 시스템", "problem": "수처리 성능 개선"}
+{"id": "W7203454574", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시설 샘플", "problem": "16S rRNA 유전자 합의 서열 생성"}
+{"id": "W7203456427", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가"}
+{"id": "W7203459911", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Issa brown commercial layers", "problem": "사이퍼메트린 독성으로 인한 건강 악화"}
+{"id": "W7203476151", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가"}
+{"id": "W7203481683", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Issa brown commercial layers", "problem": "사이퍼메트린 독성으로 인한 건강 문제 해결"}
+{"id": "W7203483775", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 내 석면 섬유 오염", "problem": "석면 제거 효율성 평가"}
+{"id": "W7203502882", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가"}
+{"id": "W7202371018", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 납(Pb) 및 카드뮴(Cd) 오염", "problem": "미량 제거"}
+{"id": "W7203497502", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상하이의 음용수 위생 관리", "problem": "소독 기술 개선"}

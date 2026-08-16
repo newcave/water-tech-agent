@@ -3121,3 +3121,16 @@
 {"id": "W7202345573", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오징어 서식지", "problem": "서식지 적합성 모델링"}
 {"id": "W7202350891", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Gunjur 지역의 어업 및 FMFO 산업", "problem": "FMFO 생산의 영향 분석 및 어업 활동 모니터링"}
 {"id": "W7202373431", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "감비아의 어업 및 어분/어유 산업", "problem": "FMFO 생산의 영향을 모니터링하고 문서화하기"}
+{"id": "W7203439842", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 및 연안 수역의 수질 데이터", "problem": "수질 데이터의 정확한 매칭 및 검증"}
+{"id": "W7203446928", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙 이란의 PM₂.₅ 노출 및 먼지 오염", "problem": "조사하다"}
+{"id": "W7203450981", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 및 연안 수역의 수질 데이터", "problem": "수질 데이터의 정확한 매칭 및 검증"}
+{"id": "W7203458957", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 지하수 품질", "problem": "지하수 품질 예측 및 평가"}
+{"id": "W7203460694", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "도시의 지속 가능성", "problem": "도시화가 온도에 미치는 영향 이해하기"}
+{"id": "W7203468285", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정"}
+{"id": "W7203470724", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Macrocystis pyrifera 켈프 숲", "problem": "켈프 덮개 추정 개선"}
+{"id": "W7203473833", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정"}
+{"id": "W7203485309", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Strait of Magellan의 Macrocystis pyrifera 켈프 숲", "problem": "켈프 덮개 추정 개선"}
+{"id": "W7203495084", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙 이란의 PM₂.₅ 노출 및 먼지 오염", "problem": "조사하다"}
+{"id": "W7203495997", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 모니터링", "problem": "원격 감지 데이터와 현장 측정의 통합 문제 해결"}
+{"id": "W7203484363", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정"}
+{"id": "W7203439876", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수중 성분", "problem": "위성 관측의 방사계측 오류 해결"}

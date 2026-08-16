@@ -756,3 +756,4 @@
 {"id": "W7202331867", "object": "우크라이나의 물리적 지리 상태", "problem": "최적의 자연 자원 관리 방향 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202353687", "object": "낙동강의 총 부유 고형물(TSS)", "problem": "TSS를 재구성하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202376218", "object": "낙동강의 총 부유 고형물(TSS)", "problem": "TSS를 재구성하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203466872", "object": "콜롬비아 강 유역의 불트라우트 취약성", "problem": "불트라우트의 상대적 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}

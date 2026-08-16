@@ -601,3 +601,5 @@
 {"id": "W7202298133", "object": "지구 관측 시스템", "problem": "AI를 활용한 환경 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202367443", "object": "미국의 수질 및 유역 특성", "problem": "일일 탁도 패턴 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202372700", "object": "미국의 수질 및 유역 특성", "problem": "일일 탁도 패턴 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203455175", "object": "강물 수질", "problem": "장기 추세 및 단기 사건 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202387813", "object": "지표면 모델의 매개변수", "problem": "매개변수의 효과적인 값을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
