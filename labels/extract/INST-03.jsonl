@@ -3890,3 +3890,8 @@
 {"id": "W7203502882", "object": "오노시의 지하수 품질", "problem": "지하수 품질 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202371018", "object": "음용수의 납(Pb) 및 카드뮴(Cd) 오염", "problem": "미량 제거", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203497502", "object": "상하이의 음용수 위생 관리", "problem": "소독 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203535736", "object": "Nkoabang 지역 주민의 건강", "problem": "치료되지 않은 물 사용으로 인한 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203539231", "object": "건강과 질병에 대한 인프라 구조", "problem": "인프라가 건강에 미치는 영향을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203556245", "object": "건강과 질병에 대한 인프라적 이해", "problem": "인프라가 건강에 미치는 영향을 분석하고 예방하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203556445", "object": "육계의 성장 성능 및 혈청 생화학 변수", "problem": "영양 보충의 비선형 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203561291", "object": "대도시의 수돗물 공급 시스템", "problem": "위험을 식별하고 우선순위를 정하기", "relevant": true, "model": "gpt-4o-mini"}

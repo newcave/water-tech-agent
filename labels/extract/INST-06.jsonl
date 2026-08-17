@@ -3168,3 +3168,6 @@
 {"id": "W7203495997", "object": "수질 모니터링", "problem": "원격 감지 데이터와 현장 측정의 통합 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203484363", "object": "저수지 저장량", "problem": "정확한 저수지 저장량 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203439876", "object": "수중 성분", "problem": "위성 관측의 방사계측 오류 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203538579", "object": "관개 농업의 토지 복원 상태", "problem": "디지털 기술을 활용한 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203538991", "object": "관개 농업의 토지 복원 상태", "problem": "디지털 기술을 활용한 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203545459", "object": "에이체 해역의 클로로필-a 분포", "problem": "COVID-19 팬데믹 전후 비교 분석", "relevant": true, "model": "gpt-4o-mini"}
