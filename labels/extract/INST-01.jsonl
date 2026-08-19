@@ -1762,3 +1762,9 @@
 {"id": "W7202383373", "object": "수자원 관리", "problem": "실시간 모니터링을 통한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203445809", "object": "하수 슬러지 관리", "problem": "슬러지 생산 감소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203534709", "object": "Tuban Regency의 깨끗한 물 서비스", "problem": "물 손실을 줄이고 운영 효율성을 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203618896", "object": "두바이의 물류용 토지", "problem": "국제 기업의 물류 운영 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203655138", "object": "두바이의 물류용 토지", "problem": "국제 기업의 물류 운영 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203655273", "object": "도시 물 공급 시스템", "problem": "효율성 향상 및 서비스 제공 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203630073", "object": "유방암 관련 림프부종", "problem": "단계별 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203652406", "object": "고밀도 농촌 경관", "problem": "경관 특성 평가의 불일치 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203636006", "object": "중국의 물 관리 시스템", "problem": "물 부족 및 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

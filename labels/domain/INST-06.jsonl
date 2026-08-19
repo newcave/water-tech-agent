@@ -3137,3 +3137,14 @@
 {"id": "W7203538579", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관개 농업의 토지 복원 상태", "problem": "디지털 기술을 활용한 모니터링 및 관리 개선"}
 {"id": "W7203538991", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관개 농업의 토지 복원 상태", "problem": "디지털 기술을 활용한 모니터링 및 관리 개선"}
 {"id": "W7203545459", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "에이체 해역의 클로로필-a 분포", "problem": "COVID-19 팬데믹 전후 비교 분석"}
+{"id": "W7203599998", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "중국 장한 평원의 담수 양식장", "problem": "정확한 양식장 공간 분포 및 시공간 동적 파악"}
+{"id": "W7203617476", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "일일 증발산량(ET)", "problem": "정확한 추정 개선"}
+{"id": "W7203618710", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Umma 지역의 고고학적 유적", "problem": "고고학적 유적의 분포와 역사적 변화 이해하기"}
+{"id": "W7203620544", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문 모델의 보정", "problem": "위성 데이터와 제한된 유량 관측을 결합하여 개선하기"}
+{"id": "W7203629467", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 피해", "problem": "환경 피해의 범위를 평가하다"}
+{"id": "W7203645244", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 홍수 사건 분석 및 매핑", "problem": "홍수 관련 이미지를 정확하게 식별하기"}
+{"id": "W7203655699", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스웨덴 내수 수질", "problem": "수질 예측을 위한 데이터셋 구축"}
+{"id": "W7203581243", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 갠지스 평원", "problem": "수자원 고갈 문제 해결"}
+{"id": "W7203600443", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 변화", "problem": "모니터링 정확도 향상"}
+{"id": "W7203625288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카푸에 강의 산업 오염 영향", "problem": "산업 오염으로 인한 환경 변화 이해 및 조기 경고 시스템 설계"}
+{"id": "W7203614190", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "고품질 농업 시범 지역의 복합 객체", "problem": "복합 객체의 지능형 해석 개선"}

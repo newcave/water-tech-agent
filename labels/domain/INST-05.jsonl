@@ -1342,3 +1342,6 @@
 {"id": "W7202374942", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 수력 발전소 시스템", "problem": "중기 수력 열병합 발송 계산"}
 {"id": "W7202375083", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "분산 발전 시스템", "problem": "전압 및 주파수 안정성 유지"}
 {"id": "W7203449627", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청정 및 친환경 에너지", "problem": "지속 가능한 에너지 생산 및 활용을 위한 도전 과제 해결"}
+{"id": "W7203598291", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 시스템", "problem": "운영 효율성 및 신뢰성 개선"}
+{"id": "W7203616475", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수력 발전 데이터", "problem": "수력 발전의 역사적 및 예측 데이터 제공"}
+{"id": "W7203626092", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tamor 강 유역의 수자원 흐름", "problem": "LULC 변화가 수자원 흐름에 미치는 영향 분석"}

@@ -3819,3 +3819,22 @@
 {"id": "W7203556245", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건강과 질병에 대한 인프라적 이해", "problem": "인프라가 건강에 미치는 영향을 분석하고 예방하기"}
 {"id": "W7203556445", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 혈청 생화학 변수", "problem": "영양 보충의 비선형 반응 평가"}
 {"id": "W7203561291", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "대도시의 수돗물 공급 시스템", "problem": "위험을 식별하고 우선순위를 정하기"}
+{"id": "W7203599540", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공기 조화 시스템 응축수", "problem": "물 부족 문제 해결"}
+{"id": "W7203603962", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "느린 모래 필터에서의 세균 제거", "problem": "세균 제거 메커니즘 이해 및 예측 모델 개선"}
+{"id": "W7203625796", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원", "problem": "데이터 센터의 물 발자국 최소화"}
+{"id": "W7203627615", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "데이터 센터의 물 자원", "problem": "물 발자국 최소화"}
+{"id": "W7203633976", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 수질", "problem": "극단적인 홍수 상황에서의 오염 경로와 공공 건강 위험 평가"}
+{"id": "W7203647253", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자카르타 북부의 깨끗한 물 공급", "problem": "깨끗한 물 접근성 향상"}
+{"id": "W7203650355", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "운동신경세포의 흥분성", "problem": "릴루졸 치료의 효과를 저해하는 비정상적인 항상성"}
+{"id": "W7203652302", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "데이터 센터의 물 자원", "problem": "물 발자국 최소화"}
+{"id": "W7203568899", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제2형 당뇨병 및 고지혈증", "problem": "장기적인 식이 보충으로 상태 개선"}
+{"id": "W7203617284", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장내 세균 집단 및 장 조직 형태", "problem": "장내 세균 감염 조절"}
+{"id": "W7203627634", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 내 PFAS 처리", "problem": "PFAS 처리 방법 비교 및 성능 평가"}
+{"id": "W7203630995", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서 PFAS", "problem": "PFAS 처리 방법 비교 및 성능 평가"}
+{"id": "W7203649276", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저탄수화물 식단에 적응한 건강한 성인", "problem": "개별 다량영양소의 급성 내분비 반응 이해하기"}
+{"id": "W7203649379", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구강 궤양", "problem": "구강 궤양 치료 개선"}
+{"id": "W7203636976", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부톤 지역의 아동 성장 지연", "problem": "성장 지연의 결정 요인 분석"}
+{"id": "W7203590454", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "상업적 산란계에서의 가금류 적색 진드기", "problem": "진드기 감염 통제 및 산란 성능 개선"}
+{"id": "W7203590607", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "삼황계 닭", "problem": "성장 촉진 및 면역력 향상"}
+{"id": "W7203624567", "domain_primary": "W4", "domain_secondary": ["W8"], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 처리 시설의 지속 가능성", "problem": "물의 질과 에너지 소비 통합 평가"}
+{"id": "W7203605810", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 유기탄소 및 클로로폼 수준", "problem": "화학 시약에 따른 유기탄소 및 클로로폼 수준 설정"}
