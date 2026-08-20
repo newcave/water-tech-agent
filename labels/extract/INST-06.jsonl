@@ -3184,3 +3184,7 @@
 {"id": "W7203600443", "object": "환경 변화", "problem": "모니터링 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203625288", "object": "카푸에 강의 산업 오염 영향", "problem": "산업 오염으로 인한 환경 변화 이해 및 조기 경고 시스템 설계", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203614190", "object": "고품질 농업 시범 지역의 복합 객체", "problem": "복합 객체의 지능형 해석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203683805", "object": "사우디 아라비아의 물 자원", "problem": "물 자원 관리 및 지하수 재충전 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203687910", "object": "이탈리아의 중대형 강", "problem": "강의 측면 이동성과 제방 후퇴율 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203703314", "object": "광물 자원 탐사 및 농작물 모니터링", "problem": "드론과 위성의 원격 탐지 기술 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203718877", "object": "광물 자원 탐사 및 농작물 모니터링", "problem": "드론과 위성의 원격 탐지 기술 비교", "relevant": true, "model": "gpt-4o-mini"}

@@ -1366,3 +1366,8 @@
 {"id": "W7203598291", "object": "재생 가능 에너지 시스템", "problem": "운영 효율성 및 신뢰성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203616475", "object": "미국의 수력 발전 데이터", "problem": "수력 발전의 역사적 및 예측 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203626092", "object": "Tamor 강 유역의 수자원 흐름", "problem": "LULC 변화가 수자원 흐름에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203661861", "object": "양쯔강 유역의 전력 시스템 불균형", "problem": "기후 변화로 인한 복합 가뭄 및 폭염의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203664681", "object": "환경 지속 가능성", "problem": "경제 성장과 환경 보호의 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203718210", "object": "스켈레프테 강의 수력 발전 인프라", "problem": "기존 수력 발전소의 업그레이드 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203726691", "object": "양쯔강 유역의 전력 시스템 불균형", "problem": "기후 변화로 인한 복합 가뭄 및 폭염의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203671873", "object": "전력 시장의 용량 적정성", "problem": "계절적 변동에 따른 전력 생산 용량의 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}

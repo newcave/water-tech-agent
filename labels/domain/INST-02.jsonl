@@ -718,3 +718,4 @@
 {"id": "W7202376218", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "낙동강의 총 부유 고형물(TSS)", "problem": "TSS를 재구성하기"}
 {"id": "W7203466872", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "콜롬비아 강 유역의 불트라우트 취약성", "problem": "불트라우트의 상대적 취약성 평가"}
 {"id": "W7203633831", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "로네 유역의 수자원", "problem": "icemelt 기여도를 개선하려는 문제"}
+{"id": "W7203685865", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상"}

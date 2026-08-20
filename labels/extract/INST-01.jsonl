@@ -1768,3 +1768,4 @@
 {"id": "W7203630073", "object": "유방암 관련 림프부종", "problem": "단계별 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203652406", "object": "고밀도 농촌 경관", "problem": "경관 특성 평가의 불일치 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203636006", "object": "중국의 물 관리 시스템", "problem": "물 부족 및 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203681460", "object": "PDAM Tirta Darma Ayu의 서비스", "problem": "고객 요구에 기반한 서비스 최적화", "relevant": true, "model": "gpt-4o-mini"}

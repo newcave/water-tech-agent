@@ -3914,3 +3914,12 @@
 {"id": "W7203590607", "object": "삼황계 닭", "problem": "성장 촉진 및 면역력 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203624567", "object": "음용수 처리 시설의 지속 가능성", "problem": "물의 질과 에너지 소비 통합 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203605810", "object": "음용수의 유기탄소 및 클로로폼 수준", "problem": "화학 시약에 따른 유기탄소 및 클로로폼 수준 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203700522", "object": "음용수 안전성", "problem": "침입성 이매패류로 인한 탄산염 시스템 교란", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203661740", "object": "Badagry Local Government Area의 지하수 품질", "problem": "지하수의 화학적 특성과 공간적 변동성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203699251", "object": "자연 및 공학적 수계의 바이러스 메타유전체", "problem": "바이러스 메타유전체 데이터 분석 및 처리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203700584", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7203703162", "object": "자연 및 공학적 수계의 바이러스 메타유전체", "problem": "바이러스 메타유전체 데이터 분석 및 처리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203713658", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7203707869", "object": "긴급 대피소의 음용수 품질", "problem": "음용수의 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203721500", "object": "음용수의 오염 상태", "problem": "WHO 기준 미달 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203668687", "object": "물에서 중금속 이온", "problem": "중금속 오염 제거", "relevant": true, "model": "gpt-4o-mini"}

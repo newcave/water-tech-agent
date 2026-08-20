@@ -481,3 +481,4 @@
 {"id": "W7203471797", "object": "구조물 건강 모니터링", "problem": "자동화된 손상 탐지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203477796", "object": "저수지 안전", "problem": "유사 사건 예방을 위한 구조물 성능 이해 및 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203492498", "object": "우루와티 댐의 안전 모니터링 및 조기 경고 지표 시스템", "problem": "댐 안전 상태 진단 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203681752", "object": "댐 변형 예측", "problem": "복잡한 시공간 동역학을 고려한 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
