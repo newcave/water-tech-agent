@@ -3152,3 +3152,14 @@
 {"id": "W7203687910", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이탈리아의 중대형 강", "problem": "강의 측면 이동성과 제방 후퇴율 정량화"}
 {"id": "W7203703314", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "광물 자원 탐사 및 농작물 모니터링", "problem": "드론과 위성의 원격 탐지 기술 비교"}
 {"id": "W7203718877", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "광물 자원 탐사 및 농작물 모니터링", "problem": "드론과 위성의 원격 탐지 기술 비교"}
+{"id": "W7203784703", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 지중해의 관개 시스템", "problem": "장기 관개 패턴과 지역적 도전에 대한 이해 부족"}
+{"id": "W7203731922", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가나의 해안 습지", "problem": "인간-환경 압력 평가"}
+{"id": "W7203732620", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nagi Lake 지역의 수리지질 구조", "problem": "저진동 지진에 대한 수리지질 반응 이해하기"}
+{"id": "W7203742410", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "바르샤바의 도시 열섬", "problem": "표면 과열 탐지"}
+{"id": "W7203762978", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건조림의 잎 면적 지수 (LAI)", "problem": "LAI를 과수층과 아층으로 분할하는 문제"}
+{"id": "W7203770036", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남극 육상의 식생 동태", "problem": "정확한 식생 커버 및 녹색도 평가"}
+{"id": "W7203773751", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건조림의 잎 면적 지수(Leaf Area Index)", "problem": "LAI를 분할하고 추정하는 문제"}
+{"id": "W7203784170", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "민감한 담수 생태계", "problem": "불법 폐수 방출 탐지 개선"}
+{"id": "W7203721044", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문 모델의 보정", "problem": "위성 데이터와 제한된 유량 관측을 결합하여 수문 모델 보정 개선"}
+{"id": "W7203748106", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건조림의 잎 면적 지수(Leaf Area Index, LAI)", "problem": "LAI를 과수층과 아층으로 분할하는 문제"}
+{"id": "W7203786318", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Buner 지역의 홍수 위험 지역", "problem": "홍수 위험 지역 정의 및 평가"}

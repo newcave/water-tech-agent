@@ -607,3 +607,7 @@
 {"id": "W7203628632", "object": "수문학 모델", "problem": "모델 파라미터의 정확하고 효율적인 학습", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203642689", "object": "수문학 모델", "problem": "모델 파라미터의 정확하고 효율적인 학습", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203705472", "object": "지구의 육상 수자원 저장 이상", "problem": "GRACE/GRACE-FO 제품의 한계 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203738631", "object": "북부 이탄지의 CO2 플럭스", "problem": "수위와 온도의 상호작용 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203758719", "object": "영구동토의 해빙 및 탄소 역학", "problem": "영구동토 해빙의 영향 모니터링 및 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203762287", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203787255", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측 개선", "relevant": true, "model": "gpt-4o-mini"}

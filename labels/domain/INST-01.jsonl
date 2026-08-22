@@ -1705,3 +1705,8 @@
 {"id": "W7203652406", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "고밀도 농촌 경관", "problem": "경관 특성 평가의 불일치 해결"}
 {"id": "W7203636006", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 물 관리 시스템", "problem": "물 부족 및 오염 문제 해결"}
 {"id": "W7203681460", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PDAM Tirta Darma Ayu의 서비스", "problem": "고객 요구에 기반한 서비스 최적화"}
+{"id": "W7161142952", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Hantavirus pulmonary syndrome (HPS)", "problem": "심혈관계 및 호흡기계 기능 저하 해결"}
+{"id": "W7203737364", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lost Island Lake의 수질과 스포츠 어업", "problem": "수질 개선 및 스포츠 어업 증진"}
+{"id": "W7203755769", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아리조나 두꺼비 (Anaxyrus microscaphus)", "problem": "종의 분포와 위협 요인 평가"}
+{"id": "W7203789649", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "델타 청어(Hypomesus transpacificus)", "problem": "결정 개선을 위한 불확실성 평가"}
+{"id": "W7169679835", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "씨앗 발아", "problem": "온도와 수분 스트레스의 영향 이해"}

@@ -3923,3 +3923,20 @@
 {"id": "W7203707869", "object": "긴급 대피소의 음용수 품질", "problem": "음용수의 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203721500", "object": "음용수의 오염 상태", "problem": "WHO 기준 미달 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203668687", "object": "물에서 중금속 이온", "problem": "중금속 오염 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203745461", "object": "콜롬비아의 고탁도 수원", "problem": "탁도 제거 효율 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203748178", "object": "음용수 생물여과기 내 진핵생물 다양성", "problem": "진핵생물과 세균 군집 간의 상호작용 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203743051", "object": "할로벤조퀴논(HBQ)", "problem": "변환 및 해독소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203744962", "object": "항생제 내성 대장균 및 내성 유전자", "problem": "환경 오염 및 공공 건강 위험 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203746996", "object": "응집제 투여량 예측", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203753756", "object": "수질에서 질산염과 아질산염 제거", "problem": "동시 제거를 위한 복합 흡착제 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203759629", "object": "수질에서 질산염과 아질산염 제거", "problem": "질산염과 아질산염 동시 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203759914", "object": "응집제 투여량 예측", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203777840", "object": "응집제 투여량 예측", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203778409", "object": "음용수에서의 6가 크롬 제거", "problem": "크롬 제거를 위한 화학적 및 물리적 과정 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203804051", "object": "음용수 시스템의 미생물 안전성", "problem": "전통적인 모니터링의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203738229", "object": "카자흐스탄의 안전한 음용수 공급", "problem": "불균형한 안전한 음용수 접근 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203753494", "object": "음용수의 방사선 품질", "problem": "방사성 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203748311", "object": "Ed Dueim City의 식수 오염", "problem": "식수 오염의 경제적 및 사회적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203724288", "object": "궤양성 대장염", "problem": "TGP의 치료 메커니즘을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203758896", "object": "얕은 해안 지하수", "problem": "지하수 품질 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203792585", "object": "Karang Satria Drinking Water Treatment Plant (DWTP)", "problem": "수질 기준 준수 개선", "relevant": true, "model": "gpt-4o-mini"}

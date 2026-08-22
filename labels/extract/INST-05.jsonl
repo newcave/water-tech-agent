@@ -1371,3 +1371,12 @@
 {"id": "W7203718210", "object": "스켈레프테 강의 수력 발전 인프라", "problem": "기존 수력 발전소의 업그레이드 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203726691", "object": "양쯔강 유역의 전력 시스템 불균형", "problem": "기후 변화로 인한 복합 가뭄 및 폭염의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203671873", "object": "전력 시장의 용량 적정성", "problem": "계절적 변동에 따른 전력 생산 용량의 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203731503", "object": "Lake Powell", "problem": "수위 감소로 인한 수력 발전 및 저수지 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203776015", "object": "우크라이나의 재생 가능 전력 시스템", "problem": "전력 생성과 설치 용량 간의 불일치 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203777774", "object": "레이크 파월", "problem": "수위 감소로 인한 수력 발전 및 저수지 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203780176", "object": "태국의 부유식 태양광 발전 프로젝트", "problem": "규제 경로 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203783450", "object": "태국의 부유식 태양광 발전 프로젝트", "problem": "규제 경로 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203795373", "object": "Oti 강 유역의 소수력 발전 잠재력", "problem": "소수력 발전 정보 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203797443", "object": "부룬디의 전력 공급", "problem": "풍력 자원 활용을 통한 전기 생산 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203775994", "object": "AI 데이터 센터의 위치 선정", "problem": "전력 자원의 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203791587", "object": "AI 데이터 센터의 위치 선정", "problem": "전력 자원의 가용성 및 경제성 분석", "relevant": true, "model": "gpt-4o-mini"}
