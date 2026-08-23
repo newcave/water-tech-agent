@@ -1710,3 +1710,8 @@
 {"id": "W7203755769", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아리조나 두꺼비 (Anaxyrus microscaphus)", "problem": "종의 분포와 위협 요인 평가"}
 {"id": "W7203789649", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "델타 청어(Hypomesus transpacificus)", "problem": "결정 개선을 위한 불확실성 평가"}
 {"id": "W7169679835", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "씨앗 발아", "problem": "온도와 수분 스트레스의 영향 이해"}
+{"id": "W7203859430", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가스터빈 발전소", "problem": "성능 향상 및 배출 저감"}
+{"id": "W7203871541", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "현대 공급망", "problem": "취약성 해결"}
+{"id": "W7203873089", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이란 이스파한 주의 물 소비", "problem": "계절별 물 소비 예측 개선"}
+{"id": "W7203923894", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "현대 공급망", "problem": "취약성 해결"}
+{"id": "W7203958682", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Bawu Village의 주거 환경", "problem": "슬럼 지역 문제 해결"}

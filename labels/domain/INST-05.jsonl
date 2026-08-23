@@ -1359,3 +1359,13 @@
 {"id": "W7203797443", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부룬디의 전력 공급", "problem": "풍력 자원 활용을 통한 전기 생산 비용 절감"}
 {"id": "W7203775994", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "AI 데이터 센터의 위치 선정", "problem": "전력 자원의 적합성 평가"}
 {"id": "W7203791587", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "AI 데이터 센터의 위치 선정", "problem": "전력 자원의 가용성 및 경제성 분석"}
+{"id": "W7203894278", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업의 에너지 효율성", "problem": "대체 에너지 자원 활용"}
+{"id": "W7203905178", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업의 에너지 효율성", "problem": "대체 에너지 자원 활용"}
+{"id": "W7203915896", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하류 진샤장 강의 연속 저수지", "problem": "최적 운영을 통한 수력 발전 극대화"}
+{"id": "W7203861150", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수력 발전 산업", "problem": "수력 발전 산업의 변화를 이끌다"}
+{"id": "W7203868292", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 아마존 및 토칸틴스-아라과이아 유역의 수력 발전소", "problem": "TDG 과포화 문제 해결"}
+{"id": "W7203909966", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 에너지 시스템", "problem": "화석 연료 의존도를 줄이고 청정 에너지로 전환하기"}
+{"id": "W7203830365", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력-풍력-태양광 보완 시스템", "problem": "불확실성 및 에너지 의존성 특성화"}
+{"id": "W7203900407", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 홍수 조기 경고 시스템", "problem": "하천 홍수 재해의 영향을 완화하기"}
+{"id": "W7203930441", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미얀마의 전력망", "problem": "변동성 재생 가능 에너지 통합의 기술 경제적 타당성 분석"}
+{"id": "W7203794269", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에콰도르의 전력 생산 시스템", "problem": "구조적 취약점과 온실가스 배출 문제 해결"}

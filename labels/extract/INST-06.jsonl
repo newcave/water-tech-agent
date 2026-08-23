@@ -3199,3 +3199,14 @@
 {"id": "W7203721044", "object": "수문 모델의 보정", "problem": "위성 데이터와 제한된 유량 관측을 결합하여 수문 모델 보정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203748106", "object": "건조림의 잎 면적 지수(Leaf Area Index, LAI)", "problem": "LAI를 과수층과 아층으로 분할하는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203786318", "object": "Buner 지역의 홍수 위험 지역", "problem": "홍수 위험 지역 정의 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203869119", "object": "대기 중 수증기", "problem": "정확한 수증기량 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203874826", "object": "원격 감지 데이터의 품질", "problem": "데이터 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203876377", "object": "연속적인 미국 강의 부유 침전물 농도", "problem": "부유 침전물 농도 추정 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203907932", "object": "연속적인 미국 강의 부유 침전물 농도", "problem": "부유 침전물 농도 추정 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203820809", "object": "로에스 고원 지역의 생태계 탄소 증가와 지하수 저장", "problem": "지하수 저장 변화의 동기 불일치", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203832203", "object": "중국의 수문학적 모델링", "problem": "정확한 수문학적 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203874361", "object": "Tri An Reservoir의 수질", "problem": "수질 평가를 위한 원격 감지 기법 적용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203876327", "object": "Tri An Reservoir의 수질", "problem": "수질 오염 정도 평가 및 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203883171", "object": "Thị Vải 강의 수질", "problem": "총 부유 고형물(TSS) 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203905461", "object": "아프리카의 수도 및 하수 시스템", "problem": "정확한 접근성 모니터링 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203938133", "object": "Panumariya Block의 토지 이용 및 토지 피복 변화", "problem": "10년간의 토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}

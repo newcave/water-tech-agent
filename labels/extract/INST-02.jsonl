@@ -760,3 +760,7 @@
 {"id": "W7203633831", "object": "로네 유역의 수자원", "problem": "icemelt 기여도를 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203685865", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203784703", "object": "동부 지중해의 관개 시스템", "problem": "관개 패턴과 지역적 도전에 대한 이해 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203824798", "object": "식물의 수분 사용 전략과 수원 추적", "problem": "생태계 수문학 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203836933", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 데이터의 불완전성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203895399", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7203939479", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

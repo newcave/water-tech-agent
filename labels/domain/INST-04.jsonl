@@ -480,3 +480,4 @@
 {"id": "W7203492498", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우루와티 댐의 안전 모니터링 및 조기 경고 지표 시스템", "problem": "댐 안전 상태 진단 개선"}
 {"id": "W7203681752", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형 예측", "problem": "복잡한 시공간 동역학을 고려한 예측 개선"}
 {"id": "W7203749910", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지대형 토담의 누수 예측", "problem": "누수 예측 향상"}
+{"id": "W7203918715", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고산 협곡 지역의 고아치 댐", "problem": "기존 방법의 한계를 극복하고 안전 모니터링 기준 개발"}

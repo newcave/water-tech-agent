@@ -611,3 +611,4 @@
 {"id": "W7203758719", "object": "영구동토의 해빙 및 탄소 역학", "problem": "영구동토 해빙의 영향 모니터링 및 정량화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203762287", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203787255", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203953842", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
