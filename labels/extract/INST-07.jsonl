@@ -612,3 +612,4 @@
 {"id": "W7203762287", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203787255", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203953842", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7203878265", "object": "알타이 산맥의 산사태 위험", "problem": "산사태 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}

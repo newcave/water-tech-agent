@@ -1369,3 +1369,4 @@
 {"id": "W7203900407", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 홍수 조기 경고 시스템", "problem": "하천 홍수 재해의 영향을 완화하기"}
 {"id": "W7203930441", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미얀마의 전력망", "problem": "변동성 재생 가능 에너지 통합의 기술 경제적 타당성 분석"}
 {"id": "W7203794269", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에콰도르의 전력 생산 시스템", "problem": "구조적 취약점과 온실가스 배출 문제 해결"}
+{"id": "W7204011701", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 에너지 구조", "problem": "청정 에너지 구조로의 전환 여부"}

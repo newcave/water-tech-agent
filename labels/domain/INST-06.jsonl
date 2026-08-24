@@ -3174,3 +3174,5 @@
 {"id": "W7203883171", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Thị Vải 강의 수질", "problem": "총 부유 고형물(TSS) 추정"}
 {"id": "W7203905461", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카의 수도 및 하수 시스템", "problem": "정확한 접근성 모니터링 부족 해결"}
 {"id": "W7203938133", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Panumariya Block의 토지 이용 및 토지 피복 변화", "problem": "10년간의 토지 이용 변화 분석"}
+{"id": "W7203973107", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 오염 및 기후 변화", "problem": "정보 접근 및 발견을 통한 문제 해결"}
+{"id": "W7203870772", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "흑해의 코콜리토포르 꽃가루", "problem": "꽃가루의 강도 예측"}

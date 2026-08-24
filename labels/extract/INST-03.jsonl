@@ -3950,3 +3950,9 @@
 {"id": "W7203878677", "object": "건강", "problem": "구조적 원인 이해 및 예방", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203901986", "object": "오염된 도시 하수에서의 크로모포릭 용해 유기물(CDOM)", "problem": "CDOM의 양을 정량화하고 수질 매개변수와의 관계를 조사하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203868109", "object": "Upper Tobyl and Karatomar Reservoirs", "problem": "수질 개선 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204006220", "object": "지하수의 품질", "problem": "지하수 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204011681", "object": "지하수의 품질", "problem": "지하수 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203890168", "object": "담수 생산 및 폐수 처리", "problem": "소금 이온, 중금속, 유기 및 제약 오염물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203901247", "object": "오염된 물에서의 비소 제거 및 세균 비활성화", "problem": "물 안전성을 보장하기 위한 효과적인 처리 솔루션 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203974669", "object": "나이지리아의 공공 우물에서의 안전한 식수 접근성", "problem": "안전 기준 미달 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203993013", "object": "지하수 환경", "problem": "오염 원인의 시공간적 변화를 분석하고 수질 평가하기", "relevant": true, "model": "gpt-4o-mini"}

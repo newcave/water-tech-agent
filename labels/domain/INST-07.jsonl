@@ -594,3 +594,4 @@
 {"id": "W7203758719", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "영구동토의 해빙 및 탄소 역학", "problem": "영구동토 해빙의 영향 모니터링 및 정량화"}
 {"id": "W7203762287", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측하기"}
 {"id": "W7203787255", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 유역에서의 유량 가뭄", "problem": "유량 가뭄 예측 개선"}
+{"id": "W7203878265", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알타이 산맥의 산사태 위험", "problem": "산사태 취약성 평가"}
