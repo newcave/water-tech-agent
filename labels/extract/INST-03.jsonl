@@ -3956,3 +3956,7 @@
 {"id": "W7203901247", "object": "오염된 물에서의 비소 제거 및 세균 비활성화", "problem": "물 안전성을 보장하기 위한 효과적인 처리 솔루션 필요", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203974669", "object": "나이지리아의 공공 우물에서의 안전한 식수 접근성", "problem": "안전 기준 미달 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203993013", "object": "지하수 환경", "problem": "오염 원인의 시공간적 변화를 분석하고 수질 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203594735", "object": "음용수 생물여과기 내 진핵생물 다양성", "problem": "진핵생물과 박테리아 간의 상호작용 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204026279", "object": "브로일러 치킨의 생산성", "problem": "생산성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204039483", "object": "브로일러 치킨의 생산성", "problem": "생산성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204046717", "object": "NLRP3 및 pyrin 염증소체", "problem": "염증소체의 억제 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}

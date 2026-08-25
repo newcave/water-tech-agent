@@ -3212,3 +3212,5 @@
 {"id": "W7203938133", "object": "Panumariya Block의 토지 이용 및 토지 피복 변화", "problem": "10년간의 토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203973107", "object": "토양 오염 및 기후 변화", "problem": "정보 접근 및 발견을 통한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203870772", "object": "흑해의 코콜리토포르 꽃가루", "problem": "꽃가루의 강도 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204056844", "object": "산호초 및 해초 덮개", "problem": "산호초 구성 변화 감지 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204037381", "object": "해안 숲", "problem": "숲의 변화와 생태계 퇴화를 이해하고 예측하기", "relevant": true, "model": "gpt-4o-mini"}
