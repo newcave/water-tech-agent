@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1785074394,
-   "kwater": 0,
-   "related_1y": 14310
-  },
-  {
    "ts": 1785094609,
    "kwater": 0,
    "related_1y": 14349
@@ -599,9 +594,14 @@
    "ts": 1787750280,
    "kwater": 0,
    "related_1y": 15717
+  },
+  {
+   "ts": 1787774710,
+   "kwater": 0,
+   "related_1y": 15718
   }
  ],
- "updated": 1787750280,
+ "updated": 1787774710,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -632,7 +632,7 @@
   "INST-06": {
    "name": "수자원위성연구소",
    "keyword": "satellite remote sensing water",
-   "recent_1y": 4130
+   "recent_1y": 4131
   },
   "INST-07": {
    "name": "AI연구소",
