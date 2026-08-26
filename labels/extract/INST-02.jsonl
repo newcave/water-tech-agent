@@ -764,3 +764,4 @@
 {"id": "W7203836933", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 데이터의 불완전성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203895399", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7203939479", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204133240", "object": "Smith River Watershed의 지역 물 균형", "problem": "눈 녹은 물의 유출량 이해하기", "relevant": true, "model": "gpt-4o-mini"}

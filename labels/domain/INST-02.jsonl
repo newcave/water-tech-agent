@@ -722,3 +722,4 @@
 {"id": "W7203784703", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "동부 지중해의 관개 시스템", "problem": "관개 패턴과 지역적 도전에 대한 이해 부족"}
 {"id": "W7203824798", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식물의 수분 사용 전략과 수원 추적", "problem": "생태계 수문학 이해"}
 {"id": "W7203836933", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 데이터의 불완전성 개선"}
+{"id": "W7204133240", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Smith River Watershed의 지역 물 균형", "problem": "눈 녹은 물의 유출량 이해하기"}

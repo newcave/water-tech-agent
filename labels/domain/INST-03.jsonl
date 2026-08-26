@@ -3881,3 +3881,11 @@
 {"id": "W7204026279", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성", "problem": "생산성 향상"}
 {"id": "W7204039483", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성", "problem": "생산성 향상"}
 {"id": "W7204046717", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "NLRP3 및 pyrin 염증소체", "problem": "염증소체의 억제 메커니즘 이해"}
+{"id": "W7204073637", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도네시아의 이탄수 자원", "problem": "이탄수의 응집-플록큘레이션 성능 개선"}
+{"id": "W7204094126", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도 여성에 대한 현금 이전 서비스", "problem": "재정 지출의 대체 효과 분석"}
+{"id": "W7204110911", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알루미늄 슬러지", "problem": "지속 가능한 처리 및 자원화 전략 개발"}
+{"id": "W7204123764", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농촌 지역의 안전한 식수", "problem": "저비용 복합 점토 필터의 성능 평가"}
+{"id": "W7204125532", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도 여성에 대한 현금 이전 서비스", "problem": "재정 지출의 대체 효과 분석"}
+{"id": "W7204137518", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신흥 오염물질(ECs)", "problem": "모니터링 격차와 생물 기반 정화의 필요성 평가"}
+{"id": "W7204139398", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 방사성 물질", "problem": "방사성 물질 제거"}
+{"id": "W7204093378", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리 및 수질 개선", "problem": "물 관련 환경 및 공공 건강 문제 해결"}

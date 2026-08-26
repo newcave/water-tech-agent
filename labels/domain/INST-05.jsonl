@@ -1371,3 +1371,11 @@
 {"id": "W7203794269", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에콰도르의 전력 생산 시스템", "problem": "구조적 취약점과 온실가스 배출 문제 해결"}
 {"id": "W7204011701", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 에너지 구조", "problem": "청정 에너지 구조로의 전환 여부"}
 {"id": "W7204030926", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "태국의 주요 댐", "problem": "지진 위험 평가 및 분류"}
+{"id": "W7204083896", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.85, "domain_ver": "v0.1", "object": "양취 댐 인근 수리 구조물", "problem": "급경사지 붕괴로 인한 파도 생성 및 전파 이해"}
+{"id": "W7204146809", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "격리된 수력-태양광-풍력 그리드의 발전기 속도 조절", "problem": "속도 조절 성능 개선"}
+{"id": "W7204150174", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "격리된 수력-태양광-풍력 그리드의 발전기 속도 조절", "problem": "속도 조절 성능 개선"}
+{"id": "W7204053975", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "부탄의 전력 요금 안정성", "problem": "수력 발전 변동성에 따른 전력 구매 가격 변화"}
+{"id": "W7204108794", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "통합 수력-풍력-태양광-저장 에너지 시스템", "problem": "최적 스케줄링을 통한 경제적 이익 극대화 및 재생 가능 에너지 활용 극대화"}
+{"id": "W7204106360", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유휴 석유 우물의 지열 에너지 추출", "problem": "지열 에너지 활용을 위한 기술적 및 경제적 평가"}
+{"id": "W7204088738", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nam Khan 2 및 Nam Khan 3 저수지", "problem": "운영 규칙 곡선 개선"}
+{"id": "W7168640185", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수력 발전 현황", "problem": "글로벌 수력 발전 발전 추세 이해하기"}
