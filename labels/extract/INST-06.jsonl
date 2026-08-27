@@ -3218,3 +3218,15 @@
 {"id": "W7167715356", "object": "북미 해안의 엽록소 농도", "problem": "해안 지역의 엽록소 농도 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204056345", "object": "아마존 강의 색소 용해 유기물(CDOM) 분포", "problem": "CDOM 흡수 정확한 추출", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204076570", "object": "호수의 수면 면적 변화", "problem": "자동으로 탐지하고 분석하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162105399", "object": "전 세계 5,551개 호수의 수질 데이터", "problem": "호수 수질 모니터링의 복잡성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204163287", "object": "북서 인도의 건조지대", "problem": "건조지대 퇴화 평가 및 복원 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204170172", "object": "나일강 유역의 물 가용성", "problem": "정확한 물 회계 및 계획을 위한 물 가용성 재평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204175995", "object": "북서 인도의 건조지대 퇴화", "problem": "퇴화 평가 및 복원 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204176300", "object": "해양 수질 모니터링", "problem": "원격 감지 반사율 제품의 신뢰성 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204214028", "object": "Thanjavur 지역의 가뭄 상태", "problem": "가뭄 조건 분석 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204090971", "object": "수문 모델의 보정", "problem": "위성 데이터와 유량 관측의 결합을 통한 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204115745", "object": "수문 모델의 보정", "problem": "위성 데이터와 유량 관측의 결합을 통한 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204143049", "object": "중국의 수문학적 모델링", "problem": "정확한 수문학적 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204181504", "object": "가뭄 모니터링 및 완화", "problem": "가뭄 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204165708", "object": "Chilika Lagoon", "problem": "라군의 상태 평가 및 미래 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204187493", "object": "Chilika Lagoon", "problem": "라군의 상태 평가 및 미래 예측", "relevant": true, "model": "gpt-4o-mini"}

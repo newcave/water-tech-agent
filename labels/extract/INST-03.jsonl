@@ -3968,3 +3968,12 @@
 {"id": "W7204137518", "object": "신흥 오염물질(ECs)", "problem": "모니터링 격차와 생물 기반 정화의 필요성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204139398", "object": "음용수의 방사성 물질", "problem": "방사성 물질 제거", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204093378", "object": "물 자원 관리 및 수질 개선", "problem": "물 관련 환경 및 공공 건강 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204163324", "object": "지하수 처리 과정에서의 미생물 생존", "problem": "미생물 생존 전략 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204178390", "object": "산업용 대기 수자원 정제 블록", "problem": "대기에서 음용수 생산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204186859", "object": "산업용 대기 수자원 정제 블록", "problem": "대기에서 음용수 생산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204189272", "object": "안전한 음용수 접근성", "problem": "비상 상황에서 안전한 물 공급 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204203755", "object": "담수 생태계 상태 지표", "problem": "인간 건강 및 공동체 웰빙 결과와의 연관성 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203721656", "object": "브로일러 닭의 심장 근육 섬유", "problem": "고염수의 심장에 미치는 영향 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204099306", "object": "대사 기능 장애", "problem": "과도한 과당 섭취로 인한 대사 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204199382", "object": "NLRP3 및 pyrin 염증소체", "problem": "염증소체의 억제 효과 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204214027", "object": "물속의 미세플라스틱", "problem": "실시간으로 미세플라스틱을 탐지하고 특성화하기", "relevant": true, "model": "gpt-4o-mini"}

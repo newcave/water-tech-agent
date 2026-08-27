@@ -1719,3 +1719,5 @@
 {"id": "W7204144404", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 물 시스템", "problem": "회복력 강화를 위한 계획 개선"}
 {"id": "W7204092161", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Sathanur Canal irrigation system", "problem": "수자원 관리 관행 개선"}
 {"id": "W7204118547", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Prut 강 유역의 인구 구조", "problem": "인구 감소와 고령화 문제 해결"}
+{"id": "W7204189894", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업의 물 관리", "problem": "물 사용 최적화 및 작물 생산 개선"}
+{"id": "W7204195712", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북미의 음용수 배급 네트워크", "problem": "수명 초과 배관의 유지보수 및 교체 비용 최적화"}

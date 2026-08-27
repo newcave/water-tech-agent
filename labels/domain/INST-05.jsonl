@@ -1379,3 +1379,5 @@
 {"id": "W7204106360", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유휴 석유 우물의 지열 에너지 추출", "problem": "지열 에너지 활용을 위한 기술적 및 경제적 평가"}
 {"id": "W7204088738", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nam Khan 2 및 Nam Khan 3 저수지", "problem": "운영 규칙 곡선 개선"}
 {"id": "W7168640185", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수력 발전 현황", "problem": "글로벌 수력 발전 발전 추세 이해하기"}
+{"id": "W7204202403", "domain_primary": "W5", "domain_secondary": ["W8"], "confidence": 0.8, "domain_ver": "v0.1", "object": "아테네 수돗물 공급 네트워크", "problem": "수력 에너지 회수 및 수소 생산"}
+{"id": "W7204179593", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 완화 의무", "problem": "분류 및 식별"}
