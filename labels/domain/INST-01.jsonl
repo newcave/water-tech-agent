@@ -1721,3 +1721,11 @@
 {"id": "W7204118547", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Prut 강 유역의 인구 구조", "problem": "인구 감소와 고령화 문제 해결"}
 {"id": "W7204189894", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업의 물 관리", "problem": "물 사용 최적화 및 작물 생산 개선"}
 {"id": "W7204195712", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북미의 음용수 배급 네트워크", "problem": "수명 초과 배관의 유지보수 및 교체 비용 최적화"}
+{"id": "W7204233675", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재"}
+{"id": "W7204236412", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "달 식민지의 물류 시스템", "problem": "물류 최적화 및 환경 영향 최소화"}
+{"id": "W7204237889", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "물 자원 절약 및 접근성 보장"}
+{"id": "W7204240871", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재"}
+{"id": "W7204246733", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 유통 네트워크의 누수", "problem": "누수의 근본 원인 이해"}
+{"id": "W7204251826", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "물 자원 절약 및 접근성 보장"}
+{"id": "W7204263953", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "달 식민지의 물류 시스템", "problem": "물류 최적화 및 환경 영향 최소화"}
+{"id": "W7204275173", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재"}

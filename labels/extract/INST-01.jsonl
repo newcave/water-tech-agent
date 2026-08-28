@@ -1785,3 +1785,11 @@
 {"id": "W7204118547", "object": "Prut 강 유역의 인구 구조", "problem": "인구 감소와 고령화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204189894", "object": "농업의 물 관리", "problem": "물 사용 최적화 및 작물 생산 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204195712", "object": "북미의 음용수 배급 네트워크", "problem": "수명 초과 배관의 유지보수 및 교체 비용 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204233675", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204236412", "object": "달 식민지의 물류 시스템", "problem": "물류 최적화 및 환경 영향 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204237889", "object": "물 자원 관리", "problem": "물 자원 절약 및 접근성 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204240871", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204246733", "object": "수돗물 유통 네트워크의 누수", "problem": "누수의 근본 원인 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204251826", "object": "물 자원 관리", "problem": "물 자원 절약 및 접근성 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204263953", "object": "달 식민지의 물류 시스템", "problem": "물류 최적화 및 환경 영향 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204275173", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재", "relevant": true, "model": "gpt-4o-mini"}

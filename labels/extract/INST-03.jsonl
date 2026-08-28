@@ -3977,3 +3977,8 @@
 {"id": "W7204099306", "object": "대사 기능 장애", "problem": "과도한 과당 섭취로 인한 대사 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204199382", "object": "NLRP3 및 pyrin 염증소체", "problem": "염증소체의 억제 효과 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204214027", "object": "물속의 미세플라스틱", "problem": "실시간으로 미세플라스틱을 탐지하고 특성화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204250901", "object": "미세오염물질(MPs)", "problem": "미세오염물질 제거 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204270721", "object": "미세오염물질(MPs)", "problem": "미세오염물질 제거 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204277419", "object": "코코넛 섬유", "problem": "염료의 흡착 성능 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204174529", "object": "베트남의 수자원과 도시 수계에서의 신흥 오염물질", "problem": "신흥 오염물질의 발생과 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204254337", "object": "브로일러 육종 암탉의 생산 성능 및 장 건강", "problem": "장내 미생물 조성 개선", "relevant": true, "model": "gpt-4o-mini"}

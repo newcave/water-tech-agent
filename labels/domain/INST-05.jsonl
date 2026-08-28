@@ -1381,3 +1381,5 @@
 {"id": "W7168640185", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수력 발전 현황", "problem": "글로벌 수력 발전 발전 추세 이해하기"}
 {"id": "W7204202403", "domain_primary": "W5", "domain_secondary": ["W8"], "confidence": 0.8, "domain_ver": "v0.1", "object": "아테네 수돗물 공급 네트워크", "problem": "수력 에너지 회수 및 수소 생산"}
 {"id": "W7204179593", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 완화 의무", "problem": "분류 및 식별"}
+{"id": "W7204214562", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부탄의 태양광 에너지 통합", "problem": "재정적 경쟁력 문제 해결"}
+{"id": "W7204186033", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 중심의 하이브리드 시스템", "problem": "하이브리드 시스템의 통합 최적화 부족 해결"}

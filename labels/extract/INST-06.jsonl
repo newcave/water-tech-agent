@@ -3230,3 +3230,8 @@
 {"id": "W7204181504", "object": "가뭄 모니터링 및 완화", "problem": "가뭄 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204165708", "object": "Chilika Lagoon", "problem": "라군의 상태 평가 및 미래 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204187493", "object": "Chilika Lagoon", "problem": "라군의 상태 평가 및 미래 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204221677", "object": "리비아의 카르스트 지역", "problem": "카르스트 특징의 분포 패턴 조사 및 지하수 탐사 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204239059", "object": "정밀 환경 농업", "problem": "농업 생산성 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204271222", "object": "위성 이미지의 픽셀 단위 분류", "problem": "왜곡된 상태에서의 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204272215", "object": "지하수 잠재 구역", "problem": "지하수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204269271", "object": "가뭄 모니터링 및 완화", "problem": "가뭄의 복잡한 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
