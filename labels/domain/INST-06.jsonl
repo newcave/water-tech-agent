@@ -3199,3 +3199,9 @@
 {"id": "W7204271222", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "위성 이미지의 픽셀 단위 분류", "problem": "왜곡된 상태에서의 정확도 향상"}
 {"id": "W7204272215", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 잠재 구역", "problem": "지하수 부족 문제 해결"}
 {"id": "W7204269271", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가뭄 모니터링 및 완화", "problem": "가뭄의 복잡한 모니터링 개선"}
+{"id": "W7204438428", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지표면 온도 및 에너지 흐름", "problem": "정확한 모니터링을 위한 기존 TIR 미션의 한계 극복"}
+{"id": "W7204440646", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 생산성", "problem": "자원 집약적인 관행을 개선하기"}
+{"id": "W7204448345", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 재충전 잠재력", "problem": "토지 이용 변화의 영향 분석"}
+{"id": "W7204475341", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세미 아리드 습지 복합체의 생태수리학적 임계값과 환경 수자원", "problem": "환경 수자원과 생태수리학적 임계값 결정"}
+{"id": "W7204448278", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가"}
+{"id": "W7204459456", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가"}

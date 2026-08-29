@@ -617,3 +617,4 @@
 {"id": "W7204101193", "object": "기후 변화 수문학에서의 기계 학습", "problem": "기계 학습의 재현성 및 데이터 구조 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204151800", "object": "기후 변화 수문학에서의 기계 학습", "problem": "기계 학습의 재현성 및 데이터 구조 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204128335", "object": "생물학적 및 환경적 시스템", "problem": "하이브리드 모델을 통한 인과 관계 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204451558", "object": "지진으로 인한 2차 위험", "problem": "지진으로 인한 2차 위험의 특성 이해", "relevant": true, "model": "gpt-4o-mini"}

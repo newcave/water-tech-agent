@@ -1383,3 +1383,9 @@
 {"id": "W7204179593", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 완화 의무", "problem": "분류 및 식별"}
 {"id": "W7204214562", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부탄의 태양광 에너지 통합", "problem": "재정적 경쟁력 문제 해결"}
 {"id": "W7204186033", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 중심의 하이브리드 시스템", "problem": "하이브리드 시스템의 통합 최적화 부족 해결"}
+{"id": "W7204482115", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호주 국가 전력 시장의 전력 가격 설정 및 발전기 입찰 행동", "problem": "전력 가격 설정 및 발전기 입찰 행동 이해하기"}
+{"id": "W7204493419", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호주 국가 전력 시장의 전력 가격 설정 및 발전기 입찰 행동", "problem": "전력 가격 설정 및 발전기 입찰 행동 이해하기"}
+{"id": "W7204473664", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐쇄형 양수 수력 발전소의 위치 선정", "problem": "장기 에너지 저장 문제 해결"}
+{"id": "W7204456075", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mahipar 수력 발전소의 에너지 생성", "problem": "기후 변화가 에너지 생성에 미치는 영향 평가"}
+{"id": "W7204471179", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 기계", "problem": "실시간 성능 평가 및 고장 모니터링 개선"}
+{"id": "W7204486881", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 분기 구조물", "problem": "구조 안전성을 확보하면서 과도한 자재 사용을 피하기 위한 두께 결정"}

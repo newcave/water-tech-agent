@@ -3982,3 +3982,11 @@
 {"id": "W7204277419", "object": "코코넛 섬유", "problem": "염료의 흡착 성능 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204174529", "object": "베트남의 수자원과 도시 수계에서의 신흥 오염물질", "problem": "신흥 오염물질의 발생과 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204254337", "object": "브로일러 육종 암탉의 생산 성능 및 장 건강", "problem": "장내 미생물 조성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204436666", "object": "아르세닉 오염된 지하수", "problem": "아르세닉 제거 특성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204438242", "object": "동아프리카의 지하수", "problem": "고농도 불소 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204436297", "object": "대사 기능 장애와 관련된 지방간염(MASH)", "problem": "MASH의 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204457549", "object": "젖소 토끼의 건강 상태", "problem": "합성 항생제 의존도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204476652", "object": "ASADA La Angelina의 음용수 품질", "problem": "수질 모니터링 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204480249", "object": "ASADA La Angelina의 음용수 품질", "problem": "수질 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204488904", "object": "레진 복합재의 색상 안정성", "problem": "건강 지향 음료에서 색상 변화 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204491124", "object": "탱크로 배달되는 음용수의 품질", "problem": "물 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

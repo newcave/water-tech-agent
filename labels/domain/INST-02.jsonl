@@ -725,3 +725,4 @@
 {"id": "W7204133240", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Smith River Watershed의 지역 물 균형", "problem": "눈 녹은 물의 유출량 이해하기"}
 {"id": "W7204229235", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고등 교육에서의 자연 기반 솔루션(NbS) 통합", "problem": "NbS 개념의 체계적 통합 부족"}
 {"id": "W7169531210", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "영국의 수자원 유역", "problem": "기후 변화에 따른 유역의 흐름 반응 이해"}
+{"id": "W7204248408", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강수 형태 분류 정확도", "problem": "정확한 비-눈 구분 개선"}

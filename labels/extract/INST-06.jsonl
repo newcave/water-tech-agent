@@ -3235,3 +3235,9 @@
 {"id": "W7204271222", "object": "위성 이미지의 픽셀 단위 분류", "problem": "왜곡된 상태에서의 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204272215", "object": "지하수 잠재 구역", "problem": "지하수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204269271", "object": "가뭄 모니터링 및 완화", "problem": "가뭄의 복잡한 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204438428", "object": "지표면 온도 및 에너지 흐름", "problem": "정확한 모니터링을 위한 기존 TIR 미션의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204440646", "object": "농업 생산성", "problem": "자원 집약적인 관행을 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204448345", "object": "지하수 재충전 잠재력", "problem": "토지 이용 변화의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204475341", "object": "세미 아리드 습지 복합체의 생태수리학적 임계값과 환경 수자원", "problem": "환경 수자원과 생태수리학적 임계값 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204448278", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204459456", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가", "relevant": true, "model": "gpt-4o-mini"}

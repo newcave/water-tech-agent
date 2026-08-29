@@ -1793,3 +1793,7 @@
 {"id": "W7204251826", "object": "물 자원 관리", "problem": "물 자원 절약 및 접근성 보장", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204263953", "object": "달 식민지의 물류 시스템", "problem": "물류 최적화 및 환경 영향 최소화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204275173", "object": "버지니아의 지하수 자원", "problem": "지하수 관리의 불균형과 규제의 부재", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204444250", "object": "지방 자치 단체의 디지털 관리", "problem": "지속 가능한 발전 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204463191", "object": "급성 발작 관리", "problem": "약물의 안전성과 효과를 개선하려는 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204472417", "object": "급성 발작 관리", "problem": "약물의 안전성과 효과를 개선하려는 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204475126", "object": "나이지리아의 국내총생산(GDP)", "problem": "부문 기여도를 평가하기", "relevant": true, "model": "gpt-4o-mini"}

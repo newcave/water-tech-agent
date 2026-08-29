@@ -485,3 +485,5 @@
 {"id": "W7203749910", "object": "지대형 토담의 누수 예측", "problem": "누수 예측 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203918715", "object": "고산 협곡 지역의 고아치 댐", "problem": "기존 방법의 한계를 극복하고 안전 모니터링 기준 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204030926", "object": "태국의 주요 댐", "problem": "지진 위험 평가 및 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204450722", "object": "고층 콘크리트 댐의 물질 파라미터", "problem": "파라미터 안정성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204479777", "object": "배수 댐의 안정성", "problem": "강우 분포에 따른 불안정성 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
