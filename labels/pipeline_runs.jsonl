@@ -122,3 +122,4 @@
 {"ts": "2026-08-29T16:53:23Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 12062, "duration_s": 2}
 {"ts": "2026-08-29T21:20:04Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 12062, "duration_s": 1}
 {"ts": "2026-08-30T05:56:50Z", "forward": 31, "hist_year": null, "hist": 0, "backfilled": 31, "extracted": 19, "assigned": 15, "total": 12077, "duration_s": 26}
+{"ts": "2026-08-30T12:18:38Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 12077, "duration_s": 2}
