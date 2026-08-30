@@ -3990,3 +3990,10 @@
 {"id": "W7204480249", "object": "ASADA La Angelina의 음용수 품질", "problem": "수질 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204488904", "object": "레진 복합재의 색상 안정성", "problem": "건강 지향 음료에서 색상 변화 비교", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204491124", "object": "탱크로 배달되는 음용수의 품질", "problem": "물 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204584515", "object": "Doce River Basin의 수질과 암 사망률", "problem": "수질 오염과 건강 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204488088", "object": "브리즈번의 음용수 품질", "problem": "음용수의 위험과 병원체 부하 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204488458", "object": "Viscum album L. biomass", "problem": "크리스탈 바이올렛 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204523002", "object": "Pityevoy Canal의 수질", "problem": "수질 변동성 모니터링 필요성 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204538465", "object": "자라는 토끼의 소화기 건강", "problem": "소화 효율과 소화기 환경 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204540586", "object": "브로일러 치킨의 도체 생산", "problem": "옥수수 대체 및 프로바이오틱스 추가의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204555953", "object": "브로일러 닭의 산화 스트레스 바이오마커 및 생리적 성능", "problem": "항산화 상태 개선", "relevant": true, "model": "gpt-4o-mini"}

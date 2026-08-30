@@ -1410,3 +1410,9 @@
 {"id": "W7204456075", "object": "Mahipar 수력 발전소의 에너지 생성", "problem": "기후 변화가 에너지 생성에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204471179", "object": "수력 기계", "problem": "실시간 성능 평가 및 고장 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204486881", "object": "수력 발전소의 분기 구조물", "problem": "구조 안전성을 확보하면서 과도한 자재 사용을 피하기 위한 두께 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204533645", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204534627", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204535481", "object": "수력 발전의 전자 배열 및 에너지 전환 메커니즘", "problem": "전자 배열의 물리적 분업을 명확히 하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204539969", "object": "브라질의 에너지 전환", "problem": "기후 변화에 대한 적응 전략 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204562251", "object": "수력 발전의 전자 배열 및 에너지 전환 메커니즘", "problem": "전자 배열의 물리적 분업을 명확히 하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204579708", "object": "브라질의 에너지 전환", "problem": "기후 변화에 대한 적응 전략 연구", "relevant": true, "model": "gpt-4o-mini"}

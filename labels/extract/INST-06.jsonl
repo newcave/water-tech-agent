@@ -3241,3 +3241,5 @@
 {"id": "W7204475341", "object": "세미 아리드 습지 복합체의 생태수리학적 임계값과 환경 수자원", "problem": "환경 수자원과 생태수리학적 임계값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204448278", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204459456", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204519066", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204541589", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

@@ -768,3 +768,6 @@
 {"id": "W7204229235", "object": "고등 교육에서의 자연 기반 솔루션(NbS) 통합", "problem": "NbS 개념의 체계적 통합 부족", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7169531210", "object": "영국의 수자원 유역", "problem": "기후 변화에 따른 유역의 흐름 반응 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204248408", "object": "강수 형태 분류 정확도", "problem": "정확한 비-눈 구분 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204563237", "object": "수원지의 수리 모델", "problem": "모델 구축 및 시뮬레이션 자동화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204603619", "object": "수원지의 수리 모델", "problem": "모델 구축 및 시뮬레이션 자동화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204509579", "object": "아카키 유역의 수자원 관리", "problem": "비전통적 데이터의 이해 및 지역 지식 수집", "relevant": true, "model": "gpt-4o-mini"}
