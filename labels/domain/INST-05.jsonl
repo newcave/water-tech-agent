@@ -1393,3 +1393,4 @@
 {"id": "W7204539969", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 에너지 전환", "problem": "기후 변화에 대한 적응 전략 연구"}
 {"id": "W7204562251", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전의 전자 배열 및 에너지 전환 메커니즘", "problem": "전자 배열의 물리적 분업을 명확히 하다"}
 {"id": "W7204579708", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 에너지 전환", "problem": "기후 변화에 대한 적응 전략 연구"}
+{"id": "W7204640333", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프랜시스형 마이크로 수력 발전기", "problem": "기술적 및 경제적 타당성 평가"}

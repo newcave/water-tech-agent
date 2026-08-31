@@ -3,8 +3,8 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-08-30 21:39 UTC",
-  "total": 12077,
+  "generated_at": "2026-08-31 06:17 UTC",
+  "total": 12078,
   "domains": {
     "W1": {
       "name": "유역·수문",
@@ -43,7 +43,7 @@
     },
     "W8": {
       "name": "물에너지",
-      "count": 782,
+      "count": 783,
       "pct": 6.5
     },
     "W9": {
@@ -141,7 +141,7 @@
     },
     "INST-05": {
       "name": "물에너지연구소",
-      "total": 1395,
+      "total": 1396,
       "unclassified": 303,
       "unclassified_pct": 21.7,
       "by_domain": {
@@ -152,7 +152,7 @@
         "W5": 11,
         "W6": 2,
         "W7": 32,
-        "W8": 714,
+        "W8": 715,
         "W9": 0,
         "W0": 64,
         "W0_UNCLASSIFIED": 303
@@ -230,7 +230,7 @@
       "W0": 443,
       "W0_UNCLASSIFIED": 2013,
       "W7": 261,
-      "W8": 456,
+      "W8": 457,
       "W1": 1360,
       "W6": 134,
       "W4": 394,
