@@ -1417,3 +1417,5 @@
 {"id": "W7204562251", "object": "수력 발전의 전자 배열 및 에너지 전환 메커니즘", "problem": "전자 배열의 물리적 분업을 명확히 하다", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204579708", "object": "브라질의 에너지 전환", "problem": "기후 변화에 대한 적응 전략 연구", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204640333", "object": "프랜시스형 마이크로 수력 발전기", "problem": "기술적 및 경제적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204641023", "object": "수력발전소의 나선형 케이스 주변 콘크리트", "problem": "온도 조절 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204597555", "object": "예바탄 수력발전소", "problem": "복잡한 지질 환경에서의 건설 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

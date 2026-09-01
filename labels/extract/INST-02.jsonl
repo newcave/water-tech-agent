@@ -771,3 +771,5 @@
 {"id": "W7204563237", "object": "수원지의 수리 모델", "problem": "모델 구축 및 시뮬레이션 자동화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204603619", "object": "수원지의 수리 모델", "problem": "모델 구축 및 시뮬레이션 자동화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204509579", "object": "아카키 유역의 수자원 관리", "problem": "비전통적 데이터의 이해 및 지역 지식 수집", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204622964", "object": "내수 생태계", "problem": "내수 생태계의 보호와 관리 방안 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204652698", "object": "내수 생태계", "problem": "내수 생태계의 보호와 관리 방안 이해하기", "relevant": true, "model": "gpt-4o-mini"}

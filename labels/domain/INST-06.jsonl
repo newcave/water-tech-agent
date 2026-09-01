@@ -3205,3 +3205,6 @@
 {"id": "W7204475341", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세미 아리드 습지 복합체의 생태수리학적 임계값과 환경 수자원", "problem": "환경 수자원과 생태수리학적 임계값 결정"}
 {"id": "W7204448278", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가"}
 {"id": "W7204459456", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지중해 농업-삼림-목축 시스템의 물 및 에너지 역학", "problem": "자연 기반 솔루션(NbS)의 평가"}
+{"id": "W7204625542", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Rugeramigozi Wetland", "problem": "인간 활동이 생태계 변화에 미치는 영향 평가"}
+{"id": "W7204621410", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "생태계와 환경 보전", "problem": "AI의 생태적 이점과 환경 비용의 균형을 맞추기"}
+{"id": "W7204663405", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "생태계와 환경 보존", "problem": "AI의 환경적 영향을 평가하고 개선하기"}

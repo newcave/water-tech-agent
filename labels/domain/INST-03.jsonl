@@ -3918,3 +3918,11 @@
 {"id": "W7204538465", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자라는 토끼의 소화기 건강", "problem": "소화 효율과 소화기 환경 개선"}
 {"id": "W7204540586", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 도체 생산", "problem": "옥수수 대체 및 프로바이오틱스 추가의 효과 평가"}
 {"id": "W7204555953", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브로일러 닭의 산화 스트레스 바이오마커 및 생리적 성능", "problem": "항산화 상태 개선"}
+{"id": "W7204630004", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저장된 식수의 품질", "problem": "항균 저항성과 바이오필름 형성 능력"}
+{"id": "W7204657966", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저장된 식수의 품질", "problem": "항균 저항성과 바이오필름 형성 능력"}
+{"id": "W7204625408", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Siliguri Planning Area의 지하수 및 수 surface water", "problem": "수질 평가 및 오염 문제 해결"}
+{"id": "W7204642688", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부안안 유역의 지하수 품질", "problem": "지하수의 음용 및 농업 적합성 평가"}
+{"id": "W7204665942", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간과 신장 기능", "problem": "에너지 음료 소비의 영향 평가"}
+{"id": "W7204645490", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 소독 부산물(DBP)", "problem": "예측 정확도를 높이고 운영적 유용성을 유지하기"}
+{"id": "W7204694019", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "카르스트 지역의 안전한 음용수 공급 시스템", "problem": "N-니트로사민의 발생 및 발암 위험 감소"}
+{"id": "W7170035631", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사선 치료로 손상된 침샘", "problem": "구리 침착 감소 및 분비 기능 보존"}

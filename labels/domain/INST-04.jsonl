@@ -484,3 +484,4 @@
 {"id": "W7204030926", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "태국의 주요 댐", "problem": "지진 위험 평가 및 분류"}
 {"id": "W7204450722", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고층 콘크리트 댐의 물질 파라미터", "problem": "파라미터 안정성 향상"}
 {"id": "W7204479777", "domain_primary": "W7", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 댐의 안정성", "problem": "강우 분포에 따른 불안정성 메커니즘 이해"}
+{"id": "W7204629701", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비가뇨 농업 경관의 토양 및 수자원 보존 구조물", "problem": "기후 변화에 대한 내구성 확보"}

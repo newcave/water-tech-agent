@@ -1734,3 +1734,8 @@
 {"id": "W7204472417", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "급성 발작 관리", "problem": "약물의 안전성과 효과를 개선하려는 연구"}
 {"id": "W7204475126", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "나이지리아의 국내총생산(GDP)", "problem": "부문 기여도를 평가하기"}
 {"id": "W7204119512", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비하수 위생 서비스 성능", "problem": "데이터 기반 의사결정 개선"}
+{"id": "W7204701355", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "정유, 비료 및 석유화학 복합체의 운영 효율성", "problem": "운영 중단 없이 유틸리티 최적화"}
+{"id": "W7204705257", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "정유, 비료 및 석유화학 복합체의 운영 효율성", "problem": "운영 중단 없이 유틸리티 최적화"}
+{"id": "W7204640333", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프랜시스형 마이크로 수력 발전기", "problem": "기술적 및 경제적 타당성 평가"}
+{"id": "W7204541884", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 물 서비스 제공의 위임 관리 모델", "problem": "DMM 프로그램의 적응 및 지속 가능성 평가"}
+{"id": "W7204592038", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "태양열 기술", "problem": "태양열 에너지 활용 개선"}
