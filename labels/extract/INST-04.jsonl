@@ -488,3 +488,4 @@
 {"id": "W7204450722", "object": "고층 콘크리트 댐의 물질 파라미터", "problem": "파라미터 안정성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204479777", "object": "배수 댐의 안정성", "problem": "강우 분포에 따른 불안정성 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204629701", "object": "비가뇨 농업 경관의 토양 및 수자원 보존 구조물", "problem": "기후 변화에 대한 내구성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204792722", "object": "Kargo Dam의 담수 어류", "problem": "기생충 감염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

@@ -1803,3 +1803,7 @@
 {"id": "W7204640333", "object": "프랜시스형 마이크로 수력 발전기", "problem": "기술적 및 경제적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204541884", "object": "도시 물 서비스 제공의 위임 관리 모델", "problem": "DMM 프로그램의 적응 및 지속 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204592038", "object": "태양열 기술", "problem": "태양열 에너지 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204789631", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204823258", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204836287", "object": "정부 고용 통계", "problem": "고용 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204836591", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

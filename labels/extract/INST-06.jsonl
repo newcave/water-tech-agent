@@ -3246,3 +3246,13 @@
 {"id": "W7204625542", "object": "Rugeramigozi Wetland", "problem": "인간 활동이 생태계 변화에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204621410", "object": "생태계와 환경 보전", "problem": "AI의 생태적 이점과 환경 비용의 균형을 맞추기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204663405", "object": "생태계와 환경 보존", "problem": "AI의 환경적 영향을 평가하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169853652", "object": "Sentinel-1 수역 분할", "problem": "정확도 차이의 통계적 유의성 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204796667", "object": "연못의 생태적 상태", "problem": "연못 식별의 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204819722", "object": "유타주 관개 회사의 농업용수 균형", "problem": "농업용수 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204820772", "object": "내륙 하천-호수 수질", "problem": "수질 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204826156", "object": "Hemenkou 산사태", "problem": "산사태의 재활성화 및 지형 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204829467", "object": "인도의 원예 작물", "problem": "수확량 변동성 및 자원 비효율성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204843743", "object": "Sentinel-1 수역 분할", "problem": "정확도 차이의 통계적 유의성 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204837841", "object": "녹두 작물의 생산성", "problem": "모습 스트레스와 수확량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204778786", "object": "해안 생태계", "problem": "지속 가능한 해안 관리 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204808947", "object": "Bhiwani 지역의 수자원 관리", "problem": "계절적 수해 지역의 동태 평가", "relevant": true, "model": "gpt-4o-mini"}

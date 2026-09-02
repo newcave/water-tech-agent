@@ -622,3 +622,5 @@
 {"id": "W7204700799", "object": "수 surface water dynamics", "problem": "AI 기반 수문학적 동역학 이해 및 지원", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204713681", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7204731763", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204769003", "object": "지속 가능한 지하수 자원 관리", "problem": "모니터링 및 예측에서 통합 의사 지원으로의 전환", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204797162", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}

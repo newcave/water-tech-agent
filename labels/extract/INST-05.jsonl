@@ -1419,3 +1419,6 @@
 {"id": "W7204640333", "object": "프랜시스형 마이크로 수력 발전기", "problem": "기술적 및 경제적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204641023", "object": "수력발전소의 나선형 케이스 주변 콘크리트", "problem": "온도 조절 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204597555", "object": "예바탄 수력발전소", "problem": "복잡한 지질 환경에서의 건설 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204788245", "object": "강 유역 가상 발전소(RBVPP)", "problem": "비효율적인 수자원 할당 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204771569", "object": "노르웨이의 지속 가능성 구조", "problem": "재정적 압박과 인구 변화에 대한 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204777726", "object": "노르웨이의 지속 가능성 구조", "problem": "재정적 압박과 인구 변화에 따른 지속 가능성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

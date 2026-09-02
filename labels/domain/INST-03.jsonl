@@ -3926,3 +3926,11 @@
 {"id": "W7204645490", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 소독 부산물(DBP)", "problem": "예측 정확도를 높이고 운영적 유용성을 유지하기"}
 {"id": "W7204694019", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "카르스트 지역의 안전한 음용수 공급 시스템", "problem": "N-니트로사민의 발생 및 발암 위험 감소"}
 {"id": "W7170035631", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방사선 치료로 손상된 침샘", "problem": "구리 침착 감소 및 분비 기능 보존"}
+{"id": "W7204755904", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 비소 오염", "problem": "비소 제거 효율성 평가"}
+{"id": "W7204799899", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "체중 관리", "problem": "지속 가능한 체중 감량과 건강한 생활 습관 개발"}
+{"id": "W7204806937", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "체중 관리", "problem": "지속 가능한 체중 감소와 건강한 생활 습관 개발"}
+{"id": "W7204833750", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 니제르 델타의 지하수", "problem": "지하수 오염 평가 및 이해"}
+{"id": "W7204826622", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "근위축성 측삭경화증(ALS)", "problem": "ALS 병리 개선"}
+{"id": "W7204835090", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 재사용 시스템의 미생물 건강 위험", "problem": "미생물 감염 위험 추정"}
+{"id": "W7204812047", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "동부 칼리만탄 주의 설사 발생", "problem": "환경 및 사회 인구학적 요인 분석"}
+{"id": "W7204847953", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 음용수", "problem": "전통적인 소독 방법의 대안으로서의 전기 소독의 효율성 개선"}

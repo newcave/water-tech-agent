@@ -602,3 +602,5 @@
 {"id": "W7204451558", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지진으로 인한 2차 위험", "problem": "지진으로 인한 2차 위험의 특성 이해"}
 {"id": "W7204693521", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water dynamics", "problem": "AI 기반 수문학적 이해 및 지원 도구 개발"}
 {"id": "W7204700799", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water dynamics", "problem": "AI 기반 수문학적 동역학 이해 및 지원"}
+{"id": "W7204769003", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지속 가능한 지하수 자원 관리", "problem": "모니터링 및 예측에서 통합 의사 지원으로의 전환"}
+{"id": "W7204797162", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정"}
