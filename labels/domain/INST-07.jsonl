@@ -604,3 +604,7 @@
 {"id": "W7204700799", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water dynamics", "problem": "AI 기반 수문학적 동역학 이해 및 지원"}
 {"id": "W7204769003", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지속 가능한 지하수 자원 관리", "problem": "모니터링 및 예측에서 통합 의사 지원으로의 전환"}
 {"id": "W7204797162", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정"}
+{"id": "W7205002744", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Amery Ice Shelf의 표면 수분", "problem": "표면 수분의 연간 변동성 이해"}
+{"id": "W7204897856", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Younghusband Peninsula의 담수 소크", "problem": "담수 소크의 위치와 기능 이해하기"}
+{"id": "W7204934078", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Younghusband Peninsula의 담수 소크", "problem": "담수 소크의 위치와 기능 이해하기"}
+{"id": "W7204901723", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 회복력이 있는 수자원 관리 시스템", "problem": "디지털 기술을 통한 실시간 정보 변환 및 운영 결정 지원"}

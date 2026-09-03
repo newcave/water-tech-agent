@@ -1399,3 +1399,8 @@
 {"id": "W7204788245", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 유역 가상 발전소(RBVPP)", "problem": "비효율적인 수자원 할당 해결"}
 {"id": "W7204771569", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "노르웨이의 지속 가능성 구조", "problem": "재정적 압박과 인구 변화에 대한 이해"}
 {"id": "W7204777726", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "노르웨이의 지속 가능성 구조", "problem": "재정적 압박과 인구 변화에 따른 지속 가능성 문제 해결"}
+{"id": "W7205003351", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 수력열 스케줄링 시스템", "problem": "생성 비용 및 탄소 배출 최소화"}
+{"id": "W7204897265", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Himalayan river basins", "problem": "지속 가능한 수력 발전 계획 지원"}
+{"id": "W7204903918", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모디 콜라 수력 발전소의 에너지 생산", "problem": "기후 변화로 인한 에너지 생산 위험 분석"}
+{"id": "W7204924109", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 AI 데이터 센터 인프라", "problem": "신뢰성 문제 해결"}
+{"id": "W7204922045", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 터빈-발전기 유닛", "problem": "예측 유지보수 방법 개선"}

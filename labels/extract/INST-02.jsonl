@@ -777,3 +777,8 @@
 {"id": "W7204769830", "object": "수자원 관리", "problem": "수자원 이해 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204844988", "object": "수자원 관리", "problem": "수자원 이해 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204850934", "object": "기후 회복력 있는 농업", "problem": "지속 가능한 개발 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204860856", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 데이터의 완전성과 재사용성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204898422", "object": "Karnali Basin의 수자원 가용성", "problem": "기후 변화에 따른 수자원 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204914481", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204948942", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205003539", "object": "물의 역할", "problem": "생명 유지의 중요성 분석", "relevant": true, "model": "gpt-4o-mini"}

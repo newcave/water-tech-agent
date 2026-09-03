@@ -3256,3 +3256,18 @@
 {"id": "W7204837841", "object": "녹두 작물의 생산성", "problem": "모습 스트레스와 수확량 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204778786", "object": "해안 생태계", "problem": "지속 가능한 해안 관리 지원", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204808947", "object": "Bhiwani 지역의 수자원 관리", "problem": "계절적 수해 지역의 동태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204989208", "object": "지하수 자원", "problem": "지하수 개발 및 관리 정책 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204996866", "object": "Eichhornia crassipes (물히아신스)", "problem": "원격 감지를 통한 효과적인 관리 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205002744", "object": "Amery Ice Shelf의 표면 수분", "problem": "표면 수분의 연간 변동성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205007124", "object": "Kendrapara 지역의 실제 증발산(ETa)", "problem": "증발산의 공간적 및 시간적 변동성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204861132", "object": "Chilika의 환경 상태", "problem": "원격 감지 기법의 한계 분석 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204884341", "object": "해안 습지 경관의 최적 분할 규모", "problem": "공간 해상도와 토지 피복 유형에 따른 최적 분할 규모의 변동 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204891883", "object": "해양 서식지", "problem": "해양 서식지 분포 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204900822", "object": "소규모 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 활용한 메탄 배출량 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204905170", "object": "생태계의 생리학적 반응", "problem": "가뭄으로 인한 생리적 변화 감지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204916893", "object": "해안의 부유 침전물 농도", "problem": "위성 샘플링의 일광 편향 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204944189", "object": "옥수수 생산", "problem": "생산성 및 자원 사용 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204969249", "object": "옥수수 생산의 정밀 관리", "problem": "UAV 원격 감지의 효과적인 활용 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204891644", "object": "농작물 재배를 위한 최적의 농지", "problem": "최적의 농지 위치 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204929950", "object": "정밀 농업", "problem": "농업 생산성 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204865448", "object": "농작물 생산성 및 농장 지속 가능성", "problem": "정밀 농업 기술을 통한 생산성 향상 및 지속 가능성 증진", "relevant": true, "model": "gpt-4o-mini"}

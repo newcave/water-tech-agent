@@ -1740,3 +1740,11 @@
 {"id": "W7204541884", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 물 서비스 제공의 위임 관리 모델", "problem": "DMM 프로그램의 적응 및 지속 가능성 평가"}
 {"id": "W7204592038", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "태양열 기술", "problem": "태양열 에너지 활용 개선"}
 {"id": "W7204836287", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "정부 고용 통계", "problem": "고용 데이터 제공"}
+{"id": "W7204987540", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리 및 환경 복원", "problem": "지속 가능한 폐수 처리 방법 개발"}
+{"id": "W7204995021", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Koonthankulam Ramsar 습지", "problem": "계절적 습지 동태 모니터링"}
+{"id": "W7204930375", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 손실 관리", "problem": "효율적인 관리 및 우선순위 결정"}
+{"id": "W7204940554", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 검사 및 유지보수", "problem": "효율성 및 안전성 향상"}
+{"id": "W7204941182", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대기 화학 모델", "problem": "대기 초기화 및 프로필 개선"}
+{"id": "W7204948552", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "주거용 전기 소비", "problem": "피크 부하 요금의 효과 분석"}
+{"id": "W7204968048", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "우간다의 농촌 수돗물 공급 시설", "problem": "수돗물 공급량 증가를 위한 요인 분석"}
+{"id": "W7205016134", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "экологическая безопасность судна", "problem": "оценить эффективность профессиональной деятельности назначенного лица"}

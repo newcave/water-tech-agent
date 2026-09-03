@@ -4013,3 +4013,20 @@
 {"id": "W7204835090", "object": "음용수 재사용 시스템의 미생물 건강 위험", "problem": "미생물 감염 위험 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204812047", "object": "동부 칼리만탄 주의 설사 발생", "problem": "환경 및 사회 인구학적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204847953", "object": "안전한 음용수", "problem": "전통적인 소독 방법의 대안으로서의 전기 소독의 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204985540", "object": "느린 모래 필터에서의 세균 제거", "problem": "세균 제거 메커니즘 이해 및 예측 모델 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204986263", "object": "빠른 모래 필터", "problem": "필터 설계 및 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204927634", "object": "Charju River의 수질", "problem": "수질 오염과 생태적 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205017240", "object": "모잠비크의 물 부족으로 인한 정서적 및 신체적 부담", "problem": "물 서비스 수준이 일상적인 웰빙에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171639180", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204876868", "object": "안전한 식수 접근성", "problem": "미생물 및 물리화학적 오염물질 노출 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204887868", "object": "Biskra 지역의 소비자 수원", "problem": "수원 품질 개선 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204928420", "object": "음용수의 맛과 냄새 문제", "problem": "2-MIB와 지오스민 농도 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204934136", "object": "식용 작물의 PFAS 오염 수준", "problem": "안전한 PFAS 농도 초과", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204943917", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204969337", "object": "병원 음용수의 중금속 오염", "problem": "안전한 음용수 품질 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204955170", "object": "가정의 음용수 접근성과 관리 요인", "problem": "설사와의 연관성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204959344", "object": "물속 미세플라스틱", "problem": "제거 및 항균 활성 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204854165", "object": "Raphidiopsis raciborskii와 사사톡신이 오염된 담수", "problem": "담수에서 R. raciborskii 세포와 사사톡신 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205004976", "object": "타이포이드 열 예방에 대한 주민들의 지식, 태도 및 실천", "problem": "타이포이드 열 예방에 대한 지식 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205203819", "object": "수돗물 및 폐수 시스템에서 노로바이러스 감지", "problem": "신속하고 신뢰할 수 있는 바이러스 병원체 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204905590", "object": "음용수 품질", "problem": "노후화된 중앙 급수 시스템에서 음용수 품질 보장 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
