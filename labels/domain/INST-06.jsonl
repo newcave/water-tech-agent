@@ -3233,3 +3233,8 @@
 {"id": "W7204891644", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농작물 재배를 위한 최적의 농지", "problem": "최적의 농지 위치 결정"}
 {"id": "W7204929950", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "정밀 농업", "problem": "농업 생산성 및 지속 가능성 향상"}
 {"id": "W7204865448", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물 생산성 및 농장 지속 가능성", "problem": "정밀 농업 기술을 통한 생산성 향상 및 지속 가능성 증진"}
+{"id": "W7205007326", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bua River의 수리학적 상태", "problem": "토지 이용 변화가 강 폭에 미치는 영향 분석"}
+{"id": "W7206190280", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 및 해안 수역의 수질", "problem": "위성 원격 감지를 위한 대기 보정 데이터 제공"}
+{"id": "W7206213524", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 홍수 데이터셋", "problem": "홍수 발생 시간과 위성 촬영 시간의 불일치 해결"}
+{"id": "W7206162316", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ghataprabha River Basin의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석 및 이해"}
+{"id": "W7206215864", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ghataprabha River Basin의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석 및 이해"}

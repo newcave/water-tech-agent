@@ -1404,3 +1404,8 @@
 {"id": "W7204903918", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모디 콜라 수력 발전소의 에너지 생산", "problem": "기후 변화로 인한 에너지 생산 위험 분석"}
 {"id": "W7204924109", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 AI 데이터 센터 인프라", "problem": "신뢰성 문제 해결"}
 {"id": "W7204922045", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 터빈-발전기 유닛", "problem": "예측 유지보수 방법 개선"}
+{"id": "W7205709110", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "섬 시스템의 에너지 관리", "problem": "최적 용량 결정 및 환경 오염 최소화"}
+{"id": "W7206149807", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템의 데이터 처리 및 출력 형식", "problem": "전력 시스템의 입력 및 출력 형식 개선"}
+{"id": "W7206167869", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "라오스의 에너지 안보", "problem": "계절적 전력 수입 부족 해소"}
+{"id": "W7206203069", "domain_primary": "W8", "domain_secondary": ["W2"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전 저수지의 에너지 생성 및 물 관리", "problem": "FPV 통합의 기술적 및 경제적 성능 평가"}
+{"id": "W7206216351", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 외교 정책", "problem": "인도와 중국 간의 균형 유지"}

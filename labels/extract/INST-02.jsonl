@@ -782,3 +782,4 @@
 {"id": "W7204914481", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7204948942", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7205003539", "object": "물의 역할", "problem": "생명 유지의 중요성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7206187360", "object": "아프리카 강 유역의 수질", "problem": "수질 변화의 상대적 기여 요인 분석", "relevant": true, "model": "gpt-4o-mini"}

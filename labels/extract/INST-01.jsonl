@@ -1817,3 +1817,4 @@
 {"id": "W7204948552", "object": "주거용 전기 소비", "problem": "피크 부하 요금의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204968048", "object": "우간다의 농촌 수돗물 공급 시설", "problem": "수돗물 공급량 증가를 위한 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7205016134", "object": "экологическая безопасность судна", "problem": "оценить эффективность профессиональной деятельности назначенного лица", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205707713", "object": "서남부 나이지리아 공립 대학의 기숙사 시설", "problem": "학생 성과 개선 및 과밀 통제", "relevant": true, "model": "gpt-4o-mini"}

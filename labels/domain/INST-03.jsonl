@@ -3949,3 +3949,8 @@
 {"id": "W7205004976", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "타이포이드 열 예방에 대한 주민들의 지식, 태도 및 실천", "problem": "타이포이드 열 예방에 대한 지식 격차 해소"}
 {"id": "W7205203819", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 및 폐수 시스템에서 노로바이러스 감지", "problem": "신속하고 신뢰할 수 있는 바이러스 병원체 탐지"}
 {"id": "W7204905590", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 품질", "problem": "노후화된 중앙 급수 시스템에서 음용수 품질 보장 문제 해결"}
+{"id": "W7205707723", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수생 환경에서의 약물 및 개인 관리 제품 제거", "problem": "효율적이고 지속 가능한 촉매 시스템 구현"}
+{"id": "W7206166630", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "코트디부아르 가정의 음용수 안전성", "problem": "지속 가능한 관행 채택의 장애물 분석"}
+{"id": "W7206172996", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "코트디부아르 가정의 음용수 안전성", "problem": "지속 가능한 음용수 관리 관행 채택의 장애물 분석"}
+{"id": "W7206207628", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Agangwu Stream의 수질", "problem": "수질 오염 문제 해결"}
+{"id": "W7206212824", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Agangwu Stream의 수질", "problem": "수질 오염 문제 해결"}

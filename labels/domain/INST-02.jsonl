@@ -739,3 +739,4 @@
 {"id": "W7204898422", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karnali Basin의 수자원 가용성", "problem": "기후 변화에 따른 수자원 변화 예측"}
 {"id": "W7204948942", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상"}
 {"id": "W7205003539", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물의 역할", "problem": "생명 유지의 중요성 분석"}
+{"id": "W7206187360", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카 강 유역의 수질", "problem": "수질 변화의 상대적 기여 요인 분석"}
