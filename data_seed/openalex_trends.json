@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1785699387,
-   "kwater": 0,
-   "related_1y": 14752
-  },
-  {
    "ts": 1785729412,
    "kwater": 0,
    "related_1y": 14752
@@ -599,9 +594,14 @@
    "ts": 1788496714,
    "kwater": 0,
    "related_1y": 16080
+  },
+  {
+   "ts": 1788520962,
+   "kwater": 0,
+   "related_1y": 16080
   }
  ],
- "updated": 1788496714,
+ "updated": 1788520962,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
