@@ -490,3 +490,4 @@
 {"id": "W7204629701", "object": "비가뇨 농업 경관의 토양 및 수자원 보존 구조물", "problem": "기후 변화에 대한 내구성 확보", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204792722", "object": "Kargo Dam의 담수 어류", "problem": "기생충 감염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204900213", "object": "브라질의 광업 부문", "problem": "환경 투명성 및 사회적 책임 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207739094", "object": "홍수 위험 평가 및 댐 안전성", "problem": "정확한 홍수 경고 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}

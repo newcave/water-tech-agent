@@ -1818,3 +1818,13 @@
 {"id": "W7204968048", "object": "우간다의 농촌 수돗물 공급 시설", "problem": "수돗물 공급량 증가를 위한 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7205016134", "object": "экологическая безопасность судна", "problem": "оценить эффективность профессиональной деятельности назначенного лица", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7205707713", "object": "서남부 나이지리아 공립 대학의 기숙사 시설", "problem": "학생 성과 개선 및 과밀 통제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207522169", "object": "수도 미터기 관리 소프트웨어", "problem": "비수익 수돗물 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207546056", "object": "물 부족 지역의 수자원 관리", "problem": "기후 변화에 적응한 수자원 관리 체계 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207579323", "object": "물 부족 지역의 수자원 관리", "problem": "기후 변화에 적응한 수자원 관리 체계 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207590566", "object": "스마트 물 미터", "problem": "실시간 소비 데이터 및 누수 경고 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207668938", "object": "수자원 관리 시스템", "problem": "비효율적인 물 손실 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207675664", "object": "스마트 물 미터", "problem": "물 소비 추적 및 누수 경고 자동화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207706422", "object": "스마트 물 관리 시스템", "problem": "비용이 발생하지 않는 물의 손실을 줄이기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207721372", "object": "농업 생태계에서의 플루오피람", "problem": "환경적 영향 및 저항성 위험 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207757382", "object": "수도 미터기 관리 소프트웨어", "problem": "비수익 수돗물 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169493142", "object": "소프트 센서의 신뢰성", "problem": "디지털 자산의 운영 위험 평가", "relevant": true, "model": "gpt-4o-mini"}

@@ -3238,3 +3238,9 @@
 {"id": "W7206213524", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 홍수 데이터셋", "problem": "홍수 발생 시간과 위성 촬영 시간의 불일치 해결"}
 {"id": "W7206162316", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ghataprabha River Basin의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석 및 이해"}
 {"id": "W7206215864", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ghataprabha River Basin의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석 및 이해"}
+{"id": "W7207649189", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중앙 동부 케이프의 토양 침식 위험", "problem": "지질학적 요인의 영향을 평가하기"}
+{"id": "W7207735811", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분", "problem": "토양 수분 회수 방법의 체계적 이해 부족 해결"}
+{"id": "W7207753730", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽 대륙의 총 생물량 생산(GPP)", "problem": "위성 원격 감지에 의한 탄소 동역학 평가"}
+{"id": "W7207769480", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구의 기후 시스템", "problem": "기후 변화에 따른 변화 모니터링"}
+{"id": "W7207877115", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tietê River basin의 수문 데이터", "problem": "강 유입 및 방류 추정"}
+{"id": "W7206189125", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 식생의 수분 스트레스", "problem": "정확한 평가 방법 개발"}

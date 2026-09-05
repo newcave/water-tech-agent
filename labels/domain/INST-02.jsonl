@@ -740,3 +740,6 @@
 {"id": "W7204948942", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 월간 유량 데이터셋", "problem": "유량 기록의 완전성과 재사용성 향상"}
 {"id": "W7205003539", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물의 역할", "problem": "생명 유지의 중요성 분석"}
 {"id": "W7206187360", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카 강 유역의 수질", "problem": "수질 변화의 상대적 기여 요인 분석"}
+{"id": "W7207720517", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우타르칸드의 자연 호수", "problem": "자연 호수의 관리 및 생태적 가치 유지"}
+{"id": "W7206167010", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역 간 강수-유출 예측", "problem": "강수-유출 예측 성능 향상"}
+{"id": "W7207516348", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에티오피아의 농업 생산성 및 수자원", "problem": "기후 변화로 인한 농업 생산성 저하 및 자원 고갈 해결"}

@@ -487,3 +487,4 @@
 {"id": "W7204629701", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비가뇨 농업 경관의 토양 및 수자원 보존 구조물", "problem": "기후 변화에 대한 내구성 확보"}
 {"id": "W7204792722", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kargo Dam의 담수 어류", "problem": "기생충 감염 문제 해결"}
 {"id": "W7204900213", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 광업 부문", "problem": "환경 투명성 및 사회적 책임 개선"}
+{"id": "W7207739094", "domain_primary": "W1", "domain_secondary": ["W2"], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 위험 평가 및 댐 안전성", "problem": "정확한 홍수 경고 시스템 구축"}

@@ -3954,3 +3954,17 @@
 {"id": "W7206172996", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "코트디부아르 가정의 음용수 안전성", "problem": "지속 가능한 음용수 관리 관행 채택의 장애물 분석"}
 {"id": "W7206207628", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Agangwu Stream의 수질", "problem": "수질 오염 문제 해결"}
 {"id": "W7206212824", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Agangwu Stream의 수질", "problem": "수질 오염 문제 해결"}
+{"id": "W7207575610", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cannabis sativa로 유발된 폐 및 신장 손상", "problem": "Cannabis sativa로 인한 손상 완화"}
+{"id": "W7207577072", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화학 약품 투여 과정", "problem": "규제 한계를 초과하지 않도록 보장하기"}
+{"id": "W7207677549", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cannabis sativa로 유발된 폐 및 신장 손상", "problem": "상태 개선"}
+{"id": "W7207779813", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "커피 및 차의 동결 건조 과정", "problem": "동결 건조 장비의 성능 개선"}
+{"id": "W7207793870", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "커피 및 차의 동결 건조 과정", "problem": "고품질 동결 건조 제품 생산"}
+{"id": "W7207845027", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토끼의 성장 성능과 건강", "problem": "스피룰리나의 효과 평가"}
+{"id": "W7207860841", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화학 약품 투여 과정", "problem": "규제 한계를 초과하지 않도록 보장하기"}
+{"id": "W7169493142", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 생산의 안전성", "problem": "디지털 자산의 신뢰성 평가"}
+{"id": "W7207615550", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고품질 음용수", "problem": "선택성과 투과성 간의 trade-off 해결"}
+{"id": "W7207550268", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "개인 우물 사용자", "problem": "우물 관리 및 수질 안전성 개선"}
+{"id": "W7207667065", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화학 약품 투여 과정", "problem": "규제 한계를 초과하지 않도록 보장하기"}
+{"id": "W7207871664", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신장", "problem": "비스페놀 A로 인한 손상 개선"}
+{"id": "W7207726494", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알츠하이머병 모델에서의 신경 보호 효과", "problem": "TRE의 신경 보호 메커니즘 규명"}
+{"id": "W7207536039", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우물 물의 질", "problem": "설사 발생과의 연관성 분석"}

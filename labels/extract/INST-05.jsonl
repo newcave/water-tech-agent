@@ -1434,3 +1434,7 @@
 {"id": "W7206203743", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7206212087", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7206216351", "object": "네팔의 외교 정책", "problem": "인도와 중국 간의 균형 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207801165", "object": "전력 시스템과 전기차 소유자", "problem": "전력 요금과 V2G 배치 조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207771260", "object": "하이브리드 재생 가능 에너지 시스템", "problem": "신뢰성 있는 재생 가능 에너지 공급 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207800397", "object": "하이브리드 양수 저장 발전소", "problem": "최적 운영을 위한 기술적 도전 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171443390", "object": "다목적 댐 운영 최적화", "problem": "불확실한 정보와 비합리적 심리적 요인을 고려한 의사결정 방법 제안", "relevant": true, "model": "gpt-4o-mini"}
