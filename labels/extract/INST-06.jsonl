@@ -3282,3 +3282,7 @@
 {"id": "W7207769480", "object": "지구의 기후 시스템", "problem": "기후 변화에 따른 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207877115", "object": "Tietê River basin의 수문 데이터", "problem": "강 유입 및 방류 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7206189125", "object": "농업 식생의 수분 스트레스", "problem": "정확한 평가 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208763077", "object": "농업 가뭄 취약성", "problem": "농업 가뭄의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208770162", "object": "Yancheng 해안 습지", "problem": "습지 복원 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208784751", "object": "얀청 연안 습지의 토지 피복", "problem": "습지 복원 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208792259", "object": "타림강 유역의 지하수 및 식생 시스템", "problem": "지하수 저장 변화와 식생 동태의 상관관계 이해", "relevant": true, "model": "gpt-4o-mini"}

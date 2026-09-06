@@ -3244,3 +3244,7 @@
 {"id": "W7207769480", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구의 기후 시스템", "problem": "기후 변화에 따른 변화 모니터링"}
 {"id": "W7207877115", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tietê River basin의 수문 데이터", "problem": "강 유입 및 방류 추정"}
 {"id": "W7206189125", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 식생의 수분 스트레스", "problem": "정확한 평가 방법 개발"}
+{"id": "W7208763077", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 가뭄 취약성", "problem": "농업 가뭄의 영향 평가"}
+{"id": "W7208770162", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Yancheng 해안 습지", "problem": "습지 복원 효과 평가"}
+{"id": "W7208784751", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "얀청 연안 습지의 토지 피복", "problem": "습지 복원 효과 평가"}
+{"id": "W7208792259", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "타림강 유역의 지하수 및 식생 시스템", "problem": "지하수 저장 변화와 식생 동태의 상관관계 이해"}

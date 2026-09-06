@@ -1413,3 +1413,7 @@
 {"id": "W7207771260", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 재생 가능 에너지 시스템", "problem": "신뢰성 있는 재생 가능 에너지 공급 개선"}
 {"id": "W7207800397", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 양수 저장 발전소", "problem": "최적 운영을 위한 기술적 도전 해결"}
 {"id": "W7171443390", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다목적 댐 운영 최적화", "problem": "불확실한 정보와 비합리적 심리적 요인을 고려한 의사결정 방법 제안"}
+{"id": "W7208763340", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 수력 발전 시스템", "problem": "효율성을 개선하려는 저비용 수력 발전 기술 개발"}
+{"id": "W7208743853", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽 입찰 구역의 수력 발전 유입", "problem": "주간 에너지 등가 수력 발전 유입 추정치 제공"}
+{"id": "W7208783428", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽 입찰 구역의 수력 발전 유입 추정치", "problem": "주간 에너지 동등 수력 발전 유입 추정"}
+{"id": "W7208789439", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "러시아 에너지 부문", "problem": "순환 모델로의 전환 준비 상태 평가"}

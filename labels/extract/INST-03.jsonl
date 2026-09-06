@@ -4049,3 +4049,10 @@
 {"id": "W7207871664", "object": "신장", "problem": "비스페놀 A로 인한 손상 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207726494", "object": "알츠하이머병 모델에서의 신경 보호 효과", "problem": "TRE의 신경 보호 메커니즘 규명", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207536039", "object": "우물 물의 질", "problem": "설사 발생과의 연관성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208705673", "object": "홍수로 인한 수질 오염", "problem": "예방 가능한 공공 건강 인프라 실패로 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208712110", "object": "시멘트 모르타르", "problem": "대체 수자원 사용의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208739081", "object": "농촌 수처리 시설의 수질", "problem": "최적의 응집을 위한 pH 조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208772607", "object": "음용수 안전성", "problem": "염소화 케톤/알데히드 형성 잠재력 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208780221", "object": "정수 처리 공장", "problem": "화학 물질 투입 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208790267", "object": "비육 토끼의 혈액학적 지표 및 위장관 기생충", "problem": "안전하고 지속 가능한 대체물질 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208733640", "object": "수컷 기니피그의 공격성 및 생산성", "problem": "공격성 감소 및 성장률 향상", "relevant": true, "model": "gpt-4o-mini"}
