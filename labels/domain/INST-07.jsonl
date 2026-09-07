@@ -610,3 +610,4 @@
 {"id": "W7204901723", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 회복력이 있는 수자원 관리 시스템", "problem": "디지털 기술을 통한 실시간 정보 변환 및 운영 결정 지원"}
 {"id": "W7207877115", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tietê River basin의 수문 데이터", "problem": "강 유입 및 방류 추정"}
 {"id": "W7208768881", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 이탄지의 CO2 배출", "problem": "수위와 온도의 상호작용 이해하기"}
+{"id": "W7208812919", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "웨이 강 유역의 수리 및 퇴적 과정", "problem": "인간 활동과 기후 변화가 수리 및 퇴적 과정에 미치는 영향 이해하기"}

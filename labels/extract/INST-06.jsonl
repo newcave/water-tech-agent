@@ -3286,3 +3286,6 @@
 {"id": "W7208770162", "object": "Yancheng 해안 습지", "problem": "습지 복원 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208784751", "object": "얀청 연안 습지의 토지 피복", "problem": "습지 복원 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208792259", "object": "타림강 유역의 지하수 및 식생 시스템", "problem": "지하수 저장 변화와 식생 동태의 상관관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208806767", "object": "아다마시의 도시 환경", "problem": "도시화로 인한 토지 이용/토지 피복 변화의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208827669", "object": "장베이 카운티의 도시 확장", "problem": "도시 확장과 생태 보전 간의 갈등 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208829457", "object": "Bin El Ouidane 댐 주변의 식생, 토양 표면 상태 및 저수지 범위", "problem": "환경 변화 평가 및 보전 조치 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}

@@ -4056,3 +4056,9 @@
 {"id": "W7208780221", "object": "정수 처리 공장", "problem": "화학 물질 투입 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208790267", "object": "비육 토끼의 혈액학적 지표 및 위장관 기생충", "problem": "안전하고 지속 가능한 대체물질 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208733640", "object": "수컷 기니피그의 공격성 및 생산성", "problem": "공격성 감소 및 성장률 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208805521", "object": "Ile-Oluji 지역의 수질", "problem": "쓰레기 매립지의 오염 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208811290", "object": "음용수 분배 시스템의 미생물 군집", "problem": "미생물 군집의 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208835826", "object": "Dalas 금광의 지하수", "problem": "인간 소비에 적합하지 않은 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208808261", "object": "심방의 전기적 안정성", "problem": "심방 부정맥에 대한 취약성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208811816", "object": "화학적 발암 모델에서의 폐암 및 간세포 손상", "problem": "저분자량 키토산의 항암 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208821665", "object": "처리된 물의 탁도 안정성", "problem": "운영 신뢰성 개선", "relevant": true, "model": "gpt-4o-mini"}
