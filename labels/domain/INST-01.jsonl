@@ -1762,3 +1762,8 @@
 {"id": "W7208781890", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기본 인프라", "problem": "기본 인프라 필요 충족"}
 {"id": "W7208812908", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Maliwadgaon 유역의 수자원 가용성 및 회복력", "problem": "수자원 보존 구조물의 적합한 위치 식별 및 우선순위 설정"}
 {"id": "W7208825442", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tasik Aman과 Tasik Harapan 수역의 수질", "problem": "수질 저하 문제 해결"}
+{"id": "W7210277974", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Paraíba do Sul River Delta의 수생 생태계", "problem": "수생 생태계의 수리역학 및 환경 기울기 이해"}
+{"id": "W7210286001", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "신흥 및 개발 경제", "problem": "복합 위기 극복을 위한 회복력 구축"}
+{"id": "W7210287380", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "신흥 및 개발 경제", "problem": "복합 위기 극복"}
+{"id": "W7210268634", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 분배 시스템의 회복력", "problem": "회복력 평가 및 개선 방안 제시"}
+{"id": "W7208820736", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카사블랑카의 수돗물 유통 네트워크", "problem": "수돗물 손실의 경제적 수준 추정"}

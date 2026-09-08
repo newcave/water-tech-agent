@@ -3251,3 +3251,9 @@
 {"id": "W7208806767", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아다마시의 도시 환경", "problem": "도시화로 인한 토지 이용/토지 피복 변화의 영향 분석"}
 {"id": "W7208827669", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "장베이 카운티의 도시 확장", "problem": "도시 확장과 생태 보전 간의 갈등 해결"}
 {"id": "W7208829457", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Bin El Ouidane 댐 주변의 식생, 토양 표면 상태 및 저수지 범위", "problem": "환경 변화 평가 및 보전 조치 우선순위 설정"}
+{"id": "W7210261711", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식물의 생리적 스트레스 반응", "problem": "위성 데이터로 생리적 가뭄 반응을 평가하기"}
+{"id": "W7210268114", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 잠재 구역", "problem": "지하수 잠재 구역을 식별하다"}
+{"id": "W7210279920", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강의 형태", "problem": "지속 가능한 하천 관리 개선"}
+{"id": "W7210281301", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강의 형태", "problem": "지속 가능한 하천 관리 개선"}
+{"id": "W7210273213", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카트만두 계곡의 토지 이용 및 토지 피복", "problem": "세밀한 도시 환경에서의 의미론적 분할 연구 지원"}
+{"id": "W7210276682", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카트만두 계곡의 토지 이용 및 토지 피복", "problem": "정확한 토지 이용 및 피복 분류"}

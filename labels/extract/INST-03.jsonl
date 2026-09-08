@@ -4062,3 +4062,9 @@
 {"id": "W7208808261", "object": "심방의 전기적 안정성", "problem": "심방 부정맥에 대한 취약성 증가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208811816", "object": "화학적 발암 모델에서의 폐암 및 간세포 손상", "problem": "저분자량 키토산의 항암 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208821665", "object": "처리된 물의 탁도 안정성", "problem": "운영 신뢰성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210264581", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210267453", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210269447", "object": "미국의 음용수 시스템", "problem": "불완전한 폐수 재사용으로 인한 오염물질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210271196", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210281771", "object": "브로일러 건강 상태", "problem": "소독제의 효과를 평가하여 생산성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210293865", "object": "약물 폐기물", "problem": "수질 오염과 인체 건강에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
