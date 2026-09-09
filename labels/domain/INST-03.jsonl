@@ -3987,3 +3987,12 @@
 {"id": "W7210271196", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결"}
 {"id": "W7210281771", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브로일러 건강 상태", "problem": "소독제의 효과를 평가하여 생산성 향상"}
 {"id": "W7210293865", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 폐기물", "problem": "수질 오염과 인체 건강에 미치는 영향"}
+{"id": "W7210273470", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "부모의 치아 불소증에 대한 지식, 태도 및 실천", "problem": "부모의 예방적 실천 부족"}
+{"id": "W7211876976", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결"}
+{"id": "W7211891600", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율민족", "problem": "체계적 억압과 문화적 제노사이드 해결"}
+{"id": "W7211893281", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 저수지의 조류 및 영양염 제거", "problem": "조류 발생 문제 해결"}
+{"id": "W7211898790", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 품질", "problem": "수자원 품질 개선 및 이해"}
+{"id": "W7210262972", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 물리화학적 및 미생물학적 품질", "problem": "광산 사고로 인한 오염 평가"}
+{"id": "W7211867477", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신장 독성", "problem": "CCl4로 유도된 신장 독성 개선"}
+{"id": "W7211890223", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대사증후군 관련 폐의 지방 및 철분 축적", "problem": "폐의 대사증후군 관련 변화 완화"}
+{"id": "W7211908595", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "온천수의 미생물 안전성", "problem": "유해 화학물질 노출 가능성 증가"}

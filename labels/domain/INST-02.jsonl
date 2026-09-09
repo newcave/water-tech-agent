@@ -745,3 +745,4 @@
 {"id": "W7207516348", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에티오피아의 농업 생산성 및 수자원", "problem": "기후 변화로 인한 농업 생산성 저하 및 자원 고갈 해결"}
 {"id": "W7208750537", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구 시스템 수문학", "problem": "강우 및 홍수 예측 개선"}
 {"id": "W7210266046", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모로코 아틀라스 산맥의 눈 덮임", "problem": "눈 동역학과 계절 수자원에 미치는 영향 이해"}
+{"id": "W7211898790", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 품질", "problem": "수자원 품질 저하 문제 해결"}

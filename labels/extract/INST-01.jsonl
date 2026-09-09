@@ -1836,3 +1836,4 @@
 {"id": "W7210287380", "object": "신흥 및 개발 경제", "problem": "복합 위기 극복", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7210268634", "object": "수자원 분배 시스템의 회복력", "problem": "회복력 평가 및 개선 방안 제시", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208820736", "object": "카사블랑카의 수돗물 유통 네트워크", "problem": "수돗물 손실의 경제적 수준 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211870047", "object": "중요 인프라의 상태", "problem": "결함 및 이상 탐지", "relevant": true, "model": "gpt-4o-mini"}
