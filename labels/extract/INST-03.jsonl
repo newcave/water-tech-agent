@@ -4077,3 +4077,22 @@
 {"id": "W7211867477", "object": "신장 독성", "problem": "CCl4로 유도된 신장 독성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211890223", "object": "대사증후군 관련 폐의 지방 및 철분 축적", "problem": "폐의 대사증후군 관련 변화 완화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211908595", "object": "온천수의 미생물 안전성", "problem": "유해 화학물질 노출 가능성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211940812", "object": "브로일러 치킨의 갑상선 호르몬 프로필", "problem": "T4 유도 폐 고혈압 증후군에서 갑상선 호르몬 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211962534", "object": "브로일러 치킨의 갑상선 호르몬 프로필", "problem": "T4 유도 폐 고혈압 증후군에서 갑상선 호르몬 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211928058", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211932093", "object": "안전한 식수 생산", "problem": "다양한 원수원을 안전한 식수로 변환하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211932931", "object": "마쿠르디 대도시의 음용 우물 물", "problem": "홍수로 인한 미생물 오염 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211933434", "object": "음용수의 품질", "problem": "파이프의 노후화로 인한 오염물질의 축적", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211942074", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211944217", "object": "마쿠르디 대도시의 음용수 우물", "problem": "홍수로 인한 미생물 오염 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211950389", "object": "수처리 및 폐수 처리 시스템", "problem": "산업 및 지역 사회의 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211950552", "object": "식수 안전성", "problem": "신흥 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211953976", "object": "안전한 식수 생산", "problem": "다양한 원수에서 안전한 식수로 변환하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211964610", "object": "신장 손상", "problem": "부티레이트가 신장 세포 대사를 개선하는지 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211966778", "object": "겨울 도로 안전", "problem": "염화물 기반 제설제 대체물 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211967751", "object": "캐나다의 원주율민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211968609", "object": "수처리 및 폐수 처리 시스템", "problem": "산업 및 지역 사회의 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211978194", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211977986", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211867739", "object": "상업적 육계 시스템에서의 생산 손실", "problem": "SNE로 인한 생산 성능 저하 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211942538", "object": "지하수에서의 PFAS 제거", "problem": "상업적 PFAS 흡착제의 제한된 AOF 제거", "relevant": true, "model": "gpt-4o-mini"}

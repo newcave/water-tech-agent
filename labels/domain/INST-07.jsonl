@@ -613,3 +613,4 @@
 {"id": "W7208812919", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "웨이 강 유역의 수리 및 퇴적 과정", "problem": "인간 활동과 기후 변화가 수리 및 퇴적 과정에 미치는 영향 이해하기"}
 {"id": "W7211867447", "domain_primary": "W1", "domain_secondary": ["W2"], "confidence": 0.8, "domain_ver": "v0.1", "object": "산악 지역의 기후 변화 영향", "problem": "기후 변화로 인한 물 부족과 홍수 문제 해결"}
 {"id": "W7211898790", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 품질", "problem": "수자원 품질 저하 문제 해결"}
+{"id": "W7211965532", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지진에 의한 산사태", "problem": "예측하기 어려운 문제 해결"}

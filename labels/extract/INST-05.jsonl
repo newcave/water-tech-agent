@@ -1451,3 +1451,11 @@
 {"id": "W7211895160", "object": "지하 펌프 저장 수력 발전 시스템", "problem": "기존 광산 인프라 재사용을 통한 에너지 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211877995", "object": "Częstochowa County의 수력 발전 가능성", "problem": "소규모 수력 발전소 건설 또는 재활성화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211883617", "object": "인도의 전력 부문", "problem": "전력 생산 및 저장 대안 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211941706", "object": "중앙아시아의 수력 발전 잠재력", "problem": "수력 발전 자원의 활용을 극대화하기 위한 장애물 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211943620", "object": "고품질 탄소 나노튜브", "problem": "버려진 폴리올레핀 분리막의 탄소화 제어", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211960238", "object": "서아프리카 댐 유역의 기후 리스크", "problem": "기후 변화가 유입 패턴과 수력 발전에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211960806", "object": "중앙아시아의 수력 발전 잠재력", "problem": "수력 발전의 지속 가능한 개발을 위한 장벽 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211963864", "object": "전력 공급 예측", "problem": "정확한 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211975677", "object": "발티스탄 지역의 수력 발전 인프라", "problem": "산악 재해에 대한 노출 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211967301", "object": "전력 시스템의 안정성", "problem": "재생 가능 에너지 변동성으로 인한 운영 일정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171697440", "object": "북유럽 및 발트 국가의 에너지 시스템", "problem": "탄소 중립성 경로 식별하기", "relevant": true, "model": "gpt-4o-mini"}

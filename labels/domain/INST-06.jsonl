@@ -3263,3 +3263,12 @@
 {"id": "W7211887048", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "계절성 눈 수분량 및 눈 깊이", "problem": "계절성 눈 모니터링의 문제 해결"}
 {"id": "W7211910219", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양-대기 인터페이스에서의 방사선 전송 정확도", "problem": "모델 계산의 정확도 향상"}
 {"id": "W7211913910", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔 히말라야 지역의 환경", "problem": "홍수의 영향 평가"}
+{"id": "W7211941810", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Jalna City의 토지 이용 및 토지 피복 변화", "problem": "도시 성장과 환경 변화 분석"}
+{"id": "W7211953154", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이모 주의 27개 지방 정부 지역의 토지 피복 통계", "problem": "신뢰할 수 있는 토지 피복 지표 생성"}
+{"id": "W7211873485", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계", "problem": "석유 유출 탐지"}
+{"id": "W7211903638", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 호주 지하수 자원", "problem": "지하수 고갈 원인 재평가"}
+{"id": "W7211919176", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 엽록소 농도", "problem": "정확한 해양 엽록소 회수 개선"}
+{"id": "W7211874521", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수의 클로로필-a 농도", "problem": "클로로필-a 농도 예측 개선"}
+{"id": "W7211879966", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 얼음 모니터링", "problem": "홍수 예측 및 긴급 대응을 위한 자동화 도구 개발"}
+{"id": "W7211932586", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Kuta Beach의 해안 퇴적물 역학 및 수질", "problem": "해안 개발에 따른 환경 변화 모니터링"}
+{"id": "W7211954153", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Moundou 지역의 건강 위험", "problem": "홍수 관련 건강 위험을 해결하기 위한 통합 관리 필요"}
