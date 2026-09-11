@@ -634,3 +634,6 @@
 {"id": "W7211867447", "object": "산악 지역의 기후 변화 영향", "problem": "기후 변화로 인한 물 부족과 홍수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211898790", "object": "수자원 품질", "problem": "수자원 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211965532", "object": "지진에 의한 산사태", "problem": "예측하기 어려운 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212041283", "object": "일일 강수량 예측", "problem": "정확한 예측을 위한 기계 학습 모델 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211960821", "object": "Bharatpur 대도시의 도시 열섬 효과", "problem": "도시 열섬 효과의 동태를 정량화하고 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212027261", "object": "복잡한 네트워크 및 과학 시스템", "problem": "그래프 구조를 감사 가능한 과학적 객체로 다루기", "relevant": true, "model": "gpt-4o-mini"}

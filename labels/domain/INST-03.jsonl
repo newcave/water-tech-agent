@@ -4015,3 +4015,24 @@
 {"id": "W7211977986", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율 민족", "problem": "체계적 억압과 문화적 제노사이드 해결"}
 {"id": "W7211867739", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상업적 육계 시스템에서의 생산 손실", "problem": "SNE로 인한 생산 성능 저하 해결"}
 {"id": "W7211942538", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수에서의 PFAS 제거", "problem": "상업적 PFAS 흡착제의 제한된 AOF 제거"}
+{"id": "W7161721452", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전하게 관리되는 음용수 접근성", "problem": "물 관련 질병 문제 해결"}
+{"id": "W7211986123", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전하게 관리되는 음용수 접근성", "problem": "물 관련 질병 문제 해결"}
+{"id": "W7211996857", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공 건강", "problem": "위생 및 위생 시설 부족 문제 해결"}
+{"id": "W7212003894", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물속의 디젤 오염물질", "problem": "디젤 농도 측정"}
+{"id": "W7212020166", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 건강", "problem": "위생과 위생 시설 부족 문제 해결"}
+{"id": "W7212022500", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 물과 폐수", "problem": "정수 처리 개선"}
+{"id": "W7212023641", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물속의 디젤 오염물질", "problem": "디젤 농도 측정"}
+{"id": "W7212024329", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미생물군집", "problem": "미생물군집을 생물학적 시스템으로 연구하기 위한 데이터 과학의 프레임워크 구축"}
+{"id": "W7212026897", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전한 식수 접근성", "problem": "중앙 집중식 처리 부족 문제 해결"}
+{"id": "W7212040763", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폴리에틸렌 테레프탈레이트 미세 및 나노플라스틱 입자", "problem": "입자의 친수성 조절"}
+{"id": "W7212046458", "domain_primary": "W5", "domain_secondary": ["W7"], "confidence": 0.8, "domain_ver": "v0.1", "object": "기존 수도 공급 시스템의 안전성", "problem": "안전성 평가 문제 해결"}
+{"id": "W7212060070", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "삼킴 장애", "problem": "풍선 확장 치료의 효능 평가"}
+{"id": "W7212059897", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 물 자원 관리", "problem": "물 자원의 불균형 문제 해결"}
+{"id": "W7212071332", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 물 자원", "problem": "물 자원의 불균형 문제 해결"}
+{"id": "W7212076858", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "원인 불명의 만성 신장 질환", "problem": "질병 진행 완화 및 예방"}
+{"id": "W7211947216", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농촌 지역의 안전한 식수 접근성", "problem": "식수의 법적 적합성 검증"}
+{"id": "W7212015178", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청소년 스트레스에 의해 유도된 파르발부민 GABAergic 인터뉴론 결핍", "problem": "스트레스에 의한 행동 및 분자적 이상 방지"}
+{"id": "W7212016195", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장내 미생물군", "problem": "스트레스 유발 식사 행동의 역할을 밝히기"}
+{"id": "W7212039131", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기분 장애", "problem": "리튬 치료의 장기적 효과와 부작용 이해하기"}
+{"id": "W7212041082", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청소년 우울증 모델", "problem": "우울증 관련 신경 메커니즘 규명"}
+{"id": "W7212039896", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가정의 물, 위생 및 위생 서비스 접근성", "problem": "지식 및 위생 관행 개선"}

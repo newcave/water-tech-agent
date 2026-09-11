@@ -3310,3 +3310,11 @@
 {"id": "W7211879966", "object": "강 얼음 모니터링", "problem": "홍수 예측 및 긴급 대응을 위한 자동화 도구 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211932586", "object": "Kuta Beach의 해안 퇴적물 역학 및 수질", "problem": "해안 개발에 따른 환경 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211954153", "object": "Moundou 지역의 건강 위험", "problem": "홍수 관련 건강 위험을 해결하기 위한 통합 관리 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211994119", "object": "Sultansazlığı 습지 복합체", "problem": "수생 생태계와 조류 생물 다양성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212035962", "object": "Sultansazlığı 습지 복합체", "problem": "수생 생태계와 조류 다양성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212056973", "object": "리베리아 부카난의 잠재적 간섭 해초 초원", "problem": "해초 분포 및 환경 조건 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212071323", "object": "리베리아 부카난의 잠재적 간섭 해초 초원", "problem": "해초 분포 및 환경 조건 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212081241", "object": "담수 생태계", "problem": "예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211976305", "object": "Baiyangdian의 수질", "problem": "수질 모니터링의 효율성과 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212023311", "object": "AI 기반 스마트 농업 플랫폼", "problem": "녹색 가치 평가를 위한 정량적 프레임워크 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211970568", "object": "과수원 관개 관리", "problem": "관개 최적화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

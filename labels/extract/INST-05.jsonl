@@ -1459,3 +1459,9 @@
 {"id": "W7211975677", "object": "발티스탄 지역의 수력 발전 인프라", "problem": "산악 재해에 대한 노출 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211967301", "object": "전력 시스템의 안정성", "problem": "재생 가능 에너지 변동성으로 인한 운영 일정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7171697440", "object": "북유럽 및 발트 국가의 에너지 시스템", "problem": "탄소 중립성 경로 식별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212005299", "object": "하천 생태계의 열적 서식지", "problem": "열적 층화 조절 및 선택적 배수의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212031259", "object": "시짱 지역의 수력 발전 인프라", "problem": "전력 생산을 위한 자원 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212066798", "object": "도시의 물 분배 네트워크에서의 에너지 회수 잠재력", "problem": "과잉 압력 회수", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211988526", "object": "스위스 연방 철도(SBB)의 에너지 전략", "problem": "에너지 전환에 따른 투자 및 조달 선택 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212080464", "object": "나이지리아의 지속 가능한 전력 공급", "problem": "조수 에너지를 활용한 전력 생성 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212026466", "object": "전 세계 전력 시스템의 조정 위험", "problem": "수력 기후 충격에 대한 전력 시스템의 반응 이해하기", "relevant": true, "model": "gpt-4o-mini"}

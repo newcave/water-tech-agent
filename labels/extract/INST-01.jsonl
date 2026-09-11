@@ -1840,3 +1840,4 @@
 {"id": "W7211951684", "object": "하수관 상태", "problem": "하수관의 개별 결함 이해 및 모델링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211973914", "object": "물 손실 및 수질 저하", "problem": "관로 누수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211944601", "object": "CCGT 발전소의 운영 성능", "problem": "기후 변화가 CCGT 발전소의 성능에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211988997", "object": "지방 공공 유틸리티의 지속 가능한 개발 목표(SDGs) 통합", "problem": "SDGs의 상징적 또는 실질적 참여 여부 조사", "relevant": true, "model": "gpt-4o-mini"}

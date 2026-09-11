@@ -492,3 +492,7 @@
 {"id": "W7204900213", "object": "브라질의 광업 부문", "problem": "환경 투명성 및 사회적 책임 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207739094", "object": "홍수 위험 평가 및 댐 안전성", "problem": "정확한 홍수 경고 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211928789", "object": "콘크리트 댐 변형", "problem": "변형 예측의 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212029518", "object": "제방 댐의 강우 유도 지하수 반응", "problem": "강우 유도 지하수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212041733", "object": "고지형 토사댐의 구조적 안정성", "problem": "크랙 발생 및 전파 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212084513", "object": "제방 댐의 강우 유도 지하수 반응", "problem": "강우 유도 지하수 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212016451", "object": "tailings storage facilities", "problem": "안전한 운영을 위한 의사결정 지원", "relevant": true, "model": "gpt-4o-mini"}
