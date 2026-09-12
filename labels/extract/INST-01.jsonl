@@ -1841,3 +1841,8 @@
 {"id": "W7211973914", "object": "물 손실 및 수질 저하", "problem": "관로 누수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211944601", "object": "CCGT 발전소의 운영 성능", "problem": "기후 변화가 CCGT 발전소의 성능에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211988997", "object": "지방 공공 유틸리티의 지속 가능한 개발 목표(SDGs) 통합", "problem": "SDGs의 상징적 또는 실질적 참여 여부 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212134463", "object": "대규모 컴퓨팅 시설 및 데이터 센터의 자원 소비와 환경 영향", "problem": "자원 소비의 검증 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212148124", "object": "카타르의 국가 물 보존 및 안전 시스템", "problem": "물 낭비를 방지하기 위한 물 결정 최적화 및 조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212171577", "object": "카타르의 국가 물 보존 및 안전 시스템", "problem": "물 낭비를 방지하기 위한 물 결정 지원 및 운영 지능 능력 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212178299", "object": "대규모 컴퓨팅 시설 및 데이터 센터의 자원 소비와 환경 영향", "problem": "자원 소비의 검증 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211987307", "object": "수자원 자산 관리", "problem": "자산 노후화 예측", "relevant": true, "model": "gpt-4o-mini"}

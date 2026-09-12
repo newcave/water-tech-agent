@@ -1440,3 +1440,7 @@
 {"id": "W7211988526", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스위스 연방 철도(SBB)의 에너지 전략", "problem": "에너지 전환에 따른 투자 및 조달 선택 최적화"}
 {"id": "W7212080464", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아의 지속 가능한 전력 공급", "problem": "조수 에너지를 활용한 전력 생성 가능성 평가"}
 {"id": "W7212026466", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 전력 시스템의 조정 위험", "problem": "수력 기후 충격에 대한 전력 시스템의 반응 이해하기"}
+{"id": "W7212110939", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "황금샤 저수지의 수자원 관리", "problem": "수자원 공급과 발전 간의 상충 문제 해결"}
+{"id": "W7212180609", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아의 농촌 전력 공급", "problem": "전력 공급의 불충분함과 신뢰성 부족 해결"}
+{"id": "W7212121819", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "통합 재생 가능 에너지 시스템", "problem": "신뢰성 있는 저탄소 에너지 공급을 위한 증거 기반의 단편화 문제 해결"}
+{"id": "W7212170595", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "통합 재생 가능 에너지 시스템", "problem": "신뢰할 수 있는 저탄소 에너지 공급을 위한 증거 기반의 단편화 문제 해결"}

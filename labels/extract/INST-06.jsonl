@@ -3318,3 +3318,6 @@
 {"id": "W7211976305", "object": "Baiyangdian의 수질", "problem": "수질 모니터링의 효율성과 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212023311", "object": "AI 기반 스마트 농업 플랫폼", "problem": "녹색 가치 평가를 위한 정량적 프레임워크 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211970568", "object": "과수원 관개 관리", "problem": "관개 최적화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212151431", "object": "Dimbhe 저수지의 토지 이용 및 토지 피복 변화", "problem": "기후 변화에 따른 환경 및 기후 매개변수의 변동 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202386414", "object": "관개 감귤 과수원", "problem": "작물 물 요구량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171640608", "object": "반건조 생태계의 수자원 및 탄소 플럭스", "problem": "정확한 수자원 및 탄소 플럭스 정량화", "relevant": true, "model": "gpt-4o-mini"}

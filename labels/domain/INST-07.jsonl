@@ -617,3 +617,5 @@
 {"id": "W7212041283", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "일일 강수량 예측", "problem": "정확한 예측을 위한 기계 학습 모델 비교"}
 {"id": "W7211960821", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Bharatpur 대도시의 도시 열섬 효과", "problem": "도시 열섬 효과의 동태를 정량화하고 이해하기"}
 {"id": "W7212027261", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "복잡한 네트워크 및 과학 시스템", "problem": "그래프 구조를 감사 가능한 과학적 객체로 다루기"}
+{"id": "W7212074544", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산악 지역의 샘물 공급 시스템", "problem": "샘물 스트레스 평가 및 진단"}
+{"id": "W7212142740", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물리 기반 기계 학습 모델", "problem": "앙상블 전략의 예측 성능 개선 여부 조사"}

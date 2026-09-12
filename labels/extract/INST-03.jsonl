@@ -4117,3 +4117,12 @@
 {"id": "W7212039131", "object": "기분 장애", "problem": "리튬 치료의 장기적 효과와 부작용 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212041082", "object": "청소년 우울증 모델", "problem": "우울증 관련 신경 메커니즘 규명", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212039896", "object": "가정의 물, 위생 및 위생 서비스 접근성", "problem": "지식 및 위생 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212107353", "object": "Ossah 강의 수질과 공공 건강", "problem": "수질 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212124356", "object": "출생 시 약물 노출 아동의 신경 발달 결과", "problem": "출생 시 약물 노출로 인한 장기적인 신경 발달 결핍 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212181544", "object": "음용수의 소독 부산물", "problem": "신속한 검출 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212190051", "object": "음용수의 소독 부산물", "problem": "인체 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212193428", "object": "물 처리 교육 프로그램", "problem": "최신 기술을 교육 과정에 통합하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212195479", "object": "음용수 안전성", "problem": "약물 및 농약의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212188102", "object": "빠른 모래 필터", "problem": "필터 설계 및 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202277477", "object": "음용수 시스템", "problem": "PFAS 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212190179", "object": "수면수 및 지하수 보호 지역", "problem": "특별 보호가 필요한 지역 지정", "relevant": true, "model": "gpt-4o-mini"}

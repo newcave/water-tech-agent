@@ -493,3 +493,4 @@
 {"id": "W7212041733", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고지형 토사댐의 구조적 안정성", "problem": "크랙 발생 및 전파 예측"}
 {"id": "W7212084513", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방 댐의 강우 유도 지하수 반응", "problem": "강우 유도 지하수 반응 분석"}
 {"id": "W7212016451", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "tailings storage facilities", "problem": "안전한 운영을 위한 의사결정 지원"}
+{"id": "W7212152806", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카 메기 (Clarias gariepinus)", "problem": "세균 및 곰팡이 오염물질 조사"}
