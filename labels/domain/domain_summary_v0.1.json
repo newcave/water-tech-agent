@@ -3,7 +3,7 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-09-12 05:11 UTC",
+  "generated_at": "2026-09-12 11:17 UTC",
   "total": 12422,
   "domains": {
     "W1": {
