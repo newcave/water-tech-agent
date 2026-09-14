@@ -1846,3 +1846,9 @@
 {"id": "W7212171577", "object": "카타르의 국가 물 보존 및 안전 시스템", "problem": "물 낭비를 방지하기 위한 물 결정 지원 및 운영 지능 능력 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212178299", "object": "대규모 컴퓨팅 시설 및 데이터 센터의 자원 소비와 환경 영향", "problem": "자원 소비의 검증 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211987307", "object": "수자원 자산 관리", "problem": "자산 노후화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212354477", "object": "인도의 스마트 도시", "problem": "지속 가능한 도시 개발을 위한 혁신적 접근법 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212365391", "object": "인도의 스마트 도시", "problem": "지속 가능한 도시 개발을 위한 혁신적 접근법 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212255438", "object": "홍수 조절 서비스", "problem": "원거리 영향 무시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212219904", "object": "스리랑카 네곰보 및 푸탈람의 맹그로브 연관 석호의 어류 다양성", "problem": "어류 군집 구성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212315432", "object": "식수에서의 다이클로로아세토니트릴(DCAN) 형성", "problem": "DCAN 형성에 기여하는 인위적 방향족 화합물의 기여 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212354155", "object": "유제품 산업의 폐수", "problem": "효율적인 처리 및 자원 회수 방안 모색", "relevant": true, "model": "gpt-4o-mini"}

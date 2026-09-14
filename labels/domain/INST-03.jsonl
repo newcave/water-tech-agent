@@ -4045,3 +4045,25 @@
 {"id": "W7212188102", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "빠른 모래 필터", "problem": "필터 설계 및 운영 개선"}
 {"id": "W7202277477", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 시스템", "problem": "PFAS 문제 해결"}
 {"id": "W7212190179", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수면수 및 지하수 보호 지역", "problem": "특별 보호가 필요한 지역 지정"}
+{"id": "W7212370834", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 폴리스티렌 미세플라스틱", "problem": "제거 효율 향상"}
+{"id": "W7212372497", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Navoi 지역의 음용수 품질", "problem": "미생물 안전성 평가"}
+{"id": "W7212377457", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아쿠레 대도시의 음용수 품질", "problem": "음용수 오염과 관련 질병 패턴 이해하기"}
+{"id": "W7212402909", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Navoi 지역의 음용수 품질", "problem": "미생물 안전성 평가"}
+{"id": "W7212227321", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율 민족", "problem": "문화적 제노사이드 해결"}
+{"id": "W7212256736", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도적 생존 인프라", "problem": "위기 상황에서 기본 생존 필수품 연결"}
+{"id": "W7212259637", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "터키의 음용수 공급 시스템", "problem": "PET 병 사용으로 인한 환경 영향 감소"}
+{"id": "W7212260557", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주율 민족", "problem": "문화적 제노사이드 해결"}
+{"id": "W7212287593", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Awajún 성인들의 물과 식량 불안정성", "problem": "물과 식량 불안정성의 상관관계 분석"}
+{"id": "W7212292446", "domain_primary": "W4", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전한 식수", "problem": "우기 동안 수집된 빗물을 안전하게 저장하고 처리하는 방법"}
+{"id": "W7212292835", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도적 생존 인프라", "problem": "위기 상황에서 기본 생존 필수품 연결"}
+{"id": "W7212293047", "domain_primary": "W4", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전한 식수", "problem": "우기 동안 수집된 빗물을 안전하게 저장하고 처리하는 방법"}
+{"id": "W7212382500", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카두나 강의 수질 특성 및 중금속 농도", "problem": "농약 오염으로 인한 수질 저하 및 중금속 이동 촉진"}
+{"id": "W7212401542", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 농촌 표면수", "problem": "NH4+-N 제거"}
+{"id": "W7212337418", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "슬러지 처리", "problem": "습기 제거, 안정화 및 위생 처리 평가"}
+{"id": "W7212141076", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미세플라스틱의 생체독성", "problem": "염소 소독에 의한 생체독성 증가"}
+{"id": "W7212275757", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS의 환경 오염 및 건강 위험 감소"}
+{"id": "W7212294731", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수", "problem": "염분 제거"}
+{"id": "W7212316161", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가축 음용수 시스템의 수질", "problem": "바이오필름 지속 문제 해결"}
+{"id": "W7212356734", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바이오솔리드가 첨가된 토양의 인(P) 이동성", "problem": "인(P) 손실을 줄이는 전략 평가"}
+{"id": "W7212234442", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "병입수 생산 과정", "problem": "생산 과정의 품질 및 안정성 평가"}
+{"id": "W7202174423", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생리적 및 생산적 성능", "problem": "여름 열 스트레스에 따른 기능 저하 개선"}
