@@ -1447,3 +1447,6 @@
 {"id": "W7212391755", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 분배 시스템의 전압 상태", "problem": "전압 저하 문제 해결"}
 {"id": "W7212394818", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사하라 이남 아프리카의 재생 가능 에너지 전환", "problem": "정치적, 제도적, 사회기술적 조건에 따른 재생 가능 에너지 전환 결과의 차이 설명"}
 {"id": "W7212308597", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카메룬의 지열 에너지 잠재력", "problem": "지열 자원 개발의 장벽 극복"}
+{"id": "W7212450173", "domain_primary": "W8", "domain_secondary": ["W2"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tendaho Dam의 수력 발전", "problem": "기존 관개 기능을 유지하면서 수력 발전 가능성 평가"}
+{"id": "W7212436684", "domain_primary": "W8", "domain_secondary": ["W2"], "confidence": 0.8, "domain_ver": "v0.1", "object": "저수지의 수력 에너지 이용 효율", "problem": "유입구에서의 헤드 손실 감소"}
+{"id": "W7212457036", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프란시스 터빈의 성능", "problem": "부하 수준 변화에 따른 성능 저하 분석"}

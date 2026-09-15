@@ -747,3 +747,4 @@
 {"id": "W7210266046", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모로코 아틀라스 산맥의 눈 덮임", "problem": "눈 동역학과 계절 수자원에 미치는 영향 이해"}
 {"id": "W7211898790", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 품질", "problem": "수자원 품질 저하 문제 해결"}
 {"id": "W7212251709", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "라셈의 고고학적 유적 분포", "problem": "환경 조건이 역사적 토지 이용 전략에 미친 영향 이해하기"}
+{"id": "W7203975861", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 재충전, 실제 증발산, 토양 수분", "problem": "간접 측정 방법으로 수문학적 모델링을 통한 변수 추정"}

@@ -4067,3 +4067,6 @@
 {"id": "W7212356734", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바이오솔리드가 첨가된 토양의 인(P) 이동성", "problem": "인(P) 손실을 줄이는 전략 평가"}
 {"id": "W7212234442", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "병입수 생산 과정", "problem": "생산 과정의 품질 및 안정성 평가"}
 {"id": "W7202174423", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생리적 및 생산적 성능", "problem": "여름 열 스트레스에 따른 기능 저하 개선"}
+{"id": "W7212429447", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주민", "problem": "문화적 제노사이드 해결"}
+{"id": "W7212367952", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미세플라스틱", "problem": "미세플라스틱의 발생, 탐지 및 완화 이해"}
+{"id": "W7212437745", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "근위축성 측삭경화증(ALS)", "problem": "ALS 병리 개선"}

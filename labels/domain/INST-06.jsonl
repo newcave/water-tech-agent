@@ -3295,3 +3295,6 @@
 {"id": "W7208815747", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카스피해 시스템", "problem": "물리적 과정 이해하기"}
 {"id": "W7208826477", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카스피해 시스템", "problem": "물리적 과정의 변화를 이해하기"}
 {"id": "W7212369792", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원 정보", "problem": "지하수 추출의 과도함과 기후 변화로 인한 가용성 감소 문제 해결"}
+{"id": "W7212438309", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "동남아시아 도시의 자연 냉각 인프라", "problem": "자연 냉각 인프라 손실의 열적 영향 비교"}
+{"id": "W7212453323", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kopa Dam의 상대 수심 맵", "problem": "상대 수심 변화를 이해하고 공간적으로 특성화하기"}
+{"id": "W7212421163", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수역 추출", "problem": "연속 경계 구분 및 좁은 수역 인식 개선"}

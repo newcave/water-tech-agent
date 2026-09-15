@@ -643,3 +643,5 @@
 {"id": "W7212367766", "object": "fractional-order advection–diffusion equations", "problem": "모델의 예측 가능성을 높이기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212384624", "object": "fractional-order advection–diffusion 모델", "problem": "모델의 예측 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212387954", "object": "Bac Hung Hai 관개 시스템의 수질", "problem": "장기적인 수질 저하 및 오염 원인 진단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212431394", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7212455928", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
