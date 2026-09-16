@@ -791,3 +791,4 @@
 {"id": "W7211898790", "object": "수자원 품질", "problem": "수자원 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212251709", "object": "라셈의 고고학적 유적 분포", "problem": "환경 조건이 역사적 토지 이용 전략에 미친 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203975861", "object": "지하수 재충전, 실제 증발산, 토양 수분", "problem": "간접 측정 방법으로 수문학적 모델링을 통한 변수 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212587279", "object": "토양 수분", "problem": "정확한 토양 수분 추정", "relevant": true, "model": "gpt-4o-mini"}

@@ -1450,3 +1450,9 @@
 {"id": "W7212450173", "domain_primary": "W8", "domain_secondary": ["W2"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tendaho Dam의 수력 발전", "problem": "기존 관개 기능을 유지하면서 수력 발전 가능성 평가"}
 {"id": "W7212436684", "domain_primary": "W8", "domain_secondary": ["W2"], "confidence": 0.8, "domain_ver": "v0.1", "object": "저수지의 수력 에너지 이용 효율", "problem": "유입구에서의 헤드 손실 감소"}
 {"id": "W7212457036", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프란시스 터빈의 성능", "problem": "부하 수준 변화에 따른 성능 저하 분석"}
+{"id": "W7212603387", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Arca 수력 발전소의 발전량", "problem": "일일 발전량 예측 개선"}
+{"id": "W7212667605", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kalammawadi Dam의 수자원", "problem": "수자원 활용 개선"}
+{"id": "W7212792076", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 예측", "problem": "일일 수력 발전량 예측 개선"}
+{"id": "W7212905509", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "앙골라의 전력 부문", "problem": "전력 전환 경로에 따른 경제적, 인구학적, 환경적 영향 평가"}
+{"id": "W7212971812", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지", "problem": "온실가스 배출 감소를 위한 전환"}
+{"id": "W7212481231", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Yamdrok Lake의 수위 변화", "problem": "수위 변화의 원인 규명 및 기후 변화와 인간 활동의 상대적 영향 정량화"}

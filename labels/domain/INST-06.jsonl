@@ -3298,3 +3298,14 @@
 {"id": "W7212438309", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "동남아시아 도시의 자연 냉각 인프라", "problem": "자연 냉각 인프라 손실의 열적 영향 비교"}
 {"id": "W7212453323", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kopa Dam의 상대 수심 맵", "problem": "상대 수심 변화를 이해하고 공간적으로 특성화하기"}
 {"id": "W7212421163", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수역 추출", "problem": "연속 경계 구분 및 좁은 수역 인식 개선"}
+{"id": "W7212518427", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "여름 수확 작물", "problem": "정확한 작물 추출"}
+{"id": "W7212670194", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tharthar Lake의 수온 및 증발량", "problem": "호수의 수온 및 증발량 변동 조사"}
+{"id": "W7212965144", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "키암부 카운티의 생태-수문기후 조건", "problem": "토지 이용 변화가 생태-수문기후 조건에 미치는 영향 평가"}
+{"id": "W7213002666", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성 또는 공중 장면", "problem": "복합 지리 공간 지시문에서 정보 추출"}
+{"id": "W7213136917", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계", "problem": "수산 냉각 원자력 발전소의 영향 평가"}
+{"id": "W7213179964", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아 이그보자이예 지역의 환경", "problem": "소규모 광업으로 인한 토지 황폐화와 오염 문제 해결"}
+{"id": "W7212798727", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수역 수질 모니터링", "problem": "극단적인 센서 제니스 각도에서 대기 보정 문제 해결"}
+{"id": "W7212474848", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kherson과 Zaporizhzhia 지역의 농업 생산성", "problem": "전쟁으로 인한 관개 부족 문제 해결"}
+{"id": "W7212569958", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Water Hyacinth (WHY)", "problem": "모니터링 및 관리 개선"}
+{"id": "W7212829126", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Water Hyacinth (WHY)", "problem": "모니터링 및 관리 개선"}
+{"id": "W7213009069", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kherson과 Zaporizhzhia 지역의 농업 생산성", "problem": "전쟁으로 인한 관개 부족 문제 해결"}

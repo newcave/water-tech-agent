@@ -4070,3 +4070,9 @@
 {"id": "W7212429447", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 원주민", "problem": "문화적 제노사이드 해결"}
 {"id": "W7212367952", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미세플라스틱", "problem": "미세플라스틱의 발생, 탐지 및 완화 이해"}
 {"id": "W7212437745", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "근위축성 측삭경화증(ALS)", "problem": "ALS 병리 개선"}
+{"id": "W7213181851", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "신장 결석", "problem": "신장 결석 치료의 효과 개선"}
+{"id": "W7212552028", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건물 배관의 미생물 군집", "problem": "기회주의 병원균 성장 억제"}
+{"id": "W7212657692", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간 손상", "problem": "과산화수소로 유도된 산화적 간 손상 개선"}
+{"id": "W7213055044", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "남아프리카 북서주에서의 음용수 시스템", "problem": "음용수 처리 성능과 건강 위험 평가"}
+{"id": "W7213138774", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 음용수", "problem": "수질 오염 문제 해결"}
+{"id": "W7213071314", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 화학 오염", "problem": "화학 오염 수준을 정량적으로 합성하고 건강 위험 평가"}

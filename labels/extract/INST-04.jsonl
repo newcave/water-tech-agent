@@ -499,3 +499,4 @@
 {"id": "W7212152806", "object": "아프리카 메기 (Clarias gariepinus)", "problem": "세균 및 곰팡이 오염물질 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212297546", "object": "노후 콘크리트 중력 댐", "problem": "노후화로 인한 안전성 저하 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212422375", "object": "암석 충전 콘크리트 댐", "problem": "구조적 효율성 및 안전성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213101984", "object": "댐의 누수로 인한 침투장 왜곡", "problem": "침투장 왜곡의 특성과 진화를 규명하기", "relevant": true, "model": "gpt-4o-mini"}
