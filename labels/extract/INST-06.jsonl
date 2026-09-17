@@ -3347,3 +3347,19 @@
 {"id": "W7212569958", "object": "Water Hyacinth (WHY)", "problem": "모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212829126", "object": "Water Hyacinth (WHY)", "problem": "모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213009069", "object": "Kherson과 Zaporizhzhia 지역의 농업 생산성", "problem": "전쟁으로 인한 관개 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213228080", "object": "Nedre Demmevatnet 호수", "problem": "GLOF 발생 시기와 호수 수위 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213235746", "object": "해양 엽록소 농도", "problem": "정확한 해양 엽록소 회수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213246924", "object": "해안 생태계", "problem": "해안 숲의 변화 이해 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213273690", "object": "페루의 743개 댐", "problem": "저수지 용적을 위성 데이터로 재구성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213279696", "object": "페루의 743개 댐", "problem": "저수지 용적 곡선의 재구성 및 지역화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213293788", "object": "Kainji Lake의 부유성 조류", "problem": "부유성 조류의 시공간적 동태 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213308872", "object": "하층 대기(LT)의 수분 열역학 구조", "problem": "3D 수분 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213331772", "object": "유럽의 총 생물 생산량", "problem": "온도 및 수자원 관련 스트레스의 영향을 포착하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213346236", "object": "알제리 북서부의 가뭄 상태", "problem": "가뭄의 빈도와 강도 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213357755", "object": "강 유량", "problem": "데이터 부족 지역에서 유량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213374247", "object": "Стрижень 강의 수질", "problem": "수질 모니터링 및 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213280460", "object": "동부 갠지스의 반건조 유역", "problem": "가뭄 상태 평가 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213241820", "object": "해양 식물플랑크톤 다양성", "problem": "탄소 생물량과의 관계 변동성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213349616", "object": "수자원 저장 및 이동", "problem": "원격 감지를 수문학적 과학 질문에 통합하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172429935", "object": "Virunga 화산 시스템", "problem": "화산 및 지진 활동에 따른 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172464965", "object": "Virunga 화산 시스템", "problem": "화산 및 지진 활동에 따른 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}

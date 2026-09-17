@@ -1788,3 +1788,8 @@
 {"id": "W7212786023", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 방어 및 비상 관리", "problem": "즉각적인 공학 문제 해결"}
 {"id": "W7212840547", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "그리스의 중소 수도 사업체에서의 IoT 기반 물 네트워크 플랫폼", "problem": "센서에서 결정으로의 연결을 개선하려는 문제"}
 {"id": "W7212931780", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 방어 및 비상 관리", "problem": "즉각적인 공학 문제 해결"}
+{"id": "W7213346034", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 유틸리티 인프라", "problem": "관리 최적화"}
+{"id": "W7213377297", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 및 연안 지역", "problem": "해양 지역 평가 및 카다스트르 회계 방법론 개발"}
+{"id": "W7213255401", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "조직 성과", "problem": "위험 관리 활동의 기여도 분석"}
+{"id": "W7213240236", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Universitas Negeri Surabaya Teaching Hospital", "problem": "병원 개발의 기술적 및 재정적 타당성 평가"}
+{"id": "W7201859201", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "에너지 효율성 및 지속 가능성 개선"}

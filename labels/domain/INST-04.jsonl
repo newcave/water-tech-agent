@@ -497,3 +497,5 @@
 {"id": "W7212297546", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노후 콘크리트 중력 댐", "problem": "노후화로 인한 안전성 저하 평가"}
 {"id": "W7212422375", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "암석 충전 콘크리트 댐", "problem": "구조적 효율성 및 안전성 향상"}
 {"id": "W7213101984", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 누수로 인한 침투장 왜곡", "problem": "침투장 왜곡의 특성과 진화를 규명하기"}
+{"id": "W7213365067", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 중력댐의 안전성과 내구성", "problem": "구조 건강 모니터링 및 손상 평가"}
+{"id": "W7213287517", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아제르바이잔의 관개 저수지", "problem": "현재 위생 및 기술 상태 평가"}

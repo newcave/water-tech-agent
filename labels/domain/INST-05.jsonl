@@ -1456,3 +1456,14 @@
 {"id": "W7212905509", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "앙골라의 전력 부문", "problem": "전력 전환 경로에 따른 경제적, 인구학적, 환경적 영향 평가"}
 {"id": "W7212971812", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지", "problem": "온실가스 배출 감소를 위한 전환"}
 {"id": "W7212481231", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Yamdrok Lake의 수위 변화", "problem": "수위 변화의 원인 규명 및 기후 변화와 인간 활동의 상대적 영향 정량화"}
+{"id": "W7213236790", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 동적 시스템 응답", "problem": "정확한 모델링을 통한 동적 방정식 도출"}
+{"id": "W7213261326", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전기 소비의 환경적 영향", "problem": "전기 소비의 탄소 발자국과 물 발자국을 평가하기"}
+{"id": "W7213310227", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 발전", "problem": "기상 조건에 따른 발전 변화 원인 조사"}
+{"id": "W7213314832", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "핀란드 전력 시스템", "problem": "수력 발전 통합 분석"}
+{"id": "W7213319190", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 동적 시스템 반응", "problem": "정확한 모델링을 통한 동적 방정식 도출"}
+{"id": "W7213339197", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 하이브리드 발전소", "problem": "규제 지연과 비용 문제 해결"}
+{"id": "W7213356598", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Belo Monte–Pimental 수력 발전 복합체의 재생 가능 자원 다양화 및 전력 계획", "problem": "수력과 태양광 발전의 상호 보완성 평가"}
+{"id": "W7213276648", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아의 재생 가능 에너지 통합", "problem": "재생 가능 에너지의 전력망 통합을 위한 도전 과제 해결"}
+{"id": "W7213242683", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 집중형 수력 발전 시스템의 장비 상태", "problem": "고급 운영 및 유지보수 전략 필요"}
+{"id": "W7213310146", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 및 열병합 발전소의 활성 전력 출력 분배", "problem": "최적의 활성 전력 할당 방안 계산"}
+{"id": "W7213340135", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "녹색 에너지 시스템", "problem": "인식 수준 조사 및 사회 발전과 경제 성장과의 연관성 분석"}

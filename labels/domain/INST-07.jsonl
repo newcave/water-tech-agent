@@ -623,3 +623,6 @@
 {"id": "W7212367766", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "fractional-order advection–diffusion equations", "problem": "모델의 예측 가능성을 높이기"}
 {"id": "W7212384624", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "fractional-order advection–diffusion 모델", "problem": "모델의 예측 가능성 향상"}
 {"id": "W7212387954", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bac Hung Hai 관개 시스템의 수질", "problem": "장기적인 수질 저하 및 오염 원인 진단"}
+{"id": "W7213310227", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 발전", "problem": "기상 조건에 따른 발전 변화 원인 조사"}
+{"id": "W7213343809", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "열대 지역의 토지 퇴화", "problem": "기후 변화로 인한 다중 위험에 의한 토지 퇴화 식별"}
+{"id": "W7212470269", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정"}

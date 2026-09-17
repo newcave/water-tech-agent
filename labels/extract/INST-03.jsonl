@@ -4157,3 +4157,32 @@
 {"id": "W7213055044", "object": "남아프리카 북서주에서의 음용수 시스템", "problem": "음용수 처리 성능과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213138774", "object": "안전한 음용수", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213071314", "object": "지하수의 화학 오염", "problem": "화학 오염 수준을 정량적으로 합성하고 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213230937", "object": "Nun River의 수질", "problem": "안전한 음용수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213257548", "object": "브라질 연방구의 수 surface water quality", "problem": "공공 음용수 공급 및 관개에 대한 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213301864", "object": "Khuzestan province의 수자원", "problem": "BPA 노출로 인한 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213307665", "object": "신흥 오염물질(ECs)", "problem": "규제 및 관리의 복잡한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213329200", "object": "Téguéré 강 유역의 수질", "problem": "수질 오염 수준 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213222317", "object": "산업 폐수", "problem": "오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213234811", "object": "포카라 대도시의 음용수 품질", "problem": "음용수의 미생물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213262736", "object": "Sargodha Tehsil의 지하수 품질", "problem": "지하수의 음용수 적합성 평가 및 건강 위험 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213264827", "object": "기술적 재생 설치", "problem": "수명 연장에 기여하는 물질과 수원 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213273538", "object": "하수 슬러지에서 유래한 탄소", "problem": "As(V)와 Pb(II) 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213293319", "object": "콘크리트의 기계적 성능", "problem": "슬러지 사용으로 인한 기계적 강도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213312308", "object": "Giza 지역의 수자원과 생명 연장", "problem": "수명 연장과 재생 메커니즘 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213317201", "object": "perfluorooctane sulfonic acid toxicity in mice", "problem": "완화하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213328667", "object": "기자재의 수명 연장 및 재생", "problem": "재생 프로토콜의 두 가지 구성 요소 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213334133", "object": "지역 사회 기반의 수돗물 공급 시스템", "problem": "지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213336279", "object": "perfluorooctane sulfonic acid toxicity in mice", "problem": "완화하기 위한 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213338905", "object": "음용수 내 라돈 농도", "problem": "라돈 측정의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213339191", "object": "기자재의 수명 연장 및 재생", "problem": "재생 프로토콜의 두 가지 구성 요소 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213365709", "object": "물의 정화 성능", "problem": "전통 화학물질 대체제 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213318097", "object": "해수 및 다양한 폐수에서 정수된 물", "problem": "고효율 및 염분 내성을 위한 수열 균형 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213311218", "object": "대장염", "problem": "완화하려는 효과 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213283373", "object": "수질에서의 란탄 화합물", "problem": "란탄 화합물의 농도 검출 및 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213287044", "object": "안전한 식수", "problem": "염료 제거를 위한 효과적인 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213311378", "object": "흉부 대동맥류 및 복부 대동맥류", "problem": "대동맥류 발생 감소 및 생존율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213384616", "object": "수질에서의 란타넘 화합물", "problem": "란타넘 화합물의 농도 검출 및 정화 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213390720", "object": "안전한 식수", "problem": "염료 제거를 위한 효과적인 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213347154", "object": "음용수의 맛과 냄새 품질", "problem": "2-MIB와 지오스민 농도 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213226313", "object": "Krishna River water quality", "problem": "수질 악화 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213359456", "object": "Krishna River water quality", "problem": "수질 악화 해결", "relevant": true, "model": "gpt-4o-mini"}
