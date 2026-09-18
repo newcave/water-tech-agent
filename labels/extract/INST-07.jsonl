@@ -648,3 +648,4 @@
 {"id": "W7213310227", "object": "재생 가능 에너지 발전", "problem": "기상 조건에 따른 발전 변화 원인 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213343809", "object": "열대 지역의 토지 퇴화", "problem": "기후 변화로 인한 다중 위험에 의한 토지 퇴화 식별", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212470269", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213426424", "object": "증발산 동역학", "problem": "물 균형 접근법을 통한 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}

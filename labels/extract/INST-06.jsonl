@@ -3363,3 +3363,6 @@
 {"id": "W7213349616", "object": "수자원 저장 및 이동", "problem": "원격 감지를 수문학적 과학 질문에 통합하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7172429935", "object": "Virunga 화산 시스템", "problem": "화산 및 지진 활동에 따른 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7172464965", "object": "Virunga 화산 시스템", "problem": "화산 및 지진 활동에 따른 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213443079", "object": "Sargodha 지역의 토지 이용 및 토지 피복 변화", "problem": "도시 확장에 따른 농업 토지 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213432591", "object": "펀자브, 파키스탄의 농업 지역", "problem": "홍수 동역학 및 농업 노출 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213432312", "object": "벼 재배지", "problem": "벼 재배지 매핑", "relevant": true, "model": "gpt-4o-mini"}

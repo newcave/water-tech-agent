@@ -1862,3 +1862,7 @@
 {"id": "W7213255401", "object": "조직 성과", "problem": "위험 관리 활동의 기여도 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213240236", "object": "Universitas Negeri Surabaya Teaching Hospital", "problem": "병원 개발의 기술적 및 재정적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7201859201", "object": "지하수 자원", "problem": "에너지 효율성 및 지속 가능성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213446892", "object": "유틸리티 규모 태양광 발전소의 지속 가능성 성과", "problem": "다차원적 지속 가능성 성과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213461873", "object": "지역 공공 수자원 관리 성과", "problem": "재구성 후 성과 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213298074", "object": "UNESA Teaching Hospital", "problem": "의료 교육과 공공 의료 서비스 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208830278", "object": "남부 시나이 주의 담수 생산", "problem": "도시 개발 압력에 따른 담수 생산 개선", "relevant": true, "model": "gpt-4o-mini"}

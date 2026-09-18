@@ -502,3 +502,4 @@
 {"id": "W7213101984", "object": "댐의 누수로 인한 침투장 왜곡", "problem": "침투장 왜곡의 특성과 진화를 규명하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213365067", "object": "콘크리트 중력댐의 안전성과 내구성", "problem": "구조 건강 모니터링 및 손상 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213287517", "object": "아제르바이잔의 관개 저수지", "problem": "현재 위생 및 기술 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213446929", "object": "댐의 안전성과 건강", "problem": "현재 모니터링 접근법 평가", "relevant": true, "model": "gpt-4o-mini"}

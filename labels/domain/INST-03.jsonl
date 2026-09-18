@@ -4105,3 +4105,20 @@
 {"id": "W7213347154", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 맛과 냄새 품질", "problem": "2-MIB와 지오스민 농도 예측"}
 {"id": "W7213226313", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Krishna River water quality", "problem": "수질 악화 해결"}
 {"id": "W7213359456", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Krishna River water quality", "problem": "수질 악화 해결"}
+{"id": "W7213420048", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신생아의 감각-운동 반사", "problem": "감각-운동 반사 발달 개선"}
+{"id": "W7213451155", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대장암", "problem": "항암 효과 개선 및 증상 완화"}
+{"id": "W7213457582", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Central Alabama Water의 수돗물 품질", "problem": "수돗물 품질을 향상시키고 효율성을 개선하기"}
+{"id": "W7213460037", "domain_primary": "W0", "domain_secondary": ["W5"], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "안전한 식수 접근성 개선"}
+{"id": "W7213462484", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "닭의 장내 미생물 군집과 대사물질", "problem": "항생제 치료로 인한 내성 Campylobacter의 확산"}
+{"id": "W7213464610", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Hormat-Golina 하위 유역의 지하수 품질", "problem": "지하수 품질 저하 문제 해결"}
+{"id": "W7213465693", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해마의 산화 스트레스 및 염증 반응", "problem": "지속적인 산화 및 염증 변화 유발"}
+{"id": "W7213466703", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 기술", "problem": "세라믹 멤브레인 필터링의 현황과 위험 분석"}
+{"id": "W7213468477", "domain_primary": "W5", "domain_secondary": ["W8"], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 공급 시스템의 에너지 소비 및 온실가스 배출", "problem": "에너지 소비와 온실가스 배출 감소"}
+{"id": "W7213411080", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알바라디야 정수장 내 음용수의 품질", "problem": "염분 스트레스에 따른 수질 평가"}
+{"id": "W7213435204", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFASs", "problem": "효과적인 제거 방법 개발"}
+{"id": "W7213439998", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대마 유래 바이오매스", "problem": "안전한 수용성 색상 대리물질의 농도 감소 여부 평가"}
+{"id": "W7213294657", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "perfluorooctane sulfonic acid (PFOS) 독성", "problem": "PFOS의 독성 완화"}
+{"id": "W7213459789", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sargodha Tehsil의 지하수 품질", "problem": "지하수의 음용수 적합성 평가 및 건강 위험 식별"}
+{"id": "W7213401628", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아크와 이봄 주의 깨끗하고 안전한 물 접근성", "problem": "물 공급 부족 문제 해결"}
+{"id": "W7213419435", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아크와 이봄 주의 깨끗하고 안전한 물 접근성", "problem": "물 공급 부족 문제 해결"}
+{"id": "W7213454851", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 이용 품질", "problem": "지하수 오염물질 처리 방법 제공"}

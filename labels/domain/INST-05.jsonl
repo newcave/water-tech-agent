@@ -1467,3 +1467,8 @@
 {"id": "W7213242683", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 집중형 수력 발전 시스템의 장비 상태", "problem": "고급 운영 및 유지보수 전략 필요"}
 {"id": "W7213310146", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 및 열병합 발전소의 활성 전력 출력 분배", "problem": "최적의 활성 전력 할당 방안 계산"}
 {"id": "W7213340135", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "녹색 에너지 시스템", "problem": "인식 수준 조사 및 사회 발전과 경제 성장과의 연관성 분석"}
+{"id": "W7213396282", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "연속 저수지의 수력 발전과 생태 흐름 요구 사항", "problem": "수력 발전과 생태 흐름 요구 사항 조정"}
+{"id": "W7213410234", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "대규모 수력 발전 프로젝트의 사회경제적 및 환경적 효과", "problem": "간접 효과와 주요 결정 요인 간의 상호작용 분석"}
+{"id": "W7213420171", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 시스템", "problem": "조정 성능 향상"}
+{"id": "W7213399260", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "재생 가능 에너지 계획", "problem": "정보 접근성을 개선하려는 문제"}
+{"id": "W7213477431", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 수력 발전소의 온실가스 배출", "problem": "하천 수력 발전소의 온실가스 배출 영향 분석"}
