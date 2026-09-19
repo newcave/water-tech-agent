@@ -649,3 +649,5 @@
 {"id": "W7213343809", "object": "열대 지역의 토지 퇴화", "problem": "기후 변화로 인한 다중 위험에 의한 토지 퇴화 식별", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212470269", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213426424", "object": "증발산 동역학", "problem": "물 균형 접근법을 통한 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213532269", "object": "Kulfo 유역의 수자원", "problem": "기후 변화에 따른 수문학적 변화 이해 및 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213546138", "object": "Neuse River 유역의 홍수 범위 및 깊이", "problem": "극단적인 홍수 사건에 대한 예측 및 평가 개선", "relevant": true, "model": "gpt-4o-mini"}

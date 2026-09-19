@@ -4122,3 +4122,17 @@
 {"id": "W7213401628", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아크와 이봄 주의 깨끗하고 안전한 물 접근성", "problem": "물 공급 부족 문제 해결"}
 {"id": "W7213419435", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아크와 이봄 주의 깨끗하고 안전한 물 접근성", "problem": "물 공급 부족 문제 해결"}
 {"id": "W7213454851", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 이용 품질", "problem": "지하수 오염물질 처리 방법 제공"}
+{"id": "W7213537182", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IDP 캠프에 거주하는 아동의 토양 전염 헬민트 감염", "problem": "토양 전염 헬민트 감염의 유병률을 조사하고 개선하기"}
+{"id": "W7213540493", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농촌 수자원 시스템", "problem": "미세플라스틱과 항생제 내성의 상관관계 이해"}
+{"id": "W7213551367", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사막 지역의 물질 오염 제거 효율", "problem": "사막 지역의 물 부족 문제 해결"}
+{"id": "W7213563734", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Otuoke 강의 수질", "problem": "저조기 동안 수질 적합성 평가"}
+{"id": "W7213494151", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아 타북 지역의 Saq 대수층의 지하수 품질", "problem": "지하수 품질 평가 및 개선"}
+{"id": "W7213497978", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바그다드의 음용수 품질", "problem": "다양한 수처리 공정의 운영 및 품질 관찰"}
+{"id": "W7213522174", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바그다드의 음용수 품질", "problem": "다양한 수처리 공정의 운영 및 품질 관찰"}
+{"id": "W7213529022", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 수처리 인프라", "problem": "위험 평가 및 회복력 전략 개선"}
+{"id": "W7213530535", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 수처리 인프라", "problem": "위험 평가 및 회복력 전략의 효과 분석"}
+{"id": "W7213542177", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Co 오리의 건강과 성장 성능", "problem": "물 사용 행동과 바닥 상태 개선"}
+{"id": "W7213515339", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "헴프 유래 바이오매스", "problem": "안전한 수용성 색상 대리물질의 농도 감소 여부 평가"}
+{"id": "W7213538512", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비알콜성 지방간 질환(NAFLD)", "problem": "대사 및 간 기능 이상 개선"}
+{"id": "W7213542119", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카트만두 계곡의 다양한 음용수 원천에서의 원생동물 개체군", "problem": "물리화학적 매개변수가 원생동물 개체군에 미치는 영향 평가"}
+{"id": "W7213548910", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계 성장 및 도체 특성", "problem": "프로바이오틱스의 효과 평가"}

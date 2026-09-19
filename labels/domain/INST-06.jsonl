@@ -3328,3 +3328,18 @@
 {"id": "W7213443079", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Sargodha 지역의 토지 이용 및 토지 피복 변화", "problem": "도시 확장에 따른 농업 토지 감소"}
 {"id": "W7213432591", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "펀자브, 파키스탄의 농업 지역", "problem": "홍수 동역학 및 농업 노출 평가"}
 {"id": "W7213432312", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "벼 재배지", "problem": "벼 재배지 매핑"}
+{"id": "W7213534401", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계의 오염", "problem": "해양 오염을 평가하고 완화하기"}
+{"id": "W7213534926", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 활용한 메탄 배출량 정량화"}
+{"id": "W7213537882", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수중 환경", "problem": "원거리 감지 기술을 통한 수중 환경 모니터링"}
+{"id": "W7213543002", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cistercian abbeys의 지하 구조물", "problem": "지하 통로의 위치를 파악하기"}
+{"id": "W7213550535", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "마네아 지역의 토지 이용 및 토지 피복", "problem": "토지 이용 변화 분석"}
+{"id": "W7213513134", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Beaufort 및 Chukchi 해역의 동적 지형과 지구조류", "problem": "해수면 이상 및 동적 지형을 측정하고 분석하기"}
+{"id": "W7213519061", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 생태계 건강", "problem": "알고리즘 및 방법론을 통한 생태계 모니터링 개선"}
+{"id": "W7213520172", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Beaufort 및 Chukchi 해역의 동적 지형과 지구조류", "problem": "해수면 이상 및 동적 지형을 측정하고 분석하기"}
+{"id": "W7213533212", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해수면 거칠기", "problem": "해수면 거칠기 모니터링 개선"}
+{"id": "W7213495288", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지속 가능한 자원 정보", "problem": "지속 가능한 자원 관리 개선"}
+{"id": "W7213543735", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shatt Al-Arab 강의 수질", "problem": "수질 변화 평가"}
+{"id": "W7213458747", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남부 아프리카의 전략적 수원 지역", "problem": "침입 식물의 효과적인 탐지 및 모니터링"}
+{"id": "W7213540349", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "물 관련 질병 관리의 예측 가능성 향상"}
+{"id": "W7213548319", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 품질 지수 (EQI)", "problem": "정확한 환경 품질 예측"}
+{"id": "W7213527415", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Bayelsa State의 도시 개발 적합성", "problem": "도시 개발을 위한 적합 지역 식별"}
