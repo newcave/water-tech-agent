@@ -4136,3 +4136,7 @@
 {"id": "W7213538512", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비알콜성 지방간 질환(NAFLD)", "problem": "대사 및 간 기능 이상 개선"}
 {"id": "W7213542119", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카트만두 계곡의 다양한 음용수 원천에서의 원생동물 개체군", "problem": "물리화학적 매개변수가 원생동물 개체군에 미치는 영향 평가"}
 {"id": "W7213548910", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계 성장 및 도체 특성", "problem": "프로바이오틱스의 효과 평가"}
+{"id": "W7213596371", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shigella", "problem": "공중 보건 문제 해결"}
+{"id": "W7213607173", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shigella", "problem": "공중 보건 문제 해결"}
+{"id": "W7213600806", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강과 생태계 및 인간 건강", "problem": "과일 가공 폐수의 오염 문제 해결"}
+{"id": "W7213603403", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물리화학적 수질", "problem": "과일 가공 폐수로 인한 오염 문제 해결"}

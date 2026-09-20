@@ -4219,3 +4219,7 @@
 {"id": "W7213538512", "object": "비알콜성 지방간 질환(NAFLD)", "problem": "대사 및 간 기능 이상 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213542119", "object": "카트만두 계곡의 다양한 음용수 원천에서의 원생동물 개체군", "problem": "물리화학적 매개변수가 원생동물 개체군에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213548910", "object": "육계 성장 및 도체 특성", "problem": "프로바이오틱스의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213596371", "object": "Shigella", "problem": "공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213607173", "object": "Shigella", "problem": "공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213600806", "object": "강과 생태계 및 인간 건강", "problem": "과일 가공 폐수의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213603403", "object": "물리화학적 수질", "problem": "과일 가공 폐수로 인한 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

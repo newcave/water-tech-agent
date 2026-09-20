@@ -751,3 +751,5 @@
 {"id": "W7212587279", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분", "problem": "정확한 토양 수분 추정"}
 {"id": "W7213359031", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 수자원 관리", "problem": "SWAT 모델의 활용과 데이터 투명성 문제 해결"}
 {"id": "W7213532269", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kulfo 유역의 수자원", "problem": "기후 변화에 따른 수문학적 변화 이해 및 예측 개선"}
+{"id": "W7213578765", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
+{"id": "W7213611904", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
