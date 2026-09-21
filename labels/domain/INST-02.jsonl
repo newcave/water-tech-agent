@@ -753,3 +753,4 @@
 {"id": "W7213532269", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kulfo 유역의 수자원", "problem": "기후 변화에 따른 수문학적 변화 이해 및 예측 개선"}
 {"id": "W7213578765", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
 {"id": "W7213611904", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
+{"id": "W7213641519", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프레리 연못의 염분 농도", "problem": "염분 농도 조절을 위한 생리적 요인 이해"}

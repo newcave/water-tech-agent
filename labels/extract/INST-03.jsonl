@@ -4223,3 +4223,16 @@
 {"id": "W7213607173", "object": "Shigella", "problem": "공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213600806", "object": "강과 생태계 및 인간 건강", "problem": "과일 가공 폐수의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213603403", "object": "물리화학적 수질", "problem": "과일 가공 폐수로 인한 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213620937", "object": "두셴 근육형성증(DMD) 모델에서의 골격근 기능", "problem": "HMB 보충이 근육 기능을 개선하는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213624568", "object": "식수에서 Giardia 및 Cryptosporidium 제거 및 비활성화", "problem": "수처리 공정의 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213633791", "object": "Kura River의 수질과 생태계 서비스", "problem": "수질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213649549", "object": "육계의 장 건강", "problem": "장 건강을 최적화하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213666257", "object": "안전한 음용수 접근성", "problem": "자연 응집제 및 전처리 재료로서의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213669485", "object": "Kura River", "problem": "인간 활동으로 인한 오염 원인 분석 및 환경 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213671524", "object": "물 필터의 중금속 안전 기준", "problem": "물 필터에서 중금속 방출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213671961", "object": "식품 접촉 소비재 및 주방용품의 필터 매체와 하우징", "problem": "중금속 안전 기준 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213672840", "object": "생물 활성탄(BAC)에서의 PFAS", "problem": "PFAS 돌파 지연 및 제거 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213672273", "object": "음용수 미생물 군집", "problem": "병원성 미생물의 존재 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213654913", "object": "브로일러 치킨의 성장 성능과 간 기능", "problem": "APEC 감염으로 인한 성장 저하와 간 손상 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213625581", "object": "가정용 식수 안전성", "problem": "가정용 식수의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213632675", "object": "가정용 식수 안전성", "problem": "가정용 식수의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

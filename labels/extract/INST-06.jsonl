@@ -3381,3 +3381,7 @@
 {"id": "W7213540349", "object": "물 자원 관리", "problem": "물 관련 질병 관리의 예측 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213548319", "object": "환경 품질 지수 (EQI)", "problem": "정확한 환경 품질 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213527415", "object": "Bayelsa State의 도시 개발 적합성", "problem": "도시 개발을 위한 적합 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213647459", "object": "관개된 면화 재배지의 물 수요", "problem": "물 수요 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213660829", "object": "전 세계 해양 생태계", "problem": "해양 생태계의 변화 예측 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213610267", "object": "기후 변화의 영향", "problem": "물 부족과 생태계 파괴 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213722091", "object": "수자원 관리 및 예측", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}

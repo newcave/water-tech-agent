@@ -629,3 +629,4 @@
 {"id": "W7213426424", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "증발산 동역학", "problem": "물 균형 접근법을 통한 이해 및 개선"}
 {"id": "W7213532269", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kulfo 유역의 수자원", "problem": "기후 변화에 따른 수문학적 변화 이해 및 예측 개선"}
 {"id": "W7213546138", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Neuse River 유역의 홍수 범위 및 깊이", "problem": "극단적인 홍수 사건에 대한 예측 및 평가 개선"}
+{"id": "W7213635202", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 수계 데이터", "problem": "정확한 수계 속성 제공"}

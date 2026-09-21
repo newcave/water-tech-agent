@@ -1869,3 +1869,5 @@
 {"id": "W7213558135", "object": "철강 폐기물의 고부가가치 활용", "problem": "환경적 및 경제적 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213461861", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7213541350", "object": "아덴, 예멘의 도시 물 공급 시스템", "problem": "물 손실 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213659101", "object": "Cholistan 초원 지역의 토지 이용/토지 피복 변화", "problem": "모니순에 따른 생태계 반응 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213665676", "object": "Cholistan 초원 지역의 토지 이용/토지 피복 변화", "problem": "계절적 LULC 변화 평가", "relevant": true, "model": "gpt-4o-mini"}

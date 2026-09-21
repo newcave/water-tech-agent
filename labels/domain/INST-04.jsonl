@@ -504,3 +504,6 @@
 {"id": "W7213555150", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변위 변형", "problem": "정확한 예측을 위한 노이즈 제거"}
 {"id": "W7213596195", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 변형", "problem": "댐 또는 벽체 실패 예측"}
 {"id": "W7213609375", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 변형", "problem": "댐 또는 벽체 실패 예측"}
+{"id": "W7213651706", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치댐 구조", "problem": "실시간 구조 상태 예측 개선"}
+{"id": "W7213664768", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 장비의 건강 상태", "problem": "장비 고장 및 안전 문제 해결"}
+{"id": "W7213657562", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수위 측정 시스템", "problem": "정확한 수위 측정 개선"}
