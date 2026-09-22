@@ -1,10 +1,10 @@
 {
  "tasks": {
   "kwater": {
-   "cursor": "IlsxNjYyNTk1MjAwMDAwLCA5OS4wLCAyNiwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0Mjk2Mzk3ODk3J10i",
-   "count": 100,
+   "cursor": null,
+   "count": 159,
    "target": 159,
-   "done": false,
+   "done": true,
    "probed": true
   },
   "INST-01": {
