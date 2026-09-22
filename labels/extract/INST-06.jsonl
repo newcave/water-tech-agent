@@ -3385,3 +3385,6 @@
 {"id": "W7213660829", "object": "전 세계 해양 생태계", "problem": "해양 생태계의 변화 예측 및 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213610267", "object": "기후 변화의 영향", "problem": "물 부족과 생태계 파괴 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213722091", "object": "수자원 관리 및 예측", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213745048", "object": "마쿠르디 지역의 습지와 농업 관리", "problem": "도시화로 인한 습지 손실 및 농업 토지 침해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213627755", "object": "구름 미세물리적 특성", "problem": "구름 미세물리적 특성을 효과적으로 제약하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213629221", "object": "구름 미세물리적 특성", "problem": "구름 미세물리적 특성을 효과적으로 제약하기", "relevant": true, "model": "gpt-4o-mini"}

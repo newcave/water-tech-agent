@@ -1501,3 +1501,6 @@
 {"id": "W7213675575", "object": "아르메니아의 에너지 시스템", "problem": "전력 다각화를 전체 시스템 회복력으로 전환하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213635890", "object": "녹색 에너지", "problem": "경제적 지속 가능성을 위한 균형 찾기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213662558", "object": "녹색 에너지", "problem": "경제적 지속 가능성을 위한 균형 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213776064", "object": "지하 저장 수력 발전 시스템", "problem": "효율적인 저장 용량 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213787208", "object": "지하 저장 수력 발전 시스템", "problem": "효율적인 저장 용량 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213460898", "object": "수력 발전 사이트의 기술적 잠재력", "problem": "기술적 및 재정적 부담을 줄이기", "relevant": true, "model": "gpt-4o-mini"}

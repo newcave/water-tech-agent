@@ -4153,3 +4153,9 @@
 {"id": "W7213654913", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 성장 성능과 간 기능", "problem": "APEC 감염으로 인한 성장 저하와 간 손상 해결"}
 {"id": "W7213625581", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 식수 안전성", "problem": "가정용 식수의 오염 문제 해결"}
 {"id": "W7213632675", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 식수 안전성", "problem": "가정용 식수의 오염 문제 해결"}
+{"id": "W7213753550", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Werdama 지역의 지하수", "problem": "미생물 위험과 중금속 오염 평가"}
+{"id": "W7213757982", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시스템", "problem": "막 기반 방법으로 오염물 제거 개선"}
+{"id": "W7213782868", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시스템", "problem": "막 기반 방법으로 오염물 제거 개선"}
+{"id": "W7213786379", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성", "problem": "살충제 잔류물의 독성 평가"}
+{"id": "W7213789507", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Al-Aziziyah–Al-Hafariya 수처리 시스템의 수질", "problem": "수질 변동 이해 및 개선"}
+{"id": "W7213782188", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "라 크루스 핀타의 원주율 공동체", "problem": "물 부족과 사회적 불평등 해결"}
