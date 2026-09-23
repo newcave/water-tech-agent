@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1787338701,
-   "kwater": 0,
-   "related_1y": 15483
-  },
-  {
    "ts": 1787363520,
    "kwater": 0,
    "related_1y": 15555
@@ -599,9 +594,14 @@
    "ts": 1790163797,
    "kwater": 160,
    "related_1y": 13878
+  },
+  {
+   "ts": 1790183193,
+   "kwater": 160,
+   "related_1y": 16809
   }
  ],
- "updated": 1790163797,
+ "updated": 1790183193,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -624,10 +624,20 @@
    "keyword": "dam safety monitoring",
    "recent_1y": 740
   },
+  "INST-05": {
+   "name": "물에너지연구소",
+   "keyword": "hydropower generation",
+   "recent_1y": 2118
+  },
   "INST-06": {
    "name": "수자원위성연구소",
    "keyword": "satellite remote sensing water",
    "recent_1y": 4415
+  },
+  "INST-07": {
+   "name": "AI연구소",
+   "keyword": "machine learning hydrology",
+   "recent_1y": 813
   }
  }
 }
