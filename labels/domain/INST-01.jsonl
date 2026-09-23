@@ -1801,3 +1801,13 @@
 {"id": "W7213541350", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아덴, 예멘의 도시 물 공급 시스템", "problem": "물 손실 감소"}
 {"id": "W7213659101", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cholistan 초원 지역의 토지 이용/토지 피복 변화", "problem": "모니순에 따른 생태계 반응 이해"}
 {"id": "W7213665676", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cholistan 초원 지역의 토지 이용/토지 피복 변화", "problem": "계절적 LULC 변화 평가"}
+{"id": "W7213868254", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 공급 시스템의 수질", "problem": "신속한 오염물질 탐지 및 관리 지원"}
+{"id": "W7213875901", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업용수 관리", "problem": "증발산 모델 비교"}
+{"id": "W7213889634", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 공급 시스템의 수질", "problem": "실시간 조기 경고 시스템 지원"}
+{"id": "W7213893527", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "자연 기반 솔루션의 채택 장벽과 동인 분석"}
+{"id": "W7213907721", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구의 담수 저장량", "problem": "인간 활동에 따른 변화 분석"}
+{"id": "W7213939121", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대량 수자원 유틸리티의 디지털 조달", "problem": "디지털 조달의 이점과 도전 과제를 탐색하기"}
+{"id": "W7213975829", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "정유 공장의 열전달 시스템", "problem": "열 성능 최적화"}
+{"id": "W7213975661", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고압 해안 석유 우물 헤드 구조", "problem": "구조적 결함 감지 및 예방"}
+{"id": "W7213882077", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 및 연안 지역의 평가와 지적 회계", "problem": "해양 지적 시스템의 필요성 해결"}
+{"id": "W7213985351", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼-및 폴리플루오르알킬 물질)", "problem": "PFAS의 파괴적 처리 방법 개선"}

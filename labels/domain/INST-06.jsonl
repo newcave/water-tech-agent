@@ -3350,3 +3350,26 @@
 {"id": "W7213745048", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "마쿠르디 지역의 습지와 농업 관리", "problem": "도시화로 인한 습지 손실 및 농업 토지 침해"}
 {"id": "W7213627755", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "구름 미세물리적 특성", "problem": "구름 미세물리적 특성을 효과적으로 제약하기"}
 {"id": "W7213629221", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "구름 미세물리적 특성", "problem": "구름 미세물리적 특성을 효과적으로 제약하기"}
+{"id": "W7213870607", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지표면 온도 및 에너지 흐름", "problem": "정확한 모니터링을 위한 데이터 부족 해결"}
+{"id": "W7213976144", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 활용한 메탄 배출량 정량화"}
+{"id": "W7213983363", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 녹색 폭풍수 인프라", "problem": "상태 평가 및 기능성 개선"}
+{"id": "W7213983925", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수 생태계", "problem": "청색조류 발생 모니터링 개선"}
+{"id": "W7213986800", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지중해 해수의 식물플랑크톤 기능적 다양성", "problem": "장기적인 변화 추세 분석"}
+{"id": "W7213864288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 광업과 그로 인한 생태계 및 서식지", "problem": "광업의 생태적 영향 이해 및 지속 가능한 관행 개발"}
+{"id": "W7213866277", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수문학적 모델링", "problem": "정확한 수문학적 시뮬레이션 개선"}
+{"id": "W7213868978", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고대 농장의 관개 시스템", "problem": "관개 기술의 연대 조사"}
+{"id": "W7213869923", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알프스 식생", "problem": "생태적 경향을 일관되게 모니터링하기"}
+{"id": "W7213880337", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 모니터링 및 조기 경고 시스템", "problem": "수자원 변동 및 극단적 기상 현상 예측 개선"}
+{"id": "W7213900621", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수문학적 모델링", "problem": "정적 매개변수로 인한 편향 수정"}
+{"id": "W7213901235", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 저장 변화", "problem": "신뢰할 수 있는 정보 확보"}
+{"id": "W7213905626", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수문학적 모델링", "problem": "정적 매개변수로 인한 편향 수정"}
+{"id": "W7213906841", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Petermann Ice Shelf estuary", "problem": "얼음 선반의 불안정성 감소"}
+{"id": "W7213931401", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "빙하 유역의 유출 및 그 구성 요소", "problem": "기후 변화가 유출에 미치는 영향 이해하기"}
+{"id": "W7213942371", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Nagaon 지역의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화에 따른 기후 스트레스와 토양 비옥도 감소 문제 해결"}
+{"id": "W7213975661", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고압 해안 석유 우물 헤드 구조", "problem": "구조적 결함 감지 및 예방"}
+{"id": "W7213876206", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "포스트 마이닝 환경의 수면 수역", "problem": "수면 수역 탐지 개선"}
+{"id": "W7213892870", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산호초", "problem": "열 스트레스 평가"}
+{"id": "W7213877028", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Stryzhen River의 수질", "problem": "자동화된 수질 모니터링 및 매핑 방법론 개발"}
+{"id": "W7213991785", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분 변화", "problem": "드론을 이용한 GNSS-R 기법으로 토양 수분 추정"}
+{"id": "W7213966668", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중부 인도의 토지 황폐화 취약성", "problem": "석탄 채굴 확장으로 인한 환경 악화 해결"}
+{"id": "W7213968699", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mathura District의 토지 이용 및 토지 피복 변화", "problem": "10년간의 변화 분석"}

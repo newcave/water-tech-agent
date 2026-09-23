@@ -754,3 +754,7 @@
 {"id": "W7213578765", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
 {"id": "W7213611904", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 초국경 수자원 관리", "problem": "수자원 관리의 갈등 해결"}
 {"id": "W7213641519", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프레리 연못의 염분 농도", "problem": "염분 농도 조절을 위한 생리적 요인 이해"}
+{"id": "W7213917741", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "글레이셔가 있는 유역의 수자원", "problem": "글레이셔 유래 수원의 특성 동위원소 신호 식별"}
+{"id": "W7213922371", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구의 수자원 순환", "problem": "인간의 물 사용이 수자원 패턴 변화에 미치는 영향 이해하기"}
+{"id": "W7213935100", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 월간 유량 데이터셋", "problem": "단편화된 유량 기록을 보완하여 연속 관측 가능성 향상"}
+{"id": "W7213945655", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 과정", "problem": "수문학적 데이터 분석 및 시뮬레이션 개선"}

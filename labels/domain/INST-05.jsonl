@@ -1479,3 +1479,10 @@
 {"id": "W7213776064", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 저장 수력 발전 시스템", "problem": "효율적인 저장 용량 확보"}
 {"id": "W7213787208", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 저장 수력 발전 시스템", "problem": "효율적인 저장 용량 확보"}
 {"id": "W7213460898", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 사이트의 기술적 잠재력", "problem": "기술적 및 재정적 부담을 줄이기"}
+{"id": "W7213874748", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ezeoke 마을의 전력 공급", "problem": "소규모 수력 발전 개발을 위한 흐름 잠재력 평가"}
+{"id": "W7213888665", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "연결된 에너지 시스템의 전력 가격 형성", "problem": "재생 가능 에너지 배치와 전력 수요 균형"}
+{"id": "W7213905125", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "100% 재생 가능 에너지 시스템의 주파수 안정성", "problem": "시스템 관성 부족 문제 해결"}
+{"id": "W7213926843", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "혼합 흐름 펌프의 에너지 변환 효율", "problem": "효율 저하 진단"}
+{"id": "W7213918381", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "발칸 반도의 전력 수요", "problem": "재생 가능 에너지의 신뢰성 있는 공급"}
+{"id": "W7213950850", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "일일 흐름 수력 발전량", "problem": "수력 기반 모델링의 한계 평가"}
+{"id": "W7213968627", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kampung Gadog의 에너지 접근성", "problem": "신뢰할 수 있는 지속 가능한 에너지 제공"}

@@ -4159,3 +4159,11 @@
 {"id": "W7213786379", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성", "problem": "살충제 잔류물의 독성 평가"}
 {"id": "W7213789507", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Al-Aziziyah–Al-Hafariya 수처리 시스템의 수질", "problem": "수질 변동 이해 및 개선"}
 {"id": "W7213782188", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "라 크루스 핀타의 원주율 공동체", "problem": "물 부족과 사회적 불평등 해결"}
+{"id": "W7213974407", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 잔여 철", "problem": "잔여 철 제거"}
+{"id": "W7213896372", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 오염물질 제거", "problem": "기존 필터의 성능 향상"}
+{"id": "W7213917925", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Triton X-100 오염된 물", "problem": "광촉매 분해를 통한 제거"}
+{"id": "W7213973120", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조직 특이적 단백질 서명", "problem": "조직 노화와 관련된 단백질 변화 이해하기"}
+{"id": "W7213909304", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 비소 오염", "problem": "비소 제거를 위한 효과적인 흡착제 개발"}
+{"id": "W7213911293", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 처리 과정에서의 조류 제거 민감도", "problem": "조류 제거 최적화 및 냄새 위험 통제"}
+{"id": "W7213938502", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 생산성 및 건강 상태", "problem": "프로바이오틱스 보충으로 개선하기"}
+{"id": "W7213973197", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Najafgarh Drain의 수질", "problem": "수질 악화와 중금속 오염 해결"}
