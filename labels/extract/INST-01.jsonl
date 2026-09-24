@@ -1881,3 +1881,5 @@
 {"id": "W7213975661", "object": "고압 해안 석유 우물 헤드 구조", "problem": "구조적 결함 감지 및 예방", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213882077", "object": "해양 및 연안 지역의 평가와 지적 회계", "problem": "해양 지적 시스템의 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213985351", "object": "PFAS(퍼-및 폴리플루오르알킬 물질)", "problem": "PFAS의 파괴적 처리 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214016214", "object": "기후 변화에 적응하는 유제품 생산 시스템", "problem": "기후 변화로 인한 유제품 생산의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214030175", "object": "기후 변화에 적응하는 유제품 생산 시스템", "problem": "기후 변화로 인한 유제품 생산의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}

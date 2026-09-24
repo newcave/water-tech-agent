@@ -4250,3 +4250,17 @@
 {"id": "W7213911293", "object": "수돗물 처리 과정에서의 조류 제거 민감도", "problem": "조류 제거 최적화 및 냄새 위험 통제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213938502", "object": "육계의 생산성 및 건강 상태", "problem": "프로바이오틱스 보충으로 개선하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213973197", "object": "Najafgarh Drain의 수질", "problem": "수질 악화와 중금속 오염 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214062232", "object": "지질 대사 및 면역 기능", "problem": "지질 대사 개선 및 면역 기능 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213889414", "object": "음용수 공급에서의 병원성 Acanthamoeba", "problem": "신속한 검출 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214009969", "object": "눈 주위 피부", "problem": "피부 건조 및 피로 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214012161", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7214013891", "object": "우즈베키스탄의 수자원 관리 및 하수 처리 부문", "problem": "공공-민간 파트너십의 효과적인 개발 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214027432", "object": "눈 주위 피부", "problem": "피부 건조 및 피로 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214032702", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7214040016", "object": "Bali Town의 보링수원 수질", "problem": "중금속 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214041992", "object": "행동", "problem": "행동에 대한 α7nAChR 신호 전달의 기여 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214042634", "object": "Bali Local Government Area의 보링홀 수질", "problem": "중금속 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214046654", "object": "우즈베키스탄의 수자원 관리 및 상하수도 시스템", "problem": "공공-민간 파트너십의 효과적인 개발 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214061851", "object": "가정용 음용수", "problem": "수인성 질병 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214015746", "object": "음용수 오염 제거를 위한 소독제", "problem": "소독제의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214024022", "object": "음용수 오염 제거를 위한 소독제", "problem": "소독제의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}

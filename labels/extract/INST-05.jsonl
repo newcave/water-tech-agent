@@ -1511,3 +1511,8 @@
 {"id": "W7213918381", "object": "발칸 반도의 전력 수요", "problem": "재생 가능 에너지의 신뢰성 있는 공급", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213950850", "object": "일일 흐름 수력 발전량", "problem": "수력 기반 모델링의 한계 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213968627", "object": "Kampung Gadog의 에너지 접근성", "problem": "신뢰할 수 있는 지속 가능한 에너지 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214009778", "object": "수력 발전소의 안전성", "problem": "어류의 오입을 방지하기 위한 기술적 해결책 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214018732", "object": "에너지 기술 잠재력", "problem": "에너지 기술 잠재력 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214028215", "object": "지역 다중 전력 시스템의 가격 프로세스", "problem": "가격 프로세스 관리 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214049992", "object": "지역 다중 전력 시스템의 가격 프로세스", "problem": "가격 프로세스 관리 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214020541", "object": "Colibița 댐의 수자원 관리", "problem": "제어된 수 releases로 인한 홍수 위험 평가", "relevant": true, "model": "gpt-4o-mini"}

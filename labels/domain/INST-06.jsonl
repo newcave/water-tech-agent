@@ -3373,3 +3373,11 @@
 {"id": "W7213991785", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분 변화", "problem": "드론을 이용한 GNSS-R 기법으로 토양 수분 추정"}
 {"id": "W7213966668", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중부 인도의 토지 황폐화 취약성", "problem": "석탄 채굴 확장으로 인한 환경 악화 해결"}
 {"id": "W7213968699", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mathura District의 토지 이용 및 토지 피복 변화", "problem": "10년간의 변화 분석"}
+{"id": "W7208807695", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분", "problem": "정확한 토양 수분 제품 생성"}
+{"id": "W7213997574", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 숲 생리학 데이터셋", "problem": "연도별 숲 생리학 지표 추출"}
+{"id": "W7214013486", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 핀란드의 팔사 미르", "problem": "환경 변화 조사"}
+{"id": "W7214031391", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 숲 생리학 데이터셋", "problem": "연도별 숲 생리학 지표 추출"}
+{"id": "W7214035086", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 핀란드의 팔사 미어", "problem": "환경 변화 조사"}
+{"id": "W7214035258", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내수면 수위 및 수역 특성", "problem": "SWOT 연구의 진화와 수위 측정 정확도 향상"}
+{"id": "W7214040223", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남부 샌프란시스코 만의 수은 농도", "problem": "수은 노출 및 메틸수은 생산 이해"}
+{"id": "W7214053565", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다양한 센서에서 유도된 탁도 추정치", "problem": "정확한 모니터링을 위한 데이터 통합"}

@@ -801,3 +801,7 @@
 {"id": "W7213922371", "object": "지구의 수자원 순환", "problem": "인간의 물 사용이 수자원 패턴 변화에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213935100", "object": "전 세계 월간 유량 데이터셋", "problem": "단편화된 유량 기록을 보완하여 연속 관측 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213945655", "object": "수문학적 과정", "problem": "수문학적 데이터 분석 및 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213980969", "object": "비가측 유역의 유량 예측", "problem": "비가측 유역에서 유량 예측 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214033845", "object": "동zhai 항구의 굴", "problem": "굴의 생리화학적 매개변수와 관련된 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214037661", "object": "서부 북미의 수자원", "problem": "눈 녹음 시기와 수자원 가용성 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214057779", "object": "동zhai 항구의 굴", "problem": "굴의 생리화학적 매개변수와 관련된 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
