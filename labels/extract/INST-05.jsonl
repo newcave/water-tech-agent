@@ -1516,3 +1516,7 @@
 {"id": "W7214028215", "object": "지역 다중 전력 시스템의 가격 프로세스", "problem": "가격 프로세스 관리 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214049992", "object": "지역 다중 전력 시스템의 가격 프로세스", "problem": "가격 프로세스 관리 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214020541", "object": "Colibița 댐의 수자원 관리", "problem": "제어된 수 releases로 인한 홍수 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214094147", "object": "세네갈 2030 전력 시스템", "problem": "운영 가능성 및 강건성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214121682", "object": "Yalong River Basin의 생태계", "problem": "생태 흐름 고려 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214122314", "object": "세네갈 2030 전력 시스템", "problem": "운영 가능성 및 강건성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214098295", "object": "Tehri Dam의 유입 예측 시스템", "problem": "유입 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}

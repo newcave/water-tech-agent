@@ -509,3 +509,4 @@
 {"id": "W7213657562", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수위 측정 시스템", "problem": "정확한 수위 측정 개선"}
 {"id": "W7213862081", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 공학", "problem": "현대 댐 안전 관행 개선"}
 {"id": "W7213897575", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 경사면 변위", "problem": "정확한 변위 예측"}
+{"id": "W7214033153", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "결측 데이터 복구"}

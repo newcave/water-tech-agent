@@ -656,3 +656,4 @@
 {"id": "W7214004373", "object": "레반트 지역의 강수량 추정 신뢰성", "problem": "위성 강수량 제품의 편향 수정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214014619", "object": "정밀 관개 시스템", "problem": "정확한 예측 및 검증 부족", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214029590", "object": "인도 내 홍수 위험 인식", "problem": "홍수 위험 인식의 불일치 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214107632", "object": "미국의 하천 유량 가뭄", "problem": "하천 유량 가뭄 예측하기", "relevant": true, "model": "gpt-4o-mini"}

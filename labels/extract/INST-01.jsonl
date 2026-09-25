@@ -1883,3 +1883,6 @@
 {"id": "W7213985351", "object": "PFAS(퍼-및 폴리플루오르알킬 물질)", "problem": "PFAS의 파괴적 처리 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214016214", "object": "기후 변화에 적응하는 유제품 생산 시스템", "problem": "기후 변화로 인한 유제품 생산의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214030175", "object": "기후 변화에 적응하는 유제품 생산 시스템", "problem": "기후 변화로 인한 유제품 생산의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214095690", "object": "도시 수자원 공급 시스템", "problem": "의도적인 오염 위협 평가 및 방어 전략 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214112234", "object": "자연가스 응축수의 해양 환경 내 확산 속도", "problem": "확산 속도 예측 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214121857", "object": "탄자니아의 지역 수자원 공급 및 위생 당국", "problem": "서비스 제공 개선", "relevant": true, "model": "gpt-4o-mini"}

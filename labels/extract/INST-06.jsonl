@@ -3419,3 +3419,10 @@
 {"id": "W7214035258", "object": "내수면 수위 및 수역 특성", "problem": "SWOT 연구의 진화와 수위 측정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214040223", "object": "남부 샌프란시스코 만의 수은 농도", "problem": "수은 노출 및 메틸수은 생산 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214053565", "object": "다양한 센서에서 유도된 탁도 추정치", "problem": "정확한 모니터링을 위한 데이터 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214083098", "object": "인도 농업", "problem": "기후 변화에 따른 농작물 회복력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214107748", "object": "인도 농업의 기후 회복력", "problem": "기후 변화에 따른 농업의 복원력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214069239", "object": "지상 수역", "problem": "위성 이미지에서 수역 자동 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214084535", "object": "도시 토지 피복 특성", "problem": "도시 지역의 원거리 감지 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214093213", "object": "Barda Wildlife Sanctuary의 수자원 부족 취약성", "problem": "수자원 부족 평가 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214106947", "object": "유역", "problem": "유역 경계 정의 및 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214111886", "object": "유역", "problem": "유역 경계 정의 및 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}

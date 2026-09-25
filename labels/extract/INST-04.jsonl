@@ -512,3 +512,4 @@
 {"id": "W7213657562", "object": "수위 측정 시스템", "problem": "정확한 수위 측정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213862081", "object": "댐 공학", "problem": "현대 댐 안전 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213897575", "object": "댐 경사면 변위", "problem": "정확한 변위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214033153", "object": "댐 안전 모니터링 데이터", "problem": "결측 데이터 복구", "relevant": true, "model": "gpt-4o-mini"}
