@@ -1520,3 +1520,8 @@
 {"id": "W7214121682", "object": "Yalong River Basin의 생태계", "problem": "생태 흐름 고려 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214122314", "object": "세네갈 2030 전력 시스템", "problem": "운영 가능성 및 강건성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214098295", "object": "Tehri Dam의 유입 예측 시스템", "problem": "유입 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214161030", "object": "가뭄 하이드로그래프", "problem": "가뭄 하이드로그래프 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214182173", "object": "중국 남부 전력망 지역의 탄소 배출", "problem": "전력 부문의 탄소 배출 감소 경로 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214191085", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7214109915", "object": "Baihetan 저수지 주변의 지진 반응", "problem": "저수지 담수에 따른 지진 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214239902", "object": "수력 발전소 운영", "problem": "운영 효율 극대화", "relevant": true, "model": "gpt-4o-mini"}

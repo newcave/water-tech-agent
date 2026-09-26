@@ -510,3 +510,5 @@
 {"id": "W7213862081", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 공학", "problem": "현대 댐 안전 관행 개선"}
 {"id": "W7213897575", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 경사면 변위", "problem": "정확한 변위 예측"}
 {"id": "W7214033153", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "결측 데이터 복구"}
+{"id": "W7214219780", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "신뢰할 수 있는 디지털 트윈 구축"}
+{"id": "W7213975688", "domain_primary": "W7", "domain_secondary": ["W2"], "confidence": 0.9, "domain_ver": "v0.1", "object": "금광 저수지의 안전성", "problem": "저수지 관련 재해의 위험 분석"}

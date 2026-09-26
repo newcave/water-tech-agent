@@ -657,3 +657,5 @@
 {"id": "W7214014619", "object": "정밀 관개 시스템", "problem": "정확한 예측 및 검증 부족", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214029590", "object": "인도 내 홍수 위험 인식", "problem": "홍수 위험 인식의 불일치 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214107632", "object": "미국의 하천 유량 가뭄", "problem": "하천 유량 가뭄 예측하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214204552", "object": "수자원 모델링 시스템", "problem": "운영 채택 지연 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214107299", "object": "전 세계 유역 데이터", "problem": "정확한 유역 특성 제공", "relevant": true, "model": "gpt-4o-mini"}

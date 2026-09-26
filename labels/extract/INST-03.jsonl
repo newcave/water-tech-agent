@@ -4283,3 +4283,12 @@
 {"id": "W7214111667", "object": "멕시코의 수돗물 및 대륙 수생 생태계", "problem": "청산독소의 규제 및 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214125483", "object": "Wistar 쥐의 간과 고환", "problem": "저용량 아트라진 노출의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214114438", "object": "청소년 여성의 생리통", "problem": "생리통 강도를 낮추는 것", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214156911", "object": "음용수 및 폐수 처리 슬러지의 중금속", "problem": "중금속의 농도 및 환경 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214162695", "object": "PFAS 오염물질", "problem": "비용과 환경 영향을 줄이는 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214163048", "object": "음용수 및 폐수 처리 슬러지의 중금속", "problem": "중금속의 농도 및 환경 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214225580", "object": "살바도르의 음용수 공급 시스템", "problem": "THMs와 HAAs 농도 초과 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214236031", "object": "습기 있는 열대 기후에서의 수분 및 공기 질 개선", "problem": "열대 기후에서의 수분 회수 및 공기 질 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213979574", "object": "서아프리카 아동의 영양 및 수유 관행", "problem": "아동 영양실조 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214206247", "object": "수질 개선", "problem": "미세플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212134275", "object": "Cladophora 생물막", "problem": "생물막으로 인한 필터 막힘 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214163775", "object": "칠면조의 건강 상태와 생산성", "problem": "살모넬라 오염 감소", "relevant": true, "model": "gpt-4o-mini"}

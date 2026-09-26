@@ -3388,3 +3388,14 @@
 {"id": "W7214093213", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Barda Wildlife Sanctuary의 수자원 부족 취약성", "problem": "수자원 부족 평가 수행"}
 {"id": "W7214106947", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역", "problem": "유역 경계 정의 및 수자원 관리 개선"}
 {"id": "W7214111886", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역", "problem": "유역 경계 정의 및 수자원 관리 개선"}
+{"id": "W7214145360", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jalingo 지역의 토지 이용 및 토지 피복 변화", "problem": "도시화가 토지 이용 및 피복에 미치는 영향 분석"}
+{"id": "W7214156857", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가뭄 평가", "problem": "가뭄의 공간적 및 시간적 변동성을 포착하는 방법 개발"}
+{"id": "W7214159058", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 가뭄", "problem": "가뭄 평가 및 모니터링 개선"}
+{"id": "W7214164320", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Chad의 수자원 상태", "problem": "수자원 관리 전략을 위한 수량화"}
+{"id": "W7214207640", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 저장 및 이동", "problem": "원격 감지를 수문학적 과학 질문에 통합하기"}
+{"id": "W7214217597", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "초과냉각 수분 구름", "problem": "정확한 탐지"}
+{"id": "W7214228825", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수면 수자원", "problem": "정확한 경계 구분 및 소규모 수역 탐지"}
+{"id": "W7214084384", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중국의 농작물 생산성", "problem": "물빠짐 스트레스의 비선형 임계값 효과 분석"}
+{"id": "W7214217481", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조류 모니터링 기술", "problem": "조류의 유해한 발생을 조기에 탐지하기 위한 기술 개선"}
+{"id": "W7214177176", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "부르키나파소의 식량 안보", "problem": "기후 변화로 인한 농업 생산성 저하"}
+{"id": "W7214228380", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "실시간 하천 유량 추정", "problem": "전통적인 한계를 극복하기"}
