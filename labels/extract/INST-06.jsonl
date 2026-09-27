@@ -3437,3 +3437,10 @@
 {"id": "W7214217481", "object": "조류 모니터링 기술", "problem": "조류의 유해한 발생을 조기에 탐지하기 위한 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214177176", "object": "부르키나파소의 식량 안보", "problem": "기후 변화로 인한 농업 생산성 저하", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214228380", "object": "실시간 하천 유량 추정", "problem": "전통적인 한계를 극복하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214274533", "object": "호수 수위 동역학", "problem": "정확한 호수 수위 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214277949", "object": "필드 규모의 관개 추정", "problem": "위성 데이터를 통한 관개 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214279773", "object": "아마다바드 지역의 수자원 계획", "problem": "증가한 증발산과 그 구성 요소의 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214294130", "object": "Ribat El Kheir 고원 지역의 수원", "problem": "기후 변화와 농업 확장에 따른 수원 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214298981", "object": "도시 생태계 정보", "problem": "정확한 세분화 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214348540", "object": "Lake Tana의 수질", "problem": "수질 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214389689", "object": "농업용 관개 추정", "problem": "위성 데이터를 통한 관개 추정", "relevant": true, "model": "gpt-4o-mini"}

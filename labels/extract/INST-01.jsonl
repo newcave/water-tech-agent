@@ -1893,3 +1893,9 @@
 {"id": "W7214233961", "object": "AI의 환경적 및 인프라적 영향", "problem": "AI의 전력 및 자원 소비 문제 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214157150", "object": "Baitarani Brahmani River의 수질", "problem": "비선형 상호작용과 공간적 변화를 반영한 수질 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214170610", "object": "공공수도 유틸리티의 지속 가능성 성과", "problem": "환경 비용 정보와 거버넌스 메커니즘의 상호작용 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214281504", "object": "고고학적 특징", "problem": "고고학적 특징의 존재 및 성격 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214372875", "object": "케냐 중앙 고원 지역의 수자원 데이터", "problem": "위성 강수량 및 모델 유출량의 편향 수정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214391435", "object": "수자원 인프라 시스템의 효율성", "problem": "인프라 누수 성능과 생산성 간의 관계를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214302423", "object": "나이지리아의 공공 수자원 제공", "problem": "부패 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214322130", "object": "사우디아라비아의 관광 메가프로젝트", "problem": "지역 개발을 위한 통합 프레임워크 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214191175", "object": "Lubuklinggau 시의 깨끗한 물 수요", "problem": "깨끗한 물 수요 예측", "relevant": true, "model": "gpt-4o-mini"}

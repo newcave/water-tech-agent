@@ -4292,3 +4292,14 @@
 {"id": "W7214206247", "object": "수질 개선", "problem": "미세플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7212134275", "object": "Cladophora 생물막", "problem": "생물막으로 인한 필터 막힘 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214163775", "object": "칠면조의 건강 상태와 생산성", "problem": "살모넬라 오염 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214281353", "object": "PFAS 음용수 대응 기록", "problem": "행정 단계 간의 응답 추적 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214289895", "object": "캐나다의 원주율 민족", "problem": "문화적 제노사이드 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214323949", "object": "Otuoke River의 수질", "problem": "수질 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214349975", "object": "음용수에서의 미세 및 나노플라스틱", "problem": "미세 및 나노플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214352852", "object": "학교의 통합 WASH 서비스와 음용수 안전성", "problem": "WASH 서비스의 격차와 물의 질 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214379640", "object": "Song 지역의 지하수", "problem": "지하수의 음용 및 농업 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214395590", "object": "안티모니 오염", "problem": "수처리 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214402370", "object": "흉부 대동맥 박리", "problem": "대동맥 박리 진행 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213497775", "object": "수확된 빗물의 수질", "problem": "미세플라스틱 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214218158", "object": "철 나노입자를 포함한 물의 흐름 안정성", "problem": "자기장 적용 시 흐름 안정성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214352690", "object": "재발성 임신 손실", "problem": "PFAS 노출과 재발성 임신 손실 간의 연관성 조사", "relevant": true, "model": "gpt-4o-mini"}

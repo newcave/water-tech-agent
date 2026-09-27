@@ -1499,3 +1499,8 @@
 {"id": "W7214182173", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국 남부 전력망 지역의 탄소 배출", "problem": "전력 부문의 탄소 배출 감소 경로 분석"}
 {"id": "W7214109915", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Baihetan 저수지 주변의 지진 반응", "problem": "저수지 담수에 따른 지진 위험 평가"}
 {"id": "W7214239902", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소 운영", "problem": "운영 효율 극대화"}
+{"id": "W7214224662", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력-태양광 시스템", "problem": "전력 제한 문제 예방"}
+{"id": "W7214308137", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신형 전력 시스템", "problem": "최적 운영을 위한 경제성, 재생 가능 에너지 활용, 운영 안전성 달성"}
+{"id": "W7214225134", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조지아의 전력 시스템", "problem": "예상치 못한 수력 발전 공급 충격에 대한 반응을 추정하다"}
+{"id": "W7214379164", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템의 예방적 최적 배치", "problem": "전력 시스템의 불확실성에 따른 최적 배치 방안 개발"}
+{"id": "W7214413176", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소형 수력 발전소의 설계 및 운영", "problem": "펜스톡 배치 최적화"}

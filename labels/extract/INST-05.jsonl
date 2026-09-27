@@ -1525,3 +1525,8 @@
 {"id": "W7214191085", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7214109915", "object": "Baihetan 저수지 주변의 지진 반응", "problem": "저수지 담수에 따른 지진 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214239902", "object": "수력 발전소 운영", "problem": "운영 효율 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214224662", "object": "수력-태양광 시스템", "problem": "전력 제한 문제 예방", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214308137", "object": "신형 전력 시스템", "problem": "최적 운영을 위한 경제성, 재생 가능 에너지 활용, 운영 안전성 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214225134", "object": "조지아의 전력 시스템", "problem": "예상치 못한 수력 발전 공급 충격에 대한 반응을 추정하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214379164", "object": "전력 시스템의 예방적 최적 배치", "problem": "전력 시스템의 불확실성에 따른 최적 배치 방안 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214413176", "object": "소형 수력 발전소의 설계 및 운영", "problem": "펜스톡 배치 최적화", "relevant": true, "model": "gpt-4o-mini"}
