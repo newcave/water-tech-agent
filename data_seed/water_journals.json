@@ -1,0 +1,24 @@
+{
+ "_doc": "수자원 12개 핵심 저널 레지스트리 (260721 김재영 박사님과 선정). '상승 연구주제 탐지'(상대 문서빈도 → Hamed–Rao MK + BH → 공출현 네트워크 → Louvain)의 분모 코퍼스. 이 저장소에서는 (1) openalex_lite가 저널×연도 기대 건수를 실측(분모), (2) openalex_collect가 collect_from 이후 논문 메타를 수집한다. 연관성·트렌드 분석은 아직 미실시. issns 순서 = 같은 연도 내 수집 순서. 비밀값은 넣지 않는다.",
+ "_version": "2026-09-28",
+ "analysis_status": "미실시 — 코퍼스(분모) 구축 단계",
+ "archive_from_year": 2000,
+ "collect_from": "2020-01-01",
+ "journals": [
+  {"code": "J01", "name": "Water Resources Research", "issns": ["0043-1397", "1944-7973"]},
+  {"code": "J02", "name": "Journal of Hydrology", "issns": ["0022-1694"]},
+  {"code": "J03", "name": "Advances in Water Resources", "issns": ["0309-1708", "1872-9657"]},
+  {"code": "J04", "name": "Water Resources Management", "issns": ["0920-4741", "1573-1650"]},
+  {"code": "J05", "name": "Journal of Water Resources Planning and Management", "issns": ["0733-9496", "1943-5452"]},
+  {"code": "J06", "name": "Hydrology and Earth System Sciences", "issns": ["1027-5606", "1607-7938"]},
+  {"code": "J07", "name": "Hydrological Processes", "issns": ["0885-6087", "1099-1085"]},
+  {"code": "J08", "name": "Journal of Hydrologic Engineering", "issns": ["1084-0699", "1943-5584"]},
+  {"code": "J09", "name": "Water Research", "issns": ["0043-1354", "1879-2448"]},
+  {"code": "J10", "name": "Journal of Contaminant Hydrology", "issns": ["0169-7722", "1873-6009"],
+   "note": "1879-2553은 오기(Journal of Physics and Chemistry of Solids로 resolve) — 제외"},
+  {"code": "J11", "name": "한국수자원학회논문집", "name_en": "Journal of Korea Water Resources Association", "issns": ["1226-6280", "2287-6138"],
+   "check_issns": ["2799-8746"],
+   "note": "신 ISSN 2799-8746이 별도 source로 resolve되는지 확인 중 — check_issns는 resolve 결과만 기록하고 수집 필터에는 넣지 않음"},
+  {"code": "J12", "name": "대한토목학회논문집", "name_en": "KSCE Journal of Civil and Environmental Engineering Research", "issns": ["1015-6348", "2799-9629"]}
+ ]
+}

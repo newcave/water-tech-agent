@@ -501,7 +501,7 @@ elif page == "📚 수집 현황":
     st.markdown('<div class="sect">소스별 수집 현황</div>', unsafe_allow_html=True)
     rows = [
         ("📥 보고서① ALIO 공공보고서", T.get("alio_collected", 0), 121, "🟢 완료 (오류 16건 재처리 대기)"),
-        ("📄 논문 OpenAlex — K-water 생산 + 도메인 관련(트렌드용)", T.get("papers", 0),
+        ("📄 논문 OpenAlex — K-water 생산 + 수자원 12개 저널 + 도메인 관련(트렌드용)", T.get("papers", 0),
          (live_oa.get("target_total") if live_oa and live_oa.get("target_total") else 3000),
          ("🟢 누적 수집 중 — 10분당 100편" if live_oa and T.get("papers", 0) < live_oa.get("target_total", 0)
           else "✅ 1차 수집 완료") if live_oa else "🟡 수집기 배치 · search_topics.json 준비"),
@@ -534,13 +534,15 @@ elif page == "📄 논문 트렌드":
     st.markdown('<div class="sect">OpenAlex 수집 논문 · 연구소별 트렌드</div>', unsafe_allow_html=True)
     st.caption("수집 필드: 제목·발행연도/일·저널·피인용·유형·DOI (메타정보 — 초록은 2단계 확장 후보)")
     inst_names = summary.get("inst_names", {})
+    wj = load_json("water_journals.json") or {}              # 수자원 12개 핵심 저널 레지스트리
     TAGS = [("kwater", "K-water 생산논문")] + \
+           [(j["code"], f"[저널] {j['name']}") for j in wj.get("journals", [])] + \
            [(c, f"[관련] {inst_names.get(c, c)}") for c in sorted(inst_names)]
 
     # 작업별 수집 칩 (stats 기반 — 파일 로드 없이 가볍게)
     tstats = (live_oa or {}).get("tasks", {})
     chips = "".join(
-        f'<div class="kpi" style="border-left-color:{"#17549A" if t == "kwater" else INST_COLORS.get(t, GRAY)}">'
+        f'<div class="kpi" style="border-left-color:{"#17549A" if t == "kwater" else CYAN if t.startswith("J") else INST_COLORS.get(t, GRAY)}">'
         f'<div class="k-val">{tstats.get(t, {}).get("count", 0):,}</div>'
         f'<div class="k-lab">{lab}</div>'
         f'<div class="k-sub">목표 {tstats.get(t, {}).get("target", 0):,}'
@@ -593,6 +595,32 @@ elif page == "📄 논문 트렌드":
                                   "cited": "피인용", "doi": "DOI"}))
         st.dataframe(top, hide_index=True, width="stretch",
                      column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
+
+    # ═══════════════ 수자원 12개 핵심 저널 코퍼스 (분모) ═══════════════
+    st.divider()
+    st.markdown('<div class="sect">🌊 수자원 12개 핵심 저널 코퍼스 — 트렌드 분석 분모</div>',
+                unsafe_allow_html=True)
+    trj = (load_json("openalex_trends.json") or {}).get("journals", {})
+    st.caption(f"OpenAlex 실측 저널×연도 건수 ({wj.get('archive_from_year', 2000)}~) · "
+               f"연관성·트렌드 분석: {wj.get('analysis_status', '미실시')}")
+    if not trj:
+        st.info("저널 코퍼스 실측 전입니다 — 다음 심박(6시간 주기)에서 openalex_lite가 기록합니다.")
+    else:
+        jrows = [{"코드": c, "저널": v.get("name"), "전체": v.get("total", 0),
+                  "최근연도": max(v.get("by_year", {}) or {"-": 0}),
+                  "source": ", ".join(s["id"] for s in v.get("sources", []))}
+                 for c, v in sorted(trj.items())]
+        m1, m2 = st.columns(2)
+        m1.metric("저널 수 (해석 성공)", f"{len(trj)} / {len(wj.get('journals', [])) or 12}")
+        m2.metric("코퍼스 논문 수", f"{sum(r['전체'] for r in jrows):,}편")
+        yrs = sorted({y for v in trj.values() for y in v.get("by_year", {})})
+        fig = go.Figure()
+        for c, v in sorted(trj.items()):
+            by = v.get("by_year", {})
+            fig.add_trace(go.Bar(x=yrs, y=[by.get(y, 0) for y in yrs], name=f"{c} {v.get('name', '')[:24]}"))
+        fig.update_layout(barmode="stack", height=360, **PLOTLY_LAYOUT)
+        st.plotly_chart(fig, width="stretch")
+        st.dataframe(pd.DataFrame(jrows), hide_index=True, width="stretch")
 
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
     # ═══════════════ K-water 연구기록 (16-25) ═══════════════
