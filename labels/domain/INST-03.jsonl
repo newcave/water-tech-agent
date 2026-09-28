@@ -4218,3 +4218,7 @@
 {"id": "W7213497775", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수확된 빗물의 수질", "problem": "미세플라스틱 오염과 건강 위험 평가"}
 {"id": "W7214218158", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "철 나노입자를 포함한 물의 흐름 안정성", "problem": "자기장 적용 시 흐름 안정성 향상"}
 {"id": "W7214352690", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재발성 임신 손실", "problem": "PFAS 노출과 재발성 임신 손실 간의 연관성 조사"}
+{"id": "W7214447695", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파키스탄 신드주 샤히드 베나지르아바드 지역의 지하수 지속 가능성", "problem": "기후 변동성과 인간 활동으로 인한 물 스트레스로 인한 지하수 고갈 문제 해결"}
+{"id": "W7214491549", "domain_primary": "W5", "domain_secondary": ["W6"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Guadalajara 대도시 지역의 음용수 및 하수 서비스 시스템", "problem": "수자원 안전성 문제 해결"}
+{"id": "W7214488547", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남성 쥐의 생리적 상태", "problem": "생리적 효과 평가하기"}
+{"id": "W7214428794", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chongqing의 음용수 처리 시설에서의 조류 유래 소독 부산물", "problem": "조류 유래 소독 부산물 완화"}

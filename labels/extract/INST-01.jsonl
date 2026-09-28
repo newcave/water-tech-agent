@@ -1899,3 +1899,8 @@
 {"id": "W7214302423", "object": "나이지리아의 공공 수자원 제공", "problem": "부패 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214322130", "object": "사우디아라비아의 관광 메가프로젝트", "problem": "지역 개발을 위한 통합 프레임워크 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214191175", "object": "Lubuklinggau 시의 깨끗한 물 수요", "problem": "깨끗한 물 수요 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214447487", "object": "우간다의 공공수도 유틸리티 조직 성과", "problem": "조직 성과를 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214471866", "object": "AKN Design Group의 서비스 및 정보", "problem": "AI 지식 패키지 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214476724", "object": "AKN Design Group의 서비스 및 정보", "problem": "AI 지식 패키지 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214351129", "object": "구와하티의 물 자원 관리", "problem": "물 관리 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214497067", "object": "니제르 델타의 생물 다양성 및 수생 생태계", "problem": "수질 변화에 따른 생물 다양성 손실 및 플랑크톤 군집 구조 변화", "relevant": true, "model": "gpt-4o-mini"}

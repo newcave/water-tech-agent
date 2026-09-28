@@ -766,3 +766,5 @@
 {"id": "W7214402481", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남아프리카의 수자원", "problem": "극단적인 기상 사건의 영향"}
 {"id": "W7214224192", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "글레이셔가 있는 유역의 수자원", "problem": "글레이셔 유래 수원의 특성 동위원소 신호 식별"}
 {"id": "W7202365151", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "미국-멕시코의 공유 수자원", "problem": "구조적 물 부족 해결"}
+{"id": "W7214478799", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "양자 감지 기술", "problem": "일상 생활에서의 유용한 측정 가능성"}
+{"id": "W7214506086", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "양자 감지 기술을 통한 인간의 인식 개선", "problem": "일상 생활에서의 측정 가능성 향상"}

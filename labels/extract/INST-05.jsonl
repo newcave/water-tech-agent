@@ -1530,3 +1530,6 @@
 {"id": "W7214225134", "object": "조지아의 전력 시스템", "problem": "예상치 못한 수력 발전 공급 충격에 대한 반응을 추정하다", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214379164", "object": "전력 시스템의 예방적 최적 배치", "problem": "전력 시스템의 불확실성에 따른 최적 배치 방안 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214413176", "object": "소형 수력 발전소의 설계 및 운영", "problem": "펜스톡 배치 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214432678", "object": "6,500명의 주민을 위한 에너지 독립형 재생 가능 마이크로그리드", "problem": "장기 에너지 회복력 및 지역 에너지 독립성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214466036", "object": "6,500명의 주민을 위한 에너지 독립형 재생 가능 마이크로그리드", "problem": "장기 에너지 회복력 및 지역 에너지 독립성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214510044", "object": "수력발전 저수지에서의 부유형 태양광 발전 잠재력", "problem": "부유형 태양광 발전의 기술적 생산 잠재력 추정", "relevant": true, "model": "gpt-4o-mini"}

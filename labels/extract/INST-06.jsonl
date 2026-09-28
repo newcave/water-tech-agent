@@ -3444,3 +3444,14 @@
 {"id": "W7214298981", "object": "도시 생태계 정보", "problem": "정확한 세분화 수행", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214348540", "object": "Lake Tana의 수질", "problem": "수질 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214389689", "object": "농업용 관개 추정", "problem": "위성 데이터를 통한 관개 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214441079", "object": "양자 기술 기반의 시민 인프라", "problem": "양자 기술이 일상 생활에 통합되는 시점", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214478799", "object": "양자 감지 기술을 통한 인간의 인식 개선", "problem": "일상 생활에서의 측정 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214485336", "object": "지구의 환경 시스템", "problem": "지속적이고 정확한 관측의 어려움", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214488101", "object": "포도밭의 물 상태", "problem": "물 스트레스 진단 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214488622", "object": "Patna 및 주변 지역의 침수 지역", "problem": "침수 지역 식별 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214500267", "object": "양자 기술 기반의 시민 인프라", "problem": "일상 생활에 통합될 수 있는 신뢰성 있는 양자 시스템의 조건을 규명하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214500723", "object": "Patna와 주변 지역의 침수 지역", "problem": "침수 지역을 식별하고 분석하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214502038", "object": "지구의 환경 시스템", "problem": "지속적이고 정확한 관측의 어려움", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214506086", "object": "양자 감지 기술", "problem": "일상 생활에서의 유용한 측정 가능성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214276367", "object": "Qwaqwa 지역의 인구 분포", "problem": "인구 추정 및 분포 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214468781", "object": "사막 야자 농장 토양의 유기 탄소 상태", "problem": "토양의 유기 탄소가 식생 역학에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
