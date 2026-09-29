@@ -7,7 +7,8 @@ openalex_collect — 논문 실수집 에이전트 (매 1분 100편, 누적·재
   · GitHub Actions에서 실행 (기본 55분/회, 매시 자동 + 수동 시작 가능)
   · 10분마다 OpenAlex에서 100편 수집 → `data` 브랜치 live/에 즉시 push
     → 관제센터가 재배포 없이 10분 단위로 실시간 갱신 (main 커밋 아님!)
-  · 수집 순서: ① K-water 소속 전체(2020~) → ② 7개 연구소 대표키워드 최근1년
+  · 수집 순서: ① K-water 소속 전체(2020~) → ② 수자원 12개 핵심 저널(collect_from~,
+    data_seed/water_journals.json — 트렌드 분석 분모 코퍼스) → ③ 7개 연구소 대표키워드 최근1년
   · 커서(cursor)를 state.json에 저장 → 끊겨도/재시작해도 이어서 누적
   · 전 작업 완료 시 이후 실행은 심박만 남기고 조기 종료 (정직)
 
@@ -25,6 +26,8 @@ import time
 from pathlib import Path
 
 import requests
+
+from water_journals import load_registry, resolve_sources, source_filter
 
 REPO_DIR = Path(__file__).resolve().parents[1]
 API = "https://api.openalex.org/works"
@@ -105,7 +108,7 @@ def fetch_page(filt: str, cursor):
     r = requests.get(API, params={
         "filter": filt, "per-page": PAGE, "cursor": cursor or "*",
         "sort": "publication_date:desc", "mailto": MAILTO,
-        "select": "id,doi,title,publication_year,publication_date,cited_by_count,type,primary_location",
+        "select": "id,doi,title,publication_year,publication_date,cited_by_count,type,language,primary_location",
     }, timeout=30)
     r.raise_for_status()
     j = r.json()
@@ -117,7 +120,8 @@ def fetch_page(filt: str, cursor):
                      "year": w.get("publication_year"),
                      "date": w.get("publication_date"),
                      "cited": w.get("cited_by_count"),
-                     "venue": src.get("display_name"), "type": w.get("type")})
+                     "venue": src.get("display_name"), "type": w.get("type"),
+                     "lang": w.get("language")})
     meta = j.get("meta") or {}
     return recs, meta.get("next_cursor"), meta.get("count", 0)
 
@@ -134,6 +138,21 @@ def build_tasks(topics):
     tasks.append({"tag": "kwater", "kind": "kwater",
                   "name": f"K-water 생산논문 ({inst_name or 'ROR'})",
                   "filter": cands[0], "candidates": cands})
+    reg = load_registry()                                          # 수자원 12개 핵심 저널
+    j_from = reg.get("collect_from", "2020-01-01")
+    for j in reg.get("journals", []):
+        try:
+            srcs = resolve_sources(j.get("issns", []), MAILTO)
+        except Exception as e:
+            print(f"⚠️ 저널 해석 {j['code']}:", str(e)[:120])
+            srcs = []
+        if not srcs:                                               # 해석 실패 → 이번 회차 제외
+            continue
+        tasks.append({"tag": j["code"], "kind": "journal",
+                      "name": f"[저널] {j['name']}",
+                      "filter": f"{source_filter([s['id'] for s in srcs])},"
+                                f"from_publication_date:{j_from}"})
+        time.sleep(0.3)
     for inst in topics.get("institutes", []):
         kws = inst.get("openalex_keywords") or []
         if kws:
@@ -152,11 +171,15 @@ def heartbeat(state, cur_name, note, running=True, event=False):
     target = sum(t.get("target", 0) for t in state["tasks"].values())
     kw_c = state["tasks"].get("kwater", {}).get("count", 0)
     kw_t = state["tasks"].get("kwater", {}).get("target", 0)
+    jr = {k: v for k, v in state["tasks"].items() if k.startswith("J")}   # 12개 저널 작업
+    jr_c = sum(v.get("count", 0) for v in jr.values())
+    jr_t = sum(v.get("target", 0) for v in jr.values())
     done = sum(1 for t in state["tasks"].values() if t.get("done"))
     ag.update(state="run" if running else "idle", last_run=now,
               next_run="매시 자동 (GitHub Actions)" if not running else "10분 후",
               summary=f"논문 실수집 {'가동' if running else '대기'} — {cur_name or '전 작업 완료'}",
-              counts={"K-water 생산": kw_c, "관련(도메인)": total - kw_c,
+              counts={"K-water 생산": kw_c, "12개 저널": jr_c,
+                      "관련(도메인)": total - kw_c - jr_c,
                       "작업": f"{done}/{len(state['tasks'])}"})
     ev = ag.get("events") or []
     if event and note:
@@ -166,7 +189,8 @@ def heartbeat(state, cur_name, note, running=True, event=False):
     jsave(LIVE / "live" / "openalex" / "stats.json",
           {"collected_total": total, "target_total": target, "updated": now,
            "kwater_collected": kw_c, "kwater_target": kw_t,
-           "related_collected": total - kw_c, "related_target": target - kw_t,
+           "journal_collected": jr_c, "journal_target": jr_t,
+           "related_collected": total - kw_c - jr_c, "related_target": target - kw_t - jr_t,
            "tasks": {k: {"count": v.get("count", 0), "target": v.get("target", 0),
                          "done": v.get("done", False)}
                      for k, v in state["tasks"].items()}})
