@@ -1,7 +1,7 @@
 {
  "_doc": "수자원 12개 핵심 저널 레지스트리 (260721 김재영 박사님과 선정). '상승 연구주제 탐지'(상대 문서빈도 → Hamed–Rao MK + BH → 공출현 네트워크 → Louvain)의 분모 코퍼스. 이 저장소에서는 (1) openalex_lite가 저널×연도 기대 건수를 실측(분모), (2) openalex_collect가 collect_from 이후 논문 메타를 수집한다. 연관성·트렌드 분석은 아직 미실시. issns 순서 = 같은 연도 내 수집 순서. 비밀값은 넣지 않는다.",
  "_version": "2026-09-29",
- "analysis_status": "v0.1 — 상승 주제 탐지(국제 10종, OpenAlex 주제·키워드, Hamed–Rao MK + BH). 공출현 네트워크·Louvain은 다음 단계",
+ "analysis_status": "미실시 — 코퍼스(분모) 구축 단계",
  "archive_from_year": 2000,
  "_coverage_doc": "openalex_coverage_to가 있는 저널은 그 다음 해부터 OpenAlex에 논문이 연결되지 않음. kci 설정이 있는 저널은 연도별 분모를 KCI 실측(data_seed/kci_counts.json, agents/kci_counts.py)으로 대체한다 — kci.names는 레코드의 journal-name과 공백 무시 완전일치로 거른다.",
  "collect_from": "2020-01-01",
