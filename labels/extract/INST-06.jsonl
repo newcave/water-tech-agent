@@ -3455,3 +3455,5 @@
 {"id": "W7214506086", "object": "양자 감지 기술", "problem": "일상 생활에서의 유용한 측정 가능성", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214276367", "object": "Qwaqwa 지역의 인구 분포", "problem": "인구 추정 및 분포 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214468781", "object": "사막 야자 농장 토양의 유기 탄소 상태", "problem": "토양의 유기 탄소가 식생 역학에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214394296", "object": "서아프리카 유역의 수자원 스트레스", "problem": "토지 이용 및 토지 피복 변화와 도시화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214529823", "object": "나이지리아 니제르 델타 지역의 지속 가능한 자원 관리", "problem": "디지털 환경 모니터링 시스템을 통한 자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}

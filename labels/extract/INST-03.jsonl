@@ -4307,3 +4307,4 @@
 {"id": "W7214491549", "object": "Guadalajara 대도시 지역의 음용수 및 하수 서비스 시스템", "problem": "수자원 안전성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214488547", "object": "남성 쥐의 생리적 상태", "problem": "생리적 효과 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214428794", "object": "Chongqing의 음용수 처리 시설에서의 조류 유래 소독 부산물", "problem": "조류 유래 소독 부산물 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214550307", "object": "지하수 자원", "problem": "신흥 오염물질의 위험 평가 및 정화 기술 분석", "relevant": true, "model": "gpt-4o-mini"}

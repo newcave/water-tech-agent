@@ -1533,3 +1533,4 @@
 {"id": "W7214432678", "object": "6,500명의 주민을 위한 에너지 독립형 재생 가능 마이크로그리드", "problem": "장기 에너지 회복력 및 지역 에너지 독립성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214466036", "object": "6,500명의 주민을 위한 에너지 독립형 재생 가능 마이크로그리드", "problem": "장기 에너지 회복력 및 지역 에너지 독립성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214510044", "object": "수력발전 저수지에서의 부유형 태양광 발전 잠재력", "problem": "부유형 태양광 발전의 기술적 생산 잠재력 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214530872", "object": "소규모 분산형 수력 발전 시스템", "problem": "비용 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

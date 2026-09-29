@@ -515,3 +515,4 @@
 {"id": "W7214033153", "object": "댐 안전 모니터링 데이터", "problem": "결측 데이터 복구", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214219780", "object": "댐 안전 모니터링 데이터", "problem": "신뢰할 수 있는 디지털 트윈 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213975688", "object": "금광 저수지의 안전성", "problem": "저수지 관련 재해의 위험 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214118474", "object": "콘크리트 댐의 열역학적 매개변수", "problem": "열역학적 매개변수의 역산을 통한 온도 제어 분석의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}

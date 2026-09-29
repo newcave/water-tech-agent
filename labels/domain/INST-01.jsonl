@@ -1834,3 +1834,6 @@
 {"id": "W7214476724", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "AKN Design Group의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
 {"id": "W7214351129", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구와하티의 물 자원 관리", "problem": "물 관리 시스템 개선"}
 {"id": "W7214497067", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "니제르 델타의 생물 다양성 및 수생 생태계", "problem": "수질 변화에 따른 생물 다양성 손실 및 플랑크톤 군집 구조 변화"}
+{"id": "W7214522292", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
+{"id": "W7214534752", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
+{"id": "W7214543804", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
