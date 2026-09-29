@@ -3,7 +3,7 @@
  "_version": "2026-09-29",
  "analysis_status": "미실시 — 코퍼스(분모) 구축 단계",
  "archive_from_year": 2000,
- "_coverage_doc": "openalex_coverage_to가 있는 저널은 그 다음 해부터 OpenAlex에 논문이 연결되지 않음 → 연도별 분모에서 해당 저널·연도를 제외하거나 대체 출처로 채울 것.",
+ "_coverage_doc": "openalex_coverage_to가 있는 저널은 그 다음 해부터 OpenAlex에 논문이 연결되지 않음. kci 설정이 있는 저널은 연도별 분모를 KCI 실측(data_seed/kci_counts.json, agents/kci_counts.py)으로 대체한다 — kci.names는 레코드의 journal-name과 공백 무시 완전일치로 거른다.",
  "collect_from": "2020-01-01",
  "journals": [
   {"code": "J01", "name": "Water Resources Research", "issns": ["0043-1397", "1944-7973"]},
@@ -20,9 +20,12 @@
   {"code": "J11", "name": "한국수자원학회논문집", "name_en": "Journal of Korea Water Resources Association", "issns": ["1226-6280", "2287-6138"],
    "check_issns": ["2799-8746"],
    "openalex_coverage_to": 2021,
-   "note": "OpenAlex에서 2021년까지만 연결됨(2022~ 누락, 신 ISSN 2799-8746은 source 미해석 — 2026-09-29 실측). 2022~는 KCI 등 대체 수집 예정 — 그 전까지 트렌드 분석에서 2022~ 제외"},
+   "kci": {"journal": "한국수자원학회논문집", "names": ["한국수자원학회 논문집"]},
+   "note": "OpenAlex는 2021년까지만, 그것도 과소 연결(2021년 63건 vs KCI 117건; 신 ISSN 2799-8746은 source 미해석 — 2026-09-29 실측) → 연도별 분모는 KCI 실측 사용"},
   {"code": "J12", "name": "대한토목학회논문집", "name_en": "KSCE Journal of Civil and Environmental Engineering Research", "issns": ["1015-6348", "2799-9629"],
    "openalex_coverage_to": 2021,
-   "note": "OpenAlex에서 2021년까지만 연결됨(2022~ 누락 — 2026-09-29 실측). 2022~는 KCI 등 대체 수집 예정 — 그 전까지 트렌드 분석에서 2022~ 제외"}
+   "kci": {"journal": "대한토목학회논문집",
+           "names": ["대한토목학회논문집(국문)", "대한토목학회 논문집A", "대한토목학회 논문집B", "대한토목학회 논문집C", "대한토목학회 논문집D"]},
+   "note": "OpenAlex는 2018년 이후 급감·2021년까지만 연결(2026-09-29 실측) → 연도별 분모는 KCI 실측 사용. KCI journal= 검색은 A~D 분책·정기학술대회논문집까지 함께 잡히므로 names로 거름 — 정기학술대회논문집은 학술지 논문이 아니어서 제외"}
  ]
 }

@@ -600,7 +600,11 @@ elif page == "📄 논문 트렌드":
     st.divider()
     st.markdown('<div class="sect">🌊 수자원 12개 핵심 저널 코퍼스 — 트렌드 분석 분모</div>',
                 unsafe_allow_html=True)
-    trj = (load_json("openalex_trends.json") or {}).get("journals", {})
+    trj = dict((load_json("openalex_trends.json") or {}).get("journals", {}))
+    kci = (load_json("kci_counts.json") or {}).get("journals", {})
+    for c, v in kci.items():                                  # 한국 저널 분모는 KCI 실측으로 대체
+        if v.get("by_year"):
+            trj[c] = {**trj.get(c, {}), **v, "count_source": "KCI"}
     st.caption(f"OpenAlex 실측 저널×연도 건수 ({wj.get('archive_from_year', 2000)}~) · "
                f"연관성·트렌드 분석: {wj.get('analysis_status', '미실시')}")
     if not trj:
@@ -613,19 +617,22 @@ elif page == "📄 논문 트렌드":
             ys = [int(y) for y, n in (v.get("by_year") or {}).items() if n]
             return v.get("last_year") or (max(ys) if ys else None)
 
-        def coverage(c, v):   # 레지스트리 표기 또는 최근 2년 이상 0건이면 끊김으로 표시
+        def coverage(c, v):   # KCI 대체 / 레지스트리 표기 / 최근 2년 이상 0건 → 끊김
             ly = last_year(v)
+            if v.get("count_source") == "KCI":
+                return "✅ KCI 실측" if ly and ly >= cur_year - 1 else f"⚠️ KCI {ly}년까지"
             if cov_to.get(c) or (ly and ly < cur_year - 1):
                 return f"⚠️ {cov_to.get(c) or ly}년까지"
             return "✅"
         jrows = [{"코드": c, "저널": v.get("name"), "전체": v.get("total", 0),
-                  "최근연도": last_year(v) or "-", "OpenAlex 커버리지": coverage(c, v),
-                  "source": ", ".join(s["id"] for s in v.get("sources", []))}
+                  "최근연도": last_year(v) or "-", "커버리지": coverage(c, v),
+                  "source": "KCI" if v.get("count_source") == "KCI"
+                            else ", ".join(s["id"] for s in v.get("sources", []))}
                  for c, v in sorted(trj.items())]
-        gaps = [r for r in jrows if r["OpenAlex 커버리지"] != "✅"]
+        gaps = [r for r in jrows if r["커버리지"].startswith("⚠️")]
         if gaps:
-            st.warning("OpenAlex 커버리지 끊김 — " + " · ".join(
-                f"{r['코드']} {r['저널']} ({r['OpenAlex 커버리지'][2:]})" for r in gaps) +
+            st.warning("커버리지 끊김 — " + " · ".join(
+                f"{r['코드']} {r['저널']} ({r['커버리지'][2:]})" for r in gaps) +
                 ". 이후 연도는 논문이 없는 것이 아니라 OpenAlex에 미연결 → 트렌드 분석 분모에서 제외, "
                 "KCI 등 대체 출처로 보완 예정.")
         m1, m2 = st.columns(2)
@@ -639,6 +646,9 @@ elif page == "📄 논문 트렌드":
         fig.update_layout(barmode="stack", height=360, **PLOTLY_LAYOUT)
         st.plotly_chart(fig, width="stretch")
         st.dataframe(pd.DataFrame(jrows), hide_index=True, width="stretch")
+        if kci:
+            st.caption("🇰🇷 " + ", ".join(sorted(kci)) + " 연도별 건수: KCI(한국학술지인용색인) 데이터 활용 "
+                       "— 연도별 집계만 표시 (원천 데이터 미저장)")
 
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
     # ═══════════════ K-water 연구기록 (16-25) ═══════════════

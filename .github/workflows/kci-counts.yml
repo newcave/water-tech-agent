@@ -1,0 +1,48 @@
+name: kci-counts
+
+# 한국 저널(J11·J12) 연도별 논문 수 — KCI Open API 실측, 주 1회 (+ 수동 실행)
+# 원천 데이터는 저장하지 않고 data_seed/kci_counts.json에 연도별 건수만 커밋
+on:
+  schedule:
+    - cron: "41 20 * * 0"        # 매주 일요일 20:41 UTC (월요일 05:41 KST)
+  workflow_dispatch: {}
+  push:                          # 작업 브랜치 시험 실행 (커밋은 main에서만)
+    branches: [claude/wizardly-fermi-mrihtw]
+    paths: [agents/kci_counts.py, .github/workflows/kci-counts.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kci-counts
+  cancel-in-progress: false
+
+jobs:
+  counts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet requests
+      - name: KCI 연도별 건수 실측
+        env:
+          KCI_API_KEY: ${{ secrets.KCI_API_KEY }}
+        run: python agents/kci_counts.py
+      - name: 결과 커밋·푸시 (main만)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add data_seed/kci_counts.json
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"; exit 0
+          fi
+          git commit -m "🤖 kci_counts: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 10
+          done
+          echo "push 실패(3회)"; exit 1
