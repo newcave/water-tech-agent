@@ -650,6 +650,50 @@ elif page == "📄 논문 트렌드":
             st.caption("🇰🇷 " + ", ".join(sorted(kci)) + " 연도별 건수: KCI(한국학술지인용색인) 데이터 활용 "
                        "— 연도별 집계만 표시 (원천 데이터 미저장)")
 
+    # ═══════════════ 상승 연구주제 v0.1 (OpenAlex 집계 → Hamed–Rao MK + BH) ═══════════════
+    st.divider()
+    st.markdown('<div class="sect">📈 상승 연구주제 v0.1 — 수자원 국제 저널 10종</div>',
+                unsafe_allow_html=True)
+    tr = load_json("trend_rising.json")
+    if not tr or not tr.get("kinds"):
+        st.info("분석 결과가 아직 없습니다 — trend-rising 워크플로(주 1회)가 data_seed/trend_rising.json을 기록합니다.")
+    else:
+        yrs = tr["years"]
+        st.caption(f"{tr['method']} · {yrs[0]}–{yrs[-1]} · 저널 {', '.join(tr['journals'])} · "
+                   f"FDR q<{tr['q']} · 출처 {tr['source']}. 한국 저널(J11·J12)은 주제 분류가 없어 제외. "
+                   "주제·키워드는 OpenAlex 기계 분류라 분류기 특성이 추세에 섞일 수 있음.")
+        kind = st.radio("분류 기준", list(tr["kinds"]), horizontal=True,
+                        format_func=lambda k: {"topics": "주제(Topics)", "keywords": "키워드"}.get(k, k))
+        kd = tr["kinds"][kind]
+        m1, m2, m3 = st.columns(3)
+        m1.metric("검정 항목", f"{kd['tested']:,}")
+        m2.metric("상승 (유의)", f"{kd['n_rising']:,}")
+        m3.metric("하강 (유의)", f"{kd['n_falling']:,}")
+        if kd.get("truncated_floor"):
+            st.caption("⚠️ 목록이 잘린 연도(최소 건수): " + ", ".join(
+                f"{y}({n})" for y, n in sorted(kd["truncated_floor"].items())) +
+                " — 이 연도에 목록에 없던 항목은 0으로 계산됨")
+
+        def tbl(rows):
+            return pd.DataFrame([{"주제": r["name"], "상대기울기(%/년)": round(r["sen_rel"] * 100, 1),
+                                  "최근3년/초기 배율": r["lift"], "누적 논문": r["total"],
+                                  "q": f"{r['q']:.1e}"} for r in rows])
+        if kd["rising"]:
+            st.dataframe(tbl(kd["rising"][:25]), hide_index=True, width="stretch")
+            pick = st.multiselect("추이 비교 (상대 문서빈도, ‰)", [r["name"] for r in kd["rising"]],
+                                  default=[r["name"] for r in kd["rising"][:5]])
+            fig = go.Figure()
+            for r in kd["rising"]:
+                if r["name"] in pick:
+                    fig.add_trace(go.Scatter(x=yrs, y=[v * 1000 for v in r["rel"]],
+                                             mode="lines", name=r["name"][:40]))
+            fig.update_layout(height=340, yaxis_title="‰ (논문 1,000편당)",
+                              legend=dict(orientation="h", y=-0.2), **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+        if kd["falling"]:
+            with st.expander(f"하강 주제 상위 {min(15, len(kd['falling']))}개"):
+                st.dataframe(tbl(kd["falling"][:15]), hide_index=True, width="stretch")
+
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
     # ═══════════════ K-water 연구기록 (16-25) ═══════════════
     st.divider()
