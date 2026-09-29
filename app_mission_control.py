@@ -606,10 +606,28 @@ elif page == "📄 논문 트렌드":
     if not trj:
         st.info("저널 코퍼스 실측 전입니다 — 다음 심박(6시간 주기)에서 openalex_lite가 기록합니다.")
     else:
+        cur_year = time.gmtime().tm_year
+        cov_to = {j["code"]: j.get("openalex_coverage_to") for j in wj.get("journals", [])}
+
+        def last_year(v):
+            ys = [int(y) for y, n in (v.get("by_year") or {}).items() if n]
+            return v.get("last_year") or (max(ys) if ys else None)
+
+        def coverage(c, v):   # 레지스트리 표기 또는 최근 2년 이상 0건이면 끊김으로 표시
+            ly = last_year(v)
+            if cov_to.get(c) or (ly and ly < cur_year - 1):
+                return f"⚠️ {cov_to.get(c) or ly}년까지"
+            return "✅"
         jrows = [{"코드": c, "저널": v.get("name"), "전체": v.get("total", 0),
-                  "최근연도": max(v.get("by_year", {}) or {"-": 0}),
+                  "최근연도": last_year(v) or "-", "OpenAlex 커버리지": coverage(c, v),
                   "source": ", ".join(s["id"] for s in v.get("sources", []))}
                  for c, v in sorted(trj.items())]
+        gaps = [r for r in jrows if r["OpenAlex 커버리지"] != "✅"]
+        if gaps:
+            st.warning("OpenAlex 커버리지 끊김 — " + " · ".join(
+                f"{r['코드']} {r['저널']} ({r['OpenAlex 커버리지'][2:]})" for r in gaps) +
+                ". 이후 연도는 논문이 없는 것이 아니라 OpenAlex에 미연결 → 트렌드 분석 분모에서 제외, "
+                "KCI 등 대체 출처로 보완 예정.")
         m1, m2 = st.columns(2)
         m1.metric("저널 수 (해석 성공)", f"{len(trj)} / {len(wj.get('journals', [])) or 12}")
         m2.metric("코퍼스 논문 수", f"{sum(r['전체'] for r in jrows):,}편")

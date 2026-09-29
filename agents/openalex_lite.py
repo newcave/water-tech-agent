@@ -89,9 +89,13 @@ def journal_corpus(errors: list) -> dict:
                 continue
             by_year = oa_by_year(f"{source_filter([s['id'] for s in srcs])},"
                                  f"from_publication_date:{y0}-01-01")
+            years = [int(y) for y, c in by_year.items() if c]
             rec = {"name": j["name"], "sources": srcs,
                    "total": sum(by_year.values()),
+                   "last_year": max(years) if years else None,   # 커버리지 끊김 감지용
                    "by_year": dict(sorted(by_year.items()))}
+            if j.get("openalex_coverage_to"):
+                rec["coverage_to"] = j["openalex_coverage_to"]
             if j.get("check_issns"):                  # 확인용 ISSN — 수집 필터엔 미포함
                 rec["check_sources"] = resolve_sources(j["check_issns"], MAILTO)
             out[j["code"]] = rec
