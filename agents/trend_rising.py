@@ -37,7 +37,6 @@ MAX_GROUP_PAGES = 20                          # 연도·분류당 group_by 최�
 MIN_TOTAL_DF = 60                             # 검정 대상 최소 누적 논문 수
 MIN_YEARS_PRESENT = 6                         # 검정 대상 최소 등장 연도 수
 Q = 0.05                                      # BH FDR 수준
-MIN_RECENT_SHARE = 0.001                      # 순위 상단 조건: 최근 3년 비중 ≥ 1‰
 KINDS = {"topics": "topics.id", "keywords": "keywords.id"}
 
 
@@ -75,28 +74,14 @@ def group_by(filt: str, key: str):
 
 
 def bh(pvals: np.ndarray) -> np.ndarray:
-    """Benjamini–Hochberg q값. NaN은 제외하고 계산 (NaN 하나가 전체를 NaN으로 만들지 않게)."""
-    out = np.full(len(pvals), np.nan)
-    ok = ~np.isnan(pvals)
-    p = pvals[ok]
-    n = len(p)
-    if not n:
-        return out
-    order = np.argsort(p)
-    ranked = p[order] * n / np.arange(1, n + 1)
+    """Benjamini–Hochberg q값."""
+    n = len(pvals)
+    order = np.argsort(pvals)
+    ranked = pvals[order] * n / np.arange(1, n + 1)
     q = np.minimum.accumulate(ranked[::-1])[::-1]
-    qq = np.empty(n)
-    qq[order] = np.clip(q, 0, 1)
-    out[ok] = qq
+    out = np.empty(n)
+    out[order] = np.clip(q, 0, 1)
     return out
-
-
-def trend_test(rel: np.ndarray):
-    """Hamed–Rao 수정 MK. 희소 시계열에서 보정 분산이 음수(p=NaN)면 원 MK로 대체하고 표시."""
-    t = mk.hamed_rao_modification_test(rel)
-    if np.isfinite(t.p):
-        return t, "hamed_rao"
-    return mk.original_test(rel), "original(HR 분산<0)"
 
 
 def main():
@@ -151,10 +136,9 @@ def main():
             if v.sum() < MIN_TOTAL_DF or (v > 0).sum() < MIN_YEARS_PRESENT:
                 continue
             rel = np.divide(v, N, out=np.zeros_like(v), where=N > 0)
-            with np.errstate(invalid="ignore"):
-                t, how = trend_test(rel)
+            t = mk.hamed_rao_modification_test(rel)
             recent, early = rel[-3:].mean(), rel[:max(3, len(rel) // 2)].mean()
-            rows.append({"id": tid, "name": names.get(tid), "total": int(v.sum()), "test": how,
+            rows.append({"id": tid, "name": names.get(tid), "total": int(v.sum()),
                          "tau": round(float(t.Tau), 3), "p": float(t.p),
                          "sen": float(t.slope),
                          "sen_rel": float(t.slope / rel.mean()) if rel.mean() else 0.0,
@@ -167,22 +151,17 @@ def main():
         for r, q in zip(rows, qv):
             r["q"] = float(q)
             r["p"] = round(r["p"], 6)
-        # 순위: 상대 기울기는 저빈도 주제(분류기 오배정 포함)를 과대평가 → 절대 기울기(‰/년) 우선,
-        #       최근 3년 비중이 MIN_RECENT_SHARE 미만인 주제는 '저빈도'로 표시해 뒤로 보냄
-        sig = [r for r in rows if np.isfinite(r["q"]) and r["q"] < Q]
-        for r in sig:
-            r["minor"] = r["recent_share"] < MIN_RECENT_SHARE
-        rising = sorted((r for r in sig if r["sen"] > 0), key=lambda r: (r["minor"], -r["sen"]))
-        falling = sorted((r for r in sig if r["sen"] < 0), key=lambda r: (r["minor"], r["sen"]))
+        rising = sorted((r for r in rows if r["q"] < Q and r["sen"] > 0),
+                        key=lambda r: -r["sen_rel"])
+        falling = sorted((r for r in rows if r["q"] < Q and r["sen"] < 0),
+                         key=lambda r: r["sen_rel"])
         result["kinds"][kind] = {"tested": len(rows), "n_rising": len(rising),
                                  "truncated_floor": floors,
                                  "n_falling": len(falling),
-                                 "n_hr_fallback": sum(r["test"] != "hamed_rao" for r in rows),
-                                 "rising": rising[:150], "falling": falling[:60]}
+                                 "rising": rising[:60], "falling": falling[:30]}
         print(f"✅ {kind}: 검정 {len(rows)}개 → 상승 {len(rising)} · 하강 {len(falling)} (q<{Q})")
         for r in rising[:10]:
-            print(f"     ↑ {r['name']}: {r['sen'] * 1000:+.3f}‰/년 (상대 {r['sen_rel']:+.3f}) · "
-                  f"최근 {r['recent_share'] * 1000:.1f}‰ · lift {r['lift']} · q={r['q']:.2g}")
+            print(f"     ↑ {r['name']}: Sen {r['sen_rel']:+.3f}/년 · lift {r['lift']} · q={r['q']:.2g}")
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return 0

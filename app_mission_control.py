@@ -669,18 +669,13 @@ elif page == "📄 논문 트렌드":
         m1.metric("검정 항목", f"{kd['tested']:,}")
         m2.metric("상승 (유의)", f"{kd['n_rising']:,}")
         m3.metric("하강 (유의)", f"{kd['n_falling']:,}")
-        st.caption("순위: 절대 기울기(논문 1,000편당 연간 증가분) 순. 최근 3년 비중 1‰ 미만은 '저빈도'로 표시하고 뒤로 보냄 "
-                   "(저빈도 주제는 분류기 오배정일 가능성이 큼). 저널 구성 변화(예: Water Research 비중 증가)가 "
-                   "추세에 섞일 수 있음 — 저널 균형 보정은 다음 단계.")
         if kd.get("truncated_floor"):
             st.caption("⚠️ 목록이 잘린 연도(최소 건수): " + ", ".join(
                 f"{y}({n})" for y, n in sorted(kd["truncated_floor"].items())) +
                 " — 이 연도에 목록에 없던 항목은 0으로 계산됨")
 
         def tbl(rows):
-            return pd.DataFrame([{"주제": r["name"] + (" (저빈도)" if r.get("minor") else ""),
-                                  "기울기(‰/년)": round(r["sen"] * 1000, 3),
-                                  "최근3년 비중(‰)": round(r["recent_share"] * 1000, 2),
+            return pd.DataFrame([{"주제": r["name"], "상대기울기(%/년)": round(r["sen_rel"] * 100, 1),
                                   "최근3년/초기 배율": r["lift"], "누적 논문": r["total"],
                                   "q": f"{r['q']:.1e}"} for r in rows])
         if kd["rising"]:
