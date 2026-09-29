@@ -1,9 +1,11 @@
 {
- "collected_total": 13905,
- "target_total": 13922,
- "updated": 1790632177,
+ "collected_total": 14005,
+ "target_total": 18546,
+ "updated": 1790646364,
  "kwater_collected": 159,
  "kwater_target": 159,
+ "journal_collected": 100,
+ "journal_target": 4624,
  "related_collected": 13746,
  "related_target": 13763,
  "tasks": {
@@ -46,6 +48,66 @@
    "count": 687,
    "target": 689,
    "done": true
+  },
+  "J01": {
+   "count": 100,
+   "target": 4624,
+   "done": false
+  },
+  "J02": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J03": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J04": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J05": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J06": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J07": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J08": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J09": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J10": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J11": {
+   "count": 0,
+   "target": 0,
+   "done": false
+  },
+  "J12": {
+   "count": 0,
+   "target": 0,
+   "done": false
   }
  }
 }
