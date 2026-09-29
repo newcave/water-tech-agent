@@ -64,7 +64,6 @@ def main():
     if not KEY:
         print("❌ KCI_API_KEY 환경변수 없음 — 저장소 Settings → Secrets → Actions에 등록 필요")
         return 1
-    year_now = time.gmtime().tm_year
 
     # ── 1. 응답 구조 ──
     print("=== 1. 응답 구조 (J11, 2024, journal= 조건) ===")
@@ -86,17 +85,42 @@ def main():
               "| DOI 있음:", bool(find_text(rec, "doi")),
               "| 초록 있음:", bool(find_text(rec, "abstract")))
 
-    # ── 2. 연도별 건수: 검색 조건 비교 ──
-    print("\n=== 2. 연도별 total (조건별 비교) ===")
+    # (2단계 조건 비교는 1차 점검에서 완료: pubiYr·issn 조건 무효, journal= 만 유효)
+
+    # ── 3. 연도 조건 후보 (1차 점검에서 pubiYr는 무시됨) ──
+    print("\n=== 3. 연도 조건 후보 (J11, 2024) ===")
+    for label, cond in [("dateFrom/dateTo", {"dateFrom": "202401", "dateTo": "202412"}),
+                        ("pubiYr+title", {"pubiYr": 2024, "title": "수자원"})]:
+        st, root, head = call({"journal": JOURNALS[0]["name"], "displayCount": 100, **cond})
+        recs = records(root) if root is not None else []
+        yrs = Counter(find_text(r, "pub-year") for r in recs)
+        print(f"  [{label}] HTTP {st} total={find_text(root, 'total') if root is not None else head[:80]}"
+              f" · 받은 {len(recs)}건 연도분포 {dict(yrs)}")
+
+    # ── 4. 전수 페이지 순회 → 학술지명·연도별 건수만 집계 (연도 필터 대안) ──
+    print("\n=== 4. 전수 순회 집계 (displayCount=100) ===")
     for j in JOURNALS:
-        conds = [("journal", {"journal": j["name"]})] + \
-                [(f"issn {i}", {"issn": i}) for i in j["issns"]]
-        for label, cond in conds:
-            row = []
-            for y in range(2021, year_now + 1):              # 2021 = OpenAlex와 겹치는 대조 연도
-                st, root, head = call({**cond, "pubiYr": y, "displayCount": 1})
-                row.append(f"{y}:{find_text(root, 'total', 'totalCount') if root is not None else f'HTTP{st}'}")
-            print(f"  {j['code']} {j['name']} [{label}] → " + ", ".join(row))
+        by_year, names, got, page = Counter(), Counter(), 0, 1
+        total = None
+        while True:
+            st, root, head = call({"journal": j["name"], "displayCount": 100, "page": page})
+            if root is None:
+                print(f"  {j['code']} page {page} 실패 HTTP {st}: {head[:80]}")
+                break
+            total = total or int(find_text(root, "total") or 0)
+            recs = records(root)
+            if not recs:
+                break
+            for r in recs:
+                names[find_text(r, "journal-name")] += 1
+                by_year[find_text(r, "pub-year")] += 1
+            got += len(recs)
+            if got >= total or page >= 80:            # 안전장치
+                break
+            page += 1
+        print(f"  {j['code']} total={total} 순회 {got}건 ({page}페이지)")
+        print(f"     학술지명 분포: {dict(names)}")
+        print(f"     연도별: {dict(sorted(by_year.items(), key=lambda x: str(x[0])))}")
 
     print("\n출처: KCI(한국학술지인용색인) 데이터 활용")
     return 0
