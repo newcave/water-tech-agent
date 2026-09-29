@@ -650,6 +650,54 @@ elif page == "📄 논문 트렌드":
             st.caption("🇰🇷 " + ", ".join(sorted(kci)) + " 연도별 건수: KCI(한국학술지인용색인) 데이터 활용 "
                        "— 연도별 집계만 표시 (원천 데이터 미저장)")
 
+    # ═══════════════ KCI 상승 연구주제 v0.1 (한국 저널) ═══════════════
+    st.divider()
+    st.markdown('<div class="sect">🇰🇷 KCI 상승 연구주제 v0.1 — 한국수자원학회논문집·대한토목학회논문집</div>',
+                unsafe_allow_html=True)
+    kr = load_json("kci_rising.json")
+    if not kr or not kr.get("scopes"):
+        st.info("분석 결과가 아직 없습니다 — kci-rising 워크플로(주 1회)가 data_seed/kci_rising.json을 기록합니다.")
+    else:
+        scope = st.radio("범위", list(kr["scopes"]), horizontal=True,
+                         format_func=lambda s: {"J11": "수자원학회 단독", "J11+J12": "수자원학회+토목학회"}.get(s, s))
+        sd = kr["scopes"][scope]
+        yrs = sd["years"]
+        st.caption(f"{kr['method']} · {yrs[0]}–{yrs[-1]} · 논문 {sum(sd['denominator']):,}편 · FDR q<{kr['q']} · "
+                   f"{kr['source']}. 대한토목학회논문집은 2012년까지 분책 A~D(구조·교통 등 포함) → 토목 전반 용어가 섞임.")
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("검정 용어", f"{sd['tested']:,}")
+        m2.metric("상승 (유의)", f"{sd['n_rising']:,}")
+        m3.metric("하강 (유의)", f"{sd['n_falling']:,}")
+        m4.metric("주제 묶음", f"{len(sd['network']['communities'])}")
+
+        def ktbl(rows):
+            return pd.DataFrame([{"용어": r["term"] + (" (저빈도)" if r.get("minor") else ""),
+                                  "기울기(‰/년)": round(r["sen"] * 1000, 2),
+                                  "최근3년 논문": r["recent_docs"], "최근3년/초기 배율": r["lift"],
+                                  "누적 논문": r["total"], "q": f"{r['q']:.1e}"} for r in rows])
+        if sd["rising"]:
+            st.dataframe(ktbl(sd["rising"][:30]), hide_index=True, width="stretch")
+            pick = st.multiselect("추이 비교 (논문 1,000편당)", [r["term"] for r in sd["rising"]],
+                                  default=[r["term"] for r in sd["rising"] if not r.get("minor")][:5],
+                                  key="kci_pick")
+            den = sd["denominator"]
+            fig = go.Figure()
+            for r in sd["rising"]:
+                if r["term"] in pick:
+                    fig.add_trace(go.Scatter(x=yrs, y=[d / n * 1000 if n else 0 for d, n in zip(r["df"], den)],
+                                             mode="lines", name=r["term"]))
+            fig.update_layout(height=340, yaxis_title="‰", legend=dict(orientation="h", y=-0.2), **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+        comms = sd["network"]["communities"]
+        if comms:
+            w = sd["network"]["window"]
+            st.markdown(f"**상승 용어 묶음 (공출현 Louvain, {w[0]}–{w[-1]})**")
+            for c in comms[:8]:
+                st.markdown(f"- 묶음 {c['id'] + 1} ({c['size']}개): " + " · ".join(c["terms"][:12]))
+        if sd["falling"]:
+            with st.expander(f"하강 용어 상위 {min(20, len(sd['falling']))}개"):
+                st.dataframe(ktbl(sd["falling"][:20]), hide_index=True, width="stretch")
+
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
     # ═══════════════ K-water 연구기록 (16-25) ═══════════════
     st.divider()
