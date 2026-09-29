@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1787869068,
-   "kwater": 0,
-   "related_1y": 15798
-  },
-  {
    "ts": 1787916482,
    "kwater": 0,
    "related_1y": 15798
@@ -600,11 +595,22 @@
    "kwater": 413,
    "related_1y": 8934,
    "journal_corpus": 103492
+  },
+  {
+   "ts": 1790660870,
+   "kwater": 413,
+   "related_1y": 16940,
+   "journal_corpus": 103492
   }
  ],
- "updated": 1790645017,
+ "updated": 1790660870,
  "window_from": "2025-07-01",
  "institutes": {
+  "INST-01": {
+   "name": "경영연구소",
+   "keyword": "water utility management",
+   "recent_1y": 2001
+  },
   "INST-02": {
    "name": "수자원환경연구소",
    "keyword": "water resources hydrology",
@@ -615,10 +621,25 @@
    "keyword": "drinking water treatment",
    "recent_1y": 5782
   },
+  "INST-04": {
+   "name": "물인프라안전연구소",
+   "keyword": "dam safety monitoring",
+   "recent_1y": 742
+  },
   "INST-05": {
    "name": "물에너지연구소",
    "keyword": "hydropower generation",
    "recent_1y": 2136
+  },
+  "INST-06": {
+   "name": "수자원위성연구소",
+   "keyword": "satellite remote sensing water",
+   "recent_1y": 4447
+  },
+  "INST-07": {
+   "name": "AI연구소",
+   "keyword": "machine learning hydrology",
+   "recent_1y": 816
   }
  },
  "journals": {
@@ -632,6 +653,7 @@
     }
    ],
    "total": 14704,
+   "last_year": 2026,
    "by_year": {
     "2000": 353,
     "2001": 323,
@@ -672,6 +694,7 @@
     }
    ],
    "total": 22991,
+   "last_year": 2026,
    "by_year": {
     "2000": 251,
     "2001": 243,
@@ -712,6 +735,7 @@
     }
    ],
    "total": 4763,
+   "last_year": 2026,
    "by_year": {
     "2000": 63,
     "2001": 71,
@@ -752,6 +776,7 @@
     }
    ],
    "total": 6226,
+   "last_year": 2026,
    "by_year": {
     "2000": 28,
     "2001": 28,
@@ -792,6 +817,7 @@
     }
    ],
    "total": 2727,
+   "last_year": 2026,
    "by_year": {
     "2000": 60,
     "2001": 69,
@@ -832,6 +858,7 @@
     }
    ],
    "total": 6080,
+   "last_year": 2026,
    "by_year": {
     "2000": 53,
     "2001": 55,
@@ -872,6 +899,7 @@
     }
    ],
    "total": 10056,
+   "last_year": 2026,
    "by_year": {
     "2000": 324,
     "2001": 346,
@@ -912,6 +940,7 @@
     }
    ],
    "total": 3456,
+   "last_year": 2026,
    "by_year": {
     "2000": 61,
     "2001": 89,
@@ -952,6 +981,7 @@
     }
    ],
    "total": 24132,
+   "last_year": 2026,
    "by_year": {
     "2000": 534,
     "2001": 552,
@@ -992,6 +1022,7 @@
     }
    ],
    "total": 3611,
+   "last_year": 2026,
    "by_year": {
     "2000": 108,
     "2001": 132,
@@ -1032,6 +1063,7 @@
     }
    ],
    "total": 2187,
+   "last_year": 2021,
    "by_year": {
     "2000": 231,
     "2001": 68,
@@ -1056,6 +1088,7 @@
     "2020": 98,
     "2021": 63
    },
+   "coverage_to": 2021,
    "check_sources": []
   },
   "J12": {
@@ -1068,6 +1101,7 @@
     }
    ],
    "total": 2559,
+   "last_year": 2021,
    "by_year": {
     "2000": 78,
     "2001": 9,
@@ -1091,7 +1125,8 @@
     "2019": 24,
     "2020": 17,
     "2021": 2
-   }
+   },
+   "coverage_to": 2021
   }
  }
 }
