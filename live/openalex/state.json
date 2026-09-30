@@ -50,10 +50,10 @@
    "done": true
   },
   "J01": {
-   "cursor": "IlsxNTc3ODM2ODAwMDAwLCAnLUluZmluaXR5JywgMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1czMTYyMDIzODcyJ10i",
-   "count": 4600,
+   "cursor": null,
+   "count": 4614,
    "target": 4630,
-   "done": false
+   "done": true
   },
   "J02": {
    "cursor": null,
