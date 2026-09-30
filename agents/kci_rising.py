@@ -52,25 +52,36 @@ STOP = set("""
 자료 데이터 기반 기법 시스템 요소 지역 대한 따른 통한 위한 이후 이전 전체 부분 기간 시간 연도 수준 범위 목적
 문제 기준 측면 결과값 본논문 논문 사례 실험 연구결과 분석결과 study analysis results method model data using
 based paper proposed approach case korea korean
+발생 증가 감소 가능 대비 다양 기대 최근 향후 중요 국내 국외 제공 주요 판단 개선 구축 수립 정량 정성 대응 관리
+기여 도움 향상 확보 실시 고찰 파악 규명 제고 도입 반영 필요성 문제점 한계 장점 단점 측면 관점 사항 내용 부분
+일부 대부분 다수 상대 가지 이상 이하 이내 정도 수치 결과값 분석결과 연구결과 본연구 본논문 선행연구 기존연구
+시사점 의미 의의 중요성 효율 효율성 적절 유의 유의미 통계 비교분석 사용 경우 형태 방식 구성 과정 단계 수행
 """.split())
+HANGUL_MIN_RATIO = 0.5             # 이 비율 미만 초록 보유 학회지·연도는 제외 (초록 유무 편향 방지)
+ACRONYM = re.compile(r"^[A-Z][A-Z0-9]{1,11}$")   # 영문은 전부 대문자인 약어(LSTM·SWAT·GIS·SSP)만
 HANGUL = re.compile("[가-힣]")
 
 
-def load_docs(codes: list) -> dict:
-    """{연도: [문서텍스트, ...]}"""
-    docs = {}
+def load_docs(codes: list):
+    """→ ({연도: [국문 제목+초록, ...]}, 제외 통계).
+    · 국문 제목·초록이 없는 영문 전용 논문은 제외 (영어 기능어가 섞이는 문제, 영문 분석은 다음 단계)
+    · 국문 초록 보유율이 HANGUL_MIN_RATIO 미만인 학회지·연도는 통째로 제외 (예: 대한토목학회논문집 2002–2003)"""
+    docs, excl = {}, {"english_only": 0, "low_abstract_years": []}
     for c in codes:
         for p in sorted((RAW / c).glob("*.jsonl")):
-            for line in p.read_text(encoding="utf-8").splitlines():
-                if not line.strip():
-                    continue
-                r = json.loads(line)
+            rows = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
+            if not rows:
+                continue
+            ko = [r for r in rows if HANGUL.search((r.get("title_ko") or "") + (r.get("abstract_ko") or ""))]
+            excl["english_only"] += len(rows) - len(ko)
+            with_abs = sum(bool(r.get("abstract_ko")) for r in ko)
+            if ko and with_abs / len(ko) < HANGUL_MIN_RATIO:
+                excl["low_abstract_years"].append(f"{c}-{p.stem}")
+                continue
+            for r in ko:
                 y = int(r.get("year") or p.stem)
-                t = " ".join(x for x in (r.get("title_ko") or r.get("title_en"),
-                                         r.get("abstract_ko") or r.get("abstract_en")) if x)
-                if t:
-                    docs.setdefault(y, []).append(t)
-    return docs
+                docs.setdefault(y, []).append(" ".join(x for x in (r.get("title_ko"), r.get("abstract_ko")) if x))
+    return docs, excl
 
 
 def read_raw(code: str):
@@ -123,8 +134,9 @@ def terms_of(kiwi: Kiwi, text: str) -> set:
             continue
         if run:
             w = "".join(run)
-            w = w.lower() if not HANGUL.search(w) else w
-            if len(w) >= 2 and w not in STOP and not w.isdigit():
+            if not HANGUL.search(w):                  # 영문: 약어(대문자 포함)만, 일반 영어 단어 제외
+                w = w if ACRONYM.match(w) else ""
+            if len(w) >= 2 and w not in STOP and w.lower() not in STOP and not w.isdigit():
                 out.add(w)
             run = []
         if tok is not None and tok.tag in NOUN:
@@ -230,13 +242,15 @@ def main():
            "source": "KCI(한국학술지인용색인) 데이터 활용 — 집계만 공개, 원천 데이터 미포함",
            "q": Q, "updated": int(time.time()), "scopes": {}}
     for name, codes in SCOPES.items():
-        docs = load_docs(codes)
+        docs, excl = load_docs(codes)
         if not docs:
             continue
         res = analyze(kiwi, docs, y1)
+        res["excluded"] = excl
         out["scopes"][name] = res
         print(f"✅ {name}: 논문 {sum(res['denominator']):,}편 · 검정 {res['tested']} → "
-              f"상승 {res['n_rising']} · 하강 {res['n_falling']} · 커뮤니티 {len(res['network']['communities'])}")
+              f"상승 {res['n_rising']} · 하강 {res['n_falling']} · 커뮤니티 {len(res['network']['communities'])} "
+              f"(제외: 영문 전용 {excl['english_only']}편, 초록 부족 {excl['low_abstract_years']})")
         for r in res["rising"][:12]:
             print(f"     ↑ {r['term']}: {r['sen'] * 1000:+.2f}‰/년 · 최근 {r['recent_docs']}편 · "
                   f"lift {r['lift']} · q={r['q']:.2g}{' (저빈도)' if r['minor'] else ''}")

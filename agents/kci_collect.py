@@ -113,26 +113,36 @@ def record(rec) -> dict:
             "cited": first(rec, "citation-count")}
 
 
-def fetch_year(journal, names, year: int, extra: dict = None) -> list:
-    """journal= (names로 걸러냄) 또는 extra 조건(affiliation= 등, names=None이면 거르지 않음)."""
-    out, got, total = [], 0, None
-    base = {"journal": journal} if journal else {}
-    for page in range(1, MAX_PAGES + 1):
-        root = call({**base, **(extra or {}), "dateFrom": f"{year}01", "dateTo": f"{year}12",
-                     "displayCount": PAGE, "page": page})
-        total = total if total is not None else int(first(root, "total") or 0)
-        recs = [el for el in root.iter() if local(el.tag) == "record"]
-        got += len(recs)
-        out += [r for r in map(record, recs) if names is None or norm(r["journal"]) in names]
-        if not recs or got >= total:
-            break
-    seen, uniq = set(), []                            # 페이지 경계 중복 제거
-    for r in out:
-        k = r["id"] or (r["title_ko"], r["volume"], r["issue"])
+def fetch_page(params: dict, d_from: str, d_to: str, page: int = 1):
+    root = call({**params, "dateFrom": d_from, "dateTo": d_to, "displayCount": PAGE, "page": page})
+    return int(first(root, "total") or 0), [record(el) for el in root.iter() if local(el.tag) == "record"]
+
+
+def fetch_year(journal, names, year: int, extra: dict = None):
+    """연도 조회 → (걸러낸 레코드, API total, 받은 고유 레코드 수).
+    2026-09-30 실측: 결과가 100건을 넘으면 page=2 이후가 앞 페이지와 겹쳐 누락됨 →
+    한 번에 100건 이하가 되도록 월 단위(dateFrom=dateTo=YYYYMM)로 쪼개 받는다."""
+    params = {**({"journal": journal} if journal else {}), **(extra or {})}
+    total, recs = fetch_page(params, f"{year}01", f"{year}12")
+    if total > PAGE:
+        recs = []
+        for mth in range(1, 13):
+            ym = f"{year}{mth:02d}"
+            t, r = fetch_page(params, ym, ym)
+            recs += r
+            for page in range(2, MAX_PAGES + 1):          # 한 달에 100건 초과(드묾): 가능한 만큼 + 중복 제거
+                if len(r) == 0 or page > (t + PAGE - 1) // PAGE:
+                    break
+                _, r = fetch_page(params, ym, ym, page)
+                recs += r
+    seen, uniq = set(), []
+    for r in recs:                                        # 중복 제거
+        k = r["id"] or (r["title_ko"], r["journal"], r["volume"], r["issue"])
         if k not in seen:
             seen.add(k)
             uniq.append(r)
-    return uniq
+    kept = [r for r in uniq if names is None or norm(r["journal"]) in names]
+    return kept, total, len(uniq)
 
 
 def main():
@@ -156,15 +166,18 @@ def main():
         m = manifest["journals"].setdefault(j["code"], {"name": j["name"], "years": {}})
         for y in range(y0, y1 + 1):
             p = d / f"{y}.jsonl"
-            if p.exists() and not FULL and y < y1 - 1:
+            done = m["years"].get(str(y), {}).get("complete")
+            if p.exists() and done and not FULL and y < y1 - 1:   # 완전 수집된 과거 연도만 건너뜀
                 continue
-            recs = fetch_year(kci["journal"], names, y)
+            recs, total, got = fetch_year(kci["journal"], names, y)
             if not recs and not p.exists():
                 continue
             p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
             m["years"][str(y)] = {"n": len(recs), "kwater": sum(r["kwater"] for r in recs),
-                                  "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
-            print(f"   {j['code']} {y}: {len(recs)}건 (K-water {m['years'][str(y)]['kwater']}, "
+                                  "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs),
+                                  "api_total": total, "got": got, "complete": got >= total}
+            print(f"   {j['code']} {y}: {len(recs)}건 (API {total} / 수신 {got}"
+                  f"{'' if got >= total else ' ⚠️누락'}, K-water {m['years'][str(y)]['kwater']}, "
                   f"초록 {m['years'][str(y)]['with_abstract']})")
         print(f"✅ {j['code']} {j['name']}: {sum(v['n'] for v in m['years'].values()):,}건")
 
@@ -174,11 +187,14 @@ def main():
     m = manifest["journals"].setdefault("KWATER", {"name": "K-water 소속 논문 (KCI 전체)", "years": {}})
     for y in range(y0, y1 + 1):
         p = d / f"{y}.jsonl"
-        if p.exists() and not FULL and y < y1 - 1:
+        done = m["years"].get(str(y), {}).get("complete")
+        if p.exists() and done and not FULL and y < y1 - 1:
             continue
-        seen, recs, raw_n = set(), [], 0
+        seen, recs, raw_n, complete = set(), [], 0, True
         for q in KW_QUERIES:
-            for r in fetch_year(None, None, y, {"affiliation": q}):
+            kept, total, got = fetch_year(None, None, y, {"affiliation": q})
+            complete &= got >= total
+            for r in kept:
                 raw_n += 1
                 k = r["id"] or (r["title_ko"], r["journal"], r["volume"], r["issue"])
                 if k not in seen and r["kwater"]:                 # 소속 문자열 재확인
@@ -187,9 +203,9 @@ def main():
         if not recs and not p.exists():
             continue
         p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
-        m["years"][str(y)] = {"n": len(recs), "hits": raw_n,
+        m["years"][str(y)] = {"n": len(recs), "hits": raw_n, "complete": complete,
                               "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
-        print(f"   KWATER {y}: {len(recs)}건 (검색 결과 {raw_n}건 중 소속 확인)")
+        print(f"   KWATER {y}: {len(recs)}건 (검색 결과 {raw_n}건 중 소속 확인{'' if complete else ' ⚠️누락'})")
     print(f"✅ KWATER K-water 소속 논문: {sum(v['n'] for v in m['years'].values()):,}건")
     manifest["updated"] = int(time.time())
     manifest["source"] = "KCI(한국학술지인용색인) 데이터 활용 — 재배포 금지, 이용 목적 종료 시 파기"
