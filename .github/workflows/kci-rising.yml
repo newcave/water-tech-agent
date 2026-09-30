@@ -1,0 +1,79 @@
+name: kci-rising
+
+# KCI 한국 저널(J11·J12) 원천 수집 → 비공개 저장소 보관 → 상승 주제 분석(집계만 공개)
+# 준비: ① 비공개 저장소 newcave/water-tech-kci-private
+#       ② secrets.KCI_PRIVATE_TOKEN = 그 저장소만 Contents 읽기·쓰기 권한인 fine-grained PAT
+on:
+  schedule:
+    - cron: "11 21 * * 0"        # 매주 일요일 21:11 UTC (월요일 06:11 KST)
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "전 연도 재수집 (1=예)"
+        default: "0"
+  push:                          # 작업 브랜치 시험 실행 (공개 저장소 커밋은 main에서만)
+    branches: [claude/wizardly-fermi-mrihtw]
+    paths: [agents/kci_collect.py, agents/kci_rising.py, .github/workflows/kci-rising.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kci-rising
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 비공개 저장소 체크아웃 (원천 데이터 보관소)
+        uses: actions/checkout@v4
+        with:
+          repository: newcave/water-tech-kci-private
+          token: ${{ secrets.KCI_PRIVATE_TOKEN }}
+          path: private
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet requests numpy pymannkendall networkx kiwipiepy
+
+      - name: KCI 원천 수집 (비공개 저장소에만 저장)
+        env:
+          KCI_API_KEY: ${{ secrets.KCI_API_KEY }}
+          KCI_RAW_DIR: private
+          KCI_FULL: ${{ github.event.inputs.full || '0' }}
+        run: python agents/kci_collect.py
+
+      - name: 원천 커밋 → 비공개 저장소
+        working-directory: private
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "원천 변경 없음"; exit 0; fi
+          git commit -q -m "kci raw: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push -q
+
+      - name: 상승 주제 분석 (집계만 출력)
+        env:
+          KCI_RAW_DIR: private
+        run: python agents/kci_rising.py
+
+      - name: 집계 커밋 → 공개 저장소 (main만)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add data_seed/kci_rising.json
+          [ -f data_seed/kci_kwater.json ] && git add data_seed/kci_kwater.json
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "🤖 kci_rising: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 10
+          done
+          echo "push 실패(3회)"; exit 1

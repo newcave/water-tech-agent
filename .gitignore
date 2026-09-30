@@ -4,3 +4,4 @@ live_local/
 __pycache__/
 *.pyc
 .venv/
+private/
