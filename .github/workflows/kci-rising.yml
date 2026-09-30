@@ -69,6 +69,7 @@ jobs:
           git config user.name "co-scientist-bot"
           git config user.email "co-scientist-bot@users.noreply.github.com"
           git add data_seed/kci_rising.json
+          [ -f data_seed/kci_kwater.json ] && git add data_seed/kci_kwater.json
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -m "🤖 kci_rising: $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3; do

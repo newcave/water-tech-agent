@@ -5,6 +5,7 @@ kci_rising — 한국 저널(KCI) 상승 연구주제 탐지 v0.1
 
 입력: {KCI_RAW_DIR}/raw/{코드}/{연도}.jsonl  (kci_collect.py가 비공개 저장소에 모은 원천)
 출력: data_seed/kci_rising.json               (공개 — 용어·연도별 빈도와 검정 결과 같은 집계만)
+      data_seed/kci_kwater.json               (공개 — K-water 소속 논문 연도별 수·학회지 내 비중·게재지·협업기관 집계)
 
 방법 (논문 설계 그대로):
   1. 용어 추출: 국문 제목+초록(없으면 영문)을 Kiwi 형태소 분석 → 띄어쓰기 없이 붙은 명사열을
@@ -13,7 +14,8 @@ kci_rising — 한국 저널(KCI) 상승 연구주제 탐지 v0.1
   3. Hamed–Rao 수정 Mann–Kendall + Sen 기울기 → Benjamini–Hochberg FDR (q<0.05)
   4. 공출현 네트워크: 상승 용어끼리 최근 5년 논문에서 함께 나온 횟수 → Louvain 커뮤니티
 
-범위: 'J11'(한국수자원학회논문집 단독)과 'J11+J12'(대한토목학회논문집 포함) 두 가지로 계산.
+범위: 'J11'(한국수자원학회논문집 단독), 'J11+J12'(대한토목학회논문집 포함),
+      'KWATER'(KCI 전체의 K-water 소속 논문 — 분모도 K-water 논문 수)로 계산.
   J12는 2012년까지 분야별 분책 A~D(구조·교통 등 포함)였다가 2013년에 통합 → 토목 전반 용어가 섞임.
 출처: KCI(한국학술지인용색인) 데이터 활용
 """
@@ -34,6 +36,7 @@ from kiwipiepy import Kiwi
 ROOT = Path(__file__).resolve().parents[1]
 RAW = Path(os.environ.get("KCI_RAW_DIR", "private")) / "raw"
 OUT = ROOT / "data_seed" / "kci_rising.json"
+OUT_KW = ROOT / "data_seed" / "kci_kwater.json"
 Q = 0.05
 MIN_TOTAL_DF = 20                  # 검정 대상 최소 누적 문서빈도
 MIN_YEARS_PRESENT = 5              # 검정 대상 최소 등장 연도 수
@@ -41,7 +44,7 @@ MIN_RECENT_DOCS = 8                # 최근 3년 문서빈도가 이보다 적�
 NET_TERMS = 80                     # 공출현 네트워크에 넣을 상승 용어 수
 NET_WINDOW = 5                     # 공출현을 셀 최근 연도 수
 NET_MIN_CO = 3                     # 간선 최소 공출현 수
-SCOPES = {"J11": ["J11"], "J11+J12": ["J11", "J12"]}
+SCOPES = {"J11": ["J11"], "J11+J12": ["J11", "J12"], "KWATER": ["KWATER"]}
 NOUN = {"NNG", "NNP", "SL"}
 STOP = set("""
 연구 분석 결과 방법 본연구 경우 사용 적용 이용 제시 검토 평가 비교 고려 대상 기존 모형 모델 방안 특성 영향
@@ -68,6 +71,46 @@ def load_docs(codes: list) -> dict:
                 if t:
                     docs.setdefault(y, []).append(t)
     return docs
+
+
+def read_raw(code: str):
+    for p in sorted((RAW / code).glob("*.jsonl")):
+        for line in p.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                yield json.loads(line)
+
+
+def kwater_summary(y1: int) -> dict:
+    """K-water 소속 논문 집계 (공개용 — 개인 이름 없음, 기관명·건수만)."""
+    by_year, journals, units, partners = Counter(), Counter(), Counter(), Counter()
+    for r in read_raw("KWATER"):
+        y = int(r.get("year") or 0)
+        by_year[y] += 1
+        journals[r.get("journal")] += 1
+        for a in r.get("authors", []):
+            aff = a.get("affil") or ""
+            if not aff:
+                continue
+            if re.search(r"한국수자원공사|케이워터|k-?water|korea water resources? corp", aff, re.I):
+                units[aff] += 1
+            else:
+                partners[aff.split(",")[-1].strip()] += 1          # 기관 단위(마지막 쉼표 뒤)
+    share = {}
+    for code in ("J11", "J12"):
+        tot, kw = Counter(), Counter()
+        for r in read_raw(code):
+            y = int(r.get("year") or 0)
+            tot[y] += 1
+            kw[y] += bool(r.get("kwater"))
+        share[code] = {str(y): {"n": tot[y], "kwater": kw[y]} for y in sorted(tot) if y <= y1}
+    return {"source": "KCI(한국학술지인용색인) 데이터 활용 — 집계만 공개, 원천 데이터·개인 이름 미포함",
+            "updated": int(time.time()),
+            "by_year": {str(y): by_year[y] for y in sorted(by_year)},
+            "total": sum(by_year.values()),
+            "journals": journals.most_common(25),
+            "kwater_units": units.most_common(20),
+            "partners": partners.most_common(25),
+            "journal_share": share}
 
 
 def terms_of(kiwi: Kiwi, text: str) -> set:
@@ -200,6 +243,10 @@ def main():
         for c in res["network"]["communities"][:6]:
             print(f"     ◇ 커뮤니티 {c['id']} ({c['size']}): {', '.join(c['terms'][:8])}")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    if (RAW / "KWATER").exists():
+        kw = kwater_summary(y1)
+        OUT_KW.write_text(json.dumps(kw, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        print(f"✅ K-water 소속 논문 {kw['total']:,}편 · 게재지 {len(kw['journals'])}곳 이상")
     return 0
 
 

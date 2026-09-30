@@ -3,7 +3,10 @@
   "_version": "2026-07-13",
   "kwater_affiliation": {
     "openalex_ror": "04dtgat87",
-    "kipris_applicant": ["한국수자원공사", "케이워터", "K-water"]
+    "kipris_applicant": ["한국수자원공사", "케이워터", "K-water"],
+    "kci_affiliation": ["한국수자원공사", "K-water", "Korea Water Resources Corporation", "케이워터"],
+    "_kci_affiliation_doc": "KCI articleSearch affiliation= 검색어 (2026-09-30 점검: 전체 1,958 / 515 / 41 / 4건, 중복 포함). 수집 후 저자 소속 문자열을 kci_affiliation_pattern으로 다시 확인",
+    "kci_affiliation_pattern": "한국수자원공사|케이워터|k-?water|korea water resources? corp"
   },
   "institutes": [
     {

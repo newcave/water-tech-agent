@@ -825,8 +825,8 @@ elif page == "🇰🇷 KCI 트렌드":
     else:
         c1, c2 = st.columns([2, 3])
         scope = c1.radio("범위", list(kr["scopes"]), horizontal=True,
-                         format_func=lambda s_: {"J11": "수자원학회 단독",
-                                                 "J11+J12": "수자원학회 + 토목학회"}.get(s_, s_))
+                         format_func=lambda s_: {"J11": "수자원학회 단독", "J11+J12": "수자원학회 + 토목학회",
+                                                 "KWATER": "K-water 소속 논문"}.get(s_, s_))
         sd = kr["scopes"][scope]
         yrs, den = sd["years"], sd["denominator"]
         rising, falling = sd["rising"], sd["falling"]
@@ -854,7 +854,8 @@ elif page == "🇰🇷 KCI 트렌드":
             f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
             for l, v, s_, c in kpis) + '</div>', unsafe_allow_html=True)
 
-        tab1, tab2, tab3, tab4 = st.tabs(["📈 상승 용어", "🕸️ 주제 묶음", "🔍 용어 찾기", "📉 하강 용어"])
+        tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 상승 용어", "🕸️ 주제 묶음", "🔍 용어 찾기", "📉 하강 용어",
+                                                "🏢 K-water 논문"])
 
         # ── 탭1: 순위 막대 + 연도 히트맵 ──
         with tab1:
@@ -995,6 +996,65 @@ elif page == "🇰🇷 KCI 트렌드":
                 fig.update_layout(height=max(300, 22 * len(rr) + 40), xaxis_title="‰ / 년",
                                   yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
                 st.plotly_chart(fig, width="stretch")
+
+        # ── 탭5: K-water 소속 논문 (사이드 수집) ──
+        with tab5:
+            kw = load_json("kci_kwater.json")
+            if not kw or not kw.get("total"):
+                st.info("K-water 소속 논문 집계가 아직 없습니다 — kci-rising 워크플로가 KCI 전체에서 "
+                        "소속(한국수자원공사·K-water 등)으로 모아 data_seed/kci_kwater.json을 만듭니다.")
+            else:
+                ky = [int(y) for y in kw["by_year"]]
+                sh = kw.get("journal_share", {})
+                recent = [kw["by_year"][str(y)] for y in ky if y >= max(ky) - 3]
+                st.markdown('<div class="kpis">' + "".join(
+                    f'<div class="kpi" style="border-left-color:{c}"><div class="k-val">{v}</div>'
+                    f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
+                    for l, v, s_, c in [
+                        ("K-water 소속 논문 (KCI 전체)", f"{kw['total']:,}", f"{min(ky)}–{max(ky)}", NAVY),
+                        ("게재 학술지", f"{len(kw['journals'])}+", f"최다: {kw['journals'][0][0]}", BLUE),
+                        ("최근 4년 연평균", f"{sum(recent) / max(1, len(recent)):.0f}편", "진행 중인 올해 포함", CYAN),
+                        ("협업 기관", f"{len(kw['partners'])}+", f"최다: {kw['partners'][0][0][:18]}" if kw["partners"] else "", GREEN)]
+                ) + '</div>', unsafe_allow_html=True)
+                a, b = st.columns(2)
+                with a:
+                    st.markdown('<div class="sect">연도별 K-water 소속 논문 (KCI 전체)</div>', unsafe_allow_html=True)
+                    fig = go.Figure(go.Bar(x=ky, y=[kw["by_year"][str(y)] for y in ky],
+                                           marker=dict(color=NAVY, line=dict(color="#FFFFFF", width=2)),
+                                           hovertemplate="%{x}년 · %{y}편<extra></extra>"))
+                    fig.update_layout(height=300, **PLOTLY_LAYOUT)
+                    fig.update_yaxes(gridcolor="#EEF2F7")
+                    st.plotly_chart(fig, width="stretch")
+                with b:
+                    st.markdown('<div class="sect">학회지 안 K-water 비중 (%)</div>', unsafe_allow_html=True)
+                    fig = go.Figure()
+                    for i, (code, lab) in enumerate([("J11", "한국수자원학회논문집"), ("J12", "대한토목학회논문집")]):
+                        d = sh.get(code, {})
+                        yy = [int(y) for y in d]
+                        fig.add_trace(go.Scatter(
+                            x=yy, y=[d[str(y)]["kwater"] / d[str(y)]["n"] * 100 if d[str(y)]["n"] else 0 for y in yy],
+                            mode="lines+markers", name=lab, line=dict(color=CAT8[i], width=2), marker=dict(size=8),
+                            customdata=[[d[str(y)]["kwater"], d[str(y)]["n"]] for y in yy],
+                            hovertemplate=lab + " %{x}년<br>%{y:.1f}% (%{customdata[0]}/%{customdata[1]}편)<extra></extra>"))
+                    fig.update_layout(height=300, yaxis_title="%", yaxis_rangemode="tozero",
+                                      legend=dict(orientation="h", y=-0.2), **PLOTLY_LAYOUT)
+                    fig.update_yaxes(gridcolor="#EEF2F7")
+                    st.plotly_chart(fig, width="stretch")
+                a, b, c = st.columns(3)
+                with a:
+                    st.markdown('<div class="sect">게재 학술지 상위</div>', unsafe_allow_html=True)
+                    st.dataframe(pd.DataFrame(kw["journals"][:15], columns=["학술지", "편수"]),
+                                 hide_index=True, width="stretch")
+                with b:
+                    st.markdown('<div class="sect">K-water 내 소속 표기 상위</div>', unsafe_allow_html=True)
+                    st.dataframe(pd.DataFrame(kw["kwater_units"][:15], columns=["소속", "저자 수"]),
+                                 hide_index=True, width="stretch")
+                with c:
+                    st.markdown('<div class="sect">공동저자 기관 상위</div>', unsafe_allow_html=True)
+                    st.dataframe(pd.DataFrame(kw["partners"][:15], columns=["기관", "저자 수"]),
+                                 hide_index=True, width="stretch")
+                st.caption("범위 선택에서 'K-water 소속 논문'을 고르면 이 논문들만으로 상승 용어·묶음을 볼 수 있음. "
+                           f"{kw['source']}")
 
         with st.expander("ℹ️ 방법과 한계"):
             st.markdown(f"""

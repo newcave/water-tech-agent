@@ -13,7 +13,12 @@ KCI 이용 준수: 원천 데이터(제목·초록 등)는 재배포 금지 → 
   · journal-name을 레지스트리 kci.names와 대조해 걸러 저장 (정기학술대회논문집 등 제외)
   · 첫 실행은 전 연도, 이후에는 파일이 없는 연도 + 최근 2년만 다시 받음 (KCI_FULL=1이면 전량 재수집)
 
-저장: {KCI_RAW_DIR}/raw/{코드}/{연도}.jsonl, {KCI_RAW_DIR}/manifest.json
+K-water 사이드 수집 (search_topics.json kwater_affiliation.kci_affiliation):
+  · J11·J12 레코드에 저자 소속이 K-water이면 kwater=true 표시
+  · KCI 전체에서 affiliation=검색어(한국수자원공사·K-water 등)로 연도별 수집 → 합치고 중복 제거 →
+    저자 소속 문자열을 다시 확인(kci_affiliation_pattern)해 맞는 것만 raw/KWATER/{연도}.jsonl에 저장
+
+저장: {KCI_RAW_DIR}/raw/{코드}/{연도}.jsonl, raw/KWATER/{연도}.jsonl, {KCI_RAW_DIR}/manifest.json
 출처: KCI(한국학술지인용색인) 데이터 활용
 """
 import json
@@ -26,7 +31,7 @@ from pathlib import Path
 
 import requests
 
-from water_journals import load_registry
+from water_journals import ROOT, load_registry
 
 API = "https://open.kci.go.kr/po/openapi/openApiSearch.kci"
 KEY = os.environ.get("KCI_API_KEY", "").strip()
@@ -36,6 +41,10 @@ PAGE = 100
 PAUSE = 1.0
 MAX_PAGES = 30
 HANGUL = re.compile("[가-힣]")
+TOPICS = json.loads((ROOT / "data_seed" / "search_topics.json").read_text(encoding="utf-8"))
+KW = TOPICS.get("kwater_affiliation", {})
+KW_QUERIES = KW.get("kci_affiliation", ["한국수자원공사", "K-water"])
+KW_PATTERN = re.compile(KW.get("kci_affiliation_pattern", "한국수자원공사|k-?water"), re.I)
 
 
 def local(tag: str) -> str:
@@ -79,10 +88,22 @@ def call(params: dict):
     raise RuntimeError("KCI 재시도 초과")
 
 
+def authors_of(rec) -> list:
+    """'이름(소속)' 형식 → [{name, affil}]. 비공개 저장소에만 저장."""
+    out = []
+    for a in (x for x in rec.iter() if local(x.tag) == "author"):
+        t = (a.text or "").strip()
+        m = re.match(r"^(.*?)\((.*)\)\s*$", t)
+        out.append({"name": (m.group(1) if m else t).strip(), "affil": (m.group(2) if m else "").strip()})
+    return out
+
+
 def record(rec) -> dict:
     info = next((x for x in rec.iter() if local(x.tag) == "articleInfo"), rec)
     titles, abstracts = texts(rec, "article-title"), texts(rec, "abstract")
-    return {"id": info.attrib.get("article-id") or first(rec, "uci") or first(rec, "doi"),
+    authors = authors_of(rec)
+    return {"kwater": any(KW_PATTERN.search(a["affil"]) for a in authors),
+            "authors": authors,"id": info.attrib.get("article-id") or first(rec, "uci") or first(rec, "doi"),
             "journal": first(rec, "journal-name"), "year": first(rec, "pub-year"),
             "mon": first(rec, "pub-mon"), "volume": first(rec, "volume"), "issue": first(rec, "issue"),
             "category": first(rec, "article-categories"),
@@ -92,15 +113,17 @@ def record(rec) -> dict:
             "cited": first(rec, "citation-count")}
 
 
-def fetch_year(journal: str, names: set, year: int) -> list:
+def fetch_year(journal, names, year: int, extra: dict = None) -> list:
+    """journal= (names로 걸러냄) 또는 extra 조건(affiliation= 등, names=None이면 거르지 않음)."""
     out, got, total = [], 0, None
+    base = {"journal": journal} if journal else {}
     for page in range(1, MAX_PAGES + 1):
-        root = call({"journal": journal, "dateFrom": f"{year}01", "dateTo": f"{year}12",
+        root = call({**base, **(extra or {}), "dateFrom": f"{year}01", "dateTo": f"{year}12",
                      "displayCount": PAGE, "page": page})
         total = total if total is not None else int(first(root, "total") or 0)
         recs = [el for el in root.iter() if local(el.tag) == "record"]
         got += len(recs)
-        out += [r for r in map(record, recs) if norm(r["journal"]) in names]
+        out += [r for r in map(record, recs) if names is None or norm(r["journal"]) in names]
         if not recs or got >= total:
             break
     seen, uniq = set(), []                            # 페이지 경계 중복 제거
@@ -139,10 +162,35 @@ def main():
             if not recs and not p.exists():
                 continue
             p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
-            m["years"][str(y)] = {"n": len(recs),
+            m["years"][str(y)] = {"n": len(recs), "kwater": sum(r["kwater"] for r in recs),
                                   "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
-            print(f"   {j['code']} {y}: {len(recs)}건 (초록 {m['years'][str(y)]['with_abstract']})")
+            print(f"   {j['code']} {y}: {len(recs)}건 (K-water {m['years'][str(y)]['kwater']}, "
+                  f"초록 {m['years'][str(y)]['with_abstract']})")
         print(f"✅ {j['code']} {j['name']}: {sum(v['n'] for v in m['years'].values()):,}건")
+
+    # ── K-water 사이드: KCI 전체에서 K-water 소속 논문 ──
+    d = RAW / "KWATER"
+    d.mkdir(parents=True, exist_ok=True)
+    m = manifest["journals"].setdefault("KWATER", {"name": "K-water 소속 논문 (KCI 전체)", "years": {}})
+    for y in range(y0, y1 + 1):
+        p = d / f"{y}.jsonl"
+        if p.exists() and not FULL and y < y1 - 1:
+            continue
+        seen, recs, raw_n = set(), [], 0
+        for q in KW_QUERIES:
+            for r in fetch_year(None, None, y, {"affiliation": q}):
+                raw_n += 1
+                k = r["id"] or (r["title_ko"], r["journal"], r["volume"], r["issue"])
+                if k not in seen and r["kwater"]:                 # 소속 문자열 재확인
+                    seen.add(k)
+                    recs.append(r)
+        if not recs and not p.exists():
+            continue
+        p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
+        m["years"][str(y)] = {"n": len(recs), "hits": raw_n,
+                              "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
+        print(f"   KWATER {y}: {len(recs)}건 (검색 결과 {raw_n}건 중 소속 확인)")
+    print(f"✅ KWATER K-water 소속 논문: {sum(v['n'] for v in m['years'].values()):,}건")
     manifest["updated"] = int(time.time())
     manifest["source"] = "KCI(한국학술지인용색인) 데이터 활용 — 재배포 금지, 이용 목적 종료 시 파기"
     manifest_p.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
