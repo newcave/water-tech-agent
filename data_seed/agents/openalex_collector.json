@@ -1,19 +1,15 @@
 {
  "agent": "openalex_collector",
- "state": "error",
- "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 413건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 12개 저널 코퍼스 103,492건",
+ "state": "idle",
+ "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 413건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 12개 저널 코퍼스 103,502건",
  "counts": {
   "K-water 논문(실측)": 413,
-  "관련논문(최근1년)": 16940,
-  "12개 저널 코퍼스": 103492
+  "관련논문(최근1년)": 16978,
+  "12개 저널 코퍼스": 103502
  },
- "last_run": 1790720348,
+ "last_run": 1790746626,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1790285611,
-   "msg": "☁️ 정기 실측 — K-water 160건 · 관련(최근1년) 16,849건"
-  },
   {
    "ts": 1790312501,
    "msg": "☁️ 정기 실측 — K-water 160건 · 관련(최근1년) 16,849건"
@@ -89,6 +85,10 @@
   {
    "ts": 1790720348,
    "msg": "⚠️ OpenAlex API 오류: 소속검색: 429 Client Error: Too Many Requests for url: https://a; INST-01: 429 Client Error: Too Many Requests for url: https:"
+  },
+  {
+   "ts": 1790746626,
+   "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 16,978건 · 저널 코퍼스 103,502건(12개)"
   }
  ]
 }
