@@ -15,6 +15,7 @@ v2 변경점 (2026-07-13):
 """
 
 import json
+import math
 import time
 import datetime as dt
 from pathlib import Path
@@ -366,7 +367,7 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
     st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
-    page = st.radio("메뉴", ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
+    page = st.radio("메뉴", ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
                             "🔥 FT 모니터", "🗂️ 인벤토리"], label_visibility="collapsed")
     st.divider()
     auto = st.toggle("실시간 갱신 (30초)", value=True)
@@ -650,54 +651,6 @@ elif page == "📄 논문 트렌드":
             st.caption("🇰🇷 " + ", ".join(sorted(kci)) + " 연도별 건수: KCI(한국학술지인용색인) 데이터 활용 "
                        "— 연도별 집계만 표시 (원천 데이터 미저장)")
 
-    # ═══════════════ KCI 상승 연구주제 v0.1 (한국 저널) ═══════════════
-    st.divider()
-    st.markdown('<div class="sect">🇰🇷 KCI 상승 연구주제 v0.1 — 한국수자원학회논문집·대한토목학회논문집</div>',
-                unsafe_allow_html=True)
-    kr = load_json("kci_rising.json")
-    if not kr or not kr.get("scopes"):
-        st.info("분석 결과가 아직 없습니다 — kci-rising 워크플로(주 1회)가 data_seed/kci_rising.json을 기록합니다.")
-    else:
-        scope = st.radio("범위", list(kr["scopes"]), horizontal=True,
-                         format_func=lambda s: {"J11": "수자원학회 단독", "J11+J12": "수자원학회+토목학회"}.get(s, s))
-        sd = kr["scopes"][scope]
-        yrs = sd["years"]
-        st.caption(f"{kr['method']} · {yrs[0]}–{yrs[-1]} · 논문 {sum(sd['denominator']):,}편 · FDR q<{kr['q']} · "
-                   f"{kr['source']}. 대한토목학회논문집은 2012년까지 분책 A~D(구조·교통 등 포함) → 토목 전반 용어가 섞임.")
-        m1, m2, m3, m4 = st.columns(4)
-        m1.metric("검정 용어", f"{sd['tested']:,}")
-        m2.metric("상승 (유의)", f"{sd['n_rising']:,}")
-        m3.metric("하강 (유의)", f"{sd['n_falling']:,}")
-        m4.metric("주제 묶음", f"{len(sd['network']['communities'])}")
-
-        def ktbl(rows):
-            return pd.DataFrame([{"용어": r["term"] + (" (저빈도)" if r.get("minor") else ""),
-                                  "기울기(‰/년)": round(r["sen"] * 1000, 2),
-                                  "최근3년 논문": r["recent_docs"], "최근3년/초기 배율": r["lift"],
-                                  "누적 논문": r["total"], "q": f"{r['q']:.1e}"} for r in rows])
-        if sd["rising"]:
-            st.dataframe(ktbl(sd["rising"][:30]), hide_index=True, width="stretch")
-            pick = st.multiselect("추이 비교 (논문 1,000편당)", [r["term"] for r in sd["rising"]],
-                                  default=[r["term"] for r in sd["rising"] if not r.get("minor")][:5],
-                                  key="kci_pick")
-            den = sd["denominator"]
-            fig = go.Figure()
-            for r in sd["rising"]:
-                if r["term"] in pick:
-                    fig.add_trace(go.Scatter(x=yrs, y=[d / n * 1000 if n else 0 for d, n in zip(r["df"], den)],
-                                             mode="lines", name=r["term"]))
-            fig.update_layout(height=340, yaxis_title="‰", legend=dict(orientation="h", y=-0.2), **PLOTLY_LAYOUT)
-            st.plotly_chart(fig, width="stretch")
-        comms = sd["network"]["communities"]
-        if comms:
-            w = sd["network"]["window"]
-            st.markdown(f"**상승 용어 묶음 (공출현 Louvain, {w[0]}–{w[-1]})**")
-            for c in comms[:8]:
-                st.markdown(f"- 묶음 {c['id'] + 1} ({c['size']}개): " + " · ".join(c["terms"][:12]))
-        if sd["falling"]:
-            with st.expander(f"하강 용어 상위 {min(20, len(sd['falling']))}개"):
-                st.dataframe(ktbl(sd["falling"][:20]), hide_index=True, width="stretch")
-
     # ═══════════════ 도메인 트렌드 (v0.1) — 아래 블록을 '논문 트렌드' 페이지 끝에 추가 ═══════════════
     # ═══════════════ K-water 연구기록 (16-25) ═══════════════
     st.divider()
@@ -846,6 +799,212 @@ elif page == "📄 논문 트렌드":
                     st.caption(f"다음 조치: {ua['next_action']}")
 
 # ═══════════════ 페이지: 라벨링 로그 ═══════════════
+elif page == "🇰🇷 KCI 트렌드":
+    # 범주 색: 검증된 8색 고정 순서 (묶음 id 순서대로, 9번째부터는 회색 '기타')
+    CAT8 = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
+    kr = load_json("kci_rising.json")
+    kc = (load_json("kci_counts.json") or {}).get("journals", {})
+    wj = load_json("water_journals.json") or {}
+
+    # ── 준비·파이프라인 상태 ──
+    n_docs = sum(v.get("total", 0) for v in kc.values())
+    steps = [("① 인증키", "✅ 등록", "KCI Open API"),
+             ("② 건수 실측", f"✅ {n_docs:,}편" if kc else "⏳ 대기", "kci-counts · 주 1회"),
+             ("③ 원천 수집", "✅ 비공개 보관" if kr else "⏳ 비공개 저장소 준비", "water-tech-kci-private"),
+             ("④ 용어 추출", "✅ Kiwi 명사" if kr else "⏳", "복합어 · 불용어 제거"),
+             ("⑤ 추세 검정", f"✅ {sum(v['tested'] for v in kr['scopes'].values()):,}개" if kr else "⏳",
+              "Hamed–Rao MK + BH"),
+             ("⑥ 주제 묶음", "✅ Louvain" if kr else "⏳", "공출현 네트워크")]
+    st.markdown('<div class="flow">' + '<div class="arr">›</div>'.join(
+        f'<div class="stage"><div class="s-t">{t}</div><div class="s-v">{v}</div><div class="s-s">{s_}</div></div>'
+        for t, v, s_ in steps) + '</div>', unsafe_allow_html=True)
+
+    if not kr or not kr.get("scopes"):
+        st.info("상승 주제 분석 결과가 아직 없습니다. 비공개 저장소(water-tech-kci-private)와 "
+                "KCI_PRIVATE_TOKEN을 준비하면 kci-rising 워크플로가 수집·분석해 이 화면을 채웁니다.")
+    else:
+        c1, c2 = st.columns([2, 3])
+        scope = c1.radio("범위", list(kr["scopes"]), horizontal=True,
+                         format_func=lambda s_: {"J11": "수자원학회 단독",
+                                                 "J11+J12": "수자원학회 + 토목학회"}.get(s_, s_))
+        sd = kr["scopes"][scope]
+        yrs, den = sd["years"], sd["denominator"]
+        rising, falling = sd["rising"], sd["falling"]
+        comms = sd["network"]["communities"]
+        term_comm = {t: c["id"] for c in comms for t in c["terms"]}
+        comm_rank = {c["id"]: i for i, c in enumerate(comms)}
+
+        def ccolor(term):
+            i = comm_rank.get(term_comm.get(term), 99)
+            return CAT8[i] if i < len(CAT8) else GRAY
+
+        c2.caption(f"{yrs[0]}–{yrs[-1]} · 논문 {sum(den):,}편 · FDR q<{kr['q']} · 갱신 {ago(kr.get('updated'))}  \n"
+                   f"{kr['source']}")
+
+        top_major = [r for r in rising if not r.get("minor")]
+        best = top_major[0] if top_major else (rising[0] if rising else None)
+        kpis = [("검정 용어", f"{sd['tested']:,}", "누적 논문 ≥20 · 5개 연도 이상", BLUE),
+                ("상승 (유의)", f"{sd['n_rising']:,}", f"저빈도 제외 {len(top_major):,}", GREEN),
+                ("하강 (유의)", f"{sd['n_falling']:,}", "q<0.05", RED),
+                ("주제 묶음", f"{len(comms)}", f"{sd['network']['window'][0]}–{sd['network']['window'][-1]} 공출현", NAVY),
+                ("가장 가파른 상승", best["term"] if best else "-",
+                 f"+{best['sen'] * 1000:.2f}‰/년" if best else "", CYAN)]
+        st.markdown('<div class="kpis">' + "".join(
+            f'<div class="kpi" style="border-left-color:{c}"><div class="k-val">{v}</div>'
+            f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
+            for l, v, s_, c in kpis) + '</div>', unsafe_allow_html=True)
+
+        tab1, tab2, tab3, tab4 = st.tabs(["📈 상승 용어", "🕸️ 주제 묶음", "🔍 용어 찾기", "📉 하강 용어"])
+
+        # ── 탭1: 순위 막대 + 연도 히트맵 ──
+        with tab1:
+            show_minor = st.toggle("저빈도 용어 포함 (최근 3년 8편 미만)", value=False)
+            rows = [r for r in rising if show_minor or not r.get("minor")][:25]
+            if not rows:
+                st.info("표시할 상승 용어가 없습니다.")
+            else:
+                a, b = st.columns([2, 3])
+                with a:
+                    st.markdown('<div class="sect">기울기 순위 (논문 1,000편당 연간 증가)</div>',
+                                unsafe_allow_html=True)
+                    rr = rows[::-1]
+                    fig = go.Figure(go.Bar(
+                        x=[r["sen"] * 1000 for r in rr], y=[r["term"] for r in rr], orientation="h",
+                        marker=dict(color=BLUE, line=dict(color="#FFFFFF", width=2)),
+                        customdata=[[r["recent_docs"], r["lift"], r["q"], r["total"]] for r in rr],
+                        hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년<br>최근 3년 %{customdata[0]}편"
+                                      "<br>최근/초기 배율 %{customdata[1]}<br>누적 %{customdata[3]}편"
+                                      "<br>q = %{customdata[2]:.1e}<extra></extra>"))
+                    fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title="‰ / 년",
+                                      yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
+                    fig.update_xaxes(gridcolor="#EEF2F7", zeroline=False)
+                    st.plotly_chart(fig, width="stretch")
+                with b:
+                    st.markdown('<div class="sect">연도별 비중 히트맵 (‰)</div>', unsafe_allow_html=True)
+                    z = [[d / n * 1000 if n else 0 for d, n in zip(r["df"], den)] for r in rows]
+                    fig = go.Figure(go.Heatmap(
+                        z=z, x=[str(y) for y in yrs], y=[r["term"] for r in rows],
+                        colorscale=[[0, "#F4F8FC"], [0.5, "#6FA3DC"], [1, "#0A3D74"]],
+                        colorbar=dict(title="‰", thickness=10), xgap=2, ygap=2,
+                        hovertemplate="<b>%{y}</b> · %{x}<br>%{z:.1f}‰<extra></extra>"))
+                    fig.update_layout(height=max(320, 22 * len(rows) + 40),
+                                      yaxis=dict(autorange="reversed", automargin=True), **PLOTLY_LAYOUT)
+                    st.plotly_chart(fig, width="stretch")
+                with st.expander("표로 보기"):
+                    st.dataframe(pd.DataFrame([{
+                        "용어": r["term"] + (" (저빈도)" if r.get("minor") else ""),
+                        "기울기(‰/년)": round(r["sen"] * 1000, 2), "최근3년 논문": r["recent_docs"],
+                        "최근/초기 배율": r["lift"], "누적 논문": r["total"], "q": f"{r['q']:.1e}",
+                        "묶음": (comm_rank[term_comm[r["term"]]] + 1) if r["term"] in term_comm else "-"}
+                        for r in rows]), hide_index=True, width="stretch")
+
+        # ── 탭2: 공출현 네트워크 + 묶음 카드 ──
+        with tab2:
+            nodes = sd["network"]["nodes"]
+            edges = sd["network"]["edges"]
+            if not edges:
+                st.info("공출현 간선이 없습니다 (상승 용어끼리 최근 논문에서 함께 나온 횟수가 적음).")
+            else:
+                import networkx as _nx
+                G = _nx.Graph()
+                G.add_nodes_from(n["term"] for n in nodes)
+                G.add_weighted_edges_from(edges)
+                G.remove_nodes_from([n for n in list(G) if G.degree(n) == 0])
+                # 연결 덩어리별로 따로 배치 후 격자로 붙임 (떨어진 덩어리가 화면 끝으로 흩어지지 않게)
+                comps = sorted(_nx.connected_components(G), key=len, reverse=True)
+                ncol = max(1, math.ceil(math.sqrt(len(comps))))
+                pos = {}
+                for ci, comp in enumerate(comps):
+                    sub = G.subgraph(comp)
+                    lp = _nx.spring_layout(sub, weight="weight", seed=42) if len(comp) > 1 else {next(iter(comp)): (0, 0)}
+                    ox, oy = (ci % ncol) * 2.6, -(ci // ncol) * 2.6
+                    for t, (x, y) in lp.items():
+                        pos[t] = (ox + x, oy + y)
+                dfm = {n["term"]: n["df"] for n in nodes}
+                wmax = max(w for _, _, w in edges) or 1
+                fig = go.Figure()
+                for u, v, w in edges:
+                    if u in pos and v in pos:
+                        fig.add_trace(go.Scatter(x=[pos[u][0], pos[v][0]], y=[pos[u][1], pos[v][1]],
+                                                 mode="lines", hoverinfo="skip", showlegend=False,
+                                                 line=dict(color="#C9D6E6", width=0.6 + 3 * w / wmax)))
+                groups = {}
+                for t in G:
+                    groups.setdefault(comm_rank.get(term_comm.get(t), 99), []).append(t)
+                for gi in sorted(groups):
+                    ts = groups[gi]
+                    fig.add_trace(go.Scatter(
+                        x=[pos[t][0] for t in ts], y=[pos[t][1] for t in ts], mode="markers+text",
+                        text=ts, textposition="top center", textfont=dict(size=11, color="#0F2744"),
+                        name=f"묶음 {gi + 1}" if gi < 99 else "기타",
+                        marker=dict(size=[10 + 26 * (dfm.get(t, 1) / max(dfm.values())) ** 0.5 for t in ts],
+                                    color=CAT8[gi] if gi < len(CAT8) else GRAY,
+                                    line=dict(color="#FFFFFF", width=2)),
+                        customdata=[dfm.get(t, 0) for t in ts],
+                        hovertemplate="<b>%{text}</b><br>최근 논문 %{customdata}편<extra></extra>"))
+                fig.update_layout(height=560, xaxis=dict(visible=False), yaxis=dict(visible=False),
+                                  legend=dict(orientation="h", y=-0.05), **PLOTLY_LAYOUT)
+                st.plotly_chart(fig, width="stretch")
+                st.caption("점 크기 = 최근 논문 수, 선 굵기 = 함께 나온 논문 수, 색 = Louvain 묶음. "
+                           "묶음 이름은 붙이지 않았음 — 해석(라벨링)은 전문가 검토 몫.")
+            if comms:
+                cols = st.columns(2)
+                for i, c in enumerate(comms[:8]):
+                    col = CAT8[i] if i < len(CAT8) else GRAY
+                    chips = " ".join(f'<span class="gchip" style="background:#F1F5FA;color:#0F2744">{t}</span>'
+                                     for t in c["terms"][:14])
+                    cols[i % 2].markdown(
+                        f'<div class="card" style="border-left:6px solid {col};margin-bottom:10px">'
+                        f'<b>묶음 {i + 1}</b> <span class="note">· 용어 {c["size"]}개</span>'
+                        f'<div style="margin-top:6px;line-height:2">{chips}</div></div>',
+                        unsafe_allow_html=True)
+
+        # ── 탭3: 용어 찾기 ──
+        with tab3:
+            pool = {r["term"]: ("상승", r) for r in rising}
+            pool.update({r["term"]: ("하강", r) for r in falling})
+            picks = st.multiselect("용어 선택 (유의한 상승·하강 용어 중에서, 최대 5개)", sorted(pool),
+                                   default=[r["term"] for r in top_major[:3]], max_selections=5)
+            if picks:
+                fig = go.Figure()
+                for i, t in enumerate(picks):
+                    r = pool[t][1]
+                    fig.add_trace(go.Scatter(x=yrs, y=[d / n * 1000 if n else 0 for d, n in zip(r["df"], den)],
+                                             mode="lines+markers", name=f"{t} ({pool[t][0]})",
+                                             line=dict(color=CAT8[i], width=2), marker=dict(size=8)))
+                fig.update_layout(height=380, yaxis_title="‰ (논문 1,000편당)", hovermode="x unified",
+                                  legend=dict(orientation="h", y=-0.18), **PLOTLY_LAYOUT)
+                fig.update_yaxes(gridcolor="#EEF2F7")
+                st.plotly_chart(fig, width="stretch")
+                st.dataframe(pd.DataFrame([{"용어": t, "방향": pool[t][0],
+                                            "기울기(‰/년)": round(pool[t][1]["sen"] * 1000, 2),
+                                            "q": f"{pool[t][1]['q']:.1e}", "누적 논문": pool[t][1]["total"]}
+                                           for t in picks]), hide_index=True, width="stretch")
+            st.caption("검정 대상이 아니었거나(빈도 부족) 유의하지 않은 용어는 목록에 없음.")
+
+        # ── 탭4: 하강 ──
+        with tab4:
+            fr = [r for r in falling if not r.get("minor")][:20]
+            if not fr:
+                st.info("유의한 하강 용어가 없습니다.")
+            else:
+                rr = fr[::-1]
+                fig = go.Figure(go.Bar(x=[r["sen"] * 1000 for r in rr], y=[r["term"] for r in rr],
+                                       orientation="h", marker=dict(color=GRAY, line=dict(color="#FFFFFF", width=2)),
+                                       hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년<extra></extra>"))
+                fig.update_layout(height=max(300, 22 * len(rr) + 40), xaxis_title="‰ / 년",
+                                  yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
+                st.plotly_chart(fig, width="stretch")
+
+        with st.expander("ℹ️ 방법과 한계"):
+            st.markdown(f"""
+- **방법:** {kr['method']}
+- **용어:** 국문 제목+초록에서 Kiwi로 명사 추출, 띄어쓰기 없이 붙은 명사는 복합어로 묶음(예: 딥러닝, 유출량). 불용어(연구·분석·결과 등) 제외
+- **범위:** 대한토목학회논문집은 2012년까지 분책 A~D(구조·교통 등 포함)였다가 2013년 통합 → '수자원학회+토목학회' 범위에는 토목 전반 용어가 섞임
+- **해석:** 통계적으로 유의한 '추세 후보'이며, 묶음 이름·의미는 전문가 검토가 필요
+- **데이터:** {kr['source']}
+""")
+
 elif page == "🏷️ 라벨링 로그":
     st.markdown('<div class="sect">🏷️ 라벨링 파이프라인 실행 로그</div>', unsafe_allow_html=True)
     st.caption("수집(하루 1회): 전진 45일 스윕 + 역사 1년/일 후진(2025→2015) · 라벨링: 6시간마다 자동")
