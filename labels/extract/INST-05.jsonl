@@ -1534,3 +1534,7 @@
 {"id": "W7214466036", "object": "6,500명의 주민을 위한 에너지 독립형 재생 가능 마이크로그리드", "problem": "장기 에너지 회복력 및 지역 에너지 독립성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214510044", "object": "수력발전 저수지에서의 부유형 태양광 발전 잠재력", "problem": "부유형 태양광 발전의 기술적 생산 잠재력 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214530872", "object": "소규모 분산형 수력 발전 시스템", "problem": "비용 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214621573", "object": "주간 저수지 운영 정책", "problem": "운영 정책의 동적 상호작용과 트레이드오프를 최적화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214663270", "object": "주간 저수지 운영 정책", "problem": "다양한 이해관계자 요구와 수문학적 불확실성 하에서의 균형 잡기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214585476", "object": "타지키스탄의 에너지 시스템과 환경", "problem": "재생 가능 전기가 CO2 배출에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214598642", "object": "수력 발전소의 운영 유연성", "problem": "재생 가능 에너지 통합을 위한 운영 유연성 향상", "relevant": true, "model": "gpt-4o-mini"}

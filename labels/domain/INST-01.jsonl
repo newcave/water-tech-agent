@@ -1837,3 +1837,7 @@
 {"id": "W7214522292", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
 {"id": "W7214534752", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
 {"id": "W7214543804", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축"}
+{"id": "W7125691956", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 인프라 구조", "problem": "핵 위협과 고속 미사일로부터 보호하기 위한 방어 시스템 구축"}
+{"id": "W7214600553", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 인프라 구조", "problem": "핵 위협과 고속 미사일로부터 보호하기 위한 방어 시스템 구축"}
+{"id": "W7214626540", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소"}
+{"id": "W7214683935", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소"}

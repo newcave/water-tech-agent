@@ -1907,3 +1907,7 @@
 {"id": "W7214522292", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214534752", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214543804", "object": "Hometelligent Inc.의 서비스 및 정보", "problem": "AI 지식 패키지 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125691956", "object": "지하 인프라 구조", "problem": "핵 위협과 고속 미사일로부터 보호하기 위한 방어 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214600553", "object": "지하 인프라 구조", "problem": "핵 위협과 고속 미사일로부터 보호하기 위한 방어 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214626540", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214683935", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소", "relevant": true, "model": "gpt-4o-mini"}

@@ -661,3 +661,4 @@
 {"id": "W7214107299", "object": "전 세계 유역 데이터", "problem": "정확한 유역 특성 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214397947", "object": "수문 모델링", "problem": "모델의 최적성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214064315", "object": "수문학적 이해", "problem": "AI와 기계 학습을 통한 수문학적 예측 및 데이터 통합 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214684467", "object": "강 유역의 부유 침전물 수송", "problem": "정확한 침전물 수송 예측", "relevant": true, "model": "gpt-4o-mini"}

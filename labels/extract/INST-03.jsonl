@@ -4308,3 +4308,11 @@
 {"id": "W7214488547", "object": "남성 쥐의 생리적 상태", "problem": "생리적 효과 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214428794", "object": "Chongqing의 음용수 처리 시설에서의 조류 유래 소독 부산물", "problem": "조류 유래 소독 부산물 완화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214550307", "object": "지하수 자원", "problem": "신흥 오염물질의 위험 평가 및 정화 기술 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214613224", "object": "요로결석증", "problem": "요로결석의 항생리활성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214632000", "object": "방글라데시 남서부 해안 지역의 당뇨병 및 고혈압", "problem": "예방, 조기 발견 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214674995", "object": "요로결석증", "problem": "요로결석의 항생리활성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214581794", "object": "Diyala–Tigris 강의 수질", "problem": "디클로페낙의 운반 및 제거 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214597628", "object": "Mangalmé 지역의 지하수 및 표면수", "problem": "물리화학적 품질 평가 및 오염원 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214595827", "object": "DSS 유도 대장염", "problem": "대장염 증상 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213340254", "object": "빗물 수확 시스템의 미생물 안전성", "problem": "미생물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214646408", "object": "도시 식수 처리에서 유기 미세오염물질", "problem": "최적화된 활성탄 흡착 공정 및 장비", "relevant": true, "model": "gpt-4o-mini"}

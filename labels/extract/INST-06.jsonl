@@ -3457,3 +3457,12 @@
 {"id": "W7214468781", "object": "사막 야자 농장 토양의 유기 탄소 상태", "problem": "토양의 유기 탄소가 식생 역학에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214394296", "object": "서아프리카 유역의 수자원 스트레스", "problem": "토지 이용 및 토지 피복 변화와 도시화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214529823", "object": "나이지리아 니제르 델타 지역의 지속 가능한 자원 관리", "problem": "디지털 환경 모니터링 시스템을 통한 자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214537961", "object": "홍수 범위", "problem": "해석 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214571622", "object": "Jos South Local Government Area의 토지 이용 및 토지 피복 변화", "problem": "채굴 연못의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214584229", "object": "Anantapur District의 가뭄 및 물 안전 상태", "problem": "가뭄 동역학을 평가하고 예측하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214586653", "object": "중앙아시아의 자연재해", "problem": "모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214621367", "object": "Anantapur District의 가뭄 및 물 안전 상태", "problem": "가뭄 동역학을 평가하고 예측하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214627198", "object": "Dauchi Grazing Reserve의 방목 자원", "problem": "방목 자원의 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214668916", "object": "토양 물리화학적 특성", "problem": "정확한 농업을 위한 원격 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214617650", "object": "양쯔강 중하류의 연못과 소규모 저수지", "problem": "저수지 저장 동역학 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214661240", "object": "광물 탐사", "problem": "효율적이고 경제적인 탐사 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
