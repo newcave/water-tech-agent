@@ -1841,3 +1841,8 @@
 {"id": "W7214600553", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 인프라 구조", "problem": "핵 위협과 고속 미사일로부터 보호하기 위한 방어 시스템 구축"}
 {"id": "W7214626540", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소"}
 {"id": "W7214683935", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소"}
+{"id": "W7214715241", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유틸리티 비용 모니터링 시스템", "problem": "효과적인 유틸리티 비용 모니터링"}
+{"id": "W7214792852", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대학 캠퍼스 건물의 에너지 소비", "problem": "효율적인 에너지 관리 도구 부족"}
+{"id": "W7212385441", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 위생 서비스", "problem": "불평등한 공공 위생 서비스 개선"}
+{"id": "W7214782571", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고객의 청구서 지불 행동", "problem": "청구서 지불 개선"}
+{"id": "W7203745320", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화학 생물농축 예측", "problem": "정확한 예측 성능 향상"}

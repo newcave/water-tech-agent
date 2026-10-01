@@ -1538,3 +1538,11 @@
 {"id": "W7214663270", "object": "주간 저수지 운영 정책", "problem": "다양한 이해관계자 요구와 수문학적 불확실성 하에서의 균형 잡기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214585476", "object": "타지키스탄의 에너지 시스템과 환경", "problem": "재생 가능 전기가 CO2 배출에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214598642", "object": "수력 발전소의 운영 유연성", "problem": "재생 가능 에너지 통합을 위한 운영 유연성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214700277", "object": "아치 댐 구조", "problem": "정확한 기하학적 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214718090", "object": "브라질 수력 발전의 유출 지표", "problem": "유출 지표 해석 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214759101", "object": "Lake Kariba의 수생 생태계", "problem": "수생 생태계의 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214773496", "object": "콜롬비아의 에너지 전환 정의", "problem": "정의 지표 개발 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214781912", "object": "나이지리아의 전력 공급", "problem": "전력 공급의 불안정성과 지속 가능성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214797869", "object": "브라질 수력 발전의 유출 지표", "problem": "유출 지표 해석 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214798429", "object": "에너지 공급 안전성", "problem": "수입 에너지 의존도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213428961", "object": "태국의 수력 댐에서의 하이브리드 부유형 태양광 시스템", "problem": "재생 가능 용량 확장 및 환경적 이점 평가", "relevant": true, "model": "gpt-4o-mini"}

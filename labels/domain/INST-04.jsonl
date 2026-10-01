@@ -513,3 +513,6 @@
 {"id": "W7214219780", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링 데이터", "problem": "신뢰할 수 있는 디지털 트윈 구축"}
 {"id": "W7213975688", "domain_primary": "W7", "domain_secondary": ["W2"], "confidence": 0.9, "domain_ver": "v0.1", "object": "금광 저수지의 안전성", "problem": "저수지 관련 재해의 위험 분석"}
 {"id": "W7214118474", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "콘크리트 댐의 열역학적 매개변수", "problem": "열역학적 매개변수의 역산을 통한 온도 제어 분석의 정확성 향상"}
+{"id": "W7214700277", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐 구조", "problem": "정확한 기하학적 모델링"}
+{"id": "W7214788112", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐 건설 이음부의 안정성", "problem": "침투로 인한 불안정성 전이 이해하기"}
+{"id": "W7214778613", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 아치 댐의 동적 거동", "problem": "동적 거동에 영향을 미치는 요인 분석"}

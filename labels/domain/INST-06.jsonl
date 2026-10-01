@@ -3428,3 +3428,27 @@
 {"id": "W7214668916", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 물리화학적 특성", "problem": "정확한 농업을 위한 원격 모니터링"}
 {"id": "W7214617650", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "양쯔강 중하류의 연못과 소규모 저수지", "problem": "저수지 저장 동역학 모니터링"}
 {"id": "W7214661240", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "광물 탐사", "problem": "효율적이고 경제적인 탐사 방법 개발"}
+{"id": "W7214730963", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Salaulim Dam Watershed", "problem": "토지 이용 변화와 식생 건강 평가"}
+{"id": "W7214770586", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Salaulim Dam Watershed", "problem": "토지 이용 변화와 식생 건강 평가"}
+{"id": "W7214700468", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간섭습지 동태", "problem": "습지 상태 전환 이해하기"}
+{"id": "W7214754081", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 물 사용 효율", "problem": "물 사용 효율의 증가 및 감소 이해"}
+{"id": "W7214759101", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Kariba의 수생 생태계", "problem": "수생 생태계의 변화 이해하기"}
+{"id": "W7214768655", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간섭습지 동태", "problem": "습지 상태 전환 이해하기"}
+{"id": "W7214770809", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카스피해 해안선 및 수면", "problem": "해안선 변화 모니터링"}
+{"id": "W7214775331", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안 생태계", "problem": "육상과 해양 환경 간의 연결성 이해"}
+{"id": "W7214777694", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "멕시코의 채굴 지역에서의 토지 피복 변화", "problem": "토지 피복 변화 측정 개선"}
+{"id": "W7214802261", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업용 관개 추정", "problem": "위성 데이터를 통한 관개 추정"}
+{"id": "W7214807753", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사막 야자 농장 토양의 유기 탄소 상태", "problem": "토양의 유기 탄소가 식생 역학에 미치는 영향 조사"}
+{"id": "W7214765551", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경적으로 민감한 도시 지역", "problem": "조기 경고 및 규제 준수 지원"}
+{"id": "W7214589460", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Srebarna의 수면 면적", "problem": "태양 복사에 따른 수면 면적 변화 분석"}
+{"id": "W7214783894", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 수자원, 교통 및 에너지 인프라의 안전성", "problem": "안전 위험 인식 및 예방 전략 개선"}
+{"id": "W7214786569", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "작전 지역 모니터링", "problem": "다양한 스펙트럼 이미징을 통한 상태 평가"}
+{"id": "W7214553581", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "습지 범람원에서의 홍수 범위, 심각도 및 토지 피복 취약성", "problem": "신뢰할 수 있는 홍수 모니터링 및 영향 평가 지표 개발"}
+{"id": "W7214747472", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 및 목축업의 침수된 토지", "problem": "침수 지역 및 수면 수량 파악하기"}
+{"id": "W7214754467", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 및 목축업의 침수된 토지", "problem": "침수 지역 및 수면 수량 파악하기"}
+{"id": "W7214089967", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계의 3차원 구조", "problem": "2차원 관측의 한계 극복"}
+{"id": "W7214722605", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "울큰 알마티 강 유역의 빙하-모레인 호수", "problem": "빙하-모레인 호수의 형태적 특성 변화 평가"}
+{"id": "W7213543474", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 열 조절을 위한 식생 매개 수자원-에너지 과정", "problem": "도시 열 저항력 향상"}
+{"id": "W7212048658", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스마트 관개 시스템", "problem": "물 부족 문제 해결"}
+{"id": "W7208779152", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "관개 농경지", "problem": "작물 물 사용의 공간적 패턴 이해"}
+{"id": "W7211952312", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gahar Lake", "problem": "호수의 상태 악화 방지"}

@@ -4231,3 +4231,28 @@
 {"id": "W7214595827", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "DSS 유도 대장염", "problem": "대장염 증상 완화"}
 {"id": "W7213340254", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "빗물 수확 시스템의 미생물 안전성", "problem": "미생물 오염 문제 해결"}
 {"id": "W7214646408", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 식수 처리에서 유기 미세오염물질", "problem": "최적화된 활성탄 흡착 공정 및 장비"}
+{"id": "W7214679538", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 슬러지의 가스화 효율", "problem": "H2S 저감 및 가스화 성능 개선"}
+{"id": "W7214709771", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신경 기능", "problem": "신경 독성 완화"}
+{"id": "W7214721929", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 안전성", "problem": "유기물 제거 효율 향상"}
+{"id": "W7214732390", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "알프스 유제품 염수의 영향", "problem": "염수의 영향을 통한 우유 생산 개선"}
+{"id": "W7214741382", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 반건조 지역의 음용수 처리 시스템", "problem": "가뭄 강도와 비소 농도 간의 연관성 평가"}
+{"id": "W7214749954", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PPARγ 활성 화합물", "problem": "환경 오염물질의 PPARγ 활성 연구 부족"}
+{"id": "W7214753873", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소고기 소의 메탄 배출량", "problem": "메탄 발생 감소를 위한 산소 농도 조절"}
+{"id": "W7214767216", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바그다드의 음용수", "problem": "발암 오염물질 제거"}
+{"id": "W7214770580", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "열 스트레스를 받는 젖소", "problem": "젖소의 성능 개선"}
+{"id": "W7214778590", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "플랑크톤성 Francisella tularensis", "problem": "수조에서의 지속성 이해하기"}
+{"id": "W7214781345", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Brusdalsvatnet 저수지의 수원", "problem": "수원 보호를 위한 정보 부족 해결"}
+{"id": "W7214786555", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 반건조 지역의 음용수 처리 시스템", "problem": "가뭄 강도와 비소 농도 간의 연관성 평가"}
+{"id": "W7214701037", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리에서의 오존화", "problem": "미세오염물 제거 및 소독 평가"}
+{"id": "W7214702045", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ahoada East 지역의 식수", "problem": "안전한 식수 부족 문제 해결"}
+{"id": "W7214808848", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sirsa 지류의 수질", "problem": "약물 오염으로 인한 생태계 파괴"}
+{"id": "W7214351705", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수생 환경에서의 이마티닙 메실레이트 제거", "problem": "이마티닙 메실레이트의 흡착 및 회수 개선"}
+{"id": "W7214730547", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Rewari 산업 지역의 지하수", "problem": "지하수의 품질 평가 및 적합성 분석"}
+{"id": "W7213580970", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리에서의 소독 부산물(DBP)", "problem": "DBP 형성 경로 이해하기"}
+{"id": "W7212281510", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로민산염(BrO3−)", "problem": "전기화학적 환원 개선"}
+{"id": "W7214700286", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우유 생산성", "problem": "염분이 포함된 음용수의 영향 평가"}
+{"id": "W7214707290", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가정 및 낙농업에서의 물 안전성", "problem": "물 관련 인식과 안전한 실천 간의 격차 해소"}
+{"id": "W7214796720", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tlawng 및 Tuirial 강의 수질", "problem": "수질 저하 문제 해결"}
+{"id": "W7203761957", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "방글라데시 남서부 해안 지역의 가정용 수자원 관리", "problem": "가정의 수자원 부족 문제 해결"}
+{"id": "W7203779704", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해수 담수화 및 물 전송 시스템", "problem": "물 부족 문제 해결"}
+{"id": "W7203673173", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "직접 강물 처리 시스템의 수질 성능", "problem": "오염된 음용수 원천의 전환 및 오염물질 제거"}

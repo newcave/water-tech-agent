@@ -811,3 +811,6 @@
 {"id": "W7202365151", "object": "미국-멕시코의 공유 수자원", "problem": "구조적 물 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214478799", "object": "양자 감지 기술", "problem": "일상 생활에서의 유용한 측정 가능성", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214506086", "object": "양자 감지 기술을 통한 인간의 인식 개선", "problem": "일상 생활에서의 측정 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214752110", "object": "ERMN의 주요 하천 수질", "problem": "하천 수질 상태와 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214772912", "object": "ERMN의 주요 하천 수질", "problem": "하천 수질 상태와 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214794354", "object": "전 세계 하천 유량 예측 및 수자원 관리", "problem": "수문 데이터 가용성의 중요한 격차 해소", "relevant": true, "model": "gpt-4o-mini"}

@@ -662,3 +662,5 @@
 {"id": "W7214397947", "object": "수문 모델링", "problem": "모델의 최적성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214064315", "object": "수문학적 이해", "problem": "AI와 기계 학습을 통한 수문학적 예측 및 데이터 통합 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214684467", "object": "강 유역의 부유 침전물 수송", "problem": "정확한 침전물 수송 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214725460", "object": "산성 광산 배수 관리", "problem": "기술 선택에서 적응적이고 사이트 특화된 처리 기법으로 전환하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214782928", "object": "지구의 수자원 저장 이상", "problem": "SWOT 기반 TWS 데이터의 불규칙성을 해결하기", "relevant": true, "model": "gpt-4o-mini"}
