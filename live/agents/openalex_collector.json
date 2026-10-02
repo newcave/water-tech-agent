@@ -1,11 +1,11 @@
 {
- "state": "idle",
- "last_run": 1790894718,
- "next_run": "매시 자동 (GitHub Actions)",
- "summary": "논문 실수집 대기 — 전 작업 완료",
+ "state": "run",
+ "last_run": 1790904816,
+ "next_run": "10분 후",
+ "summary": "논문 실수집 가동 — [저널] Journal of Hydrology",
  "counts": {
   "K-water 생산": 159,
-  "12개 저널": 7614,
+  "12개 저널": 7714,
   "관련(도메인)": 13746,
   "작업": "9/20"
  },
