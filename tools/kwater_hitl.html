@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>K-water 소속 심판</title>
+<meta name="description" content="K-water 소속 논문 자동 분류를 카드 넘기기로 빠르게 검증하는 HITL 게임">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* 레이아웃: 댐 관제실 — 왼쪽 저수지 수위계(진행률), 가운데 판정 카드, 오른쪽 점수판. 좁으면 세로로 쌓임.
+   한 가지 화면(야간 관제실)만 쓰는 단일 다크 디자인 — 모든 색을 명시 */
+:root {
+  --ink: #071a24;        /* 바탕: 깊은 저수지 */
+  --panel: #0d2a38;      /* 패널 */
+  --line: #1d4556;       /* 테두리 */
+  --water: #2bb3c8;      /* 물 */
+  --water-deep: #13708a;
+  --lamp: #f2b544;       /* 나트륨 등: 강조 */
+  --leak: #ff6b5b;       /* 누수(기계 판정 오류 발견) */
+  --ok: #57d39a;
+  --fg: #e6f2f5;
+  --muted: #8fb0bb;
+  --display: "Black Han Sans", "IBM Plex Sans KR", "Malgun Gothic", sans-serif;
+  --body: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--ink); color: var(--fg); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 28px; display: grid; gap: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+h1 { font: 400 clamp(26px, 4.4vw, 40px)/1.05 var(--display); margin: 0; letter-spacing: .01em; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--water); }
+.sub { color: var(--muted); margin: 4px 0 0; max-width: 62ch; }
+.tag { font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--lamp); }
+.btn { font: 600 14px var(--body); color: var(--fg); background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; padding: 9px 14px; cursor: pointer; }
+.btn:hover { border-color: var(--water); }
+.btn:focus-visible, .choice:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
+.btn.primary { background: var(--water-deep); border-color: var(--water); }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.drop { border: 1.5px dashed var(--line); border-radius: 12px; padding: 12px 14px; color: var(--muted); display: flex;
+  flex-wrap: wrap; gap: 10px; align-items: center; }
+.drop.over { border-color: var(--water); color: var(--fg); }
+.drop strong { color: var(--fg); }
+input[type=text], select { font: 14px var(--body); color: var(--fg); background: var(--ink); border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px; }
+.demo-flag { font: 600 12px var(--body); color: var(--ink); background: var(--lamp); border-radius: 999px; padding: 2px 10px; }
+
+.stage { display: grid; grid-template-columns: 120px minmax(0, 1fr) 230px; gap: 16px; align-items: start; }
+@media (max-width: 860px) { .stage { grid-template-columns: 1fr; } .gauge { order: 2; height: 120px !important; } .board { order: 3; } }
+
+/* 수위계 */
+.gauge { position: relative; height: 470px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.gauge .fill { position: absolute; inset: auto 0 0 0; height: 0%; background: linear-gradient(180deg, var(--water), var(--water-deep));
+  transition: height .5s ease; }
+.gauge .fill::before { content: ""; position: absolute; left: -50%; right: -50%; top: -8px; height: 16px; border-radius: 45%;
+  background: var(--water); animation: wave 4s linear infinite; opacity: .9; }
+@keyframes wave { from { transform: translateX(-12%) } to { transform: translateX(12%) } }
+.gauge .marks { position: absolute; inset: 0; display: grid; grid-template-rows: repeat(4, 1fr); pointer-events: none; }
+.gauge .marks div { border-top: 1px dashed rgba(230, 242, 245, .25); font: 600 11px var(--mono); color: var(--fg); padding: 3px 6px; text-shadow: 0 1px 2px var(--ink); }
+.gauge .pct { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; font: 600 20px var(--mono); text-shadow: 0 1px 3px var(--ink); }
+
+/* 카드 */
+.arena { position: relative; min-height: 470px; display: grid; gap: 12px; }
+.card { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 22px 22px 18px;
+  min-height: 360px; display: grid; gap: 14px; align-content: start; touch-action: pan-y; user-select: none;
+  transition: transform .25s ease, opacity .25s ease; min-width: 0; }
+.card.dragging { transition: none; }
+.card.out-left { transform: translateX(-120%) rotate(-12deg); opacity: 0; }
+.card.out-right { transform: translateX(120%) rotate(12deg); opacity: 0; }
+.card.out-down { transform: translateY(40%); opacity: 0; }
+.card .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 600 12px var(--mono); color: var(--muted); }
+.chip { border-radius: 999px; padding: 3px 10px; font: 600 12px var(--body); border: 1px solid var(--line); }
+.chip.k { color: var(--ink); background: var(--water); border-color: var(--water); }
+.chip.n { color: var(--fg); background: transparent; }
+.card .q { font: 400 22px/1.25 var(--display); color: var(--lamp); }
+.card .main { font: 500 clamp(18px, 2.6vw, 24px)/1.4 var(--body); overflow-wrap: anywhere; }
+.card .detail { color: var(--muted); font-size: 14px; display: grid; gap: 6px; overflow-wrap: anywhere; }
+.card .detail b { color: var(--fg); font-weight: 600; }
+.card mark { background: rgba(43, 179, 200, .22); color: var(--fg); border-radius: 4px; padding: 0 3px; }
+.stamp { position: absolute; top: 18px; right: 18px; font: 400 26px var(--display); padding: 4px 12px; border: 3px solid; border-radius: 8px;
+  transform: rotate(8deg); opacity: 0; transition: opacity .1s; }
+.stamp.yes { color: var(--water); }
+.stamp.no { color: var(--leak); left: 18px; right: auto; transform: rotate(-8deg); }
+.choices { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; }
+.choice { font: 400 20px var(--display); border-radius: 14px; padding: 14px 10px; cursor: pointer; border: 2px solid var(--line);
+  background: var(--panel); color: var(--fg); display: grid; gap: 2px; justify-items: center; }
+.choice small { font: 600 11px var(--mono); color: var(--muted); letter-spacing: .08em; }
+.choice.no:hover { border-color: var(--leak); } .choice.yes:hover { border-color: var(--water); } .choice.skip:hover { border-color: var(--muted); }
+.choice.skip { font-size: 15px; padding-inline: 14px; }
+.empty { color: var(--muted); text-align: center; padding: 60px 20px; }
+
+/* 점수판 */
+.board { display: grid; gap: 10px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.stat .k { font: 600 11px var(--mono); letter-spacing: .1em; color: var(--muted); text-transform: uppercase; }
+.stat .v { font: 600 28px/1.15 var(--mono); font-variant-numeric: tabular-nums; }
+.stat .v.lamp { color: var(--lamp); } .stat .v.leak { color: var(--leak); }
+.combo { display: flex; gap: 4px; margin-top: 6px; }
+.combo i { flex: 1; height: 6px; border-radius: 3px; background: var(--line); }
+.combo i.on { background: var(--lamp); }
+.keys { font-size: 12px; color: var(--muted); line-height: 1.8; }
+kbd { font: 600 11px var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; color: var(--fg); }
+
+.toast { position: fixed; left: 50%; top: calc(18px + env(safe-area-inset-top, 0px)); transform: translate(-50%, -20px); opacity: 0;
+  background: var(--leak); color: var(--ink); font: 400 20px var(--display); padding: 10px 18px; border-radius: 12px; pointer-events: none;
+  transition: transform .25s, opacity .25s; z-index: 5; }
+.toast.show { transform: translate(-50%, 0); opacity: 1; }
+.toast.level { background: var(--lamp); }
+
+/* 결과 */
+.result { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 10px; }
+.result h2 { font: 400 22px var(--display); margin: 0; }
+.result textarea { width: 100%; min-height: 150px; font: 12px/1.5 var(--mono); color: var(--fg); background: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px; resize: vertical; }
+.result ol { margin: 0; padding-left: 20px; color: var(--muted); max-height: 180px; overflow: auto; overflow-wrap: anywhere; }
+.result ol li b { color: var(--fg); }
+.note { color: var(--muted); font-size: 13px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="tag">KCI · K-water 소속 분류 · 사람 검토</div>
+      <h1>K-water <em>소속 심판</em></h1>
+      <p class="sub">기계가 나눈 "K-water 소속 / 아님"을 카드로 넘기며 판정합니다. 기계 판정이 틀린 곳을 찾으면 <b style="color:var(--leak)">누수 발견</b> 보너스. 판정 결과는 수집 규칙으로 바로 쓰는 JSON으로 나옵니다.</p>
+    </div>
+    <div class="bar">
+      <label for="reviewer" class="note">심판</label>
+      <input id="reviewer" type="text" placeholder="이름 또는 이니셜" size="12">
+      <select id="deckSel" aria-label="판정 대상">
+        <option value="aff">소속 표기 (빠름)</option>
+        <option value="rej">논문 · 탈락</option>
+        <option value="acc">논문 · 채택</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="drop" id="drop">
+    <span id="srcLabel"><span class="demo-flag">가상 데이터로 연습 중</span></span>
+    <span>실제 판정은 비공개 저장소 <strong>review/kwater_review.xlsx</strong>(또는 CSV 두 개)를 여기로 끌어오거나</span>
+    <label class="btn primary" for="file">파일 열기</label>
+    <input id="file" type="file" accept=".xlsx,.csv" multiple hidden>
+    <span class="note">파일은 이 브라우저 안에서만 읽고 어디에도 보내지 않습니다.</span>
+  </div>
+
+  <div class="stage">
+    <div class="gauge" aria-label="저수지 수위 = 진행률">
+      <div class="fill" id="fill"></div>
+      <div class="marks"><div>홍수위</div><div>만수위</div><div>정상수위</div><div>저수위</div></div>
+      <div class="pct" id="pct">0%</div>
+    </div>
+
+    <div class="arena">
+      <div id="cardHost"></div>
+      <div class="choices" id="choices">
+        <button class="choice no" id="bNo" type="button">← K-water 아님<small>A · ←</small></button>
+        <button class="choice skip" id="bSkip" type="button">건너뛰기<small>S · ↓</small></button>
+        <button class="choice yes" id="bYes" type="button">K-water 맞음 →<small>D · →</small></button>
+      </div>
+    </div>
+
+    <div class="board">
+      <div class="stat"><div class="k">점수</div><div class="v lamp" id="score">0</div>
+        <div class="combo" id="combo" aria-label="콤보"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="note" id="comboTxt">빠르게 판정하면 콤보 ×1 → ×5</div></div>
+      <div class="stat"><div class="k">누수 발견 (기계 오류)</div><div class="v leak" id="leaks">0</div></div>
+      <div class="stat"><div class="k">판정 / 남음</div><div class="v" id="prog">0 / 0</div></div>
+      <div class="stat keys">
+        <kbd>D</kbd> <kbd>→</kbd> 맞음 · <kbd>A</kbd> <kbd>←</kbd> 아님<br>
+        <kbd>S</kbd> <kbd>↓</kbd> 건너뛰기 · <kbd>Z</kbd> 되돌리기<br>
+        휴대폰: 카드를 좌우로 밀기
+      </div>
+      <button class="btn" id="bUndo" type="button">↶ 되돌리기</button>
+    </div>
+  </div>
+
+  <section class="result" id="result">
+    <h2>판정 결과 → 수집 규칙</h2>
+    <p class="note">기계 판정과 다르게 고른 것만 규칙(overrides)으로 들어갑니다. <b>복사</b> 후 비공개 저장소에서 <b>review/overrides.json</b>으로 저장(Add file → Create new file)하면, 다음 주간 수집부터 반영됩니다. 여러 사람이 판정했다면 각자 결과를 붙여 주시면 합칩니다.</p>
+    <div class="bar">
+      <button class="btn primary" id="bCopy" type="button">결과 JSON 복사</button>
+      <button class="btn" id="bSave" type="button" hidden>파일로 저장</button>
+      <span class="note" id="copyMsg" role="status"></span>
+    </div>
+    <ol id="leakList"></ol>
+    <textarea id="out" readonly aria-label="판정 결과 JSON"></textarea>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+(() => {
+  const PATTERN = /한국수자원공사|케이워터|k-?water|korea water resources? corp/i;   // 수집기 kci_affiliation_pattern과 동일
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+
+  // ── 연습용 가상 데이터 (실제 KCI 데이터 아님) ──
+  const DEMO = {
+    name: "연습용 가상 데이터",
+    aff: [   // 기계 판정은 실제 수집기와 같은 규칙(PATTERN)으로 계산 — 규칙이 놓치는 표기를 찾는 연습
+      ["K-water Research Institute, Korea Water Resources Corporation", 412],
+      ["Korea Water Resources Corporation", 388],
+      ["Korea Water Resources Association", 57],
+      ["한국수자원공사 K-water연구원", 36],
+      ["Korea Water Resource Co.", 22],
+      ["Dept. of Civil Engineering, Seoul National University; K-water", 19],
+      ["Korea Rural Community Corporation", 15],
+      ["수자원공사 물관리처", 9],
+      ["KOWACO (Korea Water Resources Corp.)", 7],
+      ["Korea Environment Corporation", 6]
+    ].map(([s, n]) => ({ machine: PATTERN.test(s), key: s, main: s, info: `저자 ${n}명` })),
+    rej: [
+      { y: 2014, j: "상하수도학회지", t: "정수장 응집제 주입률 자동 결정 모형 (가상)", a: ["수자원공사 수도운영처", "OO대학교 환경공학과"] },
+      { y: 2019, j: "한국수자원학회논문집", t: "댐 유입량 앙상블 예측 (가상)", a: ["Korea Water Resources Association", "국립대학교 토목공학과"] }
+    ].map(p => paperCard(p, false)),
+    acc: [
+      { y: 2023, j: "한국수자원학회논문집", t: "LSTM 기반 저수지 수위 예측 (가상)", a: ["K-water Research Institute", "공과대학교 건설환경공학부"] },
+      { y: 2021, j: "대한환경공학회지", t: "녹조 조기경보를 위한 위성영상 활용 (가상)", a: ["Korea Water Resources Corporation", "Korea Environment Institute"] }
+    ].map(p => paperCard(p, true))
+  };
+  function paperCard(p, machine) {
+    return { machine, key: p.url || `${p.y}|${p.t}`, main: p.t, url: p.url || "",
+             info: `${p.y} · ${p.j}`, affs: p.a, title_en: p.te || "" };
+  }
+
+  // ── 상태 ──
+  let src = DEMO, deckId = "aff", deck = [], i = 0, hist = [], score = 0, leaks = 0, combo = 1, shownAt = 0, level = 0;
+  const decisions = {};   // key → {deck, machine, human, main}
+  const saveKey = () => `kwater-hitl:${src.name}`;
+
+  function loadSaved() {
+    const s = store.get(saveKey());
+    Object.keys(decisions).forEach(k => delete decisions[k]);
+    if (s && s.decisions) Object.assign(decisions, s.decisions);
+    score = s?.score || 0; leaks = s?.leaks || 0;
+    const r = store.get("kwater-hitl:reviewer"); if (r) $("reviewer").value = r;
+  }
+  function persist() { store.set(saveKey(), { decisions, score, leaks }); }
+
+  function startDeck() {
+    deck = (src[deckId] || []).filter(c => !decisions[deckId + "::" + c.key]);
+    i = 0; hist = []; combo = 1; level = Math.floor(pctDone() / 25);
+    render();
+  }
+  function pctDone() {
+    const all = (src[deckId] || []).length;
+    const done = all - deck.length + i;
+    return all ? Math.round(done / all * 100) : 0;
+  }
+
+  // ── 카드 그리기 ──
+  function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]); }
+  function hl(s) { return PATTERN.test(s) ? `<mark>${esc(s)}</mark>` : esc(s); }
+  function render() {
+    const host = $("cardHost");
+    const all = (src[deckId] || []).length, done = all - deck.length + i;
+    $("prog").textContent = `${done} / ${all - done}`;
+    $("pct").textContent = `${pctDone()}%`;
+    $("fill").style.height = `${pctDone()}%`;
+    $("score").textContent = score.toLocaleString();
+    $("leaks").textContent = leaks;
+    [...$("combo").children].forEach((el, k) => el.classList.toggle("on", k < combo));
+    $("comboTxt").textContent = `콤보 ×${combo} · 빠르게 판정하면 올라감`;
+    renderResult();
+    if (i >= deck.length) {
+      host.innerHTML = `<div class="card"><div class="empty"><div class="q">${all ? "이 저수지는 가득 찼습니다 🌊" : "이 판정 대상에는 카드가 없습니다"}</div>
+        <p>${all ? "다른 판정 대상을 고르거나, 아래 결과를 복사해 비공개 저장소에 저장하세요." : "다른 판정 대상을 고르세요."}</p></div></div>`;
+      return;
+    }
+    const c = deck[i];
+    const q = deckId === "aff" ? "이 소속은 K-water인가?" : "이 논문은 K-water 소속 저자가 쓴 논문인가?";
+    const detail = deckId === "aff" ? `<div>${esc(c.info)}</div>`
+      : `<div><b>${esc(c.info)}</b></div>${c.title_en ? `<div>${esc(c.title_en)}</div>` : ""}
+         <div><b>저자 소속</b><br>${(c.affs || []).map(hl).join("<br>") || "(소속 정보 없음)"}</div>
+         ${c.url ? `<div><a href="${esc(c.url)}" target="_blank" rel="noopener" style="color:var(--water)">KCI에서 보기 ↗</a></div>` : ""}`;
+    host.innerHTML = `<div class="card" id="card" tabindex="-1">
+      <div class="stamp yes">K-water</div><div class="stamp no">아님</div>
+      <div class="meta"><span>#${pctDone()}%</span><span class="chip ${c.machine ? "k" : "n"}">기계 판정: ${c.machine ? "K-water" : "아님"}</span></div>
+      <div class="q">${q}</div>
+      <div class="main">${deckId === "aff" ? hl(c.main) : esc(c.main)}</div>
+      <div class="detail">${detail}</div></div>`;
+    shownAt = performance.now();
+    bindDrag($("card"));
+  }
+
+  // ── 판정 ──
+  function decide(human) {           // true=K-water, false=아님, null=건너뛰기
+    if (i >= deck.length) return;
+    const c = deck[i], card = $("card");
+    const fast = performance.now() - shownAt < 3500;
+    let gain = 0, leak = false;
+    if (human !== null) {
+      combo = fast ? Math.min(5, combo + 1) : 1;
+      gain = 10 * combo;
+      if (human !== c.machine) { gain += 50; leak = true; leaks++; }
+      score += gain;
+      decisions[deckId + "::" + c.key] = { deck: deckId, key: c.key, main: c.main, machine: c.machine, human, url: c.url || "" };
+    }
+    hist.push({ idx: i, key: deckId + "::" + c.key, gain, leak });
+    if (card) card.classList.add(human === true ? "out-right" : human === false ? "out-left" : "out-down");
+    if (leak) toast("누수 발견! +50", false);
+    i++;
+    const lv = Math.floor(pctDone() / 25);
+    if (lv > level && lv < 4) { level = lv; setTimeout(() => toast(["", "정상수위 도달", "만수위 도달", "홍수위 — 거의 다 왔어요"][lv], true), leak ? 900 : 0); }
+    persist();
+    setTimeout(render, card ? 220 : 0);
+  }
+  function undo() {
+    const h = hist.pop(); if (!h) return;
+    if (decisions[h.key]) delete decisions[h.key];
+    score = Math.max(0, score - h.gain); if (h.leak) leaks = Math.max(0, leaks - 1);
+    i = h.idx; combo = 1; persist(); render();
+  }
+  let tt;
+  function toast(msg, isLevel) {
+    const t = $("toast"); t.textContent = msg; t.classList.toggle("level", !!isLevel); t.classList.add("show");
+    clearTimeout(tt); tt = setTimeout(() => t.classList.remove("show"), 1100);
+  }
+
+  // ── 밀기(드래그) ──
+  function bindDrag(card) {
+    let x0 = null, dx = 0;
+    const yes = card.querySelector(".stamp.yes"), no = card.querySelector(".stamp.no");
+    card.addEventListener("pointerdown", e => { if (e.target.closest("a")) return; x0 = e.clientX; dx = 0; card.classList.add("dragging"); card.setPointerCapture(e.pointerId); });
+    card.addEventListener("pointermove", e => {
+      if (x0 === null) return; dx = e.clientX - x0;
+      card.style.transform = `translateX(${dx}px) rotate(${dx / 25}deg)`;
+      yes.style.opacity = Math.max(0, Math.min(1, dx / 120)); no.style.opacity = Math.max(0, Math.min(1, -dx / 120));
+    });
+    const end = () => {
+      if (x0 === null) return; x0 = null; card.classList.remove("dragging"); card.style.transform = "";
+      yes.style.opacity = no.style.opacity = 0;
+      if (dx > 110) decide(true); else if (dx < -110) decide(false);
+    };
+    card.addEventListener("pointerup", end); card.addEventListener("pointercancel", end);
+  }
+
+  // ── 결과 JSON (수집 규칙) ──
+  function buildOverrides() {
+    const d = Object.values(decisions);
+    const pick = (deck, human, machine) => d.filter(x => x.deck === deck && x.human === human && x.machine === machine);
+    return {
+      version: 1,
+      reviewer: $("reviewer").value.trim() || "(이름 없음)",
+      at: new Date().toISOString(),
+      source: src.name,
+      pattern: PATTERN.source,
+      affiliation_include: pick("aff", true, false).map(x => x.key),    // 기계는 아님 → 사람은 K-water
+      affiliation_exclude: pick("aff", false, true).map(x => x.key),    // 기계는 K-water → 사람은 아님
+      paper_include: d.filter(x => x.deck !== "aff" && x.human && !x.machine).map(x => x.key),
+      paper_exclude: d.filter(x => x.deck !== "aff" && !x.human && x.machine).map(x => x.key),
+      stats: { judged: d.length, disagreements: d.filter(x => x.human !== x.machine).length,
+               by_deck: ["aff", "rej", "acc"].reduce((o, k) => (o[k] = d.filter(x => x.deck === k).length, o), {}) }
+    };
+  }
+  function renderResult() {
+    const o = buildOverrides();
+    $("out").value = JSON.stringify(o, null, 1);
+    const L = Object.values(decisions).filter(x => x.human !== x.machine).slice(-30).reverse();
+    $("leakList").innerHTML = L.length ? L.map(x => `<li><b>${esc(x.main)}</b> — 기계 ${x.machine ? "K-water" : "아님"} → 심판 ${x.human ? "K-water" : "아님"}</li>`).join("")
+      : "<li>아직 누수(기계 판정 오류)를 찾지 못했습니다.</li>";
+  }
+  $("bCopy").addEventListener("click", () => {
+    const txt = $("out").value;
+    navigator.clipboard.writeText(txt).then(() => { $("copyMsg").textContent = "복사했습니다. 비공개 저장소에 review/overrides.json으로 저장하세요."; })
+      .catch(() => { $("out").select(); $("copyMsg").textContent = "자동 복사가 막혀 있어 내용을 선택해 두었습니다. Ctrl+C로 복사하세요."; });
+  });
+  if (window.self === window.top) {           // 깃허브·내 PC에서 직접 열었을 때만 파일 저장 제공
+    $("bSave").hidden = false;
+    $("bSave").addEventListener("click", () => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([$("out").value], { type: "application/json" }));
+      a.download = "overrides.json"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    });
+  }
+
+  // ── 파일 읽기 (xlsx: kwater_review.xlsx / csv: kwater_affiliations.csv, kwater_papers.csv) ──
+  function rowsToSrc(name, affRows, paperRows) {
+    const S = { name, aff: [], rej: [], acc: [] };
+    for (const r of affRows) {
+      const s = r["소속 문자열"]; if (!s) continue;
+      S.aff.push({ machine: r["판정"] === "K-water", key: s, main: s, info: `저자 ${r["저자 수"] ?? "?"}명 · 검색어: ${r["걸린 검색어"] ?? ""}` });
+    }
+    for (const r of paperRows) {
+      const t = r["국문 제목"] || r["영문 제목"]; if (!t && !r["URL"]) continue;
+      const c = { machine: r["판정"] === "채택", key: r["URL"] || `${r["연도"]}|${t}`, main: t || "(제목 없음)", url: r["URL"] || "",
+                  info: `${r["연도"] ?? ""} · ${r["학술지"] ?? ""}`, title_en: r["국문 제목"] ? (r["영문 제목"] || "") : "",
+                  affs: String(r["전체 저자 소속"] || "").split(" | ").filter(Boolean) };
+      (c.machine ? S.acc : S.rej).push(c);
+    }
+    S.aff.sort((a, b) => (parseInt(b.info.slice(3)) || 0) - (parseInt(a.info.slice(3)) || 0));
+    return S;
+  }
+  function parseCSV(text) {
+    const rows = []; let row = [], cell = "", q = false;
+    text = text.replace(/^﻿/, "");
+    for (let k = 0; k < text.length; k++) {
+      const ch = text[k];
+      if (q) { if (ch === '"') { if (text[k + 1] === '"') { cell += '"'; k++; } else q = false; } else cell += ch; }
+      else if (ch === '"') q = true;
+      else if (ch === ",") { row.push(cell); cell = ""; }
+      else if (ch === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; }
+      else if (ch !== "\r") cell += ch;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    const [h, ...body] = rows;
+    return body.filter(r => r.length > 1).map(r => Object.fromEntries(h.map((k, j) => [k, r[j]])));
+  }
+  async function readFiles(files) {
+    let aff = [], papers = [], names = [];
+    for (const f of files) {
+      names.push(f.name);
+      if (/\.xlsx$/i.test(f.name)) {
+        if (!window.XLSX) { toast("엑셀 읽기 도구를 불러오지 못했습니다. CSV로 열어 보세요.", false); return; }
+        const wb = XLSX.read(await f.arrayBuffer(), { type: "array" });
+        const sh = n => wb.Sheets[n] ? XLSX.utils.sheet_to_json(wb.Sheets[n], { defval: "" }) : [];
+        aff = aff.concat(sh("소속_문자열")); papers = papers.concat(sh("논문_탈락"), sh("논문_채택"));
+      } else {
+        const rows = parseCSV(await f.text());
+        if (rows.length && "소속 문자열" in rows[0]) aff = aff.concat(rows); else papers = papers.concat(rows);
+      }
+    }
+    if (!aff.length && !papers.length) { toast("읽을 행이 없습니다. kwater_review.xlsx나 review/의 CSV를 여세요.", false); return; }
+    src = rowsToSrc(names.join(" + "), aff, papers);
+    $("srcLabel").innerHTML = `<strong>${esc(src.name)}</strong> · 소속 ${src.aff.length.toLocaleString()} · 탈락 ${src.rej.length} · 채택 ${src.acc.length.toLocaleString()}`;
+    loadSaved(); startDeck();
+  }
+  $("file").addEventListener("change", e => e.target.files.length && readFiles([...e.target.files]));
+  const drop = $("drop");
+  ["dragenter", "dragover"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave", "drop"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove("over"); }));
+  drop.addEventListener("drop", e => e.dataTransfer.files.length && readFiles([...e.dataTransfer.files]));
+
+  // ── 조작 ──
+  $("bYes").addEventListener("click", () => decide(true));
+  $("bNo").addEventListener("click", () => decide(false));
+  $("bSkip").addEventListener("click", () => decide(null));
+  $("bUndo").addEventListener("click", undo);
+  $("deckSel").addEventListener("change", e => { deckId = e.target.value; startDeck(); });
+  $("reviewer").addEventListener("input", e => { store.set("kwater-hitl:reviewer", e.target.value); renderResult(); });
+  document.addEventListener("keydown", e => {
+    if (e.target.matches("input, textarea, select")) return;
+    const k = e.key.toLowerCase();
+    if (k === "d" || k === "arrowright") { e.preventDefault(); decide(true); }
+    else if (k === "a" || k === "arrowleft") { e.preventDefault(); decide(false); }
+    else if (k === "s" || k === "arrowdown") { e.preventDefault(); decide(null); }
+    else if (k === "z") { e.preventDefault(); undo(); }
+  });
+
+  loadSaved(); startDeck();
+})();
+</script>
+</body>
+</html>

@@ -24,6 +24,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from kci_collect import KEY, KW_PATTERN, KW_QUERIES, fetch_year
+from kwater_rules import affil_is_kwater, is_kwater, load_overrides
 from water_journals import load_registry
 
 OUT = Path(os.environ.get("KCI_RAW_DIR", "private")) / "review"
@@ -129,6 +130,9 @@ def write_xlsx(path: Path, paper_rows: list, aff_rows: list, meta: dict):
     wb.save(path)
 
 
+OV = load_overrides(os.environ.get("KCI_RAW_DIR", "private"))   # 이미 저장된 사람 판정은 반영해 다시 보지 않게
+
+
 def main():
     if not KEY:
         print("❌ KCI_API_KEY 없음")
@@ -157,8 +161,8 @@ def main():
         rows = []
         for p in papers.values():
             affs = [a.get("affil", "") for a in p.get("authors", [])]
-            hit = [a for a in affs if KW_PATTERN.search(a)]
-            rows.append(["채택" if hit else "탈락", p.get("year"), p.get("journal"), p.get("title_ko"),
+            hit = [a for a in affs if affil_is_kwater(a, OV)]
+            rows.append(["채택" if is_kwater(p, OV) else "탈락", p.get("year"), p.get("journal"), p.get("title_ko"),
                          p.get("title_en"), " | ".join(dict.fromkeys(hit)), " | ".join(dict.fromkeys(affs)),
                          ", ".join(sorted(p["queries"])), p.get("url")])
         rows.sort(key=lambda r: (r[0] != "탈락", str(r[1]), str(r[2])))                  # 탈락 먼저
@@ -166,10 +170,10 @@ def main():
     with open(OUT / "kwater_affiliations.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
         w.writerow(["판정", "소속 문자열", "저자 수", "걸린 검색어"])
-        w.writerows(sorted((["K-water" if KW_PATTERN.search(a) else "아님", a, n, ", ".join(sorted(aff_q[a]))]
+        w.writerows(sorted((["K-water" if affil_is_kwater(a, OV) else "아님", a, n, ", ".join(sorted(aff_q[a]))]
                             for a, n in aff_n.items()), key=lambda r: (r[0], -r[2])))
     acc = sum(r[0] == "채택" for r in rows)
-    aff_rows = sorted((["K-water" if KW_PATTERN.search(a) else "아님", a, n, ", ".join(sorted(aff_q[a]))]
+    aff_rows = sorted((["K-water" if affil_is_kwater(a, OV) else "아님", a, n, ", ".join(sorted(aff_q[a]))]
                        for a, n in aff_n.items()), key=lambda r: (r[0], -r[2]))
     write_xlsx(OUT / "kwater_review.xlsx", rows, aff_rows,
                {"updated": time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())})
