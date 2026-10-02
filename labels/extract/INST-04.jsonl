@@ -519,3 +519,5 @@
 {"id": "W7214700277", "object": "아치 댐 구조", "problem": "정확한 기하학적 모델링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214788112", "object": "콘크리트 댐 건설 이음부의 안정성", "problem": "침투로 인한 불안정성 전이 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214778613", "object": "콘크리트 아치 댐의 동적 거동", "problem": "동적 거동에 영향을 미치는 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214961484", "object": "댐의 구조적 안전성", "problem": "분석 결과를 명확하고 실행 가능한 정보로 변환하는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214962067", "object": "롤러 압축 콘크리트의 온도 및 균열 발생", "problem": "온도 균열 발생 억제", "relevant": true, "model": "gpt-4o-mini"}

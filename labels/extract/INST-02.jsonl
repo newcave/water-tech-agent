@@ -814,3 +814,7 @@
 {"id": "W7214752110", "object": "ERMN의 주요 하천 수질", "problem": "하천 수질 상태와 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214772912", "object": "ERMN의 주요 하천 수질", "problem": "하천 수질 상태와 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214794354", "object": "전 세계 하천 유량 예측 및 수자원 관리", "problem": "수문 데이터 가용성의 중요한 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214896797", "object": "중앙아시아의 농업용 태양광 발전 잠재성", "problem": "농업용 태양광 발전의 지역적 스크리닝", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214913155", "object": "수자원", "problem": "정확한 수자원 분포 평가 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214960780", "object": "Isfara River의 수자원", "problem": "수자원 가용성 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214957120", "object": "학생 창업 및 혁신", "problem": "학생 스타트업을 통한 교육과 과학, 비즈니스 통합", "relevant": true, "model": "gpt-4o-mini"}

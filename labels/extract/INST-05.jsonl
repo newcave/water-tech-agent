@@ -1546,3 +1546,10 @@
 {"id": "W7214797869", "object": "브라질 수력 발전의 유출 지표", "problem": "유출 지표 해석 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214798429", "object": "에너지 공급 안전성", "problem": "수입 에너지 의존도 감소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213428961", "object": "태국의 수력 댐에서의 하이브리드 부유형 태양광 시스템", "problem": "재생 가능 용량 확장 및 환경적 이점 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214893505", "object": "전력망에서의 가상 물 이전", "problem": "계절성 분석 및 물 소비 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214914479", "object": "브라질의 수력 발전 유역", "problem": "가뭄 모니터링을 위한 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214934041", "object": "다목적 저수지 시스템의 운영", "problem": "홍수 시즌 운영을 위한 의사결정 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214934099", "object": "브라질의 수력 발전 유역", "problem": "가뭄 모니터링을 위한 우선순위 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214956882", "object": "유장 저수지 시스템", "problem": "항상성 개선을 위한 최적 운영", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214945284", "object": "산업 조건 모니터링 시스템의 결함 탐지", "problem": "결함 샘플 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214943209", "object": "Kainji 댐의 수위", "problem": "정확한 수위 모니터링", "relevant": true, "model": "gpt-4o-mini"}

@@ -1916,3 +1916,12 @@
 {"id": "W7212385441", "object": "공공 위생 서비스", "problem": "불평등한 공공 위생 서비스 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214782571", "object": "고객의 청구서 지불 행동", "problem": "청구서 지불 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203745320", "object": "화학 생물농축 예측", "problem": "정확한 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214923837", "object": "NPS 해양 생태계", "problem": "해양 영양물질 증가 문제 진단 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214945003", "object": "NPS 해양 생태계", "problem": "영양물질 과다 유입 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214914914", "object": "일로린 도시의 토지 적합성", "problem": "도시 개발과 토지 이용 계획을 위한 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214926698", "object": "일로린 도시의 도시 토지 적합성", "problem": "도시 토지 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214958117", "object": "대만의 수자원 관리", "problem": "미래 가뭄 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214959093", "object": "대만의 수자원 관리", "problem": "미래 가뭄 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214980698", "object": "Mandatory Palestine의 지역 물 관리", "problem": "지역 유틸리티의 매력 원인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214987278", "object": "Tanga Urban Water Supply and Sanitation Authority (Tanga UWASA)", "problem": "NRW가 재정 성과와 운영 효율성 및 서비스 제공에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214886172", "object": "알리모쇼 지역의 사적 주택 단지", "problem": "주택 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}

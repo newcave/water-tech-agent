@@ -3490,3 +3490,16 @@
 {"id": "W7212048658", "object": "스마트 관개 시스템", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208779152", "object": "관개 농경지", "problem": "작물 물 사용의 공간적 패턴 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7211952312", "object": "Gahar Lake", "problem": "호수의 상태 악화 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214889788", "object": "Kherson 지역의 생태 상태", "problem": "생태계 건강 악화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214889813", "object": "푸네시의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214902880", "object": "푸네시의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214913884", "object": "소규모 저수지의 수면적", "problem": "저수지 수면적 변화를 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214930467", "object": "도시 홍수 침수 지역", "problem": "신속한 매핑 방법 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214946348", "object": "Hamrin Lake", "problem": "호수 변화 이해 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214948066", "object": "알주바이르 지구의 도시 확장", "problem": "도시 확장과 지표 온도 간의 관계 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214955379", "object": "나이지리아의 관개 적합성", "problem": "관개 가능 지역 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214962897", "object": "계절적 과정", "problem": "계절적 과정의 모니터링 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214966501", "object": "계절적 과정", "problem": "계절적 과정의 변화를 모니터링하고 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214966576", "object": "도시 홍수 침수 지역", "problem": "신속한 매핑 방법 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214978132", "object": "2022년 중국 시닝시의 구자완 점토암 산사태", "problem": "산사태의 시공간적 진화 재구성 및 미세 구조 약화 메커니즘 설명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214988676", "object": "해양 투명도", "problem": "장기 추세의 신뢰성 평가", "relevant": true, "model": "gpt-4o-mini"}

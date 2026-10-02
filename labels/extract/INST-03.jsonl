@@ -4341,3 +4341,16 @@
 {"id": "W7203761957", "object": "방글라데시 남서부 해안 지역의 가정용 수자원 관리", "problem": "가정의 수자원 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203779704", "object": "해수 담수화 및 물 전송 시스템", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7203673173", "object": "직접 강물 처리 시스템의 수질 성능", "problem": "오염된 음용수 원천의 전환 및 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214894292", "object": "Donga 타운의 지하수", "problem": "물의 질을 평가하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214898359", "object": "비대칭 슈퍼젖음 자누스 멤브레인", "problem": "태양열 증발 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214908023", "object": "인도 도시에서의 대기 중 수분 추출을 통한 음용수 품질", "problem": "AWG에서 생산된 물의 품질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214922741", "object": "Ughelli Central Market River의 수질", "problem": "중금속 농도 평가 및 안전성 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214937785", "object": "지하수의 품질", "problem": "종합적인 평가 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214944909", "object": "음용수 위생과 생물 보안", "problem": "음용수의 오염과 생물 보안 위험 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214949706", "object": "원수 공급 시스템의 신뢰성", "problem": "원수 공급의 신뢰성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214957294", "object": "가나의 화재 발생 지역의 토양 및 수질 오염", "problem": "PFAAs의 분포 및 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214962993", "object": "신장 결석 질환", "problem": "식물 기반 대체 치료법 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214968109", "object": "신장 결석 질환", "problem": "식물 기반 대체 치료법 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214773050", "object": "지하수 품질", "problem": "지하수 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215001428", "object": "수면수의 수질", "problem": "수질 개선을 위한 경제적 비용 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214988599", "object": "육계의 성장 성과 및 경제성", "problem": "유기산 보충의 효과를 평가하기", "relevant": true, "model": "gpt-4o-mini"}

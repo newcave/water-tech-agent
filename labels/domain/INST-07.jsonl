@@ -642,3 +642,5 @@
 {"id": "W7214684467", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 유역의 부유 침전물 수송", "problem": "정확한 침전물 수송 예측"}
 {"id": "W7214725460", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산성 광산 배수 관리", "problem": "기술 선택에서 적응적이고 사이트 특화된 처리 기법으로 전환하기"}
 {"id": "W7214782928", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구의 수자원 저장 이상", "problem": "SWOT 기반 TWS 데이터의 불규칙성을 해결하기"}
+{"id": "W7214958117", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대만의 수자원 안전성", "problem": "미래 가뭄 위험 평가"}
+{"id": "W7214959093", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대만의 수자원 관리", "problem": "미래 가뭄 위험 평가"}
