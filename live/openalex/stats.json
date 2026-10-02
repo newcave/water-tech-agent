@@ -1,11 +1,11 @@
 {
- "collected_total": 22719,
- "target_total": 29407,
- "updated": 1790932981,
+ "collected_total": 22819,
+ "target_total": 29416,
+ "updated": 1790955731,
  "kwater_collected": 159,
  "kwater_target": 159,
- "journal_collected": 8814,
- "journal_target": 15485,
+ "journal_collected": 8914,
+ "journal_target": 15494,
  "related_collected": 13746,
  "related_target": 13763,
  "tasks": {
@@ -55,8 +55,8 @@
    "done": true
   },
   "J02": {
-   "count": 4200,
-   "target": 10855,
+   "count": 4300,
+   "target": 10864,
    "done": false
   },
   "J03": {
