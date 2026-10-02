@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+concurrency:                     # 비공개 저장소에 쓰는 워크플로끼리 한 번에 하나만
+  group: kci-private
+  cancel-in-progress: false
+
 jobs:
   review:
     runs-on: ubuntu-latest
@@ -39,4 +43,8 @@ jobs:
           git add review
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -q -m "review: K-water 분류 검증표 $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push -q
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep 10
+          done
+          echo "비공개 저장소 push 실패(3회)"; exit 1
