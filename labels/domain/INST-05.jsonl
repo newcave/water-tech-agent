@@ -1527,3 +1527,9 @@
 {"id": "W7214956882", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유장 저수지 시스템", "problem": "항상성 개선을 위한 최적 운영"}
 {"id": "W7214945284", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산업 조건 모니터링 시스템의 결함 탐지", "problem": "결함 샘플 부족 문제 해결"}
 {"id": "W7214943209", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kainji 댐의 수위", "problem": "정확한 수위 모니터링"}
+{"id": "W7215042348", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "에너지 기술 잠재력", "problem": "에너지 기술 잠재력 추정"}
+{"id": "W7215044664", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북미의 전력 시스템", "problem": "전력 수입 감소 및 가격 상승"}
+{"id": "W7215053415", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "마이크로 수력 발전소 설치 지점", "problem": "설치 위험 평가 및 전력 잠재력 분석"}
+{"id": "W7215069394", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sutami 저수지", "problem": "에너지 생산과 물 보존의 조합으로 인한 기술적 이점"}
+{"id": "W7215071305", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Way Apu Dam의 수자원 할당 최적화", "problem": "기후 변화에 따른 수자원 할당 효율성 저하"}
+{"id": "W7215046461", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Sainj Valley의 지역 사회", "problem": "수력 발전의 사회경제적, 환경적, 수리적 영향 이해하기"}

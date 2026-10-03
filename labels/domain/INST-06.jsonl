@@ -3465,3 +3465,14 @@
 {"id": "W7214966576", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 침수 지역", "problem": "신속한 매핑 방법 제안"}
 {"id": "W7214978132", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "2022년 중국 시닝시의 구자완 점토암 산사태", "problem": "산사태의 시공간적 진화 재구성 및 미세 구조 약화 메커니즘 설명"}
 {"id": "W7214988676", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 투명도", "problem": "장기 추세의 신뢰성 평가"}
+{"id": "W7215085286", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아프리카의 기후 회복력", "problem": "기후 변화에 대한 적응 및 완화 노력 개선"}
+{"id": "W7215040682", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북극 국립공원 네트워크의 육상 경관", "problem": "경관 변화 모니터링"}
+{"id": "W7215068088", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Unchehra 유역의 지하수 자원", "problem": "지하수 잠재력 구역을 평가하고 분류하기"}
+{"id": "W7215073674", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북극 국립공원 네트워크의 육상 경관", "problem": "경관 변화 모니터링"}
+{"id": "W7215075452", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Surkhan State Nature Reserve의 생태계 서비스 역학", "problem": "생태계 서비스 역학을 평가하기 위한 방법 통합"}
+{"id": "W7215076474", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Absheron Peninsula의 식생 수분 및 수자원 가용성", "problem": "기후 변화가 식생 수분에 미치는 영향 평가"}
+{"id": "W7215085915", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중위도 호수의 원격 감지 반사율", "problem": "인접 효과 보정 방법 평가"}
+{"id": "W7215092640", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가뭄 모니터링", "problem": "정확하고 시기적절한 가뭄 평가 수행"}
+{"id": "W7215074074", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가뭄 모니터링 및 예측", "problem": "가뭄 예측 정확도 향상"}
+{"id": "W7215108330", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 열섬 현상(UHI)", "problem": "UHI 동역학 이해 및 BGI 계획 개선"}
+{"id": "W7215324838", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 저장 잠재력", "problem": "자연 장벽으로서의 돌리라이트 다이크 평가"}

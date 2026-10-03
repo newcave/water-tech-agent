@@ -666,3 +666,7 @@
 {"id": "W7214782928", "object": "지구의 수자원 저장 이상", "problem": "SWOT 기반 TWS 데이터의 불규칙성을 해결하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214958117", "object": "대만의 수자원 안전성", "problem": "미래 가뭄 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214959093", "object": "대만의 수자원 관리", "problem": "미래 가뭄 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215041507", "object": "습지 수위", "problem": "기후 변화에 따른 수위 변화 이해 및 재구성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215051023", "object": "다양한 시스템의 다중 스케일 유용성 및 스케일 불변성", "problem": "다중 스케일 기술의 예측 또는 진단 가치를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215052811", "object": "산사태 취약성 평가", "problem": "매핑 단위 선택에 따른 성능 차이 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215077829", "object": "다양한 시스템의 다중 스케일 유용성 및 스케일 불변성", "problem": "다중 스케일 기술의 예측 또는 진단 가치를 평가하기", "relevant": true, "model": "gpt-4o-mini"}

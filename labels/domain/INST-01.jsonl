@@ -1855,3 +1855,12 @@
 {"id": "W7214980698", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Mandatory Palestine의 지역 물 관리", "problem": "지역 유틸리티의 매력 원인 분석"}
 {"id": "W7214987278", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tanga Urban Water Supply and Sanitation Authority (Tanga UWASA)", "problem": "NRW가 재정 성과와 운영 효율성 및 서비스 제공에 미치는 영향 평가"}
 {"id": "W7214886172", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알리모쇼 지역의 사적 주택 단지", "problem": "주택 적합성 평가"}
+{"id": "W3096153101", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Culex 모기", "problem": "생태적 맥락에 따른 생물적 방제 효과 이해"}
+{"id": "W7215032073", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "지속 가능한 물 공급 보장"}
+{"id": "W7215074530", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 억제 및 관리", "problem": "전통적인 항공기 방식의 단점을 해결하기"}
+{"id": "W7215084711", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 억제 및 관리", "problem": "전통적인 항공기 방식의 단점을 해결하기"}
+{"id": "W7215092554", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 억제 및 관리", "problem": "전통적인 항공기 방식의 단점을 해결하기"}
+{"id": "W7215115028", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산불 완화 및 인프라 회복력", "problem": "산불로 인한 피해 감소"}
+{"id": "W7215130198", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 캠퍼스의 에너지 효율성과 신뢰성", "problem": "에너지 효율성 및 신뢰성 향상"}
+{"id": "W7215068453", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 네트워크의 수질 관리", "problem": "안전한 음용수 제공 보장"}
+{"id": "W7215048923", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 유틸리티의 직원 성과", "problem": "상황적 리더십이 작업 갈등과 작업 환경에 미치는 영향"}

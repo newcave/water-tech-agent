@@ -4269,3 +4269,18 @@
 {"id": "W7214773050", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 품질", "problem": "지하수 품질 저하 문제 해결"}
 {"id": "W7215001428", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수의 수질", "problem": "수질 개선을 위한 경제적 비용 분석"}
 {"id": "W7214988599", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성과 및 경제성", "problem": "유기산 보충의 효과를 평가하기"}
+{"id": "W7215126819", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물속의 아미노산", "problem": "유해한 소독 부산물 형성 이해하기"}
+{"id": "W7215049240", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "미국의 음용수 시스템", "problem": "PFAS 제거를 위한 경제적 및 환경적 지속 가능성 평가"}
+{"id": "W7215051546", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "뇌의 18F-FDG 섭취", "problem": "메트포르민 치료가 뇌의 18F-FDG 섭취를 변화시키는지 평가하기"}
+{"id": "W7215063313", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Federal University Wukari의 보링수원", "problem": "물의 미생물 오염 문제 해결"}
+{"id": "W7215087558", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜레라 발생", "problem": "예방 및 통제 방안의 효과 개선"}
+{"id": "W7215099220", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 안전성 및 규제 준수", "problem": "PFAS 처리 기술 최적화"}
+{"id": "W7215102492", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜레라 발생", "problem": "예방 및 통제 방안의 효과 개선"}
+{"id": "W7215105893", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜레라 발생", "problem": "발생 원인 및 전파 경로 이해"}
+{"id": "W7215128921", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 음용수", "problem": "수처리 기술 개발"}
+{"id": "W7215131768", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 식수", "problem": "안전한 식수 제공을 위한 소독 기술 개발"}
+{"id": "W7215095260", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 성장 성능 및 도체 특성", "problem": "성장 성능 및 도체 특성 개선"}
+{"id": "W7215381382", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 육체 품질", "problem": "나노에멀전 보충의 효과 평가"}
+{"id": "W7215162795", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 생존율", "problem": "Aloe vera 젤 보충의 효과 평가"}
+{"id": "W7215200712", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karanja의 지하수", "problem": "수질 개선 및 건강 문제 해결"}
+{"id": "W7215320481", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 음용수 적합성", "problem": "지하수 품질 평가"}
