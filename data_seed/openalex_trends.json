@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1788239669,
-   "kwater": 0,
-   "related_1y": 15907
-  },
-  {
    "ts": 1788262969,
    "kwater": 0,
    "related_1y": 15956
@@ -613,45 +608,51 @@
    "kwater": 415,
    "related_1y": 17266,
    "journal_corpus": 103568
+  },
+  {
+   "ts": 1791044740,
+   "kwater": 415,
+   "related_1y": 17514,
+   "journal_corpus": 103591
   }
  ],
- "updated": 1791027818,
+ "updated": 1791044740,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
    "name": "경영연구소",
    "keyword": "water utility management",
-   "recent_1y": 2043
+   "recent_1y": 2073
   },
   "INST-02": {
    "name": "수자원환경연구소",
    "keyword": "water resources hydrology",
-   "recent_1y": 1031
+   "recent_1y": 1042
   },
   "INST-03": {
    "name": "상하수도연구소",
    "keyword": "drinking water treatment",
-   "recent_1y": 5898
+   "recent_1y": 6016
   },
   "INST-04": {
    "name": "물인프라안전연구소",
    "keyword": "dam safety monitoring",
-   "recent_1y": 754
+   "recent_1y": 766
   },
   "INST-05": {
    "name": "물에너지연구소",
    "keyword": "hydropower generation",
-   "recent_1y": 2185
+   "recent_1y": 2218
   },
   "INST-06": {
    "name": "수자원위성연구소",
    "keyword": "satellite remote sensing water",
-   "recent_1y": 4524
+   "recent_1y": 4566
   },
   "INST-07": {
    "name": "AI연구소",
    "keyword": "machine learning hydrology",
-   "recent_1y": 831
+   "recent_1y": 833
   }
  },
  "journals": {
@@ -705,7 +706,7 @@
      "issn_l": "0022-1694"
     }
    ],
-   "total": 23015,
+   "total": 23020,
    "last_year": 2026,
    "by_year": {
     "2000": 251,
@@ -734,7 +735,7 @@
     "2023": 1398,
     "2024": 1835,
     "2025": 1942,
-    "2026": 1494
+    "2026": 1499
    }
   },
   "J03": {
@@ -746,7 +747,7 @@
      "issn_l": "0309-1708"
     }
    ],
-   "total": 4767,
+   "total": 4770,
    "last_year": 2026,
    "by_year": {
     "2000": 63,
@@ -775,7 +776,7 @@
     "2023": 163,
     "2024": 195,
     "2025": 227,
-    "2026": 236
+    "2026": 239
    }
   },
   "J04": {
@@ -787,7 +788,7 @@
      "issn_l": "0920-4741"
     }
    ],
-   "total": 6227,
+   "total": 6228,
    "last_year": 2026,
    "by_year": {
     "2000": 28,
@@ -816,7 +817,7 @@
     "2023": 298,
     "2024": 373,
     "2025": 318,
-    "2026": 491
+    "2026": 492
    }
   },
   "J05": {
@@ -828,7 +829,7 @@
      "issn_l": "0733-9496"
     }
    ],
-   "total": 2729,
+   "total": 2730,
    "last_year": 2026,
    "by_year": {
     "2000": 60,
@@ -857,7 +858,7 @@
     "2023": 118,
     "2024": 106,
     "2025": 103,
-    "2026": 103
+    "2026": 104
    }
   },
   "J06": {
@@ -869,7 +870,7 @@
      "issn_l": "1027-5606"
     }
    ],
-   "total": 6085,
+   "total": 6086,
    "last_year": 2026,
    "by_year": {
     "2000": 53,
@@ -898,7 +899,7 @@
     "2023": 239,
     "2024": 266,
     "2025": 338,
-    "2026": 275
+    "2026": 276
    }
   },
   "J07": {
@@ -992,7 +993,7 @@
      "issn_l": "0043-1354"
     }
    ],
-   "total": 24159,
+   "total": 24171,
    "last_year": 2026,
    "by_year": {
     "2000": 534,
@@ -1021,7 +1022,7 @@
     "2023": 1371,
     "2024": 1805,
     "2025": 2024,
-    "2026": 1602
+    "2026": 1614
    }
   },
   "J10": {
