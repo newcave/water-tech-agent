@@ -18,8 +18,8 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: kci-rising
+concurrency:                     # 비공개 저장소에 쓰는 워크플로끼리 한 번에 하나만
+  group: kci-private
   cancel-in-progress: false
 
 jobs:
@@ -56,7 +56,11 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "원천 변경 없음"; exit 0; fi
           git commit -q -m "kci raw: $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push -q
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep 10
+          done
+          echo "비공개 저장소 push 실패(3회)"; exit 1
 
       - name: 상승 주제 분석 (집계만 출력)
         env:

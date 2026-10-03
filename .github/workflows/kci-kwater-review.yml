@@ -1,0 +1,50 @@
+name: kci-kwater-review
+
+# K-water 소속 논문 분류 검증표 → 비공개 저장소 review/ (로그에는 건수만)
+on:
+  workflow_dispatch: {}
+  push:                          # 작업 브랜치에서 바로 실행
+    branches: [claude/wizardly-fermi-mrihtw]
+    paths: [agents/kci_kwater_review.py, .github/workflows/kci-kwater-review.yml]
+
+permissions:
+  contents: read
+
+concurrency:                     # 비공개 저장소에 쓰는 워크플로끼리 한 번에 하나만
+  group: kci-private
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: 비공개 저장소 체크아웃
+        uses: actions/checkout@v4
+        with:
+          repository: newcave/water-tech-kci-private
+          token: ${{ secrets.KCI_PRIVATE_TOKEN }}
+          path: private
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet requests openpyxl
+      - name: 검증표 만들기
+        env:
+          KCI_API_KEY: ${{ secrets.KCI_API_KEY }}
+          KCI_RAW_DIR: private
+        run: python agents/kci_kwater_review.py
+      - name: 비공개 저장소에 커밋
+        working-directory: private
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add review
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -q -m "review: K-water 분류 검증표 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep 10
+          done
+          echo "비공개 저장소 push 실패(3회)"; exit 1
