@@ -255,3 +255,4 @@
 {"ts": "2026-10-04T06:28:13Z", "forward": 79, "hist_year": null, "hist": 0, "backfilled": 79, "extracted": 74, "assigned": 72, "total": 13189, "duration_s": 103}
 {"ts": "2026-10-04T12:53:08Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 13189, "duration_s": 1}
 {"ts": "2026-10-04T17:12:21Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 13189, "duration_s": 2}
+{"ts": "2026-10-04T21:59:52Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 13189, "duration_s": 1}
