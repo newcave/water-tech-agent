@@ -3476,3 +3476,12 @@
 {"id": "W7215074074", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가뭄 모니터링 및 예측", "problem": "가뭄 예측 정확도 향상"}
 {"id": "W7215108330", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 열섬 현상(UHI)", "problem": "UHI 동역학 이해 및 BGI 계획 개선"}
 {"id": "W7215324838", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 저장 잠재력", "problem": "자연 장벽으로서의 돌리라이트 다이크 평가"}
+{"id": "W7216000175", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간 정착지의 지속 가능한 개발 및 조직", "problem": "다양한 계획 원칙과 거버넌스를 통해 도시 및 지역 계획의 효율성을 개선"}
+{"id": "W7216282826", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해안 수역의 엽록소-a 추세", "problem": "위성 관측 데이터의 장기 변화를 분석하여 광학적 특성의 변화를 이해하려는"}
+{"id": "W7216366376", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대기 오염의 양적 지표인 에어로졸 광학 깊이(AOD)", "problem": "AOD 모델링에서 수증자의 역할 조사"}
+{"id": "W7216389133", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간 정착지의 지속 가능한 개발 및 조직", "problem": "다양한 도시 계획 원칙과 시스템을 이해하고 적용하기"}
+{"id": "W7216555245", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대기 오염의 양적 지표인 에어로졸 광학 깊이(AOD)", "problem": "AOD 모델링에서 수증자의 역할 조사"}
+{"id": "W7215094856", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북극 습지", "problem": "습지의 공간 범위와 클래스 구성 불확실성 해소"}
+{"id": "W7214898194", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 침수 지역", "problem": "단일 이미지로 도시 홍수 침수 지역을 신속하게 매핑하기"}
+{"id": "W7217398450", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "헤르손 지역의 생태 상태", "problem": "생태계 건강 악화"}
+{"id": "W7217376595", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 생태계의 수질", "problem": "정확하고 시기적절한 수질 예측 도구 개발"}

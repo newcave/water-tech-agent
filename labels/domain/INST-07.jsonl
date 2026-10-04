@@ -648,3 +648,4 @@
 {"id": "W7215051023", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "다양한 시스템의 다중 스케일 유용성 및 스케일 불변성", "problem": "다중 스케일 기술의 예측 또는 진단 가치를 평가하기"}
 {"id": "W7215052811", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산사태 취약성 평가", "problem": "매핑 단위 선택에 따른 성능 차이 분석"}
 {"id": "W7215077829", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "다양한 시스템의 다중 스케일 유용성 및 스케일 불변성", "problem": "다중 스케일 기술의 예측 또는 진단 가치를 평가하기"}
+{"id": "W7215814173", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "양쯔강의 탁도 동역학", "problem": "탁도 변동성을 이해하고 환경적 요인을 규명하기"}

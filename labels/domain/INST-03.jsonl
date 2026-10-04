@@ -4284,3 +4284,29 @@
 {"id": "W7215162795", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 생존율", "problem": "Aloe vera 젤 보충의 효과 평가"}
 {"id": "W7215200712", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karanja의 지하수", "problem": "수질 개선 및 건강 문제 해결"}
 {"id": "W7215320481", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 음용수 적합성", "problem": "지하수 품질 평가"}
+{"id": "W7215780995", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도 리버 브로일러 치킨의 성장 성능과 장의 형태학적 지표", "problem": "프랑킨센스 추출물의 효과 평가"}
+{"id": "W7215983321", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Rivers State의 지하수", "problem": "오염된 지하수 품질 개선"}
+{"id": "W7216084734", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도 리버 브로일러 치킨의 성장 성능 및 장 형태 지표", "problem": "식이 수준에 따른 프랑킨센스 추출물의 효과 평가"}
+{"id": "W7216092819", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시의 물 관리 시스템", "problem": "물 관리 문제 해결"}
+{"id": "W7216310854", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미주리 강의 담수 시스템에서의 미세플라스틱", "problem": "미세플라스틱의 발생 및 특성 이해"}
+{"id": "W7216327545", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시의 물 관리 시스템", "problem": "물 관리 문제 해결하기"}
+{"id": "W7216327618", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수", "problem": "폐기물 매립지 주변의 오염 문제 해결"}
+{"id": "W7216354872", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도 리버 브로일러 치킨의 성장 성능과 장의 형태학적 지표", "problem": "프랑킨센스 추출물의 효과 평가"}
+{"id": "W7216451543", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물에서의 비소 및 안티모니 제거", "problem": "자연 및 생물 기반 물질을 이용한 제거 방법 탐색"}
+{"id": "W7215039423", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간과 신장", "problem": "납 노출에 대한 생화학적 및 형태학적 반응 조절"}
+{"id": "W7215821215", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리에서의 화학 오염물", "problem": "화학 오염물 동시 제어"}
+{"id": "W7216280062", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kut City의 음용수 안전성", "problem": "방사선 및 화학적 오염 문제 평가"}
+{"id": "W7216790387", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "원수에서 Cryptosporidium parvum 제거", "problem": "효과적인 대체 처리 기술 필요"}
+{"id": "W7215793074", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우물 물의 Pb²⁺ 오염", "problem": "Pb²⁺ 제거"}
+{"id": "W7215873974", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kibiya 지역의 지하수", "problem": "중금속 오염 평가 및 관리 필요성"}
+{"id": "W7216810790", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 오염", "problem": "중금속 오염 평가"}
+{"id": "W7218048743", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 누사 텡가라의 음용수 공급 시스템", "problem": "음용수 공급의 안전성 및 지속 가능성 개선"}
+{"id": "W7215997403", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "국내 육성 중인 오리", "problem": "사망률 감소"}
+{"id": "W7217324385", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티푸스", "problem": "공중 보건 문제 해결"}
+{"id": "W7217845576", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Haryana의 가금류 농장용 지하수", "problem": "지하수 품질 문제 해결"}
+{"id": "W7216319388", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "칼슘 옥살레이트 요로결석증", "problem": "안전성과 효능 평가"}
+{"id": "W7217359589", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 오염", "problem": "오염물질 제거"}
+{"id": "W7216563431", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아스코르브산의 산화", "problem": "구리 이온에 의한 촉매 반응의 동역학 이해"}
+{"id": "W7213173185", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신장 손상", "problem": "신장 손상 개선"}
+{"id": "W7205013657", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성 및 건강", "problem": "사료에서 사르가숨의 효과 분석"}
+{"id": "W7217182267", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 시스템에서의 PFAS", "problem": "PFAS 침투의 위험 평가"}

@@ -821,3 +821,9 @@
 {"id": "W7215041046", "object": "영구동토", "problem": "영구동토 해빙의 영향 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215047119", "object": "영구동토", "problem": "영구동토 해빙의 영향 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215116417", "object": "로네 유역의 수자원", "problem": "기후 변화에 따른 수자원 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215722292", "object": "현대 건축 환경", "problem": "기초 공학 원리와 수학적 공식 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216002371", "object": "수자원 공학 교육 과정", "problem": "수자원 관리 및 환경 균형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216091476", "object": "수자원 공학 교육 과정", "problem": "수자원 관리 및 환경 균형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216283304", "object": "타지키스탄과 키르기스 공화국의 수력 발전 시스템", "problem": "기후 변화에 따른 수자원 가용성 변화 대응", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216430083", "object": "북부 카자흐스탄의 수자원", "problem": "봄철 유출수 수확 가능성 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216441824", "object": "현대 건축 환경", "problem": "기초 공학 원리와 수학적 공식 이해하기", "relevant": true, "model": "gpt-4o-mini"}

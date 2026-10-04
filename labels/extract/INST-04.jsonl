@@ -523,3 +523,6 @@
 {"id": "W7214962067", "object": "롤러 압축 콘크리트의 온도 및 균열 발생", "problem": "온도 균열 발생 억제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215030500", "object": "지진 안전성", "problem": "노후된 댐의 구조적 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215067823", "object": "광업 지반 구조물의 안정성", "problem": "배수 시스템의 영향 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215836680", "object": "콘크리트 구조물", "problem": "정확한 결함 탐지 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218098393", "object": "Raknamo 댐의 누수 및 안정성", "problem": "댐 안전성 평가를 위한 통합 해석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216145310", "object": "저수지 안전 수준", "problem": "안전 수준 예측", "relevant": true, "model": "gpt-4o-mini"}

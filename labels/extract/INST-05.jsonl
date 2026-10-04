@@ -1559,3 +1559,24 @@
 {"id": "W7215069394", "object": "Sutami 저수지", "problem": "에너지 생산과 물 보존의 조합으로 인한 기술적 이점", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215071305", "object": "Way Apu Dam의 수자원 할당 최적화", "problem": "기후 변화에 따른 수자원 할당 효율성 저하", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215046461", "object": "Sainj Valley의 지역 사회", "problem": "수력 발전의 사회경제적, 환경적, 수리적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7124724604", "object": "기업 건물의 지속 가능성", "problem": "생태계의 일반적 균형 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215827388", "object": "물과 에너지 시스템 통합 네트워크", "problem": "물과 전력 자원의 효율적 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215877264", "object": "가나의 50 MW 수력 발전소", "problem": "재정적 타당성을 평가하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215892037", "object": "남부 아프리카 개발 공동체(SADC) 지역의 전력 생성", "problem": "전력 생성의 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215954532", "object": "가나의 50 MW 수력 발전소", "problem": "재정적 타당성을 평가하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215969294", "object": "수력 발전의 운영 패턴", "problem": "재생 가능 에너지 통합을 위한 조정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216002371", "object": "수자원 공학 교육 과정", "problem": "수자원 관리 및 환경 균형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216046933", "object": "가나의 50 MW 수력 발전소", "problem": "재정적 타당성을 평가하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216070191", "object": "남부 아프리카 개발 공동체(SADC) 지역의 전력 생성", "problem": "전력 생성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216091476", "object": "수자원 공학 교육 과정", "problem": "수자원 관리 및 환경 균형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216271083", "object": "가나의 50 MW 수력 발전소", "problem": "재정적 타당성을 평가하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216283304", "object": "타지키스탄과 키르기스 공화국의 수력 발전 시스템", "problem": "기후 변화에 따른 수자원 가용성 변화 대응", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216500224", "object": "물과 에너지 시스템 통합 네트워크", "problem": "물과 전력 자원의 효율적 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215689544", "object": "Vau Dejës 저수지", "problem": "저수지 수위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215729612", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7216196894", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7216519728", "object": "네팔의 전력 시스템", "problem": "그리드 규모 에너지 저장 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215815393", "object": "저수지 수력 발전을 위한 제트 구동식 4날 물레방아", "problem": "TSR의 영향을 분석하여 성능 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217568146", "object": "Grindulu PS 수력 발전소의 전력 생산", "problem": "최소 유량 조건에서 전력 생산 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215846456", "object": "Sutlej River의 수자원 관리", "problem": "수자원 안보와 지역 협력의 도전", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218287899", "object": "Omo-Ghibe Living Landscape", "problem": "지속 가능한 경관 관리 및 생계 개선", "relevant": true, "model": "gpt-4o-mini"}

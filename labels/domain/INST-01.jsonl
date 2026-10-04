@@ -1864,3 +1864,11 @@
 {"id": "W7215130198", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 캠퍼스의 에너지 효율성과 신뢰성", "problem": "에너지 효율성 및 신뢰성 향상"}
 {"id": "W7215068453", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 네트워크의 수질 관리", "problem": "안전한 음용수 제공 보장"}
 {"id": "W7215048923", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 유틸리티의 직원 성과", "problem": "상황적 리더십이 작업 갈등과 작업 환경에 미치는 영향"}
+{"id": "W7216395574", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "canola (Brassica napus L.)", "problem": "작물 출현 개선"}
+{"id": "W7216407505", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수돗물 배급 시스템", "problem": "노후 인프라와 운영 복잡성 문제 해결"}
+{"id": "W7218048743", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 누사 텡가라의 음용수 공급 시스템", "problem": "음용수 공급의 안전성 및 지속 가능성 개선"}
+{"id": "W7216910881", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜롬비아의 가정용 공공 유틸리티 서비스", "problem": "요금 체계의 효율성과 공정성 확보"}
+{"id": "W7217324385", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티푸스", "problem": "공중 보건 문제 해결"}
+{"id": "W7217371359", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Vipadika (Palmar Kshudra Kushtha)", "problem": "피부 균열 및 통증 완화"}
+{"id": "W7216176659", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ado Ekiti의 주택 내 수도관 연결", "problem": "수도관 연결 장벽 해결"}
+{"id": "W7216402972", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "도시 유틸리티 복 corridor", "problem": "회복 일정 최적화"}
