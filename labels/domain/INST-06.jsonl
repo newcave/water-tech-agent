@@ -3485,3 +3485,13 @@
 {"id": "W7214898194", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 침수 지역", "problem": "단일 이미지로 도시 홍수 침수 지역을 신속하게 매핑하기"}
 {"id": "W7217398450", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "헤르손 지역의 생태 상태", "problem": "생태계 건강 악화"}
 {"id": "W7217376595", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 생태계의 수질", "problem": "정확하고 시기적절한 수질 예측 도구 개발"}
+{"id": "W7218339222", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사하라 지역의 수문학적 반응", "problem": "극단적인 수문학적 사건의 통합 관측"}
+{"id": "W7218416238", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아부그라이브 지역의 원자력 발전소 건설 위치", "problem": "적합한 위치 식별하기"}
+{"id": "W7218762739", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다양한 원격 감지 이미지 분석", "problem": "자연어 쿼리를 통한 분석 요청 자동 변환"}
+{"id": "W7218764863", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사하라 지역의 수문학적 반응", "problem": "극단적인 수문학적 사건의 통합 관측"}
+{"id": "W7218903742", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다양한 원격 감지 이미지 분석", "problem": "자연어 쿼리를 통한 분석 요청 자동 변환"}
+{"id": "W7219076645", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사하라 지역의 수문학적 반응", "problem": "극단적인 수문학적 사건의 통합 관측"}
+{"id": "W7214795214", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "심해 내부 상태", "problem": "정확한 추정 및 개선"}
+{"id": "W7218349996", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성-6G 통합 과학 감지 네트워크", "problem": "과학적 유효성을 보장하는 시스템 설계"}
+{"id": "W7218656713", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chamarajanagara District의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 및 토지 피복의 공간적 및 시간적 변화 평가"}
+{"id": "W7218886500", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chamarajanagara District의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 및 토지 피복의 공간적 및 시간적 변화 평가"}

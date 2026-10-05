@@ -1872,3 +1872,4 @@
 {"id": "W7217371359", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Vipadika (Palmar Kshudra Kushtha)", "problem": "피부 균열 및 통증 완화"}
 {"id": "W7216176659", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ado Ekiti의 주택 내 수도관 연결", "problem": "수도관 연결 장벽 해결"}
 {"id": "W7216402972", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "도시 유틸리티 복 corridor", "problem": "회복 일정 최적화"}
+{"id": "W7218864599", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "초고효율 하이퍼스케일 AI 클러스터", "problem": "전력 그리드의 일시적 평활화와 열 관리 개선"}

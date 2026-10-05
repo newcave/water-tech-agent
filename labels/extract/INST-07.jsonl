@@ -671,3 +671,4 @@
 {"id": "W7215052811", "object": "산사태 취약성 평가", "problem": "매핑 단위 선택에 따른 성능 차이 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215077829", "object": "다양한 시스템의 다중 스케일 유용성 및 스케일 불변성", "problem": "다중 스케일 기술의 예측 또는 진단 가치를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215814173", "object": "양쯔강의 탁도 동역학", "problem": "탁도 변동성을 이해하고 환경적 요인을 규명하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219463697", "object": "홍수 위험 경고 시스템", "problem": "글로벌 수문 예측을 지역적으로 실행 가능한 경고로 변환하는 문제", "relevant": true, "model": "gpt-4o-mini"}

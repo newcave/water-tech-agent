@@ -4310,3 +4310,10 @@
 {"id": "W7213173185", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신장 손상", "problem": "신장 손상 개선"}
 {"id": "W7205013657", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성 및 건강", "problem": "사료에서 사르가숨의 효과 분석"}
 {"id": "W7217182267", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 시스템에서의 PFAS", "problem": "PFAS 침투의 위험 평가"}
+{"id": "W7218670822", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 수질 관리", "problem": "신흥 오염물질에 대한 규제 조치 부족 해결"}
+{"id": "W7218863327", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Awe Town의 물 공급 시스템", "problem": "빗물 수확의 가능성 평가"}
+{"id": "W7218876256", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)", "problem": "콜itis 치료를 위한 면역 조절"}
+{"id": "W7218914471", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Awe Town의 물 공급 시스템", "problem": "빗물 수확의 잠재력 평가"}
+{"id": "W7218996816", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 장내 미생물 군집", "problem": "성장 성능 개선 및 장내 미생물 조절"}
+{"id": "W7218641874", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dnipro River water", "problem": "자연 유기물 제거를 위한 최적 조건 설정"}
+{"id": "W7219244388", "domain_primary": "W6", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "마카사르시의 재활용 수돗물 서비스 수용 수준", "problem": "재활용 수돗물 수용 수준 평가 및 영향 요인 분석"}
