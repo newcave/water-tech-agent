@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1791307343,
+ "last_run": 1791307943,
  "next_run": "10분 후",
- "summary": "논문 실수집 가동 — [저널] Water Resources Management",
+ "summary": "논문 실수집 가동 — [저널] Journal of Water Resources Planning and Management",
  "counts": {
   "K-water 생산": 159,
-  "12개 저널": 19349,
+  "12개 저널": 19449,
   "관련(도메인)": 13746,
   "작업": "12/20"
  },
