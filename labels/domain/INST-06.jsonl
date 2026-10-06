@@ -3495,3 +3495,6 @@
 {"id": "W7218349996", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성-6G 통합 과학 감지 네트워크", "problem": "과학적 유효성을 보장하는 시스템 설계"}
 {"id": "W7218656713", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chamarajanagara District의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 및 토지 피복의 공간적 및 시간적 변화 평가"}
 {"id": "W7218886500", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chamarajanagara District의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 및 토지 피복의 공간적 및 시간적 변화 평가"}
+{"id": "W7219744000", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성 기반 기후 변화 연구", "problem": "기후 변화 영향 및 환경 반응의 통합적 이해"}
+{"id": "W7218920327", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chenab Basin의 빙하 호수 시스템", "problem": "빙하 호수 홍수 위험 평가"}
+{"id": "W7219928888", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소레다데 시의 원주율 식생", "problem": "원주율 식생 손실 분석"}

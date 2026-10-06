@@ -1943,3 +1943,8 @@
 {"id": "W7216176659", "object": "Ado Ekiti의 주택 내 수도관 연결", "problem": "수도관 연결 장벽 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7216402972", "object": "도시 유틸리티 복 corridor", "problem": "회복 일정 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7218864599", "object": "초고효율 하이퍼스케일 AI 클러스터", "problem": "전력 그리드의 일시적 평활화와 열 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219630358", "object": "직원 경력 개발", "problem": "교육 수준과 직무 동기 간의 관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219709311", "object": "이탈리아 통합 수자원 서비스의 경제적 및 행정적 규제", "problem": "복잡한 규제 체계 이해 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219849241", "object": "이탈리아 통합 수자원 서비스의 경제적 및 행정적 규제", "problem": "복잡한 규제 체계 이해 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219686093", "object": "카르스트 지역의 지속 가능한 개발 목표", "problem": "녹색 회계의 동향과 도전 과제를 탐구하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219674202", "object": "공공 수자원 서비스 제공업체의 성과", "problem": "생산 전략의 효과를 분석하기", "relevant": true, "model": "gpt-4o-mini"}

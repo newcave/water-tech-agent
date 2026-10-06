@@ -527,3 +527,4 @@
 {"id": "W7218098393", "object": "Raknamo 댐의 누수 및 안정성", "problem": "댐 안전성 평가를 위한 통합 해석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7216145310", "object": "저수지 안전 수준", "problem": "안전 수준 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7219049078", "object": "고강도 콘크리트 아치 댐의 구조적 운영 안전성", "problem": "구조적 안전성 평가의 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220210645", "object": "Ngamo Dam의 수질 및 Oreochromis niloticus", "problem": "중금속 오염 수준 평가", "relevant": true, "model": "gpt-4o-mini"}

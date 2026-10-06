@@ -1553,3 +1553,5 @@
 {"id": "W7215846456", "domain_primary": "W1", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Sutlej River의 수자원 관리", "problem": "수자원 안보와 지역 협력의 도전"}
 {"id": "W7218287899", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Omo-Ghibe Living Landscape", "problem": "지속 가능한 경관 관리 및 생계 개선"}
 {"id": "W7218624665", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jatigede 저수지의 지속 가능성", "problem": "침식 및 퇴적 문제 해결"}
+{"id": "W7219642404", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 효율성", "problem": "에너지 효율성 개선"}
+{"id": "W7220249495", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Wonogiri Regency의 지역 사회", "problem": "환경 문제와 사회 경제적 취약성 해결"}

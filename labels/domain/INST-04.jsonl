@@ -524,3 +524,4 @@
 {"id": "W7218098393", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Raknamo 댐의 누수 및 안정성", "problem": "댐 안전성 평가를 위한 통합 해석"}
 {"id": "W7216145310", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 안전 수준", "problem": "안전 수준 예측"}
 {"id": "W7219049078", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고강도 콘크리트 아치 댐의 구조적 운영 안전성", "problem": "구조적 안전성 평가의 불확실성 해결"}
+{"id": "W7220210645", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ngamo Dam의 수질 및 Oreochromis niloticus", "problem": "중금속 오염 수준 평가"}

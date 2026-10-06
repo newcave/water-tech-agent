@@ -4317,3 +4317,9 @@
 {"id": "W7218996816", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 장내 미생물 군집", "problem": "성장 성능 개선 및 장내 미생물 조절"}
 {"id": "W7218641874", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dnipro River water", "problem": "자연 유기물 제거를 위한 최적 조건 설정"}
 {"id": "W7219244388", "domain_primary": "W6", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "마카사르시의 재활용 수돗물 서비스 수용 수준", "problem": "재활용 수돗물 수용 수준 평가 및 영향 요인 분석"}
+{"id": "W7219755016", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전 세계의 안전한 식수 접근성", "problem": "물 부족과 오염 문제 해결하기"}
+{"id": "W7220151359", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 공급 시스템의 운영 효율성", "problem": "운영 비용 효율성을 개선하기"}
+{"id": "W7219719522", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Calabar Metropolis의 지하수 자원", "problem": "음용수 적합성 평가"}
+{"id": "W7219999236", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Vaigai River", "problem": "환경 정의를 위한 법적 대응"}
+{"id": "W7220346460", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이라크의 물 자원 및 위생 시설", "problem": "물 자원 관리 및 위생 생태계 투자 필요성"}
+{"id": "W7204033768", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "만성 위염과 구강 궤양", "problem": "증상 개선"}
