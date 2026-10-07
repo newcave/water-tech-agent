@@ -1555,3 +1555,8 @@
 {"id": "W7218624665", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jatigede 저수지의 지속 가능성", "problem": "침식 및 퇴적 문제 해결"}
 {"id": "W7219642404", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 효율성", "problem": "에너지 효율성 개선"}
 {"id": "W7220249495", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Wonogiri Regency의 지역 사회", "problem": "환경 문제와 사회 경제적 취약성 해결"}
+{"id": "W7220365137", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mazar 저수지", "problem": "저수지 수위 변화 분석"}
+{"id": "W7220415729", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mazar 저수지", "problem": "저수지 수위 변화 분석"}
+{"id": "W7220419380", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전통 및 재생 가능 발전소와 에너지 저장 시스템이 통합된 현대 전력 시스템", "problem": "전력 시스템의 경제적 배치 문제 해결"}
+{"id": "W7220446395", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력-풍력-태양광-양수 하이브리드 에너지 시스템", "problem": "운영 및 용량 선호에 대한 결합 효과 이해하기"}
+{"id": "W7220447105", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 수력 발전 부문", "problem": "면허 적체 문제 해결"}

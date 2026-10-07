@@ -674,3 +674,7 @@
 {"id": "W7219463697", "object": "홍수 위험 경고 시스템", "problem": "글로벌 수문 예측을 지역적으로 실행 가능한 경고로 변환하는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7219680341", "object": "아프리카의 물 자원 관리", "problem": "수자원 평가 및 기후 적응 계획 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220028066", "object": "지구 관측 교육 커리큘럼", "problem": "현대적이고 경쟁력 있는 교육 프레임워크 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220368750", "object": "수자원 및 기후 회복력", "problem": "전통적인 모델의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219700891", "object": "물의 에너지 및 탄소 교환 과정", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219756449", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219870588", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}

@@ -785,3 +785,5 @@
 {"id": "W7216430083", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 카자흐스탄의 수자원", "problem": "봄철 유출수 수확 가능성 식별"}
 {"id": "W7216441824", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "현대 건축 환경", "problem": "기초 공학 원리와 수학적 공식 이해하기"}
 {"id": "W7219680341", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아프리카의 물 자원 관리", "problem": "수자원 평가 및 기후 적응 계획 개선"}
+{"id": "W7220368750", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 기후 회복력", "problem": "전통적인 모델의 한계 극복"}
+{"id": "W7220464671", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 하천 유역", "problem": "하천 유역의 동적 변화 이해"}

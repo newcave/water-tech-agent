@@ -3498,3 +3498,15 @@
 {"id": "W7219744000", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성 기반 기후 변화 연구", "problem": "기후 변화 영향 및 환경 반응의 통합적 이해"}
 {"id": "W7218920327", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chenab Basin의 빙하 호수 시스템", "problem": "빙하 호수 홍수 위험 평가"}
 {"id": "W7219928888", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소레다데 시의 원주율 식생", "problem": "원주율 식생 손실 분석"}
+{"id": "W7220363258", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 산불 취약성", "problem": "산불 발생 가능성 평가"}
+{"id": "W7220377746", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "앙크로바 강 유역의 수질", "problem": "수질 오염 예측"}
+{"id": "W7220392186", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "앙크로바 강 유역의 수질", "problem": "수질 오염 예측"}
+{"id": "W7220411242", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 질감", "problem": "대규모 평가를 위한 토양 질감 분류 시스템 개선"}
+{"id": "W7220412313", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "앙크로바 강 유역의 수질", "problem": "수질 오염 예측"}
+{"id": "W7220435798", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수의 수위 및 파고 측정", "problem": "SWOT의 파고 추정 정확도 향상"}
+{"id": "W7220438305", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 산불 취약성", "problem": "산불 발생 가능성 평가"}
+{"id": "W7220438608", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "우크라이나의 농업 생산 및 식량 안전성", "problem": "전쟁으로 인한 관개 감소 문제 해결"}
+{"id": "W7220480876", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식물 수분 상태", "problem": "기후 변화로 인한 가뭄 심화"}
+{"id": "W7220599937", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생태계 서비스 역학", "problem": "생태계 서비스의 변화를 평가하기"}
+{"id": "W7220523282", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "꽃 자원의 가용성", "problem": "기후 데이터를 활용한 예측"}
+{"id": "W7220518301", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Côn Đảo의 해초 생태계", "problem": "탄소 저장량 추정"}

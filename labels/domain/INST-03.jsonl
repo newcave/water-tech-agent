@@ -4323,3 +4323,22 @@
 {"id": "W7219999236", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Vaigai River", "problem": "환경 정의를 위한 법적 대응"}
 {"id": "W7220346460", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이라크의 물 자원 및 위생 시설", "problem": "물 자원 관리 및 위생 생태계 투자 필요성"}
 {"id": "W7204033768", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "만성 위염과 구강 궤양", "problem": "증상 개선"}
+{"id": "W7220379009", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 효율성", "problem": "하이브리드 모래-점토 필터의 성능 평가"}
+{"id": "W7220421669", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 효율성", "problem": "하이브리드 모래-점토 필터의 성능 평가"}
+{"id": "W7220445979", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 음용수 접근성", "problem": "지속적인 수질 모니터링 부족 해결"}
+{"id": "W7220452928", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서부 미국의 수원지", "problem": "화재 후 극단적인 탁도 발생 빈도 증가"}
+{"id": "W7220431870", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질 반건조 지역의 담수 공급", "problem": "담수 부족 문제 해결"}
+{"id": "W7220435858", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "급성 역류성 식도 손상", "problem": "급성 역류성 식도 손상 완화"}
+{"id": "W7220477545", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "궤양성 대장염", "problem": "면역 반응과 산화 스트레스 조절"}
+{"id": "W7220426795", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해수 담수화 공정에서의 수질", "problem": "수질 분석 및 개선"}
+{"id": "W7220393542", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부룬디의 수자원", "problem": "중금속 오염 문제 해결"}
+{"id": "W7220423954", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Villa Victoria Reservoir의 생물학적 핫스팟", "problem": "생물학적 압력을 이해하고 개선하기"}
+{"id": "W7220439430", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Helicobacter pylori 감염", "problem": "항생제 내성의 유병률 파악"}
+{"id": "W7220431821", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 화합물", "problem": "PFAS 제거 성능 개선"}
+{"id": "W7220464833", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 공정에서의 활성탄", "problem": "재생 사이클에 따른 흡착 특성 변화"}
+{"id": "W7220474169", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kokshetau시의 수돗물 품질", "problem": "수돗물의 효율적인 후처리 및 조절"}
+{"id": "W7220489248", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "혈관 내피 기능", "problem": "내피 기능 장애 개선"}
+{"id": "W7220469817", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "시베리아 식물 원료", "problem": "자원 절약형 통합 가공 기술 개발"}
+{"id": "W7220438152", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Helicobacter pylori 감염", "problem": "항생제 내성의 유병률 파악"}
+{"id": "W7220377079", "domain_primary": "W4", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 사회의 안전한 음용수 처리 및 저장에 대한 지식", "problem": "지역 사회의 음용수 처리 및 저장 지식 향상"}
+{"id": "W7204469070", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 성장 성능과 생리적 상태", "problem": "기능성 사료 첨가물의 효과 개선"}

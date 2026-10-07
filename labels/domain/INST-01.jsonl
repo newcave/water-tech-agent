@@ -1878,3 +1878,8 @@
 {"id": "W7219849241", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이탈리아 통합 수자원 서비스의 경제적 및 행정적 규제", "problem": "복잡한 규제 체계 이해 및 관리"}
 {"id": "W7219686093", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카르스트 지역의 지속 가능한 개발 목표", "problem": "녹색 회계의 동향과 도전 과제를 탐구하기"}
 {"id": "W7219674202", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공 수자원 서비스 제공업체의 성과", "problem": "생산 전략의 효과를 분석하기"}
+{"id": "W7220395378", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구의 재생", "problem": "추출적 자본주의를 대체할 시스템 구축"}
+{"id": "W7220411449", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스마트 물 미터링 시스템", "problem": "투명성과 신뢰성 향상"}
+{"id": "W7220432206", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공 유틸리티 서비스", "problem": "민간 위탁에 따른 헌법적 책임과 평등성 문제 해결"}
+{"id": "W7220449000", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지구의 재생과 인류의 복지", "problem": "추출적 자본주의를 대체할 시스템 구축"}
+{"id": "W7220461509", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "포스트 개혁 기간의 도시 공간", "problem": "도시 인프라 및 관리 관행 현대화"}
