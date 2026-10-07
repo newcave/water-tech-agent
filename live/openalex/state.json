@@ -80,10 +80,10 @@
    "done": true
   },
   "J06": {
-   "cursor": "IlsxNTg1Njk5MjAwMDAwLCA5Ny4wLCA5LCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzI5NzkzMjE5ODInXSI=",
-   "count": 2000,
+   "cursor": null,
+   "count": 2079,
    "target": 2080,
-   "done": false
+   "done": true
   },
   "J07": {
    "cursor": null,
