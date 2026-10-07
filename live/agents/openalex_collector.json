@@ -1,8 +1,8 @@
 {
- "state": "run",
- "last_run": 1791413127,
- "next_run": "10분 후",
- "summary": "논문 실수집 가동 — [저널] Hydrology and Earth System Sciences",
+ "state": "idle",
+ "last_run": 1791413727,
+ "next_run": "매시 자동 (GitHub Actions)",
+ "summary": "논문 실수집 대기 — 전 작업 완료",
  "counts": {
   "K-water 생산": 159,
   "12개 저널": 22347,
@@ -10,10 +10,6 @@
   "작업": "14/20"
  },
  "events": [
-  {
-   "ts": 1791096013,
-   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
-  },
   {
    "ts": 1791119643,
    "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
@@ -89,6 +85,10 @@
   {
    "ts": 1791413127,
    "msg": "📥 [저널] Hydrology and Earth System Sciences — +79편, 작업누적 2,079/2,080 ✅ 작업 완료"
+  },
+  {
+   "ts": 1791413727,
+   "msg": "⏸️ 이번 회차 종료 — 다음 시각 자동 재개 (누적 유지)"
   }
  ]
 }
