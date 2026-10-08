@@ -4427,3 +4427,16 @@
 {"id": "W7220438152", "object": "Helicobacter pylori 감염", "problem": "항생제 내성의 유병률 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220377079", "object": "지역 사회의 안전한 음용수 처리 및 저장에 대한 지식", "problem": "지역 사회의 음용수 처리 및 저장 지식 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7204469070", "object": "브로일러 치킨의 성장 성능과 생리적 상태", "problem": "기능성 사료 첨가물의 효과 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220733621", "object": "음용수 처리에서 역삼투압 연구", "problem": "역삼투압 연구의 발전을 이해하고 맵핑하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220654517", "object": "사립 학생 기숙사의 수돗물 품질", "problem": "수돗물의 물리화학적 및 미생물학적 품질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220661736", "object": "Microcystis aeruginosa", "problem": "성장 억제 및 비활성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220665648", "object": "음용수 생산 과정에서의 건강 위험", "problem": "기후 및 사회경제적 변화에 따른 미래 건강 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220718164", "object": "음용수에서의 정신약물 존재", "problem": "정신약물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220719727", "object": "음용수에서의 나노플라스틱", "problem": "나노플라스틱의 존재와 영향을 규명하고 규제 체계 마련", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220441117", "object": "염수 지하수", "problem": "수소 생산을 위한 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220465704", "object": "저소득 지역의 수돗물에서의 비소 오염", "problem": "비소 제거 기술의 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220658354", "object": "우즈베키스탄 SSR의 도시 인프라 및 공공 유틸리티", "problem": "상수도 공급 및 위생 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220663685", "object": "젖소에서의 스트레스 반응", "problem": "스트레스 반응 완화 및 성장 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220732859", "object": "Baramati 시의 지하수 품질", "problem": "계절 변화에 따른 지하수 품질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220719855", "object": "음용수의 미세플라스틱 오염", "problem": "미세플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220813455", "object": "육계의 성장 성능 및 장내 미생물 군집", "problem": "아세트산 보충의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}

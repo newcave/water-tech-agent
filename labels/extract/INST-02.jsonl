@@ -830,3 +830,4 @@
 {"id": "W7219680341", "object": "아프리카의 물 자원 관리", "problem": "수자원 평가 및 기후 적응 계획 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220368750", "object": "수자원 및 기후 회복력", "problem": "전통적인 모델의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220464671", "object": "유럽의 하천 유역", "problem": "하천 유역의 동적 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220409490", "object": "Smith River Watershed의 수자원", "problem": "눈 녹은 물의 유출량 추정", "relevant": true, "model": "gpt-4o-mini"}

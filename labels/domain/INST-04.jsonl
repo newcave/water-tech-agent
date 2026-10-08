@@ -525,3 +525,4 @@
 {"id": "W7216145310", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 안전 수준", "problem": "안전 수준 예측"}
 {"id": "W7219049078", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고강도 콘크리트 아치 댐의 구조적 운영 안전성", "problem": "구조적 안전성 평가의 불확실성 해결"}
 {"id": "W7220210645", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ngamo Dam의 수질 및 Oreochromis niloticus", "problem": "중금속 오염 수준 평가"}
+{"id": "W7220693782", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어류 건강과 수산업 지속 가능성", "problem": "기생충 감염과 환경 오염 문제 해결"}

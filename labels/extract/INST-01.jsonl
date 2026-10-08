@@ -1953,3 +1953,6 @@
 {"id": "W7220432206", "object": "공공 유틸리티 서비스", "problem": "민간 위탁에 따른 헌법적 책임과 평등성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220449000", "object": "지구의 재생과 인류의 복지", "problem": "추출적 자본주의를 대체할 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220461509", "object": "포스트 개혁 기간의 도시 공간", "problem": "도시 인프라 및 관리 관행 현대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220659605", "object": "Cape Coral 지역의 지반 침하", "problem": "지반 침하 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220698136", "object": "감염 예방 및 통제 관행", "problem": "지식과 실제 간의 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220737850", "object": "숲 주변 지역 사회의 물 관리", "problem": "형식적 규제 권한과 지역 거버넌스 간의 격차 해소", "relevant": true, "model": "gpt-4o-mini"}

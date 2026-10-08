@@ -3510,3 +3510,10 @@
 {"id": "W7220599937", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생태계 서비스 역학", "problem": "생태계 서비스의 변화를 평가하기"}
 {"id": "W7220523282", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "꽃 자원의 가용성", "problem": "기후 데이터를 활용한 예측"}
 {"id": "W7220518301", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Côn Đảo의 해초 생태계", "problem": "탄소 저장량 추정"}
+{"id": "W7220648608", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대양의 대기 수증기 관측 데이터셋", "problem": "대기 수증기 관측의 부족 해결"}
+{"id": "W7220733335", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 해양의 대기 수증기 관측 데이터셋", "problem": "대기 수증기 관측의 부족 해결"}
+{"id": "W7220716738", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남부 카자흐스탄의 초원 생태계", "problem": "초원 생태계의 복원 방법 분석"}
+{"id": "W7220745643", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 저장 용량", "problem": "데이터 불확실성이 추정에 미치는 영향 평가"}
+{"id": "W7220750447", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 보호 구역", "problem": "모니터링 및 경계 설정"}
+{"id": "W7220681613", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 및 임업 작업을 위한 지구 원거리 감지 데이터", "problem": "데이터 특성 요구 사항 식별"}
+{"id": "W7220705618", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "페트로샨이 시의 토지 표면 변화", "problem": "토지 표면 변화 모니터링"}

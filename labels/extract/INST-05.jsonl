@@ -1588,3 +1588,8 @@
 {"id": "W7220419380", "object": "전통 및 재생 가능 발전소와 에너지 저장 시스템이 통합된 현대 전력 시스템", "problem": "전력 시스템의 경제적 배치 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220446395", "object": "수력-풍력-태양광-양수 하이브리드 에너지 시스템", "problem": "운영 및 용량 선호에 대한 결합 효과 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220447105", "object": "네팔의 수력 발전 부문", "problem": "면허 적체 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220652668", "object": "우즈베키스탄의 지속 가능한 경제 발전", "problem": "녹색 혁신과 기술 현대화를 통한 발전 방향 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220656932", "object": "하이브리드 풍력-수력 발전 시스템의 주파수 조절 성능", "problem": "주파수 조절 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220693905", "object": "동남아시아의 전력 부문", "problem": "중국의 공식 금융이 재생 가능 에너지에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220715467", "object": "수산물 통과 개선", "problem": "수산물 통과 시 수압 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220653855", "object": "도시 및 산업용 수자원 시스템", "problem": "전기 생산을 위한 수력 터빈 성능 최적화", "relevant": true, "model": "gpt-4o-mini"}
