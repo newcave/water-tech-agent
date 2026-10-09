@@ -4355,3 +4355,7 @@
 {"id": "W7220732859", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Baramati 시의 지하수 품질", "problem": "계절 변화에 따른 지하수 품질 평가"}
 {"id": "W7220719855", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미세플라스틱 오염", "problem": "미세플라스틱 제거"}
 {"id": "W7220813455", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "육계의 성장 성능 및 장내 미생물 군집", "problem": "아세트산 보충의 효과 평가"}
+{"id": "W7220742443", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "항균 저항성(AMR)", "problem": "항균 저항성의 확산 방지"}
+{"id": "W7220871453", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 식수", "problem": "안전한 식수 유지하기"}
+{"id": "W7220834417", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하위자치구의 음용수 품질", "problem": "중금속 오염 제거 효율 개선"}
+{"id": "W7220726918", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이갈라 타운의 지하수", "problem": "중금속 오염과 건강 위험 평가"}

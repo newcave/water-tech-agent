@@ -3517,3 +3517,7 @@
 {"id": "W7220750447", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 보호 구역", "problem": "모니터링 및 경계 설정"}
 {"id": "W7220681613", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 및 임업 작업을 위한 지구 원거리 감지 데이터", "problem": "데이터 특성 요구 사항 식별"}
 {"id": "W7220705618", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "페트로샨이 시의 토지 표면 변화", "problem": "토지 표면 변화 모니터링"}
+{"id": "W7220841752", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Buriganga 강의 수질", "problem": "위성 관측과 현장 측정 간의 불일치 원인 규명"}
+{"id": "W7220845123", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구 관측 위성 임무에서의 구름 미세물리학과 방사 특성", "problem": "구름의 역할을 조사하기 위한 새로운 연결 고리 제공"}
+{"id": "W7220722688", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bosten Lake Basin의 빙하", "problem": "기후 변화에 따른 빙하 동역학 변화 이해"}
+{"id": "W7220837107", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남수마트라의 이탄 습지 상태", "problem": "이탄 습지 상태 평가"}

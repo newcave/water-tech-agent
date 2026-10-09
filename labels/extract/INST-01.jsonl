@@ -1956,3 +1956,5 @@
 {"id": "W7220659605", "object": "Cape Coral 지역의 지반 침하", "problem": "지반 침하 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220698136", "object": "감염 예방 및 통제 관행", "problem": "지식과 실제 간의 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220737850", "object": "숲 주변 지역 사회의 물 관리", "problem": "형식적 규제 권한과 지역 거버넌스 간의 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220730127", "object": "모로코의 반건조 지역에서의 음용수 자원", "problem": "비수익수 감소를 위한 누수 관리 프로그램 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220836230", "object": "고성능 고체-액체 트리보일렉트릭 나노발전기", "problem": "전하 축적과 방전을 분리하기", "relevant": true, "model": "gpt-4o-mini"}

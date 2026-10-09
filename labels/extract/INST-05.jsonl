@@ -1593,3 +1593,6 @@
 {"id": "W7220693905", "object": "동남아시아의 전력 부문", "problem": "중국의 공식 금융이 재생 가능 에너지에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220715467", "object": "수산물 통과 개선", "problem": "수산물 통과 시 수압 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220653855", "object": "도시 및 산업용 수자원 시스템", "problem": "전기 생산을 위한 수력 터빈 성능 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220837047", "object": "전력 저장 시스템", "problem": "변동성 완화 및 에너지 안전성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220863725", "object": "중앙아시아의 재생 가능 에너지 전환", "problem": "전환 품질과 용량 확장을 개선하기 위한 시스템 제약 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220711714", "object": "파키스탄의 전력 시스템", "problem": "전력 시스템의 신뢰성 부족으로 인한 그리드 이탈", "relevant": true, "model": "gpt-4o-mini"}
