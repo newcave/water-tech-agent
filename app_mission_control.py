@@ -1053,6 +1053,14 @@ elif page == "🇰🇷 KCI 트렌드":
                     st.markdown('<div class="sect">공동저자 기관 상위</div>', unsafe_allow_html=True)
                     st.dataframe(pd.DataFrame(kw["partners"][:15], columns=["기관", "저자 수"]),
                                  hide_index=True, width="stretch")
+                hr = kw.get("human_review") or {}
+                rl = hr.get("rules", {})
+                st.caption(("사람 판정 반영: 결과 파일 {f}개 · 소속 포함 {ai} · 소속 제외 {ae} · 논문 포함 {pi} · 논문 제외 {pe}"
+                            " · 엇갈림 {c} (엇갈린 항목은 규칙대로 둠). ").format(
+                               f=hr.get("files", 0), ai=rl.get("affiliation_include", 0), ae=rl.get("affiliation_exclude", 0),
+                               pi=rl.get("paper_include", 0), pe=rl.get("paper_exclude", 0), c=hr.get("conflicts", 0))
+                           + "판정은 K-water 소속 심판 게임(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
+                             "review/overrides*.json으로 저장하면 다음 주간 분석부터 반영됨.")
                 st.caption("범위 선택에서 'K-water 소속 논문'을 고르면 이 논문들만으로 상승 용어·묶음을 볼 수 있음. "
                            f"{kw['source']}")
 
