@@ -1568,3 +1568,9 @@
 {"id": "W7220837047", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 저장 시스템", "problem": "변동성 완화 및 에너지 안전성 확보"}
 {"id": "W7220863725", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 재생 가능 에너지 전환", "problem": "전환 품질과 용량 확장을 개선하기 위한 시스템 제약 해결"}
 {"id": "W7220711714", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파키스탄의 전력 시스템", "problem": "전력 시스템의 신뢰성 부족으로 인한 그리드 이탈"}
+{"id": "W7220906492", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템의 신뢰성", "problem": "전력 관리 방법의 부적합성 해결"}
+{"id": "W7220920600", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 시스템의 유연성 자원", "problem": "단기 전력 불균형 완화"}
+{"id": "W7221048069", "domain_primary": "W2", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "다두강의 연속 저수지", "problem": "홍수 위험과 수자원 보존 간의 균형을 맞추기"}
+{"id": "W7220957268", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상류 황하 유역의 수력 발전 예측 및 배치", "problem": "모델 훈련 및 평가를 위한 데이터 부족 문제 해결"}
+{"id": "W7221031575", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스리랑카의 에너지 부문", "problem": "재생 가능 에너지의 활용과 지속 가능성 향상"}
+{"id": "W7220867905", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 재생 가능 에너지 개발", "problem": "정책의 한계를 극복하고 투자 촉진하기"}

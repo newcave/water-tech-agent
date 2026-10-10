@@ -4444,3 +4444,16 @@
 {"id": "W7220871453", "object": "오염된 식수", "problem": "안전한 식수 유지하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220834417", "object": "하위자치구의 음용수 품질", "problem": "중금속 오염 제거 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220726918", "object": "이갈라 타운의 지하수", "problem": "중금속 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220917695", "object": "노이다의 상업용 RO 플랜트", "problem": "물의 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220958102", "object": "경부 림프절 비대", "problem": "진단 지연 및 치료 패턴 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221005646", "object": "식수의 미생물 오염", "problem": "E. coli 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221035188", "object": "음용수 내 니트로사민", "problem": "니트로사민 우선순위 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221063905", "object": "알츠하이머병 증상", "problem": "신경 보호 효과를 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221003824", "object": "Punica granatum L.의 수용성 추출물", "problem": "요로결석 예방 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221042711", "object": "실내 공기 질", "problem": "위생적 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221009650", "object": "페리-어반 지역의 안전한 음용수 접근성", "problem": "안전한 음용수 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220858401", "object": "장티푸스", "problem": "전염병 확산 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221039169", "object": "크림 반도의 자연 수자원", "problem": "우라늄과 토륨의 분포 요약", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220901277", "object": "쥐의 고환", "problem": "갑상선 기능 저하가 고환의 자가포식에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221041029", "object": "작은 정착지의 음용수", "problem": "고품질 음용수 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221052639", "object": "샘물의 품질", "problem": "안전한 음용수 확보", "relevant": true, "model": "gpt-4o-mini"}

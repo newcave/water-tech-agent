@@ -679,3 +679,4 @@
 {"id": "W7219756449", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7219870588", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220721585", "object": "지하수 시스템", "problem": "기후 변화가 지하수 충전 및 모델링 접근 방식에 미치는 영향 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221028493", "object": "망그로브 퇴적물의 온실가스 배출", "problem": "해수면 염도와 조수 범위 변화 무시", "relevant": true, "model": "gpt-4o-mini"}

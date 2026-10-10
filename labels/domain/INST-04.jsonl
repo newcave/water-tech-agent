@@ -528,3 +528,4 @@
 {"id": "W7220693782", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어류 건강과 수산업 지속 가능성", "problem": "기생충 감염과 환경 오염 문제 해결"}
 {"id": "W7220836335", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원, 식량, 에너지 안전성", "problem": "역량 강화를 통한 관리 개선"}
 {"id": "W7220839762", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오래된 콘크리트 댐의 안전성", "problem": "정확한 모니터링 시스템을 통한 데이터 분석"}
+{"id": "W7220914271", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "교량 구조의 손상", "problem": "손상 탐지 및 구조 건강 모니터링"}

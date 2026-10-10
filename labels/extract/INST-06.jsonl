@@ -3559,3 +3559,9 @@
 {"id": "W7220845123", "object": "지구 관측 위성 임무에서의 구름 미세물리학과 방사 특성", "problem": "구름의 역할을 조사하기 위한 새로운 연결 고리 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220722688", "object": "Bosten Lake Basin의 빙하", "problem": "기후 변화에 따른 빙하 동역학 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220837107", "object": "남수마트라의 이탄 습지 상태", "problem": "이탄 습지 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220943541", "object": "내륙 수역의 수질 변수", "problem": "비광학적 수질 변수 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220967537", "object": "대기 경계층(ABL) 프로파일링 데이터", "problem": "단기 고해상도 기상 예보를 위한 데이터 세트 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221018657", "object": "아마다바드 도시의 수자원", "problem": "수자원 변화 이해 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221019621", "object": "푸에르토리코의 산호초 건강", "problem": "수질 평가의 부족으로 복원 프로젝트에 대한 정보 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220953629", "object": "알마티 지역의 농업 토지", "problem": "농업 토지의 상태 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221009380", "object": "남부 러시아의 수로형 저수지의 만", "problem": "생태적 상태 변화 평가", "relevant": true, "model": "gpt-4o-mini"}

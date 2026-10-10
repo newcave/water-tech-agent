@@ -788,3 +788,4 @@
 {"id": "W7220368750", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 기후 회복력", "problem": "전통적인 모델의 한계 극복"}
 {"id": "W7220464671", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 하천 유역", "problem": "하천 유역의 동적 변화 이해"}
 {"id": "W7220409490", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Smith River Watershed의 수자원", "problem": "눈 녹은 물의 유출량 추정"}
+{"id": "W7221001417", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "지속 가능성과 기후 회복력 향상"}
