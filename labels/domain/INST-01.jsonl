@@ -1891,3 +1891,10 @@
 {"id": "W7220899658", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도 산달우드 (Santalum album L.)", "problem": "산달우드 오일 추출의 효율성 향상"}
 {"id": "W7220909629", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양의 질감 및 유기물 함량", "problem": "예측 모델 개발 및 평가"}
 {"id": "W7221035998", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 지능", "problem": "도시 규모의 지능을 조정하고 최적화하는 방법을 결정하기"}
+{"id": "W7221117348", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Zincalume 물탱크", "problem": "신뢰할 수 있는 물 저장 솔루션 제공"}
+{"id": "W7221131928", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chinook salmon의 서식지", "problem": "온도 변화에 따른 생존율 개선"}
+{"id": "W7221169148", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "Conocarpus erectus의 도시 관리", "problem": "도시 관리에서의 생태적 증거의 적절한 적용"}
+{"id": "W7220990354", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호텔의 에너지 소비", "problem": "에너지 효율성 개선 기회 파악"}
+{"id": "W7221041045", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "탄자니아 공공수도 유틸리티의 조직 성과 결과", "problem": "조직 성과 결과를 개선하는 요인 분석"}
+{"id": "W7220971479", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 내 중금속 오염", "problem": "중금속 제거 효율 향상"}
+{"id": "W7220905668", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스마트 도시의 디지털 인프라", "problem": "도시 규모의 지능을 조정하고 최적화하기"}

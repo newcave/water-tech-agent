@@ -3565,3 +3565,13 @@
 {"id": "W7221019621", "object": "푸에르토리코의 산호초 건강", "problem": "수질 평가의 부족으로 복원 프로젝트에 대한 정보 부족", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220953629", "object": "알마티 지역의 농업 토지", "problem": "농업 토지의 상태 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221009380", "object": "남부 러시아의 수로형 저수지의 만", "problem": "생태적 상태 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221094631", "object": "내륙 수역의 원격 감지", "problem": "원격 감지의 격차 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221118432", "object": "중앙아시아 건조지대의 생태계 생산성", "problem": "강수 특성 변화에 따른 생태계 생산성 조절 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221140713", "object": "북극 국립공원 네트워크의 육상 경관", "problem": "경관 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221164928", "object": "Lekki–Ajah 해안 지역의 환경 상태", "problem": "도시화로 인한 자연 자원 감소 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221178461", "object": "농작물", "problem": "정확한 모니터링과 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220929431", "object": "허드슨 만 해양 시스템의 담수 분포 및 층화", "problem": "담수의 분포와 층화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221012875", "object": "수산업과 양식업", "problem": "자원 관리 및 지속 가능한 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221033125", "object": "캘리포니아 포도밭의 증발산", "problem": "정확한 증발산 값 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221297153", "object": "해양 생태계", "problem": "기후 변화에 따른 해양 색상 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221150887", "object": "붉은관모 crane 서식지", "problem": "서식지 품질 개선", "relevant": true, "model": "gpt-4o-mini"}

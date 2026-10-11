@@ -4457,3 +4457,16 @@
 {"id": "W7220901277", "object": "쥐의 고환", "problem": "갑상선 기능 저하가 고환의 자가포식에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221041029", "object": "작은 정착지의 음용수", "problem": "고품질 음용수 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221052639", "object": "샘물의 품질", "problem": "안전한 음용수 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221071407", "object": "음용수의 품질", "problem": "음용수 품질 개선을 위한 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221074952", "object": "수돗물 공급", "problem": "수돗물의 품질과 양 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221076757", "object": "Ganawuri Community의 가정용 수원", "problem": "수원에서의 세균 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221125352", "object": "음용수 처리", "problem": "효율적이고 환경 친화적으로 만들기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221196593", "object": "물 샘플의 정화", "problem": "화학 응집제의 대체", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220916427", "object": "장내 상피 장벽", "problem": "장내 염증으로 인한 Claudin2 발현 증가 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221058148", "object": "정신분열증에서의 인지 결핍", "problem": "인지 결핍 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221270371", "object": "Yendogo 지역의 지하수", "problem": "지하수 오염 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220926882", "object": "브로일러 치킨의 성장 성능 및 미생물 안정성", "problem": "CAO 보충이 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220988396", "object": "Dabat Town의 음용수 품질", "problem": "음용수의 미생물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221089639", "object": "Candida parapsilosis biofilm", "problem": "biofilm 형성 억제 및 항진균 효능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221109592", "object": "Beetal 염소의 우유 생산 및 성분", "problem": "야생 올리브 잎 보충의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221071494", "object": "Ijebu-Ode 지역의 생수 품질", "problem": "생수 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
