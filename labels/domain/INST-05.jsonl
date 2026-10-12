@@ -1575,3 +1575,6 @@
 {"id": "W7221031575", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스리랑카의 에너지 부문", "problem": "재생 가능 에너지의 활용과 지속 가능성 향상"}
 {"id": "W7220867905", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 재생 가능 에너지 개발", "problem": "정책의 한계를 극복하고 투자 촉진하기"}
 {"id": "W7221080700", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지원이 지배적인 전력 시스템", "problem": "안정적인 전력 시스템 운영을 위한 변동성 문제 해결"}
+{"id": "W7221335896", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "루마니아의 전력 부문", "problem": "전력 부문의 탈탄소화 시기 결정"}
+{"id": "W7221185382", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이 고전압 배전 시스템", "problem": "데이터셋을 통한 전력 시스템 분석 개선"}
+{"id": "W7221360626", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카자흐스탄의 수자원 관리", "problem": "일일 수위 예측 개선"}

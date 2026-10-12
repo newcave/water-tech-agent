@@ -1969,3 +1969,5 @@
 {"id": "W7221041045", "object": "탄자니아 공공수도 유틸리티의 조직 성과 결과", "problem": "조직 성과 결과를 개선하는 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220971479", "object": "수질 내 중금속 오염", "problem": "중금속 제거 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7220905668", "object": "스마트 도시의 디지털 인프라", "problem": "도시 규모의 지능을 조정하고 최적화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221324987", "object": "미니어처 지능형 커뮤니티의 거주 환경", "problem": "안전하고 자원 책임을 다하는 거주 조건을 유지하며 수용하는 방법", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221158478", "object": "수면 수자원", "problem": "정확하고 전이 가능한 수면 수자원 매핑", "relevant": true, "model": "gpt-4o-mini"}

@@ -4385,3 +4385,13 @@
 {"id": "W7221089639", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Candida parapsilosis biofilm", "problem": "biofilm 형성 억제 및 항진균 효능 향상"}
 {"id": "W7221109592", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Beetal 염소의 우유 생산 및 성분", "problem": "야생 올리브 잎 보충의 영향 평가"}
 {"id": "W7221071494", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ijebu-Ode 지역의 생수 품질", "problem": "생수 품질 개선"}
+{"id": "W7221329791", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "흉부 대동맥 박리", "problem": "TRPC1에 의한 염증성 표현형 전환 유도"}
+{"id": "W7221355639", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 혈액학적 지표", "problem": "글루코코르티코이드 유도 면역억제에 대한 반응 조절"}
+{"id": "W7221414659", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계 생산 효율", "problem": "사료 이용 효율 개선"}
+{"id": "W7221326901", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "차가운 기후의 담수 시스템에서의 수질", "problem": "미생물 기반 및 계산 방법을 통한 수질 모니터링"}
+{"id": "W7221373002", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 성장 및 항산화 상태", "problem": "레몬 껍질 추출물의 효과 분석"}
+{"id": "W7221122537", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 수돗물", "problem": "비소 제거 방법 개선"}
+{"id": "W7221127128", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 품질", "problem": "화재 재로 인한 오염 문제 해결"}
+{"id": "W7221353284", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 처리 프로그램", "problem": "효과적이고 적응 가능하며 저렴하게 설계하기"}
+{"id": "W7221367584", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 PFAS 오염", "problem": "PFAS 화학물질 제거"}
+{"id": "W7221345583", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "코켈의 성장 성능 및 장 건강", "problem": "자연적인 사료 첨가물의 효과 조사"}

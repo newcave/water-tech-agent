@@ -4470,3 +4470,13 @@
 {"id": "W7221089639", "object": "Candida parapsilosis biofilm", "problem": "biofilm 형성 억제 및 항진균 효능 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221109592", "object": "Beetal 염소의 우유 생산 및 성분", "problem": "야생 올리브 잎 보충의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221071494", "object": "Ijebu-Ode 지역의 생수 품질", "problem": "생수 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221329791", "object": "흉부 대동맥 박리", "problem": "TRPC1에 의한 염증성 표현형 전환 유도", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221355639", "object": "육계의 혈액학적 지표", "problem": "글루코코르티코이드 유도 면역억제에 대한 반응 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221414659", "object": "육계 생산 효율", "problem": "사료 이용 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221326901", "object": "차가운 기후의 담수 시스템에서의 수질", "problem": "미생물 기반 및 계산 방법을 통한 수질 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221373002", "object": "브로일러 치킨의 성장 및 항산화 상태", "problem": "레몬 껍질 추출물의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221122537", "object": "오염된 수돗물", "problem": "비소 제거 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221127128", "object": "물의 품질", "problem": "화재 재로 인한 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221353284", "object": "PFAS 처리 프로그램", "problem": "효과적이고 적응 가능하며 저렴하게 설계하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221367584", "object": "음용수의 PFAS 오염", "problem": "PFAS 화학물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221345583", "object": "코켈의 성장 성능 및 장 건강", "problem": "자연적인 사료 첨가물의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}

@@ -3575,3 +3575,8 @@
 {"id": "W7221033125", "object": "캘리포니아 포도밭의 증발산", "problem": "정확한 증발산 값 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221297153", "object": "해양 생태계", "problem": "기후 변화에 따른 해양 색상 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221150887", "object": "붉은관모 crane 서식지", "problem": "서식지 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221341336", "object": "광산 지역의 환경", "problem": "원격 감지 방법의 정확성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221342859", "object": "캐나다 북극 해안의 해안선 정보", "problem": "기름 유출 대응 계획을 위한 해안선 특성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221345772", "object": "해양 역학", "problem": "SWOT 기반 해양 역학 분석의 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221171222", "object": "Landsat 기반 수질 모델링", "problem": "모델의 일반화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220245398", "object": "해양 생태계", "problem": "해양 생태계 동태를 모니터링하고 이해하기", "relevant": true, "model": "gpt-4o-mini"}
