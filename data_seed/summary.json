@@ -1,5 +1,5 @@
 {
- "generated_at": 1791852319,
+ "generated_at": 1791901025,
  "totals": {
   "alio_collected": 121,
   "alio_parsed_ok": 105,
@@ -9,7 +9,7 @@
   "papers": 0,
   "patents": 0,
   "papers_available": 412,
-  "journal_corpus_available": 103573
+  "journal_corpus_available": 103585
  },
  "inst_docs": {
   "INST-01": 8,
