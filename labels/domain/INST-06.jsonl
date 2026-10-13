@@ -3542,3 +3542,8 @@
 {"id": "W7221345772", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 역학", "problem": "SWOT 기반 해양 역학 분석의 문제 해결"}
 {"id": "W7221171222", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Landsat 기반 수질 모델링", "problem": "모델의 일반화 문제 해결"}
 {"id": "W7220245398", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계", "problem": "해양 생태계 동태를 모니터링하고 이해하기"}
+{"id": "W7221140318", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 잠재력 구역", "problem": "탐사 불확실성 감소"}
+{"id": "W7214565047", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구 관측 위성 데이터", "problem": "효율적으로 원하는 이미지를 검색하기"}
+{"id": "W7214484782", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강수량 모니터링", "problem": "정확한 강수량 추정 및 탐지"}
+{"id": "W7221484593", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지표 변형", "problem": "변형 예측 및 자동화된 이미지 해석"}
+{"id": "W7221488230", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "Ecuador의 식생 커버", "problem": "식생 변화 분석"}

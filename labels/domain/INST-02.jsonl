@@ -792,3 +792,4 @@
 {"id": "W7221100130", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ngono 강 유역의 수자원", "problem": "기후 변화와 토지 이용 변화의 영향 평가"}
 {"id": "W7221177148", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나일강 유역의 수자원", "problem": "수자원 가용성 평가"}
 {"id": "W7221311474", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Navoi 지역의 관광 잠재력", "problem": "관광 개발을 위한 물리적 지리적 요인 분석"}
+{"id": "W7221458952", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Smith River Watershed의 수자원", "problem": "눈 녹은 물의 유출량 추정"}

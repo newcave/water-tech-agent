@@ -835,3 +835,4 @@
 {"id": "W7221100130", "object": "Ngono 강 유역의 수자원", "problem": "기후 변화와 토지 이용 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221177148", "object": "나일강 유역의 수자원", "problem": "수자원 가용성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221311474", "object": "Navoi 지역의 관광 잠재력", "problem": "관광 개발을 위한 물리적 지리적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221458952", "object": "Smith River Watershed의 수자원", "problem": "눈 녹은 물의 유출량 추정", "relevant": true, "model": "gpt-4o-mini"}

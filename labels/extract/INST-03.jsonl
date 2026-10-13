@@ -4480,3 +4480,6 @@
 {"id": "W7221353284", "object": "PFAS 처리 프로그램", "problem": "효과적이고 적응 가능하며 저렴하게 설계하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221367584", "object": "음용수의 PFAS 오염", "problem": "PFAS 화학물질 제거", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221345583", "object": "코켈의 성장 성능 및 장 건강", "problem": "자연적인 사료 첨가물의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221470730", "object": "수단으로서의 수자원 보안", "problem": "물 부족으로 인한 수질 악화 및 수인성 질병 발생", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221450176", "object": "Chandrapur 지역의 지하수", "problem": "인간 소비 및 일상 사용 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221501506", "object": "미국 내 수질 오염 및 공공 건강", "problem": "수질 오염 규제의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
