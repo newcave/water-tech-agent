@@ -3547,3 +3547,9 @@
 {"id": "W7214484782", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강수량 모니터링", "problem": "정확한 강수량 추정 및 탐지"}
 {"id": "W7221484593", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지표 변형", "problem": "변형 예측 및 자동화된 이미지 해석"}
 {"id": "W7221488230", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "Ecuador의 식생 커버", "problem": "식생 변화 분석"}
+{"id": "W7221510521", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남중국해의 산호초 생태계", "problem": "산호 분류 및 생태계 구조 이해"}
+{"id": "W7221513328", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아프리카 도시의 도시 열섬", "problem": "도시 열섬에 미치는 토지 이용 영향 분석"}
+{"id": "W7221531247", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 수질 모니터링 시스템", "problem": "전쟁 중 수질 오염 문제 해결"}
+{"id": "W7221441849", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부리간가 강의 수질", "problem": "위성 관측과 현장 측정 간의 불일치 원인 규명"}
+{"id": "W7221578019", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화성 관측 시스템", "problem": "전 지구적 화성 이미징을 위한 위성 시스템 개발"}
+{"id": "W7221510887", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "불가리아 도브루자 지역의 카르스트 지구 시스템", "problem": "카르스트 지구 시스템 모니터링 필요성 이해"}

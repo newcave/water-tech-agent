@@ -4483,3 +4483,16 @@
 {"id": "W7221470730", "object": "수단으로서의 수자원 보안", "problem": "물 부족으로 인한 수질 악화 및 수인성 질병 발생", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221450176", "object": "Chandrapur 지역의 지하수", "problem": "인간 소비 및 일상 사용 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221501506", "object": "미국 내 수질 오염 및 공공 건강", "problem": "수질 오염 규제의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221549575", "object": "오렌지 껍질 유래 바이오차", "problem": "Pb(II)와 메틸렌 블루 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221565270", "object": "가나의 해안 지역 음용수", "problem": "방사능 농도 초과 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221570314", "object": "인도의 지하수 자원", "problem": "지하수 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221575752", "object": "수질과 인간 건강", "problem": "금광 채굴의 환경적 영향 평가 및 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221536508", "object": "Wistar 쥐의 뇌, 간, 신장 조직", "problem": "히스토병리학적 변화 및 DNA 내용 변화 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221578998", "object": "당뇨병", "problem": "L-arginine의 새로운 치료 응용 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221518271", "object": "지하수 인프라의 음용수 품질", "problem": "오염된 음용수의 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221564968", "object": "육계 생산 효율", "problem": "사료 이용 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221573846", "object": "궤양성 대장염", "problem": "약물의 약리학적 메커니즘을 규명하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221555095", "object": "리튬의 효과", "problem": "리튬의 효과에 대한 이해와 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221531791", "object": "Balikukup Village의 깨끗한 물 공급 시스템", "problem": "깨끗한 물 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221521895", "object": "Biatan Lempake 지역의 안전하고 지속 가능한 식수 공급", "problem": "환경 영향 평가 및 관리 방안 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221552327", "object": "음용수 분배 시스템의 생물막 형성", "problem": "생물막 형성 방지", "relevant": true, "model": "gpt-4o-mini"}

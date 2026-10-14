@@ -1903,3 +1903,6 @@
 {"id": "W7221310301", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산업 에너지 관리", "problem": "에너지 소비 최적화 및 효율성 기회 식별"}
 {"id": "W7220397614", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해안 수질", "problem": "수질 변화에 대한 민감한 지표로서의 역할 이해"}
 {"id": "W7221496297", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "주거용 온수 난방 시스템의 온실가스 배출", "problem": "비용과 배출량을 줄이기 위한 최적화"}
+{"id": "W7221538537", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비수익 수돗물(non-revenue water)", "problem": "비수익 수돗물 문제 해결"}
+{"id": "W7221575198", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아의 미션 크리티컬 데이터 센터", "problem": "전력 시스템의 신뢰성 및 에너지 회복력 향상"}
+{"id": "W7221517233", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "RSUD Tanjung Redeb의 운영 성과", "problem": "그린 빌딩 원칙에 기반한 운영 관리 전략 분석"}

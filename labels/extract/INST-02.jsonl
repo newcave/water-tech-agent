@@ -836,3 +836,6 @@
 {"id": "W7221177148", "object": "나일강 유역의 수자원", "problem": "수자원 가용성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221311474", "object": "Navoi 지역의 관광 잠재력", "problem": "관광 개발을 위한 물리적 지리적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221458952", "object": "Smith River Watershed의 수자원", "problem": "눈 녹은 물의 유출량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221444945", "object": "글리셔가 있는 유역의 수자원", "problem": "글리셔 유래 수원의 특성 동위원소 신호 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221512691", "object": "중앙 히말라야 유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221521224", "object": "중앙 히말라야 유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}

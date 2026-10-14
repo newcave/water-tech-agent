@@ -1608,3 +1608,8 @@
 {"id": "W7221185382", "object": "노르웨이 고전압 배전 시스템", "problem": "데이터셋을 통한 전력 시스템 분석 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221360626", "object": "카자흐스탄의 수자원 관리", "problem": "일일 수위 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221354853", "object": "인도 저수지의 수자원 관리", "problem": "저수지 동태 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221507064", "object": "수력 발전 저수지의 퇴적물 관리 전략", "problem": "퇴적물 관리 전략 우선순위 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221521145", "object": "전력 시스템의 안정성", "problem": "재생 가능 에너지 통합으로 인한 변동성 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221559272", "object": "재생 가능 에너지 및 전력 관리 시스템", "problem": "에너지 손실 및 낭비 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221564972", "object": "수자원-에너지-식량(WEF) 연결성", "problem": "WEF 연결성의 상호작용과 무역오프 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221522204", "object": "하류 다뉴브 강 범람원", "problem": "기후 변화에 따른 취약성 및 적응 방안 모색", "relevant": true, "model": "gpt-4o-mini"}

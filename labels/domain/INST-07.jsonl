@@ -660,3 +660,4 @@
 {"id": "W7221028493", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "망그로브 퇴적물의 온실가스 배출", "problem": "해수면 염도와 조수 범위 변화 무시"}
 {"id": "W7220943551", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정"}
 {"id": "W7221462127", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "복원된 하천 범람원에서의 탈질화 잠재력", "problem": "탈질화 잠재력에 대한 환경적 요인 평가"}
+{"id": "W7221578348", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남극 빙상 내 온도", "problem": "깊이 해상 온도 구조를 이해하기"}

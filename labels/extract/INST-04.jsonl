@@ -534,3 +534,6 @@
 {"id": "W7220914271", "object": "교량 구조의 손상", "problem": "손상 탐지 및 구조 건강 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221164786", "object": "고아치 댐의 변형 예측", "problem": "공간적 상관관계를 고려한 변형 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221317202", "object": "콘크리트 댐의 균열 안전성", "problem": "자동화된 안전 해석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221519009", "object": "Lam Chae Earth Dam", "problem": "지진 후 댐 안정성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221570026", "object": "예차 콘크리트-면 암석 채움 댐", "problem": "침투 및 변형 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221567874", "object": "댐의 안전 모니터링 시스템", "problem": "알람 피로 감소", "relevant": true, "model": "gpt-4o-mini"}
