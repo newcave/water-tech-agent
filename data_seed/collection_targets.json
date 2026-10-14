@@ -1,0 +1,25 @@
+{
+  "_doc": "수집 달성도 목표 수준. 관제센터 '🎯 수집 달성도' 탭이 읽는다. 숫자(target)만 고치면 다음 갱신부터 화면에 반영된다. 비율 지표의 num/den은 labels/metrics/daily.jsonl 스냅샷의 totals 키 이름이다.",
+  "_version": "2026-10-14",
+  "status_rule": {"achieved": 1.0, "near": 0.8, "_doc": "목표 대비 달성률 ≥ achieved 이면 '달성', ≥ near 이면 '근접', 그 아래는 '미달'"},
+  "metrics": [
+    {"key": "primary", "label": "논문 1차 수집", "num": "primary_collected", "den": "primary_target", "target": 1.0,
+     "desc": "OpenAlex 검색 결과(연구소 키워드 · 핵심 저널 · K-water 소속) 대비 수집"},
+    {"key": "abstract", "label": "초록 확보율", "num": "abstract_ok", "den": "collected", "target": 0.8,
+     "desc": "연구소 관련 문헌 중 초록 확보. OpenAlex 자체 공백(일부 출판사)을 감안해 80%"},
+    {"key": "extract", "label": "대상·문제 추출", "num": "extracted", "den": "abstract_ok", "target": 1.0,
+     "desc": "초록 확보 문헌 중 LLM 추출 완료"},
+    {"key": "assign", "label": "도메인 배정", "num": "assigned", "den": "relevant", "target": 1.0,
+     "desc": "연구 초록으로 판정된 문헌 중 W 도메인 배정 완료"},
+    {"key": "label_cover", "label": "라벨 반영률", "num": "assigned", "den": "collected", "target": 0.7,
+     "desc": "연구소 관련 문헌 전체 중 지식노트·도메인 집계에 쓰이는 비율 (≈ 초록 80% × 연구 초록 90%)"}
+  ],
+  "sources": [
+    {"key": "alio", "label": "ALIO 공공보고서 수집", "target": 121},
+    {"key": "alio_parsed", "label": "ALIO 보고서 파싱", "target": 121},
+    {"key": "patents", "label": "특허 KIPRIS", "target": 500, "note": "서비스키 승인 대기"},
+    {"key": "articles", "label": "기사 · 인터넷 아티클", "target": 1000, "note": "파이프라인 설계 예정"},
+    {"key": "kci", "label": "KCI 국내 학회지 분석 반영", "target_ratio": 0.9,
+     "note": "수자원학회 + 토목학회, 분석 기간 논문 중 상승 용어 분석에 들어간 비율"}
+  ]
+}

@@ -25,6 +25,7 @@ import requests
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 import knowledge_notes as kn
 
@@ -34,8 +35,9 @@ st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="�
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.6 · 2026-10-14"
+APP_VERSION = "v2.7 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
+AC_PAGE = "🎯 수집 달성도"
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -183,7 +185,7 @@ def load_labels_jsonl(rel_path: str):
             params={"t": int(time.time() // 60)}, timeout=8)
         if r.status_code == 200:
             out = []
-            for line in r.text.splitlines():
+            for line in r.text.split("\n"):        # splitlines()는 제목 속 유니코드 줄바꿈(U+2028)까지 잘라 JSON을 깨뜨림
                 line = line.strip()
                 if line:
                     try:
@@ -292,7 +294,7 @@ def load_papers(tag: str) -> pd.DataFrame:
                          f"/data/live/openalex/papers_{tag}.jsonl",
                          params={"t": int(time.time() // 120)}, timeout=20)
         if r.status_code == 200 and r.text.strip():
-            return pd.DataFrame([json.loads(l) for l in r.text.splitlines() if l.strip()])
+            return pd.DataFrame([json.loads(l) for l in r.text.split("\n") if l.strip()])
     except Exception:
         pass
     return pd.DataFrame()
@@ -305,7 +307,7 @@ def load_data_jsonl(rel_path: str) -> list:
         r = requests.get(f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/{rel_path}", timeout=40)
         if r.status_code == 200:
             out = []
-            for line in r.text.splitlines():
+            for line in r.text.split("\n"):        # \n으로만 나눔 (U+2028 등이 든 제목 보호)
                 line = line.strip()
                 if line:
                     try:
@@ -391,7 +393,7 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
     st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
-    PAGES = ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
+    PAGES = ["🛰️ 관제센터", "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
         st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
@@ -1211,6 +1213,225 @@ elif page == "🏢 7개 연구소":
         else:
             st.info("해당 연구소로 분류된 문서가 아직 적습니다.")
 
+# ═══════════════ 페이지: 수집 달성도 (목표 대비 · 날짜별 추이 · 실패 기록) ═══════════════
+elif page == AC_PAGE:
+    STAGE_KO = {"collect": "수집", "backfill": "초록 보강", "extract": "대상·문제 추출", "assign": "도메인 배정",
+                "workflow": "워크플로", "data_quality": "데이터 품질"}
+    STAGE_COL = {"collect": "#2a78d6", "backfill": "#eb6834", "extract": "#1baf7a", "assign": "#4a3aa7",
+                 "workflow": "#e34948", "data_quality": "#eda100"}
+    SRC_KO = {"pipeline": "파이프라인", "audit": "자동 점검", "github": "GitHub Actions", "retro": "사후 진단"}
+    tg = load_json("collection_targets.json") or {}
+    rule = tg.get("status_rule", {"achieved": 1.0, "near": 0.8})
+    daily = load_labels_jsonl("metrics/daily.jsonl")
+    fails = load_labels_jsonl("metrics/failures.jsonl")
+    resolved = {r.get("key"): r for r in load_labels_jsonl("metrics/resolutions.jsonl") if r.get("key")}
+
+    def status(ach):
+        if ach is None:
+            return "–", GRAY
+        if ach >= rule.get("achieved", 1.0):
+            return "달성", GREEN
+        if ach >= rule.get("near", 0.8):
+            return "근접", AMBER
+        return "미달", RED
+
+    def ratio(tot, m):
+        n, d = tot.get(m["num"]), tot.get(m["den"])
+        return (n / d) if (n is not None and d) else None
+
+    st.markdown('<div class="sect">🎯 수집 달성도 — 목표 대비 현황 · 날짜별 추이 · 실패 기록</div>', unsafe_allow_html=True)
+    st.caption("목표는 data_seed/collection_targets.json에서 고칩니다. 수치는 라벨링 파이프라인이 회차마다(6시간) "
+               "labels/metrics/에 남기는 스냅샷이며, 2026-07-28 ~ 10-13 구간은 실행 로그로 재구성한 추정치입니다.")
+
+    if not daily:
+        st.info("달성도 스냅샷이 아직 없습니다 — 라벨링 파이프라인 다음 회차(6시간 주기)부터 labels/metrics/daily.jsonl이 쌓입니다.")
+    else:
+        snaps = [r for r in daily if r.get("source") == "snapshot"]
+        last = snaps[-1] if snaps else daily[-1]
+        T_ = last.get("totals", {})
+        mets = tg.get("metrics", [])
+        open_f = [f for f in fails if not (f.get("resolved") or resolved.get(f.get("key"), {}).get("resolved"))]
+        items_f = sum(f.get("count", 0) for f in fails if f.get("stage") != "workflow")
+        kp = [("연구소 관련 문헌", f"{T_.get('collected', 0):,}", "1차 + 확장 수집", BLUE),
+              ("라벨 반영", f"{T_.get('assigned', 0):,}",
+               f"{T_.get('assigned', 0) / max(1, T_.get('collected', 1)) * 100:.0f}% · 도메인 배정 완료", NAVY),
+              ("실패 기록", f"{len(fails):,}건", f"미해결 {len(open_f)} · 영향 문헌 {items_f:,}편", RED if open_f else GREEN),
+              ("마지막 스냅샷", (last.get("ts") or "")[:16].replace("T", " "), "UTC · 6시간 주기", CYAN)]
+        st.markdown('<div class="kpis">' + "".join(
+            f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.35rem">{v}</div>'
+            f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>' for l, v, s_, c in kp) + '</div>',
+            unsafe_allow_html=True)
+
+        # ── 1. 지표별 목표 대비 (불릿 차트: 막대 = 현재, 세로선 = 목표) ──
+        st.markdown('<div class="sect">지표별 목표 대비 달성 현황</div>', unsafe_allow_html=True)
+        rows_m = []
+        for m in mets:
+            r_ = ratio(T_, m)
+            ach = (r_ / m["target"]) if (r_ is not None and m.get("target")) else None
+            lab, colr = status(ach)
+            rows_m.append((m, r_, ach, lab, colr))
+        if rows_m:
+            rr = rows_m[::-1]
+            fig = go.Figure()
+            fig.add_trace(go.Bar(
+                x=[(r_ or 0) * 100 for _, r_, _, _, _ in rr], y=[m["label"] for m, *_ in rr], orientation="h",
+                marker=dict(color=[c for *_, c in rr]), showlegend=False,
+                text=[f"{(r_ or 0) * 100:.1f}%  ·  {lab}" for _, r_, _, lab, _ in rr], textposition="outside",
+                customdata=[[T_.get(m["num"], 0), T_.get(m["den"], 0), m["target"] * 100, m.get("desc", "")] for m, *_ in rr],
+                hovertemplate="<b>%{y}</b><br>%{customdata[0]:,} / %{customdata[1]:,} = %{x:.1f}%"
+                              "<br>목표 %{customdata[2]:.0f}%<br>%{customdata[3]}<extra></extra>"))
+            fig.add_trace(go.Scatter(
+                x=[m["target"] * 100 for m, *_ in rr], y=[m["label"] for m, *_ in rr], mode="markers", name="목표",
+                marker=dict(symbol="line-ns", size=30, line=dict(width=3, color="#0F2744")),
+                hovertemplate="목표 %{x:.0f}%<extra></extra>"))
+            fig.update_layout(height=60 * len(rr) + 70, xaxis=dict(range=[0, 118], title="%", gridcolor="#EEF2F7"),
+                              yaxis=dict(automargin=True), bargap=0.35, legend=dict(orientation="h", y=1.1),
+                              **PLOTLY_LAYOUT)
+            st.plotly_chart(fig, width="stretch")
+            st.caption("막대 = 현재 비율, 검은 세로선 = 목표. 색: 초록 달성 · 주황 근접(목표의 80% 이상) · 빨강 미달")
+
+        # ── 2. 연구소별 ──
+        st.markdown('<div class="sect">연구소별 달성 현황</div>', unsafe_allow_html=True)
+        inst_names = summary.get("inst_names", {})
+        tgt = {m["key"]: m["target"] for m in mets}
+        irows = []
+        for code, v in sorted((last.get("institutes") or {}).items()):
+            ab = v["abstract_ok"] / max(1, v["collected"])
+            lc = v["assigned"] / max(1, v["collected"])
+            irows.append({"연구소": f"{code} {inst_names.get(code, '')}", "관련 문헌": v["collected"],
+                          "1차 수집 %": round(v["primary"] / max(1, v.get("primary_target") or v["primary"]) * 100, 1),
+                          "초록 확보 %": round(ab * 100, 1),
+                          "추출 % (초록 대비)": round(v["extracted"] / max(1, v["abstract_ok"]) * 100, 1),
+                          "라벨 반영 %": round(lc * 100, 1),
+                          "판정": status(min(ab / tgt.get("abstract", .8), lc / tgt.get("label_cover", .7)))[0],
+                          "보강 실패 의심 (편)": v.get("empty_block_rows", 0)})
+        if irows:
+            pc = lambda t_: st.column_config.ProgressColumn(t_, format="%.0f%%", min_value=0, max_value=100)
+            st.dataframe(pd.DataFrame(irows), hide_index=True, width="stretch",
+                         column_config={"1차 수집 %": pc("1차 수집"), "초록 확보 %": pc("초록 확보"),
+                                        "추출 % (초록 대비)": pc("추출 (초록 대비)"), "라벨 반영 %": pc("라벨 반영"),
+                                        "관련 문헌": st.column_config.NumberColumn("관련 문헌", format="%d")})
+            st.caption(f"판정 = 초록 확보(목표 {tgt.get('abstract', .8) * 100:.0f}%)와 라벨 반영(목표 "
+                       f"{tgt.get('label_cover', .7) * 100:.0f}%) 중 낮은 쪽 기준 · 보강 실패 의심 = 초록 빈 값이 50편 이상 연속인 행")
+
+        # ── 3. 날짜별 추이 + 같은 날짜축의 실패 ──
+        st.markdown('<div class="sect">날짜별 추이와 실패 발생</div>', unsafe_allow_html=True)
+        by_date = {}
+        for r in daily:                                   # 날짜별 마지막 기록
+            by_date[r.get("date") or (r.get("ts") or "")[:10]] = r
+        dates = sorted(d for d in by_date if d)
+        as_count = st.toggle("건수로 보기", value=False, key="ac_counts")
+        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.68, 0.32], vertical_spacing=0.06)
+        if as_count:
+            for key, lab, colr in (("collected", "관련 문헌", BLUE), ("abstract_ok", "초록 확보", CYAN),
+                                   ("assigned", "라벨 반영", NAVY)):
+                fig.add_trace(go.Scatter(x=dates, y=[by_date[d]["totals"].get(key) for d in dates], name=lab,
+                                         mode="lines", line=dict(color=colr, width=2.5), connectgaps=True), row=1, col=1)
+            fig.update_yaxes(title_text="편", row=1, col=1)
+        else:
+            for key, colr in (("abstract", CYAN), ("label_cover", NAVY)):
+                m = next((x for x in mets if x["key"] == key), None)
+                if not m:
+                    continue
+                ys = [(ratio(by_date[d]["totals"], m) or 0) * 100 if ratio(by_date[d]["totals"], m) is not None else None
+                      for d in dates]
+                fig.add_trace(go.Scatter(x=dates, y=ys, name=m["label"], mode="lines", line=dict(color=colr, width=2.5),
+                                         connectgaps=True, hovertemplate="%{x} · %{y:.1f}%<extra>" + m["label"] + "</extra>"),
+                              row=1, col=1)
+                fig.add_trace(go.Scatter(x=[dates[0], dates[-1]], y=[m["target"] * 100] * 2, mode="lines",
+                                         name=f"{m['label']} 목표", line=dict(color=colr, width=1.2, dash="dash"),
+                                         hoverinfo="skip"), row=1, col=1)
+            fig.update_yaxes(title_text="%", range=[0, 105], row=1, col=1)
+        for stg in STAGE_KO:                               # 같은 날짜축에 실패 영향 규모
+            agg = Counter()
+            for f in fails:
+                if f.get("stage") == stg and f.get("date"):
+                    agg[f["date"]] += max(1, f.get("count", 1))
+            if agg:
+                fig.add_trace(go.Bar(x=list(agg), y=list(agg.values()), name=f"실패 · {STAGE_KO[stg]}",
+                                     marker_color=STAGE_COL[stg],
+                                     hovertemplate="%{x}<br>%{y:,}" + ("회" if stg == "workflow" else "편") + "<extra>"
+                                                   + STAGE_KO[stg] + "</extra>"), row=2, col=1)
+        fig.update_yaxes(title_text="실패 규모", type="log", range=[-0.3, 4.2], row=2, col=1)
+        fig.update_layout(height=560, barmode="stack", legend=dict(orientation="h", y=-0.12), hovermode="x unified",
+                          **PLOTLY_LAYOUT)
+        fig.update_xaxes(gridcolor="#EEF2F7")
+        fig.update_yaxes(gridcolor="#EEF2F7")
+        st.plotly_chart(fig, width="stretch")
+        snap_from = snaps[0]["date"] if snaps else None
+        st.caption("위: 목표 대비 비율(점선 = 목표) · 아래: 같은 날짜의 실패 규모(로그 눈금, 워크플로는 회 · 나머지는 영향 문헌 편). "
+                   + (f"{snap_from} 이전은 실행 로그 재구성 추정치, 이후는 회차별 실측 스냅샷." if snap_from else ""))
+
+        # ── 4. 실패 기록 · 통계 ──
+        st.markdown('<div class="sect">🧯 실패 기록 · 통계</div>', unsafe_allow_html=True)
+        if not fails:
+            st.success("기록된 실패가 없습니다.")
+        else:
+            today_ = dt.datetime.now(dt.timezone.utc).date()
+            recent30 = [f for f in fails if f.get("date") and (today_ - dt.date.fromisoformat(f["date"])).days <= 30]
+            a, b = st.columns([3, 2])
+            with a:
+                srows = []
+                for stg in STAGE_KO:
+                    fs = [f for f in fails if f.get("stage") == stg]
+                    if fs:
+                        srows.append({"단계": STAGE_KO[stg], "기록 (건)": len(fs),
+                                      "영향 (편 · 회)": sum(f.get("count", 0) for f in fs),
+                                      "최근 30일 (건)": sum(1 for f in recent30 if f.get("stage") == stg),
+                                      "미해결 (건)": sum(1 for f in open_f if f.get("stage") == stg),
+                                      "최근 발생": max(f.get("date", "") for f in fs)})
+                st.dataframe(pd.DataFrame(srows), hide_index=True, width="stretch")
+            with b:
+                mon = Counter((f.get("date") or "")[:7] for f in fails if f.get("date"))
+                months = sorted(mon)
+                fig = go.Figure(go.Bar(x=months, y=[mon[m_] for m_ in months], marker_color=RED,
+                                       hovertemplate="%{x} · %{y}건<extra></extra>"))
+                fig.update_layout(height=230, yaxis_title="건", **PLOTLY_LAYOUT)
+                fig.update_yaxes(gridcolor="#EEF2F7")
+                st.plotly_chart(fig, width="stretch")
+                st.caption("월별 실패 기록 건수")
+            pick = st.multiselect("단계", [STAGE_KO[s_] for s_ in STAGE_KO if any(f.get("stage") == s_ for f in fails)],
+                                  placeholder="전체")
+            rev_ko = {v: k for k, v in STAGE_KO.items()}
+            sel_st = {rev_ko[p] for p in pick} or set(STAGE_KO)
+            st.dataframe(pd.DataFrame([{
+                "날짜": f.get("date"), "단계": STAGE_KO.get(f.get("stage"), f.get("stage")),
+                "연구소": f.get("inst") or "전체", "규모": f.get("count", 0), "내용": f.get("detail", ""),
+                "출처": SRC_KO.get(f.get("source"), f.get("source")),
+                "상태": "해결" if (f.get("resolved") or resolved.get(f.get("key"), {}).get("resolved")) else "미해결",
+                "링크": f.get("url") or ""} for f in sorted(fails, key=lambda x: x.get("ts", ""), reverse=True)
+                if f.get("stage") in sel_st]), hide_index=True, width="stretch", height=360,
+                column_config={"링크": st.column_config.LinkColumn("링크", display_text="열기")})
+            st.caption("출처: 파이프라인 = 회차 중 호출 실패 · 자동 점검 = 데이터 이상(초록 빈 값 연속 등) · GitHub Actions = 실패한 "
+                       "워크플로 회차 · 사후 진단 = 과거 사고를 나중에 기록. 해결 처리는 labels/metrics/resolutions.jsonl에 "
+                       '{"key": …, "resolved": true} 한 줄을 추가합니다.')
+
+        # ── 5. 자료원별 ──
+        with st.expander("자료원별 목표 대비 (ALIO · 특허 · 기사 · KCI)"):
+            kr_ = load_json("kci_rising.json") or {}
+            kc_ = (load_json("kci_counts.json") or {}).get("journals", {})
+            sd_ = (kr_.get("scopes") or {}).get("J11+J12") or {}
+            yrs_ = set(str(y) for y in sd_.get("years", []))
+            kci_den = sum(sd_.get("denominator", []))
+            kci_tot = sum(n for j in ("J11", "J12") for y, n in (kc_.get(j, {}).get("by_year") or {}).items() if y in yrs_)
+            cur_src = {"alio": T.get("alio_collected", 0), "alio_parsed": T.get("alio_parsed_ok", 0),
+                       "patents": T.get("patents", 0), "articles": T.get("articles", 0)}
+            srow = []
+            for s_ in tg.get("sources", []):
+                if s_["key"] == "kci":
+                    r_ = kci_den / kci_tot if kci_tot else None
+                    ach = r_ / s_["target_ratio"] if r_ is not None else None
+                    srow.append({"자료원": s_["label"], "현재": f"{kci_den:,} / {kci_tot:,}편", "달성률 %": round((r_ or 0) * 100, 1),
+                                 "목표": f"{s_['target_ratio'] * 100:.0f}%", "판정": status(ach)[0], "비고": s_.get("note", "")})
+                else:
+                    c_ = cur_src.get(s_["key"], 0)
+                    srow.append({"자료원": s_["label"], "현재": f"{c_:,}", "달성률 %": round(c_ / s_["target"] * 100, 1),
+                                 "목표": f"{s_['target']:,}", "판정": status(c_ / s_["target"])[0], "비고": s_.get("note", "")})
+            if srow:
+                st.dataframe(pd.DataFrame(srow), hide_index=True, width="stretch",
+                             column_config={"달성률 %": st.column_config.ProgressColumn("달성률", format="%.0f%%",
+                                                                                     min_value=0, max_value=100)})
+
 # ═══════════════ 페이지: 연구소 지식노트 (연구소 단위 그룹 작업공간) ═══════════════
 elif page == KN_PAGE:
     import networkx as _nx
@@ -1575,8 +1796,8 @@ else:
 st.markdown(f'<div class="ftr">K-water연구원 Water Co-Scientist · 데이터는 30초마다 갱신 · {APP_VERSION}</div>',
             unsafe_allow_html=True)
 
-# ── 자동 갱신 (지식노트 화면은 읽고 내보내는 곳이라 제외 — 큰 파일 재다운로드 방지) ──
-if auto and page != KN_PAGE:
+# ── 자동 갱신 (지식노트·달성도 화면은 제외 — 큰 파일 재다운로드 방지, 달성도 데이터는 6시간 주기) ──
+if auto and page not in (KN_PAGE, AC_PAGE):
     time.sleep(30)
     st.cache_data.clear()
     st.rerun()
