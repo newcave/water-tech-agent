@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: read          # 실패한 워크플로 회차를 달성도 탭의 실패 기록에 남기기 위해
 
 concurrency:
   group: labels-pipeline
@@ -36,6 +37,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
+          GITHUB_TOKEN: ${{ github.token }}   # metrics_snapshot.py — 실패 회차 조회(읽기 전용)
         run: |
           python labels_pipeline.py --max-items "${{ inputs.max_items || '3000' }}"
 
