@@ -1,34 +1,38 @@
 {
  "inst": "INST-02",
  "inst_name": "수자원환경연구소",
- "updated_at": "2026-10-14T11:31:39Z",
- "records": 3,
- "judgments": 3,
- "papers_judged": 3,
+ "updated_at": "2026-10-14T11:45:46Z",
+ "records": 15,
+ "judgments": 15,
+ "papers_judged": 15,
  "director_confirmed": 0,
  "final": {
-  "ok": 3
+  "ok": 13,
+  "ng": 2
  },
  "moves_to": {},
- "ng_reasons": {},
+ "ng_reasons": {
+  "out_of_scope": 2
+ },
  "by_queue": {
-  "sample1": 3
+  "sample1": 14,
+  "triage": 1
  },
  "by_day_kst": {
-  "2026-10-14": 3
+  "2026-10-14": 15
  },
  "by_reviewer": {
   "김성훈": {
-   "ok": 3,
-   "ng": 0,
+   "ok": 13,
+   "ng": 2,
    "move": 0,
    "skip": 0,
    "roles": [
     "reviewer"
    ],
-   "papers": 3,
+   "papers": 15,
    "first_kst": "2026-10-14 16:42",
-   "last_kst": "2026-10-14 16:48"
+   "last_kst": "2026-10-14 20:42"
   }
  }
 }
