@@ -1,11 +1,11 @@
 {
  "state": "run",
- "last_run": 1791940577,
+ "last_run": 1791941177,
  "next_run": "10분 후",
  "summary": "논문 실수집 가동 — [저널] Journal of Contaminant Hydrology",
  "counts": {
   "K-water 생산": 159,
-  "12개 저널": 36791,
+  "12개 저널": 36891,
   "관련(도메인)": 13746,
   "작업": "17/20"
  },
