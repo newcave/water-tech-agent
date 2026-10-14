@@ -18,6 +18,7 @@ import json
 import math
 import time
 import datetime as dt
+from collections import Counter
 from pathlib import Path
 
 import requests
@@ -25,13 +26,16 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 
+import knowledge_notes as kn
+
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
                    layout="wide", initial_sidebar_state="expanded")
 
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.5 · 2026-07-13"
+APP_VERSION = "v2.6 · 2026-10-14"
+KN_PAGE = "📒 연구소 지식노트"
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -294,6 +298,26 @@ def load_papers(tag: str) -> pd.DataFrame:
     return pd.DataFrame()
 
 
+@st.cache_data(ttl=1800, show_spinner=False)
+def load_data_jsonl(rel_path: str) -> list:
+    """`data` 브랜치의 JSONL → list[dict] (연구소 지식노트용, 30분 캐시). 깨진 줄은 건너뜀."""
+    try:
+        r = requests.get(f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/{rel_path}", timeout=40)
+        if r.status_code == 200:
+            out = []
+            for line in r.text.splitlines():
+                line = line.strip()
+                if line:
+                    try:
+                        out.append(json.loads(line))
+                    except Exception:
+                        pass
+            return out
+    except Exception:
+        pass
+    return []
+
+
 def ago(ts):
     if not ts:
         return "-"
@@ -367,8 +391,11 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
     st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
-    page = st.radio("메뉴", ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
-                            "🔥 FT 모니터", "🗂️ 인벤토리"], label_visibility="collapsed")
+    PAGES = ["🛰️ 관제센터", "📚 수집 현황", "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
+             KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
+    if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
+        st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
+    page = st.radio("메뉴", PAGES, index=st.session_state["nav_start"], label_visibility="collapsed")
     st.divider()
     auto = st.toggle("실시간 갱신 (30초)", value=True)
     st.caption(f"데이터 기준: {ago(summary.get('generated_at'))}")
@@ -1184,6 +1211,287 @@ elif page == "🏢 7개 연구소":
         else:
             st.info("해당 연구소로 분류된 문서가 아직 적습니다.")
 
+# ═══════════════ 페이지: 연구소 지식노트 (연구소 단위 그룹 작업공간) ═══════════════
+elif page == KN_PAGE:
+    import networkx as _nx
+    KN8 = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
+    RING = "#D97706"                                          # 국내 상승 용어와 겹친 용어 표시
+    SCOPE_LABEL = {"J11": "수자원학회 단독", "J11+J12": "수자원학회 + 토목학회", "KWATER": "K-water 소속 논문"}
+    inst_names = summary.get("inst_names", {})
+    codes = sorted(inst_names)
+
+    st.markdown('<div class="sect">📒 연구소 지식노트 — 연구소 단위 그룹 작업공간</div>', unsafe_allow_html=True)
+    st.caption("수집 문헌의 대상·문제 추출과 W 도메인 라벨(라벨링 파이프라인 산출물)로 연구소마다 지식노트를 만듭니다. "
+               "추가 LLM 호출 없음 · 개인별 노트(관심 키워드·메모)는 다음 단계")
+
+    if not codes:
+        st.info("연구소 정보가 없습니다 (summary.json의 inst_names 확인).")
+    else:
+        qp = st.query_params.get("inst")
+        if "kn_inst" not in st.session_state:
+            st.session_state["kn_inst"] = qp if qp in codes else ("INST-07" if "INST-07" in codes else codes[0])
+        sel = st.segmented_control("연구소", codes, key="kn_inst", label_visibility="collapsed",
+                                   format_func=lambda c: inst_names[c])
+        sel = sel if sel in codes else (qp if qp in codes else codes[0])
+        if st.query_params.get("inst") != sel:
+            st.query_params["inst"] = sel
+        iname = inst_names[sel]
+
+        kr = load_json("kci_rising.json") or {}
+        scopes = list((kr.get("scopes") or {}).keys())
+        cA, cB, cC = st.columns([3, 2, 2])
+        cA.caption(f"이 화면 주소(…`?inst={sel}`)를 즐겨찾기하면 **{iname}** 화면으로 바로 열립니다.")
+        water_only = cB.toggle("물 도메인 문헌만 (미분류 제외)", value=True,
+                               help="W 도메인 라벨이 '미분류'인 문헌(물 밖 주제로 들어온 수집분)을 뺍니다.")
+        scope_key = cC.selectbox("비교할 국내 상승 용어", scopes,
+                                 index=scopes.index("J11+J12") if "J11+J12" in scopes else 0,
+                                 format_func=lambda s_: SCOPE_LABEL.get(s_, s_)) if scopes else None
+        scope = (kr.get("scopes") or {}).get(scope_key, {}) if scope_key else {}
+        scope_label = SCOPE_LABEL.get(scope_key, scope_key or "-")
+
+        with st.spinner(f"{iname} 문헌·라벨을 불러오는 중… (처음 한 번만 수 초)"):
+            papers = (load_data_jsonl(f"live/openalex/papers_{sel}.jsonl")
+                      + load_data_jsonl(f"labels/openalex_extended/papers_{sel}.jsonl"))
+            extract = load_data_jsonl(f"labels/extract/{sel}.jsonl")
+            domain = load_data_jsonl(f"labels/domain/{sel}.jsonl")
+        dsum_kn = load_labels("domain/domain_summary_v0.1.json") or {}
+        DN = {**kn.DOMAIN_NAMES, **{k: v.get("name", k) for k, v in (dsum_kn.get("domains") or {}).items()}}
+
+        recs = kn.build_corpus(papers, extract, domain, water_only=water_only)
+        if not recs:
+            st.info(f"{iname}의 라벨링된 문헌이 아직 없습니다 — 라벨링 파이프라인(6시간 주기)이 대상·문제를 추출하면 채워집니다.")
+        else:
+            net = kn.topic_network(recs)
+            comms = net["communities"]
+            touch = kn.rising_touchpoints(recs, scope) if scope else []
+            gaps = kn.gap_candidates(touch, scope) if scope else []
+            rising_hit = {t["term"] for t in touch if t["n_inst"]}
+            today_kst = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
+            latest = max((kn._parse_date(r["date"]) for r in recs if kn._parse_date(r["date"])), default=today_kst)
+            anchor = min(today_kst, latest)
+            r30 = kn.recent(recs, anchor, 30)
+            col = INST_COLORS.get(sel, NAVY)
+
+            kpis = [("수집 문헌", f"{len({p.get('id') for p in papers}):,}", "OpenAlex · 연구소 키워드", col),
+                    ("노트 대상", f"{len(recs):,}", "대상·문제 추출 + 물 관련", BLUE),
+                    ("토픽 묶음", f"{len(comms)}", "핵심어 공출현 · Louvain", NAVY),
+                    ("상승 용어 접점", f"{len(rising_hit)}", f"KCI {scope_label}", CYAN),
+                    ("최근 30일", f"{len(r30)}", f"기준 {anchor:%m-%d} (최신 발행일)", GREEN)]
+            st.markdown('<div class="kpis">' + "".join(
+                f'<div class="kpi" style="border-left-color:{c}"><div class="k-val">{v}</div>'
+                f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
+                for l, v, s_, c in kpis) + '</div>', unsafe_allow_html=True)
+
+            t1, t2, t3, t4, t5 = st.tabs(["🗺️ 지식 지도", "📒 토픽 노트", "📈 상승 용어 접점·공백", "🗞️ 최근 브리핑",
+                                          "⬇️ 노트 내보내기"])
+            cidx = {c["id"]: i for i, c in enumerate(comms)}
+
+            # ── 탭1: 지식 지도 (연구소 핵심어 네트워크) ──
+            with t1:
+                if not net["edges"]:
+                    st.info("핵심어끼리 함께 나온 문헌이 적어 지도를 그릴 수 없습니다.")
+                else:
+                    G = _nx.Graph()
+                    for u, v, w, c in net["edges"]:
+                        G.add_edge(u, v, weight=w, count=c)
+                    pos = _nx.spring_layout(G, weight="weight", seed=42, k=2.4 / math.sqrt(max(len(G), 1)), iterations=120)
+                    dfm = {n["term"]: n["df"] for n in net["nodes"]}
+                    wmax = max(w for _, _, w, _ in net["edges"]) or 1
+                    fig = go.Figure()
+                    for lo, hi, width in ((0, .34, 0.6), (.34, .67, 1.6), (.67, 1.01, 3.0)):   # 굵기 3단계로 묶어 그리기
+                        xs, ys = [], []
+                        for u, v, w, _ in net["edges"]:
+                            if lo <= w / wmax < hi:
+                                xs += [pos[u][0], pos[v][0], None]
+                                ys += [pos[u][1], pos[v][1], None]
+                        if xs:
+                            fig.add_trace(go.Scatter(x=xs, y=ys, mode="lines", hoverinfo="skip", showlegend=False,
+                                                     line=dict(color="#C9D6E6", width=width)))
+                    dmax = max(dfm.values()) or 1
+                    for c in comms:
+                        ts = [t for t in c["terms"] if t in pos]
+                        i = cidx[c["id"]]
+                        fig.add_trace(go.Scatter(
+                            x=[pos[t][0] for t in ts], y=[pos[t][1] for t in ts], mode="markers+text",
+                            text=ts, textposition="top center", textfont=dict(size=11, color="#0F2744"),
+                            name=f"{c['id']} {c['label']}",
+                            marker=dict(size=[9 + 26 * (dfm[t] / dmax) ** 0.5 for t in ts],
+                                        color=KN8[i] if i < len(KN8) else GRAY,
+                                        line=dict(color=[RING if t in rising_hit else "#FFFFFF" for t in ts],
+                                                  width=[3.5 if t in rising_hit else 1.5 for t in ts])),
+                            customdata=[[dfm[t], "국내 상승 용어와 겹침" if t in rising_hit else ""] for t in ts],
+                            hovertemplate="<b>%{text}</b><br>문헌 %{customdata[0]}편<br>%{customdata[1]}<extra></extra>"))
+                    fig.update_layout(height=600, xaxis=dict(visible=False), yaxis=dict(visible=False),
+                                      legend=dict(orientation="h", y=-0.04), **PLOTLY_LAYOUT)
+                    st.plotly_chart(fig, width="stretch")
+                    st.caption("점 크기 = 그 핵심어가 나온 문헌 수 · 선 굵기 = 함께 나온 정도(코사인 정규화) · 색 = Louvain 묶음 · "
+                               "주황 테두리 = 국내 학회지 상승 용어와 겹침. 묶음 이름은 대표 용어 3개를 이은 임시 이름이며 해석은 연구소 검토 몫.")
+
+            # ── 탭2: 토픽 노트 ──
+            with t2:
+                if not comms:
+                    st.info("토픽 묶음이 없습니다.")
+                else:
+                    by_id = {r["id"]: r for r in recs}
+                    cols = st.columns(2)
+                    for c in comms:
+                        i = cidx[c["id"]]
+                        cc = KN8[i] if i < len(KN8) else GRAY
+                        dc = Counter(by_id[p]["domain"] for p in c["papers"] if by_id[p]["domain"])
+                        chips = " ".join(
+                            f'<span class="gchip" style="background:{"#FDEBD3" if t in rising_hit else "#F1F5FA"};'
+                            f'color:#0F2744;display:inline-block;white-space:nowrap">{t}</span>' for t in c["terms"][:14])
+                        dtxt = " · ".join(f"{d} {DN.get(d, d)} {n}" for d, n in dc.most_common(3))
+                        cols[i % 2].markdown(
+                            f'<div class="card" style="border-left:6px solid {cc};margin-bottom:10px">'
+                            f'<b>{c["id"]} · {c["label"]}</b> <span class="note">· 문헌 {len(c["papers"])}편 · 용어 {c["size"]}개</span>'
+                            f'<div style="margin-top:6px;line-height:2">{chips}</div>'
+                            f'<div class="note" style="margin-top:4px">{dtxt}</div></div>', unsafe_allow_html=True)
+                    st.caption("주황 칩 = 국내 학회지 상승 용어와 겹치는 용어")
+                    pick = st.selectbox("토픽 노트 열기", [c["id"] for c in comms],
+                                        format_func=lambda x: f"{x} · {comms[cidx[x]]['label']} ({len(comms[cidx[x]]['papers'])}편)")
+                    pc = comms[cidx[pick]]
+                    rows = sorted((by_id[p] for p in pc["papers"]), key=lambda r: (-r["cited"], r["date"]))
+                    st.dataframe(pd.DataFrame([{
+                        "제목": r["title"], "연도": r["year"], "대상": r["object"], "문제": r["problem"],
+                        "도메인": f"{r['domain']} {DN.get(r['domain'], '')}" if r["domain"] else "-",
+                        "피인용": r["cited"], "DOI": r["doi"] or None} for r in rows]),
+                        hide_index=True, width="stretch", height=380,
+                        column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
+                    with st.expander("노트 미리보기 (마크다운 · 내보내기 파일과 같은 형식)"):
+                        st.code(kn.topic_note_preview(pc, recs, sel, DN, rising_hit), language="markdown")
+
+            # ── 탭3: 상승 용어 접점·결합 공백 후보 ──
+            with t3:
+                if not touch:
+                    st.info("비교할 국내 상승 용어 결과가 없습니다 (kci_rising.json).")
+                else:
+                    hit = sorted([t for t in touch if t["n_inst"]], key=lambda t: (-t["n_inst"], -t["sen"]))
+                    a, b = st.columns([3, 2])
+                    with a:
+                        st.markdown(f'<div class="sect">국내 상승 용어 × {iname} 문헌</div>', unsafe_allow_html=True)
+                        rr = hit[:20][::-1]
+                        if rr:
+                            fig = go.Figure(go.Bar(
+                                x=[t["n_inst"] for t in rr], y=[t["term"] for t in rr], orientation="h",
+                                marker=dict(color=col, line=dict(color="#FFFFFF", width=2)),
+                                customdata=[[round(t["sen"] * 1000, 2), t["recent_docs"], round(t["share"] * 100, 1)] for t in rr],
+                                hovertemplate="<b>%{y}</b><br>우리 문헌 %{x}편 (%{customdata[2]}%)"
+                                              "<br>국내 기울기 %{customdata[0]}‰/년 · 최근3년 %{customdata[1]}편<extra></extra>"))
+                            fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title="우리 연구소 문헌 수",
+                                              yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
+                            fig.update_xaxes(gridcolor="#EEF2F7")
+                            st.plotly_chart(fig, width="stretch")
+                    with b:
+                        st.markdown('<div class="sect">아직 우리 문헌에 없는 상승 용어</div>', unsafe_allow_html=True)
+                        miss = sorted([t for t in touch if not t["n_inst"]], key=lambda t: -t["sen"])[:24]
+                        if miss:
+                            st.markdown('<div style="line-height:2.2">' + " ".join(
+                                f'<span class="gchip" style="background:#F1F5FA;color:#0F2744;display:inline-block;white-space:nowrap">{t["term"]}</span>'
+                                for t in miss) + "</div>", unsafe_allow_html=True)
+                            st.caption("국내 학회지에서는 오르는데 이 연구소 수집 문헌의 대상·문제에는 나오지 않는 용어 (기울기 순). "
+                                       "수집 키워드 보강 후보로도 볼 수 있음.")
+                        else:
+                            st.caption("모든 상승 용어가 연구소 문헌에 한 번 이상 나옵니다.")
+
+                    st.markdown('<div class="sect">🧩 결합 공백 후보 — 각각은 다루지만 함께 다룬 문헌이 없는 조합</div>',
+                                unsafe_allow_html=True)
+                    if not gaps:
+                        st.info("조건에 맞는 조합이 없습니다 (두 용어 모두 우리 문헌 2편 이상 + 국내 네트워크에 있는 용어).")
+                    else:
+                        by_id = {r["id"]: r for r in recs}
+                        gcols = st.columns(2)
+                        for i, g in enumerate(gaps):
+                            with gcols[i % 2]:
+                                st.markdown(
+                                    f'<div class="card" style="border-left:6px solid {RING};margin-bottom:6px">'
+                                    f'<b>{i + 1}. {g["a"]} × {g["b"]}</b>'
+                                    f'<div class="note" style="margin-top:4px">우리 문헌 {g["a"]} {g["n_a"]}편 · {g["b"]} {g["n_b"]}편 · '
+                                    f'<b>함께 0편</b> · 국내 학회지 최근 5년 함께 {g["kci_co"]}편'
+                                    f'{" · 국내에서도 서로 다른 묶음" if g["cross"] else ""}</div></div>',
+                                    unsafe_allow_html=True)
+                                with st.expander("근거 문헌 보기"):
+                                    for term, ids in ((g["a"], g["ids_a"]), (g["b"], g["ids_b"])):
+                                        st.markdown(f"**{term}**")
+                                        for pid in ids[:3]:
+                                            r = by_id[pid]
+                                            st.markdown(f"- [{r['title'][:90]}]({r['doi'] or '#'}) · {r['year'] or '-'}"
+                                                        f"  \n  <span class='note'>대상: {r['object']} / 문제: {r['problem']}</span>",
+                                                        unsafe_allow_html=True)
+                        st.caption("점수 = 두 용어 중 적은 쪽 문헌 수 × 국내 최근 빈도 ÷ (1 + 국내 공출현) · 국내 묶음이 다르면 가중. "
+                                   "‘상승 연구주제 탐지’ 파이프라인의 공출현 관계를 연구소 단위로 뒤집어 본 후보이며, 의미 판단은 전문가 검토가 필요합니다.")
+                    with st.expander("표로 보기 — 상승 용어 전체"):
+                        st.dataframe(pd.DataFrame([{
+                            "용어": t["term"], "국내 기울기(‰/년)": round(t["sen"] * 1000, 2), "국내 최근3년": t["recent_docs"],
+                            "우리 문헌": t["n_inst"], "비율(%)": round(t["share"] * 100, 1)}
+                            for t in sorted(touch, key=lambda t: (-t["n_inst"], -t["sen"]))]),
+                            hide_index=True, width="stretch")
+
+            # ── 탭4: 최근 브리핑 ──
+            with t4:
+                days = st.segmented_control("기간", [7, 30, 90], default=30, key="kn_days",
+                                            format_func=lambda d: f"최근 {d}일") or 30
+                rr = kn.recent(recs, anchor, days)
+                brief = kn.briefing_markdown(sel, iname, rr, len(recs), days, anchor, touch, net, DN)
+                st.caption(f"기준일 {anchor.isoformat()} — 수집 문헌의 최신 발행일 (오늘 {today_kst.isoformat()})")
+                if not rr:
+                    st.info("이 기간에 발행된 수집 문헌이 없습니다.")
+                else:
+                    a, b = st.columns([2, 3])
+                    with a:
+                        dc = Counter(r["domain"] for r in rr if r["domain"])
+                        pairs = dc.most_common()[::-1]
+                        fig = go.Figure(go.Bar(x=[n for _, n in pairs], y=[f"{d} {DN.get(d, d)}" for d, _ in pairs],
+                                               orientation="h", marker_color=col))
+                        fig.update_layout(height=max(220, 30 * len(pairs) + 40), xaxis_title="편",
+                                          yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
+                        st.markdown('<div class="sect">도메인</div>', unsafe_allow_html=True)
+                        st.plotly_chart(fig, width="stretch")
+                    with b:
+                        st.markdown(f'<div class="sect">최근 {days}일 문헌 {len(rr)}편</div>', unsafe_allow_html=True)
+                        st.dataframe(pd.DataFrame([{
+                            "발행일": r["date"], "제목": r["title"], "대상": r["object"], "문제": r["problem"],
+                            "토픽": net["assign"].get(r["id"], "-"), "DOI": r["doi"] or None} for r in rr]),
+                            hide_index=True, width="stretch", height=340,
+                            column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
+                with st.expander("브리핑 문안 (마크다운)", expanded=bool(rr)):
+                    st.markdown(brief)
+                st.download_button("⬇️ 브리핑 내려받기 (.md)", brief.encode("utf-8"),
+                                   file_name=f"{sel}_briefing_{anchor.isoformat()}_{days}d.md", mime="text/markdown")
+
+            # ── 탭5: 노트 내보내기 ──
+            with t5:
+                st.markdown(f"""**{iname} 지식노트 폴더**를 zip으로 받습니다. 마크다운 + YAML 머리말이라 특정 프로그램에 묶이지 않습니다.
+- 그대로 열기: **Logseq**·**Obsidian**·**VS Code(Foam)** 에서 폴더째 열기
+- 사내 웹으로: **Quartz**(오픈소스)로 정적 사이트 배포 → 그래프 뷰·검색 포함
+""")
+                st.code(f"""{sel}_{iname}/
+├── README.md      첫 화면: 토픽 목록·도메인·출처와 방법
+├── briefing.md    최근 30일 브리핑
+├── rising.md      국내 상승 용어 접점 ({scope_label})
+├── gaps.md        결합 공백 후보
+├── topics/T01.md …  토픽 노트 (대표 용어·도메인·문헌 링크)
+└── papers/<OpenAlex ID>.md …  문헌 노트 {len(recs):,}개 (서지·대상·문제·도메인·토픽)""", language="text")
+                inc_abs = st.checkbox("문헌 노트에 초록 포함 (파일이 커지고 만드는 데 시간이 더 걸림)", value=False)
+                key = (sel, water_only, scope_key, inc_abs)
+                if st.button("📦 노트 묶음 만들기", type="primary"):
+                    with st.spinner("노트를 만드는 중…"):
+                        abstracts = None
+                        if inc_abs:
+                            ids = {r["id"] for r in recs}
+                            abstracts = {a.get("id"): a.get("abstract") for a in load_data_jsonl(f"labels/abstracts/{sel}.jsonl")
+                                         if a.get("id") in ids and a.get("abstract")}
+                        brief30 = kn.briefing_markdown(sel, iname, r30, len(recs), 30, anchor, touch, net, DN)
+                        data, nfiles = kn.build_vault_zip(sel, iname, recs, net, touch, gaps, brief30, scope_label,
+                                                          abstracts=abstracts, domain_names=DN, today=today_kst)
+                        st.session_state["kn_zip"] = (key, data, nfiles)
+                zz = st.session_state.get("kn_zip")
+                if zz and zz[0] == key:
+                    st.download_button(f"⬇️ {iname} 지식노트 내려받기 (zip · 파일 {zz[2]:,}개 · {len(zz[1]) / 1e6:.1f} MB)",
+                                       zz[1], file_name=f"{sel}_{iname}_지식노트_{today_kst.isoformat()}.zip",
+                                       mime="application/zip")
+                st.caption("다음 단계(개인화): 연구원별 관심 키워드·읽음 표시·메모를 저장해 개인 노트로 확장 — 지금은 연구소 단위 그룹 노트입니다.")
+
 # ═══════════════ 페이지 4: FT 모니터 ═══════════════
 elif page == "🔥 FT 모니터":
     st.markdown('<div class="sect">파인튜닝 학습 모니터 · run 버전 이력</div>', unsafe_allow_html=True)
@@ -1267,8 +1575,8 @@ else:
 st.markdown(f'<div class="ftr">K-water연구원 Water Co-Scientist · 데이터는 30초마다 갱신 · {APP_VERSION}</div>',
             unsafe_allow_html=True)
 
-# ── 자동 갱신 ──
-if auto:
+# ── 자동 갱신 (지식노트 화면은 읽고 내보내는 곳이라 제외 — 큰 파일 재다운로드 방지) ──
+if auto and page != KN_PAGE:
     time.sleep(30)
     st.cache_data.clear()
     st.rerun()
