@@ -39,7 +39,7 @@ LOCAL_SEED = Path("data_seed")
 APP_VERSION = "v2.7 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
-HITL_PAGE = "🎮 K-water 소속 심판"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
+HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -1115,7 +1115,7 @@ elif page == "🇰🇷 KCI 트렌드":
                             " · 엇갈림 {c} (엇갈린 항목은 규칙대로 둠). ").format(
                                f=hr.get("files", 0), ai=rl.get("affiliation_include", 0), ae=rl.get("affiliation_exclude", 0),
                                pi=rl.get("paper_include", 0), pe=rl.get("paper_exclude", 0), c=hr.get("conflicts", 0))
-                           + "판정은 K-water 소속 심판 게임(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
+                           + "판정은 사이드바 HITL 검토의 🎮 K-water 논문 판정(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
                              "review/overrides*.json으로 저장하면 다음 주간 분석부터 반영됨.")
                 st.caption("범위 선택에서 'K-water 소속 논문'을 고르면 이 논문들만으로 상승 용어·묶음을 볼 수 있음. "
                            f"{kw['source']}")
@@ -1748,9 +1748,9 @@ elif page == KN_PAGE:
                                        mime="application/zip")
                 st.caption("다음 단계(개인화): 연구원별 관심 키워드·읽음 표시·메모를 저장해 개인 노트로 확장 — 지금은 연구소 단위 그룹 노트입니다.")
 
-# ═══════════════ HITL 검토: K-water 소속 심판 (사람 판정 게임) ═══════════════
+# ═══════════════ HITL 검토: K-water 논문 판정 (사람 판정 게임) ═══════════════
 elif page == HITL_PAGE:
-    st.markdown('<div class="sect">🎮 K-water 소속 심판 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sect">🎮 K-water 논문 판정 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
     st.caption("KCI에서 모은 K-water 소속 논문 분류(저자 소속 규칙)를 사람이 빠르게 검증합니다. 판정 파일은 이 브라우저 안에서만 "
                "열리고 서버로 보내지 않습니다. 처음엔 가상 연습 데이터로 열립니다.")
     hp = Path("tools/kwater_hitl.html")
