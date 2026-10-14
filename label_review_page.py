@@ -19,6 +19,7 @@ import plotly.graph_objects as go
 import requests
 import streamlit as st
 
+import data_cache as dc
 import label_review as lr
 
 REPO = "newcave/water-tech-agent"
@@ -51,25 +52,13 @@ CSS = """<style>
 
 
 # ───────────────────────── 데이터 ─────────────────────────
-@st.cache_data(ttl=1800, show_spinner=False)
-def _data_jsonl(rel_path: str) -> list:
-    try:
-        r = requests.get(f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{rel_path}", timeout=40)
-        if r.status_code == 200:
-            return lr.parse_jsonl(r.text)
-    except Exception:
-        pass
-    return []
-
-
-@st.cache_data(ttl=1800, show_spinner=False)
+@st.cache_resource(ttl=1800, show_spinner=False, max_entries=16)
 def _items(inst: str, prof_json: str) -> list[dict]:
+    """판정 항목(점수 포함). cache_resource라 다시 그릴 때 복사하지 않는다 — 항목 dict를 고치지 말 것.
+    원본 4개 파일은 동시에 받고(data_cache), 지식노트와 같은 캐시를 함께 쓴다."""
     prof = json.loads(prof_json)
-    papers = _data_jsonl(f"live/openalex/papers_{inst}.jsonl") + \
-        _data_jsonl(f"labels/openalex_extended/papers_{inst}.jsonl")
-    return lr.build_items(inst, papers, _data_jsonl(f"labels/extract/{inst}.jsonl"),
-                          _data_jsonl(f"labels/domain/{inst}.jsonl"),
-                          _data_jsonl(f"labels/abstracts/{inst}.jsonl"), prof)
+    core = dc.inst_core(inst)
+    return lr.build_items(inst, core["papers"], core["extract"], core["domain"], dc.inst_abstracts(inst), prof)
 
 
 def _secrets() -> dict:
@@ -87,7 +76,7 @@ def _gh_headers() -> dict:
     return h
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=90, show_spinner=False)
 def _list_batches(inst: str) -> tuple[list[dict], str]:
     """labels/hitl/<inst>/ 의 판정 묶음 파일 목록 → ([{name, sha, download_url}], 오류문구)."""
     try:
@@ -103,23 +92,23 @@ def _list_batches(inst: str) -> tuple[list[dict], str]:
         return [], f"GitHub API 연결 실패 ({type(e).__name__})"
 
 
-@st.cache_data(ttl=None, show_spinner=False, max_entries=5000)
-def _fetch_batch(url: str, sha: str) -> list[dict]:
-    """묶음 파일은 새 이름으로만 쌓이므로(sha 고정) 한 번 받으면 계속 캐시."""
-    try:
-        r = requests.get(url, timeout=20)
-        if r.status_code == 200:
-            return lr.parse_jsonl(r.text)
-    except Exception:
-        pass
-    return []
+@st.cache_resource(show_spinner=False)
+def _batch_store() -> dict:
+    """sha → 판정 기록. 묶음 파일은 새 이름으로만 쌓이므로(sha 고정) 한 번 받으면 계속 쓴다."""
+    return {}
 
 
 def _remote_records(inst: str) -> tuple[list[dict], int, str]:
     files, err = _list_batches(inst)
+    store = _batch_store()
+    missing = [f for f in files if f["sha"] not in store]
+    if missing:                                    # 처음 여는 묶음 파일들은 동시에 받는다
+        for f, text in zip(missing, dc.fetch_many([f["url"] for f in missing], timeout=20)):
+            if text is not None:
+                store[f["sha"]] = lr.parse_jsonl(text)
     recs = []
     for f in files:
-        recs += _fetch_batch(f["url"], f["sha"])
+        recs += store.get(f["sha"], [])
     return recs, len(files), err
 
 
@@ -152,6 +141,14 @@ def _dedupe(recs: list[dict]) -> list[dict]:
             seen.add(k)
             out.append(r)
     return out
+
+
+def _rerun():
+    """이 화면(fragment)만 다시 그린다. fragment 재실행 중이 아니면(앱 전체 실행 중) 앱 전체를 다시 그린다."""
+    try:
+        st.rerun(scope="fragment")
+    except st.errors.StreamlitAPIException:
+        st.rerun()
 
 
 # ───────────────────────── 화면 조각 ─────────────────────────
@@ -322,7 +319,7 @@ def _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info):
                 byid = {it["id"]: it for it in bulk}
                 for pid in chosen:
                     _push(lr.make_record(byid[pid], "ng", who, role, "bulk", reason="nonresearch"))
-                st.rerun()
+                _rerun()
 
     if not q:
         st.success("판정할 카드가 없습니다 — 남은 논문은 모두 사람 판정 또는 자동 확정 구간입니다. 👏")
@@ -414,7 +411,7 @@ def _tab_director(items, jstate, prof, inst, who):
             _push(lr.make_record(it, dec, who, "director", "director", to=to, also=r.get("also") or [],
                                  reason=r.get("reason") if dec == "ng" else None,
                                  note=("" if fix == "그대로" else f"소장 정정 (담당자: {r['decision']})")))
-        st.rerun()
+        _rerun()
 
 
 def _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout):
@@ -711,7 +708,14 @@ director_passcode = "소장 암호"
 
 # ───────────────────────── 진입점 ─────────────────────────
 def render(load_json, plotly_layout: dict, mode: str = "full"):
-    """mode='full' 전체 판정 화면, mode='sample' 1차 샘플(무작위 고정 n장, 판정자마다 따로·블라인드)."""
+    """mode='full' 전체 판정 화면, mode='sample' 1차 샘플(무작위 고정 n장, 판정자마다 따로·블라인드).
+    화면 전체를 fragment로 감싸, 판정 버튼을 누를 때 관제센터 머리띠·사이드바·에이전트 현황은 다시 그리지 않고
+    이 화면만 다시 그린다 (클릭 반응이 빨라짐)."""
+    _render_body(load_json, plotly_layout, mode)
+
+
+@st.fragment
+def _render_body(load_json, plotly_layout: dict, mode: str):
     st.markdown(CSS, unsafe_allow_html=True)
     prof = load_json("label_review_profiles.json") or {}
     if not prof:
@@ -778,7 +782,7 @@ def render(load_json, plotly_layout: dict, mode: str = "full"):
                 ok, msg = _save_direct(who)
                 (st.toast if ok else st.error)(msg)
                 if ok:
-                    st.rerun()
+                    _rerun()
         else:
             s1.info(f"미저장 판정 {len(buf)}건 — 아래 링크를 열어 GitHub에서 **Commit changes**를 누르면 저장됩니다 "
                     "(저장소 쓰기 권한 필요). 브라우저를 닫으면 사라집니다.")
@@ -795,7 +799,7 @@ def render(load_json, plotly_layout: dict, mode: str = "full"):
                     st.session_state.setdefault("lr_saved", []).extend(buf)
                     st.session_state["lr_buf"] = []
                     _list_batches.clear()
-                    st.rerun()
+                    _rerun()
 
     if mode == "sample":
         sample = lr.first_round(items, prof)

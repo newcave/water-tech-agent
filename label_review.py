@@ -87,10 +87,24 @@ _TAG = re.compile(r"<[^>]+>")
 
 
 def _term_regex(term: str) -> re.Pattern:
+    """단어 앞이 영숫자가 아니어야 맞음. 앞 경계는 정규식 대신 _count에서 확인한다 — 정규식이 글자(리터럴)로
+    시작해야 파이썬 re가 빠른 탐색을 쓴다 (앞에 (?<!...)가 붙으면 글자마다 검사해 수십 배 느림)."""
     star = term.endswith("*")
     t = term[:-1] if star else term
     body = r"[\s\-–]+".join(re.escape(w) for w in re.split(r"[\s]+", t.strip()))
-    return re.compile(r"(?<![a-z0-9])" + body + ("" if star else r"(?:e?s)?(?![a-z0-9])"))
+    return re.compile(body + ("" if star else r"(?:e?s)?(?![a-z0-9])"))
+
+
+def _count(rx: re.Pattern, text: str, first: bool = False) -> int:
+    """앞 경계(영숫자 아님)를 지키는 일치 수 (first=True면 하나 찾는 즉시 1)."""
+    n = 0
+    for m in rx.finditer(text):
+        i = m.start()
+        if i == 0 or not ("a" <= text[i - 1] <= "z" or "0" <= text[i - 1] <= "9"):
+            n += 1
+            if first:
+                return 1
+    return n
 
 
 class Scorer:
@@ -102,7 +116,9 @@ class Scorer:
         self.aff = profiles.get("domain_affinity", {})
         self.en, self.ko = {}, {}
         for inst, kw in profiles.get("keywords", {}).items():
-            self.en[inst] = [(t.rstrip("*"), _term_regex(t.lower())) for t in kw.get("en", [])]
+            # (표시 이름, 정규식, 미리 거르기용 첫 단어) — 첫 단어가 글에 없으면 정규식을 돌리지 않는다 (10배 이상 빠름)
+            self.en[inst] = [(t.rstrip("*"), _term_regex(t.lower()), re.split(r"[\s\-–]+", t.lower().rstrip("*").strip())[0])
+                             for t in kw.get("en", [])]
             self.ko[inst] = [t for t in kw.get("ko", []) if t]
         nr = profiles.get("nonresearch", {})
         self.nr_types = set(nr.get("types", []))
@@ -113,13 +129,13 @@ class Scorer:
     def kw(self, inst: str, title: str, abstract: str, ko_text: str) -> tuple[float, list[str]]:
         s = self.sc
         w, hits = 0.0, []
-        for name, rx in self.en.get(inst, []):
-            if rx.search(title):
+        for name, rx, lit in self.en.get(inst, []):
+            if lit in title and _count(rx, title, first=True):
                 w += s.get("title_weight", 2.0)
                 hits.append(name)
-            elif abstract:
+            elif abstract and lit in abstract:
                 # 초록 한 번 언급은 약하게: 검색어 자체(예: hydrology)가 거의 모든 수집 논문 초록에 들어 있다
-                n = len(rx.findall(abstract))
+                n = _count(rx, abstract)
                 if n:
                     w += s.get("abstract_weight", 1.0) * (1.0 if n >= 2 else s.get("abstract_once", 0.4))
                     hits.append(name)
