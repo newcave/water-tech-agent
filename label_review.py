@@ -284,6 +284,11 @@ def make_record(item: dict, decision: str, reviewer: str, role: str, queue: str,
             "score_ver": item.get("score_ver"), "dups": len(item.get("dups") or [])}
 
 
+def rec_key(r: dict) -> tuple:
+    """판정 기록 하나를 가리키는 키 (같은 키 = 같은 판정 — 여러 파일에 중복돼도 한 번만 센다)."""
+    return (r.get("id"), r.get("ts"), r.get("reviewer"), r.get("decision"), r.get("role"))
+
+
 def judgment_state(records: list[dict], inst: str, canon: dict | None = None) -> dict:
     """대표 id → {'reviewer': 최신 담당자 판정, 'director': 최신 소장 판정, 'skips': n, 'skippers', 'n'}.
     건너뜀은 판정이 아니라 '건너뛴 사람'으로만 센다. 중복 레코드에 남긴 판정은 대표로 모은다."""
@@ -567,6 +572,74 @@ def final_table(items: list[dict], jstate: dict, tau: float | None) -> list[dict
                      "ts": (r or {}).get("ts"), "audit": it["audit"], "dup_of": it.get("dup_of"),
                      "doi": it["doi"]})
     return rows
+
+
+# ───────────────────────── 판정 대장 (누적 기록 정리) ─────────────────────────
+KST = dt.timezone(dt.timedelta(hours=9))
+
+
+def to_kst(ts: str | None) -> str:
+    try:
+        return dt.datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=dt.timezone.utc) \
+            .astimezone(KST).strftime("%Y-%m-%d %H:%M")
+    except Exception:
+        return ts or ""
+
+
+def ledger_rows(records: list[dict], items: list[dict], saved_keys: set) -> list[dict]:
+    """판정 대장 — 모든 판정 기록(건너뜀 포함)을 최신순으로, 제목·기계 제안·저장 상태와 함께."""
+    by = {it["id"]: it for it in items}
+    out = []
+    for r in sorted(records, key=lambda r: r.get("ts") or "", reverse=True):
+        it = by.get(r.get("id"), {})
+        out.append({"시각(KST)": to_kst(r.get("ts")), "판정자": r.get("reviewer") or "",
+                    "역할": ROLE_KO.get(r.get("role"), r.get("role") or ""),
+                    "판정": DECISION_KO.get(r.get("decision"), r.get("decision")),
+                    "이관처": INST_NAME.get(r.get("to"), "") if r.get("to") else "",
+                    "NG 사유": REASON_KO.get(r.get("reason"), "") if r.get("reason") else "",
+                    "제목": _TAG.sub("", it.get("title") or "")[:100], "점수": r.get("score"),
+                    "기계 제안": r.get("suggestion") or "", "큐": r.get("queue") or "", "메모": r.get("note") or "",
+                    "저장": "GitHub" if rec_key(r) in saved_keys else "임시", "id": r.get("id")})
+    return out
+
+
+def reviewer_summary(records: list[dict], saved_keys: set) -> list[dict]:
+    """판정자별 누적: OK·NG·이관·건너뜀, 판정한 논문 수, 첫·최근 판정, GitHub 저장/임시."""
+    agg = {}
+    for r in records:
+        w = (r.get("reviewer") or "?", ROLE_KO.get(r.get("role"), r.get("role") or ""))
+        a = agg.setdefault(w, {"판정자": w[0], "역할": w[1], "OK": 0, "NG": 0, "이관": 0, "건너뜀": 0,
+                               "논문": set(), "첫 판정": None, "최근 판정": None, "GitHub": 0, "임시": 0})
+        d = r.get("decision")
+        a[{"ok": "OK", "ng": "NG", "move": "이관"}.get(d, "건너뜀")] += 1
+        if d in ("ok", "ng", "move"):
+            a["논문"].add(r.get("id"))
+        ts = r.get("ts") or ""
+        a["첫 판정"] = min(a["첫 판정"] or ts, ts)
+        a["최근 판정"] = max(a["최근 판정"] or ts, ts)
+        a["GitHub" if rec_key(r) in saved_keys else "임시"] += 1
+    rows = []
+    for a in agg.values():
+        rows.append({**a, "논문": len(a["논문"]), "첫 판정": to_kst(a["첫 판정"]), "최근 판정": to_kst(a["최근 판정"])})
+    return sorted(rows, key=lambda x: -x["논문"])
+
+
+def daily_cumulative(records: list[dict]) -> dict:
+    """판정자 → [(날짜 KST, 그날까지 누적 판정 수)] (건너뜀 제외)."""
+    per = {}
+    for r in records:
+        if r.get("decision") not in ("ok", "ng", "move"):
+            continue
+        day = to_kst(r.get("ts"))[:10]
+        per.setdefault(r.get("reviewer") or "?", Counter())[day] += 1
+    out = {}
+    for w, c in per.items():
+        run, pts = 0, []
+        for day in sorted(c):
+            run += c[day]
+            pts.append((day, run))
+        out[w] = pts
+    return out
 
 
 # ───────────────────────── 저장 경로 ─────────────────────────

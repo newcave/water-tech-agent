@@ -11,8 +11,11 @@ from __future__ import annotations
 import base64
 import html
 import json
+import os
 import re
+import threading
 import time
+from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -136,7 +139,7 @@ def _gh_put(path: str, text: str, message: str) -> tuple[bool, str]:
 def _dedupe(recs: list[dict]) -> list[dict]:
     seen, out = set(), []
     for r in recs:
-        k = (r.get("id"), r.get("ts"), r.get("reviewer"), r.get("decision"), r.get("role"))
+        k = lr.rec_key(r)
         if k not in seen:
             seen.add(k)
             out.append(r)
@@ -245,8 +248,67 @@ def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, 
 
 
 # ───────────────────────── 기록 쌓기 ─────────────────────────
+class _Pending:
+    """서버 임시 보관함 — 판정 버튼을 누르는 즉시 서버 디스크에 한 줄씩 쌓는다.
+    새로고침·창 닫기·세션 끊김에도 남고, 모든 판정자 화면에 바로 누적된다. GitHub에 올라간 것은
+    다음 화면부터 자동으로 빠진다(대조). 앱 서버를 새로 띄우면(재배포·잠듦) 사라질 수 있으므로
+    GitHub 저장(직접 저장 또는 링크 Commit)이 최종 기록이다."""
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.dir = Path(os.environ.get("HITL_PENDING_DIR") or (Path.home() / ".wta_hitl"))
+        self.dir.mkdir(parents=True, exist_ok=True)
+
+    def _path(self, inst: str) -> Path:
+        return self.dir / f"pending_{inst}.jsonl"
+
+    def read(self, inst: str) -> list[dict]:
+        p = self._path(inst)
+        with self.lock:
+            return lr.parse_jsonl(p.read_text(encoding="utf-8")) if p.exists() else []
+
+    def _write(self, inst: str, rows: list[dict]):
+        p = self._path(inst)
+        tmp = p.with_suffix(".tmp")
+        tmp.write_text(lr.to_jsonl(rows), encoding="utf-8")
+        tmp.replace(p)
+
+    def add(self, rec: dict):
+        with self.lock:
+            with self._path(rec["inst"]).open("a", encoding="utf-8") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+    def update(self, inst: str, fn):
+        """fn(rows) → 새 rows. 읽기·쓰기를 한 번에 (다른 판정자와 동시에 눌러도 안전)."""
+        p = self._path(inst)
+        with self.lock:
+            rows = lr.parse_jsonl(p.read_text(encoding="utf-8")) if p.exists() else []
+            new = fn(rows)
+            if new is not None:
+                self._write(inst, new)
+            return new
+
+    def reconcile(self, inst: str, remote_keys: set) -> int:
+        """GitHub에 이미 올라간 것과, 올린 지 1시간이 지난 것은 보관함에서 뺀다 → 뺀 건수."""
+        now = time.time()
+        out = {}
+
+        def fn(rows):
+            keep = [r for r in rows if lr.rec_key(r) not in remote_keys
+                    and not (r.get("_flushed") and now - r["_flushed"] > 3600)]
+            out["n"] = len(rows) - len(keep)
+            return keep if out["n"] else None
+        self.update(inst, fn)
+        return out.get("n", 0)
+
+
+@st.cache_resource(show_spinner=False)
+def _pending() -> _Pending:
+    return _Pending()
+
+
 def _push(rec: dict):
-    st.session_state.setdefault("lr_buf", []).append(rec)
+    _pending().add(rec)
     st.session_state["lr_last"] = rec
 
 
@@ -259,31 +321,42 @@ def _on_decide(it: dict, decision: str, qkind: str, who: str, role: str):
     _push(lr.make_record(it, decision, who, role, qkind, to=to, also=list(also), reason=reason, note=note))
 
 
-def _undo_last():
-    buf = st.session_state.get("lr_buf", [])
-    if buf:
-        buf.pop()
+def _undo_last(inst: str, who: str):
+    """내 가장 최근 판정(아직 GitHub에 안 올린 것) 하나를 지운다."""
+    def fn(rows):
+        for i in range(len(rows) - 1, -1, -1):
+            if rows[i].get("reviewer") == who and not rows[i].get("_flushed"):
+                return rows[:i] + rows[i + 1:]
+        return None
+    _pending().update(inst, fn)
     st.session_state["lr_last"] = None
 
 
-def _save_direct(who: str) -> tuple[bool, str]:
-    buf = st.session_state.get("lr_buf", [])
-    if not buf:
+def _my_unsaved(inst: str, who: str) -> list[dict]:
+    return [r for r in _pending().read(inst) if r.get("reviewer") == who and not r.get("_flushed")]
+
+
+def _clean_rec(r: dict) -> dict:
+    return {k: v for k, v in r.items() if not k.startswith("_")}
+
+
+def _my_unsaved_clean(inst: str, who: str) -> list[dict]:
+    return [_clean_rec(r) for r in _my_unsaved(inst, who)]
+
+
+def _save_direct(inst: str, who: str) -> tuple[bool, str]:
+    """내 미저장 판정을 묶음 파일 하나로 data 브랜치에 커밋 (보관함에는 '올림' 표시만, GitHub에서 보이면 자동 정리)."""
+    rows = _my_unsaved(inst, who)
+    if not rows:
         return True, "저장할 판정 없음"
-    by_inst = {}
-    for r in buf:
-        by_inst.setdefault(r["inst"], []).append(r)
-    msgs = []
-    for inst, rows in by_inst.items():
-        ok, msg = _gh_put(lr.batch_path(inst, who), lr.to_jsonl(rows),
-                          f"🏷️ HITL 라벨 판정 {inst} {len(rows)}건 ({who})")
-        if not ok:
-            return False, msg
-        st.session_state.setdefault("lr_saved", []).extend(rows)
-        msgs.append(f"{inst} {len(rows)}건")
-    st.session_state["lr_buf"] = []
+    ok, msg = _gh_put(lr.batch_path(inst, who), lr.to_jsonl([_clean_rec(r) for r in rows]),
+                      f"🏷️ HITL 라벨 판정 {inst} {len(rows)}건 ({who})")
+    if not ok:
+        return False, msg
+    keys, now = {lr.rec_key(r) for r in rows}, time.time()
+    _pending().update(inst, lambda all_: [({**r, "_flushed": now} if lr.rec_key(r) in keys else r) for r in all_])
     _list_batches.clear()
-    return True, "저장됨 — " + ", ".join(msgs)
+    return True, f"GitHub 저장 {len(rows)}건"
 
 
 # ───────────────────────── 탭 ─────────────────────────
@@ -292,13 +365,15 @@ def _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info):
     rv = prof.get("review", {})
     q = lr.build_queue(items, jstate, prof, who, tau=tau)
     R = lr.reps(items)
-    mine = sum(1 for r in st.session_state.get("lr_buf", []) + st.session_state.get("lr_saved", [])
-               if r.get("inst") == inst and r.get("decision") != "skip")
+    rv_me = (lr.by_reviewer(st.session_state.get("lr_records", []), inst, lr.canon_map(items)).get(who)
+             or {"dec": {}})
+    mine = len(rv_me["dec"])
+    unsaved = len(_my_unsaved(inst, who))
     n_aud = sum(1 for _, k in q if k == "audit")
     auto_n = sum(1 for it in R if not lr.human_decision(jstate.get(it["id"])) and it["suggestion"] == "ok"
                  and it["score"] >= tau)
     _kpis([("남은 판정 카드", f"{len(q):,}", f"감사 {n_aud} · 선별 {len(q) - n_aud}", NAVY),
-           ("이번 세션 내 판정", f"{mine}", f"미저장 {len(st.session_state.get('lr_buf', []))}건", BLUE),
+           ("내 판정 (누적)", f"{mine}", f"GitHub 미저장 {unsaved}건 (서버 임시 보관)", BLUE),
            ("자동 확정 (사람 생략)", f"{auto_n:,}", f"제안 OK & 점수 ≥ τ {tau}" + ("" if tau_info["calibrated"] else " (잠정)"), CYAN),
            ("판정 단위", f"{len(R):,}", f"레코드 {len(items):,} (같은 제목 {len(items) - len(R)}건 묶음)", GRAY)])
 
@@ -352,8 +427,8 @@ def _controls(it, qkind, inst, who, role, direct, prof, nxt=(), blind=False):
               on_click=_on_decide, args=(it, "move", qkind, who, role))
     b4.button("⏭️ 건너뛰기", key=f"lr_sk_{k}", width="stretch",
               on_click=_on_decide, args=(it, "skip", qkind, who, role))
-    b5.button("↩︎ 되돌리기", key=f"lr_undo_{k}", width="stretch", on_click=_undo_last,
-              disabled=not st.session_state.get("lr_buf"))
+    b5.button("↩︎ 되돌리기", key=f"lr_undo_{k}", width="stretch", on_click=_undo_last, args=(inst, who),
+              disabled=not _my_unsaved(inst, who))
     last = st.session_state.get("lr_last")
     if last:
         st.caption(f"방금: {lr.DECISION_KO.get(last['decision'], last['decision'])}"
@@ -531,7 +606,43 @@ def _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout):
                            "95% 하한": st.column_config.NumberColumn(format="percent")})
 
 
-def _tab_log(items, jstate, records, inst, tau, n_files, err):
+def _ledger_section(items, records, inst, saved_keys, plotly_layout, key):
+    """📒 판정 대장 — 한 번 누른 판정은 모두 여기 누적된다 (판정자별 집계 · 날짜별 누적 · 전체 기록)."""
+    if not records:
+        st.info("아직 판정 기록이 없습니다.")
+        return
+    n_saved = sum(1 for r in records if lr.rec_key(r) in saved_keys)
+    st.caption(f"전체 {len(records):,}줄 — GitHub 저장 {n_saved:,} · 서버 임시 {len(records) - n_saved:,}. "
+               f"GitHub에 올라간 묶음은 자동으로 `{lr.HITL_DIR}/{inst}/ledger.jsonl` 하나로 합쳐지고 "
+               "`summary.json`·`final.csv`로 정리됩니다.")
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        st.markdown('<div class="sect">판정자별 누적</div>', unsafe_allow_html=True)
+        st.dataframe(pd.DataFrame(lr.reviewer_summary(records, saved_keys)), hide_index=True, width="stretch")
+    with c2:
+        st.markdown('<div class="sect">날짜별 누적 판정</div>', unsafe_allow_html=True)
+        cum = lr.daily_cumulative(records)
+        fig = go.Figure()
+        for w, pts in cum.items():
+            fig.add_scatter(x=[d for d, _ in pts], y=[n for _, n in pts], name=w, mode="lines+markers",
+                            line_shape="hv", hovertemplate=f"{w} · %{{x}}: 누적 %{{y}}<extra></extra>")
+        fig.update_layout(**plotly_layout, height=230, legend=dict(orientation="h", y=1.15),
+                          xaxis=dict(type="category", title=None), yaxis=dict(title="누적 판정", rangemode="tozero"))
+        st.plotly_chart(fig, width="stretch", key=f"lr_cum_{key}")
+    st.markdown('<div class="sect">전체 판정 기록 (최신순)</div>', unsafe_allow_html=True)
+    rows = pd.DataFrame(lr.ledger_rows(records, items, saved_keys))
+    who_f = st.multiselect("판정자", sorted(rows["판정자"].unique()), key=f"lr_led_w_{key}", placeholder="전체")
+    v = rows[rows["판정자"].isin(who_f)] if who_f else rows
+    st.dataframe(v.drop(columns=["id"]), hide_index=True, width="stretch", height=min(460, 40 + 35 * len(v)))
+    st.download_button(f"⬇️ 판정 대장 CSV ({len(v):,}줄)", v.to_csv(index=False).encode("utf-8-sig"),
+                       file_name=f"hitl_ledger_{inst}.csv", mime="text/csv", key=f"lr_led_dl_{key}")
+
+
+def _tab_log(items, jstate, records, inst, tau, n_files, err, saved_keys=frozenset(), plotly_layout=None):
+    st.markdown('<div class="sect">📒 판정 대장 (누적)</div>', unsafe_allow_html=True)
+    _ledger_section(items, records, inst, saved_keys, plotly_layout or {}, key="full")
+    st.divider()
+    st.markdown('<div class="sect">🏷️ 논문별 최종 라벨</div>', unsafe_allow_html=True)
     ft = pd.DataFrame(lr.final_table(items, jstate, tau))
     c1, c2, c3 = st.columns([2, 2, 3])
     sf = c1.multiselect("상태", lr.STATE_ORDER, default=[s for s in lr.STATE_ORDER if s != "자동 확정"],
@@ -559,8 +670,9 @@ def _tab_log(items, jstate, records, inst, tau, n_files, err):
                        file_name=f"label_final_{inst}.csv", mime="text/csv")
     d2.download_button(f"⬇️ 판정 원기록 JSONL ({len(records):,}줄)", lr.to_jsonl(records).encode("utf-8"),
                        file_name=f"label_judgments_{inst}.jsonl", mime="application/json")
-    st.caption(f"원기록 위치: data 브랜치 `{lr.HITL_DIR}/{inst}/` 묶음 파일 {n_files}개 (append-only, 지우지 않고 "
-               "새 판정이 이전 판정을 덮음 · 소장 기록이 담당자 기록보다 우선)" + (f" · ⚠️ {err}" if err else ""))
+    st.caption(f"원기록 위치: data 브랜치 `{lr.HITL_DIR}/{inst}/` 파일 {n_files}개 (판정 대장 ledger.jsonl + 아직 합쳐지지 않은 "
+               "묶음). 지우지 않고 쌓으며 같은 논문은 새 판정이 이전 판정을 덮음 · 소장 기록이 담당자 기록보다 우선"
+               + (f" · ⚠️ {err}" if err else ""))
 
 
 def _tab_sample(items, sample, rvw, prof, inst, who, role, blind):
@@ -572,7 +684,7 @@ def _tab_sample(items, sample, rvw, prof, inst, who, role, blind):
     others = {w: c for w, c in others.items() if c}
     _kpis([("내 진행", f"{done} / {n}", "남은 " + f"{n - done}장" + (f" (건너뜀 {len(mine['skip'])})" if mine["skip"] else ""), "#0F766E"),
            ("함께 판정 중", f"{len(others)}명", ", ".join(f"{w} {c}" for w, c in list(others.items())[:4]) or "아직 없음", BLUE),
-           ("미저장", f"{len(st.session_state.get('lr_buf', []))}건", "저장해야 다른 사람·결과 탭에 반영", AMBER),
+           ("GitHub 미저장", f"{len(_my_unsaved(inst, who))}건", "서버에 임시 보관 중 — GitHub 저장이 최종 기록", AMBER),
            ("예상 소요", f"약 {max(1, round((n - done) * 0.6))}분", "장당 30–40초 기준", GRAY)])
     st.progress(done / n if n else 0.0, text=f"1차 샘플 {done}/{n}")
     if not q:
@@ -692,8 +804,11 @@ def _tab_guide(direct, has_token):
 담당자가 판정하고 소장이 '소장 확인' 화면에서 일괄 확정합니다.
 
 #### 저장 방식 — 지금: {'**직접 저장** (앱이 data 브랜치에 바로 커밋)' if direct else '**링크 저장** (GitHub 새 파일 링크 → Commit)'}
-- 토큰이 없으면: 판정이 이 브라우저에 모였다가, 판정 내용이 미리 채워진 GitHub '새 파일' 링크로 저장합니다
-  (저장소 쓰기 권한이 있는 사람만 Commit 가능). 브라우저를 닫으면 미저장 판정은 사라집니다.
+- 판정 버튼을 누르는 즉시 **서버 임시 보관함**에 쌓입니다 — 새로고침·창 닫기에도 남고, 모든 판정자 화면에 바로 누적됩니다.
+  다만 앱 서버가 새로 뜨면(재배포·잠듦) 임시 보관분은 사라질 수 있으니 GitHub 저장이 최종 기록입니다.
+- 토큰이 없으면: 판정 내용이 미리 채워진 GitHub '새 파일' 링크를 열어 Commit (저장소 쓰기 권한자만). 올라간 것은
+  자동으로 임시 보관함에서 빠지고, data 브랜치에서 **판정 대장(ledger.jsonl) 하나로 합쳐져 summary.json·final.csv로 정리**됩니다.
+- 직접 저장이면 5건마다 앱이 알아서 GitHub에 올립니다 (링크 누를 필요 없음).
 - 직접 저장으로 바꾸려면 Streamlit Cloud → 앱 Settings → **Secrets**에 아래를 넣습니다 (채팅·코드에 붙여넣지 마세요).
 ```toml
 [hitl]
@@ -763,48 +878,56 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
     if not items:
         st.warning("라벨 데이터를 불러오지 못했습니다 (data 브랜치 labels/domain·extract).")
         return
-    if direct and len(st.session_state.get("lr_buf", [])) >= prof.get("review", {}).get("save_every", 10):
-        ok, msg = _save_direct(who)                                   # 10건마다 자동 저장 (화면 그리기 전에)
+    save_every = prof.get("review", {}).get("save_every", 5)
+    if direct and who and len(_my_unsaved(inst, who)) >= save_every:
+        ok, msg = _save_direct(inst, who)                     # 직접 저장: save_every건마다 자동 커밋 (화면 그리기 전에)
         (st.toast if ok else st.error)(f"자동 저장: {msg}")
     remote, n_files, err = _remote_records(inst)
-    records = _dedupe(remote + st.session_state.get("lr_saved", []) + st.session_state.get("lr_buf", []))
+    if not err:                                               # GitHub에 올라간 건 보관함에서 자동으로 뺀다
+        _pending().reconcile(inst, {lr.rec_key(r) for r in remote})
+    saved_keys = {lr.rec_key(r) for r in remote}
+    pend = [_clean_rec(r) for r in _pending().read(inst)]
+    records = _dedupe(remote + st.session_state.get("lr_saved", []) + pend)
     records = [r for r in records if r.get("inst") == inst]
+    st.session_state["lr_records"] = records
     jstate = lr.judgment_state(records, inst, lr.canon_map(items))
     tau_info = lr.recommend_tau(items, jstate, prof)
 
-    # ── 저장 상태 줄 ──
-    buf = [r for r in st.session_state.get("lr_buf", [])]
-    if buf:
+    # ── 저장 상태 줄: 판정은 누르는 즉시 서버에 쌓이고(누적), GitHub 저장이 최종 기록 ──
+    mine = _my_unsaved_clean(inst, who) if who else []
+    others_pending = sum(1 for r in pend if r.get("reviewer") != who)
+    if mine:
         s1, s2 = st.columns([5, 2])
         if direct:
-            s1.info(f"미저장 판정 {len(buf)}건 — {prof.get('review', {}).get('save_every', 10)}건마다 자동 저장됩니다.")
+            s1.info(f"내 판정 {len(mine)}건이 서버에 임시 보관 중 — {save_every}건마다 GitHub에 자동 저장됩니다.")
             if s2.button("💾 지금 저장", key="lr_save_now", type="primary", width="stretch"):
-                ok, msg = _save_direct(who)
+                ok, msg = _save_direct(inst, who)
                 (st.toast if ok else st.error)(msg)
                 if ok:
                     _rerun()
         else:
-            s1.info(f"미저장 판정 {len(buf)}건 — 아래 링크를 열어 GitHub에서 **Commit changes**를 누르면 저장됩니다 "
-                    "(저장소 쓰기 권한 필요). 브라우저를 닫으면 사라집니다.")
-            links = lr.prefill_urls(REPO, BRANCH, inst, who or "anon", [r for r in buf if r["inst"] == inst])
+            s1.info(f"내 판정 **{len(mine)}건이 서버에 임시 보관** 중입니다 (새로고침·창 닫기에도 유지, 화면에는 이미 누적 반영). "
+                    "최종 기록은 오른쪽 링크를 열어 GitHub에서 **Commit changes** — 올라가면 1–2분 안에 자동 정리됩니다.")
+            links = lr.prefill_urls(REPO, BRANCH, inst, who, mine)
             with s2:
                 for i, (u, n) in enumerate(links):
                     st.link_button(f"💾 GitHub에 저장 {i + 1}/{len(links)} ({n}건)", u, width="stretch")
             with s1:
                 d1, d2 = st.columns(2)
-                d1.download_button("⬇️ 판정 파일 받기 (.jsonl)", lr.to_jsonl(buf).encode("utf-8"),
-                                   file_name=lr.batch_path(inst, who or "anon").split("/")[-1],
+                d1.download_button("⬇️ 판정 파일 받기 (.jsonl)", lr.to_jsonl(mine).encode("utf-8"),
+                                   file_name=lr.batch_path(inst, who).split("/")[-1],
                                    mime="application/json", width="stretch")
-                if d2.button("✔︎ GitHub에 Commit 했음 — 목록 비우기", width="stretch", key="lr_mark_saved"):
-                    st.session_state.setdefault("lr_saved", []).extend(buf)
-                    st.session_state["lr_buf"] = []
+                if d2.button("🔄 GitHub 저장 확인", width="stretch", key="lr_check_saved",
+                             help="Commit 뒤 누르면 바로 대조해 임시 보관함을 정리합니다 (안 눌러도 1–2분 안에 자동)"):
                     _list_batches.clear()
                     _rerun()
+    if others_pending > 0:
+        st.caption(f"다른 판정자의 임시 보관 판정 {others_pending}건도 화면에 함께 누적되어 있습니다 (GitHub 저장 전).")
 
     if mode == "sample":
         sample = lr.first_round(items, prof)
         rvw = lr.by_reviewer(records, inst, lr.canon_map(items))
-        tabs = st.tabs(["✍️ 샘플 판정", "📋 1차 결과", "ℹ️ 1차 샘플이란"])
+        tabs = st.tabs(["✍️ 샘플 판정", "📋 1차 결과", "📒 판정 대장", "ℹ️ 1차 샘플이란"])
         with tabs[0]:
             if not who:
                 st.info("위에 **판정자 이름**을 넣으면 1차 샘플 카드가 열립니다. 이름이 같아야 이어서 할 수 있습니다.")
@@ -814,6 +937,11 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
         with tabs[1]:
             _tab_sample_result(items, sample, records, prof, inst, plotly_layout)
         with tabs[2]:
+            sids = {it["id"] for it in sample}
+            only = st.toggle("1차 샘플 판정만", value=True, key="lr_led_only_sample")
+            _ledger_section(items, [r for r in records if r.get("id") in sids] if only else records, inst,
+                            saved_keys, plotly_layout, key="sample")
+        with tabs[3]:
             _tab_sample_guide(len(sample))
         return
 
@@ -833,6 +961,6 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
     with tabs[1]:
         _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout)
     with tabs[2]:
-        _tab_log(items, jstate, records, inst, tau_info["tau"], n_files, err)
+        _tab_log(items, jstate, records, inst, tau_info["tau"], n_files, err, saved_keys, plotly_layout)
     with tabs[3]:
         _tab_guide(direct, has_token)
