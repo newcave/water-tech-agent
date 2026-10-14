@@ -39,7 +39,7 @@ LOCAL_SEED = Path("data_seed")
 APP_VERSION = "v2.7 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
-HITL_PAGE = "🎮 K-water 소속 심판"          # 별동대 — 사이드바 구분선 아래 별도 항목
+HITL_PAGE = "🎮 K-water 소속 심판"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -408,16 +408,16 @@ with st.sidebar:
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
         st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
 
-    def _to_main_menu():                              # 본 메뉴를 고르면 별동대 화면에서 빠져나옴
+    def _to_main_menu():                              # 본 메뉴를 고르면 HITL 검토 화면에서 빠져나옴
         st.session_state["side_page"] = None
 
-    def _to_side(name):                               # 별동대 항목을 고르면 본 메뉴 선택을 비움
+    def _to_side(name):                               # HITL 검토 항목을 고르면 본 메뉴 선택을 비움
         st.session_state["side_page"] = name
         st.session_state["nav_radio"] = None
 
     nav_kw = {} if "nav_radio" in st.session_state else {"index": st.session_state["nav_start"]}
     page = st.radio("메뉴", PAGES, key="nav_radio", label_visibility="collapsed", on_change=_to_main_menu, **nav_kw)
-    st.markdown('<div class="side-sep">별동대</div>', unsafe_allow_html=True)
+    st.markdown('<div class="side-sep">HITL 검토</div>', unsafe_allow_html=True)
     st.button(HITL_PAGE, key="side_hitl", on_click=_to_side, args=(HITL_PAGE,),
               type="primary" if st.session_state.get("side_page") == HITL_PAGE else "secondary",
               help="KCI K-water 소속 분류를 사람이 검증하는 판정 게임 (HITL)")
@@ -1748,7 +1748,7 @@ elif page == KN_PAGE:
                                        mime="application/zip")
                 st.caption("다음 단계(개인화): 연구원별 관심 키워드·읽음 표시·메모를 저장해 개인 노트로 확장 — 지금은 연구소 단위 그룹 노트입니다.")
 
-# ═══════════════ 별동대: K-water 소속 심판 (HITL 판정 게임) ═══════════════
+# ═══════════════ HITL 검토: K-water 소속 심판 (사람 판정 게임) ═══════════════
 elif page == HITL_PAGE:
     st.markdown('<div class="sect">🎮 K-water 소속 심판 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
     st.caption("KCI에서 모은 K-water 소속 논문 분류(저자 소속 규칙)를 사람이 빠르게 검증합니다. 판정 파일은 이 브라우저 안에서만 "
