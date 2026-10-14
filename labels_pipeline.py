@@ -72,6 +72,20 @@ ASSIGN_SCHEMA = {"name": "domain_assign", "strict": True, "schema": {
                    "confidence": {"type": "number"}},
     "required": ["primary", "secondary", "confidence"]}}
 
+# ── 실패 기록 (회차 끝에 metrics_snapshot이 labels/metrics/failures.jsonl에 남김) ──
+FAILS = Counter()          # (stage, inst, kind) → 건수
+FAIL_DETAIL = {}           # (stage, inst, kind) → 대표 설명
+
+
+def fail(stage, inst, kind, n=1, detail=""):
+    FAILS[(stage, inst, kind)] += n
+    FAIL_DETAIL.setdefault((stage, inst, kind), detail)
+
+
+def fail_list():
+    return [{"stage": s, "inst": i, "kind": k, "count": n, "detail": FAIL_DETAIL.get((s, i, k), "")}
+            for (s, i, k), n in sorted(FAILS.items(), key=lambda x: str(x[0]))]
+
 
 def oa_get(params):
     params = dict(params)
@@ -217,6 +231,8 @@ def collect_range(repo, topics, since, until, cap_pages, log, tag):
                             "select": "id,doi,title,publication_year,publication_date,"
                                       "cited_by_count,type,primary_location"})
                 if not j:
+                    fail("collect", code, "api_error", 1,
+                         f"OpenAlex 검색 실패 ({tag}, {pages + 1}쪽) — 이 구간 수집 중단")
                     break
                 for w in j.get("results", []):
                     rid = (w.get("id") or "").rsplit("/", 1)[-1]
@@ -271,35 +287,53 @@ def stage_collect_daily(repo, log):
     return n_fwd, hist_year, n_hist
 
 
-def stage_backfill(repo, log):
+def stage_backfill(repo, log, recheck=0):
+    """초록 보강. OpenAlex 호출이 실패한 묶음은 기록하지 않는다 → 다음 회차에 자동 재시도.
+    (2026-07-29~08-08 회차는 실패한 묶음까지 빈 초록으로 '완료' 기록해 약 4.3만 편이 재시도되지 않았음)
+    recheck>0 이면 초록이 빈 값으로만 남은 문헌을 이번 회차에 최대 recheck편 다시 조회한다."""
     papers = paper_ids_by_inst(repo)
     abs_dir = repo / "labels" / "abstracts"; abs_dir.mkdir(parents=True, exist_ok=True)
-    total_new = 0
+    total_new, budget = 0, recheck
     for inst, recs in sorted(papers.items()):
         out = abs_dir / f"{inst}.jsonl"
-        have = done_ids(out)
-        todo = [i for i in recs if i not in have]
+        rows = list(jsonl_iter(out))
+        seen = {r["id"] for r in rows if "id" in r}
+        ok_ids = {r["id"] for r in rows if r.get("abstract_ok")}
+        todo = [i for i in recs if i not in seen]
+        retry = set()
+        if budget > 0:
+            retry = {i for i in recs if i in seen and i not in ok_ids}
+            retry = set(sorted(retry)[:budget]); budget -= len(retry)
+            todo += sorted(retry)
         if not todo:
             continue
-        got = 0
+        got, failed = 0, 0
         with out.open("a", encoding="utf-8") as f:
             for i in range(0, len(todo), BATCH):
                 chunk = todo[i:i + BATCH]
                 j = oa_get({"filter": "openalex_id:" + "|".join(chunk),
                             "select": "id,abstract_inverted_index", "per-page": str(len(chunk))})
+                if not j:                                 # 호출 실패 — 기록하지 않고 다음 회차로
+                    failed += len(chunk)
+                    time.sleep(0.15)
+                    continue
                 res = {}
-                if j:
-                    for w in j.get("results", []):
-                        res[w["id"].rsplit("/", 1)[-1]] = rebuild_abstract(
-                            w.get("abstract_inverted_index"))
+                for w in j.get("results", []):
+                    res[w["id"].rsplit("/", 1)[-1]] = rebuild_abstract(
+                        w.get("abstract_inverted_index"))
                 for rid in chunk:
                     a = res.get(rid, "")
+                    if rid in retry and not a:            # 재조회에서도 없으면 중복 줄을 남기지 않음
+                        continue
                     f.write(json.dumps({"id": rid, "abstract": a, "abstract_ok": bool(a)},
                                        ensure_ascii=False) + "\n")
                     got += bool(a)
                 time.sleep(0.15)
-        log(f"백필 {inst}: +{len(todo)} (초록 {got})")
-        total_new += len(todo)
+        if failed:
+            fail("backfill", inst, "api_error", failed,
+                 "OpenAlex 초록 조회 실패 — 빈 값으로 기록하지 않고 다음 회차에 재시도")
+        log(f"백필 {inst}: +{len(todo) - failed} (초록 {got}, 재조회 {len(retry)}, 실패 {failed})")
+        total_new += len(todo) - failed
     return total_new
 
 
@@ -321,6 +355,7 @@ def stage_extract(repo, client, model, cap, log):
                 res = llm_json(client, model, EXTRACT_SYSTEM, EXTRACT_SCHEMA,
                                f"[Title] {titles.get(r['id'],'')}\n\n[Abstract] {r['abstract'][:3500]}")
                 if res is None:
+                    fail("extract", inst, "llm_error", 1, "대상·문제 추출 LLM 호출 실패 — 다음 회차에 재시도")
                     continue
                 f.write(json.dumps({"id": r["id"], "object": res["object"],
                     "problem": res["problem"], "relevant": res["relevant"],
@@ -347,6 +382,7 @@ def stage_assign(repo, client, model, cap, log):
                 res = llm_json(client, model, ASSIGN_SYSTEM, ASSIGN_SCHEMA,
                                f"object: {r.get('object','')}\nproblem: {r.get('problem','')}")
                 if res is None:
+                    fail("assign", inst, "llm_error", 1, "도메인 배정 LLM 호출 실패 — 다음 회차에 재시도")
                     continue
                 f.write(json.dumps({"id": r["id"], "domain_primary": res["primary"],
                     "domain_secondary": res["secondary"], "confidence": res["confidence"],
@@ -413,6 +449,8 @@ def main():
     ap.add_argument("--repo", default=".")
     ap.add_argument("--max-items", type=int, default=3000)
     ap.add_argument("--model", default="gpt-4o-mini")
+    ap.add_argument("--recheck-empty", type=int, default=0,
+                    help="초록이 빈 값으로만 남은 문헌을 이번 회차에 최대 N편 다시 조회 (기본 0 = 안 함)")
     args = ap.parse_args()
     repo = Path(args.repo).resolve()
     if not (repo / "live" / "openalex").exists():
@@ -421,7 +459,7 @@ def main():
     log(f"=== labels_pipeline v3 · cap={args.max_items} ===")
     t0 = time.time()
     n_fwd, hist_year, n_hist = stage_collect_daily(repo, log)
-    n_bf = stage_backfill(repo, log)
+    n_bf = stage_backfill(repo, log, recheck=args.recheck_empty)
     client = get_client()
     n_ex = stage_extract(repo, client, args.model, args.max_items, log)
     n_as = stage_assign(repo, client, args.model, args.max_items, log)
@@ -430,12 +468,19 @@ def main():
            "forward": n_fwd, "hist_year": hist_year, "hist": n_hist,
            "backfilled": n_bf, "extracted": n_ex, "assigned": n_as,
            "total": (s or {}).get("total", 0),
+           "failures": sum(FAILS.values()),
            "duration_s": int(time.time() - t0)}
     runs = repo / "labels" / "pipeline_runs.jsonl"
     runs.parent.mkdir(parents=True, exist_ok=True)
     with runs.open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
     log(f"런로그: {rec}")
+    try:                                           # 달성도 스냅샷·실패 기록 — 실패해도 파이프라인은 정상 종료
+        import metrics_snapshot
+        res = metrics_snapshot.record(repo, run_failures=fail_list(), ts=rec["ts"])
+        log(f"달성도 스냅샷: 새 실패 기록 {res['new_failures']}건")
+    except Exception as e:
+        log(f"달성도 스냅샷 생략: {type(e).__name__}: {e}")
     log("=== 완료 ===")
 
 
