@@ -42,5 +42,9 @@ jobs:
             exit 0
           fi
           git commit -m "🤖 heartbeat: openalex_lite $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git pull --rebase origin main
-          git push
+          # GitHub 일시 오류(500 등)로 push가 거절될 수 있어 3회까지 재시도 (2026-10-07 실패 사례)
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "push 실패 ($i/3) — 20초 후 재시도"; sleep 20
+          done
+          echo "push 3회 실패"; exit 1
