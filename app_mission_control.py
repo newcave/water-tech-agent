@@ -29,6 +29,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 import knowledge_notes as kn
+import label_review_page as lrp
 
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
                    layout="wide", initial_sidebar_state="expanded")
@@ -36,10 +37,11 @@ st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="�
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.7 · 2026-10-14"
+APP_VERSION = "v2.8 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
+LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -421,6 +423,9 @@ with st.sidebar:
     st.button(HITL_PAGE, key="side_hitl", on_click=_to_side, args=(HITL_PAGE,),
               type="primary" if st.session_state.get("side_page") == HITL_PAGE else "secondary",
               help="KCI K-water 소속 분류를 사람이 검증하는 판정 게임 (HITL)")
+    st.button(LR_PAGE, key="side_lr", on_click=_to_side, args=(LR_PAGE,),
+              type="primary" if st.session_state.get("side_page") == LR_PAGE else "secondary",
+              help="연구소 라벨이 맞는지 OK·NG·이관 판정 — 기계 적합도 점수 + 감사 표본 (시범: 수자원환경연구소)")
     if st.session_state.get("side_page"):
         page = st.session_state["side_page"]
     elif page is None:
@@ -1792,6 +1797,9 @@ elif page == HITL_PAGE:
         components.html(html, height=980, scrolling=True)
         st.caption("결과 복사가 막히는 브라우저에서는 게임의 '파일로 저장'을 쓰세요. 진행 상황은 이 브라우저에 자동 저장됩니다.")
 
+elif page == LR_PAGE:
+    lrp.render(load_json, PLOTLY_LAYOUT)
+
 # ═══════════════ 페이지 4: FT 모니터 ═══════════════
 elif page == "🔥 FT 모니터":
     st.markdown('<div class="sect">파인튜닝 학습 모니터 · run 버전 이력</div>', unsafe_allow_html=True)
@@ -1876,7 +1884,7 @@ st.markdown(f'<div class="ftr">K-water연구원 Water Co-Scientist · 데이터�
             unsafe_allow_html=True)
 
 # ── 자동 갱신 (지식노트·달성도 화면은 제외 — 큰 파일 재다운로드 방지, 달성도 데이터는 6시간 주기) ──
-if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE):     # 게임은 30초 새로고침 시 화면이 초기화되므로 제외
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE):     # 게임은 30초 새로고침 시 화면이 초기화되므로 제외
     time.sleep(30)
     st.cache_data.clear()
     st.rerun()
