@@ -24,6 +24,7 @@ from pathlib import Path
 import requests
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
@@ -38,6 +39,7 @@ LOCAL_SEED = Path("data_seed")
 APP_VERSION = "v2.7 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
+HITL_PAGE = "🎮 K-water 소속 심판"          # 별동대 — 사이드바 구분선 아래 별도 항목
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -73,6 +75,14 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] label[data-baseweb="radio"]:has(input:checked)
   {background:rgba(255,255,255,.30); font-weight:700;}
 [data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
+.side-sep {display:flex; align-items:center; gap:8px; margin:14px 0 8px; font-size:.72rem;
+  letter-spacing:.12em; opacity:.85;}
+.side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
+[data-testid="stSidebar"] .stButton, [data-testid="stSidebar"] .stButton [data-testid="stTooltipHoverTarget"] {width:100%;}
+[data-testid="stSidebar"] .stButton button {width:100%; justify-content:flex-start; border-radius:12px;
+  background:rgba(255,255,255,.13); border:1px dashed rgba(255,255,255,.55); color:#fff; padding:9px 12px;}
+[data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
+  font-weight:700;}
 .block-container {padding-top:1.1rem; max-width:1500px;}
 
 /* 헤더 밴드 */
@@ -397,7 +407,24 @@ with st.sidebar:
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
         st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
-    page = st.radio("메뉴", PAGES, index=st.session_state["nav_start"], label_visibility="collapsed")
+
+    def _to_main_menu():                              # 본 메뉴를 고르면 별동대 화면에서 빠져나옴
+        st.session_state["side_page"] = None
+
+    def _to_side(name):                               # 별동대 항목을 고르면 본 메뉴 선택을 비움
+        st.session_state["side_page"] = name
+        st.session_state["nav_radio"] = None
+
+    nav_kw = {} if "nav_radio" in st.session_state else {"index": st.session_state["nav_start"]}
+    page = st.radio("메뉴", PAGES, key="nav_radio", label_visibility="collapsed", on_change=_to_main_menu, **nav_kw)
+    st.markdown('<div class="side-sep">별동대</div>', unsafe_allow_html=True)
+    st.button(HITL_PAGE, key="side_hitl", on_click=_to_side, args=(HITL_PAGE,),
+              type="primary" if st.session_state.get("side_page") == HITL_PAGE else "secondary",
+              help="KCI K-water 소속 분류를 사람이 검증하는 판정 게임 (HITL)")
+    if st.session_state.get("side_page"):
+        page = st.session_state["side_page"]
+    elif page is None:
+        page = PAGES[0]
     st.divider()
     auto = st.toggle("실시간 갱신 (30초)", value=True)
     st.caption(f"데이터 기준: {ago(summary.get('generated_at'))}")
@@ -1721,6 +1748,50 @@ elif page == KN_PAGE:
                                        mime="application/zip")
                 st.caption("다음 단계(개인화): 연구원별 관심 키워드·읽음 표시·메모를 저장해 개인 노트로 확장 — 지금은 연구소 단위 그룹 노트입니다.")
 
+# ═══════════════ 별동대: K-water 소속 심판 (HITL 판정 게임) ═══════════════
+elif page == HITL_PAGE:
+    st.markdown('<div class="sect">🎮 K-water 소속 심판 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
+    st.caption("KCI에서 모은 K-water 소속 논문 분류(저자 소속 규칙)를 사람이 빠르게 검증합니다. 판정 파일은 이 브라우저 안에서만 "
+               "열리고 서버로 보내지 않습니다. 처음엔 가상 연습 데이터로 열립니다.")
+    hp = Path("tools/kwater_hitl.html")
+    html = None
+    try:
+        html = hp.read_text(encoding="utf-8") if hp.exists() else None
+    except Exception:
+        html = None
+    if html is None:
+        try:
+            r = requests.get(_raw("tools/kwater_hitl.html"), timeout=15)
+            html = r.text if r.status_code == 200 else None
+        except Exception:
+            html = None
+    kw_ = load_json("kci_kwater.json") or {}
+    hr_ = kw_.get("human_review") or {}
+    rl_ = hr_.get("rules", {})
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        st.markdown("""**쓰는 법**
+1. 비공개 저장소 `review/kwater_review.xlsx`(또는 CSV)를 내려받아 아래 게임에 끌어다 놓고 판정 (키보드 D·A·S·Z, 휴대폰은 좌우 밀기)
+2. 기계 판정과 다르게 고른 것만 결과 JSON으로 나옴 → 비공개 저장소에 `review/overrides_<이름>.json`으로 저장
+3. 다음 주간 kci-rising부터 자동 반영 (판정이 엇갈린 항목은 규칙대로 둠)""")
+    with c2:
+        st.markdown('<div class="kpis">' + "".join(
+            f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.3rem">{v}</div>'
+            f'<div class="k-lab">{l}</div></div>' for l, v, c in [
+                ("반영된 판정 파일", f"{hr_.get('files', 0)}개", NAVY),
+                ("소속 포함·제외", f"{rl_.get('affiliation_include', 0)} · {rl_.get('affiliation_exclude', 0)}", BLUE),
+                ("논문 포함·제외", f"{rl_.get('paper_include', 0)} · {rl_.get('paper_exclude', 0)}", CYAN),
+                ("엇갈림", f"{hr_.get('conflicts', 0)}", AMBER)]) + '</div>', unsafe_allow_html=True)
+        if not hr_:
+            st.caption("아직 반영된 사람 판정이 없습니다 (kci_kwater.json의 human_review).")
+    if html is None:
+        st.warning("게임 파일(tools/kwater_hitl.html)을 찾지 못했습니다.")
+    else:
+        st.download_button("⬇️ 게임 파일 내려받기 (새 창 · 전체 화면으로 쓰기)", html.encode("utf-8"),
+                           file_name="kwater_hitl.html", mime="text/html")
+        components.html(html, height=980, scrolling=True)
+        st.caption("결과 복사가 막히는 브라우저에서는 게임의 '파일로 저장'을 쓰세요. 진행 상황은 이 브라우저에 자동 저장됩니다.")
+
 # ═══════════════ 페이지 4: FT 모니터 ═══════════════
 elif page == "🔥 FT 모니터":
     st.markdown('<div class="sect">파인튜닝 학습 모니터 · run 버전 이력</div>', unsafe_allow_html=True)
@@ -1805,7 +1876,7 @@ st.markdown(f'<div class="ftr">K-water연구원 Water Co-Scientist · 데이터�
             unsafe_allow_html=True)
 
 # ── 자동 갱신 (지식노트·달성도 화면은 제외 — 큰 파일 재다운로드 방지, 달성도 데이터는 6시간 주기) ──
-if auto and page not in (KN_PAGE, AC_PAGE):
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE):     # 게임은 30초 새로고침 시 화면이 초기화되므로 제외
     time.sleep(30)
     st.cache_data.clear()
     st.rerun()
