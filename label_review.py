@@ -368,6 +368,92 @@ def director_queue(items: list[dict], jstate: dict) -> list[tuple[dict, dict]]:
     return out
 
 
+# ───────────────────────── 1차 샘플 ─────────────────────────
+def first_round(items: list[dict], profiles: dict) -> list[dict]:
+    """1차 샘플 = 감사 표본(무작위)을 고정 순서로 세워 앞에서 size장. 누가 열어도 같은 묶음."""
+    n = (profiles.get("first_round") or {}).get("size", 60)
+    aud = sorted([it for it in reps(items) if it["audit"]], key=lambda it: stable_unit("order:" + it["id"]))
+    return aud[:n]
+
+
+def by_reviewer(records: list[dict], inst: str, canon: dict | None = None) -> dict:
+    """판정자 → {'dec': {대표 id: 최신 판정}, 'skip': {건너뛴 id}} (담당자·소장 모두, 사람별로 따로)."""
+    canon = canon or {}
+    out = {}
+    for r in sorted((r for r in records if r.get("inst") == inst and r.get("id")), key=lambda r: r.get("ts") or ""):
+        who = (r.get("reviewer") or "?").strip()
+        d = out.setdefault(who, {"dec": {}, "skip": set()})
+        key = canon.get(r["id"], r["id"])
+        if r.get("decision") == "skip":
+            d["skip"].add(key)
+        elif r.get("decision") in ("ok", "ng", "move"):
+            d["dec"][key] = r
+            d["skip"].discard(key)
+    return out
+
+
+def sample_queue(sample: list[dict], mine: dict | None) -> list[dict]:
+    """1차 샘플 중 '내가' 아직 판정 안 한 것 (다른 사람 판정과 무관 — 판정자 간 일치도를 보려고 각자 따로 본다)."""
+    mine = mine or {"dec": {}, "skip": set()}
+    todo = [it for it in sample if it["id"] not in mine["dec"]]
+    return [it for it in todo if it["id"] not in mine["skip"]] + [it for it in todo if it["id"] in mine["skip"]]
+
+
+def _label(r: dict) -> str:
+    return r["decision"] + (f":{r.get('to')}" if r["decision"] == "move" else "")
+
+
+def cohen_kappa(a: list[str], b: list[str]) -> float:
+    n = len(a)
+    if n == 0:
+        return float("nan")
+    po = sum(1 for x, y in zip(a, b) if x == y) / n
+    ca, cb = Counter(a), Counter(b)
+    pe = sum(ca[k] * cb.get(k, 0) for k in ca) / (n * n)
+    return float("nan") if pe >= 1 else (po - pe) / (1 - pe)
+
+
+def sample_summary(sample: list[dict], records: list[dict], inst: str, canon: dict | None = None) -> dict:
+    """1차 샘플 결과: 판정자별 진행, 합의 판정(다수결·동률이면 최신), OK 비율(=기존 라벨 적합률 추정),
+    기계 일치율, 판정자 간 일치(쌍별 일치율·Cohen κ)."""
+    ids = [it["id"] for it in sample]
+    idset = set(ids)
+    rv = by_reviewer(records, inst, canon)
+    prog = {w: sum(1 for i in ids if i in d["dec"]) for w, d in rv.items()}
+    prog = {w: n for w, n in prog.items() if n}
+    cons = {}
+    for it in sample:
+        votes = [d["dec"][it["id"]] for d in rv.values() if it["id"] in d["dec"]]
+        if not votes:
+            continue
+        c = Counter(_label(v) for v in votes)
+        top = max(c.values())
+        tied = {k for k, v in c.items() if v == top}
+        latest = max((v for v in votes if _label(v) in tied), key=lambda v: v.get("ts") or "")
+        cons[it["id"]] = {"label": _label(latest), "decision": latest["decision"], "to": latest.get("to"),
+                          "n": len(votes), "unanimous": len(c) == 1}
+    k = sum(1 for v in cons.values() if v["decision"] == "ok")
+    acc = wilson(k, len(cons))
+    by = {it["id"]: it for it in sample}
+    agree = sum(1 for i, v in cons.items() if v["label"] == by[i]["suggestion"] + (
+        f":{by[i]['to']}" if by[i]["suggestion"] == "move" else ""))
+    pairs = []
+    ws = sorted(prog, key=lambda w: -prog[w])
+    for x in range(len(ws)):
+        for y in range(x + 1, len(ws)):
+            a, b = rv[ws[x]]["dec"], rv[ws[y]]["dec"]
+            common = [i for i in ids if i in a and i in b]
+            if len(common) >= 5:
+                la, lb = [_label(a[i]) for i in common], [_label(b[i]) for i in common]
+                pairs.append({"a": ws[x], "b": ws[y], "n": len(common),
+                              "agree": sum(1 for p, q in zip(la, lb) if p == q) / len(common),
+                              "kappa": cohen_kappa(la, lb)})
+    split = [i for i, v in cons.items() if not v["unanimous"]]
+    return {"size": len(sample), "progress": prog, "consensus": cons, "judged": len(cons), "ok": k,
+            "accuracy": acc, "machine_agree": agree, "pairs": pairs, "split": split,
+            "votes": sum(1 for d in rv.values() for i in d["dec"] if i in idset)}
+
+
 # ───────────────────────── 지표 ─────────────────────────
 def _is_ok(r: dict) -> bool:
     return r.get("decision") == "ok"

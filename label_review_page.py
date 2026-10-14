@@ -192,9 +192,13 @@ def _why_html(it: dict, prof: dict) -> str:
     return "<br>".join(lines)
 
 
-def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict):
-    qcol = ("#7C3AED", "#F3EEFF") if qkind == "audit" else ("#0B5FAE", "#EAF1FA")
-    qtxt = "감사 표본 (무작위)" if qkind == "audit" else "선별 (기계가 헷갈리거나 바꾸자고 한 것)"
+QKIND = {"audit": ("감사 표본 (무작위)", "#7C3AED", "#F3EEFF"),
+         "triage": ("선별 (기계가 헷갈리거나 바꾸자고 한 것)", "#0B5FAE", "#EAF1FA"),
+         "sample1": ("1차 샘플 (무작위 · 판정자마다 따로)", "#0F766E", "#E6F6F4")}
+
+
+def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, blind: bool = False):
+    qtxt, *qcol = QKIND.get(qkind, QKIND["triage"])
     doi = it.get("doi") or ""
     title = _clean(it["title"]) or "(제목 없음)"
     title_html = f'<a href="{html.escape(doi)}" target="_blank">{title} ↗</a>' if doi.startswith("http") else title
@@ -229,6 +233,12 @@ def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict):
             with st.expander("초록 전체"):
                 st.markdown(f'<div class="lr-abs">{abstract}</div>', unsafe_allow_html=True)
     with right:
+        if blind:
+            st.markdown("""<div class="lr-card"><div class="lr-meta">기계 적합도 점수</div>
+  <div class="lr-score" style="color:#CBD5E1">?</div>
+  <div class="lr-why">블라인드 판정 중 — 기계 점수·제안을 가려 사람 판단이 기계에 끌려가지 않게 합니다.
+  판정 뒤 <b>1차 결과</b> 탭에서 기계와 얼마나 맞았는지 공개됩니다.</div></div>""", unsafe_allow_html=True)
+            return
         st.markdown(f"""<div class="lr-card">
   <div class="lr-meta">기계 적합도 점수</div>
   <div class="lr-score" style="color:{_score_col(sc)}">{sc}<span style="font-size:1rem;color:#94A3B8"> / 100</span></div>
@@ -319,17 +329,22 @@ def _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info):
         return
     it, qkind = q[0]
     _card(it, qkind, 1, len(q), prof, jstate)
+    _controls(it, qkind, inst, who, role, direct, prof, nxt=[(x, kk) for x, kk in q[1:6]])
+
+
+def _controls(it, qkind, inst, who, role, direct, prof, nxt=(), blind=False):
+    """판정 입력줄(NG 사유·이관처·공유·메모) + OK/NG/이관/건너뛰기/되돌리기 + 다음 카드."""
     k = it["id"]
     others = [i for i in lr.INSTS if i != inst]
-    default_to = it.get("to") or it.get("best_other") or others[0]
+    default_to = others[0] if blind else (it.get("to") or it.get("best_other") or others[0])
     c1, c2, c3, c4 = st.columns([2, 2, 3, 3])
     c1.selectbox("NG 사유", list(lr.REASON_KO), key=f"lr_reason_{k}",
-                 index=list(lr.REASON_KO).index(it.get("reason") or "out_of_scope"),
+                 index=list(lr.REASON_KO).index("out_of_scope" if blind else (it.get("reason") or "out_of_scope")),
                  format_func=lambda x: lr.REASON_KO[x])
     c2.selectbox("이관할 연구소", others, key=f"lr_to_{k}", index=others.index(default_to) if default_to in others else 0,
                  format_func=lambda x: lr.INST_NAME[x])
     c3.multiselect("함께 볼 연구소 (공유, 선택)", others, key=f"lr_also_{k}",
-                   default=[x for x in it.get("also", []) if x in others], format_func=lambda x: lr.INST_NAME[x])
+                   default=[] if blind else [x for x in it.get("also", []) if x in others], format_func=lambda x: lr.INST_NAME[x])
     c4.text_input("메모 (선택)", key=f"lr_note_{k}", placeholder="판정 근거·애매한 점")
     b1, b2, b3, b4, b5 = st.columns([2, 2, 2, 2, 1.4])
     b1.button("✅ OK — 이 연구소 맞음", key=f"lr_ok_{k}", type="primary", width="stretch",
@@ -347,14 +362,12 @@ def _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info):
         st.caption(f"방금: {lr.DECISION_KO.get(last['decision'], last['decision'])}"
                    + (f" → {lr.INST_NAME.get(last.get('to'), '')}" if last.get("to") else "")
                    + f" · {last['id']}")
-    if len(q) > 1:
-        nxt = "".join(f"<div>{'🟣' if kk == 'audit' else '🔵'} <b>{x['score']}</b> "
-                      f"<span style='color:{SUGG_COL[x['suggestion']]}'>{SUGG_KO[x['suggestion']]}</span> — "
-                      f"{_clean(x['title'])[:90]}</div>" for x, kk in q[1:6])
-        st.markdown(f'<div class="lr-mini"><b>다음 카드</b>{nxt}</div>', unsafe_allow_html=True)
-    if direct and len(st.session_state.get("lr_buf", [])) >= rv.get("save_every", 10):
-        ok, msg = _save_direct(who)
-        (st.toast if ok else st.error)(f"자동 저장: {msg}")
+    if nxt:
+        dot = {"audit": "🟣", "triage": "🔵", "sample1": "🟢"}
+        rows = "".join(f"<div>{dot.get(kk, '🔵')} " + ("" if blind else
+                       f"<b>{x['score']}</b> <span style='color:{SUGG_COL[x['suggestion']]}'>"
+                       f"{SUGG_KO[x['suggestion']]}</span> — ") + f"{_clean(x['title'])[:90]}</div>" for x, kk in nxt)
+        st.markdown(f'<div class="lr-mini"><b>다음 카드</b>{rows}</div>', unsafe_allow_html=True)
 
 
 def _tab_director(items, jstate, prof, inst, who):
@@ -553,6 +566,112 @@ def _tab_log(items, jstate, records, inst, tau, n_files, err):
                "새 판정이 이전 판정을 덮음 · 소장 기록이 담당자 기록보다 우선)" + (f" · ⚠️ {err}" if err else ""))
 
 
+def _tab_sample(items, sample, rvw, prof, inst, who, role, blind):
+    mine = rvw.get(who) or {"dec": {}, "skip": set()}
+    q = lr.sample_queue(sample, mine)
+    done = sum(1 for it in sample if it["id"] in mine["dec"])
+    n = len(sample)
+    others = {w: sum(1 for it in sample if it["id"] in d["dec"]) for w, d in rvw.items() if w != who}
+    others = {w: c for w, c in others.items() if c}
+    _kpis([("내 진행", f"{done} / {n}", "남은 " + f"{n - done}장" + (f" (건너뜀 {len(mine['skip'])})" if mine["skip"] else ""), "#0F766E"),
+           ("함께 판정 중", f"{len(others)}명", ", ".join(f"{w} {c}" for w, c in list(others.items())[:4]) or "아직 없음", BLUE),
+           ("미저장", f"{len(st.session_state.get('lr_buf', []))}건", "저장해야 다른 사람·결과 탭에 반영", AMBER),
+           ("예상 소요", f"약 {max(1, round((n - done) * 0.6))}분", "장당 30–40초 기준", GRAY)])
+    st.progress(done / n if n else 0.0, text=f"1차 샘플 {done}/{n}")
+    if not q:
+        st.success(f"1차 샘플 {n}장을 모두 판정했습니다 👏 — 저장한 뒤 **📋 1차 결과** 탭에서 기계와의 일치, "
+                   "다른 판정자와의 일치를 확인하세요.")
+        return
+    it = q[0]
+    _card(it, "sample1", done + 1, n, prof, {}, blind=blind)
+    _controls(it, "sample1", inst, who, role, False, prof, nxt=[(x, "sample1") for x in q[1:4]], blind=blind)
+
+
+KAPPA_TXT = [(0.8, "거의 완벽"), (0.6, "상당히 일치"), (0.4, "보통"), (0.2, "약함"), (-1, "낮음 — 판정 기준 정리 필요")]
+
+
+def _tab_sample_result(items, sample, records, prof, inst, plotly_layout):
+    canon = lr.canon_map(items)
+    sm = lr.sample_summary(sample, records, inst, canon)
+    if not sm["judged"]:
+        st.info("아직 저장된 1차 샘플 판정이 없습니다. 판정을 저장하면(링크 Commit 또는 직접 저장) 여기에 결과가 나옵니다.")
+        return
+    p, lo, hi = sm["accuracy"]
+    best = max(sm["pairs"], key=lambda x: x["n"]) if sm["pairs"] else None
+    kap = best["kappa"] if best else float("nan")
+    ktxt = "" if kap != kap else next(t for th, t in KAPPA_TXT if kap >= th)      # kap != kap → NaN(값 없음)
+    enough = sm["judged"] >= 10                       # 10장 미만이면 비율을 숫자로 내세우지 않음
+    _kpis([("기존 라벨 적합률 (1차)", f"{p:.0%}" if enough else "–",
+            f"합의 판정 {sm['judged']}/{sm['size']}장 · 95% {lo:.0%}–{hi:.0%}" if enough else
+            f"합의 판정 {sm['judged']}/{sm['size']}장 — 10장부터 표시", NAVY),
+           ("기계 제안과 일치", f"{sm['machine_agree'] / sm['judged']:.0%}", f"{sm['machine_agree']}/{sm['judged']}장", BLUE),
+           ("판정자 간 일치 (κ)", "–" if not best else f"{best['kappa']:.2f}",
+            (f"{best['a']}·{best['b']} {best['n']}장 · 일치 {best['agree']:.0%} · {ktxt}") if best else "2명 이상이 5장 이상 겹치면 표시", CYAN),
+           ("의견 갈림", f"{len(sm['split'])}장", "판정자끼리 다르게 본 카드 — 기준 논의 대상", AMBER)])
+    if enough:
+        st.caption(f"{lr.INST_NAME[inst]} 라벨 {len(items):,}건에 적용하면 약 {round((1 - p) * len(items)):,}건"
+                   f"(95% 범위 {round((1 - hi) * len(items)):,}–{round((1 - lo) * len(items)):,})이 NG 또는 다른 연구소 몫으로 "
+                   "추정됩니다. 1차 샘플은 무작위라 이 추정은 편향이 없지만, 장 수가 적어 범위가 넓습니다.")
+    by = {it["id"]: it for it in sample}
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        st.markdown('<div class="sect">카드별 결과 — 갈린 것·기계와 다른 것 먼저</div>', unsafe_allow_html=True)
+        rows = []
+        for i, v in sm["consensus"].items():
+            it = by[i]
+            mach = it["suggestion"] + (f":{it['to']}" if it["suggestion"] == "move" else "")
+            fmt = lambda lab: (lr.DECISION_KO[lab.split(":")[0]] +
+                               (f"→{lr.INST_NAME.get(lab.split(':')[1], '')}" if ":" in lab else ""))
+            rows.append({"갈림": "⚠️" if not v["unanimous"] else "", "기계 일치": "✔︎" if v["label"] == mach else "✘",
+                         "합의 판정": fmt(v["label"]), "기계 제안": fmt(mach), "점수": it["score"], "판정자 수": v["n"],
+                         "제목": _TAG.sub("", it["title"])[:90], "_k": (v["unanimous"], v["label"] == mach, -it["score"])})
+        df = pd.DataFrame(rows).sort_values("_k").drop(columns="_k")
+        st.dataframe(df, hide_index=True, width="stretch", height=min(400, 40 + 35 * len(df)))
+    with c2:
+        st.markdown('<div class="sect">점수 구간별 (1차 샘플)</div>', unsafe_allow_html=True)
+        bins = [(0, 40), (40, 60), (60, 80), (80, 90), (90, 101)]
+        brow = []
+        for a, b in bins:
+            ids = [i for i in sm["consensus"] if a <= by[i]["score"] < b]
+            k = sum(1 for i in ids if sm["consensus"][i]["decision"] == "ok")
+            brow.append({"점수": f"{a}–{min(b, 100) - (0 if b > 100 else 1)}", "판정": len(ids), "OK": k,
+                         "OK 비율": f"{k / len(ids):.0%}" if ids else "–"})
+        st.dataframe(pd.DataFrame(brow), hide_index=True, width="stretch")
+        st.caption("높은 점수 구간이 거의 다 OK면 τ를 85보다 낮춰도 됩니다. 1차 판정은 전체 지표·τ 계산에도 그대로 들어갑니다.")
+        st.markdown('<div class="sect">판정자 진행</div>', unsafe_allow_html=True)
+        st.dataframe(pd.DataFrame([{"판정자": w, "판정": c, "진행": c / sm["size"]} for w, c in
+                                   sorted(sm["progress"].items(), key=lambda x: -x[1])]),
+                     hide_index=True, width="stretch",
+                     column_config={"진행": st.column_config.ProgressColumn(min_value=0, max_value=1, format="percent")})
+        if sm["pairs"]:
+            st.dataframe(pd.DataFrame([{"판정자 쌍": f"{x['a']} · {x['b']}", "겹친 장": x["n"], "일치": x["agree"],
+                                        "κ": round(x["kappa"], 2) if x["kappa"] == x["kappa"] else None}
+                                       for x in sm["pairs"]]), hide_index=True, width="stretch",
+                         column_config={"일치": st.column_config.NumberColumn(format="percent")})
+
+
+def _tab_sample_guide(n):
+    st.markdown(f"""
+#### 1차 샘플은 무엇인가
+수자원환경연구소 라벨 가운데 **무작위로 고정한 {n}장**입니다. 누가 열어도 같은 {n}장이 같은 순서로 나옵니다.
+전체 판정(🏷️ 연구소 라벨 판정)을 시작하기 전에 이것부터 보면 세 가지를 바로 알 수 있습니다.
+
+1. **기존 라벨이 몇 % 맞는가** — 무작위 표본이라 편향 없는 추정 (95% 범위 함께)
+2. **기계 점수가 쓸 만한가** — 점수 구간별 OK 비율, 기계 제안과의 일치율
+3. **사람끼리 기준이 같은가** — 2명 이상이 같은 {n}장을 따로 보면 일치율·Cohen κ가 나오고, 갈린 카드가 기준 논의 목록이 됩니다
+
+#### 진행 방법
+- 기본은 **블라인드**(기계 점수·제안 가림)입니다. 기계에 끌려가지 않은 판단이어야 기계 일치율이 정직하게 나옵니다.
+- 판정자마다 따로 봅니다. 다른 사람이 이미 본 카드도 내 큐에서는 빠지지 않습니다.
+- 장당 30–40초, {n}장이면 30–40분 정도. 저장은 위쪽 저장 줄(링크 Commit 또는 직접 저장)로 합니다.
+- 여기서 한 판정은 감사 표본 판정으로 전체 지표·τ 계산에 그대로 들어갑니다 (같은 카드를 여러 명이 보면 최신 판정 기준).
+
+#### 끝나면
+**📋 1차 결과** 탭 → 갈린 카드로 판정 기준(예: 정책·거버넌스 논문은 수자원환경 OK인가 경영 이관인가)을 정하고,
+필요하면 `data_seed/label_review_profiles.json`의 키워드·문턱을 고친 뒤 전체 판정으로 넘어갑니다.
+""")
+
+
 def _tab_guide(direct, has_token):
     st.markdown(f"""
 #### 이 화면이 하는 일
@@ -591,15 +710,22 @@ director_passcode = "소장 암호"
 
 
 # ───────────────────────── 진입점 ─────────────────────────
-def render(load_json, plotly_layout: dict):
+def render(load_json, plotly_layout: dict, mode: str = "full"):
+    """mode='full' 전체 판정 화면, mode='sample' 1차 샘플(무작위 고정 n장, 판정자마다 따로·블라인드)."""
     st.markdown(CSS, unsafe_allow_html=True)
-    st.markdown('<div class="sect">🏷️ 연구소 라벨 판정 — 이 논문이 이 연구소 것이 맞나요?</div>', unsafe_allow_html=True)
-    st.caption("기계가 모든 논문에 적합도 점수를 매기고, 사람은 무작위 감사 표본과 기계가 헷갈리거나 바꾸자고 한 논문만 봅니다. "
-               "판정이 쌓이면 '사람이 안 봐도 되는 점수 문턱(τ)'을 다시 계산합니다. 원리는 맨 오른쪽 탭.")
     prof = load_json("label_review_profiles.json") or {}
     if not prof:
         st.error("data_seed/label_review_profiles.json을 읽지 못했습니다.")
         return
+    n1 = (prof.get("first_round") or {}).get("size", 60)
+    if mode == "sample":
+        st.markdown(f'<div class="sect">🧪 라벨 1차 샘플 — 무작위 {n1}장으로 먼저 감 잡기</div>', unsafe_allow_html=True)
+        st.caption(f"누가 열어도 같은 {n1}장(무작위 고정)을 판정자마다 따로, 기계 점수를 가린 채 봅니다. 끝나면 기존 라벨 적합률·"
+                   "기계 일치율·판정자 간 일치도가 나옵니다. 여기 판정은 전체 판정 지표에도 그대로 들어갑니다.")
+    else:
+        st.markdown('<div class="sect">🏷️ 연구소 라벨 판정 — 이 논문이 이 연구소 것이 맞나요?</div>', unsafe_allow_html=True)
+        st.caption("기계가 모든 논문에 적합도 점수를 매기고, 사람은 무작위 감사 표본과 기계가 헷갈리거나 바꾸자고 한 논문만 봅니다. "
+                   "판정이 쌓이면 '사람이 안 봐도 되는 점수 문턱(τ)'을 다시 계산합니다. 원리는 맨 오른쪽 탭.")
     sec = _secrets()
     has_token = bool(sec.get("github_token"))
     direct_possible = has_token and bool(sec.get("passcode"))
@@ -633,6 +759,9 @@ def render(load_json, plotly_layout: dict):
     if not items:
         st.warning("라벨 데이터를 불러오지 못했습니다 (data 브랜치 labels/domain·extract).")
         return
+    if direct and len(st.session_state.get("lr_buf", [])) >= prof.get("review", {}).get("save_every", 10):
+        ok, msg = _save_direct(who)                                   # 10건마다 자동 저장 (화면 그리기 전에)
+        (st.toast if ok else st.error)(f"자동 저장: {msg}")
     remote, n_files, err = _remote_records(inst)
     records = _dedupe(remote + st.session_state.get("lr_saved", []) + st.session_state.get("lr_buf", []))
     records = [r for r in records if r.get("inst") == inst]
@@ -667,6 +796,22 @@ def render(load_json, plotly_layout: dict):
                     st.session_state["lr_buf"] = []
                     _list_batches.clear()
                     st.rerun()
+
+    if mode == "sample":
+        sample = lr.first_round(items, prof)
+        rvw = lr.by_reviewer(records, inst, lr.canon_map(items))
+        tabs = st.tabs(["✍️ 샘플 판정", "📋 1차 결과", "ℹ️ 1차 샘플이란"])
+        with tabs[0]:
+            if not who:
+                st.info("위에 **판정자 이름**을 넣으면 1차 샘플 카드가 열립니다. 이름이 같아야 이어서 할 수 있습니다.")
+            else:
+                blind = st.toggle("기계 점수 가리기 (블라인드 판정 — 권장)", value=True, key="lr_blind")
+                _tab_sample(items, sample, rvw, prof, inst, who, role, blind)
+        with tabs[1]:
+            _tab_sample_result(items, sample, records, prof, inst, plotly_layout)
+        with tabs[2]:
+            _tab_sample_guide(len(sample))
+        return
 
     tabs = st.tabs(["✍️ 판정하기", "📊 현황·지표", "🗂️ 판정 기록", "ℹ️ 운영 원리"])
     with tabs[0]:
