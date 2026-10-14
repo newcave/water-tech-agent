@@ -56,7 +56,8 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "원천 변경 없음"; exit 0; fi
           git commit -q -m "kci raw: $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push -q
+          for i in 1 2 3; do git push -q && exit 0; echo "push 실패 ($i/3)"; sleep 20; done
+          exit 1
 
       - name: 상승 주제 분석 (집계만 출력)
         env:
