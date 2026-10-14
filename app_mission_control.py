@@ -28,16 +28,18 @@ import streamlit.components.v1 as components
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+import data_cache as dcache   # (dc는 지식노트 화면에서 Counter 변수명으로 쓰여 피함)
 import knowledge_notes as kn
 import label_review_page as lrp
 
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
                    layout="wide", initial_sidebar_state="expanded")
+st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이머가 '마지막 전체 그리기' 시각으로 씀
 
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.8 · 2026-10-14"
+APP_VERSION = "v2.9 · 2026-10-14"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -176,26 +178,26 @@ def load_json(rel_path: str):
         pass
     return None
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, show_spinner=False)
 def load_labels(rel_path: str):
     """`data` 브랜치 labels/ — 분류·집계 결과 (도메인 트렌드용)."""
     try:
         r = requests.get(
             f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/labels/{rel_path}",
-            params={"t": int(time.time() // 60)}, timeout=8)
+            params={"t": int(time.time() // 300)}, timeout=8)     # 라벨은 6시간 주기 → 5분 단위면 충분
         if r.status_code == 200:
             return r.json()
     except Exception:
         pass
     return None
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, show_spinner=False)
 def load_labels_jsonl(rel_path: str):
     """`data` 브랜치 labels/ 의 JSONL → list[dict] (파이프라인 런로그 등)."""
     try:
         r = requests.get(
             f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/labels/{rel_path}",
-            params={"t": int(time.time() // 60)}, timeout=8)
+            params={"t": int(time.time() // 300)}, timeout=8)     # 라벨은 6시간 주기 → 5분 단위면 충분
         if r.status_code == 200:
             out = []
             for line in r.text.split("\n"):        # splitlines()는 제목 속 유니코드 줄바꿈(U+2028)까지 잘라 JSON을 깨뜨림
@@ -227,9 +229,19 @@ def load_live(rel_path: str):
 
 @st.cache_data(ttl=25, show_spinner=False)
 def load_agents() -> dict:
+    """에이전트 상태 — data 브랜치 live/agents/*.json 을 동시에 받고, 없으면 로컬 data_seed/agents."""
     out = {}
-    for name in AGENT_META:                       # 레지스트리 순서
-        d = load_live(f"agents/{name}.json") or load_json(f"agents/{name}.json")
+    names = list(AGENT_META)
+    t = int(time.time() // 20)                     # raw CDN 캐시 무력화 (load_live와 같은 규칙)
+    texts = dcache.fetch_many([f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/live/agents/{n}.json?t={t}"
+                           for n in names], timeout=8)
+    for name, text in zip(names, texts):          # 레지스트리 순서
+        d = None
+        try:
+            d = json.loads(text) if text else None
+        except Exception:
+            d = None
+        d = d or load_json(f"agents/{name}.json")
         if d:
             out[name] = d
     try:                                          # 로컬에 미등록 에이전트가 있으면 자동 발견
@@ -241,15 +253,22 @@ def load_agents() -> dict:
     return out
 
 
-@st.cache_data(ttl=25, show_spinner=False)
+@st.cache_data(ttl=120, show_spinner=False)
 def load_ft_index() -> list:
-    """run 이력: ① ft_logs/index.json(raw, 노트북 v3가 유지) → ② API 폴더목록 → ③ 로컬"""
+    """run 이력: ① ft_logs/index.json(raw, 노트북 v3가 유지) → ② 로컬 폴더(배포된 main과 같음) → ③ API 폴더목록.
+    API는 비인증 시간당 60회 한도라 마지막에만 쓴다."""
     try:
         r = requests.get(_raw("ft_logs/index.json"), timeout=8)
         if r.status_code == 200:
             runs = r.json().get("runs", [])
             if runs:
                 return sorted(runs, key=lambda x: x.get("started", 0), reverse=True)
+    except Exception:
+        pass
+    try:
+        local = [{"id": p.name} for p in sorted(Path("ft_logs").iterdir(), reverse=True) if p.is_dir()]
+        if local:
+            return local
     except Exception:
         pass
     try:
@@ -313,24 +332,9 @@ def load_papers(tag: str) -> pd.DataFrame:
     return pd.DataFrame()
 
 
-@st.cache_data(ttl=1800, show_spinner=False)
 def load_data_jsonl(rel_path: str) -> list:
-    """`data` 브랜치의 JSONL → list[dict] (연구소 지식노트용, 30분 캐시). 깨진 줄은 건너뜀."""
-    try:
-        r = requests.get(f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/{rel_path}", timeout=40)
-        if r.status_code == 200:
-            out = []
-            for line in r.text.split("\n"):        # \n으로만 나눔 (U+2028 등이 든 제목 보호)
-                line = line.strip()
-                if line:
-                    try:
-                        out.append(json.loads(line))
-                    except Exception:
-                        pass
-            return out
-    except Exception:
-        pass
-    return []
+    """`data` 브랜치 JSONL → list[dict] (30분, 복사 없는 공용 캐시 — data_cache.py). 받은 목록은 고치지 말 것."""
+    return dcache.data_jsonl(rel_path)
 
 
 def ago(ts):
@@ -1515,10 +1519,8 @@ elif page == KN_PAGE:
         scope_label = SCOPE_LABEL.get(scope_key, scope_key or "-")
 
         with st.spinner(f"{iname} 문헌·라벨을 불러오는 중… (처음 한 번만 수 초)"):
-            papers = (load_data_jsonl(f"live/openalex/papers_{sel}.jsonl")
-                      + load_data_jsonl(f"labels/openalex_extended/papers_{sel}.jsonl"))
-            extract = load_data_jsonl(f"labels/extract/{sel}.jsonl")
-            domain = load_data_jsonl(f"labels/domain/{sel}.jsonl")
+            core = dcache.inst_core(sel)                  # 논문 메타·추출·도메인 4개 파일 동시 받기 (라벨 판정과 공용 캐시)
+            papers, extract, domain = core["papers"], core["extract"], core["domain"]
         dsum_kn = load_labels("domain/domain_summary_v0.1.json") or {}
         DN = {**kn.DOMAIN_NAMES, **{k: v.get("name", k) for k, v in (dsum_kn.get("domains") or {}).items()}}
 
@@ -1744,7 +1746,7 @@ elif page == KN_PAGE:
                         abstracts = None
                         if inc_abs:
                             ids = {r["id"] for r in recs}
-                            abstracts = {a.get("id"): a.get("abstract") for a in load_data_jsonl(f"labels/abstracts/{sel}.jsonl")
+                            abstracts = {a.get("id"): a.get("abstract") for a in dcache.inst_abstracts(sel)
                                          if a.get("id") in ids and a.get("abstract")}
                         brief30 = kn.briefing_markdown(sel, iname, r30, len(recs), 30, anchor, touch, net, DN)
                         data, nfiles = kn.build_vault_zip(sel, iname, recs, net, touch, gaps, brief30, scope_label,
@@ -1891,7 +1893,14 @@ st.markdown(f'<div class="ftr">K-water연구원 Water Co-Scientist · 데이터�
             unsafe_allow_html=True)
 
 # ── 자동 갱신 (지식노트·달성도 화면은 제외 — 큰 파일 재다운로드 방지, 달성도 데이터는 6시간 주기) ──
-if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE):     # 게임은 30초 새로고침 시 화면이 초기화되므로 제외
-    time.sleep(30)
-    st.cache_data.clear()
-    st.rerun()
+@st.fragment(run_every=30)
+def _auto_refresh_timer():
+    """30초마다 브라우저 타이머가 이 조각만 깨움 → 마지막 전체 그리기에서 25초 넘었으면 앱 전체를 다시 그림.
+    예전 방식(time.sleep(30) 뒤 전체 캐시 비우기)은 ① 대기 30초 동안 메뉴 클릭이 막히고 ② 모든 사용자의
+    캐시를 지워 다른 화면까지 매번 처음부터 받게 했다. 이제 실시간 데이터는 각 캐시의 짧은 TTL(25초)로 갱신된다."""
+    if time.time() - st.session_state.get("_full_run_ts", 0) >= 25:
+        st.rerun(scope="app")
+
+
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE):     # 판정·노트 화면은 입력 중 초기화되면 안 되므로 제외
+    _auto_refresh_timer()
