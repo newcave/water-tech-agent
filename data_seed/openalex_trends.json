@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1788953295,
-   "kwater": 0,
-   "related_1y": 16271
-  },
-  {
    "ts": 1788972080,
    "kwater": 0,
    "related_1y": 707
@@ -644,9 +639,15 @@
    "kwater": 412,
    "related_1y": 15724,
    "journal_corpus": 103585
+  },
+  {
+   "ts": 1791998132,
+   "kwater": 412,
+   "related_1y": 16483,
+   "journal_corpus": 103585
   }
  ],
- "updated": 1791979104,
+ "updated": 1791998132,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -663,6 +664,11 @@
    "name": "상하수도연구소",
    "keyword": "drinking water treatment",
    "recent_1y": 5786
+  },
+  "INST-04": {
+   "name": "물인프라안전연구소",
+   "keyword": "dam safety monitoring",
+   "recent_1y": 759
   },
   "INST-05": {
    "name": "물에너지연구소",
