@@ -41,10 +41,8 @@ PAGE = 100
 PAUSE = 1.0
 MAX_PAGES = 30
 HANGUL = re.compile("[가-힣]")
-TOPICS = json.loads((ROOT / "data_seed" / "search_topics.json").read_text(encoding="utf-8"))
-KW = TOPICS.get("kwater_affiliation", {})
-KW_QUERIES = KW.get("kci_affiliation", ["한국수자원공사", "K-water"])
-KW_PATTERN = re.compile(KW.get("kci_affiliation_pattern", "한국수자원공사|k-?water"), re.I)
+from kwater_rules import PATTERN as KW_PATTERN, QUERIES as KW_QUERIES, is_kwater
+KWATER_SCHEMA = 2      # 2: 검색에 걸린 논문을 모두 보관(규칙 탈락 포함) — K-water 여부는 분석 때 규칙+사람 판정으로
 
 
 def local(tag: str) -> str:
@@ -102,7 +100,7 @@ def record(rec) -> dict:
     info = next((x for x in rec.iter() if local(x.tag) == "articleInfo"), rec)
     titles, abstracts = texts(rec, "article-title"), texts(rec, "abstract")
     authors = authors_of(rec)
-    return {"kwater": any(KW_PATTERN.search(a["affil"]) for a in authors),
+    return {"kwater": is_kwater({"authors": authors}),        # 규칙만 적용한 1차 판정 (사람 판정은 분석 때)
             "authors": authors,"id": info.attrib.get("article-id") or first(rec, "uci") or first(rec, "doi"),
             "journal": first(rec, "journal-name"), "year": first(rec, "pub-year"),
             "mon": first(rec, "pub-mon"), "volume": first(rec, "volume"), "issue": first(rec, "issue"),
@@ -185,6 +183,8 @@ def main():
     d = RAW / "KWATER"
     d.mkdir(parents=True, exist_ok=True)
     m = manifest["journals"].setdefault("KWATER", {"name": "K-water 소속 논문 (KCI 전체)", "years": {}})
+    if m.get("schema") != KWATER_SCHEMA:                      # 보관 방식이 바뀌면 전 연도 다시 받기
+        m["years"], m["schema"] = {}, KWATER_SCHEMA
     for y in range(y0, y1 + 1):
         p = d / f"{y}.jsonl"
         done = m["years"].get(str(y), {}).get("complete")
@@ -197,16 +197,21 @@ def main():
             for r in kept:
                 raw_n += 1
                 k = r["id"] or (r["title_ko"], r["journal"], r["volume"], r["issue"])
-                if k not in seen and r["kwater"]:                 # 소속 문자열 재확인
+                if k not in seen:                                 # 규칙 탈락도 보관 (사람이 되살릴 수 있게)
                     seen.add(k)
+                    r["queries"] = [q]
                     recs.append(r)
+                else:
+                    next(x for x in recs if (x["id"] or (x["title_ko"], x["journal"], x["volume"], x["issue"])) == k)["queries"].append(q)
         if not recs and not p.exists():
             continue
         p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
-        m["years"][str(y)] = {"n": len(recs), "hits": raw_n, "complete": complete,
+        rule_n = sum(r["kwater"] for r in recs)
+        m["years"][str(y)] = {"n": len(recs), "rule_kwater": rule_n, "hits": raw_n, "complete": complete,
                               "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
-        print(f"   KWATER {y}: {len(recs)}건 (검색 결과 {raw_n}건 중 소속 확인{'' if complete else ' ⚠️누락'})")
-    print(f"✅ KWATER K-water 소속 논문: {sum(v['n'] for v in m['years'].values()):,}건")
+        print(f"   KWATER {y}: 검색 {len(recs)}건 중 규칙상 K-water {rule_n}건{'' if complete else ' ⚠️누락'}")
+    print(f"✅ KWATER 검색 결과 {sum(v['n'] for v in m['years'].values()):,}건 보관 "
+          f"(규칙상 K-water {sum(v.get('rule_kwater', 0) for v in m['years'].values()):,}건)")
     manifest["updated"] = int(time.time())
     manifest["source"] = "KCI(한국학술지인용색인) 데이터 활용 — 재배포 금지, 이용 목적 종료 시 파기"
     manifest_p.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

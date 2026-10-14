@@ -33,6 +33,10 @@ import numpy as np
 import pymannkendall as mk
 from kiwipiepy import Kiwi
 
+from kwater_rules import affil_is_kwater, is_kwater, load_overrides
+
+OV = load_overrides(os.environ.get("KCI_RAW_DIR", "private"))    # 사람 판정 (tools/kwater_hitl.html 결과)
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = Path(os.environ.get("KCI_RAW_DIR", "private")) / "raw"
 OUT = ROOT / "data_seed" / "kci_rising.json"
@@ -70,6 +74,8 @@ def load_docs(codes: list):
     for c in codes:
         for p in sorted((RAW / c).glob("*.jsonl")):
             rows = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
+            if c == "KWATER":                                    # 검색 결과 중 K-water 판정된 것만
+                rows = [r for r in rows if is_kwater(r, OV)]
             if not rows:
                 continue
             ko = [r for r in rows if HANGUL.search((r.get("title_ko") or "") + (r.get("abstract_ko") or ""))]
@@ -95,6 +101,8 @@ def kwater_summary(y1: int) -> dict:
     """K-water 소속 논문 집계 (공개용 — 개인 이름 없음, 기관명·건수만)."""
     by_year, journals, units, partners = Counter(), Counter(), Counter(), Counter()
     for r in read_raw("KWATER"):
+        if not is_kwater(r, OV):
+            continue
         y = int(r.get("year") or 0)
         by_year[y] += 1
         journals[r.get("journal")] += 1
@@ -102,7 +110,7 @@ def kwater_summary(y1: int) -> dict:
             aff = a.get("affil") or ""
             if not aff:
                 continue
-            if re.search(r"한국수자원공사|케이워터|k-?water|korea water resources? corp", aff, re.I):
+            if affil_is_kwater(aff, OV):
                 units[aff] += 1
             else:
                 partners[aff.split(",")[-1].strip()] += 1          # 기관 단위(마지막 쉼표 뒤)
@@ -112,9 +120,13 @@ def kwater_summary(y1: int) -> dict:
         for r in read_raw(code):
             y = int(r.get("year") or 0)
             tot[y] += 1
-            kw[y] += bool(r.get("kwater"))
+            kw[y] += is_kwater(r, OV)
         share[code] = {str(y): {"n": tot[y], "kwater": kw[y]} for y in sorted(tot) if y <= y1}
     return {"source": "KCI(한국학술지인용색인) 데이터 활용 — 집계만 공개, 원천 데이터·개인 이름 미포함",
+            "human_review": {"files": len(OV["files"]),
+                             "rules": {k: len(OV[k]) for k in ("affiliation_include", "affiliation_exclude",
+                                                               "paper_include", "paper_exclude")},
+                             "conflicts": sum(len(v) for v in OV["conflicts"].values())},
             "updated": int(time.time()),
             "by_year": {str(y): by_year[y] for y in sorted(by_year)},
             "total": sum(by_year.values()),
