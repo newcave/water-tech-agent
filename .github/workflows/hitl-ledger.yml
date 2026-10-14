@@ -1,0 +1,50 @@
+name: hitl-ledger
+
+# 판정 묶음 파일(labels/hitl/<INST>/<시각>_*.jsonl)이 data 브랜치에 올라오면 바로
+# ledger.jsonl 하나로 합치고 summary.json·final.csv로 정리한다 (hitl_ledger.py).
+# 이 워크플로가 만드는 커밋은 GITHUB_TOKEN이라 다시 이 워크플로를 깨우지 않는다.
+on:
+  push:
+    branches: [data]
+    paths:
+      - "labels/hitl/*/2*.jsonl"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hitl-ledger
+  cancel-in-progress: false
+
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: 체크아웃 (data)
+        uses: actions/checkout@v4
+        with:
+          ref: data
+
+      - name: 파이썬 준비
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 🧾 판정 대장 정리
+        run: python hitl_ledger.py
+
+      - name: 커밋·푸시
+        run: |
+          git config user.name  "hitl-ledger-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A labels/hitl
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"; exit 0
+          fi
+          git commit -m "🧾 HITL 판정 대장 정리 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin data && git push origin HEAD:data && exit 0
+            sleep 10
+          done
+          echo "push 실패(3회)"; exit 1
