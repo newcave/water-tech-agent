@@ -1,0 +1,73 @@
+{
+  "_doc": "연구소 라벨 판정(HITL)용 기계 적합도 점수 설정. 관제센터 '🏷️ 연구소 라벨 판정'이 읽는다. 키워드는 배열에 추가·삭제만 하면 다음 화면부터 반영된다. 영어 키워드는 제목·초록에서 단어 단위로 찾고, 끝에 *를 붙이면 앞부분 일치(hydrolog* → hydrology, hydrological). 한국어 키워드는 LLM이 뽑은 대상·문제 문구에서 부분 일치로 찾는다.",
+  "_version": "2026-10-14",
+  "pilot": ["INST-02"],
+  "method_institutes": ["INST-06", "INST-07"],
+  "_method_doc": "위성(INST-06)·AI(INST-07)는 '수단' 연구소라 도메인을 소유하지 않는다. 제목·초록의 수단 키워드로만 공유 후보를 내고, 본 연구소 적합도가 아주 낮을 때만 이관 후보로 올린다.",
+  "domain_affinity": {
+    "INST-01": {"W0": 1.0},
+    "INST-02": {"W1": 1.0, "W2": 0.8, "W3": 1.0, "W0": 0.4},
+    "INST-03": {"W4": 1.0, "W5": 1.0, "W6": 1.0, "W3": 0.4},
+    "INST-04": {"W7": 1.0, "W2": 0.4},
+    "INST-05": {"W8": 1.0, "W2": 0.3},
+    "INST-06": {"W9": 1.0},
+    "INST-07": {}
+  },
+  "keywords": {
+    "INST-01": {
+      "en": ["policy", "policies", "governance", "institution*", "stakeholder*", "tariff*", "pricing", "water price*", "economic*", "cost-benefit", "willingness to pay", "water utilit*", "utility management", "privati*", "public-private", "regulation", "regulatory", "legal", "water law", "water rights", "water market*", "financ*", "investment*", "business model*", "benchmarking", "customer*", "public participation", "socio-hydrolog*", "diplomacy", "transboundary", "water security", "integrated water resources management", "iwrm", "sustainable development goal*", "sdg*", "affordab*", "equity"],
+      "ko": ["정책", "거버넌스", "요금", "경제", "비용", "지불의사", "제도", "규제", "이해관계자", "경영", "투자", "재정", "물시장", "외교", "초국경", "형평", "사회수문", "물 안보", "의사결정 지원"]
+    },
+    "INST-02": {
+      "en": ["hydrolog*", "watershed*", "catchment*", "river basin*", "streamflow*", "stream flow", "runoff", "run-off", "river discharge", "rainfall", "precipitation", "flood*", "drought*", "groundwater", "aquifer*", "recharge", "evapotranspiration", "water balance", "water resource*", "water availability", "snowmelt", "snowpack", "glacier*", "reservoir*", "lake*", "wetland*", "estuar*", "riparian", "sediment*", "soil erosion", "water quality", "eutrophic*", "algal bloom*", "cyanobacteri*", "harmful algae", "chlorophyll", "nutrient*", "nitrogen", "phosphorus", "nitrate", "aquatic", "macroinvertebrate*", "fish", "ecological flow*", "environmental flow*", "river restoration", "ecosystem restoration", "rainfall-runoff", "swat", "water allocation", "river*", "stream", "hydrometeorolog*", "soil moisture"],
+      "ko": ["수문", "유역", "하천", "유량", "유출", "홍수", "가뭄", "강우", "강수", "지하수", "대수층", "함양", "증발산", "물수지", "수자원", "빙하", "적설", "저수지", "호수", "호소", "습지", "하구", "퇴적", "수질", "녹조", "조류", "남조", "영양염", "질소", "수생태", "어류", "저서", "생태유량", "환경유량", "토양 수분", "물 공급", "용수"]
+    },
+    "INST-03": {
+      "en": ["drinking water", "potable", "water treatment", "treatment plant*", "coagulation", "flocculation", "filtration", "membrane*", "reverse osmosis", "ultrafiltration", "nanofiltration", "disinfect*", "chlorin*", "ozonation", "by-product*", "distribution network*", "distribution system*", "water main*", "pipe network*", "leakage", "leak detection", "non-revenue", "water demand", "water meter*", "smart meter*", "wastewater", "sewage", "sewer*", "activated sludge", "reclaimed water", "water reuse", "desalination", "adsorption", "advanced oxidation", "micropollutant*", "pharmaceutical*", "pfas", "biofilm*", "legionella", "water supply system*", "urban water"],
+      "ko": ["정수", "음용수", "먹는물", "상수도", "관망", "배수관", "누수", "급수", "수요예측", "물 수요", "계량", "하수", "폐수", "재이용", "막여과", "멤브레인", "소독", "염소", "응집", "여과", "해수담수화", "담수화", "흡착", "미량오염", "도시 물"]
+    },
+    "INST-04": {
+      "en": ["dam safety", "structural health", "seismic", "earthquake*", "crack*", "concrete", "embankment*", "levee*", "dike*", "seepage", "slope stability", "deformation", "corrosion", "pipe failure*", "pipeline failure*", "pipe burst*", "aging infrastructure", "ageing infrastructure", "asset management", "inspection*", "non-destructive", "finite element", "dam break*", "dam failure*", "spillway*"],
+      "ko": ["댐 안전", "구조물", "균열", "콘크리트", "제방", "사면", "침하", "부식", "노후", "자산관리", "지진", "내진", "진단", "파손", "붕괴", "여수로", "안전관리"]
+    },
+    "INST-05": {
+      "en": ["hydropower", "hydroelectric*", "pumped storage", "pumped-storage", "turbine*", "photovoltaic*", "floating solar", "solar power", "renewable energy", "energy production", "energy consumption", "energy efficiency", "power generation", "electricity", "green hydrogen", "hydrogen production", "electroly*", "water-energy", "energy-water", "water–energy", "heat pump*", "hydrothermal", "tidal energy", "power plant*"],
+      "ko": ["수력", "발전량", "발전소", "양수발전", "양수 발전", "터빈", "태양광", "에너지", "수소", "수전해", "넥서스", "수열", "전력"]
+    },
+    "INST-06": {
+      "en": ["satellite*", "remote sensing", "remotely sensed", "sentinel-*", "sentinel", "landsat", "modis", "synthetic aperture radar", "sar", "insar", "altimetry", "altimeter*", "grace", "grace-fo", "swot", "smap", "gpm", "imerg", "earth observation", "multispectral", "hyperspectral", "uav*", "drone*", "lidar", "icesat-2", "icesat", "google earth engine"],
+      "ko": ["위성", "원격탐사", "원격 탐사", "영상", "레이더", "고도계", "센티널", "랜드샛", "드론", "라이다", "분광"]
+    },
+    "INST-07": {
+      "en": ["machine learning", "deep learning", "neural network*", "lstm", "long short-term memory", "convolutional", "cnn", "transformer*", "random forest*", "xgboost", "gradient boosting", "support vector", "artificial intelligence", "digital twin*", "large language model*", "llm*", "reinforcement learning", "anomaly detection", "explainable", "shap", "automl", "data-driven", "physics-informed", "graph neural", "ensemble learning", "attention mechanism"],
+      "ko": ["머신러닝", "기계학습", "딥러닝", "인공지능", "신경망", "디지털트윈", "디지털 트윈", "언어모델", "언어 모델", "이상 탐지", "강화학습", "데이터 기반"]
+    }
+  },
+  "nonresearch": {
+    "_doc": "연구 문헌이 아닌 것 (심사평·답변·안내·정오표). 유형 또는 제목 패턴이 맞으면 NG 후보.",
+    "types": ["peer-review", "editorial", "erratum", "paratext", "letter", "retraction"],
+    "title_patterns": ["^comment on\\b", "^reply (on|to)\\b", "^response to\\b", "^author'?s? (comment|response|reply)", "^review of\\b", "\\breferee\\b", "^rc\\d\\b", "^ac\\d\\b", "^(correction|erratum|corrigendum)\\b", "^call for papers", "^editorial\\b", "^front matter", "^back matter", "^table of contents"]
+  },
+  "weak_types": {"_doc": "연구이긴 하나 논문이 아닌 유형 — 점수에 곱하는 계수", "dataset": 0.85, "software": 0.8, "other": 0.85, "report": 0.9, "book": 0.9},
+  "scoring": {
+    "ver": "lr-0.1",
+    "w_domain": 0.5, "w_keyword": 0.5,
+    "kw_scale": 3.0, "title_weight": 3.0, "abstract_weight": 1.0, "abstract_once": 0.4, "ko_weight": 1.5,
+    "secondary_factor": 0.6,
+    "home_weight": 0.75, "margin_weight": 0.25,
+    "nonresearch_factor": 0.3,
+    "ng_home_max": 0.30, "ng_other_max": 0.45,
+    "move_min": 0.45, "move_margin": 0.10, "move_kw_min": 0.4,
+    "share_min": 0.60, "method_move_kw": 0.70, "method_move_margin": 0.15
+  },
+  "review": {
+    "_doc": "검토 큐·자동 확정 규칙. audit_rate: 점수와 무관하게 무작위로 뽑는 감사 표본 비율 (정확도 추정용). τ(자동 확정 문턱)는 판정이 쌓이면 tau_precision 이상이 되는 최저 점수로 다시 계산되고, 그 전에는 tau_provisional을 잠정값으로 쓴다. 기계의 NG·이관 제안은 사람이 판정하기 전에는 적용하지 않는다.",
+    "audit_rate": 0.2, "audit_target": 60, "audit_every": 4,
+    "tau_provisional": 85, "tau_precision": 0.95, "tau_min_n": 15, "tau_lower_bound": 0.90,
+    "save_every": 10
+  },
+  "first_round": {
+    "_doc": "1차 샘플: 감사 표본(무작위)에서 고정 순서로 앞의 size장. 판정자마다 같은 묶음을 따로 판정해 정확도·판정자 간 일치도를 먼저 본다. 여기 판정은 감사 표본 판정으로도 그대로 쓰인다.",
+    "size": 60, "label": "1차 샘플"
+  }
+}
