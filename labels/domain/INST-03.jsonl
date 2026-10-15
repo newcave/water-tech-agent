@@ -4411,3 +4411,14 @@
 {"id": "W7221531791", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Balikukup Village의 깨끗한 물 공급 시스템", "problem": "깨끗한 물 접근성 향상"}
 {"id": "W7221521895", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Biatan Lempake 지역의 안전하고 지속 가능한 식수 공급", "problem": "환경 영향 평가 및 관리 방안 검토"}
 {"id": "W7221552327", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 시스템의 생물막 형성", "problem": "생물막 형성 방지"}
+{"id": "W7221611616", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 우물 물", "problem": "세균 제거"}
+{"id": "W7221615405", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "체중 관리", "problem": "지속 가능한 체중 관리의 어려움"}
+{"id": "W7221632813", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "청정 음용수 공급", "problem": "산림 보호 및 관리 필요성 이해"}
+{"id": "W7221680967", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인수성 인산염", "problem": "효율적인 제거 및 회수 방법 개발"}
+{"id": "W7221682633", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 품질", "problem": "지하수의 물리화학적 및 미생물학적 품질 평가"}
+{"id": "W7221700359", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전염병", "problem": "전염병의 전파 및 예방"}
+{"id": "W7221709584", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미세 및 나노플라스틱 오염", "problem": "플라스틱 오염의 건강 위험과 정화 방법 탐색"}
+{"id": "W7221722941", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 화학적 안전성", "problem": "화학적 성분의 안전성 평가"}
+{"id": "W7221508547", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도 수생 환경의 카페인(CAF)과 N,N-디에틸-메타-톨루아미드(DEET)", "problem": "오염원과 생태적 위험 평가"}
+{"id": "W7221592810", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신성 당뇨병", "problem": "PFOS 노출로 인한 β-세포 기능 저하"}
+{"id": "W7221624834", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cobb 500 육계", "problem": "다중 마이코톡신 노출에 따른 건강과 생산성 저하"}

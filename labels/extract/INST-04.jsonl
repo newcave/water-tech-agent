@@ -537,3 +537,6 @@
 {"id": "W7221519009", "object": "Lam Chae Earth Dam", "problem": "지진 후 댐 안정성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221570026", "object": "예차 콘크리트-면 암석 채움 댐", "problem": "침투 및 변형 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221567874", "object": "댐의 안전 모니터링 시스템", "problem": "알람 피로 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221606181", "object": "지반 및 구조물의 변위", "problem": "안전 및 위험 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221688972", "object": "지반 및 구조물의 안전성과 성능", "problem": "안정성 조기 경고 및 설계 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221712948", "object": "지하 모니터링 시스템", "problem": "지하의 움직임이나 스트레스 감지", "relevant": true, "model": "gpt-4o-mini"}

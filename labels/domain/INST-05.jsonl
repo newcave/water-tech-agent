@@ -1584,3 +1584,6 @@
 {"id": "W7221559272", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 및 전력 관리 시스템", "problem": "에너지 손실 및 낭비 문제 해결"}
 {"id": "W7221564972", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원-에너지-식량(WEF) 연결성", "problem": "WEF 연결성의 상호작용과 무역오프 분석"}
 {"id": "W7221522204", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하류 다뉴브 강 범람원", "problem": "기후 변화에 따른 취약성 및 적응 방안 모색"}
+{"id": "W7221704753", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우즈베키스탄의 에너지 안전성", "problem": "에너지 자원의 효율적 사용 및 전력 생산 능력 확대"}
+{"id": "W7221632710", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 시스템의 파일", "problem": "수력 발전의 최대 출력 수준을 물 수위에 따라 수정하기"}
+{"id": "W7221636087", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "방글라데시 전력 공급 데이터셋", "problem": "전력 생성 예측 및 분석"}

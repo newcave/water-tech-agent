@@ -1906,3 +1906,7 @@
 {"id": "W7221538537", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비수익 수돗물(non-revenue water)", "problem": "비수익 수돗물 문제 해결"}
 {"id": "W7221575198", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아의 미션 크리티컬 데이터 센터", "problem": "전력 시스템의 신뢰성 및 에너지 회복력 향상"}
 {"id": "W7221517233", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "RSUD Tanjung Redeb의 운영 성과", "problem": "그린 빌딩 원칙에 기반한 운영 관리 전략 분석"}
+{"id": "W7221728289", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "호기성 슬러지 관리", "problem": "대중의 선호를 이해하고 개선하기"}
+{"id": "W4414057576", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Coal Creek 유역의 기초유량", "problem": "기초유량 분리 방법의 정확성 평가"}
+{"id": "W7221574746", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "California의 Sacramento-San Joaquin Delta의 청색조류 유해 조류 발생", "problem": "CHAB 독성 위험 예측"}
+{"id": "W7221698456", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 서비스 품질", "problem": "서비스 품질 개선 전략 분석"}

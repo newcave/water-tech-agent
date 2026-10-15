@@ -839,3 +839,5 @@
 {"id": "W7221444945", "object": "글리셔가 있는 유역의 수자원", "problem": "글리셔 유래 수원의 특성 동위원소 신호 식별", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221512691", "object": "중앙 히말라야 유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221521224", "object": "중앙 히말라야 유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221586714", "object": "Golmud 강 유역의 지하수 저장", "problem": "지하수 변동을 추정하고 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221690819", "object": "공유 수자원 관리", "problem": "기후 변화에 따른 비정상성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
