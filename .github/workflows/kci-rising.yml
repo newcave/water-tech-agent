@@ -11,9 +11,6 @@ on:
       full:
         description: "전 연도 재수집 (1=예)"
         default: "0"
-  push:                          # 작업 브랜치 시험 실행 (공개 저장소 커밋은 main에서만)
-    branches: [claude/wizardly-fermi-mrihtw]
-    paths: [agents/kci_collect.py, agents/kci_rising.py, .github/workflows/kci-rising.yml]
 
 permissions:
   contents: write

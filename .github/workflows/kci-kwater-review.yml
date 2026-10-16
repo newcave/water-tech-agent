@@ -3,9 +3,6 @@ name: kci-kwater-review
 # K-water 소속 논문 분류 검증표 → 비공개 저장소 review/ (로그에는 건수만)
 on:
   workflow_dispatch: {}
-  push:                          # 작업 브랜치에서 바로 실행
-    branches: [claude/wizardly-fermi-mrihtw]
-    paths: [agents/kci_kwater_review.py, .github/workflows/kci-kwater-review.yml]
 
 permissions:
   contents: read
