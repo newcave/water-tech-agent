@@ -6,9 +6,6 @@ on:
   schedule:
     - cron: "41 20 * * 0"        # 매주 일요일 20:41 UTC (월요일 05:41 KST)
   workflow_dispatch: {}
-  push:                          # 작업 브랜치 시험 실행 (커밋은 main에서만)
-    branches: [claude/wizardly-fermi-mrihtw]
-    paths: [agents/kci_counts.py, .github/workflows/kci-counts.yml]
 
 permissions:
   contents: write
