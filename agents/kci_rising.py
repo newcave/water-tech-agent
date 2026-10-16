@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-kci_rising — 한국 저널(KCI) 상승 연구주제 탐지 v0.1
+kci_rising — 한국 저널(KCI) 상승 연구주제 탐지 v0.2 (유니그램 + 바이그램)
 
 입력: {KCI_RAW_DIR}/raw/{코드}/{연도}.jsonl  (kci_collect.py가 비공개 저장소에 모은 원천)
 출력: data_seed/kci_rising.json               (공개 — 용어·연도별 빈도와 검정 결과 같은 집계만)
@@ -13,6 +13,13 @@ kci_rising — 한국 저널(KCI) 상승 연구주제 탐지 v0.1
   2. 상대 문서빈도 rel_y = DF_y / N_y  (N_y = 그 해 논문 수, 진행 중인 올해 제외)
   3. Hamed–Rao 수정 Mann–Kendall + Sen 기울기 → Benjamini–Hochberg FDR (q<0.05)
   4. 공출현 네트워크: 상승 용어끼리 최근 5년 논문에서 함께 나온 횟수 → Louvain 커뮤니티
+  5. 바이그램(v0.2): 띄어 쓴 두 명사(복합어)가 바로 이어지거나 '의'로 이어진 구 — "홍수 피해", "저수지 운영",
+     "하천의 수질" → "하천 수질". 붙여 쓴 형태("하천수질")도 같은 구로 센다. 그 붙여 쓴 형태가 이미 단어 탭의
+     상승 용어면 중복이라 뺀다. 구는 드물어(연도별 0이 많음) MK 검정력이 낮으므로, 같은 상대빈도를
+     준포아송 회귀(연도 추세, 분모 = 그 해 논문 수, 과산포 보정)로 검정 → BH FDR(구끼리 따로).
+     두 단어 모두 단어 단위로는 상승 목록에 없으면 '구로만 보이는 신호'(novel).
+     구에서는 뜻이 살아나는 머리말(관리·대응·구축·개선)은 불용어에서 풀고, 수식어(실제·일반 등)와
+     숫자에 붙은 단위어(2차원의 '차원')는 구를 만들지 않는다. 제목과 초록 사이는 끊는다.
 
 범위: 'J11'(한국수자원학회논문집 단독), 'J11+J12'(대한토목학회논문집 포함),
       'KWATER'(KCI 전체의 K-water 소속 논문 — 분모도 K-water 논문 수)로 계산.
@@ -61,6 +68,12 @@ based paper proposed approach case korea korean
 일부 대부분 다수 상대 가지 이상 이하 이내 정도 수치 결과값 분석결과 연구결과 본연구 본논문 선행연구 기존연구
 시사점 의미 의의 중요성 효율 효율성 적절 유의 유의미 통계 비교분석 사용 경우 형태 방식 구성 과정 단계 수행
 """.split())
+BI_HEAD_OK = {"관리", "대응", "구축", "개선"}   # 바이그램에서는 살려 두는 불용어 (예: 저수지 관리, 가뭄 대응)
+BI_MODIFIER = set("실제 일반 각종 해당 여러 모든 새로운 기타 각각 동일 특정 전반 일련 다음 아래 위 상기".split())
+BI_STOP = (STOP - BI_HEAD_OK) | BI_MODIFIER
+BI_MIN_TOTAL_DF = 8                # 바이그램은 드물어 문턱을 낮춤
+BI_MIN_YEARS_PRESENT = 3
+BI_MIN_RECENT_DOCS = 5
 HANGUL_MIN_RATIO = 0.5             # 이 비율 미만 초록 보유 학회지·연도는 제외 (초록 유무 편향 방지)
 ACRONYM = re.compile(r"^[A-Z][A-Z0-9]{1,11}$")   # 영문은 전부 대문자인 약어(LSTM·SWAT·GIS·SSP)만
 HANGUL = re.compile("[가-힣]")
@@ -86,7 +99,10 @@ def load_docs(codes: list):
                 continue
             for r in ko:
                 y = int(r.get("year") or p.stem)
-                docs.setdefault(y, []).append(" ".join(x for x in (r.get("title_ko"), r.get("abstract_ko")) if x))
+                ti, ab = r.get("title_ko"), r.get("abstract_ko")
+                text = " ".join(x for x in (ti, ab) if x)
+                # 제목·초록 경계 위치 — 바이그램만 여기서 끊는다 (단어 추출은 v0.1과 똑같은 글로 해 결과 불변)
+                docs.setdefault(y, []).append((text, len(ti) if ti and ab else None, c))
     return docs, excl
 
 
@@ -136,24 +152,68 @@ def kwater_summary(y1: int) -> dict:
             "journal_share": share}
 
 
-def terms_of(kiwi: Kiwi, text: str) -> set:
-    """붙어 있는 명사열 → 복합어. 한 글자 한글·불용어·숫자 제외."""
-    out, run, last_end = set(), [], -1
-    for tok in kiwi.tokenize(text) + [None]:
-        if tok is not None and tok.tag in NOUN and (not run or tok.start == last_end):
-            run.append(tok.form)
+def _compound(run: list) -> str:
+    w = "".join(run)
+    if not HANGUL.search(w):                          # 영문: 약어(대문자 포함)만, 일반 영어 단어 제외
+        w = w if ACRONYM.match(w) else ""
+    return w
+
+
+def _ok(w: str, stop: set) -> bool:
+    return bool(w) and len(w) >= 2 and w not in stop and w.lower() not in stop and not w.isdigit()
+
+
+def terms_and_phrases(kiwi: Kiwi, text: str, boundary: int | None = None) -> tuple:
+    """한 번 형태소 분석해 (유니그램 집합, 바이그램 집합).
+    유니그램: 붙어 있는 명사열 → 복합어 (v0.1과 동일). 바이그램: 복합어 둘이 띄어쓰기만 두고 이어지거나
+    '의'(관형격 조사) 하나로 이어진 구. 그 사이에 다른 형태소(동사·부호 등)가 끼면 끊는다."""
+    units, run, last_end = [], [], -1                  # units: ("N"|"n", 복합어) | ("G", "의") | ("X", None)
+    num_end, num_run = -2, False                       # "n": 숫자 바로 뒤에 붙은 명사열 (2차원 → 차원) — 단어로는 쓰고 구는 안 만듦
+    for tok in kiwi.tokenize(text):
+        if boundary is not None and tok.start > boundary:  # 제목 → 초록으로 넘어가는 자리: 구를 끊음 (단어엔 영향 없음)
+            if run:
+                units.append(("n" if num_run else "N", _compound(run)))
+                run = []
+            units.append(("X", None))
+            boundary = None
+        if tok.tag in NOUN:
+            if run and tok.start == last_end:
+                run.append(tok.form)
+            else:
+                if run:
+                    units.append(("n" if num_run else "N", _compound(run)))
+                run = [tok.form]
+                num_run = tok.start == num_end
             last_end = tok.start + tok.len
             continue
         if run:
-            w = "".join(run)
-            if not HANGUL.search(w):                  # 영문: 약어(대문자 포함)만, 일반 영어 단어 제외
-                w = w if ACRONYM.match(w) else ""
-            if len(w) >= 2 and w not in STOP and w.lower() not in STOP and not w.isdigit():
-                out.add(w)
+            units.append(("n" if num_run else "N", _compound(run)))
             run = []
-        if tok is not None and tok.tag in NOUN:
-            run, last_end = [tok.form], tok.start + tok.len
-    return out
+        if tok.tag == "SN":
+            num_end = tok.start + tok.len
+        units.append(("G", "의") if tok.tag == "JKG" and tok.form == "의" else ("X", None))
+    if run:
+        units.append(("n" if num_run else "N", _compound(run)))
+    uni = {w for k, w in units if k in ("N", "n") and _ok(w, STOP)}
+    bi = set()
+    for i in range(len(units) - 1):
+        if units[i][0] != "N":
+            continue
+        if units[i + 1][0] == "N":
+            j = i + 1
+        elif units[i + 1][0] == "G" and i + 2 < len(units) and units[i + 2][0] == "N":
+            j = i + 2
+        else:
+            continue
+        a, b = units[i][1], units[j][1]
+        if a != b and _ok(a, BI_STOP) and _ok(b, BI_STOP):
+            bi.add(f"{a} {b}")
+    return uni, bi
+
+
+def terms_of(kiwi: Kiwi, text: str) -> set:
+    """붙어 있는 명사열 → 복합어. 한 글자 한글·불용어·숫자 제외."""
+    return terms_and_phrases(kiwi, text)[0]   # (v0.1 호환용)
 
 
 def bh(pvals: np.ndarray) -> np.ndarray:
@@ -179,19 +239,10 @@ def trend_test(rel: np.ndarray):
         return mk.original_test(rel), "original(HR 분산<0)"
 
 
-def analyze(kiwi: Kiwi, docs: dict, y1: int) -> dict:
-    years = [y for y in sorted(docs) if y <= y1]
-    N = np.array([len(docs[y]) for y in years], dtype=float)
-    doc_terms = {y: [terms_of(kiwi, t) for t in docs[y]] for y in years}
-    df = {}
-    for i, y in enumerate(years):
-        for ts in doc_terms[y]:
-            for w in ts:
-                df.setdefault(w, np.zeros(len(years)))[i] += 1
-
+def _trend_rows(df: dict, N: np.ndarray, min_total: int, min_years: int, min_recent: int) -> list:
     rows = []
     for w, v in df.items():
-        if v.sum() < MIN_TOTAL_DF or (v > 0).sum() < MIN_YEARS_PRESENT:
+        if v.sum() < min_total or (v > 0).sum() < min_years:
             continue
         rel = v / N
         t, how = trend_test(rel)
@@ -201,15 +252,127 @@ def analyze(kiwi: Kiwi, docs: dict, y1: int) -> dict:
                      "p": float(t.p), "sen": float(t.slope),
                      "recent_share": round(float(rel[-3:].mean()), 5), "recent_docs": recent_docs,
                      "lift": round(float(rel[-3:].mean() / early), 2) if early else None,
-                     "minor": recent_docs < MIN_RECENT_DOCS,
+                     "minor": recent_docs < min_recent,
                      "df": [int(x) for x in v]})
+    return rows
+
+
+def poisson_trend(c: np.ndarray, N: np.ndarray):
+    """준포아송 회귀 log E[c_y] = log N_y + b0 + b1·(연도 중심화) → (b1, p). 과산포는 Pearson χ²/(n−2)로 보정.
+    드문 구(연도별 0이 많음)에서 MK보다 검정력이 높다. 반복가중최소제곱(IRLS)."""
+    import math
+    n = len(c)
+    t = np.arange(n, dtype=float) - (n - 1) / 2
+    X = np.column_stack([np.ones(n), t])
+    off = np.log(N)
+    b = np.array([np.log(max(c.sum(), 0.5) / N.sum()), 0.0])
+    for _ in range(50):
+        eta = X @ b + off
+        mu = np.exp(np.clip(eta, -30, 30))
+        z = eta - off + (c - mu) / mu
+        XtW = X.T * mu
+        try:
+            nb = np.linalg.solve(XtW @ X, XtW @ z)
+        except np.linalg.LinAlgError:
+            return 0.0, 1.0
+        if np.max(np.abs(nb - b)) < 1e-8:
+            b = nb
+            break
+        b = nb
+    mu = np.exp(np.clip(X @ b + off, -30, 30))
+    try:
+        cov = np.linalg.inv((X.T * mu) @ X)
+    except np.linalg.LinAlgError:
+        return float(b[1]), 1.0
+    phi = max(1.0, float(((c - mu) ** 2 / mu).sum()) / max(1, n - 2))
+    se = math.sqrt(max(cov[1, 1] * phi, 1e-12))
+    zst = b[1] / se
+    return float(b[1]), float(math.erfc(abs(zst) / math.sqrt(2)))
+
+
+def _bigram_rows(dfb: dict, N: np.ndarray) -> list:
+    rows = []
+    for w, v in dfb.items():
+        if v.sum() < BI_MIN_TOTAL_DF or (v > 0).sum() < BI_MIN_YEARS_PRESENT:
+            continue
+        rel = v / N
+        b1, p = poisson_trend(v, N)
+        with np.errstate(invalid="ignore"):
+            sen = mk.sens_slope(rel).slope
+        recent_docs = int(v[-3:].sum())
+        early = rel[:max(3, len(rel) // 2)].mean()
+        slope = float(np.polyfit(np.arange(len(rel), dtype=float), rel, 1)[0])   # 비중의 연 변화(선형) — 드문 구는 Sen이 0이 되기 쉬워 정렬용
+        rows.append({"term": w, "total": int(v.sum()), "test": "quasi_poisson", "rate": round(float(np.expm1(b1)), 4),
+                     "p": p, "sen": float(sen), "slope": slope,
+                     "recent_share": round(float(rel[-3:].mean()), 5), "recent_docs": recent_docs,
+                     "lift": round(float(rel[-3:].mean() / early), 2) if early else None,
+                     "minor": recent_docs < BI_MIN_RECENT_DOCS, "df": [int(x) for x in v], "_b1": b1})
+    return rows
+
+
+def _fdr_split(rows: list) -> tuple:
     q = bh(np.array([r["p"] for r in rows])) if rows else []
     for r, qq in zip(rows, q):
         r["q"] = float(qq)
         r["p"] = round(r["p"], 6)
     sig = [r for r in rows if np.isfinite(r["q"]) and r["q"] < Q]
-    rising = sorted((r for r in sig if r["sen"] > 0), key=lambda r: (r["minor"], -r["sen"]))
-    falling = sorted((r for r in sig if r["sen"] < 0), key=lambda r: (r["minor"], r["sen"]))
+    up = (lambda r: r["_b1"] > 0) if rows and "_b1" in rows[0] else (lambda r: r["sen"] > 0)   # 구: 회귀 기울기 부호
+    key = "slope" if rows and "slope" in rows[0] else "sen"
+    rising = sorted((r for r in sig if up(r)), key=lambda r: (r["minor"], -r[key]))
+    falling = sorted((r for r in sig if not up(r) and (r.get("_b1", r["sen"]) < 0)), key=lambda r: (r["minor"], r[key]))
+    return rising, falling
+
+
+def analyze(kiwi: Kiwi, docs: dict, y1: int) -> dict:
+    years = [y for y in sorted(docs) if y <= y1]
+    N = np.array([len(docs[y]) for y in years], dtype=float)
+    parsed = {y: [terms_and_phrases(kiwi, t, bd) for t, bd, _ in docs[y]] for y in years}
+    codes = {y: [c for _, _, c in docs[y]] for y in years}
+    doc_terms = {y: [u for u, _ in parsed[y]] for y in years}
+    doc_phr = {y: [b for _, b in parsed[y]] for y in years}
+    df = {}
+    for i, y in enumerate(years):
+        for ts in doc_terms[y]:
+            for w in ts:
+                df.setdefault(w, np.zeros(len(years)))[i] += 1
+
+    rows = _trend_rows(df, N, MIN_TOTAL_DF, MIN_YEARS_PRESENT, MIN_RECENT_DOCS)
+    rising, falling = _fdr_split(rows)
+
+    # ── 바이그램: 띄어 쓴 구 + 붙여 쓴 형태를 한 구로 → 단어 탭 상승 용어와 같은 건 제외 → 준포아송 추세 → FDR ──
+    uni_rising_all = {r["term"] for r in rising}
+    seen_bi = Counter(w for y in years for bs in doc_phr[y] for w in bs)
+    comp2bi = {w.replace(" ", ""): w for w in seen_bi}            # "하천수질" → "하천 수질"
+    dfb, j11b = {}, Counter()
+    for i, y in enumerate(years):
+        for ts, bs, c in zip(doc_terms[y], doc_phr[y], codes[y]):
+            present = set(bs) | {comp2bi[u] for u in ts if u in comp2bi}
+            for w in present:
+                dfb.setdefault(w, np.zeros(len(years)))[i] += 1
+            if c == "J11":
+                j11b.update(present)
+    multi = len(set(c for y in years for c in codes[y])) > 1
+    variants = 0
+    for w in list(dfb):
+        if w.replace(" ", "") in uni_rising_all:                  # 붙여 쓴 형태가 이미 단어 탭에 상승 용어로 있음
+            del dfb[w]
+            variants += 1
+    brows = _bigram_rows(dfb, N)
+    b_rising, b_falling = _fdr_split(brows)
+    for r in brows:
+        r.pop("_b1", None)
+    uni_rising = {r["term"] for r in rising if not r["minor"]}
+    n_all = float(N.sum())
+    for r in b_rising + b_falling:
+        a, b = r["term"].split(" ", 1)
+        r["parts"] = [a, b]
+        r["parts_rising"] = [x for x in (a, b) if x in uni_rising]
+        r["novel"] = not r["parts_rising"]
+        if multi:                                        # 수자원학회+토목학회: 수자원학회 논문에서 나온 비율 (토목 구조 분야 구와 구분)
+            r["j11_share"] = round(j11b[r["term"]] / max(1, r["total"]), 2)
+        da, db = df.get(a), df.get(b)                   # 결합도(PMI, log2): 두 단어가 우연보다 얼마나 자주 붙어 나오나
+        r["pmi"] = (round(float(np.log2(r["total"] * n_all / (da.sum() * db.sum()))), 2)
+                    if da is not None and db is not None and da.sum() and db.sum() else None)
 
     # ── 공출현 네트워크 + Louvain (상승 용어, 최근 NET_WINDOW년) ──
     top = [r["term"] for r in rising if not r["minor"]][:NET_TERMS]
@@ -238,6 +401,9 @@ def analyze(kiwi: Kiwi, docs: dict, y1: int) -> dict:
             "n_rising": len(rising), "n_falling": len(falling),
             "n_hr_fallback": sum(r["test"] != "hamed_rao" for r in rows),
             "rising": rising[:150], "falling": falling[:60],
+            "bigram": {"test": "quasi_poisson", "tested": len(brows), "n_rising": len(b_rising),
+                       "n_falling": len(b_falling), "same_as_word_excluded": variants, "min_total": BI_MIN_TOTAL_DF,
+                       "head_ok": sorted(BI_HEAD_OK), "rising": b_rising[:150], "falling": b_falling[:60]},
             "network": {"window": years[-NET_WINDOW:], "nodes": [{"term": t, "df": dfr[t]} for t in top],
                         "edges": [[a, b, d["weight"]] for a, b, d in G.edges(data=True)],
                         "communities": comms}}
@@ -250,7 +416,7 @@ def main():
     y1 = time.gmtime().tm_year - 1
     kiwi = Kiwi()
     out = {"method": "Kiwi 명사(복합어) 문서빈도 → 상대 문서빈도 → Hamed–Rao 수정 MK + Sen → BH FDR "
-                     "→ 상승 용어 공출현 네트워크 → Louvain",
+                     "→ 상승 용어 공출현 네트워크 → Louvain · 바이그램(띄어 쓴 명사구) 같은 검정",
            "source": "KCI(한국학술지인용색인) 데이터 활용 — 집계만 공개, 원천 데이터 미포함",
            "q": Q, "updated": int(time.time()), "scopes": {}}
     for name, codes in SCOPES.items():
@@ -266,6 +432,12 @@ def main():
         for r in res["rising"][:12]:
             print(f"     ↑ {r['term']}: {r['sen'] * 1000:+.2f}‰/년 · 최근 {r['recent_docs']}편 · "
                   f"lift {r['lift']} · q={r['q']:.2g}{' (저빈도)' if r['minor'] else ''}")
+        bg = res["bigram"]
+        print(f"     ▸ 바이그램: 검정 {bg['tested']} → 상승 {bg['n_rising']} · 하강 {bg['n_falling']} "
+              f"(단어 탭과 같은 것 제외 {bg['same_as_word_excluded']})")
+        for r in bg["rising"][:15]:
+            print(f"     ⇈ {r['term']}: {r['slope'] * 1000:+.2f}‰/년 · 연 {r['rate'] * 100:+.0f}% · 최근 {r['recent_docs']}편 · lift {r['lift']} · "
+                  f"q={r['q']:.2g}{' · 구로만' if r['novel'] else ''}{' (저빈도)' if r['minor'] else ''}")
         for c in res["network"]["communities"][:6]:
             print(f"     ◇ 커뮤니티 {c['id']} ({c['size']}): {', '.join(c['terms'][:8])}")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

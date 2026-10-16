@@ -39,7 +39,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v2.9 · 2026-10-14"
+APP_VERSION = "v3.0 · 2026-10-16"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -1531,6 +1531,7 @@ elif page == KN_PAGE:
             net = kn.topic_network(recs)
             comms = net["communities"]
             touch = kn.rising_touchpoints(recs, scope) if scope else []
+            btouch = kn.bigram_touchpoints(recs, scope, include_minor=True) if scope else []
             gaps = kn.gap_candidates(touch, scope) if scope else []
             rising_hit = {t["term"] for t in touch if t["n_inst"]}
             today_kst = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
@@ -1549,8 +1550,8 @@ elif page == KN_PAGE:
                 f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
                 for l, v, s_, c in kpis) + '</div>', unsafe_allow_html=True)
 
-            t1, t2, t3, t4, t5 = st.tabs(["🗺️ 지식 지도", "📒 토픽 노트", "📈 상승 용어 접점·공백", "🗞️ 최근 브리핑",
-                                          "⬇️ 노트 내보내기"])
+            t1, t2, t3, tb, t4, t5 = st.tabs(["🗺️ 지식 지도", "📒 토픽 노트", "📈 상승 용어 접점·공백",
+                                              "🔗 상승 구(바이그램)", "🗞️ 최근 브리핑", "⬇️ 노트 내보내기"])
             cidx = {c["id"]: i for i, c in enumerate(comms)}
 
             # ── 탭1: 지식 지도 (연구소 핵심어 네트워크) ──
@@ -1693,6 +1694,128 @@ elif page == KN_PAGE:
                             "우리 문헌": t["n_inst"], "비율(%)": round(t["share"] * 100, 1)}
                             for t in sorted(touch, key=lambda t: (-t["n_inst"], -t["sen"]))]),
                             hide_index=True, width="stretch")
+
+            # ── 탭3-2: 상승 구(바이그램) — 한 단어로는 흔한 말도 두 단어 구로 보면 쓰임이 드러남 ──
+            with tb:
+                bmeta = (scope or {}).get("bigram") or {}
+                if not bmeta:
+                    st.info("이 범위에는 아직 바이그램 분석 결과가 없습니다 — 주간 KCI 분석(kci-rising)이 다음에 돌면 채워집니다.")
+                else:
+                    yrs = scope.get("years") or []
+                    st.caption("국내 학회지 국문 제목·초록에서 **두 단어로 된 구**(띄어 쓴 두 명사가 바로 이어지거나 ‘의’로 이어진 것 — "
+                               "예: 침수 피해, 하천의 수질 → 하천 수질, 붙여 쓴 ‘하천수질’도 같은 구로 셈)의 비중이 해마다 오르는지 봅니다. "
+                               "구는 드물어 연도별 0이 많으므로 단어 탭의 MK 대신 **준포아송 회귀**(분모 = 그 해 논문 수, 과산포 보정)로 "
+                               "추세를 검정하고 FDR q<0.05만 남겼습니다. 붙여 쓴 형태가 이미 단어 탭의 상승 용어면 중복이라 뺐습니다. "
+                               "**구로만** = 두 단어 모두 단어 단위로는 상승 목록에 없는데 구로 묶으면 오르는 신호.")
+                    nb = [t for t in btouch if not t["minor"]]
+                    kb_ = [("국내 상승 구", f"{bmeta.get('n_rising', 0)}", f"검정 {bmeta.get('tested', 0):,}개 중 · {scope_label}", NAVY),
+                           ("구로만 보이는 신호", f"{sum(1 for t in nb if t['novel'])}", "두 단어 모두 단어로는 상승 아님", "#7C3AED"),
+                           ("우리 문헌과 접점", f"{sum(1 for t in nb if t['n_inst'])}", f"{iname} 대상·문제에 두 단어가 함께", col),
+                           ("아직 없는 구", f"{sum(1 for t in nb if not t['n_inst'])}", "우리 문헌 0편 — 공백 후보", AMBER)]
+                    st.markdown('<div class="kpis">' + "".join(
+                        f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.35rem">{v}</div>'
+                        f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>' for l, v, s_, c in kb_) + "</div>",
+                        unsafe_allow_html=True)
+                    BLENS = {"국내 상승 순": "국내 학회지에서 비중이 가장 가파르게 오르는 구",
+                             "신흥 접점": "국내 최근 급증(최근3년/과거 2배 이상)인데 우리 문헌은 1–6편 — 초기 신호",
+                             "공백": "국내에서는 오르는데 우리 문헌에는 아직 없는 구 (‘기계 학습’ 같은 방법 구는 우리 쪽 글이 "
+                                     "개선 대상·문제만 담아 원래 잘 안 걸립니다 — 대상 구 위주로 보세요)",
+                             "우리 접점 순": "우리 문헌에 많이 나오는 순 (연구소가 이미 하는 것 확인용)"}
+                    c1_, c2_, c3_, c4_ = st.columns([4, 2, 2, 2])
+                    lens = c1_.segmented_control("보는 관점", list(BLENS), default="국내 상승 순", key="kn_bi_lens") or "국내 상승 순"
+                    only_novel = c2_.toggle("구로만 보이는 신호만", value=False, key="kn_bi_novel")
+                    with_minor = c3_.toggle("저빈도 포함", value=False, key="kn_bi_minor",
+                                            help="국내 최근 3년 5편 미만인 구도 보기")
+                    has_j11 = any(t.get("j11_share") is not None for t in btouch)
+                    water_bi = c4_.toggle("수자원학회 쪽 구만", value=True, key="kn_bi_water", disabled=not has_j11,
+                                          help="수자원학회+토목학회 범위에서, 수자원학회 논문에서 나온 비율이 20% 미만인 구"
+                                               "(콘크리트·포장 등 토목 구조 분야)를 숨깁니다.") if has_j11 else False
+                    st.caption(f"**{lens}** — {BLENS[lens]}")
+                    pool = [t for t in btouch if (with_minor or not t["minor"]) and (not only_novel or t["novel"])
+                            and (not water_bi or (t.get("j11_share") or 0) >= 0.2)]
+                    LIFT = lambda t: t["lift"] if t["lift"] is not None else 999.0       # 과거 0편 → '신규'(최상위)
+                    LTXT = lambda t: "신규" if t["lift"] is None else f"{t['lift']}배"
+                    if lens == "국내 상승 순":
+                        view = sorted(pool, key=lambda t: -t["sen"])
+                    elif lens == "신흥 접점":
+                        view = sorted([t for t in pool if 1 <= t["n_inst"] <= 6 and LIFT(t) >= 2],
+                                      key=lambda t: (-LIFT(t), -t["sen"]))
+                    elif lens == "공백":
+                        view = sorted([t for t in pool if not t["n_inst"]], key=lambda t: -t["sen"])
+                    else:
+                        view = sorted([t for t in pool if t["n_inst"]], key=lambda t: (-t["n_inst"], -t["sen"]))
+                    if not view:
+                        st.info("이 관점·조건에 맞는 구가 없습니다.")
+                    else:
+                        a_, b_ = st.columns([3, 2])
+                        with a_:
+                            rr = view[:20][::-1]
+                            xval = {"국내 상승 순": lambda t: t["sen"] * 1000, "공백": lambda t: t["sen"] * 1000,
+                                    "신흥 접점": lambda t: min(LIFT(t), 60), "우리 접점 순": lambda t: t["n_inst"]}[lens]
+                            xlab = {"국내 상승 순": "국내 기울기 (‰/년)", "공백": "국내 기울기 (‰/년)",
+                                    "신흥 접점": "최근3년 ÷ 과거 비중 (배, 과거 0편 '신규'는 60으로 표시)", "우리 접점 순": "우리 연구소 문헌 수"}[lens]
+                            fig = go.Figure(go.Bar(
+                                x=[xval(t) for t in rr], y=[t["term"] for t in rr], orientation="h",
+                                marker=dict(color=["#7C3AED" if t["novel"] else col for t in rr],
+                                            line=dict(color="#FFFFFF", width=2)),
+                                customdata=[[round(t["sen"] * 1000, 2), LTXT(t), t["recent_docs"], t["n_inst"],
+                                             "구로만" if t["novel"] else "단어도 상승: " + "·".join(t["parts_rising"])] for t in rr],
+                                hovertemplate="<b>%{y}</b><br>국내 기울기 %{customdata[0]}‰/년 · 최근/과거 %{customdata[1]}"
+                                              "<br>국내 최근3년 %{customdata[2]}편 · 우리 문헌 %{customdata[3]}편"
+                                              "<br>%{customdata[4]}<extra></extra>"))
+                            fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title=xlab,
+                                              yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
+                            fig.update_xaxes(gridcolor="#EEF2F7")
+                            st.plotly_chart(fig, width="stretch", key="kn_bi_bar")
+                            st.markdown(f'<span class="note"><span style="color:#7C3AED">■</span> 구로만 보이는 신호 &nbsp; '
+                                        f'<span style="color:{col}">■</span> 단어로도 오르는 구</span>', unsafe_allow_html=True)
+                        with b_:
+                            pick = st.selectbox("구 자세히 보기", [t["term"] for t in view[:40]], key="kn_bi_pick")
+                            t_ = next(t for t in view if t["term"] == pick)
+                            if yrs and t_["series"]:
+                                f2 = go.Figure(go.Scatter(x=yrs[:len(t_["series"])], y=[v * 100 for v in t_["series"]],
+                                                          mode="lines+markers", line=dict(color="#7C3AED" if t_["novel"] else col),
+                                                          hovertemplate="%{x}: %{y:.2f}%<extra></extra>"))
+                                f2.update_layout(height=200, yaxis_title="국내 논문 중 비중(%)", **PLOTLY_LAYOUT)
+                                f2.update_xaxes(gridcolor="#EEF2F7")
+                                f2.update_yaxes(gridcolor="#EEF2F7", rangemode="tozero")
+                                st.plotly_chart(f2, width="stretch", key="kn_bi_line")
+                            st.markdown(
+                                f'<div class="note">국내 기울기 <b>{t_["sen"] * 1000:.2f}‰/년</b>'
+                                + (f' (연 {t_["rate"] * 100:+.0f}%)' if t_.get("rate") is not None else "")
+                                + f' · 최근/과거 <b>{LTXT(t_)}</b> · '
+                                f'최근3년 {t_["recent_docs"]}편 · 누적 {t_["total"]}편 · q={t_["q"]:.2g}'
+                                + (f' · 결합도 {t_["pmi"]:+.1f}' if t_["pmi"] is not None else "") + "<br>"
+                                + ("<b style='color:#7C3AED'>구로만 보이는 신호</b> — " + " · ".join(t_["parts"]) + " 각각은 단어로 상승 아님"
+                                   if t_["novel"] else "단어로도 상승: " + " · ".join(t_["parts_rising"]))
+                                + "</div>", unsafe_allow_html=True)
+                            by_id_b = {r["id"]: r for r in recs}
+                            if t_["ids"]:
+                                st.markdown(f"**{iname} 문헌 {t_['n_inst']}편** (두 단어 함께 · 붙어 나온 것 {t_['n_tight']}편)")
+                                for pid in t_["ids"][:6]:
+                                    r = by_id_b[pid]
+                                    st.markdown(f"- [{r['title'][:80]}]({r['doi'] or '#'}) · {r['year'] or '-'}"
+                                                f"  \n  <span class='note'>대상: {r['object']} / 문제: {r['problem']}</span>",
+                                                unsafe_allow_html=True)
+                            else:
+                                st.caption(f"{iname} 수집 문헌의 대상·문제에는 아직 없습니다 — 수집 키워드 보강·기획 검토 후보.")
+                    fall = [r for r in (bmeta.get("falling") or []) if not r.get("minor")
+                            and (not water_bi or (r.get("j11_share") or 0) >= 0.2)][:16]
+                    if fall:
+                        st.markdown('<div class="sect">국내에서 줄어드는 구</div>', unsafe_allow_html=True)
+                        st.markdown('<div style="line-height:2.2">' + " ".join(
+                            f'<span class="gchip" style="background:#F1F5FA;color:#64748B;display:inline-block;white-space:nowrap">{r["term"]}</span>'
+                            for r in fall) + "</div>", unsafe_allow_html=True)
+                    with st.expander("표로 보기 — 상승 구 전체 (연도별 비중 추이 포함)"):
+                        st.dataframe(pd.DataFrame([{
+                            "구": t["term"], "구로만": "✔" if t["novel"] else "", "국내 기울기(‰/년)": round(t["sen"] * 1000, 2),
+                            "최근/과거": LTXT(t), "연 증가율(%)": round(t["rate"] * 100) if t.get("rate") is not None else None,
+                            "국내 최근3년": t["recent_docs"], "우리 문헌": t["n_inst"],
+                            "수자원학회 비율": t.get("j11_share"),
+                            "추이": [v * 100 for v in t["series"]], "저빈도": "✔" if t["minor"] else ""}
+                            for t in sorted(btouch, key=lambda t: -t["sen"])]),
+                            hide_index=True, width="stretch",
+                            column_config={"추이": st.column_config.LineChartColumn("연도별 비중(%)", width="medium")})
 
             # ── 탭4: 최근 브리핑 ──
             with t4:
