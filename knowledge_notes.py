@@ -206,6 +206,31 @@ def rising_touchpoints(recs: list[dict], scope: dict, include_minor: bool = Fals
     return out
 
 
+def bigram_touchpoints(recs: list[dict], scope: dict, include_minor: bool = False) -> list[dict]:
+    """KCI 상승 바이그램(두 단어 구) 각각이 연구소 문헌(대상·문제)에 몇 편 나오는지.
+    우리 쪽 글은 짧은 대상·문제 문구라, 두 단어가 한 문헌에 함께 있으면 접점으로 센다(붙어 있으면 n_tight에도)."""
+    bg = (scope or {}).get("bigram") or {}
+    den = (scope or {}).get("denominator") or []
+    out = []
+    for r in bg.get("rising", []):
+        if r.get("minor") and not include_minor:
+            continue
+        parts = r.get("parts") or r.get("term", "").split(" ", 1)
+        if len(parts) != 2:
+            continue
+        ka, kb = parts[0].lower(), parts[1].lower()
+        ids = [x["id"] for x in recs if ka in x["compact"] and kb in x["compact"]]
+        tight = sum(1 for x in recs if ka + kb in x["compact"])
+        out.append({"term": r["term"], "parts": parts, "sen": r.get("slope", r.get("sen", 0.0)), "lift": r.get("lift"),
+                    "rate": r.get("rate"), "j11_share": r.get("j11_share"),
+                    "recent_docs": r.get("recent_docs", 0), "total": r.get("total", 0), "q": r.get("q"),
+                    "minor": bool(r.get("minor")), "novel": bool(r.get("novel")),
+                    "parts_rising": r.get("parts_rising") or [], "pmi": r.get("pmi"),
+                    "n_inst": len(ids), "n_tight": tight, "share": len(ids) / max(1, len(recs)), "ids": ids,
+                    "series": [round(d / n, 5) if n else 0.0 for d, n in zip(r.get("df") or [], den)]})
+    return out
+
+
 def gap_candidates(touch: list[dict], scope: dict, top: int = 12, min_inst: int = 2) -> list[dict]:
     """결합 공백 후보: 두 상승 용어를 연구소가 각각은 다루지만 함께 다룬 문헌이 없는 조합.
     국내 학회지에서도 함께 나온 적이 드물수록(서로 다른 묶음, 공출현 적음) 위로 올린다."""
