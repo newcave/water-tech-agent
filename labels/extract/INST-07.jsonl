@@ -683,3 +683,8 @@
 {"id": "W7220943551", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221462127", "object": "복원된 하천 범람원에서의 탈질화 잠재력", "problem": "탈질화 잠재력에 대한 환경적 요인 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221578348", "object": "남극 빙상 내 온도", "problem": "깊이 해상 온도 구조를 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221819080", "object": "지구의 길이 변화(LOD)", "problem": "정확한 예측을 위한 지구 질량 재분배 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221781509", "object": "조절된 열대 유역의 건기 물 관리", "problem": "건기 물 스트레스 평가의 구조적 맹점 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221812383", "object": "수문학적 모델링", "problem": "비가역적 흐름과 수문학적 관계를 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221788446", "object": "지구 표면 과정", "problem": "위험 완화 및 물 안전 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221785598", "object": "세이디셰히르의 분수 방출", "problem": "정확한 방출 예측", "relevant": true, "model": "gpt-4o-mini"}

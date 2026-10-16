@@ -1981,3 +1981,9 @@
 {"id": "W4414057576", "object": "Coal Creek 유역의 기초유량", "problem": "기초유량 분리 방법의 정확성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221574746", "object": "California의 Sacramento-San Joaquin Delta의 청색조류 유해 조류 발생", "problem": "CHAB 독성 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221698456", "object": "공공 서비스 품질", "problem": "서비스 품질 개선 전략 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221763411", "object": "호텔 산업의 지속 가능성", "problem": "비용 절감 및 에너지 소비 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221789489", "object": "폐 바이오매스에서 수소 생산 시스템", "problem": "수소 생산 최적화 및 제어", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221834948", "object": "수자원 관리에서의 전기 저항 탐사", "problem": "효율적인 수리학적 조사 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221828256", "object": "Patos–Mirim–São Gonçalo 시스템의 기상 데이터", "problem": "효율적인 데이터 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221594073", "object": "도시 주민의 삶", "problem": "도시의 '도로 지퍼' 효과로 인한 혼란을 완화하려는", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221805168", "object": "수돗물 파이프 네트워크", "problem": "실패와 관련된 변수 조합 식별", "relevant": true, "model": "gpt-4o-mini"}

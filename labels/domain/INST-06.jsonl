@@ -3557,3 +3557,9 @@
 {"id": "W7221726762", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 나무의 수분 사용", "problem": "극한 열에서의 수분 증산 반응 이해"}
 {"id": "W7221521607", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 유출", "problem": "정확한 유출 추정"}
 {"id": "W7221699009", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐기물 덤프", "problem": "정확한 토지 이용 분류"}
+{"id": "W7221755087", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "우간다의 경제적 취약성 및 기후 회복력", "problem": "경제적 취약성 및 기후 회복력 개선"}
+{"id": "W7221774303", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "베네치아 석호의 염분 동역학", "problem": "염분 변동성을 이해하고 개선하기"}
+{"id": "W7221793349", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 불안정성", "problem": "강우로 인한 산사태 발생 원인 규명"}
+{"id": "W7221819099", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중앙 페르가나 저수지 주변 농업 경관", "problem": "경관 변화 및 식생 피복의 공간적 동역학 평가"}
+{"id": "W7221765878", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "습지 보존", "problem": "AI–GIS 기술을 통한 보존 개선"}
+{"id": "W7221788446", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구 표면 과정", "problem": "위험 완화 및 물 안전 보장"}

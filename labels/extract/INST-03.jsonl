@@ -4507,3 +4507,12 @@
 {"id": "W7221508547", "object": "인도 수생 환경의 카페인(CAF)과 N,N-디에틸-메타-톨루아미드(DEET)", "problem": "오염원과 생태적 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221592810", "object": "임신성 당뇨병", "problem": "PFOS 노출로 인한 β-세포 기능 저하", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221624834", "object": "Cobb 500 육계", "problem": "다중 마이코톡신 노출에 따른 건강과 생산성 저하", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221748448", "object": "장내 염증", "problem": "IBS에서 IBD로의 진행 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221772302", "object": "대사 건강과 혈당 웰빙", "problem": "대사 건강을 지원하는 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221777006", "object": "아르센이 오염된 음용수", "problem": "추적 수준의 아르센 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221785312", "object": "도시 물 시스템의 회복력", "problem": "물질 선택 및 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221787939", "object": "식수원 지역의 2-MIB", "problem": "모니터링 빈도와 샘플 가용성 제한 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221799012", "object": "가정에서 저장된 음용수의 안전성", "problem": "저장된 물에서 수인성 병원체 위험을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221823450", "object": "인간의 항생제 내성 획득", "problem": "환경에서 인간으로의 항생제 내성 전파 경로를 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221750084", "object": "비침식성 역류 질환 환자", "problem": "역류 관련 증상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221750578", "object": "알츠하이머병 위험", "problem": "TCBQ의 신경독성 메커니즘 규명", "relevant": true, "model": "gpt-4o-mini"}

@@ -537,3 +537,4 @@
 {"id": "W7221606181", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 및 구조물의 변위", "problem": "안전 및 위험 관리 개선"}
 {"id": "W7221688972", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반 및 구조물의 안전성과 성능", "problem": "안정성 조기 경고 및 설계 검증"}
 {"id": "W7221712948", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 모니터링 시스템", "problem": "지하의 움직임이나 스트레스 감지"}
+{"id": "W7221646468", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 및 댐 구조", "problem": "디지털 기술을 통한 구조 건강 모니터링 개선"}
