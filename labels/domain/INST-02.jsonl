@@ -798,3 +798,6 @@
 {"id": "W7221521224", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙 히말라야 유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가"}
 {"id": "W7221586714", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Golmud 강 유역의 지하수 저장", "problem": "지하수 변동을 추정하고 이해하기"}
 {"id": "W7221690819", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공유 수자원 관리", "problem": "기후 변화에 따른 비정상성 문제 해결"}
+{"id": "W7222088669", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파라과이 강의 수리학", "problem": "수리학적 변동성 이해하기"}
+{"id": "W7222188288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "연어 및 송어 개체군", "problem": "서식지 복원 기여도 이해하기"}
+{"id": "W7221809735", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Taita Hills 열대 수자원 시스템", "problem": "수자원 시스템의 수리적 기능 이해"}

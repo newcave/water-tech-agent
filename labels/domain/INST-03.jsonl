@@ -4431,3 +4431,13 @@
 {"id": "W7221823450", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간의 항생제 내성 획득", "problem": "환경에서 인간으로의 항생제 내성 전파 경로를 정량화하기"}
 {"id": "W7221750084", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비침식성 역류 질환 환자", "problem": "역류 관련 증상 개선"}
 {"id": "W7221750578", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알츠하이머병 위험", "problem": "TCBQ의 신경독성 메커니즘 규명"}
+{"id": "W7221858056", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ekpoma의 지하수", "problem": "수질 개선 및 오염 가능성 평가"}
+{"id": "W7221877936", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재발성 신석증 환자", "problem": "임상 및 실험실 변화 평가"}
+{"id": "W7221944661", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 위생적 특성", "problem": "식수의 오염 및 처리 효율성 분석"}
+{"id": "W7222007336", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상업용 RO 플랜트", "problem": "물의 품질을 개선하고 비즈니스 운영을 지원하기 위한 맞춤형 설계 필요"}
+{"id": "W7222064522", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 품질", "problem": "현대 기술을 이용한 오염수 처리 효율 평가 및 최적 하이브리드 처리 방안 제안"}
+{"id": "W7222096516", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 수돗물에서의 수인성 병원체", "problem": "항균 효능 평가"}
+{"id": "W7222188105", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "C. difficile로 인한 아동의 설사", "problem": "항생제 내성 문제 해결"}
+{"id": "W7221793651", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "항생제 오염이 있는 수계", "problem": "항생제 오염 제거"}
+{"id": "W7222386502", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 식수", "problem": "안전한 식수 유지하기"}
+{"id": "W7222204298", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소의 결정뇨", "problem": "결정뇨의 유형 및 원인 규명"}

@@ -3601,3 +3601,7 @@
 {"id": "W7221819099", "object": "중앙 페르가나 저수지 주변 농업 경관", "problem": "경관 변화 및 식생 피복의 공간적 동역학 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221765878", "object": "습지 보존", "problem": "AI–GIS 기술을 통한 보존 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221788446", "object": "지구 표면 과정", "problem": "위험 완화 및 물 안전 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221880784", "object": "미국 남서부의 산불 심각도", "problem": "산불로 인한 식생 사망 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222154427", "object": "수중 환경에서의 대기 및 태양 반사 보정 프로세서", "problem": "대기 및 태양 반사 보정에 필요한 방사 전이 시뮬레이션 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222235713", "object": "Kishchay 강의 계곡", "problem": "계곡 변화 분석 및 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222309519", "object": "하천의 퇴적물 저장 및 이동 시간", "problem": "퇴적물 저장 및 이동 시간 이해하기", "relevant": true, "model": "gpt-4o-mini"}

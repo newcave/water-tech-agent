@@ -1987,3 +1987,9 @@
 {"id": "W7221828256", "object": "Patos–Mirim–São Gonçalo 시스템의 기상 데이터", "problem": "효율적인 데이터 관리", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221594073", "object": "도시 주민의 삶", "problem": "도시의 '도로 지퍼' 효과로 인한 혼란을 완화하려는", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221805168", "object": "수돗물 파이프 네트워크", "problem": "실패와 관련된 변수 조합 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221898519", "object": "수자원 인프라 시스템", "problem": "지속 가능성 성능 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222051881", "object": "해양 생태계의 서식지", "problem": "서식지 결핍 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222297042", "object": "도시 블루-그린 인프라(BGI) 계획", "problem": "이해관계자 우선순위 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222136144", "object": "도시 배수 시스템", "problem": "지능형 관리 및 제어 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222236435", "object": "대규모 데이터 센터의 전력 수요", "problem": "전력망 통합 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221774702", "object": "물 관리 및 수질 개선", "problem": "AI 접근법의 효과 검증", "relevant": true, "model": "gpt-4o-mini"}

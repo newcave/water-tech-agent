@@ -541,3 +541,4 @@
 {"id": "W7221688972", "object": "지반 및 구조물의 안전성과 성능", "problem": "안정성 조기 경고 및 설계 검증", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221712948", "object": "지하 모니터링 시스템", "problem": "지하의 움직임이나 스트레스 감지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221646468", "object": "수력 발전 및 댐 구조", "problem": "디지털 기술을 통한 구조 건강 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222154538", "object": "토목 구조물의 건강 상태", "problem": "구조물의 손상 탐지 및 특성화", "relevant": true, "model": "gpt-4o-mini"}

@@ -1619,3 +1619,6 @@
 {"id": "W7221831866", "object": "전국의 전력 부문 탈탄소화 속도", "problem": "거버넌스 품질이 전환에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221816320", "object": "고립된 전력 시스템의 탈탄소화", "problem": "비용 효율적인 탈탄소화 경로 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221776282", "object": "이주 어류", "problem": "수명 주기 완수를 위한 서식지 접근 차단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222057650", "object": "Wushe Dam의 저수 용량", "problem": "퇴적물 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222325471", "object": "Kumano River basin", "problem": "하천 생태계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221802108", "object": "노르웨이 수력 발전의 분배 효과", "problem": "비용과 이익의 재분배를 탐색하다", "relevant": true, "model": "gpt-4o-mini"}

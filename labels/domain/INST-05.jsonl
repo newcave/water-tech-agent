@@ -1590,3 +1590,6 @@
 {"id": "W7221831866", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전국의 전력 부문 탈탄소화 속도", "problem": "거버넌스 품질이 전환에 미치는 영향 이해하기"}
 {"id": "W7221816320", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고립된 전력 시스템의 탈탄소화", "problem": "비용 효율적인 탈탄소화 경로 평가"}
 {"id": "W7221776282", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이주 어류", "problem": "수명 주기 완수를 위한 서식지 접근 차단"}
+{"id": "W7222057650", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wushe Dam의 저수 용량", "problem": "퇴적물 문제 해결"}
+{"id": "W7222325471", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kumano River basin", "problem": "하천 생태계 개선"}
+{"id": "W7221802108", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이 수력 발전의 분배 효과", "problem": "비용과 이익의 재분배를 탐색하다"}

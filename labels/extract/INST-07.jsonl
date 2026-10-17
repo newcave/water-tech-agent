@@ -688,3 +688,4 @@
 {"id": "W7221812383", "object": "수문학적 모델링", "problem": "비가역적 흐름과 수문학적 관계를 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221788446", "object": "지구 표면 과정", "problem": "위험 완화 및 물 안전 보장", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221785598", "object": "세이디셰히르의 분수 방출", "problem": "정확한 방출 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222349138", "object": "비정상 수송 시스템", "problem": "모델의 예측 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
