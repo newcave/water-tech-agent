@@ -4441,3 +4441,10 @@
 {"id": "W7221793651", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "항생제 오염이 있는 수계", "problem": "항생제 오염 제거"}
 {"id": "W7222386502", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 식수", "problem": "안전한 식수 유지하기"}
 {"id": "W7222204298", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소의 결정뇨", "problem": "결정뇨의 유형 및 원인 규명"}
+{"id": "W7222765956", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "양측 상악 결손", "problem": "기능적 재건을 위한 치료 방법 평가"}
+{"id": "W7213567638", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유기 오염물질", "problem": "DBP 및 지속성 유기 오염물질 제거"}
+{"id": "W7221905008", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 우수 유출수에서의 PFAS", "problem": "PFAS의 분포 및 제거 방법 이해하기"}
+{"id": "W7222411620", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Eket Local Government Area의 지하수", "problem": "지하수의 품질과 음용수 적합성 평가"}
+{"id": "W7222419568", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "담수화 플랜트", "problem": "기존 담수화 방식의 의존성 문제 해결"}
+{"id": "W7222419963", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 품질", "problem": "물의 탁도 제거"}
+{"id": "W7222464752", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신 결과", "problem": "임신 중 유해한 결과를 초래하는 안드로겐의 일시적 증가"}

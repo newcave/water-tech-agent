@@ -801,3 +801,6 @@
 {"id": "W7222088669", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파라과이 강의 수리학", "problem": "수리학적 변동성 이해하기"}
 {"id": "W7222188288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "연어 및 송어 개체군", "problem": "서식지 복원 기여도 이해하기"}
 {"id": "W7221809735", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Taita Hills 열대 수자원 시스템", "problem": "수자원 시스템의 수리적 기능 이해"}
+{"id": "W7222662480", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Imnavait Creek의 수퍼 영구 동토 열 수문학", "problem": "여름 강수 변동성이 미치는 영향 분석"}
+{"id": "W7222734968", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chirchik River basin의 수자원", "problem": "빙하 손실과 지하수 추정 비교"}
+{"id": "W7222581877", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 수자원 관리 관행", "problem": "기후 변화에 대한 적응 전략 개발"}

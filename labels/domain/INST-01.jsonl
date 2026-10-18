@@ -1922,3 +1922,8 @@
 {"id": "W7222136144", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 배수 시스템", "problem": "지능형 관리 및 제어 개선"}
 {"id": "W7222236435", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대규모 데이터 센터의 전력 수요", "problem": "전력망 통합 문제 해결"}
 {"id": "W7221774702", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 관리 및 수질 개선", "problem": "AI 접근법의 효과 검증"}
+{"id": "W7222477256", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카두나 폴리테크닉의 전력 공급 안정성", "problem": "만성적인 전력 중단 해결"}
+{"id": "W7222723052", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "캠퍼스 화장실 시설", "problem": "공공 건강 위험 제거"}
+{"id": "W7222465807", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아의 산업 자산", "problem": "누출 방지 및 안전성 향상"}
+{"id": "W7222649423", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중증 환자의 예후", "problem": "PiCCO의 예후 유용성 평가"}
+{"id": "W7222306721", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서부 세인트클레어 호수의 유해한 바닥 시안조류 Microseira wollei", "problem": "모니터링 및 분포 특성화"}

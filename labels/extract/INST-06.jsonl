@@ -3605,3 +3605,13 @@
 {"id": "W7222154427", "object": "수중 환경에서의 대기 및 태양 반사 보정 프로세서", "problem": "대기 및 태양 반사 보정에 필요한 방사 전이 시뮬레이션 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222235713", "object": "Kishchay 강의 계곡", "problem": "계곡 변화 분석 및 위험 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222309519", "object": "하천의 퇴적물 저장 및 이동 시간", "problem": "퇴적물 저장 및 이동 시간 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213485101", "object": "강의 수질 및 양", "problem": "위성 데이터를 활용한 강의 퇴적물, 유량 및 탄소 플럭스 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222759855", "object": "농업 경관 내 나무 덮개 변화", "problem": "농업 확장과 개발로 인한 나무 덮개 손실 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221862956", "object": "알프스 지역의 잔해 유출", "problem": "물의 출처 기여도를 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221980076", "object": "작은 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 통한 메탄 배출량 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222006390", "object": "미국 남서부의 산불 심각도", "problem": "산불로 인한 식생 사망 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222015991", "object": "소규모 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 활용한 메탄 배출량 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222141679", "object": "소규모 담수체에서의 메탄 배출량", "problem": "위성 원격 감지 기술을 통한 메탄 배출량 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222331609", "object": "Cedrela odorata L.의 나무 고리 너비", "problem": "기후와 수분 가용성의 관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222679732", "object": "Poyang Lake의 자연 수면", "problem": "하이퍼스펙트럼 원격 감지 데이터 수집 및 품질 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222306721", "object": "서부 세인트클레어 호수의 유해한 바닥 시안 박테리아 Microseira wollei", "problem": "모니터링 및 분포 특성화", "relevant": true, "model": "gpt-4o-mini"}
