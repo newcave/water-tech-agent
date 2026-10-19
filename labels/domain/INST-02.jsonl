@@ -804,3 +804,4 @@
 {"id": "W7222662480", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Imnavait Creek의 수퍼 영구 동토 열 수문학", "problem": "여름 강수 변동성이 미치는 영향 분석"}
 {"id": "W7222734968", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chirchik River basin의 수자원", "problem": "빙하 손실과 지하수 추정 비교"}
 {"id": "W7222581877", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 수자원 관리 관행", "problem": "기후 변화에 대한 적응 전략 개발"}
+{"id": "W7222822131", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "정확한 수문 기상 관측 개선"}

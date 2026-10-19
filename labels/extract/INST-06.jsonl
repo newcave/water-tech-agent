@@ -3615,3 +3615,6 @@
 {"id": "W7222331609", "object": "Cedrela odorata L.의 나무 고리 너비", "problem": "기후와 수분 가용성의 관계 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222679732", "object": "Poyang Lake의 자연 수면", "problem": "하이퍼스펙트럼 원격 감지 데이터 수집 및 품질 관리", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222306721", "object": "서부 세인트클레어 호수의 유해한 바닥 시안 박테리아 Microseira wollei", "problem": "모니터링 및 분포 특성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222847874", "object": "Machilipatnam 해안선", "problem": "해안선 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222850106", "object": "저수지", "problem": "정확한 수위 및 하류 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222438368", "object": "서안지구의 농업 토지", "problem": "정착지 패턴 변화 분석", "relevant": true, "model": "gpt-4o-mini"}

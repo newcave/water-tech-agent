@@ -1927,3 +1927,6 @@
 {"id": "W7222465807", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 아라비아의 산업 자산", "problem": "누출 방지 및 안전성 향상"}
 {"id": "W7222649423", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중증 환자의 예후", "problem": "PiCCO의 예후 유용성 평가"}
 {"id": "W7222306721", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서부 세인트클레어 호수의 유해한 바닥 시안조류 Microseira wollei", "problem": "모니터링 및 분포 특성화"}
+{"id": "W7222790492", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수도 미터 관리", "problem": "수도 손실 감소 및 운영 효율성 향상"}
+{"id": "W7222835173", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Doreen 지역의 배터리 저장소 주변 주거 지역", "problem": "배터리 저장소로 인한 화재 위험"}
+{"id": "W7222803339", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간의 하이드atid 낭종", "problem": "하이드atid 낭종 진단 개선"}

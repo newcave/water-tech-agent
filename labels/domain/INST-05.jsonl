@@ -1595,3 +1595,4 @@
 {"id": "W7221802108", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이 수력 발전의 분배 효과", "problem": "비용과 이익의 재분배를 탐색하다"}
 {"id": "W7222624742", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전기차 충전 수요", "problem": "재생 가능 에너지 생산과의 매칭"}
 {"id": "W7222645786", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 잠재력", "problem": "기후 변화가 수력 발전 잠재력에 미치는 영향 평가"}
+{"id": "W7222799213", "domain_primary": "W8", "domain_secondary": ["W7"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전소의 질소 축적기", "problem": "조기 누수 진단"}

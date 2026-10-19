@@ -4448,3 +4448,6 @@
 {"id": "W7222419568", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "담수화 플랜트", "problem": "기존 담수화 방식의 의존성 문제 해결"}
 {"id": "W7222419963", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 품질", "problem": "물의 탁도 제거"}
 {"id": "W7222464752", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신 결과", "problem": "임신 중 유해한 결과를 초래하는 안드로겐의 일시적 증가"}
+{"id": "W7222783088", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 오염", "problem": "약물 오염 문제 해결"}
+{"id": "W7222819190", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Escherichia coli의 생존율", "problem": "UV-A 조사에 따른 세포 사멸률 증가"}
+{"id": "W7221771439", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "CLN2 모델의 신경염증", "problem": "NLRP3 염증소체의 역할 이해하기"}
