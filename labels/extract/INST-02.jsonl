@@ -848,3 +848,4 @@
 {"id": "W7222734968", "object": "Chirchik River basin의 수자원", "problem": "빙하 손실과 지하수 추정 비교", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222581877", "object": "지역 수자원 관리 관행", "problem": "기후 변화에 대한 적응 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222822131", "object": "수자원 관리", "problem": "정확한 수문 기상 관측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222900876", "object": "캐나다 로키산맥의 수원", "problem": "기후 변화가 산악 수문학과 하류 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}

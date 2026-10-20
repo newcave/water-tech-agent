@@ -3580,3 +3580,4 @@
 {"id": "W7222847874", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Machilipatnam 해안선", "problem": "해안선 변화 모니터링"}
 {"id": "W7222850106", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지", "problem": "정확한 수위 및 하류 유량 추정 개선"}
 {"id": "W7222438368", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서안지구의 농업 토지", "problem": "정착지 패턴 변화 분석"}
+{"id": "W7222885988", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chitrakoot 지역의 홍수 위험 및 취약성", "problem": "홍수 위험과 취약성 평가"}

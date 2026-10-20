@@ -3618,3 +3618,4 @@
 {"id": "W7222847874", "object": "Machilipatnam 해안선", "problem": "해안선 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222850106", "object": "저수지", "problem": "정확한 수위 및 하류 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222438368", "object": "서안지구의 농업 토지", "problem": "정착지 패턴 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222885988", "object": "Chitrakoot 지역의 홍수 위험 및 취약성", "problem": "홍수 위험과 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}

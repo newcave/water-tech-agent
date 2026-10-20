@@ -4536,3 +4536,6 @@
 {"id": "W7222783088", "object": "약물 오염", "problem": "약물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222819190", "object": "Escherichia coli의 생존율", "problem": "UV-A 조사에 따른 세포 사멸률 증가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221771439", "object": "CLN2 모델의 신경염증", "problem": "NLRP3 염증소체의 역할 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222873912", "object": "우주선 환경 제어 및 생명 유지 시스템의 카드뮴 오염수", "problem": "카드뮴 제거 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222881564", "object": "바다와 해양 생태계", "problem": "RO 기술로 인한 염수 방류 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222899192", "object": "유방암에서의 비유전적 위험 요인", "problem": "비유전적 위험 요인 이해하기", "relevant": true, "model": "gpt-4o-mini"}

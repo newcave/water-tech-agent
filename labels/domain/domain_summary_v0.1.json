@@ -3,12 +3,12 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-10-19 22:39 UTC",
-  "total": 13583,
+  "generated_at": "2026-10-20 05:25 UTC",
+  "total": 13589,
   "domains": {
     "W1": {
       "name": "유역·수문",
-      "count": 2336,
+      "count": 2338,
       "pct": 17.2
     },
     "W2": {
@@ -18,7 +18,7 @@
     },
     "W3": {
       "name": "수질·수생태",
-      "count": 2956,
+      "count": 2958,
       "pct": 21.8
     },
     "W4": {
@@ -53,19 +53,19 @@
     },
     "W0": {
       "name": "경영·정책·서비스",
-      "count": 975,
+      "count": 976,
       "pct": 7.2
     },
     "W0_UNCLASSIFIED": {
       "name": "위 어디에도 명확히 속하지 않음",
-      "count": 3849,
+      "count": 3850,
       "pct": 28.3
     }
   },
   "institutes": {
     "INST-01": {
       "name": "경영연구소",
-      "total": 1932,
+      "total": 1933,
       "unclassified": 511,
       "unclassified_pct": 26.4,
       "by_domain": {
@@ -78,17 +78,17 @@
         "W7": 67,
         "W8": 45,
         "W9": 2,
-        "W0": 501,
+        "W0": 502,
         "W0_UNCLASSIFIED": 511
       }
     },
     "INST-02": {
       "name": "수자원환경연구소",
-      "total": 807,
+      "total": 808,
       "unclassified": 98,
       "unclassified_pct": 12.1,
       "by_domain": {
-        "W1": 448,
+        "W1": 449,
         "W2": 24,
         "W3": 124,
         "W4": 0,
@@ -103,13 +103,13 @@
     },
     "INST-03": {
       "name": "상하수도연구소",
-      "total": 4453,
-      "unclassified": 1404,
+      "total": 4456,
+      "unclassified": 1405,
       "unclassified_pct": 31.5,
       "by_domain": {
         "W1": 23,
         "W2": 25,
-        "W3": 1708,
+        "W3": 1710,
         "W4": 710,
         "W5": 181,
         "W6": 196,
@@ -117,7 +117,7 @@
         "W8": 16,
         "W9": 0,
         "W0": 178,
-        "W0_UNCLASSIFIED": 1404
+        "W0_UNCLASSIFIED": 1405
       }
     },
     "INST-04": {
@@ -160,11 +160,11 @@
     },
     "INST-06": {
       "name": "수자원위성연구소",
-      "total": 3582,
+      "total": 3583,
       "unclassified": 1321,
       "unclassified_pct": 36.9,
       "by_domain": {
-        "W1": 1096,
+        "W1": 1097,
         "W2": 91,
         "W3": 784,
         "W4": 0,
@@ -226,12 +226,12 @@
     },
     "2026": {
       "W5": 301,
-      "W3": 1846,
-      "W0": 615,
-      "W0_UNCLASSIFIED": 2347,
+      "W3": 1848,
+      "W0": 616,
+      "W0_UNCLASSIFIED": 2348,
       "W7": 320,
       "W8": 599,
-      "W1": 1578,
+      "W1": 1580,
       "W6": 151,
       "W4": 463,
       "W2": 246,
