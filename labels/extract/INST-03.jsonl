@@ -4539,3 +4539,13 @@
 {"id": "W7222873912", "object": "우주선 환경 제어 및 생명 유지 시스템의 카드뮴 오염수", "problem": "카드뮴 제거 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222881564", "object": "바다와 해양 생태계", "problem": "RO 기술로 인한 염수 방류 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222899192", "object": "유방암에서의 비유전적 위험 요인", "problem": "비유전적 위험 요인 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222913689", "object": "텔라왕 지구의 깨끗한 물 공급 시스템", "problem": "깨끗한 물 수요 예측 및 인프라 개발 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222918708", "object": "간의 포도당 대사 관련 효소 수준", "problem": "메트포르민의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222932447", "object": "신생아 토끼의 성장 성능 및 대사 효율", "problem": "모성 L-카르니틴 보충의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222935159", "object": "캘리포니아 호수 및 저수지의 유해 조류 발생", "problem": "모니터링 및 공공 건강 조치 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222942703", "object": "영유아의 영양실조와 빈혈", "problem": "영양실조와 빈혈의 주요 결정 요인 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222945550", "object": "브로일러 닭의 도체 특성", "problem": "도체 수율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222983681", "object": "크라스노아르메이스크의 수자원 및 수돗물 시스템", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222987711", "object": "미세플라스틱", "problem": "저비용 세라믹 멤브레인 제작 및 제거 효율 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222977101", "object": "인도네시아의 아동 영양 상태", "problem": "영양실조 위험을 줄이기 위한 환경 위생 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222925160", "object": "Terremoto, Ambato 지역의 식수 품질", "problem": "위생 교육 및 수질 감시 강화", "relevant": true, "model": "gpt-4o-mini"}

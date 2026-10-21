@@ -2002,3 +2002,5 @@
 {"id": "W7222835173", "object": "Doreen 지역의 배터리 저장소 주변 주거 지역", "problem": "배터리 저장소로 인한 화재 위험", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222803339", "object": "간의 하이드atid 낭종", "problem": "하이드atid 낭종 진단 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222801463", "object": "건조 지역의 농업 생산", "problem": "물 부족과 토양 염분 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222928722", "object": "하수 처리 시설의 운영 효율성", "problem": "운영 효율성 향상 및 에너지 소비 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222975480", "object": "리튬 함유 수원", "problem": "리튬 농도의 분포 특성과 건강 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}

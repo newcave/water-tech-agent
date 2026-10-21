@@ -3619,3 +3619,9 @@
 {"id": "W7222850106", "object": "저수지", "problem": "정확한 수위 및 하류 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222438368", "object": "서안지구의 농업 토지", "problem": "정착지 패턴 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222885988", "object": "Chitrakoot 지역의 홍수 위험 및 취약성", "problem": "홍수 위험과 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222942136", "object": "중국의 토지 피복 분류 데이터셋", "problem": "기존 제품의 한계를 해결하기 위해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222954725", "object": "북부 에게 해 유역의 가뭄 모니터링", "problem": "위성 데이터를 통한 가뭄 지표 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222963948", "object": "동부 메디니푸르 지역의 토지 이용/토지 피복 변화", "problem": "토지 이용/토지 피복 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222978088", "object": "호수 수질 지표의 시간적 변화", "problem": "정확한 계절적 동향 및 장기적 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222987332", "object": "Heilongjiang–Amur River Basin의 생태계 서비스", "problem": "국경을 초월한 생태계 서비스 매핑의 일관성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222983369", "object": "작물 유전자형 및 품종", "problem": "유전자형과 스펙트럼 간의 관계를 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
