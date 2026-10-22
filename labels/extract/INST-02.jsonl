@@ -849,3 +849,6 @@
 {"id": "W7222581877", "object": "지역 수자원 관리 관행", "problem": "기후 변화에 대한 적응 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222822131", "object": "수자원 관리", "problem": "정확한 수문 기상 관측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222900876", "object": "캐나다 로키산맥의 수원", "problem": "기후 변화가 산악 수문학과 하류 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407155892", "object": "프랑스의 지하수 자원", "problem": "지하수 수준 변화 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223036513", "object": "미국 대륙의 수자원 모델링", "problem": "대규모 수자원 모델링을 위한 데이터셋 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223051132", "object": "유출 계수(α)", "problem": "유출 계수의 물리적 정의 및 경계 조건 이해", "relevant": true, "model": "gpt-4o-mini"}

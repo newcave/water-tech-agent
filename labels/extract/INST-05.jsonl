@@ -1630,3 +1630,8 @@
 {"id": "W7222986031", "object": "수력 발전", "problem": "기후 변동성에 따른 수력 발전의 노출 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222883784", "object": "재생 가능 에너지 시스템", "problem": "AI를 통한 효율성 및 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222968711", "object": "Cross-Flow (Banki) 터빈의 수력 성능", "problem": "터빈 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223009075", "object": "수력 발전소 운영을 위한 저수지 유입 예측", "problem": "정확한 유입 예측을 통한 운영 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222995168", "object": "대규모 발전 단위 스케줄링 데이터셋", "problem": "열 발전 및 양수 발전 스케줄링 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223030544", "object": "아제르바이잔의 환경 성과", "problem": "지정학적 위험이 환경 성과에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223064358", "object": "펌프 저장 수력 발전의 운영 회복력", "problem": "운영 회복력을 정의하고 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223041900", "object": "수력 에너지 활용", "problem": "미세 수력 발전소의 경제적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}

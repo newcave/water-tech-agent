@@ -4464,3 +4464,13 @@
 {"id": "W7222987711", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미세플라스틱", "problem": "저비용 세라믹 멤브레인 제작 및 제거 효율 평가"}
 {"id": "W7222977101", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도네시아의 아동 영양 상태", "problem": "영양실조 위험을 줄이기 위한 환경 위생 개선"}
 {"id": "W7222925160", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Terremoto, Ambato 지역의 식수 품질", "problem": "위생 교육 및 수질 감시 강화"}
+{"id": "W7222998412", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 저장 및 관리 시스템", "problem": "신뢰할 수 있는 물 공급 보장"}
+{"id": "W7223008202", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고혈압과 심장 비대 및 신장 섬유증", "problem": "설탕 소비로 인한 고혈압의 영향 이해하기"}
+{"id": "W7223017911", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "bentazone", "problem": "수처리에서 벤타존 제거"}
+{"id": "W7223035007", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 안전", "problem": "음용수 공급 시스템의 안전성 개선"}
+{"id": "W7223039773", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 맛과 냄새 문제", "problem": "예측 모델을 통한 맛과 냄새의 원인 이해"}
+{"id": "W7223047843", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산업용 정수 시스템", "problem": "오염물질 제거"}
+{"id": "W7223051859", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 공급 음용수 배급 시스템의 미네랄 스케일 침전물", "problem": "스케일 침전물 제거 효율 향상"}
+{"id": "W7223059658", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kura River water availability", "problem": "물 부족 문제 해결"}
+{"id": "W7223061230", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)", "problem": "섬유증 및 염증 세포 사멸 억제"}
+{"id": "W7222996461", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 수역의 생태계", "problem": "합성 염료 분해"}

@@ -667,3 +667,4 @@
 {"id": "W7221788446", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지구 표면 과정", "problem": "위험 완화 및 물 안전 보장"}
 {"id": "W7221785598", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세이디셰히르의 분수 방출", "problem": "정확한 방출 예측"}
 {"id": "W7222349138", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비정상 수송 시스템", "problem": "모델의 예측 가능성 향상"}
+{"id": "W7222999704", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스웨덴의 아홀로세 기후 및 환경 변화", "problem": "과거 기후, 수문학, 생태 변화 재구성"}

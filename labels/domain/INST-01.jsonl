@@ -1933,3 +1933,6 @@
 {"id": "W7222801463", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건조 지역의 농업 생산", "problem": "물 부족과 토양 염분 문제 해결"}
 {"id": "W7222928722", "domain_primary": "W6", "domain_secondary": ["W8"], "confidence": 0.8, "domain_ver": "v0.1", "object": "하수 처리 시설의 운영 효율성", "problem": "운영 효율성 향상 및 에너지 소비 최적화"}
 {"id": "W7222975480", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "리튬 함유 수원", "problem": "리튬 농도의 분포 특성과 건강 영향 이해하기"}
+{"id": "W7222997948", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "상업용 주방의 식기 세척 효율성", "problem": "식기 세척 처리량 개선"}
+{"id": "W7223048676", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사우디 대규모 산업 및 인프라 프로젝트의 누수", "problem": "누수 탐지 및 사고 예방 개선"}
+{"id": "W7222941193", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소의 생산 시스템", "problem": "물 자원 지속 가능성 향상"}

@@ -3625,3 +3625,7 @@
 {"id": "W7222978088", "object": "호수 수질 지표의 시간적 변화", "problem": "정확한 계절적 동향 및 장기적 추세 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222987332", "object": "Heilongjiang–Amur River Basin의 생태계 서비스", "problem": "국경을 초월한 생태계 서비스 매핑의 일관성 확보", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222983369", "object": "작물 유전자형 및 품종", "problem": "유전자형과 스펙트럼 간의 관계를 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223003794", "object": "산악 지역의 호수", "problem": "호수의 표면 상태 및 면적 추적", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223022155", "object": "Gambella Town의 도시 확장 및 토지 이용 변화", "problem": "도시 확장 및 토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222941193", "object": "소의 생산 시스템", "problem": "물 자원 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222949677", "object": "소고기 생산 경관", "problem": "생물 다양성 손실 방지 및 회복", "relevant": true, "model": "gpt-4o-mini"}
