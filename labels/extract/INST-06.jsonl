@@ -3629,3 +3629,12 @@
 {"id": "W7223022155", "object": "Gambella Town의 도시 확장 및 토지 이용 변화", "problem": "도시 확장 및 토지 이용 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222941193", "object": "소의 생산 시스템", "problem": "물 자원 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7222949677", "object": "소고기 생산 경관", "problem": "생물 다양성 손실 방지 및 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223181547", "object": "지구의 총 생물 생산량(GPP)", "problem": "장기적인 GPP 동역학 재현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223092201", "object": "카탈로니아의 심각한 천둥번개", "problem": "심각한 기상 사건 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223106508", "object": "빙하 호수의 범람 위험", "problem": "빙하 호수의 범람 시기와 수량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223112769", "object": "농작물 면적", "problem": "정확한 농작물 면적 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223137747", "object": "티베트 내수면 고원에서의 수질 유형", "problem": "수질 유형 분류 및 수리학적 특성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223157355", "object": "도시 호수의 클로로필-a 농도", "problem": "클로로필-a 농도 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223042731", "object": "북부 핀란드의 팔사 미어", "problem": "환경 변화 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223141286", "object": "자연 생태계와 생물 다양성", "problem": "LULC 변화 분석 및 보존 위협 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223159850", "object": "파키스탄의 농업용수 관리", "problem": "작물별 관개 수요 예측 개선", "relevant": true, "model": "gpt-4o-mini"}

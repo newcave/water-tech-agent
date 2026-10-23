@@ -4474,3 +4474,11 @@
 {"id": "W7223059658", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kura River water availability", "problem": "물 부족 문제 해결"}
 {"id": "W7223061230", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)", "problem": "섬유증 및 염증 세포 사멸 억제"}
 {"id": "W7222996461", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 수역의 생태계", "problem": "합성 염료 분해"}
+{"id": "W7223170911", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가금류 생산 시스템에서의 농장 수준 요인", "problem": "항생제 사용 감시를 위한 농장 요인 모니터링"}
+{"id": "W7223172164", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chahua chickens", "problem": "성장 성능 및 장 건강 개선"}
+{"id": "W7223176236", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건강한 어린이의 침 대사체 프로필", "problem": "음료에 따른 대사체 변화"}
+{"id": "W7223185889", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 성장 성능과 면역 반응 및 맹장 미생물군", "problem": "성장 성능과 면역 반응 개선 및 맹장 미생물군 조절"}
+{"id": "W7223110678", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "식수 부족 문제", "problem": "생물학적 처리 기술과 IT 통합의 중요성 분석"}
+{"id": "W7223113545", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남아프리카의 식수 안전", "problem": "식수 안전 거버넌스 실패 해결"}
+{"id": "W7223119619", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "즉석 시리얼 음료", "problem": "즉석 시리얼 음료의 품질 특성 분석 및 개선"}
+{"id": "W7223137322", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Escherichia coli의 생존율", "problem": "UV-A 조사에 대한 보호 실패"}

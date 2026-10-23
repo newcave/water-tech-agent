@@ -1606,3 +1606,9 @@
 {"id": "W7223030544", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아제르바이잔의 환경 성과", "problem": "지정학적 위험이 환경 성과에 미치는 영향 분석"}
 {"id": "W7223064358", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "펌프 저장 수력 발전의 운영 회복력", "problem": "운영 회복력을 정의하고 평가하기"}
 {"id": "W7223041900", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 에너지 활용", "problem": "미세 수력 발전소의 경제적 타당성 평가"}
+{"id": "W7223181965", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 크레인 그룹", "problem": "전력 소비 조정 및 최적화"}
+{"id": "W7223094592", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이베리아 경제 통합", "problem": "경제 통합의 불균형 해소"}
+{"id": "W7223095257", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 전력 시스템의 위험", "problem": "극한 고온 사건에서 전력 공급-수요 불균형 해결"}
+{"id": "W7223113584", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서남부 중국의 강 유역에서의 수력 발전", "problem": "수력 발전의 감소와 물 부족 문제 해결"}
+{"id": "W7223126897", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜롬비아의 수력 중심 전력 시스템", "problem": "운영 유연성 서비스로서 바이오매스 발전의 행동 평가"}
+{"id": "W7223134530", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다목적 수력 발전 시스템", "problem": "발전 이익과 최소 시스템 출력 보장 간의 갈등 해결"}

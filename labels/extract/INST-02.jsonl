@@ -852,3 +852,7 @@
 {"id": "W4407155892", "object": "프랑스의 지하수 자원", "problem": "지하수 수준 변화 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223036513", "object": "미국 대륙의 수자원 모델링", "problem": "대규모 수자원 모델링을 위한 데이터셋 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223051132", "object": "유출 계수(α)", "problem": "유출 계수의 물리적 정의 및 경계 조건 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223194517", "object": "Netravati River Basin의 수자원", "problem": "지하수의 역할을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223115546", "object": "나일 강 유역의 수자원 관리", "problem": "인간-수자원 상호작용의 복잡성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223127882", "object": "수자원 모델링 시스템", "problem": "연구 결과의 운영 모델 시스템 통합 지연 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223182619", "object": "롱안차오 국가 습지 공원", "problem": "과학 교육 과정 개선", "relevant": true, "model": "gpt-4o-mini"}

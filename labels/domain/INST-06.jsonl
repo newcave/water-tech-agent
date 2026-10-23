@@ -3591,3 +3591,12 @@
 {"id": "W7223022155", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gambella Town의 도시 확장 및 토지 이용 변화", "problem": "도시 확장 및 토지 이용 변화 분석"}
 {"id": "W7222941193", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소의 생산 시스템", "problem": "물 자원 지속 가능성 향상"}
 {"id": "W7222949677", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소고기 생산 경관", "problem": "생물 다양성 손실 방지 및 회복"}
+{"id": "W7223181547", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구의 총 생물 생산량(GPP)", "problem": "장기적인 GPP 동역학 재현"}
+{"id": "W7223092201", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카탈로니아의 심각한 천둥번개", "problem": "심각한 기상 사건 예측 개선"}
+{"id": "W7223106508", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "빙하 호수의 범람 위험", "problem": "빙하 호수의 범람 시기와 수량 예측"}
+{"id": "W7223112769", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물 면적", "problem": "정확한 농작물 면적 매핑 개선"}
+{"id": "W7223137747", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티베트 내수면 고원에서의 수질 유형", "problem": "수질 유형 분류 및 수리학적 특성 이해"}
+{"id": "W7223157355", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 호수의 클로로필-a 농도", "problem": "클로로필-a 농도 추정 개선"}
+{"id": "W7223042731", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 핀란드의 팔사 미어", "problem": "환경 변화 조사"}
+{"id": "W7223141286", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "자연 생태계와 생물 다양성", "problem": "LULC 변화 분석 및 보존 위협 평가"}
+{"id": "W7223159850", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파키스탄의 농업용수 관리", "problem": "작물별 관개 수요 예측 개선"}
