@@ -1644,3 +1644,8 @@
 {"id": "W7223126897", "object": "콜롬비아의 수력 중심 전력 시스템", "problem": "운영 유연성 서비스로서 바이오매스 발전의 행동 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223134530", "object": "다목적 수력 발전 시스템", "problem": "발전 이익과 최소 시스템 출력 보장 간의 갈등 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223146798", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7223178929", "object": "거대 연속 수력 발전 시스템(GCHSS)", "problem": "에너지와 피크 절감 이점 간의 균형을 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223238462", "object": "눈 적설량", "problem": "시간에 따른 변화 추세 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223244786", "object": "이베리아 반도의 풍력 에너지 평가 및 전력 시스템 모델링을 위한 기상 데이터", "problem": "고해상도 기상 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223243370", "object": "홍수 위험 관리와 농업 물 안전성", "problem": "연계된 개발 문제 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223256884", "object": "전력 자원", "problem": "산업 경쟁력 향상", "relevant": true, "model": "gpt-4o-mini"}

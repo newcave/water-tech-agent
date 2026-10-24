@@ -548,3 +548,4 @@
 {"id": "W7223027304", "object": "콘크리트 아치 댐", "problem": "댐의 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223185077", "object": "콘크리트 구조물의 균열 데이터베이스", "problem": "신뢰할 수 있는 데이터베이스 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223149072", "object": "초고층 코어 록필 댐", "problem": "정확한 응력 분포 및 변형 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221604304", "object": "카르나타카의 지진 모니터링 네트워크", "problem": "정확한 지진 위치 파악을 위한 기하학적 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}

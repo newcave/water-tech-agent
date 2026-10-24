@@ -671,3 +671,4 @@
 {"id": "W7223127882", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 모델링 시스템", "problem": "연구 결과의 운영 모델 시스템 통합 지연 해소"}
 {"id": "W7223131803", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "야무나 강의 수질", "problem": "수질 저하 원인 평가"}
 {"id": "W7223049727", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산사태 취약성", "problem": "산사태 위험 평가"}
+{"id": "W7223254281", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Le'an County의 산사태 취약성", "problem": "산사태 취약성 평가 개선"}

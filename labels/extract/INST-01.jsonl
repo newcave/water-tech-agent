@@ -2010,3 +2010,7 @@
 {"id": "W7223179187", "object": "에티오피아의 도시 물, 위생 및 위생 서비스", "problem": "서비스 격차와 공중 보건 위험 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223088439", "object": "이집트의 사회 주택", "problem": "자원 효율적인 사회 주택 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223184045", "object": "도시 물 분배 네트워크의 누수", "problem": "누수 탐지 및 위치 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223255379", "object": "도시 배수 시스템", "problem": "인프라 유지보수 및 거리 홍수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223242752", "object": "Perumda Tirta Pakuan의 공공 투명성", "problem": "소통 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223232948", "object": "농업 물 관리 의사 결정 지원을 위한 인공지능 시스템", "problem": "신뢰성 있는 증거 거버넌스 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223210211", "object": "일본의 수도 공급 유틸리티", "problem": "전력 소비 감소를 위한 구조적 및 운영적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}

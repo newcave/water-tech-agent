@@ -4569,3 +4569,7 @@
 {"id": "W7223113545", "object": "남아프리카의 식수 안전", "problem": "식수 안전 거버넌스 실패 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223119619", "object": "즉석 시리얼 음료", "problem": "즉석 시리얼 음료의 품질 특성 분석 및 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223137322", "object": "Escherichia coli의 생존율", "problem": "UV-A 조사에 대한 보호 실패", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223240535", "object": "Helicobacter pylori 감염", "problem": "감염의 유병률과 관련 위험 요인 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223247306", "object": "장내 장벽 기능", "problem": "DSS 유도 대장염 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223196386", "object": "지하수의 품질", "problem": "오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223256488", "object": "식수 부족 문제", "problem": "생물학적 처리 기술 통합", "relevant": true, "model": "gpt-4o-mini"}

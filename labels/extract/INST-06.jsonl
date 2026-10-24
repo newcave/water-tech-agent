@@ -3638,3 +3638,9 @@
 {"id": "W7223042731", "object": "북부 핀란드의 팔사 미어", "problem": "환경 변화 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223141286", "object": "자연 생태계와 생물 다양성", "problem": "LULC 변화 분석 및 보존 위협 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223159850", "object": "파키스탄의 농업용수 관리", "problem": "작물별 관개 수요 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223184136", "object": "하층 대기(LT)의 수분 열역학 구조", "problem": "3D 수분 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223233033", "object": "Irtyash-Kyshtym-Kasli corridor", "problem": "과거 경관 조직의 증거를 보존하는 수분 통로와 수리선 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223242676", "object": "농작물 건강 및 생산성", "problem": "토양 매개변수와의 관계 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223244610", "object": "전 세계 수력 발전소 저수지", "problem": "저수지 확장과 토양 수분 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223251423", "object": "지표면 온도 및 에너지 흐름", "problem": "정확한 모니터링을 위한 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223045587", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

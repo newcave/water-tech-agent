@@ -693,3 +693,4 @@
 {"id": "W7223127882", "object": "수자원 모델링 시스템", "problem": "연구 결과의 운영 모델 시스템 통합 지연 해소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223131803", "object": "야무나 강의 수질", "problem": "수질 저하 원인 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223049727", "object": "산사태 취약성", "problem": "산사태 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223254281", "object": "Le'an County의 산사태 취약성", "problem": "산사태 취약성 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
