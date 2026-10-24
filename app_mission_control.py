@@ -39,7 +39,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.0 · 2026-10-16"
+APP_VERSION = "v3.1 · 2026-10-25"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -880,9 +880,10 @@ elif page == "🇰🇷 KCI 트렌드":
     steps = [("① 인증키", "✅ 등록", "KCI Open API"),
              ("② 건수 실측", f"✅ {n_docs:,}편" if kc else "⏳ 대기", "kci-counts · 주 1회"),
              ("③ 원천 수집", "✅ 비공개 보관" if kr else "⏳ 비공개 저장소 준비", "water-tech-kci-private"),
-             ("④ 용어 추출", "✅ Kiwi 명사" if kr else "⏳", "복합어 · 불용어 제거"),
-             ("⑤ 추세 검정", f"✅ {sum(v['tested'] for v in kr['scopes'].values()):,}개" if kr else "⏳",
-              "Hamed–Rao MK + BH"),
+             ("④ 용어 추출", "✅ Kiwi 명사·구" if kr else "⏳", "복합어 · 두 단어 구 · 불용어 제거"),
+             ("⑤ 추세 검정", (f"✅ 단어 {sum(v['tested'] for v in kr['scopes'].values()):,} · 구 "
+                             f"{sum((v.get('bigram') or {}).get('tested', 0) for v in kr['scopes'].values()):,}") if kr else "⏳",
+              "MK(단어)·준포아송(구) + BH"),
              ("⑥ 주제 묶음", "✅ Louvain" if kr else "⏳", "공출현 네트워크")]
     st.markdown('<div class="flow">' + '<div class="arr">›</div>'.join(
         f'<div class="stage"><div class="s-t">{t}</div><div class="s-v">{v}</div><div class="s-s">{s_}</div></div>'
@@ -917,14 +918,30 @@ elif page == "🇰🇷 KCI 트렌드":
                 ("하강 (유의)", f"{sd['n_falling']:,}", "q<0.05", RED),
                 ("주제 묶음", f"{len(comms)}", f"{sd['network']['window'][0]}–{sd['network']['window'][-1]} 공출현", NAVY),
                 ("가장 가파른 상승", best["term"] if best else "-",
-                 f"+{best['sen'] * 1000:.2f}‰/년" if best else "", CYAN)]
+                 f"+{best['sen'] * 1000:.2f}‰/년" if best else "", CYAN),
+                ("상승 구 (바이그램)", f"{(sd.get('bigram') or {}).get('n_rising', 0):,}",
+                 f"구로만 {sum(1 for r in (sd.get('bigram') or {}).get('rising', []) if r.get('novel') and not r.get('minor'))}",
+                 "#7C3AED")]
         st.markdown('<div class="kpis">' + "".join(
             f'<div class="kpi" style="border-left-color:{c}"><div class="k-val">{v}</div>'
             f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>'
             for l, v, s_, c in kpis) + '</div>', unsafe_allow_html=True)
 
-        tab1, tab2, tab3, tab4, tab5 = st.tabs(["📈 상승 용어", "🕸️ 주제 묶음", "🔍 용어 찾기", "📉 하강 용어",
-                                                "🏢 K-water 논문"])
+        tab1, tabB, tab2, tab3, tab4, tab5 = st.tabs(["📈 상승 용어", "🔗 상승 구(바이그램)", "🕸️ 주제 묶음",
+                                                      "🔍 용어·구 찾기", "📉 하강 용어·구", "🏢 K-water 논문"])
+        bg = sd.get("bigram") or {}
+        b_rising, b_falling = bg.get("rising") or [], bg.get("falling") or []
+        has_j11 = any("j11_share" in r for r in b_rising + b_falling)
+        PURPLE = "#7C3AED"
+
+        def b_lift(r):
+            return "신규" if r.get("lift") is None else f"{r['lift']}배"
+
+        def b_slope(r):
+            return r.get("slope", r.get("sen", 0.0))
+
+        def b_water(rows, on):
+            return [r for r in rows if not on or (r.get("j11_share") or 0) >= 0.2]
 
         # ── 탭1: 순위 막대 + 연도 히트맵 ──
         with tab1:
@@ -967,6 +984,81 @@ elif page == "🇰🇷 KCI 트렌드":
                         "최근/초기 배율": r["lift"], "누적 논문": r["total"], "q": f"{r['q']:.1e}",
                         "묶음": (comm_rank[term_comm[r["term"]]] + 1) if r["term"] in term_comm else "-"}
                         for r in rows]), hide_index=True, width="stretch")
+
+        # ── 탭1-2: 상승 구(바이그램) ──
+        with tabB:
+            if not bg:
+                st.info("이 범위에는 아직 바이그램 결과가 없습니다 — 주간 kci-rising 실행에서 채워집니다.")
+            else:
+                st.caption("국문 제목·초록에서 **두 단어로 된 구**(띄어 쓴 두 명사가 바로 이어지거나 ‘의’로 이어진 것 — 예: 침수 피해, "
+                           "하천의 수질 → 하천 수질, 붙여 쓴 ‘하천수질’도 같은 구로 셈)를 뽑아 연도별 비중이 오르는지 봅니다. "
+                           "구는 드물어 해마다 0인 경우가 많아 단어 탭의 Mann–Kendall 대신 **준포아송 회귀**(분모 = 그 해 논문 수, "
+                           f"과산포 보정)로 검정하고 FDR q<{kr['q']}만 남겼습니다. 붙여 쓴 형태가 이미 단어 탭의 상승 용어면 중복이라 뺐습니다. "
+                           "**구로만** = 두 단어 모두 단어 단위로는 상승 목록에 없는데 구로 묶으면 오르는 신호.")
+                bmaj = [r for r in b_rising if not r.get("minor")]
+                bbest = bmaj[0] if bmaj else None
+                kb = [("검정 구", f"{bg.get('tested', 0):,}", f"누적 논문 ≥{bg.get('min_total', 8)} · 3개 연도 이상", BLUE),
+                      ("상승 구 (유의)", f"{bg.get('n_rising', 0):,}", f"저빈도 제외 {len(bmaj):,}", GREEN),
+                      ("하강 구 (유의)", f"{bg.get('n_falling', 0):,}", f"q<{kr['q']}", RED),
+                      ("구로만 보이는 신호", f"{sum(1 for r in bmaj if r.get('novel'))}", "두 단어 모두 단어로는 상승 아님", PURPLE),
+                      ("가장 가파른 상승 구", bbest["term"] if bbest else "-",
+                       f"+{b_slope(bbest) * 1000:.2f}‰/년 · 연 {bbest.get('rate', 0) * 100:+.0f}%" if bbest else "", CYAN)]
+                st.markdown('<div class="kpis">' + "".join(
+                    f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.35rem">{v}</div>'
+                    f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>' for l, v, s_, c in kb) + "</div>",
+                    unsafe_allow_html=True)
+                o1, o2, o3 = st.columns(3)
+                b_minor = o1.toggle("저빈도 구 포함 (최근 3년 5편 미만)", value=False, key="kci_bi_minor")
+                b_novel = o2.toggle("구로만 보이는 신호만", value=False, key="kci_bi_novel")
+                b_wat = o3.toggle("수자원학회 쪽 구만", value=True, key="kci_bi_water", disabled=not has_j11,
+                                  help="수자원학회+토목학회 범위에서 수자원학회 논문 비율이 20% 미만인 구"
+                                       "(콘크리트·포장 등 토목 구조 분야)를 숨깁니다.") if has_j11 else False
+                brows = [r for r in b_water(b_rising, b_wat) if (b_minor or not r.get("minor"))
+                         and (not b_novel or r.get("novel"))][:25]
+                if not brows:
+                    st.info("조건에 맞는 상승 구가 없습니다.")
+                else:
+                    a, b = st.columns([2, 3])
+                    with a:
+                        st.markdown('<div class="sect">기울기 순위 (논문 1,000편당 연간 증가)</div>', unsafe_allow_html=True)
+                        rr = brows[::-1]
+                        fig = go.Figure(go.Bar(
+                            x=[b_slope(r) * 1000 for r in rr], y=[r["term"] for r in rr], orientation="h",
+                            marker=dict(color=[PURPLE if r.get("novel") else BLUE for r in rr],
+                                        line=dict(color="#FFFFFF", width=2)),
+                            customdata=[[r["recent_docs"], b_lift(r), r["q"], r["total"], round((r.get("rate") or 0) * 100),
+                                         "구로만" if r.get("novel") else "단어로도 상승: " + "·".join(r.get("parts_rising") or [])]
+                                        for r in rr],
+                            hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년 · 연 %{customdata[4]:+d}%<br>최근 3년 %{customdata[0]}편"
+                                          " · 최근/과거 %{customdata[1]}<br>누적 %{customdata[3]}편 · q = %{customdata[2]:.1e}"
+                                          "<br>%{customdata[5]}<extra></extra>"))
+                        fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title="‰ / 년",
+                                          yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
+                        fig.update_xaxes(gridcolor="#EEF2F7", zeroline=False)
+                        st.plotly_chart(fig, width="stretch", key="kci_bi_bar")
+                        st.markdown(f'<span class="note"><span style="color:{PURPLE}">■</span> 구로만 보이는 신호 &nbsp; '
+                                    f'<span style="color:{BLUE}">■</span> 단어로도 오르는 구</span>', unsafe_allow_html=True)
+                    with b:
+                        st.markdown('<div class="sect">연도별 비중 히트맵 (‰)</div>', unsafe_allow_html=True)
+                        z = [[d / n * 1000 if n else 0 for d, n in zip(r["df"], den)] for r in brows]
+                        fig = go.Figure(go.Heatmap(
+                            z=z, x=[str(y) for y in yrs], y=[r["term"] for r in brows],
+                            colorscale=[[0, "#F7F4FD"], [0.5, "#A58BE6"], [1, "#4A2A9C"]],
+                            colorbar=dict(title="‰", thickness=10), xgap=2, ygap=2,
+                            hovertemplate="<b>%{y}</b> · %{x}<br>%{z:.1f}‰<extra></extra>"))
+                        fig.update_layout(height=max(320, 22 * len(brows) + 40),
+                                          yaxis=dict(autorange="reversed", automargin=True), **PLOTLY_LAYOUT)
+                        st.plotly_chart(fig, width="stretch", key="kci_bi_heat")
+                    with st.expander("표로 보기"):
+                        st.dataframe(pd.DataFrame([{
+                            "구": r["term"] + (" (저빈도)" if r.get("minor") else ""), "구로만": "✔" if r.get("novel") else "",
+                            "기울기(‰/년)": round(b_slope(r) * 1000, 2), "연 증가율(%)": round((r.get("rate") or 0) * 100),
+                            "최근3년 논문": r["recent_docs"], "최근/과거": b_lift(r), "누적 논문": r["total"],
+                            "q": f"{r['q']:.1e}", "단어로도 상승": "·".join(r.get("parts_rising") or []),
+                            "수자원학회 비율": r.get("j11_share"), "결합도(PMI)": r.get("pmi")}
+                            for r in brows]), hide_index=True, width="stretch")
+                st.caption("단어 탭과 함께 보면: 단어 탭의 ‘예측’·‘수자원’ 같은 넓은 말이 구 탭에서는 ‘예측 정확도’·‘수자원 관리’처럼 "
+                           "무엇에 쓰이는지로 갈라집니다. 하강 구는 📉 탭, 연도별 비교는 🔍 탭에서 볼 수 있습니다.")
 
         # ── 탭2: 공출현 네트워크 + 묶음 카드 ──
         with tab2:
@@ -1033,8 +1125,11 @@ elif page == "🇰🇷 KCI 트렌드":
         with tab3:
             pool = {r["term"]: ("상승", r) for r in rising}
             pool.update({r["term"]: ("하강", r) for r in falling})
-            picks = st.multiselect("용어 선택 (유의한 상승·하강 용어 중에서, 최대 5개)", sorted(pool),
-                                   default=[r["term"] for r in top_major[:3]], max_selections=5)
+            pool.update({r["term"]: ("상승 구", r) for r in b_rising})
+            pool.update({r["term"]: ("하강 구", r) for r in b_falling})
+            picks = st.multiselect("용어·구 선택 (유의한 상승·하강 용어와 두 단어 구 중에서, 최대 5개)", sorted(pool),
+                                   default=[r["term"] for r in top_major[:2]] + [r["term"] for r in b_rising[:1]],
+                                   max_selections=5)
             if picks:
                 fig = go.Figure()
                 for i, t in enumerate(picks):
@@ -1046,25 +1141,45 @@ elif page == "🇰🇷 KCI 트렌드":
                                   legend=dict(orientation="h", y=-0.18), **PLOTLY_LAYOUT)
                 fig.update_yaxes(gridcolor="#EEF2F7")
                 st.plotly_chart(fig, width="stretch")
-                st.dataframe(pd.DataFrame([{"용어": t, "방향": pool[t][0],
-                                            "기울기(‰/년)": round(pool[t][1]["sen"] * 1000, 2),
+                st.dataframe(pd.DataFrame([{"용어·구": t, "방향": pool[t][0],
+                                            "기울기(‰/년)": round(pool[t][1].get("slope", pool[t][1]["sen"]) * 1000, 2),
                                             "q": f"{pool[t][1]['q']:.1e}", "누적 논문": pool[t][1]["total"]}
                                            for t in picks]), hide_index=True, width="stretch")
             st.caption("검정 대상이 아니었거나(빈도 부족) 유의하지 않은 용어는 목록에 없음.")
 
-        # ── 탭4: 하강 ──
+        # ── 탭4: 하강 (단어 · 구) ──
         with tab4:
-            fr = [r for r in falling if not r.get("minor")][:20]
-            if not fr:
-                st.info("유의한 하강 용어가 없습니다.")
-            else:
-                rr = fr[::-1]
-                fig = go.Figure(go.Bar(x=[r["sen"] * 1000 for r in rr], y=[r["term"] for r in rr],
-                                       orientation="h", marker=dict(color=GRAY, line=dict(color="#FFFFFF", width=2)),
-                                       hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년<extra></extra>"))
-                fig.update_layout(height=max(300, 22 * len(rr) + 40), xaxis_title="‰ / 년",
-                                  yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
-                st.plotly_chart(fig, width="stretch")
+            fa, fb = st.columns(2)
+            with fa:
+                st.markdown('<div class="sect">하강 용어 (단어)</div>', unsafe_allow_html=True)
+                fr = [r for r in falling if not r.get("minor")][:20]
+                if not fr:
+                    st.info("유의한 하강 용어가 없습니다.")
+                else:
+                    rr = fr[::-1]
+                    fig = go.Figure(go.Bar(x=[r["sen"] * 1000 for r in rr], y=[r["term"] for r in rr],
+                                           orientation="h", marker=dict(color=GRAY, line=dict(color="#FFFFFF", width=2)),
+                                           hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년<extra></extra>"))
+                    fig.update_layout(height=max(300, 22 * len(rr) + 40), xaxis_title="‰ / 년",
+                                      yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
+                    st.plotly_chart(fig, width="stretch", key="kci_fall_uni")
+            with fb:
+                st.markdown('<div class="sect">하강 구 (바이그램)</div>', unsafe_allow_html=True)
+                fwat = st.toggle("수자원학회 쪽 구만", value=False, key="kci_bi_fall_water", disabled=not has_j11,
+                                 help="끄면 토목 구조 분야(콘크리트·해석 등) 하강 구까지 모두") if has_j11 else False
+                fbr = [r for r in b_water(b_falling, fwat) if not r.get("minor")][:20]
+                if not fbr:
+                    st.info("유의한 하강 구가 없습니다." if bg else "바이그램 결과가 아직 없습니다.")
+                else:
+                    rr = fbr[::-1]
+                    fig = go.Figure(go.Bar(x=[b_slope(r) * 1000 for r in rr], y=[r["term"] for r in rr],
+                                           orientation="h", marker=dict(color="#B8A6E3", line=dict(color="#FFFFFF", width=2)),
+                                           customdata=[[r.get("j11_share", "-"), round((r.get("rate") or 0) * 100)] for r in rr],
+                                           hovertemplate="<b>%{y}</b><br>기울기 %{x:.2f}‰/년 · 연 %{customdata[1]:+d}%"
+                                                         "<br>수자원학회 비율 %{customdata[0]}<extra></extra>"))
+                    fig.update_layout(height=max(300, 22 * len(rr) + 40), xaxis_title="‰ / 년",
+                                      yaxis=dict(automargin=True), **PLOTLY_LAYOUT)
+                    st.plotly_chart(fig, width="stretch", key="kci_fall_bi")
 
         # ── 탭5: K-water 소속 논문 (사이드 수집) ──
         with tab5:
@@ -1137,6 +1252,7 @@ elif page == "🇰🇷 KCI 트렌드":
             st.markdown(f"""
 - **방법:** {kr['method']}
 - **용어:** 국문 제목+초록에서 Kiwi로 명사 추출, 띄어쓰기 없이 붙은 명사는 복합어로 묶음(예: 딥러닝, 유출량). 불용어(연구·분석·결과 등) 제외
+- **구(바이그램):** 같은 분석에서 띄어 쓴 두 명사가 바로 이어지거나 ‘의’로 이어진 구(침수 피해, 하천의 수질 → 하천 수질), 붙여 쓴 형태도 같은 구로 셈. 붙여 쓴 형태가 단어 탭 상승 용어면 제외. 숫자 붙은 단위어·수식어(실제·일반 등)·제목/초록 경계는 구를 만들지 않음. 드물어서 준포아송 회귀(분모 = 그 해 논문 수, 과산포 보정) + BH FDR로 검정 — 누적 {bg.get('min_total', 8)}편·3개 연도 이상만
 - **범위:** 대한토목학회논문집은 2012년까지 분책 A~D(구조·교통 등 포함)였다가 2013년 통합 → '수자원학회+토목학회' 범위에는 토목 전반 용어가 섞임
 - **제외:** 국문 제목·초록이 없는 영문 전용 논문 {sd.get('excluded', {}).get('english_only', 0):,}편, 국문 초록 보유율 50% 미만 학회지·연도 {', '.join(sd.get('excluded', {}).get('low_abstract_years', [])) or '없음'}. 영문 용어는 대문자 약어(LSTM·SWAT 등)만 셈
 - **해석:** 통계적으로 유의한 '추세 후보'이며, 묶음 이름·의미는 전문가 검토가 필요
