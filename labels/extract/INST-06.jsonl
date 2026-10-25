@@ -3644,3 +3644,12 @@
 {"id": "W7223244610", "object": "전 세계 수력 발전소 저수지", "problem": "저수지 확장과 토양 수분 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223251423", "object": "지표면 온도 및 에너지 흐름", "problem": "정확한 모니터링을 위한 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223045587", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7223221775", "object": "관개 농업 분야의 물 스트레스 지역", "problem": "물 스트레스 지역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223322041", "object": "해안선 변화 예측", "problem": "정확한 해안선 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223348912", "object": "내몽골 농목축 생태계", "problem": "생태 패턴과 생태 안전 상태 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223389517", "object": "Bellandur Lake의 수질 및 영양 상태", "problem": "수질 악화 및 영양 상태 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223392843", "object": "스마트 농업", "problem": "농업 의사결정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223216755", "object": "해양 엽록소 농도", "problem": "정확한 해양 엽록소 회수 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223254257", "object": "해양 엽록소 농도", "problem": "정확한 해양 엽록소 회수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223281406", "object": "토양의 이산화탄소 플럭스", "problem": "이산화탄소 플럭스의 시공간 동역학 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223299551", "object": "내륙 수질", "problem": "위성 원격 감지 기술을 통한 수질 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}

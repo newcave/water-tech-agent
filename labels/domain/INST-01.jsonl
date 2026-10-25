@@ -1943,3 +1943,8 @@
 {"id": "W7223242752", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Perumda Tirta Pakuan의 공공 투명성", "problem": "소통 격차 해소"}
 {"id": "W7223232948", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 물 관리 의사 결정 지원을 위한 인공지능 시스템", "problem": "신뢰성 있는 증거 거버넌스 구축"}
 {"id": "W7223210211", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "일본의 수도 공급 유틸리티", "problem": "전력 소비 감소를 위한 구조적 및 운영적 요인 분석"}
+{"id": "W7223389517", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bellandur Lake의 수질 및 영양 상태", "problem": "수질 악화 및 영양 상태 모니터링"}
+{"id": "W7223400608", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "플로리다의 공공 및 민간 음용수와 폐수 시스템에 대한 인구 밀도", "problem": "인프라 계획 및 환경 관리 개선"}
+{"id": "W7223416828", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전기 산업의 효율적인 운영", "problem": "전기 산업의 다양한 요구를 충족시키기 위한 펌프 솔루션 제공"}
+{"id": "W7223375633", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 유출 방지 구조물", "problem": "지하수 압력으로 인한 토사 유출 문제 해결"}
+{"id": "W7214142173", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 수력 발전 시스템", "problem": "유연성 요구 증가에 따른 현대화 필요성 해결"}

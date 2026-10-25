@@ -1617,3 +1617,12 @@
 {"id": "W7223244786", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이베리아 반도의 풍력 에너지 평가 및 전력 시스템 모델링을 위한 기상 데이터", "problem": "고해상도 기상 데이터 제공"}
 {"id": "W7223243370", "domain_primary": "W1", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "홍수 위험 관리와 농업 물 안전성", "problem": "연계된 개발 문제 해결하기"}
 {"id": "W7223256884", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 자원", "problem": "산업 경쟁력 향상"}
+{"id": "W7223416400", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 기반 경제", "problem": "재생 가능 에너지로의 전환 가속화"}
+{"id": "W7223285265", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안데스 호수 시스템의 수자원 저장 동역학", "problem": "수자원 저장 동역학 이해"}
+{"id": "W7223360327", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "베트남의 전력 시스템", "problem": "전력 부문의 탈탄소화 경로 비교"}
+{"id": "W7223369768", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "네팔의 에너지, 토지, 물 및 농업 시스템", "problem": "지속 가능한 개발을 위한 균형 필요성"}
+{"id": "W7223387589", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 전력 부문", "problem": "전력 부문에서의 탄소 배출 감소 방안 모색"}
+{"id": "W7223329761", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chainpur Seti Hydropower Project", "problem": "재정적 지속 가능성 확보"}
+{"id": "W7223324450", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "관개 수로의 낙차 구조물", "problem": "자동으로 낙차 구조물 식별하기"}
+{"id": "W7223311265", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 전력 시스템의 주파수 및 전압 안정성", "problem": "주파수 및 전압 안정성 문제 해결"}
+{"id": "W7223320232", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 프로젝트의 디지털 인수 관리", "problem": "모델 정보 단절 및 단계 간 데이터 불연속성 해결"}

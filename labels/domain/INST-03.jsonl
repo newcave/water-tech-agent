@@ -4486,3 +4486,9 @@
 {"id": "W7223247306", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "장내 장벽 기능", "problem": "DSS 유도 대장염 완화"}
 {"id": "W7223196386", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 품질", "problem": "오염 문제 해결"}
 {"id": "W7223256488", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "식수 부족 문제", "problem": "생물학적 처리 기술 통합"}
+{"id": "W7223266525", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수돗물 공급 시스템의 운영 효율성", "problem": "계절적 미생물 요인의 영향 평가"}
+{"id": "W7223280963", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지속적이고 이동성이 있으며 독성이 있는 화학물질", "problem": "지속적이고 독성이 있는 화학물질 목록 작성"}
+{"id": "W7223374179", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물에서의 미량 유기 오염물질 제거", "problem": "소거 공정의 성능 예측 및 기술적 규모 확대의 필요성 해결"}
+{"id": "W7223374912", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 공급 및 위생 시스템", "problem": "디지털 도구를 통한 효율성 향상"}
+{"id": "W7223394000", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 지역의 음용수 시스템", "problem": "DBP 형성의 취약성 이해하기"}
+{"id": "W7223306835", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS 제거 효율 향상"}
