@@ -41,7 +41,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10.1 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.10.2 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -462,7 +462,7 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     # 사이드바 이름: 2단 워드마크 (머리띠에 'Water Co-Scientist 에이전트 관제센터'가 있어 짧게 · v3.10.1)
     st.markdown('<div class="side-brand"><div class="sb-eb">K-water 연구원</div>'
-                '<div class="sb-name">물 벗 : R&amp;D 에이전트</div></div>', unsafe_allow_html=True)
+                '<div class="sb-name">물벗 : R&amp;D 에이전트</div></div>', unsafe_allow_html=True)
     PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", OA_PAGE, "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
