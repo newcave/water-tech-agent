@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.7.1 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.7.2 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -110,12 +110,19 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] label[data-baseweb="radio"]:has(input:checked)
   {background:rgba(255,255,255,.30); font-weight:700;}
 [data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
-.side-sep {display:flex; align-items:center; gap:8px; margin:14px 0 8px; font-size:.72rem;
+.side-sep {display:flex; align-items:center; gap:8px; margin:6px 0 0; font-size:.72rem;
   letter-spacing:.12em; opacity:.85;}
 .side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
-[data-testid="stSidebar"] .stButton, [data-testid="stSidebar"] .stButton [data-testid="stTooltipHoverTarget"] {width:100%;}
-[data-testid="stSidebar"] .stButton button {width:100%; justify-content:flex-start; border-radius:12px;
-  background:rgba(255,255,255,.13); border:1px dashed rgba(255,255,255,.55); color:#fff; padding:9px 12px;}
+/* 사이드바 단추(HITL 검토·Agent Flow): 폭은 모두 사이드바 너비로 같게, 높이·간격은 작게 (v3.7.2) */
+[data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.stButton) {width:100% !important; margin-bottom:-9px;}
+[data-testid="stSidebar"] .stButton, [data-testid="stSidebar"] .stButton > div,
+[data-testid="stSidebar"] .stButton [data-testid="stTooltipIcon"],
+[data-testid="stSidebar"] .stButton [data-testid="stTooltipHoverTarget"] {width:100% !important;}
+[data-testid="stSidebar"] .stButton button {width:100%; justify-content:flex-start; border-radius:10px; min-height:0;
+  background:rgba(255,255,255,.13); border:1px dashed rgba(255,255,255,.55); color:#fff; padding:4px 12px;
+  line-height:1.35;}
+[data-testid="stSidebar"] .stButton button > div {justify-content:flex-start; width:100%;}
+[data-testid="stSidebar"] .stButton button p {font-size:.9rem; text-align:left;}
 [data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
   font-weight:700;}
 .block-container {padding-top:1.1rem; max-width:1500px;}
