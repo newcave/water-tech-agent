@@ -17,7 +17,7 @@ import time
 
 REPO = "newcave/water-tech-agent"
 POLL_AGENTS = ["openalex_collector", "alio_crawler", "kipris_collector", "article_collector",
-               "alio_parser", "normalizer", "ft_trainer"]
+               "alio_parser", "normalizer", "ft_trainer", "oa_rising"]
 
 
 def _iso_ts(s):
@@ -28,7 +28,8 @@ def _iso_ts(s):
 
 
 def snapshot(agents: dict, state_fn, totals: dict, kr: dict | None, kw: dict | None,
-             runs: list, daily: list, hitl: dict | None, ft: dict | None = None, stats: dict | None = None) -> dict:
+             runs: list, daily: list, hitl: dict | None, ft: dict | None = None, stats: dict | None = None,
+             oa: dict | None = None) -> dict:
     """화면 첫 그림용 스냅숏 (모두 집계·상태만)."""
     ag = {}
     for k, a in (agents or {}).items():
@@ -52,9 +53,14 @@ def snapshot(agents: dict, state_fn, totals: dict, kr: dict | None, kw: dict | N
     hitl_s = {"records": h.get("records", 0), "papers": h.get("papers_judged", 0),
               "reviewers": len(h.get("by_reviewer") or {}), "updated": _iso_ts(h.get("updated_at")) if h.get("updated_at") else None,
               "final": h.get("final") or {}}
+    m = ((oa or {}).get("sources") or [{}])[0]           # openalex 상승 연구주제 연동 (data_seed/oa_rising/index.json)
+    oa_s = {"updated": _iso_ts((oa or {}).get("updated")) if (oa or {}).get("updated") else None,
+            "docs": m.get("documents") or 0, "rising": m.get("rising") or 0, "clusters": m.get("clusters") or 0,
+            "modularity": m.get("modularity"), "title": m.get("title", ""), "years": m.get("years") or [],
+            "fields": sum(1 for x in ((oa or {}).get("sources") or []) if x.get("inst"))}
     return {"generated": int(time.time()), "repo": REPO, "poll_agents": POLL_AGENTS, "agents": ag,
             "totals": {"papers": totals.get("papers", 0)}, "kci": kci, "labels": labels, "hitl": hitl_s,
-            "ft": ft or {}, "stats": stats or {}}
+            "ft": ft or {}, "stats": stats or {}, "oa": oa_s}
 
 
 def html(snap: dict, height: int = 720) -> str:
@@ -120,7 +126,7 @@ const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
 const ST = {run:["가동 중","#22c55e"], idle:["정상 대기","#38bdf8"], standby:["준비·예정","#f59e0b"], plan:["설계","#64748b"], error:["오류","#ef4444"]};
 const GC = {src:"#7dd3fc", col:"#3b82f6", pro:"#14b8a6", kno:"#a78bfa", hit:"#f472b6", use:"#fb923c"};
 const COLS = [["원천",95],["수집",325],["처리",555],["지식",790],["사람 검토",1020],["활용",1245]];
-const VW = 1340, VH = 860;
+const VW = 1340, VH = 1000;
 let D = JSON.parse(JSON.stringify(SNAP));
 const now = () => Date.now() / 1000;
 const fmt = n => (n || 0).toLocaleString("ko-KR");
@@ -138,6 +144,7 @@ const N = [
  {id:"src_alio", col:0, row:2.9, g:"src", icon:"🏛️", label:"ALIO", sub:"공공기관 보고서"},
  {id:"src_kipris", col:0, row:4.0, g:"src", icon:"📜", label:"KIPRIS", sub:"특허"},
  {id:"src_news", col:0, row:5.1, g:"src", icon:"📰", label:"기사·아티클", sub:"웹"},
+ {id:"src_oa_ext", col:0, row:6.2, g:"src", icon:"🔒", label:"openalex", sub:"외부 분석 결과"},
  {id:"openalex_collector", col:1, row:0.5, g:"col", icon:"📄", label:"논문 수집", agent:"openalex_collector"},
  {id:"kci", col:1, row:1.7, g:"col", icon:"🔎", label:"KCI 수집·분석"},
  {id:"alio_crawler", col:1, row:2.9, g:"col", icon:"📥", label:"ALIO 수집", agent:"alio_crawler"},
@@ -146,8 +153,10 @@ const N = [
  {id:"labels", col:2, row:0.5, g:"pro", icon:"🏷️", label:"라벨링 파이프라인"},
  {id:"alio_parser", col:2, row:2.9, g:"pro", icon:"🧠", label:"파싱·추출", agent:"alio_parser"},
  {id:"normalizer", col:2, row:4.0, g:"pro", icon:"🧩", label:"정규화", agent:"normalizer"},
+ {id:"oa_rising", col:2, row:6.2, g:"pro", icon:"🔭", label:"상승 주제 연동", agent:"oa_rising"},
  {id:"kn", col:3, row:1.25, g:"kno", icon:"📒", label:"연구소 지식노트"},
  {id:"kci_trend", col:3, row:2.5, g:"kno", icon:"📈", label:"KCI 트렌드"},
+ {id:"oa_trend", col:3, row:5.0, g:"kno", icon:"🔭", label:"상승 연구주제"},
  {id:"achieve", col:3, row:0.0, g:"kno", icon:"🎯", label:"수집 달성도"},
  {id:"hitl_label", col:4, row:0.6, g:"hit", icon:"🧪", label:"라벨 판정"},
  {id:"hitl_kwater", col:4, row:2.5, g:"hit", icon:"🎮", label:"K-water 판정"},
@@ -161,6 +170,7 @@ const E = [
  ["alio_crawler","alio_parser"],["alio_parser","normalizer"],["normalizer","ft_trainer"],
  ["kn","dash"],["kci_trend","dash"],["achieve","dash"],["hitl_label","dash"],
  ["kipris_collector","labels",1],["article_collector","kn",1],
+ ["src_oa_ext","oa_rising"],["oa_rising","oa_trend"],["oa_trend","dash",0,0,200],
 ];
 const byId = Object.fromEntries(N.map(n => [n.id, n]));
 N.forEach(n => { n.x = COLS[n.col][1]; n.y = 110 + n.row * 124; n.r = n.g === "src" ? 34 : 44; n.flash = 0; });
@@ -188,7 +198,14 @@ function bind(){
   set("hitl_label", hst, "판정 " + fmt(H.records) + "건 · " + fmt(H.reviewers) + "명", H.updated,
       ["OK " + fmt((H.final||{}).ok) + " · NG " + fmt((H.final||{}).ng) + " · 이관 " + fmt((H.final||{}).move), "판정 대장 자동 정리"]);
   set("hitl_kwater", "idle", "K-water 소속 " + fmt(K.kwater) + "편", K.updated, ["소속 규칙 사람 검증"]);
-  set("dash", "run", "Streamlit · 13개 화면", now(), ["지금 보고 있는 화면"]);
+  const O = D.oa || {}; const ost = O.updated && now()-O.updated < 8*86400 ? "idle" : O.updated ? "standby" : "standby";
+  set("src_oa_ext", O.updated ? "idle" : "standby", O.docs ? fmt(O.docs) + "편 분석" : "연동 대기", null,
+      ["newcave/openalex가 수집·분석한 결과 (비공개 openalex-data)", "여기서는 다시 계산하지 않고 집계만 읽음"]);
+  set("oa_trend", ost, O.rising ? "Rising " + fmt(O.rising) + " · 묶음 " + fmt(O.clusters) : "연동 대기", O.updated,
+      [(O.title || "") + (O.years && O.years.length ? " · " + O.years[0] + "–" + O.years[O.years.length-1] : ""),
+       "MK(Hamed–Rao) + BH-FDR q≤0.05 → association strength → Louvain" + (O.modularity ? " · Q " + O.modularity.toFixed(3) : ""),
+       "분야별 결과 " + fmt(O.fields) + "/6 (openalex에서 분석하면 자동 추가)"]);
+  set("dash", "run", "Streamlit · 14개 화면", now(), ["지금 보고 있는 화면"]);
   for (const n of N) n.act = n.st === "run" ? 1 : n.st === "plan" ? 0 : recency(n.last);
 }
 bind();
@@ -206,6 +223,7 @@ function events(){
     out.push({ts:lastRun.ts, node:"labels", msg:"🏷️ 라벨링 회차 — 새 문헌 없음 (점검 완료)"});
   const K = D.kci||{}; if (K.updated) out.push({ts:K.updated, node:"kci", msg:"📈 KCI 주간 분석 — 상승 단어 " + K.uni + " · 구 " + K.bi});
   const H = D.hitl||{}; if (H.updated) out.push({ts:H.updated, node:"hitl_label", msg:"🧾 판정 대장 정리 — 누적 " + H.records + "건"});
+  const O = D.oa||{}; if (O.updated) out.push({ts:O.updated, node:"oa_trend", msg:"🔭 openalex 연동 — Rising " + fmt(O.rising) + " · 커뮤니티 " + fmt(O.clusters) + " · " + fmt(O.docs) + "편"});
   out.sort((a,b) => b.ts - a.ts);
   const uniq = [], key = new Set();                       // 같은 노드의 같은 문구는 가장 최근 것 하나만
   for (const e of out){ const k = e.node + "|" + e.msg; if (!key.has(k)){ key.add(k); uniq.push(e); } }
@@ -224,7 +242,8 @@ function renderKpis(){
   const pap = (D.stats && D.stats.collected_total) || (D.totals||{}).papers || 0;
   document.getElementById("kpis").innerHTML = [
     ["논문", fmt(pap) + "편"], ["라벨", fmt(L.total) + "편"], ["KCI 상승", "단어 " + fmt(K.uni) + " · 구 " + fmt(K.bi)],
-    ["사람 판정", fmt(H.records) + "건"], ["<span class='live'></span>LIVE", "60초 갱신"]].map(([a,b]) => `<span class="chip">${a} <b>${b}</b></span>`).join("");
+    ["상승 주제", fmt((D.oa||{}).rising)],
+    ["사람 판정", fmt(H.records) + "건"]].map(([a,b]) => `<span class="chip">${a} <b>${b}</b></span>`).join("");
 }
 
 // ── 패킷 ──
@@ -247,7 +266,7 @@ function tf(t){ const s = base() * zoom; const {aw, ah} = area(); const drift = 
 // ── 그리기 도우미 ──
 function bez(a, b, t, bend){ const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2 + bend; const u = 1 - t;
   return [u*u*a.x + 2*u*t*mx + t*t*b.x, u*u*a.y + 2*u*t*my + t*t*b.y]; }
-function bendOf(e){ const a = byId[e[0]], b = byId[e[1]]; return e[3] ? 70 : (b.y - a.y) * 0.12; }
+function bendOf(e){ const a = byId[e[0]], b = byId[e[1]]; return e[4] !== undefined ? e[4] : e[3] ? 70 : (b.y - a.y) * 0.12; }  // e[4] = 휨 직접 지정
 function hex(x, y, r){ ctx.beginPath(); for (let i = 0; i < 6; i++){ const ang = Math.PI / 3 * i; const px = x + r * Math.cos(ang), py = y + r * Math.sin(ang);
   i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
 const stars = Array.from({length: 140}, () => ({x: Math.random(), y: Math.random(), z: Math.random() * 0.8 + 0.2}));

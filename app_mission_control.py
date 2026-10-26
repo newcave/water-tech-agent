@@ -42,7 +42,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10.6 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.11 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -101,6 +101,7 @@ AGENT_META = {
     "article_collector":  dict(icon="📰", ko="기사 수집",   role="인터넷 아티클 (설계 예정)", grp="수집"),
     "alio_parser":        dict(icon="🧠", ko="파싱·추출",   role="데이터소스 추출 (4단계)",  grp="처리"),
     "normalizer":         dict(icon="🧩", ko="정규화",      role="레지스트리·인벤토리 (5단계)", grp="처리"),
+    "oa_rising":          dict(icon="🔭", ko="상승 주제 연동", role="openalex 분석 결과 연동 (MK+FDR·Louvain)", grp="분석"),
     "ft_trainer":         dict(icon="🔥", ko="FT 학습",     role="QLoRA 파인튜닝 (코랩)",   grp="학습"),
 }
 STATE_LABEL = {"run": ("가동 중", GREEN), "idle": ("정상 대기", BLUE),
@@ -161,6 +162,7 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 
 /* KPI 카드 */
 .kpis {display:flex; gap:12px; flex-wrap:wrap; margin-bottom:4px;}
+.kpi-grp {font-size:.8rem; font-weight:800; color:#17427C; margin:10px 0 6px; letter-spacing:.02em;}
 .kpi {flex:1 1 150px; background:#fff; border:1px solid #E8EBF8; border-radius:14px;
       padding:14px 16px; box-shadow:0 3px 8px rgba(15,58,115,.08); border-left:6px solid #17549A;}
 .kpi .k-lab {font-size:.78rem; color:#64748B; font-weight:500;}
@@ -436,6 +438,41 @@ live_oa = load_live("openalex/stats.json")               # 논문 실수집 현�
 if live_oa:
     T["papers"] = live_oa.get("collected_total", T.get("papers", 0))
 ft_index = load_ft_index()
+oa_idx = load_json("oa_rising/index.json") or {}                # openalex 상승 연구주제 연동 (agents/oa_rising.py)
+oa_main = (oa_idx.get("sources") or [{}])[0]
+
+
+def oa_population(years) -> int:
+    """openalex 연동 코퍼스와 같은 연도 범위의 OpenAlex 모집단(수자원 12저널, 모든 유형) — openalex_lite 실측(openalex_trends.json)."""
+    try:
+        y0, y1 = int(years[0]), int(years[-1])
+        js = (load_json("openalex_trends.json") or {}).get("journals", {})
+        return sum(c for j in js.values() for y, c in (j.get("by_year") or {}).items() if y0 <= int(y) <= y1)
+    except Exception:
+        return 0
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def hitl_totals() -> dict:
+    """연구소별 판정 대장 요약(data 브랜치 labels/hitl/<INST>/summary.json)을 합친 숫자 — 관제센터 KPI용."""
+    insts = [f"INST-0{i}" for i in range(1, 8)]
+    texts = dcache.fetch_many([f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/labels/hitl/{i}/summary.json" for i in insts], timeout=8)
+    out = {"records": 0, "papers": 0, "ok": 0, "ng": 0, "move": 0, "insts": 0, "reviewers": set()}
+    for t in texts:
+        try:
+            d = json.loads(t) if t else None
+        except Exception:
+            d = None
+        if not d:
+            continue
+        out["insts"] += 1
+        out["records"] += d.get("judgments", d.get("records", 0)) or 0
+        out["papers"] += d.get("papers_judged", 0) or 0
+        for k in ("ok", "ng", "move"):
+            out[k] += (d.get("final") or {}).get(k, 0) or 0
+        out["reviewers"] |= set(d.get("by_reviewer") or {})
+    out["reviewers"] = len(out["reviewers"])
+    return out
 
 # ft_trainer 카드에 최신 run 라이브 주입 (FT는 계속된다 — 항목 7)
 if ft_index:
@@ -542,30 +579,49 @@ st.markdown(f"""<div class="hdr">
 
 # ═══════════════ 페이지 1: 관제센터 ═══════════════
 if page == "🛰️ 관제센터":
-    kpis = [
-        ("ALIO 보고서", f"{T.get('alio_collected', 0)}건",
-         f"파싱 {T.get('alio_parsed_ok', 0)} · 오류 {T.get('alio_errors', 0)}"),
-        ("데이터소스 mention", f"{T.get('mentions', 0):,}건", "페이지 근거 100%"),
-        ("고유 데이터소스", f"{T.get('unique_datasources', 0):,}개", "canonical 정규화"),
-        ("논문 K-water 생산", f"{live_oa.get('kwater_collected', 0):,}건"
-         if live_oa and "kwater_collected" in live_oa else f"{T.get('papers', 0):,}건",
-         (f"관련(도메인) {live_oa.get('related_collected', 0):,}"
-          f"/{live_oa.get('related_target', 0):,} 별도 수집"
-          if "kwater_collected" in live_oa else
-          f"실수집 {live_oa.get('collected_total', 0):,}/{live_oa.get('target_total', 0):,}")
-         if live_oa else "수집 대기"),
+    # KPI 두 줄: 자체 수집 에이전트 / 처리·분석·지식 (openalex 연동 포함 · v3.11)
+    _kc = (load_json("kci_counts.json") or {}).get("journals", {})
+    _krs = ((load_json("kci_rising.json") or {}).get("scopes") or {}).get("J11+J12") or {}
+    _runs = load_labels_jsonl("pipeline_runs.jsonl")
+    _ht = hitl_totals()
+    _pop12 = oa_population(oa_main.get("years") or [])
+    _oa_y = oa_main.get("years") or ["", ""]
+    lo = live_oa or {}
+    row_col = [
+        ("논문 OpenAlex", f"{lo.get('collected_total', T.get('papers', 0)):,}편",
+         (f"K-water {lo.get('kwater_collected', 0):,} · 12저널 {lo.get('journal_collected', 0):,}(2020~) · "
+          f"연구소 관련 {lo.get('related_collected', 0):,}") if lo else "수집 대기"),
+        ("KCI 국내 학회지 (실측)", f"{sum(v.get('total', 0) for v in _kc.values()):,}편",
+         " · ".join(f"{k} {v.get('total', 0):,}" for k, v in _kc.items()) + " (원천은 비공개 보관)" if _kc else "실측 대기"),
+        ("ALIO 보고서", f"{T.get('alio_collected', 0)}건", f"파싱 {T.get('alio_parsed_ok', 0)} · 오류 {T.get('alio_errors', 0)}"),
         ("특허 KIPRIS", f"{T.get('patents', 0)}건", "키 승인 대기"),
         ("기사·아티클", f"{T.get('articles', 0)}건", "파이프라인 설계"),
     ]
+    row_ana = [
+        ("openalex 연동 코퍼스", f"{(oa_main.get('documents') or 0):,}편",
+         f"수자원 12저널 {_oa_y[0]}–{_oa_y[-1]} · 영어·필터 후" + (f" (OpenAlex 모집단 {_pop12:,})" if _pop12 else ""))
+        if oa_main else ("openalex 연동 코퍼스", "-", "OPENALEX_DATA_TOKEN 연동 대기"),
+        ("상승 연구주제 Rising (OpenAlex)", f"{(oa_main.get('rising') or 0):,}개",
+         f"커뮤니티 {oa_main.get('clusters', 0)} · Q {oa_main.get('modularity') or 0:.3f} · MK+BH q≤0.05") if oa_main
+        else ("상승 연구주제 (OpenAlex)", "-", "연동 대기"),
+        ("KCI 상승 용어 (단어)", f"{_krs.get('n_rising', 0):,}개",
+         f"구 {(_krs.get('bigram') or {}).get('n_rising', 0):,} · 국내 학회지 {sum(_krs.get('denominator') or []):,}편 · "
+         f"묶음 {len((_krs.get('network') or {}).get('communities') or [])}"),
+        ("연구소 라벨", f"{(_runs[-1].get('total', 0) if _runs else 0):,}편", "초록 · 대상/문제 · W 도메인 (6시간마다)"),
+        ("데이터소스 mention", f"{T.get('mentions', 0):,}건", f"고유 {T.get('unique_datasources', 0):,}개 · 페이지 근거 100%"),
+        ("사람 판정 (HITL)", f"{_ht['records']:,}건",
+         f"OK {_ht['ok']} · NG {_ht['ng']} · 이관 {_ht['move']} · 연구소 {_ht['insts']}곳 · 판정자 {_ht['reviewers']}명"),
+    ]
     ACC = ["#17549A", "#2E77C6", "#3B82F6", "#C0392B", "#1E8449", "#0EA5E9"]
-    st.markdown('<div class="kpis">' + "".join(
-        f'<div class="kpi" style="border-left-color:{ACC[i % len(ACC)]}">'
-        f'<div class="k-val">{v}</div><div class="k-lab">{k}</div>'
-        f'<div class="k-sub">{s}</div></div>' for i, (k, v, s) in enumerate(kpis)) + "</div>",
-        unsafe_allow_html=True)
+    for grp_, rows_, acc_ in (("📥 수집 — 자체 에이전트", row_col, ACC), ("🧠 처리 · 분석 · 지식 — openalex 연동 포함", row_ana,
+                                                                      ["#0F766E", "#7C3AED", "#D97706", "#0284C7", "#475569", "#DB2777"])):
+        st.markdown(f'<div class="kpi-grp">{grp_}</div><div class="kpis">' + "".join(
+            f'<div class="kpi" style="border-left-color:{acc_[i % len(acc_)]}">'
+            f'<div class="k-val">{v}</div><div class="k-lab">{k}</div>'
+            f'<div class="k-sub">{s_}</div></div>' for i, (k, v, s_) in enumerate(rows_)) + "</div>",
+            unsafe_allow_html=True)
 
     # 🏷️ 라벨링 봇 상태 배지
-    _runs = load_labels_jsonl("pipeline_runs.jsonl")
     if _runs:
         _r = _runs[-1]
         try:
@@ -586,11 +642,13 @@ if page == "🛰️ 관제센터":
     # 파이프라인 플로우 — "에이전트가 돌아가는 이미지"
     st.markdown('<div class="sect">데이터 파이프라인</div>', unsafe_allow_html=True)
     stages = [
-        ("📡 소스", "ALIO·논문·특허·기사", "공공/학술/IP/웹"),
-        ("📥 수집 에이전트", f"{T.get('alio_collected', 0) + T.get('papers', 0) + T.get('patents', 0) + T.get('articles', 0):,}건",
-         "crawler·collector ×4"),
+        ("📡 소스", "5개 원천", "OpenAlex·KCI·ALIO·특허·기사"),
+        ("📥 수집 에이전트", f"{T.get('alio_collected', 0) + T.get('papers', 0) + T.get('patents', 0) + T.get('articles', 0) + sum(v.get('total', 0) for v in _kc.values()):,}건",
+         "논문·KCI·ALIO·특허·기사"),
+        ("🔗 외부 연동", f"{(oa_main.get('documents') or 0):,}편" if oa_main else "대기", "openalex 분석 결과 · 주 1회"),
         ("🧠 파싱·추출", f"{T.get('mentions', 0):,} mention", "gpt-4o → FT모델 교체 예정"),
         ("🧩 정규화", f"{T.get('unique_datasources', 0):,} 소스", "registry·canonical"),
+        ("🔭 트렌드 분석", f"상승 {(oa_main.get('rising') or 0) + _krs.get('n_rising', 0):,}개", f"OpenAlex {(oa_main.get('rising') or 0):,} · KCI {_krs.get('n_rising', 0):,}"),
         ("🗄️ 통합 DB", "PostgreSQL", "star schema · 협업 edge"),
         ("🔥 FT 학습", f"run {len(ft_index)}회", "KONI/Qwen QLoRA"),
         ("🤝 Co-Scientist", "서비스", "보고·분석·질의응답"),
@@ -658,6 +716,14 @@ elif page == "📚 수집 현황":
          (live_oa.get("target_total") if live_oa and live_oa.get("target_total") else 3000),
          ("🟢 누적 수집 중 — 10분당 100편" if live_oa and T.get("papers", 0) < live_oa.get("target_total", 0)
           else "✅ 1차 수집 완료") if live_oa else "🟡 수집기 배치 · search_topics.json 준비"),
+        ("🇰🇷 KCI 국내 학회지 — 한국수자원학회논문집·대한토목학회논문집 (원천은 비공개 저장소)",
+         sum((v.get("total", 0) for v in ((load_json("kci_counts.json") or {}).get("journals", {})).values())),
+         sum((v.get("total", 0) for v in ((load_json("kci_counts.json") or {}).get("journals", {})).values())) or 1,
+         "✅ 주 1회 실측·수집 (kci-counts · kci-rising)"),
+        ("🔗 openalex 연동 — 수자원 12저널 2000–2025 (분석용 코퍼스, 영어·필터 후 / OpenAlex 모집단)",
+         oa_main.get("documents") or 0,
+         oa_population(oa_main.get("years") or []) or (oa_main.get("documents") or 0) or 1,
+         "✅ 주 1회 연동 (oa-rising)" if oa_main else "🟡 OPENALEX_DATA_TOKEN 연동 대기"),
         ("📜 특허 KIPRIS — 연구소 키워드×물", T.get("patents", 0), 500, "🟡 서비스키 승인 대기"),
         ("📰 기사·인터넷 아티클", T.get("articles", 0), 1000, "⚪ 파이프라인 설계 (추후 추가)"),
         ("📑 보고서② 기타(PRISM 등)", 0, 500, "⚪ 설계"),
@@ -2141,7 +2207,7 @@ elif page == FLOW_PAGE:
         _ft = {"latest": ft_index[0].get("id"), "status": run_status(*load_metrics(ft_index[0]["id"]))[0]}
     _snap = af.snapshot(agents, state_of, T, load_json("kci_rising.json"), load_json("kci_kwater.json"),
                         load_labels_jsonl("pipeline_runs.jsonl"), load_labels_jsonl("metrics/daily.jsonl"), _hitl,
-                        _ft, live_oa)
+                        _ft, live_oa, oa_idx)
     _html = af.html(_snap, height=740)
     components.html(_html, height=750, scrolling=False)
     c1_, c2_ = st.columns([1, 3])
