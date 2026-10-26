@@ -65,16 +65,43 @@ jobs:
         run: python agents/oa_rising.py
 
       - name: 집계 커밋 → 공개 저장소 (main만)
+        id: commit
         if: steps.tok.outputs.ok == '1' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "co-scientist-bot"
           git config user.email "co-scientist-bot@users.noreply.github.com"
           git add data_seed/oa_rising
           # 내용이 같으면 oa_rising.py가 파일을 다시 쓰지 않으므로 갱신 시각만 바뀐 커밋은 생기지 않음
-          if git diff --cached --quiet -- data_seed/oa_rising; then echo "변경 없음"; exit 0; fi
+          if git diff --cached --quiet -- data_seed/oa_rising; then echo "변경 없음"; echo "changed=0" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "🤖 oa_rising: $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            git pull --rebase origin main && git push && { echo "changed=1" >> "$GITHUB_OUTPUT"; exit 0; }
             sleep 10
           done
           echo "push 실패(3회)"; exit 1
+
+      # 관제센터 함대 카드·활동 피드·🌊 흐름 화면용 심박 — 토큰이 없거나 실패해도 기록 (상태를 정직하게)
+      - name: 심박 → data 브랜치 live/agents/oa_rising.json
+        if: always() && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OA_TOKEN_OK: ${{ steps.tok.outputs.ok }}
+          OA_JOB_OK: ${{ job.status == 'success' && '1' || '0' }}
+          OA_CHANGED: ${{ steps.commit.outputs.changed || '0' }}
+          OA_HB_PREV: /tmp/hb_prev.json
+          OA_HB_OUT: /tmp/hb.json
+        run: |
+          API="repos/$GITHUB_REPOSITORY/contents/live/agents/oa_rising.json"
+          git pull -q --rebase origin main || true          # 방금 커밋한 집계로 심박 숫자를 만든다
+          if gh api "$API?ref=data" > /tmp/hb_meta.json 2>/dev/null; then
+            python3 -c "import json,base64;d=json.load(open('/tmp/hb_meta.json'));open('/tmp/hb_prev.json','wb').write(base64.b64decode(d['content']));print(d['sha'])" > /tmp/hb_sha
+          fi
+          python3 agents/oa_rising_heartbeat.py
+          for i in 1 2 3; do
+            SHA=$(cat /tmp/hb_sha 2>/dev/null || true)
+            ARGS=(-X PUT "$API" -f message="🤖 oa_rising 심박 $(date -u +'%Y-%m-%d %H:%M UTC')" -f branch=data -f content="$(base64 -w0 /tmp/hb.json)")
+            [ -n "$SHA" ] && ARGS+=(-f sha="$SHA")
+            gh api "${ARGS[@]}" > /dev/null && { echo "심박 기록"; exit 0; }
+            sleep 5; gh api "$API?ref=data" --jq .sha > /tmp/hb_sha 2>/dev/null || true
+          done
+          echo "::warning::심박 기록 실패 (연동 결과에는 영향 없음)"; exit 0
