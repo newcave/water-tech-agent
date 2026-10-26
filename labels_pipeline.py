@@ -16,6 +16,8 @@ HISTORY_START_YEAR = 2025      # 첫 역사 수집 연도 (2025 상반기 공백
 HISTORY_FLOOR_YEAR = 2015      # 여기까지 후진하면 역사 수집 완료
 MAX_PAGES_FORWARD = 120
 MAX_PAGES_PER_MONTH = 60
+RESWEEP_YEARS = 5              # 역사 수집 완주 뒤: 최근 5년(올해 포함)을 하루에 1년씩 다시 훑음 (2026-10-27 사용자 지정)
+                               #   첫 차례는 작년(2025 상반기 공백) → 2024 → … → 5년 전 → 올해 → 작년 … 순환. id로 중복 제거
 TOPICS_URL = ("https://raw.githubusercontent.com/newcave/water-tech-agent/"
               "main/data_seed/search_topics.json")
 
@@ -280,11 +282,36 @@ def stage_collect_daily(repo, log):
         nxt = y - 1
         log(f"수집(후진): {y}년 +{n_hist} — 다음 회차는 "
             + (f"{nxt}년" if nxt >= HISTORY_FLOOR_YEAR else "없음(완주)"))
+    elif RESWEEP_YEARS > 0:
+        n_hist, hist_year = stage_resweep(repo, topics, st, log)
     else:
         log(f"수집(후진): {HISTORY_FLOOR_YEAR}년까지 완주 — 종료 상태")
     st["last_collect_date"] = today
     save_state(repo, st)
     return n_fwd, hist_year, n_hist
+
+
+def stage_resweep(repo, topics, st, log):
+    """최근 RESWEEP_YEARS년 가운데 오늘 차례인 한 해를 월 단위로 다시 훑는다 (하루 1년).
+    늦게 색인된 논문과 지난 수집에서 빠진 달(2025년 1~6월 등)을 채운다. 이미 있는 id는 건너뜀."""
+    today = date.today()
+    lo = today.year - RESWEEP_YEARS + 1
+    y = int(st.get("resweep_next_year") or today.year - 1)
+    if y < lo or y > today.year:
+        y = today.year
+    last_m = 12 if y < today.year else today.month
+    log(f"수집(다시 훑기): 최근 {RESWEEP_YEARS}년 중 {y}년 (월 단위 {last_m}조각)")
+    n = 0
+    for m in range(last_m, 0, -1):
+        last = calendar.monthrange(y, m)[1]
+        n += collect_range(repo, topics, f"{y}-{m:02d}-01", f"{y}-{m:02d}-{last:02d}",
+                           MAX_PAGES_PER_MONTH, log, f"다시 {y}-{m:02d}")
+    nxt = y - 1 if y - 1 >= lo else today.year
+    st["resweep_next_year"] = nxt
+    st["resweep_window"] = [lo, today.year]
+    st["resweep_log"] = (st.get("resweep_log") or [])[-9:] + [{"date": today.isoformat(), "year": y, "added": n}]
+    log(f"수집(다시 훑기): {y}년 +{n} — 다음 회차는 {nxt}년")
+    return n, y
 
 
 def stage_backfill(repo, log, recheck=0):
