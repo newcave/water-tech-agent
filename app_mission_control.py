@@ -40,36 +40,37 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.7 · 2026-10-26"
+APP_VERSION = "v3.7.1 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
 FLOW_PAGE = "🌊 에이전트 흐름"              # 보여 주기용 흐름 화면 (agent_flow.py) — 운영 화면은 관제센터 그대로
 LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
 LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
-WCS_FLOW_PAGE = "AI for Water (코사이언티스트)"  # Agent Flow 확인用 — WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
-HECRAS_FLOW_PAGE = "HEC-RAS Surrogate (서로게이트)"  # Agent Flow 확인用 — HECRAS-surrogate 흐름도 (flows/hecras_agent_flow.html)
-RNDHELP_FLOW_PAGE = "RND-HELP (수탁과제 관리)"     # Agent Flow 확인用 — rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
-LORA_FLOW_PAGE = "AI Lab 4B LoRA (언어모델)"       # Agent Flow 확인用 — kwater-ailab-4b-lora 흐름도 (flows/lora4b_agent_flow*.html)
+# Agent Flow 확인用 버튼 이름 (2026-10-26 사용자 지정 · 순서는 AGENT_FLOWS 순서)
+WCS_FLOW_PAGE = "Co-Scientist 개념도"        # WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
+RNDHELP_FLOW_PAGE = "수탁과제 관리 Tool"       # rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
+HECRAS_FLOW_PAGE = "Surrogate 모델링"         # HECRAS-surrogate 흐름도 (flows/hecras_agent_flow*.html)
+LORA_FLOW_PAGE = "AI연구소 자체 LLM"          # kwater-ailab-4b-lora 흐름도 (flows/lora4b_agent_flow*.html)
 # Agent Flow 확인用 화면: 버튼 이름 → (흐름도 파일, 제목, 설명, 도움말, 공개 메모). 새 흐름도는 flows/에 파일을 두고 여기 한 줄만 더한다
-# 파일 자리에 {보기 이름: 파일}을 주면 화면 위에 보기 전환 버튼이 생긴다 (한 번에 하나만 보임)
+# 파일 자리에 {보기 이름: 파일}을 주면 화면 위에 보기 전환 버튼이 생긴다 (한 번에 하나만 보임). 사이드바 버튼 순서 = 이 표의 순서
 AGENT_FLOWS = {
-    WCS_FLOW_PAGE: ("flows/wcs_agent_flow.html", "AI for Water (코사이언티스트) — WCS 연구자료 검색의 에이전트 흐름",
+    WCS_FLOW_PAGE: ("flows/wcs_agent_flow.html", "Co-Scientist 개념도 — WCS 연구자료 검색의 에이전트 흐름",
                     "원천 자료 → 자료 준비 → 저장·모델 → 검색 창구 → AI 답변 → 화면 → 사람. 실제 코드 경로(WCS main 90edc2d, 2026-10-26)를 질문 유형별로 재생",
                     "WCS(K-water 연구자료 검색)의 에이전트 흐름 — 실제 코드 경로를 질문 유형별로 재생하는 구조도 (실시간 상태 아님)",
                     "hjhj(학준) 동의 후 공개 (2026-10-26)."),
-    HECRAS_FLOW_PAGE: ({"🌊 기본 보기": "flows/hecras_agent_flow.html", "🔬 전문가 보기": "flows/hecras_agent_flow_expert.html"},
-                       "HEC-RAS Surrogate (서로게이트) — 1D HEC-RAS × AI 방류 설계 흐름",
-                       "HEC-RAS 정답 → 자료 → 학습·검증 → 서로게이트 → 후보 탐색 → 방류 설계(P1·P2·P3) → HEC-RAS 1회 확인. 실제 코드 경로(newcave/HECRAS-surrogate main 30c0fc5, 2026-08-18)를 단계별로 재생",
-                       "HEC-RAS Surrogate Studio의 흐름 — 학습·검증부터 P1·P2·P3 방류 설계까지 실제 코드 경로를 재생하는 구조도 (실시간 상태 아님)",
-                       "공개 저장소 newcave/HECRAS-surrogate 기준."),
     RNDHELP_FLOW_PAGE: ({"🌊 기본 보기": "flows/rndhelp_agent_flow.html", "🔬 전문가 보기": "flows/rndhelp_agent_flow_expert.html"},
-                        "RND-HELP (수탁과제 관리) — 국가R&D 과제관리 도우미 흐름",
+                        "수탁과제 관리 Tool — RND-HELP(국가R&D 과제관리 도우미) 흐름",
                         "원천 자료 → 판정 엔진(룰·AI·점검·현물·편성·검색) → 결합 → 업무 화면 → 산출물 → 피드백 재학습. 실제 코드 경로(newcave/rndhelp main 9ebf611, 2026-10-23)를 업무별로 재생",
                         "RND-HELP(rndaid.streamlit.app)의 흐름 — 비목 매핑·정산 점검·현물·제안서·FAQ를 실제 코드 경로대로 재생하는 구조도 (실시간 상태 아님)",
                         "공개 저장소 newcave/rndhelp 기준 (자료는 가상 샘플)."),
+    HECRAS_FLOW_PAGE: ({"🌊 기본 보기": "flows/hecras_agent_flow.html", "🔬 전문가 보기": "flows/hecras_agent_flow_expert.html"},
+                       "Surrogate 모델링 — HEC-RAS Surrogate Studio(1D HEC-RAS × AI 방류 설계) 흐름",
+                       "HEC-RAS 정답 → 자료 → 학습·검증 → 서로게이트 → 후보 탐색 → 방류 설계(P1·P2·P3) → HEC-RAS 1회 확인. 실제 코드 경로(newcave/HECRAS-surrogate main 30c0fc5, 2026-08-18)를 단계별로 재생",
+                       "HEC-RAS Surrogate Studio의 흐름 — 학습·검증부터 P1·P2·P3 방류 설계까지 실제 코드 경로를 재생하는 구조도 (실시간 상태 아님)",
+                       "공개 저장소 newcave/HECRAS-surrogate 기준."),
     LORA_FLOW_PAGE: ({"🌊 기본 보기": "flows/lora4b_agent_flow.html", "🔬 전문가 보기": "flows/lora4b_agent_flow_expert.html"},
-                     "AI Lab 4B LoRA (언어모델) — AI연구소 첫 LoRA 언어모델 v0.1 흐름",
+                     "AI연구소 자체 LLM — kwater-ailab-4b-lora(첫 LoRA 언어모델 v0.1) 흐름",
                      "공개 연구보고서 105건 → 데이터소스 추출 → instruction 쌍 → Qwen3-4B + LoRA 학습 → 전/후 평가 → Hugging Face 공개 → 추론, 그리고 로드맵(v0.2~v1.x). 저장소(newcave/kwater-ailab-4b-lora main 46453b2, 2026-07-10) 기준으로 단계별 재생",
                      "kwater-ailab-4b-lora의 흐름 — 데이터 구축·LoRA 학습·배포·로드맵을 재생하는 구조도 (학습 코드는 저장소 밖이라 README 기준 단계는 점선, 실시간 상태 아님)",
                      "공개 저장소 newcave/kwater-ailab-4b-lora 기준 — 학습 단계는 README 기준(코드는 Colab)."),
