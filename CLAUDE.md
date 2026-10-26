@@ -32,7 +32,7 @@ K-water연구원 AI연구소의 R&D 데이터 에이전트 플랫폼. 수집(Ope
 | `water-tech-kci-private` | KCI 원천(`raw/`), 사람 판정 오버라이드(`review/`) |
 
 주요 모듈: `knowledge_notes.py`(지식노트) · `label_review.py`/`label_review_page.py`(라벨 판정 HITL) · `data_cache.py`(공용 캐시) ·
-`agent_flow.py`(🌊 흐름 화면) · `flows/*_agent_flow.html`(사이드바 Agent Flow 확인用 — WCS·HEC-RAS 서로게이트 흐름도, 표 N·E·SCN만 고침, 버튼은 `AGENT_FLOWS` 한 줄, 보기가 여럿이면 {보기: 파일} — HEC-RAS는 기본·전문가 두 보기) · `agents/kci_rising.py`(KCI 단어·구 상승 분석) · 설정 `data_seed/*.json`(키워드·목표·문턱 — 연구소가 직접 고침).
+`agent_flow.py`(🌊 흐름 화면) · `flows/*_agent_flow.html`(사이드바 Agent Flow 확인用 — WCS·HEC-RAS 서로게이트·RND-HELP 흐름도, 표 N·E·SCN만 고침, 버튼은 `AGENT_FLOWS` 한 줄, 보기가 여럿이면 {보기: 파일} — HEC-RAS·RND-HELP는 기본·전문가 두 보기) · `agents/kci_rising.py`(KCI 단어·구 상승 분석) · 설정 `data_seed/*.json`(키워드·목표·문턱 — 연구소가 직접 고침).
 
 ## 3. 개발·시험·배포
 
