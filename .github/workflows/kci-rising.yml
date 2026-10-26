@@ -24,16 +24,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: 비공개 저장소 체크아웃 (원천 데이터 보관소)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: newcave/water-tech-kci-private
           token: ${{ secrets.KCI_PRIVATE_TOKEN }}
           path: private
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
       - run: pip install --quiet requests numpy pymannkendall networkx kiwipiepy

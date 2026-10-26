@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: 토큰 확인
         id: tok
@@ -33,7 +33,7 @@ jobs:
 
       - name: openalex-data 결과 폴더만 체크아웃 (비공개 · 읽기 전용)
         if: steps.tok.outputs.ok == '1'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: newcave/openalex-data
           token: ${{ secrets.OPENALEX_DATA_TOKEN }}
@@ -51,7 +51,7 @@ jobs:
             !/archive/수자원_논문/results/03_full_period_review/all_papers.csv
             !**/network.html
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         if: steps.tok.outputs.ok == '1'
         with:
           python-version: "3.11"
