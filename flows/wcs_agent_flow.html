@@ -1,0 +1,385 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WCS 에이전트 흐름</title>
+<!-- WCS(K-water 연구자료 검색) 에이전트 흐름 구조도. 코드 기준: hjhjhj9465-cpu/WCS main 90edc2d (2026-10-26).
+     노드·연결선·재생 단계는 아래 N·E·SCN 표에 있다. 코드가 바뀌면 이 표만 고친다. 실시간 상태는 보이지 않는다(구조도). -->
+<style>
+:root{--bg0:#050f22;--bg1:#0b2447;--ink:#e6eefb;--mut:#8ea6c8}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg0);font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;color:var(--ink);overflow:hidden}
+#wrap{position:relative;width:100%;height:100vh;background:radial-gradient(1200px 700px at 55% 40%,#0e2c57 0%,var(--bg1) 35%,var(--bg0) 100%);overflow:hidden}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+canvas:active{cursor:grabbing}
+.hud{position:absolute;pointer-events:none}
+#top{left:18px;top:14px;right:18px;display:flex;align-items:flex-start;gap:14px}
+#ttl{font-weight:900;font-size:19px;letter-spacing:-.2px;white-space:nowrap}
+#ttl small{display:block;font-weight:500;font-size:12px;color:var(--mut);margin-top:2px;white-space:normal}
+#kpis{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto;justify-content:flex-end}
+.chip{background:rgba(16,40,80,.72);border:1px solid rgba(120,160,220,.25);border-radius:999px;padding:4px 11px;font-size:12px;color:#cfe0f7;white-space:nowrap;backdrop-filter:blur(4px)}
+.chip b{color:#fff;font-weight:800}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#94a3b8;margin-right:6px;vertical-align:0}
+#btns{position:absolute;left:16px;top:62px;display:flex;gap:6px;flex-wrap:wrap}
+button{background:rgba(16,40,80,.8);color:#cfe0f7;border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+button:hover{background:rgba(36,70,130,.9)}
+#panel{right:16px;top:100px;width:300px;max-height:calc(100% - 170px);overflow:auto;pointer-events:auto;background:linear-gradient(180deg,rgba(9,26,54,.9),rgba(9,26,54,.7));border:1px solid rgba(120,160,220,.18);border-radius:12px;padding:10px 12px;font-size:12px}
+#panel h4{margin:0 0 8px;font-size:12px;color:var(--mut);font-weight:700;letter-spacing:.06em}
+.sc{display:inline-block;margin:0 5px 5px 0;padding:3px 9px;border-radius:999px;border:1px solid rgba(120,160,220,.3);font-size:11.5px;cursor:pointer;color:#cfe0f7;background:rgba(16,40,80,.6)}
+.sc.on{background:#1d4ed8;border-color:#60a5fa;color:#fff}
+#sttl{font-weight:800;font-size:14px;margin:6px 0 2px}
+#sex{color:#9fb6d8;font-size:12px;margin-bottom:4px}
+#steps{margin:6px 0 8px;padding-left:22px}
+#steps li{padding:3px 4px;color:#8ea6c8;cursor:pointer;line-height:1.42;border-radius:6px}
+#steps li.done{color:#c6d6ee}
+#steps li.on{color:#fff;background:rgba(56,189,248,.18)}
+#ctl{display:flex;gap:6px}
+#ctl #play{flex:1}
+#cap{left:50%;transform:translateX(-50%);bottom:46px;width:max-content;max-width:min(760px,62%);background:rgba(9,26,54,.88);border:1px solid rgba(120,160,220,.3);border-radius:10px;padding:7px 14px;font-size:13.5px;text-align:center;line-height:1.45}
+#cap .n{color:#7dd3fc;font-weight:800;margin-right:6px}
+#legend{left:16px;bottom:12px;display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);background:rgba(9,26,54,.6);border-radius:10px;padding:6px 10px}
+#legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:-1px;border:2px solid #9fb6d8;border-radius:3px}
+#legend i.bt{border-style:dashed}#legend i.ex{border-style:dotted}
+#legend b{color:#c4b5fd;margin-right:4px}
+#card{left:16px;top:100px;width:340px;max-height:calc(100% - 170px);overflow:auto;background:rgba(9,26,54,.95);border:1px solid rgba(120,160,220,.3);border-radius:12px;padding:12px 14px;font-size:12.5px;display:none;pointer-events:auto;line-height:1.45}
+#card h3{margin:0 0 6px;font-size:15px;padding-right:18px}
+#card .bd{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin:0 4px 6px 0;background:rgba(56,100,170,.35);color:#dbe8fb}
+#card .bd.llm{background:rgba(167,139,250,.3);color:#e9e2ff}
+#card ul{margin:4px 0 6px;padding-left:18px}#card li{margin:2px 0}
+#card .h{color:var(--mut);margin-top:6px;font-weight:700;font-size:11.5px}
+#card code{font-family:Consolas,'D2Coding',monospace;font-size:11.5px;color:#bfe3ff}
+#card .x{position:absolute;right:10px;top:8px;cursor:pointer;color:var(--mut)}
+@media (max-width:760px){#kpis,#legend,#ttl small{display:none}#cap{max-width:94%;bottom:12px;font-size:12.5px}#panel{top:100px;width:calc(100% - 32px)}}
+#tip{position:absolute;pointer-events:none;background:rgba(5,15,34,.95);border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:7px 10px;font-size:12px;display:none;max-width:280px;line-height:1.45}
+</style></head><body>
+<div id="wrap">
+ <canvas id="cv"></canvas>
+ <div class="hud" id="top">
+  <div id="ttl">🔎 WCS · 에이전트 흐름<small>K-water 연구자료 검색 · 코드 기준 main 90edc2d (2026-10-26)</small></div>
+  <div id="kpis"></div>
+ </div>
+ <div id="btns"><button id="fs">⛶ 전체 화면</button><button id="rs">⟲ 시점 초기화</button><button id="pa">⏸ 정지</button><button id="pn">☰ 재생 패널 숨기기</button></div>
+ <div class="hud" id="panel">
+  <h4>▶ 흐름 재생 · 실제 코드 경로</h4>
+  <div id="chips"></div>
+  <div id="sttl"></div><div id="sex"></div>
+  <ol id="steps"></ol>
+  <div id="ctl"><button id="prev">◀</button><button id="play">⏸ 자동 재생 중</button><button id="next">▶</button></div>
+ </div>
+ <div class="hud" id="cap"></div>
+ <div class="hud" id="legend"><span><i></i>서버에서 늘 도는 것</span><span><i class="bt"></i>사람이 가끔 실행(자료 준비)</span><span><i class="ex"></i>외부 자료·읽기만</span><span><b>✦</b>LLM 사용</span><span style="opacity:.8">빛나는 길 = 지금 재생 중인 단계 · 점 = 요청·자료의 이동 방향</span></div>
+ <div class="hud" id="card"><span class="x" id="cx">✕</span><div id="cb"></div></div>
+ <div id="tip"></div>
+</div>
+<script>
+// ───────────────────────── 구조 (코드 기준) ─────────────────────────
+const COLS = [["원천 자료",90],["자료 준비",300],["저장·모델",515],["검색 창구",745],["AI 답변",985],["화면",1215],["사람",1420]];
+const VW = 1510, VH = 975, LANE = 945;
+const GC = {src:"#7dd3fc", prep:"#f59e0b", store:"#3b82f6", api:"#14b8a6", ai:"#a78bfa", ui:"#fb923c", ppl:"#f472b6"};
+const KIND = {on:"서버에서 늘 도는 것", batch:"사람이 가끔 실행", ext:"외부 자료·읽기만", ppl:"사람"};
+const R = "WCS_report/", S = "WCS_search/";
+// g: 단계 색, k: on|batch|ext|ppl, llm: LLM을 부르는 단계
+const N = [
+ {id:"oa", col:0, row:0.2, g:"src", k:"ext", icon:"🌐", label:"OpenAlex 논문", sub:"물 분야 학술지 parquet",
+  d:["분야별 폴더로 받은 OpenAlex 논문 parquet","논문 상세 화면은 따로 없어 '자세히 보기'는 DOI로 연결"], f:[S+"paper/tools/prepare.py"]},
+ {id:"pat", col:0, row:1.35, g:"src", k:"ext", icon:"📜", label:"특허 표", sub:"특허팀 복사본 · 읽기만",
+  d:["특허팀이 DB에 복사해 준 archive.patents (8,750건, 2026-10-22)","원문 바로가기는 숨김: KIPRIS 옛 상세 주소가 2025-02 개편 뒤 열리지 않음"], f:[S+"patent/patents.py", S+"portal/sources.toml"]},
+ {id:"pdf", col:0, row:2.5, g:"src", k:"ext", icon:"📄", label:"보고서 PDF", sub:"연구원 보고서 · ALIO",
+  d:["reports·reports_alio·reports_mgmt·reports_intake 폴더 (서버에 약 4.3GB)","자료는 저장소에 넣지 않음 (.gitignore)"], f:[R+"SERVER.md"]},
+ {id:"xls", col:0, row:3.65, g:"src", k:"ext", icon:"📊", label:"경영연구소 엑셀", sub:"사람이 쓴 메타데이터",
+  d:["제목·연도·분류·책임자·연구진·연구내용을 사람이 작성 — 이것이 정본","PDF에서 메타데이터를 뽑지 않음"], f:[R+"analytics/metadata_store.py"]},
+ {id:"meta", col:0, row:4.8, g:"src", k:"ext", llm:1, icon:"🤖", label:"W_COSCI_meta", sub:"로컬 AI 추출 (내 PC)",
+  d:["사람 메타데이터가 없는 보고서(2023~2025·ALIO)를 로컬 AI로 추출 → ai_metadata_rnd.json","표 파싱 결과(kordoc) → 표·수치 찾기 색인 재료","새 보고서 등록은 서버판에 없음 (문맥 32,768이 필요해 내 PC에서)"], f:[R+"analytics/ai_records.py", R+"analytics/table_index.py"]},
+
+ {id:"ppre", col:1, row:0.2, g:"prep", k:"batch", icon:"🧾", label:"논문 정리·임베딩", sub:"PC GPU 1회 → DB",
+  d:["중복 없이 필요한 칸 + bge-m3 벡터 → works.parquet","import_db.py로 DB 논문 표(paper_works)에 넣음","55만 건 약 35분 (RTX 5090 노트북)"], f:[S+"paper/tools/prepare.py", S+"paper/tools/import_db.py"]},
+ {id:"pemb", col:1, row:1.35, g:"prep", k:"batch", icon:"🧬", label:"특허 벡터", sub:"바뀐 것만 · CPU",
+  d:["새 특허·제목이나 요약이 바뀐 특허만 bge-m3 벡터 → archive.patent_vectors","중간에 멈춰도 다시 돌리면 나머지만 만듦"], f:[S+"patent/tools/embed.py"]},
+ {id:"prep", col:1, row:2.5, g:"prep", k:"batch", icon:"✂️", label:"원문 구절·임베딩", sub:"PDF → 쪽 구절 → 벡터",
+  d:["PDF를 쪽 단위 구절로 자르고 bge-m3 임베딩 → DB","이미 같은 크기로 준비된 PDF는 건너뜀 (바뀐 것만)","AI 추출 레코드도 같은 방식 + 칸별 벡터 다시 만들기"], f:[R+"analytics/prepare_all.py", R+"analytics/prepare_ai_records.py", R+"analytics/evidence_rag.py"]},
+ {id:"dbimp", col:1, row:3.65, g:"prep", k:"batch", icon:"📥", label:"보고서 DB 넣기", sub:"tools/db_import.py",
+  d:["① 보고서 정보: 엑셀 + AI 추출 메타 + PDF 연결 + 계획서 목록 → reports","② 원문 구절 캐시(구절 + 벡터) → chunks · 임베딩은 다시 계산하지 않음"], f:[R+"tools/db_import.py"]},
+ {id:"tidx", col:1, row:4.8, g:"prep", k:"batch", icon:"🧮", label:"표·칸별 색인", sub:"표 찾기 · 연구 비교",
+  d:["보고서 안의 표를 캡션·머리글·내용으로 찾는 색인 (table_index.jsonl·npz)","연구목적·방법·결과 축별 임베딩 (field_vectors)"], f:[R+"analytics/table_index.py", R+"analytics/field_vectors.py"]},
+
+ {id:"db", col:2, row:1.5, g:"store", k:"on", icon:"🗄️", label:"PostgreSQL", sub:"archive 스키마 · pgvector",
+  d:["보고서 reports · 원문 구절 chunks","논문 paper_works · 특허 patents(읽기만) · patent_vectors","Supabase: 클라우드면 내부 원문이 기관 밖에 저장되므로 먼저 확인 (SERVER.md)"], f:[R+"analytics/schema.sql", S+"paper/schema.sql", S+"patent/schema.sql"]},
+ {id:"models", col:2, row:3.1, g:"store", k:"on", icon:"🧠", label:"공용 검색 모델", sub:"bge-m3 + 재순위 · 1벌",
+  d:["임베딩 bge-m3 + 재순위 bge-reranker-v2-m3 (각 2GB 안팎)","켤 때 한 번만 올려 보고서·논문·특허가 같이 씀 (메모리 약 5GB 절약)","서버에서는 CPU (공용 GPU는 vLLM이 사용) · 올리는 1~2분은 '준비 중'"], f:[S+"common/models.py", S+"server.py"]},
+ {id:"files", col:2, row:4.7, g:"store", k:"on", icon:"🗂️", label:"data/ 파일", sub:"수정본·성과·관심·표 색인",
+  d:["metadata_overrides.json: 검토자 수정본 (원본 엑셀은 그대로)","achievements.json 성과 카드 · interests.json 관심 주제 · qa_feedback.jsonl","table_index.* 표 색인 · usage_log.jsonl 조회·내려받기 횟수"], f:[R+"analytics/curation.py", R+"analytics/achievements.py", R+"analytics/interests.py", R+"analytics/usage.py"]},
+
+ {id:"pap", col:3, row:0.4, g:"api", k:"on", llm:1, icon:"🎓", label:"논문 창구", sub:"/src/paper · 한→영",
+  d:["한국어 검색어를 서버 모델로 영어로 옮김 (최대 2.5초, 없으면 용어 사전)","한국어·영어 의미 검색 + 영어 키워드 검색","/api/passages: 상위 논문 초록을 재순위 모델로 다시 매김"], f:[S+"paper/api.py", S+"paper/papers.py"]},
+ {id:"ptn", col:3, row:1.7, g:"api", k:"on", icon:"⚙️", label:"특허 창구", sub:"/src/patent · 메모리 검색",
+  d:["켤 때 제목·요약·벡터를 메모리에 올려 몇 ms에 검색","한국어 낱말 검색 + 의미 검색 → 등수 합치기(RRF)","특허 표가 바뀌면 60초 안에 다시 읽음 · 조건 붙은 AI 질문에서는 빠짐"], f:[S+"patent/api.py", S+"patent/patents.py"]},
+ {id:"rep", col:3, row:3.4, g:"api", k:"on", icon:"📚", label:"보고서 창구", sub:"/src/report",
+  d:["/api/search: 조건 거르기 → 요약 칸 의미 검색 + 키워드 + 연구자 이름","/api/summary: 조건만으로 찾는 질문의 정확한 집계 + 연구비 큰 순","/api/passages: 원문 구절 (의미 + 키워드 → RRF → 재순위), 보고서 한 건 지정 가능","보고서 목록 = DB 기본 자료 + 화면에서 고친 내용 · 보고서 앱과 같은 검색 코드"], f:[R+"api.py", R+"analytics/catalog.py", R+"analytics/evidence_rag.py"]},
+
+ {id:"route", col:4, row:0.0, g:"ai", k:"on", icon:"🔀", label:"질문 분기", sub:"ai.evidence",
+  d:["연구 한 건 질문 → 그 보고서 원문 구절만","조건만으로 찾는 질문 → 보고서 창구 집계·목록","조건 + 주제 → 조건에 맞는 자료 안에서 구절 (특허 제외)","그 밖 → 세 창구 구절 · 같은 질문은 10분간 기억","이어서 묻기: 앞 질문 + 새 질문으로 다시 찾고, 앞 대화 2번까지 참고"], f:[S+"portal/ai.py"]},
+ {id:"gather", col:4, row:1.15, g:"ai", k:"on", icon:"🛰️", label:"창구 동시 호출", sub:"sources.gather",
+  d:["세 창구를 공통 형식(CONTRACT.md)으로 한꺼번에 부름","창구당 5초(논문 8초), 근거 구절은 40초까지 — 늦은 창구만 '응답 없음'","새 창구는 sources.toml에 주소만 적으면 붙음"], f:[S+"portal/sources.py", S+"portal/sources.toml", S+"portal/CONTRACT.md"]},
+ {id:"pick", col:4, row:2.3, g:"ai", k:"on", icon:"🎯", label:"근거 고르기", sub:"관련도 순 최대 8개",
+  d:["재순위 관련도 0.05 미만은 버림 (엉뚱한 근거로 지어내지 않게)","철회된 논문 제외 · 한 자료에서 2개까지","구절을 못 준 창구는 검색 상위 3건 요약을 뒤에 붙임"], f:[S+"portal/ai.py  (choose)"]},
+ {id:"llm", col:4, row:3.45, g:"ai", k:"on", llm:1, icon:"💬", label:"답변 LLM", sub:"서버 vLLM · gemma4-12b",
+  d:["OpenAI 호환 주소 · 4bit · 입력+출력 8,192 토큰","근거 번호를 달아 답하고 글자가 생기는 대로 흘려보냄","사람 이름은 보내지 않음 · 동시 요청 2개까지","내 PC 시험은 Ollama"], f:[S+"portal/ai.py", R+"analytics/server_llm.py"]},
+ {id:"qa", col:4, row:4.6, g:"ai", k:"on", llm:1, icon:"🧪", label:"분석·종합 질의", sub:"research_qa (보고서 앱)",
+  d:["분석형: 질문 해석(LLM) → 과제별 판정(LLM, 한 건씩, 저장) → 집계(코드) → 해설(LLM)","종합형: 요약 + 원문 검색으로 연구 선별 → 연구별 요약·구절 → 종합 답변","원칙: 숫자는 코드가 계산하고 LLM은 판정과 문장만"], f:[R+"analytics/research_qa.py", R+"views/ask.py"]},
+ {id:"verify", col:4, row:5.75, g:"ai", k:"on", llm:1, icon:"✅", label:"인용·수치 검증", sub:"근거에 있는지 검사",
+  d:["답변의 인용 번호와 수치가 실제 근거에 있는지 코드로 검사 + LLM으로 문장 확인","근거 없는 문장은 고치기를 시도하고, 남으면 화면에 경고"], f:[R+"analytics/research_qa.py  (_check_answer · _verify_numeric_claims · _repair_sentences)"]},
+
+ {id:"brief", col:5, row:0.0, g:"src", k:"ext", icon:"📰", label:"데일리 브리프", sub:"공개 페이지 · 읽기만",
+  d:["경영연구소 발행 · AI연구소 개발 공개 페이지를 읽어 첫 화면 아래에 보임","30분 기억 · 페이지 모양이 바뀌면 링크만 보임"], f:[S+"portal/brief.py"]},
+ {id:"portal", col:5, row:1.2, g:"ui", k:"on", icon:"🔍", label:"연구자료 검색", sub:"포털 · 프로그램 하나",
+  d:["첫 화면·검색 결과(자료원 탭)·AI 답변·미리보기","연구 상세(/research/…) · 이 보고서에 묻기","연구 현황·연구자·협업·표 찾기 (/overview·/people·/tables)","검색 창구 3개를 같은 프로그램 안에서 엶 (프로그램 7개 → 4개로 합침)"], f:[S+"server.py", S+"portal/web.py", S+"portal/research.py"]},
+ {id:"fb", col:5, row:2.6, g:"ui", k:"on", icon:"🗳️", label:"의견·이용 건수", sub:"게시판 · 👍/👎",
+  d:["모든 화면의 '의견' 단추 → 게시판, 댓글·'저도 필요해요'","AI 답변 아래 👍/👎 (누른 사람의 질문·답만 저장)","검색·AI 답변 건수만 셈 (검색어·사람은 남기지 않음)"], f:[S+"portal/feedback.py", S+"portal/usage.py"]},
+ {id:"app", col:5, row:4.6, g:"ui", k:"on", icon:"📝", label:"보고서 앱", sub:"Streamlit · /report",
+  d:["연구 상세·검토·수정 (변경 이력)","성과 카드 · 관심 주제 알림 · AI 질의(분석형·종합형)","서버판에 없는 것: 보고서 등록·연구 비교 등 (내 PC 원본에만)"], f:[R+"app.py", R+"views/", R+"SERVER.md"]},
+
+ {id:"user", col:6, row:1.5, g:"ppl", k:"ppl", icon:"👥", label:"연구자", sub:"wcs.kwaterai.com",
+  d:["K-water 연구자·검토자","브라우저로 접속 (비밀번호)"], f:["README.md"]},
+ {id:"gate", col:6, row:3.0, g:"ppl", k:"on", icon:"🚪", label:"문 (Caddy)", sub:"하나의 입구 · 비밀번호",
+  d:["바깥에 열린 문은 하나: 담당자 nginx(https) → 문","/ → 연구자료 검색 · /report → 보고서 앱 · /rnd → 수탁과제 관리 앱","/src/… 검색 창구는 서버 안에서만 (바깥 요청 차단)"], f:[S+"gate/Caddyfile", S+"start_all.sh"]},
+];
+// 연결선: [a, b] = 평소 자료·요청이 a → b로 흐름. ghost: 재생 중에만 그림. lane: 아래로 돌아가는 사람 수정 반영 길
+const E = [
+ {a:"oa",b:"ppre"},{a:"pat",b:"pemb"},{a:"pdf",b:"prep"},{a:"pdf",b:"dbimp"},{a:"xls",b:"dbimp"},{a:"meta",b:"dbimp"},{a:"meta",b:"tidx"},
+ {a:"ppre",b:"db"},{a:"pemb",b:"db"},{a:"prep",b:"db"},{a:"dbimp",b:"db"},{a:"tidx",b:"files"},
+ {a:"db",b:"pap"},{a:"db",b:"ptn"},{a:"db",b:"rep"},{a:"models",b:"pap"},{a:"models",b:"ptn"},{a:"models",b:"rep"},{a:"files",b:"rep"},
+ {a:"pap",b:"gather"},{a:"ptn",b:"gather"},{a:"rep",b:"gather"},{a:"route",b:"gather"},{a:"route",b:"rep"},{a:"gather",b:"pick"},{a:"pick",b:"llm"},
+ {a:"qa",b:"rep",label:"같은 검색 코드"},{a:"qa",b:"llm"},{a:"qa",b:"verify"},
+ {a:"portal",b:"route"},{a:"portal",b:"gather"},{a:"llm",b:"portal"},{a:"app",b:"qa"},{a:"verify",b:"app"},
+ {a:"portal",b:"fb"},{a:"brief",b:"portal"},{a:"gate",b:"portal"},{a:"gate",b:"app"},{a:"user",b:"gate"},
+ {a:"app",b:"files",lane:1,label:"사람 수정 반영 → 다음 검색부터"},
+ {a:"pap",b:"llm",ghost:1,bend:0},{a:"route",b:"llm",ghost:1,bend:210},{a:"verify",b:"llm",ghost:1,bend:-190},
+];
+// 재생: 실제 코드 경로. hops = [출발, 도착] (방향대로 점이 흐름), nodes = 추가로 밝힐 노드
+const SCN = [
+ {t:"일반 질문 → AI 답변", ex:"예: \"녹조 저감 기술 동향은?\"", s:[
+  {h:[["user","gate"],["gate","portal"]], x:"연구자가 질문 입력 — 문(Caddy)이 비밀번호를 확인하고 연구자료 검색으로 보냄"},
+  {h:[["portal","gather"],["gather","rep"],["gather","pap"],["gather","ptn"]], x:"검색 결과: 보고서·논문·특허 창구를 동시에 부름 (창구당 5초, 논문 8초까지)"},
+  {h:[["pap","llm"],["llm","pap"]], x:"논문 창구: 한국어 검색어를 서버 모델로 영어로 옮김 (논문 97%가 영어)"},
+  {h:[["db","rep"],["db","pap"],["db","ptn"],["models","rep"],["models","pap"],["models","ptn"]], x:"각 창구가 DB에서 의미 검색(bge-m3)과 키워드 검색을 합쳐 결과를 만듦"},
+  {h:[["rep","gather"],["pap","gather"],["ptn","gather"],["gather","portal"]], x:"자료원 탭별 검색 결과를 화면에 보임"},
+  {h:[["portal","route"],["route","gather"],["gather","rep"],["gather","pap"],["gather","ptn"]], x:"AI 답변: 질문 분기 → 세 창구에 근거 구절을 요청 (/api/passages, 창구당 6개)"},
+  {h:[["models","rep"],["models","pap"],["models","ptn"]], x:"창구마다 재순위 모델이 구절의 관련도(0~1)를 매김 — 같은 잣대로 비교"},
+  {h:[["rep","gather"],["pap","gather"],["ptn","gather"],["gather","pick"]], x:"근거 고르기: 관련도 0.05 미만·철회 논문을 빼고 한 자료 2개까지, 최대 8개"},
+  {h:[["pick","llm"]], x:"답변 LLM(서버 vLLM gemma4-12b): 근거 번호를 달아 답을 씀 · 사람 이름은 보내지 않음"},
+  {h:[["llm","portal"],["portal","gate"],["gate","user"]], x:"답을 글자가 생기는 대로 흘려보냄 · 같은 질문은 10분간 근거를 다시 씀"},
+  {h:[["portal","fb"]], x:"답 아래 👍/👎·의견 → 의견 게시판에 모임"},
+ ]},
+ {t:"조건 질문", ex:"예: \"2020년 이후 1억원 이상 수자원 과제\"", s:[
+  {h:[["user","gate"],["gate","portal"],["portal","route"]], x:"질문 분기가 '조건만으로 찾는 질문'인지 먼저 확인"},
+  {h:[["route","rep"],["rep","db"]], x:"보고서 창구 /api/summary: 조건에 맞는 보고서를 정확히 집계 (건수·연구비 합계·연도별·소속별)"},
+  {h:[["db","rep"],["rep","route"]], x:"연구비 큰 순 8건 + 집계를 근거로 돌려줌 (원문 구절 검색은 하지 않음)"},
+  {h:[["route","llm"]], x:"근거를 그대로 답변 LLM에 — 건수·합계는 프로그램이 셌고 AI는 옮기기만"},
+  {h:[["llm","portal"],["portal","gate"],["gate","user"]], x:"답변 표시"},
+  {h:[["route","gather"],["gather","rep"],["gather","pap"]], x:"조건과 주제가 섞이면('2020년 이후 녹조 연구') 조건에 맞는 자료 안에서 구절을 찾음 — 논문은 연도 조건만, 특허는 뺌"},
+ ]},
+ {t:"이 보고서에 묻기", ex:"연구 상세에서: \"이 연구의 주요 결과는?\"", s:[
+  {h:[["user","gate"],["gate","portal"]], x:"연구 상세 화면(/research/…)에서 '이 보고서에 묻기'"},
+  {h:[["portal","route"],["route","rep"]], x:"질문 분기: 보고서 번호를 지정 → 그 보고서 원문 안에서만 찾음"},
+  {h:[["db","rep"],["models","rep"]], x:"그 보고서 구절을 의미 + 키워드로 찾고 재순위 → 관련도 순 6개"},
+  {h:[["rep","route"],["route","llm"]], x:"관련도 기준 없이 상위 6개를 근거로 넘김 (넓은 질문에도 근거가 남게)"},
+  {h:[["llm","portal"],["portal","gate"],["gate","user"]], x:"답변 표시 · 원문 PDF는 제목 옆 단추로 열기"},
+ ]},
+ {t:"분석형 질문 (보고서 앱)", ex:"예: \"자체·수탁 과제별 정책제안 비율은?\"", s:[
+  {h:[["user","gate"],["gate","app"]], x:"보고서 앱(/report)의 AI 질의"},
+  {h:[["app","qa"]], x:"질문 유형 판별 → 분석형 (전체 기록을 세고 판정해야 답이 나옴)"},
+  {h:[["qa","llm"],["llm","qa"]], x:"① 질문 해석(LLM): 집계 기준·묶을 칸·조건을 정함"},
+  {h:[["db","rep"],["files","rep"],["rep","qa"]], x:"② 조건 적용 → 대상 과제 목록 (DB 기본 자료 + 검토자 수정본)"},
+  {h:[["qa","llm"],["llm","qa"]], x:"③ 과제별 판정(LLM, 한 건씩): 근거 구절과 함께 저장해 사람이 확인·수정 가능"},
+  {h:[], n:["qa"], x:"④ 집계는 코드가 계산 — 숫자를 LLM이 만들지 않음"},
+  {h:[["qa","llm"],["llm","qa"]], x:"⑤ 해설(LLM): 집계 결과를 문장으로"},
+  {h:[["qa","verify"],["verify","llm"]], x:"인용 번호·수치가 근거에 실제로 있는지 검사, 없으면 경고"},
+  {h:[["verify","app"],["app","gate"],["gate","user"]], x:"결과 표와 해설 표시"},
+ ]},
+ {t:"종합형 질문 (보고서 앱)", ex:"예: \"요금 연구들의 문제점과 개선방안 비교\"", s:[
+  {h:[["user","gate"],["gate","app"],["app","qa"]], x:"질문 유형 판별 → 종합형 (내용 질문)"},
+  {h:[["qa","rep"],["db","rep"],["files","rep"],["models","rep"]], x:"관련 연구 고르기: 요약 칸 의미 검색(5건) + 원문 검색 (본문 구절이 걸린 연구만 보탬)"},
+  {h:[["rep","qa"]], x:"연구별 [요약 + 원문 구절] 묶음을 만듦"},
+  {h:[["qa","llm"],["llm","qa"]], x:"종합 답변(LLM): 연구별 근거를 번호로 인용"},
+  {h:[["qa","verify"],["verify","llm"],["llm","verify"]], x:"인용·수치 검사 → 근거 없는 문장은 고치거나 경고"},
+  {h:[["verify","app"],["app","gate"],["gate","user"]], x:"답변 표시 · 의견 남기기"},
+ ]},
+ {t:"자료 준비 (사람이 실행)", ex:"새 보고서·논문·특허를 검색에 넣을 때", s:[
+  {h:[["xls","dbimp"],["pdf","dbimp"],["meta","dbimp"],["dbimp","db"]], x:"보고서 정보(엑셀 + AI 추출 메타 + PDF 연결) → DB reports (db_import)"},
+  {h:[["pdf","prep"],["prep","db"]], x:"PDF → 쪽 단위 구절 → bge-m3 임베딩 → DB chunks (prepare_all, 바뀐 PDF만)"},
+  {h:[["meta","tidx"],["tidx","files"]], x:"표·수치 찾기 색인 (W_COSCI_meta 파싱 결과) · 칸별 벡터"},
+  {h:[["oa","ppre"],["ppre","db"]], x:"OpenAlex parquet → 중복 제거·임베딩 (내 PC GPU, 55만 건 약 35분) → import_db"},
+  {h:[["pat","pemb"],["pemb","db"]], x:"특허팀이 표를 복사 → 바뀐 특허만 벡터 (CPU)"},
+  {h:[["db","rep"],["db","pap"],["db","ptn"]], x:"창구가 새 자료를 읽음 — 특허는 60초마다 표 변경을 확인"},
+ ]},
+ {t:"사람 검토 반영", ex:"검토자가 과제 정보를 고칠 때", s:[
+  {h:[["user","gate"],["gate","app"]], x:"검토자가 보고서 앱에서 과제 내용·기본 정보를 고침"},
+  {h:[["app","files"]], x:"엑셀 원본은 그대로 두고 고친 내용만 따로 저장 (수정 계층 + 변경 로그)"},
+  {h:[["files","rep"],["db","rep"]], x:"보고서 목록 = DB 기본 자료 + 화면에서 고친 내용"},
+  {h:[["rep","gather"],["gather","portal"]], x:"다음 검색부터 연구자료 검색 결과·AI 근거에 같은 값이 쓰임"},
+ ]},
+];
+
+// ───────────────────────── 준비 ─────────────────────────
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const byId = Object.fromEntries(N.map(n => [n.id, n]));
+N.forEach(n => { n.x = COLS[n.col][1]; n.y = 100 + n.row * 124; n.r = (n.g === "src") ? 34 : (n.k === "ppl" ? 40 : 44); });
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function resample(raw, n){ const cum = [0]; for (let i = 1; i < raw.length; i++) cum.push(cum[i-1] + Math.hypot(raw[i][0]-raw[i-1][0], raw[i][1]-raw[i-1][1]));
+  const L = cum[cum.length-1] || 1, out = []; let j = 0;
+  for (let k = 0; k < n; k++){ const d = L * k / (n - 1); while (j < cum.length - 2 && cum[j+1] < d) j++;
+    const seg = (cum[j+1] - cum[j]) || 1, u = Math.min(1, (d - cum[j]) / seg); out.push([raw[j][0] + (raw[j+1][0]-raw[j][0]) * u, raw[j][1] + (raw[j+1][1]-raw[j][1]) * u]); }
+  return out; }
+function curvePts(a, b, bend){ const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+  const k = bend === undefined ? 0.08 * L : bend; const mx = (a.x + b.x) / 2 + nx * k, my = (a.y + b.y) / 2 + ny * k, raw = [];
+  for (let i = 0; i <= 40; i++){ const t = i / 40, u = 1 - t; raw.push([u*u*a.x + 2*u*t*mx + t*t*b.x, u*u*a.y + 2*u*t*my + t*t*b.y]); } return raw; }
+function lanePts(a, b){ const rr = 34, raw = [], s = Math.sign(b.x - a.x) || 1;
+  const seg = (x0, y0, x1, y1, n) => { for (let i = 0; i <= n; i++) raw.push([x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]); };
+  const q = (p0, c, p1, n) => { for (let i = 1; i <= n; i++){ const t = i / n, u = 1 - t; raw.push([u*u*p0[0] + 2*u*t*c[0] + t*t*p1[0], u*u*p0[1] + 2*u*t*c[1] + t*t*p1[1]]); } };
+  seg(a.x, a.y, a.x, LANE - rr, 12); q([a.x, LANE - rr], [a.x, LANE], [a.x + s * rr, LANE], 8);
+  seg(a.x + s * rr, LANE, b.x - s * rr, LANE, 40); q([b.x - s * rr, LANE], [b.x, LANE], [b.x, LANE - rr], 8); seg(b.x, LANE - rr, b.x, b.y, 12); return raw; }
+E.forEach(e => { const a = byId[e.a], b = byId[e.b]; if (!a || !b) { console.warn("WCS flow: 없는 노드", e); return; }
+  e.pts = resample(e.lane ? lanePts(a, b) : curvePts(a, b, e.bend), 64); });
+function findEdge(x, y){ for (const e of E){ if (e.a === x && e.b === y) return {e, dir: 1}; if (e.a === y && e.b === x) return {e, dir: -1}; }
+  console.warn("WCS flow: 연결선 없음", x, "→", y); return null; }
+// 재생 단계를 미리 연결선에 묶어 둠 (없는 연결은 경고)
+SCN.forEach(sc => sc.s.forEach(st => { st.hops = (st.h || []).map(([x, y]) => findEdge(x, y)).filter(Boolean);
+  st.nodes = new Set([...(st.n || []), ...(st.h || []).flat()]); }));
+function pointAt(e, t){ const P = e.pts, f = Math.max(0, Math.min(1, t)) * (P.length - 1), i = Math.min(P.length - 2, Math.floor(f)), u = f - i;
+  return [P[i][0] + (P[i+1][0] - P[i][0]) * u, P[i][1] + (P[i+1][1] - P[i][1]) * u]; }
+
+// ───────────────────────── 재생 상태 ─────────────────────────
+let cur = {s: 0, k: 0}, auto = true, paused = false, stepAt = performance.now(), hold = 0;
+const STEP_MS = 3200, END_MS = 1800;
+let actE = new Map(), actN = new Set();   // 지금 단계의 연결선(방향)·노드
+let packets = [];
+function applyStep(){ const st = SCN[cur.s].s[cur.k]; actE = new Map(); for (const h of st.hops) actE.set(h.e, h.dir); actN = st.nodes;
+  for (const h of st.hops) for (let i = 0; i < 4; i++) packets.push({e: h.e, dir: h.dir, t: -i * 0.08, sp: 0.55 + Math.random() * 0.15, big: 1});
+  stepAt = performance.now(); hold = 0; renderPanel(); }
+function go(s, k, keepAuto){ cur = {s, k}; if (!keepAuto) setAuto(false); applyStep(); }
+function nextStep(){ const n = SCN[cur.s].s.length; if (cur.k < n - 1) cur.k++; else { cur.s = (cur.s + 1) % SCN.length; cur.k = 0; } applyStep(); }
+function prevStep(){ if (cur.k > 0) cur.k--; else { cur.s = (cur.s - 1 + SCN.length) % SCN.length; cur.k = SCN[cur.s].s.length - 1; } applyStep(); }
+function setAuto(v){ auto = v; document.getElementById("play").textContent = auto ? "⏸ 자동 재생 중" : "▶ 자동 재생"; stepAt = performance.now(); }
+
+function renderPanel(){
+  const sc = SCN[cur.s];
+  document.getElementById("chips").innerHTML = SCN.map((x, i) => `<span class="sc${i === cur.s ? " on" : ""}" data-i="${i}">${esc(x.t)}</span>`).join("");
+  document.getElementById("sttl").textContent = sc.t; document.getElementById("sex").textContent = sc.ex;
+  document.getElementById("steps").innerHTML = sc.s.map((x, i) => `<li class="${i === cur.k ? "on" : i < cur.k ? "done" : ""}" data-k="${i}">${esc(x.x)}</li>`).join("");
+  document.getElementById("cap").innerHTML = `<span class="n">${esc(sc.t)} · ${cur.k + 1}/${sc.s.length}</span>${esc(sc.s[cur.k].x)}`;
+  const on = document.querySelector("#steps li.on"); if (on && on.scrollIntoView) on.scrollIntoView({block: "nearest"});
+}
+document.getElementById("chips").addEventListener("click", ev => { const i = ev.target.dataset && ev.target.dataset.i; if (i !== undefined) go(+i, 0, true); });
+document.getElementById("steps").addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) go(cur.s, +li.dataset.k, false); });
+document.getElementById("prev").onclick = () => { setAuto(false); prevStep(); };
+document.getElementById("next").onclick = () => { setAuto(false); nextStep(); };
+document.getElementById("play").onclick = () => setAuto(!auto);
+
+function renderKpis(){
+  document.getElementById("kpis").innerHTML = [["자료원", "보고서·논문·특허"], ["답변", "gemma4-12b · 서버 vLLM"], ["AI 근거", "최대 8개"], ["<span class='dot'></span>구조도", "실시간 아님"]].map(([a, b]) => `<span class="chip">${a} <b>${b}</b></span>`).join("");
+}
+
+// ───────────────────────── 카메라 ─────────────────────────
+let W = 0, H = 0, DPR = Math.max(1, window.devicePixelRatio || 1), zoom = 1, panX = 0, panY = 0;
+let showPanel = true;
+function resize(){ const r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * DPR; cv.height = H * DPR; }
+window.addEventListener("resize", resize); document.addEventListener("fullscreenchange", () => setTimeout(resize, 60));
+// 그래프 자리: 위 제목·단추 95px, 아래 설명 줄·범례 92px, 넓은 화면이면 오른쪽 재생 패널(330px)을 비켜 둔다
+function area(){ const aw = (showPanel && W > 900) ? W - 330 : W; return {aw, ah: H - 187}; }
+function tf(t){ const s = Math.min(area().aw / VW, area().ah / VH) * zoom; const {aw, ah} = area(); const drift = paused ? 0 : 1;
+  const ox = (aw - VW * s) / 2 + 8 + panX + Math.sin(t * 0.07) * 5 * drift;
+  const oy = 95 + (ah - VH * s) / 2 + panY + Math.cos(t * 0.05) * 3 * drift; return {s, ox, oy}; }
+
+// ───────────────────────── 그리기 ─────────────────────────
+function hex(x, y, r){ ctx.beginPath(); for (let i = 0; i < 6; i++){ const ang = Math.PI / 3 * i; const px = x + r * Math.cos(ang), py = y + r * Math.sin(ang);
+  i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
+function beam(e, alpha, w0, flip){ const P = e.pts, n = P.length, L = [], Rr = [];
+  for (let i = 0; i < n; i++){ const p = P[i], q = P[Math.min(n - 1, i + 1)], o = P[Math.max(0, i - 1)]; let dx = q[0] - o[0], dy = q[1] - o[1];
+    const l = Math.hypot(dx, dy) || 1; dx /= l; dy /= l; const tt = flip ? 1 - i / (n - 1) : i / (n - 1); const w = w0 * (1 - tt) + 0.9 * tt;
+    L.push([p[0] - dy * w, p[1] + dx * w]); Rr.push([p[0] + dy * w, p[1] - dx * w]); }
+  const a = byId[e.a], b = byId[e.b], g = ctx.createLinearGradient(a.x, a.y, b.x, b.y); g.addColorStop(0, GC[a.g]); g.addColorStop(1, GC[b.g]);
+  ctx.globalAlpha = alpha; ctx.fillStyle = g; ctx.beginPath(); L.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+  for (let i = Rr.length - 1; i >= 0; i--) ctx.lineTo(Rr[i][0], Rr[i][1]); ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1; }
+function trace(e){ ctx.beginPath(); e.pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); }
+const stars = Array.from({length: 140}, () => ({x: Math.random(), y: Math.random(), z: Math.random() * 0.8 + 0.2}));
+
+function draw(ms){
+  const t = ms / 1000; ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H);
+  // 자동 재생
+  if (auto && !paused){ const last = cur.k === SCN[cur.s].s.length - 1; if (ms - stepAt > STEP_MS + (last ? END_MS : 0)) nextStep(); }
+  for (const s of stars){ const x = (s.x * W + t * 6 * s.z) % W, y = s.y * H; ctx.globalAlpha = 0.25 + 0.5 * s.z * (0.6 + 0.4 * Math.sin(t * s.z * 2 + s.x * 9));
+    ctx.fillStyle = "#bcd3f5"; ctx.fillRect(x, y, s.z * 1.6, s.z * 1.6); } ctx.globalAlpha = 1;
+  const {s, ox, oy} = tf(t); ctx.setTransform(DPR * s, 0, 0, DPR * s, DPR * ox, DPR * oy);
+  // 단계 머리글·안내선
+  ctx.textAlign = "center"; ctx.font = "700 17px 'Noto Sans KR','Malgun Gothic',sans-serif";
+  for (const [name, x] of COLS){ ctx.strokeStyle = "rgba(140,170,215,.10)"; ctx.lineWidth = 1; ctx.setLineDash([4, 8]);
+    ctx.beginPath(); ctx.moveTo(x, 50); ctx.lineTo(x, VH - 40); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "rgba(170,195,230,.75)"; ctx.fillText(name, x, 36); }
+  const focus = actE.size > 0 || actN.size > 0;
+  // 빔
+  for (const e of E){ if (!e.pts) continue; const on = actE.has(e);
+    if (e.ghost && !on) continue;
+    if (e.ghost || e.lane){ ctx.setLineDash(e.lane ? [8, 6] : [6, 7]); ctx.lineWidth = on ? 2.6 : 1.8;
+      ctx.strokeStyle = e.lane ? (on ? "rgba(244,114,182,.95)" : "rgba(244,114,182,.42)") : "rgba(196,181,253,.9)"; trace(e); ctx.stroke(); ctx.setLineDash([]); }
+    else beam(e, on ? 0.75 : (focus ? 0.13 : 0.3), on ? 7 : 4.2, false);
+    if (on){ ctx.save(); ctx.setLineDash([3, 11]); ctx.lineDashOffset = -t * 38 * actE.get(e); ctx.lineWidth = 2; ctx.strokeStyle = "rgba(255,255,255,.75)"; trace(e); ctx.stroke(); ctx.restore(); }
+    if (e.label){ const [x, y] = e.lane ? pointAt(e, 0.5) : pointAt(e, 0.5); ctx.font = "600 13px 'Noto Sans KR','Malgun Gothic',sans-serif";
+      ctx.fillStyle = e.lane ? "rgba(244,114,182,.95)" : "rgba(196,215,240,.8)"; ctx.fillText(e.label, x, y - 9); }
+  }
+  // 점 (평소: 희미하게 자연 방향 / 재생: 단계 방향으로 밝게)
+  if (!paused){
+    for (const e of E){ if (!e.pts || e.ghost) continue; if (Math.random() < (focus ? 0.05 : 0.22) / 60) packets.push({e, dir: 1, t: 0, sp: 0.16 + Math.random() * 0.06, big: 0}); }
+    for (const [e, dir] of actE) if (Math.random() < 2.4 / 60) packets.push({e, dir, t: 0, sp: 0.42 + Math.random() * 0.12, big: 1});
+  }
+  packets = packets.filter(p => p.t <= 1);
+  for (const p of packets){ if (!paused) p.t += p.sp / 60; if (p.t < 0) continue;
+    const [x, y] = pointAt(p.e, p.dir > 0 ? p.t : 1 - p.t); const src = byId[p.dir > 0 ? p.e.a : p.e.b]; const rr = p.big ? 6.5 : 3.8;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, rr * 2.4); g.addColorStop(0, "#ffffff"); g.addColorStop(0.25, GC[src.g]); g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.globalAlpha = p.big ? 1 : (focus ? 0.35 : 0.7); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rr * 2.4, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+  // 노드
+  for (const n of N){ const col = GC[n.g], on = actN.has(n.id), dim = focus && !on;
+    ctx.globalAlpha = dim ? 0.5 : 1;
+    ctx.save(); ctx.shadowColor = col; ctx.shadowBlur = on ? 34 + 10 * Math.sin(t * 4) : 14;
+    hex(n.x, n.y, n.r); const g = ctx.createLinearGradient(n.x, n.y - n.r, n.x, n.y + n.r); g.addColorStop(0, "#16345f"); g.addColorStop(1, "#0a1d3c");
+    ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    ctx.lineWidth = 2.2; ctx.strokeStyle = col; ctx.setLineDash(n.k === "batch" ? [6, 5] : n.k === "ext" ? [2, 4] : []); hex(n.x, n.y, n.r); ctx.stroke(); ctx.setLineDash([]);
+    if (on){ const ph = (t * 0.8) % 1; ctx.lineWidth = 2.6; ctx.strokeStyle = "#e0f2fe"; ctx.globalAlpha = 1 - ph; hex(n.x, n.y, n.r + 6 + 7 * ph); ctx.stroke(); ctx.globalAlpha = 1; }
+    else { ctx.lineWidth = 1.4; ctx.strokeStyle = col; ctx.globalAlpha = dim ? 0.2 : 0.4; hex(n.x, n.y, n.r + 6); ctx.stroke(); ctx.globalAlpha = dim ? 0.5 : 1; }
+    ctx.font = (n.r < 40 ? 26 : 32) + "px 'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(n.icon, n.x, n.y + 1); ctx.textBaseline = "alphabetic";
+    if (n.llm){ const bx = n.x + n.r * 0.78, by = n.y - n.r * 0.72; ctx.fillStyle = "#4c1d95"; ctx.beginPath(); ctx.arc(bx, by, 10, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#c4b5fd"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.fillStyle = "#ede9fe"; ctx.font = "700 13px sans-serif"; ctx.textBaseline = "middle"; ctx.fillText("✦", bx, by + 1); ctx.textBaseline = "alphabetic"; }
+    ctx.fillStyle = "#eaf2ff"; ctx.font = "800 18px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.fillText(n.label, n.x, n.y + n.r + 23);
+    if (n.sub){ ctx.fillStyle = "#9fb6d8"; ctx.font = "500 14px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.fillText(n.sub.length > 22 ? n.sub.slice(0, 21) + "…" : n.sub, n.x, n.y + n.r + 42); }
+    ctx.globalAlpha = 1;
+  }
+  requestAnimationFrame(draw);
+}
+
+// ───────────────────────── 마우스 ─────────────────────────
+let drag = null; const tip = document.getElementById("tip");
+function hit(mx, my){ const {s, ox, oy} = tf(performance.now() / 1000); const x = (mx - ox) / s, y = (my - oy) / s;
+  return N.find(n => Math.hypot(n.x - x, n.y - y) < n.r + 8); }
+cv.addEventListener("mousedown", e => { drag = {x: e.clientX, y: e.clientY, px: panX, py: panY, moved: false}; });
+window.addEventListener("mouseup", e => { if (drag && !drag.moved){ const r = cv.getBoundingClientRect(); const n = hit(e.clientX - r.left, e.clientY - r.top); if (n) showCard(n); } drag = null; });
+cv.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); const mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (drag){ const dx = e.clientX - drag.x, dy = e.clientY - drag.y; if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true; panX = drag.px + dx; panY = drag.py + dy; tip.style.display = "none"; return; }
+  const n = hit(mx, my); if (!n){ tip.style.display = "none"; return; }
+  tip.innerHTML = `<b>${n.icon} ${esc(n.label)}</b>${n.llm ? " <span style='color:#c4b5fd'>✦ LLM</span>" : ""}<br>${esc(n.sub)}<br><span style="color:#8ea6c8">${KIND[n.k]} · 클릭하면 자세히</span>`;
+  tip.style.display = "block"; tip.style.left = Math.min(mx + 14, W - 290) + "px"; tip.style.top = (my + 12) + "px"; });
+cv.addEventListener("wheel", e => { e.preventDefault(); zoom = Math.min(2.4, Math.max(0.6, zoom * (e.deltaY < 0 ? 1.08 : 0.93))); }, {passive: false});
+cv.addEventListener("dblclick", () => { zoom = 1; panX = panY = 0; });
+function showCard(n){
+  const ins = E.filter(e => e.b === n.id && !e.ghost).map(e => byId[e.a].label), outs = E.filter(e => e.a === n.id && !e.ghost).map(e => byId[e.b].label);
+  let h = `<h3>${n.icon} ${esc(n.label)}</h3><span class="bd">${COLS[n.col][0]}</span><span class="bd">${KIND[n.k]}</span>${n.llm ? '<span class="bd llm">✦ LLM 사용</span>' : ""}`;
+  h += `<div style="color:#9fb6d8">${esc(n.sub)}</div><ul>${n.d.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  if (ins.length || outs.length) h += `<div class="h">연결</div>` + (ins.length ? `<div>← ${ins.map(esc).join(" · ")}</div>` : "") + (outs.length ? `<div>→ ${outs.map(esc).join(" · ")}</div>` : "");
+  h += `<div class="h">코드</div>${n.f.map(x => `<div><code>${esc(x)}</code></div>`).join("")}`;
+  document.getElementById("cb").innerHTML = h; document.getElementById("card").style.display = "block"; }
+document.getElementById("cx").onclick = () => document.getElementById("card").style.display = "none";
+document.getElementById("fs").onclick = () => { const w = document.getElementById("wrap"); document.fullscreenElement ? document.exitFullscreen() : w.requestFullscreen && w.requestFullscreen(); };
+document.getElementById("rs").onclick = () => { zoom = 1; panX = panY = 0; };
+document.getElementById("pa").onclick = e => { paused = !paused; e.target.textContent = paused ? "▶ 움직임 재생" : "⏸ 정지"; stepAt = performance.now(); };
+function setPanel(v){ showPanel = v; document.getElementById("panel").style.display = v ? "block" : "none"; document.getElementById("pn").textContent = v ? "☰ 재생 패널 숨기기" : "☰ 재생 패널 보기"; }
+document.getElementById("pn").onclick = () => setPanel(!showPanel);
+
+resize(); if (W < 760) setPanel(false); renderKpis(); applyStep(); requestAnimationFrame(draw);
+</script></body></html>
