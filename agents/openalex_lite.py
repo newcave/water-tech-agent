@@ -8,6 +8,8 @@ openalex_lite — GitHub Actions에서 6시간마다 실행되는 경량 논문 
   2. search_topics.json의 7개 연구소 대표 키워드로 최근 1년 관련논문 수 확인 (트렌드 감시)
      + 최근 5년(TREND_YEARS) 연도별 실측(group_by=publication_year) — 연구소별 5년 추이 (v3.12)
      + 같은 5년의 OpenAlex 전체 논문 수(해외 전체 기준선) — 연구소 키워드의 상대 성장 비교용
+     + 연구소 키워드 5~6개 전체: 키워드별 연도 수(by_kw)와 합집합(OR 검색, by_year_all) — 소별 트렌드 (v3.13)
+       (by_year·recent_1y는 수집 기준인 대표 키워드 1개 그대로 — 수집률 비교용)
   2b. water_journals.json의 수자원 12개 핵심 저널 × 연도 논문 수 실측 (트렌드 분석 분모 코퍼스)
       — 연관성·트렌드 분석 자체는 아직 미실시, 분모만 기록
   3. data_seed/agents/openalex_collector.json 갱신 → 관제센터 심박
@@ -77,6 +79,21 @@ def oa_by_year(filter_expr: str) -> dict:
                                   "mailto": MAILTO}, timeout=30)
     r.raise_for_status()
     return {str(g["key"]): int(g["count"]) for g in r.json().get("group_by", [])}
+
+
+def union_search(kws: list) -> str:
+    """키워드 여러 개 → OpenAlex 불리언 검색 (각 키워드는 지금과 같은 띄어쓰기 검색, OR로 묶음)."""
+    return " OR ".join(f"({k})" for k in kws)
+
+
+def union_ok(u: dict, by_kw: dict, years: list) -> bool:
+    """합집합 검산: 키워드별 최댓값 이상, 합계 이하 (OR가 낱말로 읽히는 등 해석이 어긋나면 False). 2% 여유."""
+    for y in years:
+        mx = max(v.get(y, 0) for v in by_kw.values())
+        sm = sum(v.get(y, 0) for v in by_kw.values())
+        if u.get(y, 0) < mx * 0.98 or u.get(y, 0) > sm * 1.02 + 1:
+            return False
+    return True
 
 
 def journal_corpus(errors: list) -> dict:
@@ -157,6 +174,29 @@ def main():
             time.sleep(0.4)
         except Exception as e:
             errors.append(f"{inst['code']}: {e}")
+            continue
+        try:                                          # 키워드 전체 — 키워드별 + 합집합 (실패해도 대표 키워드 값은 유지)
+            ent = per_inst[inst["code"]]
+            by_kw = {kw: ent["by_year"]}
+            for k in kws[1:]:
+                b = oa_by_year(f"title_and_abstract.search:{k},{span}")
+                by_kw[k] = {y: b.get(y, 0) for y in trend_years}
+                time.sleep(0.4)
+            ent["keywords"], ent["by_kw"] = kws, by_kw
+            if len(kws) > 1:
+                b = oa_by_year(f"title_and_abstract.search:{union_search(kws)},{span}")
+                u = {y: b.get(y, 0) for y in trend_years}
+                time.sleep(0.4)
+                if union_ok(u, by_kw, trend_years):
+                    ent["by_year_all"] = u
+                else:
+                    errors.append(f"{inst['code']}: 키워드 합집합 검산 어긋남 {u} — 합집합 미기록")
+            else:
+                ent["by_year_all"] = ent["by_year"]
+            print(f"      키워드 {len(kws)}개 합집합: "
+                  + " ".join(f"{y}:{ent.get('by_year_all', {}).get(y, '-')}" for y in trend_years))
+        except Exception as e:
+            errors.append(f"{inst['code']} 키워드 전체: {e}")
 
     # ── 2a. 해외 전체 기준선: 같은 5년의 OpenAlex 전체 논문 수 (연구소 키워드 비중 = 키워드 / 전체) ──
     baseline = None
@@ -200,11 +240,14 @@ def main():
         tr["window_from"] = RECENT_FROM
         if per_inst:
             for code, v in per_inst.items():          # 연도별 조회만 실패한 연구소는 지난 값 유지
-                if "by_year" not in v and (tr.get("institutes") or {}).get(code, {}).get("by_year"):
-                    v["by_year"] = tr["institutes"][code]["by_year"]
+                old = (tr.get("institutes") or {}).get(code, {})
+                for f in ("by_year", "by_year_all", "by_kw", "keywords"):
+                    if f not in v and old.get(f):
+                        v[f] = old[f]
             tr["institutes"] = per_inst
             tr["trend_years"] = trend_years
-            tr["trend_basis"] = "연구소 대표 키워드 1개 × title_and_abstract.search, 출판연도별 실측 (올해는 진행 중·색인 지연)"
+            tr["trend_basis"] = ("연구소 키워드 전체(5~6개)를 OR로 묶은 title_and_abstract.search, 출판연도별 실측 "
+                                 "(키워드마다 지금 수집과 같은 띄어쓰기 검색 · 올해는 진행 중·색인 지연)")
         if baseline:
             tr["baseline"] = baseline
         if journals:                                  # 일부 실패 시 이전 값 유지
