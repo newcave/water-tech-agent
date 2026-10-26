@@ -41,7 +41,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10.4 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.10.5 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -121,9 +121,9 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
   {background:rgba(255,255,255,.30); font-weight:700;}
 [data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
 .side-brand {margin:2px 0 16px; text-align:center; container-type:inline-size;}
-.side-brand .sb-name {font-size:1.2rem; font-size:min(1.3rem, 9cqi); font-weight:900; letter-spacing:-.3px; line-height:1.3; white-space:nowrap;}
+.side-brand .sb-name {font-size:1.35rem; font-size:min(1.45rem, 12.5cqi); font-weight:900; letter-spacing:-.3px; line-height:1.3; white-space:nowrap;}
 .side-brand .sb-sub {display:flex; justify-content:center; align-items:center; gap:6px; margin-top:4px;
-  font-size:.8rem; font-size:min(.82rem, 6cqi); opacity:.9; line-height:1.4; white-space:nowrap;}
+  font-size:.92rem; font-size:min(.95rem, 7.5cqi); opacity:.9; line-height:1.4; white-space:nowrap;}
 .side-brand .sb-mark {flex-shrink:0;}
 .side-sep {display:flex; align-items:center; gap:8px; margin:6px 0 0; font-size:.72rem;
   letter-spacing:.12em; opacity:.85;}
@@ -463,9 +463,9 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 # ═══════════════════════ 사이드바 ═══════════════════════
 with st.sidebar:
     # 사이드바 이름: 2단 워드마크 (머리띠에 'Water Co-Scientist 에이전트 관제센터'가 있어 짧게 · v3.10.1)
-    # 가운데 정렬: 굵은 K-water연구원 / 작은 로고 마크 + '물벗 : R&D 에이전트' — 글자 크기는 사이드바 폭에 맞춰 줄어듦 (v3.10.4)
+    # 가운데 정렬: 굵은 K-water연구원 / 작은 로고 마크 + '물벗 : R&D 에이전트' — 글자 크기는 사이드바 폭에 맞춰 줄어듦 (v3.10.4, v3.10.5에서 한 단계 키움)
     st.markdown('<div class="side-brand"><div class="sb-name">K-water연구원</div><div class="sb-sub">'
-                '<svg class="sb-mark" width="15" height="18" viewBox="0 0 34 40" role="img" aria-label="물벗 로고">'
+                '<svg class="sb-mark" width="17" height="20" viewBox="0 0 34 40" role="img" aria-label="물벗 로고">'
                 '<path d="M17 2 C17 2 3 18 3 26 a14 14 0 0 0 28 0 C31 18 17 2 17 2Z" fill="#FFFFFF" fill-opacity=".95"/>'
                 '<g stroke="#17549A" stroke-width="2.4" fill="#17549A"><line x1="11" y1="28" x2="17" y2="20"/>'
                 '<line x1="17" y1="20" x2="23" y2="28"/><line x1="11" y1="28" x2="23" y2="28"/>'
