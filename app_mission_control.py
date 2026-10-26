@@ -43,7 +43,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.12 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.13 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -770,7 +770,7 @@ elif page == "📄 논문 트렌드":
     inst_names = summary.get("inst_names", {})
     oa_tr = load_json("openalex_trends.json") or {}
     itr.render_overview(oa_tr, inst_names, INST_COLORS, PLOTLY_LAYOUT)    # 해외 × 연구소 5년 (v3.12)
-    t_years, _, t_insts, _ = itr.series(oa_tr)
+    t_years, _, t_insts, t_base = itr.series(oa_tr)
     if not t_years:                                       # 실측 전: 올해 포함 5개 연도로 창만 정함
         t_years = [str(y) for y in range(time.gmtime().tm_year - 4, time.gmtime().tm_year + 1)]
     st.divider()
@@ -813,7 +813,8 @@ elif page == "📄 논문 트렌드":
             if is_inst:
                 itr.render_coverage(df, (t_insts.get(sel[0]) or {}).get("by_year") or {}, t_years,
                                     INST_COLORS.get(sel[0], BLUE), PLOTLY_LAYOUT, key=f"cov_{sel[0]}",
-                                    next_year=(load_labels("pipeline_state.json") or {}).get("resweep_next_year"))
+                                    next_year=(load_labels("pipeline_state.json") or {}).get("resweep_next_year"),
+                                    by_year_all=(t_insts.get(sel[0]) or {}).get("by_year_all"))
             else:
                 monthly = None
                 if "date" in df and df["date"].notna().sum() >= max(30, len(df) // 2):
@@ -839,6 +840,9 @@ elif page == "📄 논문 트렌드":
             else:
                 st.info("저널 정보 없음")
 
+        if is_inst and t_insts.get(sel[0]):                 # 연구소 키워드별 5년 추이 (v3.13)
+            itr.render_keywords(t_insts[sel[0]], t_years, t_base, INST_COLORS.get(sel[0], BLUE), PLOTLY_LAYOUT,
+                                key=f"kw_{sel[0]}")
         st.markdown('<div class="sect">피인용 상위 논문</div>', unsafe_allow_html=True)
         top = (df.assign(cited=df["cited"].fillna(0).astype(int))
                  .sort_values("cited", ascending=False).head(15)

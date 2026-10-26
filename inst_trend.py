@@ -4,7 +4,9 @@
 연구소별 5년 추이 — 해외(OpenAlex) 실측 (📄 논문 트렌드 화면, v3.12)
 
 재료: data_seed/openalex_trends.json (openalex_lite가 6시간마다 기록)
-  · institutes.<INST>.by_year   연구소 대표 키워드 1개(title_and_abstract.search)의 출판연도별 OpenAlex 논문 수
+  · institutes.<INST>.by_year_all  연구소 키워드 전체(5~6개)를 OR로 묶은 출판연도별 OpenAlex 논문 수 (v3.13 — 카드·차트 기준)
+  · institutes.<INST>.by_kw        키워드별 출판연도별 수 — 연구소 안에서 어떤 세부 주제가 오르는지
+  · institutes.<INST>.by_year      대표 키워드 1개(= 실제 수집 검색식)의 연도별 수 — 수집률 비교 기준 (by_year_all 없으면 이것으로 대신)
   · baseline.by_year            같은 연도의 OpenAlex 전체 논문 수 (해외 전체 기준선)
   · trend_years                 올해 포함 최근 5개 연도
 올해는 진행 중이고 색인 지연이 있어 증감 계산은 끝난 해(작년까지)만 쓴다.
@@ -17,6 +19,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 GRAY = "#94A3B8"
+KW_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#4a3aa7", "#008300", "#e34948"]
 
 
 def _short(name: str) -> str:
@@ -26,6 +29,13 @@ def _short(name: str) -> str:
 
 def _pct(a, b):
     return (b / a - 1) * 100 if a else None
+
+
+def trend_of(ent: dict):
+    """연구소 한 곳의 연도별 수 → (by_year, 키워드 전체 여부). 합집합이 있으면 그것, 없으면 대표 키워드."""
+    if ent.get("by_year_all"):
+        return ent["by_year_all"], True
+    return ent.get("by_year") or {}, False
 
 
 def series(tr: dict):
@@ -47,10 +57,12 @@ def growth_rows(tr: dict, names: dict) -> list:
     bg = _pct(base.get(a, 0), base.get(b, 0))
     rows = []
     for c in sorted(insts):
-        by = insts[c]["by_year"]
+        by, all_kw = trend_of(insts[c])
         g = _pct(by.get(a, 0), by.get(b, 0))
-        rows.append({"code": c, "name": names.get(c) or insts[c].get("name") or c,
-                     "keyword": insts[c].get("keyword", ""), "first": by.get(a, 0), "last": by.get(b, 0),
+        kws = insts[c].get("keywords") or [insts[c].get("keyword", "")]
+        rows.append({"code": c, "name": names.get(c) or insts[c].get("name") or c, "all": all_kw,
+                     "keyword": (f"{len(kws)}개: " + " · ".join(kws)) if all_kw else insts[c].get("keyword", ""),
+                     "first": by.get(a, 0), "last": by.get(b, 0),
                      "growth": g, "vs_base": (g - bg) if g is not None and bg is not None else None,
                      "per10k": by.get(b, 0) / base[b] * 1e4 if base.get(b) else None})
     return rows
@@ -62,7 +74,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
                 unsafe_allow_html=True)
     if not years or not insts:
         st.info("연구소별 5년 실측은 다음 정기 실측(6시간 주기 heartbeat의 openalex_lite) 뒤에 나타납니다 — "
-                "연구소 대표 키워드의 연도별 OpenAlex 논문 수와 OpenAlex 전체 논문 수를 openalex_trends.json에 기록합니다.")
+                "연구소 키워드 전체의 연도별 OpenAlex 논문 수와 OpenAlex 전체 논문 수를 openalex_trends.json에 기록합니다.")
         return
     rows = growth_rows(tr, names)
     a, b = (full[0], full[-1]) if len(full) >= 2 else (years[0], years[-1])
@@ -79,8 +91,11 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
                 f'<div class="k-sub"><b style="color:{col}">{g_s}</b> ({a[2:]}→{b[2:]})<br>{d_s}</div></div>')
     if rows:
         st.markdown('<div class="kpis k7">' + "".join(card(r) for r in rows) + '</div>', unsafe_allow_html=True)
-        st.caption(f"카드 숫자 = {b}년 OpenAlex 논문 수(연구소 대표 키워드) · 증감은 끝난 해 {a}→{b} · "
-                   f"OpenAlex 전체는 같은 기간 {bg:+.0f}%" if bg is not None else "")
+        n_all = sum(r["all"] for r in rows)
+        basis = ("연구소 키워드 전체(5~6개) 합집합" if n_all == len(rows) else
+                 "연구소 대표 키워드 1개" if n_all == 0 else f"키워드 전체 {n_all}곳 · 대표 키워드 {len(rows) - n_all}곳")
+        st.caption(f"카드 숫자 = {b}년 OpenAlex 논문 수({basis}) · 증감은 끝난 해 {a}→{b}"
+                   + (f" · OpenAlex 전체는 같은 기간 {bg:+.0f}%" if bg is not None else ""))
 
     y_now = str(time.gmtime().tm_year)
     c1, c2 = st.columns(2)
@@ -88,7 +103,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         st.markdown('<div class="sect">연구소별 연도 추이 (논문 수)</div>', unsafe_allow_html=True)
         fig = go.Figure()
         for c in sorted(insts):
-            by, nm, col = insts[c]["by_year"], names.get(c) or insts[c].get("name") or c, colors.get(c, GRAY)
+            by, nm, col = trend_of(insts[c])[0], names.get(c) or insts[c].get("name") or c, colors.get(c, GRAY)
             fig.add_trace(go.Scatter(x=full, y=[by.get(y, 0) for y in full], mode="lines+markers", name=nm,
                                      legendgroup=c, line=dict(color=col, width=2), marker=dict(size=7),
                                      hovertemplate=nm + " %{x}년 · %{y:,}편<extra></extra>"))
@@ -108,7 +123,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
                                      name="OpenAlex 전체", line=dict(color="#0F2744", width=3, dash="dash"),
                                      hovertemplate="OpenAlex 전체 %{x}년 · 지수 %{y:.0f}<extra></extra>"))
         for c in sorted(insts):
-            by, nm, col = insts[c]["by_year"], names.get(c) or insts[c].get("name") or c, colors.get(c, GRAY)
+            by, nm, col = trend_of(insts[c])[0], names.get(c) or insts[c].get("name") or c, colors.get(c, GRAY)
             if not by.get(a):
                 continue
             fig.add_trace(go.Scatter(x=full, y=[by.get(y, 0) / by[a] * 100 for y in full], mode="lines+markers",
@@ -120,18 +135,18 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         st.plotly_chart(fig, width="stretch", key="inst5_index")
 
     with st.expander("연도별 표 · 방법"):
-        tbl = [{"연구소": r["name"], "대표 키워드": r["keyword"],
-                **{y: insts[r["code"]]["by_year"].get(y, 0) for y in years},
+        tbl = [{"연구소": r["name"], "키워드": r["keyword"],
+                **{y: trend_of(insts[r["code"]])[0].get(y, 0) for y in years},
                 f"{a}→{b}": f"{r['growth']:+.0f}%" if r["growth"] is not None else "-",
                 "해외 대비": f"{r['vs_base']:+.0f}%p" if r["vs_base"] is not None else "-",
                 f"{b} 만 편당": round(r["per10k"], 2) if r["per10k"] is not None else None} for r in rows]
         if base:
-            tbl.append({"연구소": "OpenAlex 전체", "대표 키워드": "(전 분야)", **{y: base.get(y, 0) for y in years},
+            tbl.append({"연구소": "OpenAlex 전체", "키워드": "(전 분야)", **{y: base.get(y, 0) for y in years},
                         f"{a}→{b}": f"{bg:+.0f}%" if bg is not None else "-", "해외 대비": "", f"{b} 만 편당": None})
         st.dataframe(pd.DataFrame(tbl), hide_index=True, width="stretch")
         st.caption((tr.get("trend_basis") or "") + ". 해외 대비 = 연구소 증감 − OpenAlex 전체 증감 (DB 자체가 커지는 효과를 뺀 상대 성장). "
-                   "만 편당 = OpenAlex 전체 1만 편 가운데 그 키워드 논문 수. 연구소 화제를 키워드 하나로 대표하므로 "
-                   "절대 규모보다 같은 연구소 안에서의 추이를 보는 지표.")
+                   "만 편당 = OpenAlex 전체 1만 편 가운데 그 연구소 키워드 논문 수. 키워드 수와 폭이 연구소마다 달라 "
+                   "연구소끼리 규모를 견주기보다 같은 연구소 안에서의 추이를 보는 지표.")
 
 
 def coverage_rows(df: pd.DataFrame, by_year: dict, years: list) -> list:
@@ -146,13 +161,18 @@ def coverage_rows(df: pd.DataFrame, by_year: dict, years: list) -> list:
 
 
 def render_coverage(df: pd.DataFrame, by_year: dict, years: list, color: str, layout: dict, key: str,
-                    next_year=None):
+                    next_year=None, by_year_all: dict = None):
     rows = coverage_rows(df, by_year, years)
     st.markdown('<div class="sect">연도별 수집 vs OpenAlex 실측 (최근 5년)</div>', unsafe_allow_html=True)
     fig = go.Figure(go.Bar(x=[r["연도"] for r in rows], y=[r["수집"] for r in rows], name="수집",
                            marker_color=color, hovertemplate="%{x}년 수집 %{y:,}편<extra></extra>"))
+    if by_year_all and by_year_all != by_year:
+        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[by_year_all.get(r["연도"], 0) for r in rows],
+                                 name="실측 · 키워드 전체", mode="lines+markers",
+                                 line=dict(color=GRAY, width=2, dash="dash"), marker=dict(size=7),
+                                 hovertemplate="%{x}년 키워드 전체 %{y:,}편<extra></extra>"))
     if by_year:
-        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[r["실측"] for r in rows], name="OpenAlex 실측",
+        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[r["실측"] for r in rows], name="실측 · 대표 키워드(수집 기준)",
                                  mode="lines+markers", line=dict(color="#0F2744", width=2, dash="dot"),
                                  marker=dict(size=8, symbol="diamond"),
                                  hovertemplate="%{x}년 실측 %{y:,}편<extra></extra>"))
@@ -168,4 +188,63 @@ def render_coverage(df: pd.DataFrame, by_year: dict, years: list, color: str, la
     elif not by_year:
         st.caption("OpenAlex 실측(점선)은 다음 정기 실측 뒤에 나타납니다 · 수집 = 실시간 수집분 + labels 파이프라인의 지난 연도"
                    f" · 최근 5년은 하루에 1년씩 다시 받는 중{nxt}.")
+    full = [y for y in years if int(y) < time.gmtime().tm_year]
+    if by_year_all and by_year and full and by_year_all != by_year:
+        y = full[-1]
+        extra = by_year_all.get(y, 0) - by_year.get(y, 0)
+        st.caption(f"수집은 대표 키워드 1개 기준 — 키워드 전체로 넓히면 {y}년 기준 연 약 {extra:,}편 더 "
+                   f"({by_year.get(y, 0):,} → {by_year_all.get(y, 0):,}, 라벨링 LLM 비용이 늘어 승인 후 진행).")
     return rows
+
+
+def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict, key: str):
+    """연구소 키워드별 5년 추이 — 연구소 안에서 어떤 세부 주제가 오르는지 (by_kw)."""
+    by_kw = ent.get("by_kw") or {}
+    if len(by_kw) < 2:
+        return
+    y_now = str(time.gmtime().tm_year)
+    full = [y for y in years if int(y) < int(y_now)]
+    if len(full) < 2:
+        return
+    a, b = full[0], full[-1]
+    st.markdown(f'<div class="sect">키워드별 5년 추이 — 어떤 세부 주제가 오르나 (OpenAlex 실측, {len(by_kw)}개)</div>',
+                unsafe_allow_html=True)
+    rows = sorted(({"kw": k, "first": v.get(a, 0), "last": v.get(b, 0), "now": v.get(y_now, 0),
+                    "g": _pct(v.get(a, 0), v.get(b, 0))} for k, v in by_kw.items()),
+                  key=lambda r: (r["g"] is None, -(r["g"] or 0), r["kw"]))
+    c1, c2 = st.columns(2)
+    with c1:
+        fig = go.Figure()
+        for i, k in enumerate(by_kw):
+            v, col = by_kw[k], KW_COLORS[i % len(KW_COLORS)]
+            fig.add_trace(go.Scatter(x=full, y=[v.get(y, 0) for y in full], mode="lines+markers", name=k,
+                                     legendgroup=k, line=dict(color=col, width=2), marker=dict(size=6),
+                                     hovertemplate=k + " %{x}년 · %{y:,}편<extra></extra>"))
+            if y_now in years:
+                fig.add_trace(go.Scatter(x=[y_now], y=[v.get(y_now, 0)], mode="markers", legendgroup=k, showlegend=False,
+                                         marker=dict(size=7, color="#FFFFFF", line=dict(color=col, width=2)),
+                                         hovertemplate=k + " %{x}년(진행 중) · %{y:,}편<extra></extra>"))
+        fig.update_layout(height=340, legend=dict(orientation="h", y=-0.25), yaxis_rangemode="tozero", **layout)
+        fig.update_xaxes(type="category")
+        fig.update_yaxes(gridcolor="#EEF2F7")
+        st.plotly_chart(fig, width="stretch", key=f"{key}_lines")
+    with c2:
+        all_by, _ = trend_of(ent)
+        g_inst = _pct(all_by.get(a, 0), all_by.get(b, 0))
+        g_base = _pct(base.get(a, 0), base.get(b, 0)) if base else None
+        rr = [r for r in rows if r["g"] is not None][::-1]
+        fig = go.Figure(go.Bar(x=[r["g"] for r in rr], y=[r["kw"] for r in rr], orientation="h",
+                               marker=dict(color=[color if (g_base is None or r["g"] >= g_base) else GRAY for r in rr]),
+                               customdata=[[r["first"], r["last"]] for r in rr],
+                               hovertemplate="%{y}<br>" + f"{a}→{b} " + "%{x:+.0f}% (%{customdata[0]:,}→%{customdata[1]:,}편)<extra></extra>"))
+        refs = [(v, lab, dash) for v, lab, dash in ((g_inst, "연구소 전체", "solid"), (g_base, "OpenAlex 전체", "dash"))
+                if v is not None]
+        for val, lab, dash in refs:                    # 기준선 값은 글자 겹침을 피해 차트 위 한 줄로
+            fig.add_vline(x=val, line=dict(color="#0F2744", width=1.5, dash=dash))
+        st.caption(f"{a}→{b} 증감 · 기준선 " + " · ".join(
+            f"{'실선' if d == 'solid' else '점선'} {lab} {v:+.0f}%" for v, lab, d in refs))
+        fig.update_layout(height=320, yaxis=dict(automargin=True), **layout)
+        fig.update_xaxes(gridcolor="#EEF2F7", zeroline=True, zerolinecolor="#CBD5E1")
+        st.plotly_chart(fig, width="stretch", key=f"{key}_growth")
+    st.caption("키워드마다 OpenAlex title_and_abstract 검색의 출판연도별 논문 수. 막대 색 = 해외 전체(OpenAlex)보다 빨리 느는 키워드, "
+               "회색 = 해외 전체보다 느린 키워드. 키워드끼리 겹치는 논문이 있어 키워드 합은 연구소 전체보다 큼. 키워드 고치기: data_seed/search_topics.json")
