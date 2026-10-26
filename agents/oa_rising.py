@@ -31,6 +31,7 @@ OUT = ROOT / "data_seed" / "oa_rising"
 FIELDS = {"수자원환경": ("water_env", "INST-02"), "AI": ("ai", "INST-07"), "물인프라안전": ("infra", "INST-04"),
           "상하수도": ("sewerage", "INST-03"), "물에너지": ("energy", "INST-05"), "경영": ("management", "INST-01")}
 TOP_TERMS, TOP_PAPERS, TOP_DECLINING, TOP_EDGES = 15, 8, 40, 300
+# 정렬은 모두 동점 처리까지 고정(mergesort + 이름) — 실행 환경(pandas 버전)이 달라도 같은 결과면 파일이 바뀌지 않게
 
 
 def _r(x, n=4):
@@ -80,8 +81,8 @@ def build(src: Path, key: str, title: str, inst: str | None, note: str) -> dict 
                 "docs": int(t.get("전체기간_총건수") or 0),
                 "first": (int(t["첫등장연도"]) if pd.notna(t.get("첫등장연도")) else None),
                 "new": bool(t.get("신규진입(2015~)", False))}
-    rising = [row(t) for _, t in tags[tags["추세(MK-FDR)"].eq("Rising")].sort_values("MK_tau", ascending=False).iterrows()]
-    declining = [row(t) for _, t in tags[tags["추세(MK-FDR)"].eq("Declining")].sort_values("MK_tau").head(TOP_DECLINING).iterrows()]
+    rising = [row(t) for _, t in tags[tags["추세(MK-FDR)"].eq("Rising")].sort_values(["MK_tau", "용어"], ascending=[False, True], kind="mergesort").iterrows()]
+    declining = [row(t) for _, t in tags[tags["추세(MK-FDR)"].eq("Declining")].sort_values(["MK_tau", "용어"], kind="mergesort").head(TOP_DECLINING).iterrows()]
 
     # ── 커뮤니티 ──
     terms = _read(review / "terms.csv")
@@ -99,7 +100,7 @@ def build(src: Path, key: str, title: str, inst: str | None, note: str) -> dict 
         else:
             label, label_src = str(s.get("label") or f"군집 {c}"), "분석 코드 라벨"
         if terms is not None:
-            tt = terms[terms["cluster"].eq(c)].sort_values("internal_strength", ascending=False).head(TOP_TERMS)
+            tt = terms[terms["cluster"].eq(c)].sort_values(["internal_strength", "term"], ascending=[False, True], kind="mergesort").head(TOP_TERMS)
             top = [{"term": t["term"], "docs": int(t["document_count"]), "inside": _r(t["internal_weight_fraction"], 3)}
                    for _, t in tt.iterrows()]
         else:
@@ -126,8 +127,8 @@ def build(src: Path, key: str, title: str, inst: str | None, note: str) -> dict 
     if edges is not None and len(edges):
         inter = edges[edges["cluster_a"].ne(edges["cluster_b"])].copy()
         inter["p"] = inter[["cluster_a", "cluster_b"]].min(axis=1).astype(str) + "-" + inter[["cluster_a", "cluster_b"]].max(axis=1).astype(str)
-        links = [[int(k.split("-")[0]), int(k.split("-")[1]), int(v)] for k, v in inter.groupby("p")["documents"].sum().sort_values(ascending=False).items()]
-        top_edges = [[r["a"], r["b"], int(r["documents"])] for _, r in edges.sort_values("documents", ascending=False).head(TOP_EDGES).iterrows()]
+        links = [[int(k.split("-")[0]), int(k.split("-")[1]), int(v)] for k, v in sorted(inter.groupby("p")["documents"].sum().items(), key=lambda kv: (-kv[1], kv[0]))]
+        top_edges = [[r["a"], r["b"], int(r["documents"])] for _, r in edges.sort_values(["documents", "a", "b"], ascending=[False, True, True], kind="mergesort").head(TOP_EDGES).iterrows()]
 
     # ── 구간별 (5~6년, τ > 0 — 유의성 검정 없음) ──
     windows = []
@@ -136,7 +137,7 @@ def build(src: Path, key: str, title: str, inst: str | None, note: str) -> dict 
         for _, w in ws.iterrows():
             cl = []
             if wt is not None:
-                for _, t in wt[wt["window"].eq(w["window"])].sort_values("size", ascending=False).iterrows():
+                for _, t in wt[wt["window"].eq(w["window"])].sort_values(["size", "cluster"], ascending=[False, True], kind="mergesort").iterrows():
                     cl.append({"cluster": int(t["cluster"]), "size": int(t["size"]),
                                "top": [x.strip() for x in str(t["top_terms"]).split("|")][:12]})
             windows.append({"window": str(w["window"]).replace("_", "–"), "n_years": int(w["n_years"]),
