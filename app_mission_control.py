@@ -28,6 +28,7 @@ import streamlit.components.v1 as components
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+import agent_flow as af
 import data_cache as dcache   # (dc는 지식노트 화면에서 Counter 변수명으로 쓰여 피함)
 import knowledge_notes as kn
 import label_review_page as lrp
@@ -39,10 +40,11 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.1 · 2026-10-25"
+APP_VERSION = "v3.2 · 2026-10-26"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
+FLOW_PAGE = "🌊 에이전트 흐름"              # 보여 주기용 흐름 화면 (agent_flow.py) — 운영 화면은 관제센터 그대로
 LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
 LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
 
@@ -410,7 +412,7 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 with st.sidebar:
     st.markdown(f"### 💧 Water Co-Scientist")
     st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
-    PAGES = ["🛰️ 관제센터", "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
+    PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
         st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
@@ -2042,6 +2044,26 @@ elif page == HITL_PAGE:
         components.html(html, height=980, scrolling=True)
         st.caption("결과 복사가 막히는 브라우저에서는 게임의 '파일로 저장'을 쓰세요. 진행 상황은 이 브라우저에 자동 저장됩니다.")
 
+elif page == FLOW_PAGE:
+    st.markdown('<div class="sect">🌊 에이전트 흐름 — 데이터가 어디서 와서 어디로 가는지 한눈에 (보여 주기용)</div>',
+                unsafe_allow_html=True)
+    st.caption("원천 → 수집 → 처리 → 지식 → 사람 검토 → 활용. 점 하나가 데이터 흐름이고 최근에 일한 에이전트일수록 빠르게 흐릅니다. "
+               "화면은 60초마다 GitHub에서 직접 갱신(새로고침 불필요) · 노드를 누르면 상세 · 끌기 이동 · 휠 확대 · ⛶ 전체 화면")
+    _hitl = load_labels("hitl/INST-02/summary.json")
+    _ft = {}
+    if ft_index:
+        _ft = {"latest": ft_index[0].get("id"), "status": run_status(*load_metrics(ft_index[0]["id"]))[0]}
+    _snap = af.snapshot(agents, state_of, T, load_json("kci_rising.json"), load_json("kci_kwater.json"),
+                        load_labels_jsonl("pipeline_runs.jsonl"), load_labels_jsonl("metrics/daily.jsonl"), _hitl,
+                        _ft, live_oa)
+    _html = af.html(_snap, height=740)
+    components.html(_html, height=750, scrolling=False)
+    c1_, c2_ = st.columns([1, 3])
+    c1_.download_button("⬇️ 단독 HTML로 받기 (발표용)", _html.encode("utf-8"), file_name="water_coscientist_flow.html",
+                        mime="text/html", help="브라우저로 바로 열리고, 인터넷이 되면 60초마다 스스로 갱신됩니다.")
+    c2_.caption("세션 내용·개인정보 없이 집계 숫자와 상태만 씁니다. 시각 언어 참고: agent4d(burn001, Apache-2.0)의 ‘흐름’ 표현과 "
+                "그 원형 patoles/agent-flow(Apache-2.0) — 코드는 새로 작성.")
+
 elif page == LR_PAGE:
     lrp.render(load_json, PLOTLY_LAYOUT)
 
@@ -2141,5 +2163,5 @@ def _auto_refresh_timer():
         st.rerun(scope="app")
 
 
-if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE):     # 판정·노트 화면은 입력 중 초기화되면 안 되므로 제외
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE, FLOW_PAGE):     # 판정·노트 화면은 입력 중 초기화 방지, 흐름 화면은 스스로 갱신
     _auto_refresh_timer()
