@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.4 · 2026-10-26"
+APP_VERSION = "v3.5 · 2026-10-26"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -50,12 +50,14 @@ LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 �
 WCS_FLOW_PAGE = "AI for Water (코사이언티스트)"  # Agent Flow 확인用 — WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
 HECRAS_FLOW_PAGE = "HEC-RAS Surrogate (서로게이트)"  # Agent Flow 확인用 — HECRAS-surrogate 흐름도 (flows/hecras_agent_flow.html)
 # Agent Flow 확인用 화면: 버튼 이름 → (흐름도 파일, 제목, 설명, 도움말, 공개 메모). 새 흐름도는 flows/에 파일을 두고 여기 한 줄만 더한다
+# 파일 자리에 {보기 이름: 파일}을 주면 화면 위에 보기 전환 버튼이 생긴다 (한 번에 하나만 보임)
 AGENT_FLOWS = {
     WCS_FLOW_PAGE: ("flows/wcs_agent_flow.html", "AI for Water (코사이언티스트) — WCS 연구자료 검색의 에이전트 흐름",
                     "원천 자료 → 자료 준비 → 저장·모델 → 검색 창구 → AI 답변 → 화면 → 사람. 실제 코드 경로(WCS main 90edc2d, 2026-10-26)를 질문 유형별로 재생",
                     "WCS(K-water 연구자료 검색)의 에이전트 흐름 — 실제 코드 경로를 질문 유형별로 재생하는 구조도 (실시간 상태 아님)",
                     "hjhj(학준) 동의 후 공개 (2026-10-26)."),
-    HECRAS_FLOW_PAGE: ("flows/hecras_agent_flow.html", "HEC-RAS Surrogate (서로게이트) — 1D HEC-RAS × AI 방류 설계 흐름",
+    HECRAS_FLOW_PAGE: ({"🌊 기본 보기": "flows/hecras_agent_flow.html", "🔬 전문가 보기": "flows/hecras_agent_flow_expert.html"},
+                       "HEC-RAS Surrogate (서로게이트) — 1D HEC-RAS × AI 방류 설계 흐름",
                        "HEC-RAS 정답 → 자료 → 학습·검증 → 서로게이트 → 후보 탐색 → 방류 설계(P1·P2·P3) → HEC-RAS 1회 확인. 실제 코드 경로(newcave/HECRAS-surrogate main 30c0fc5, 2026-08-18)를 단계별로 재생",
                        "HEC-RAS Surrogate Studio의 흐름 — 학습·검증부터 P1·P2·P3 방류 설계까지 실제 코드 경로를 재생하는 구조도 (실시간 상태 아님)",
                        "공개 저장소 newcave/HECRAS-surrogate 기준."),
@@ -2085,6 +2087,15 @@ elif page in AGENT_FLOWS:                              # Agent Flow 확인用 �
     f_path, f_title, f_desc, _, f_note = AGENT_FLOWS[page]
     st.markdown(f'<div class="sect">{f_title}</div>', unsafe_allow_html=True)
     st.caption(f"{f_desc}하는 구조도이며 실시간 상태는 아닙니다. 오른쪽 패널에서 단계 고르기 · 노드를 누르면 상세 · 끌기 이동 · 휠 확대 · ⛶ 전체 화면")
+    if isinstance(f_path, dict):                       # 보기가 여럿이면 전환 버튼 (한 번에 하나만 그려 겹치지 않게)
+        views_ = list(f_path)
+        vc1, vc2 = st.columns([2, 3])
+        with vc1:
+            view_ = st.segmented_control("보기", views_, default=views_[0], key=f"flow_view_{views_[0]}_{page}",
+                                         label_visibility="collapsed") or views_[0]
+        vc2.caption("전문가 보기: 기술 용어·사양과 수식(목적함수·검증 지표), 연결선 위에 넘겨주는 자료(P(N×4)·OOF Ŷ·Ŷ(n′×73) 등)"
+                    if "전문가" in view_ else "기본 보기: 처음 보는 사람도 따라갈 수 있게 쉬운 말로 정리한 흐름")
+        f_path = f_path[view_]
     f_html = None
     try:
         f_html = Path(f_path).read_text(encoding="utf-8") if Path(f_path).exists() else None
