@@ -16,6 +16,8 @@ HISTORY_START_YEAR = 2025      # 첫 역사 수집 연도 (2025 상반기 공백
 HISTORY_FLOOR_YEAR = 2015      # 여기까지 후진하면 역사 수집 완료
 MAX_PAGES_FORWARD = 120
 MAX_PAGES_PER_MONTH = 60
+COLLECT_ALL_KEYWORDS = True    # 2026-10-27 사용자 승인("논문 수집 진행"): 연구소 키워드 전체(5~6개)로 수집
+                               #   키워드마다 따로 검색(지금과 같은 띄어쓰기 검색) → id로 합침. False면 대표 키워드 1개
 RESWEEP_YEARS = 5              # 역사 수집 완주 뒤: 최근 5년(올해 포함)을 하루에 1년씩 다시 훑음 (2026-10-27 사용자 지정)
                                #   첫 차례는 작년(2025 상반기 공백) → 2024 → … → 5년 전 → 올해 → 작년 … 순환. id로 중복 제거
 TOPICS_URL = ("https://raw.githubusercontent.com/newcave/water-tech-agent/"
@@ -182,14 +184,16 @@ def paper_ids_by_inst(repo):
 
 
 def load_topics(repo, log):
-    tj = repo / "data_seed" / "search_topics.json"
-    if tj.exists():
-        return json.loads(tj.read_text(encoding="utf-8"))
+    """연구소 키워드는 main의 data_seed/search_topics.json이 기준 (연구소가 직접 고치는 곳) → main 먼저, 실패하면 이 브랜치 사본."""
     try:
         with urllib.request.urlopen(TOPICS_URL, timeout=30) as r:
             return json.load(r)
     except Exception as e:
-        log(f"수집: search_topics 로드 실패({e})"); return None
+        log(f"수집: main의 search_topics 로드 실패({e}) — data 브랜치 사본 사용")
+    tj = repo / "data_seed" / "search_topics.json"
+    if tj.exists():
+        return json.loads(tj.read_text(encoding="utf-8"))
+    return None
 
 
 def state_path(repo):
@@ -220,35 +224,37 @@ def collect_range(repo, topics, since, until, cap_pages, log, tag):
         code = inst.get("code"); kws = inst.get("openalex_keywords") or []
         if not code or not kws:
             continue
-        filt = f"title_and_abstract.search:{kws[0]},from_publication_date:{since}"
-        if until:
-            filt += f",to_publication_date:{until}"
         have = set(existing.get(code, {}))
         out = ext_dir / f"papers_{code}.jsonl"
-        cursor, pages, added = "*", 0, 0
+        added = 0
         with out.open("a", encoding="utf-8") as f:
-            while cursor and pages < cap_pages:
-                j = oa_get({"filter": filt, "per-page": PAGE, "cursor": cursor,
-                            "sort": "publication_date:desc",
-                            "select": "id,doi,title,publication_year,publication_date,"
-                                      "cited_by_count,type,primary_location"})
-                if not j:
-                    fail("collect", code, "api_error", 1,
-                         f"OpenAlex 검색 실패 ({tag}, {pages + 1}쪽) — 이 구간 수집 중단")
-                    break
-                for w in j.get("results", []):
-                    rid = (w.get("id") or "").rsplit("/", 1)[-1]
-                    if not rid or rid in have:
-                        continue
-                    src = ((w.get("primary_location") or {}).get("source") or {})
-                    f.write(json.dumps({"id": rid, "doi": w.get("doi"),
-                        "title": w.get("title"), "year": w.get("publication_year"),
-                        "date": w.get("publication_date"), "cited": w.get("cited_by_count"),
-                        "venue": src.get("display_name"), "type": w.get("type")},
-                        ensure_ascii=False) + "\n")
-                    have.add(rid); added += 1
-                cursor = (j.get("meta") or {}).get("next_cursor")
-                pages += 1
+            for kw in (kws if COLLECT_ALL_KEYWORDS else kws[:1]):   # 키워드마다 따로 → id로 합침 (OR 검색 해석에 기대지 않음)
+                filt = f"title_and_abstract.search:{kw},from_publication_date:{since}"
+                if until:
+                    filt += f",to_publication_date:{until}"
+                cursor, pages = "*", 0
+                while cursor and pages < cap_pages:
+                    j = oa_get({"filter": filt, "per-page": PAGE, "cursor": cursor,
+                                "sort": "publication_date:desc",
+                                "select": "id,doi,title,publication_year,publication_date,"
+                                          "cited_by_count,type,primary_location"})
+                    if not j:
+                        fail("collect", code, "api_error", 1,
+                             f"OpenAlex 검색 실패 ({tag}, '{kw}', {pages + 1}쪽) — 이 구간·키워드 수집 중단")
+                        break
+                    for w in j.get("results", []):
+                        rid = (w.get("id") or "").rsplit("/", 1)[-1]
+                        if not rid or rid in have:
+                            continue
+                        src = ((w.get("primary_location") or {}).get("source") or {})
+                        f.write(json.dumps({"id": rid, "doi": w.get("doi"),
+                            "title": w.get("title"), "year": w.get("publication_year"),
+                            "date": w.get("publication_date"), "cited": w.get("cited_by_count"),
+                            "venue": src.get("display_name"), "type": w.get("type"), "kw": kw},
+                            ensure_ascii=False) + "\n")
+                        have.add(rid); added += 1
+                    cursor = (j.get("meta") or {}).get("next_cursor")
+                    pages += 1
         existing.setdefault(code, {}).update({h: {} for h in have})
         if added:
             log(f"  {tag} {code}: +{added}")
@@ -286,6 +292,9 @@ def stage_collect_daily(repo, log):
         n_hist, hist_year = stage_resweep(repo, topics, st, log)
     else:
         log(f"수집(후진): {HISTORY_FLOOR_YEAR}년까지 완주 — 종료 상태")
+    basis = "all" if COLLECT_ALL_KEYWORDS else "rep"      # 앱의 수집률 비교 기준 (all = 키워드 전체 실측과 비교)
+    if st.get("collect_basis") != basis:
+        st["collect_basis"], st["collect_basis_since"] = basis, today
     st["last_collect_date"] = today
     save_state(repo, st)
     return n_fwd, hist_year, n_hist
