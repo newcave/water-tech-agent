@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.8 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.9 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -52,6 +52,7 @@ WCS_FLOW_PAGE = "Co-Scientist 개념도"        # WCS(연구자료 검색) 흐�
 RNDHELP_FLOW_PAGE = "수탁과제 관리 Tool"       # rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
 HECRAS_FLOW_PAGE = "Surrogate 모델링"         # HECRAS-surrogate 흐름도 (flows/hecras_agent_flow*.html)
 LORA_FLOW_PAGE = "AI연구소 자체 LLM"          # kwater-ailab-4b-lora 흐름도 (flows/lora4b_agent_flow*.html)
+OPENALEX_FLOW_PAGE = "OpenAlex 연구트렌드"      # newcave/openalex 흐름도 (flows/openalex_agent_flow*.html)
 # Agent Flow 확인用 화면: 버튼 이름 → (흐름도 파일, 제목, 설명, 도움말, 공개 메모). 새 흐름도는 flows/에 파일을 두고 여기 한 줄만 더한다
 # 파일 자리에 {보기 이름: 파일}을 주면 화면 위에 보기 전환 버튼이 생긴다 (한 번에 하나만 보임). 사이드바 버튼 순서 = 이 표의 순서
 AGENT_FLOWS = {
@@ -74,6 +75,11 @@ AGENT_FLOWS = {
                      "공개 연구보고서 105건 → 데이터소스 추출 → instruction 쌍 → Qwen3-4B + LoRA 학습 → 전/후 평가 → Hugging Face 공개 → 추론, 그리고 로드맵(v0.2~v1.x). 저장소(newcave/kwater-ailab-4b-lora main 46453b2, 2026-07-10) 기준으로 단계별 재생",
                      "kwater-ailab-4b-lora의 흐름 — 데이터 구축·LoRA 학습·배포·로드맵을 재생하는 구조도 (학습 코드는 저장소 밖이라 README 기준 단계는 점선, 실시간 상태 아님)",
                      "공개 저장소 newcave/kwater-ailab-4b-lora 기준 — 학습 단계는 README 기준(코드는 Colab)."),
+    OPENALEX_FLOW_PAGE: ({"🌊 기본 보기": "flows/openalex_agent_flow.html", "🔬 전문가 보기": "flows/openalex_agent_flow_expert.html"},
+                         "OpenAlex 연구트렌드 — 연구소별 떠오르는 연구주제(Rising 용어 → 커뮤니티) 흐름",
+                         "분야별 저널 수집(OpenAlex) → 코퍼스·제목 용어 → Mann-Kendall + BH-FDR로 Rising 용어 → 동시출현 네트워크·Louvain 커뮤니티 → 근거문서·AI 해석 → Dash 대시보드·Streamlit 뷰어. 실제 코드 경로(newcave/openalex main b1a9f10, 2026-10-27)를 단계별로 재생",
+                         "newcave/openalex의 흐름 — 수집·추세검정·커뮤니티·AI 해석·화면을 실제 코드 경로대로 재생하는 구조도 (실시간 상태 아님)",
+                         "공개 저장소 newcave/openalex 기준 — 수집 원본·분석 결과는 비공개 리포(openalex-data)."),
 }
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
