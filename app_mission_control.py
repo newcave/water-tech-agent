@@ -34,6 +34,7 @@ import data_cache as dcache   # (dc는 지식노트 화면에서 Counter 변수�
 import knowledge_notes as kn
 import label_review_page as lrp
 import oa_rising_page as oarp
+import inst_trend as itr      # 연구소별 5년 추이 — 해외(OpenAlex) 실측 (v3.12)
 
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
                    layout="wide", initial_sidebar_state="expanded")
@@ -42,7 +43,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.11 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.12 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -168,6 +169,10 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 .kpi .k-lab {font-size:.78rem; color:#64748B; font-weight:500;}
 .kpi .k-val {font-size:1.7rem; font-weight:900; color:#17427C; line-height:1.2;}
 .kpi .k-sub {font-size:.74rem; color:#94A3B8; margin-top:2px;}
+.kpis.k7 {display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px;}   /* 7개 연구소 한 줄 (v3.12) */
+.kpis.k7 .kpi {padding:12px 12px; border-left-width:5px;}
+.kpis.k7 .k-val {font-size:1.45rem;}
+.kpis.k7 .k-lab {font-size:.74rem; letter-spacing:-.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
 /* 파이프라인 플로우 */
 .flow {display:flex; align-items:stretch; gap:0; overflow-x:auto; padding:4px 0 8px;}
@@ -380,17 +385,29 @@ def load_metrics(run_id: str):
 
 
 @st.cache_data(ttl=300, show_spinner=False)
-def load_papers(tag: str) -> pd.DataFrame:
-    """data 브랜치의 수집 논문 jsonl (선택 작업만 로드, 5분 캐시)."""
-    try:
-        r = requests.get(f"https://raw.githubusercontent.com/{GITHUB_REPO}"
-                         f"/data/live/openalex/papers_{tag}.jsonl",
-                         params={"t": int(time.time() // 120)}, timeout=20)
-        if r.status_code == 200 and r.text.strip():
-            return pd.DataFrame([json.loads(l) for l in r.text.split("\n") if l.strip()])
-    except Exception:
-        pass
-    return pd.DataFrame()
+def load_papers(tag: str, history: bool = False) -> pd.DataFrame:
+    """data 브랜치의 수집 논문 jsonl (선택 작업만 로드, 5분 캐시).
+    history=True: 연구소 트랙에 labels 파이프라인이 모은 지난 연도(labels/openalex_extended)를 합침 — id 중복 제거, live 우선."""
+    paths = [f"live/openalex/papers_{tag}.jsonl"] + ([f"labels/openalex_extended/papers_{tag}.jsonl"] if history else [])
+    rows = {}
+    for path in paths:
+        try:
+            r = requests.get(f"https://raw.githubusercontent.com/{GITHUB_REPO}/data/{path}",
+                             params={"t": int(time.time() // 120)}, timeout=30)
+            if r.status_code != 200:
+                continue
+            for line in r.text.split("\n"):        # splitlines()는 제목 속 U+2028에서 잘림
+                if not line.strip():
+                    continue
+                try:
+                    d = json.loads(line)
+                except Exception:
+                    continue
+                rid = str(d.get("id") or "").rsplit("/", 1)[-1] or f"_{len(rows)}"
+                rows.setdefault(rid, d)
+        except Exception:
+            continue
+    return pd.DataFrame(list(rows.values()))
 
 
 def load_data_jsonl(rel_path: str) -> list:
@@ -750,9 +767,16 @@ elif page == "📚 수집 현황":
 
 # ═══════════════ 페이지: 논문 트렌드 ═══════════════
 elif page == "📄 논문 트렌드":
-    st.markdown('<div class="sect">OpenAlex 수집 논문 · 연구소별 트렌드</div>', unsafe_allow_html=True)
-    st.caption("수집 필드: 제목·발행연도/일·저널·피인용·유형·DOI (메타정보 — 초록은 2단계 확장 후보)")
     inst_names = summary.get("inst_names", {})
+    oa_tr = load_json("openalex_trends.json") or {}
+    itr.render_overview(oa_tr, inst_names, INST_COLORS, PLOTLY_LAYOUT)    # 해외 × 연구소 5년 (v3.12)
+    t_years, _, t_insts, _ = itr.series(oa_tr)
+    if not t_years:                                       # 실측 전: 올해 포함 5개 연도로 창만 정함
+        t_years = [str(y) for y in range(time.gmtime().tm_year - 4, time.gmtime().tm_year + 1)]
+    st.divider()
+    st.markdown('<div class="sect">OpenAlex 수집 논문 · 연구소별 트렌드</div>', unsafe_allow_html=True)
+    st.caption("수집 필드: 제목·발행연도/일·저널·피인용·유형·DOI (메타정보 — 초록은 labels 파이프라인이 보강) · "
+               f"연구소 트랙은 최근 5년({t_years[0]}–{t_years[-1]}) — 실시간 수집분 + labels 파이프라인이 모은 지난 연도를 합쳐 봄")
     wj = load_json("water_journals.json") or {}              # 수자원 12개 핵심 저널 레지스트리
     TAGS = [("kwater", "K-water 생산논문")] + \
            [(j["code"], f"[저널] {j['name']}") for j in wj.get("journals", [])] + \
@@ -770,31 +794,40 @@ elif page == "📄 논문 트렌드":
     st.markdown(f'<div class="kpis">{chips}</div>', unsafe_allow_html=True)
 
     sel = st.selectbox("연구소 / 트랙 선택", TAGS, format_func=lambda x: x[1])
-    df = load_papers(sel[0])
+    is_inst = sel[0].startswith("INST-")
+    df = load_papers(sel[0], history=is_inst)
+    if is_inst and not df.empty and "year" in df:          # 연구소 트랙 = 최근 5년 창
+        yy = pd.to_numeric(df["year"], errors="coerce")
+        df = df[(yy >= int(t_years[0])) & (yy <= int(t_years[-1]))]
     if df.empty:
         st.info("이 트랙은 아직 수집 전이거나 파일이 없습니다 — 수집기가 순서대로 진행 중입니다.")
     else:
         c1, c2, c3, c4 = st.columns(4)
-        c1.metric("수집 논문", f"{len(df):,}편")
+        c1.metric("수집 논문" + (f" ({t_years[0]}–{t_years[-1]})" if is_inst else ""), f"{len(df):,}편")
         c2.metric("피인용 합계", f"{int(df['cited'].fillna(0).sum()):,}")
         c3.metric("최신 연도", int(df["year"].dropna().max()) if df["year"].notna().any() else "-")
         c4.metric("저널 수", df["venue"].dropna().nunique() if "venue" in df else 0)
 
         a, b = st.columns(2)
-        with a:  # 발행 추이 — 월별(date 있으면) 또는 연도별
-            monthly = None
-            if "date" in df and df["date"].notna().sum() >= max(30, len(df) // 2):
-                d = pd.to_datetime(df["date"], errors="coerce").dropna()
-                monthly = d.dt.to_period("M").astype(str).value_counts().sort_index()
-            if monthly is not None and len(monthly) >= 3:
-                st.markdown('<div class="sect">월별 발행 추이</div>', unsafe_allow_html=True)
-                fig = go.Figure(go.Bar(x=monthly.index, y=monthly.values, marker_color=BLUE))
+        with a:  # 연구소 트랙: 연도별 수집 vs 실측 / 그 밖: 월별(date 있으면) 또는 연도별
+            if is_inst:
+                itr.render_coverage(df, (t_insts.get(sel[0]) or {}).get("by_year") or {}, t_years,
+                                    INST_COLORS.get(sel[0], BLUE), PLOTLY_LAYOUT, key=f"cov_{sel[0]}",
+                                    next_year=(load_labels("pipeline_state.json") or {}).get("resweep_next_year"))
             else:
-                st.markdown('<div class="sect">연도별 발행 추이</div>', unsafe_allow_html=True)
-                yr = df["year"].dropna().astype(int).value_counts().sort_index()
-                fig = go.Figure(go.Bar(x=yr.index.astype(str), y=yr.values, marker_color=BLUE))
-            fig.update_layout(height=300, **PLOTLY_LAYOUT)
-            st.plotly_chart(fig, width="stretch")
+                monthly = None
+                if "date" in df and df["date"].notna().sum() >= max(30, len(df) // 2):
+                    d = pd.to_datetime(df["date"], errors="coerce").dropna()
+                    monthly = d.dt.to_period("M").astype(str).value_counts().sort_index()
+                if monthly is not None and len(monthly) >= 3:
+                    st.markdown('<div class="sect">월별 발행 추이</div>', unsafe_allow_html=True)
+                    fig = go.Figure(go.Bar(x=monthly.index, y=monthly.values, marker_color=BLUE))
+                else:
+                    st.markdown('<div class="sect">연도별 발행 추이</div>', unsafe_allow_html=True)
+                    yr = df["year"].dropna().astype(int).value_counts().sort_index()
+                    fig = go.Figure(go.Bar(x=yr.index.astype(str), y=yr.values, marker_color=BLUE))
+                fig.update_layout(height=300, **PLOTLY_LAYOUT)
+                st.plotly_chart(fig, width="stretch")
         with b:
             st.markdown('<div class="sect">Top 10 저널·출처</div>', unsafe_allow_html=True)
             vc = df["venue"].dropna().value_counts().head(10)[::-1] if "venue" in df else []
@@ -1394,6 +1427,14 @@ elif page == "🇰🇷 KCI 트렌드":
                                pi=rl.get("paper_include", 0), pe=rl.get("paper_exclude", 0), c=hr.get("conflicts", 0))
                            + "판정은 사이드바 HITL (전문가) 검토의 K-water 문헌 적정성(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
                              "review/overrides*.json으로 저장하면 다음 주간 분석부터 반영됨.")
+                rf = kw.get("refresh") or {}
+                _kst9 = dt.timezone(dt.timedelta(hours=9))
+                if rf.get("fetched"):
+                    _yrs = sorted(rf["fetched"])[-(rf.get("window_years") or 5):]
+                    st.caption(f"🔄 최근 {rf.get('window_years') or 5}년은 매일 1년씩 다시 받아 최신화 (5일에 한 바퀴) — 연도별 마지막 수집: "
+                               + " · ".join(f"{y} {dt.datetime.fromtimestamp(rf['fetched'][y], _kst9):%m-%d}" for y in _yrs))
+                else:
+                    st.caption("🔄 KCI 원천은 매일 최근 5년 가운데 1년씩 다시 받아 최신화 (5일에 한 바퀴) · 상승 주제 분석은 매주 월요일.")
                 st.caption("범위 선택에서 'K-water 소속 논문'을 고르면 이 논문들만으로 상승 용어·묶음을 볼 수 있음. "
                            f"{kw['source']}")
 

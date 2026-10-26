@@ -149,7 +149,20 @@ def kwater_summary(y1: int) -> dict:
             "journals": journals.most_common(25),
             "kwater_units": units.most_common(20),
             "partners": partners.most_common(25),
-            "journal_share": share}
+            "journal_share": share,
+            "refresh": refresh_info()}
+
+
+def refresh_info() -> dict:
+    """최근 연도 창 다시 받기 현황 (비공개 manifest의 연도별 마지막 수집 시각만 — 원천 데이터 아님)."""
+    try:
+        man = json.loads((RAW.parent / "manifest.json").read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    rf = man.get("refresh") or {}
+    yrs = (man.get("journals", {}).get("KWATER") or {}).get("years", {})
+    return {"window_years": rf.get("window_years"), "rotate": rf.get("rotate"),
+            "fetched": {y: v["fetched"] for y, v in sorted(yrs.items()) if v.get("fetched")}}
 
 
 def _compound(run: list) -> str:

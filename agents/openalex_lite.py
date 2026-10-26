@@ -6,6 +6,8 @@ openalex_lite — GitHub Actions에서 6시간마다 실행되는 경량 논문 
 하는 일 (전부 실측 — 연출 없음):
   1. OpenAlex에서 K-water(ROR 04dtgat87) 소속 논문 수 확인 (2020~, 키 불필요)
   2. search_topics.json의 7개 연구소 대표 키워드로 최근 1년 관련논문 수 확인 (트렌드 감시)
+     + 최근 5년(TREND_YEARS) 연도별 실측(group_by=publication_year) — 연구소별 5년 추이 (v3.12)
+     + 같은 5년의 OpenAlex 전체 논문 수(해외 전체 기준선) — 연구소 키워드의 상대 성장 비교용
   2b. water_journals.json의 수자원 12개 핵심 저널 × 연도 논문 수 실측 (트렌드 분석 분모 코퍼스)
       — 연관성·트렌드 분석 자체는 아직 미실시, 분모만 기록
   3. data_seed/agents/openalex_collector.json 갱신 → 관제센터 심박
@@ -29,6 +31,7 @@ SEED = ROOT / "data_seed"
 API = "https://api.openalex.org/works"
 MAILTO = "newcave.kwater@gmail.com"          # OpenAlex polite pool (아무 연락용 메일이면 됨)
 RECENT_FROM = "2025-07-01"                   # '최근 1년' 트렌드 창
+TREND_YEARS = 5                              # 연구소별 연도 추이 창 (올해 포함 5개 연도, 2026-10-27 사용자 지정)
 
 AGENT = SEED / "agents" / "openalex_collector.json"
 TRENDS = SEED / "openalex_trends.json"
@@ -131,7 +134,10 @@ def main():
     except Exception as e:
         errors.append(f"소속검색: {e}")
 
-    # ── 2. 연구소별 대표 키워드 × 최근 1년 (트렌드 감시) ──
+    # ── 2. 연구소별 대표 키워드 × 최근 1년 (트렌드 감시) + 최근 5년 연도별 ──
+    y1 = time.gmtime(now).tm_year
+    trend_years = [str(y) for y in range(y1 - TREND_YEARS + 1, y1 + 1)]
+    span = f"from_publication_date:{trend_years[0]}-01-01,to_publication_date:{y1}-12-31"   # 미래 날짜(오기) 제외
     per_inst, n_related = {}, 0
     for inst in topics.get("institutes", []):
         kws = inst.get("openalex_keywords") or []
@@ -143,10 +149,23 @@ def main():
             per_inst[inst["code"]] = {"name": inst.get("name_ko"), "keyword": kw,
                                       "recent_1y": c}
             n_related += c
-            print(f"   {inst['code']} {inst.get('name_ko','')}: '{kw}' 최근1년 {c:,}건")
             time.sleep(0.4)                           # polite
+            by = oa_by_year(f"title_and_abstract.search:{kw},{span}")
+            per_inst[inst["code"]]["by_year"] = {y: by.get(y, 0) for y in trend_years}
+            print(f"   {inst['code']} {inst.get('name_ko','')}: '{kw}' 최근1년 {c:,}건 · "
+                  + " ".join(f"{y}:{by.get(y, 0):,}" for y in trend_years))
+            time.sleep(0.4)
         except Exception as e:
             errors.append(f"{inst['code']}: {e}")
+
+    # ── 2a. 해외 전체 기준선: 같은 5년의 OpenAlex 전체 논문 수 (연구소 키워드 비중 = 키워드 / 전체) ──
+    baseline = None
+    try:
+        by = oa_by_year(span)
+        baseline = {"label": "OpenAlex 전체", "by_year": {y: by.get(y, 0) for y in trend_years}}
+        print("   OpenAlex 전체: " + " ".join(f"{y}:{by.get(y, 0):,}" for y in trend_years))
+    except Exception as e:
+        errors.append(f"전체 기준선: {e}")
 
     # ── 2b. 수자원 12개 핵심 저널 × 연도 (분모 코퍼스) ──
     journals = journal_corpus(errors)
@@ -180,7 +199,14 @@ def main():
         tr["updated"] = now
         tr["window_from"] = RECENT_FROM
         if per_inst:
+            for code, v in per_inst.items():          # 연도별 조회만 실패한 연구소는 지난 값 유지
+                if "by_year" not in v and (tr.get("institutes") or {}).get(code, {}).get("by_year"):
+                    v["by_year"] = tr["institutes"][code]["by_year"]
             tr["institutes"] = per_inst
+            tr["trend_years"] = trend_years
+            tr["trend_basis"] = "연구소 대표 키워드 1개 × title_and_abstract.search, 출판연도별 실측 (올해는 진행 중·색인 지연)"
+        if baseline:
+            tr["baseline"] = baseline
         if journals:                                  # 일부 실패 시 이전 값 유지
             tr["journals"] = {**tr.get("journals", {}), **journals}
         tr.setdefault("history", []).append(

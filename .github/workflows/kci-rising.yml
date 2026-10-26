@@ -3,13 +3,18 @@ name: kci-rising
 # KCI 한국 저널(J11·J12) 원천 수집 → 비공개 저장소 보관 → 상승 주제 분석(집계만 공개)
 # 준비: ① 비공개 저장소 newcave/water-tech-kci-private
 #       ② secrets.KCI_PRIVATE_TOKEN = 그 저장소만 Contents 읽기·쓰기 권한인 fine-grained PAT
+# 원천 수집은 매일 (최근 5년 창에서 하루 1년씩 다시 받기), 상승 주제 분석·공개 집계는 매주 월요일
 on:
   schedule:
-    - cron: "11 21 * * 0"        # 매주 일요일 21:11 UTC (월요일 06:11 KST)
+    - cron: "11 21 * * 0"        # 매주 일요일 21:11 UTC (월요일 06:11 KST) — 수집 + 분석
+    - cron: "11 21 * * 1-6"      # 그 밖의 날 같은 시각 — 수집만 (하루 1년)
   workflow_dispatch:
     inputs:
       full:
         description: "전 연도 재수집 (1=예)"
+        default: "0"
+      window:
+        description: "최근 5년 창 전체 다시 받기 (1=예, 0=오늘 차례인 1년만)"
         default: "0"
 
 permissions:
@@ -43,6 +48,8 @@ jobs:
           KCI_API_KEY: ${{ secrets.KCI_API_KEY }}
           KCI_RAW_DIR: private
           KCI_FULL: ${{ github.event.inputs.full || '0' }}
+          KCI_RECENT_YEARS: "5"
+          KCI_ROTATE: ${{ github.event.inputs.window == '1' && '0' || '1' }}
         run: python agents/kci_collect.py
 
       - name: 원천 커밋 → 비공개 저장소
@@ -60,12 +67,13 @@ jobs:
           echo "비공개 저장소 push 실패(3회)"; exit 1
 
       - name: 상승 주제 분석 (집계만 출력)
+        if: github.event_name != 'schedule' || github.event.schedule == '11 21 * * 0'
         env:
           KCI_RAW_DIR: private
         run: python agents/kci_rising.py
 
       - name: 집계 커밋 → 공개 저장소 (main만)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && (github.event_name != 'schedule' || github.event.schedule == '11 21 * * 0')
         run: |
           git config user.name "co-scientist-bot"
           git config user.email "co-scientist-bot@users.noreply.github.com"
