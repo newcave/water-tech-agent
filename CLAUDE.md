@@ -1,0 +1,44 @@
+# Water Co-Scientist — 작업 규칙 (Claude 세션 공통)
+
+K-water연구원 AI연구소의 R&D 데이터 에이전트 플랫폼. 수집(OpenAlex·KCI·ALIO·KIPRIS) → 처리(초록·대상/문제·도메인 라벨) →
+지식(연구소 지식노트·KCI 트렌드) → 사람 검토(HITL) → 활용(관제센터·FT)을 GitHub Actions와 Streamlit 앱으로 돌린다.
+이 파일은 **클라우드든 PC든 이 저장소에서 일하는 모든 Claude 세션이 먼저 지키는 규칙**이다 (2026-10-26 사용자 확정).
+
+## 1. 병행 작업 규칙 (클라우드 + PC)
+
+1. **GitHub가 유일한 기준이다.**
+   - 시작 전 항상 최신을 받는다: `git fetch origin && git checkout -B claude/<주제> origin/main`
+   - 어느 쪽에서 작업하든 **브랜치 → PR → 머지**. main에 직접 커밋하지 않는다 (자동 실행 봇 커밋은 예외).
+   - **같은 기능은 한쪽에서만 맡는다.** 시작 전 열린 PR·최근 커밋을 확인하고, 같은 파일을 다른 세션이 고치고 있으면 멈추고 사용자에게 묻는다.
+   - 세션끼리 기억을 공유하지 않는다 → 결정·맥락은 PR 본문과 이 파일에 남긴다.
+2. **역할을 나눈다.**
+   - 클라우드: 자동 실행·스케줄, 오래 걸리는 분석, 앱 기능 개발과 PR
+   - PC: 내부 문서(HWP 등) 정리, 내부망 자료, 시연 화면 확인, agent4d 관찰
+   - 기본은 **클라우드 세션 하나를 PC에 연결**(Claude 데스크톱 앱 → 이 작업 열기 → "이 컴퓨터에 연결")해서 쓴다. 세션이 하나라 기억이 갈라지지 않는다.
+3. **비밀값은 GitHub Secrets와 Streamlit Secrets에만 둔다.**
+   - 코드·문서·커밋·PR·채팅에 토큰·키를 쓰지 않는다. 예시는 `github_pat_...`처럼 줄임표로만.
+   - 예외: 홈서버 self-hosted 러너의 `.env` (PC 안에서만, `.gitignore` 등록됨 — 절대 커밋 금지).
+   - **KCI 원천 자료는 비공개 저장소 `newcave/water-tech-kci-private` 밖으로 내보내지 않는다** (재배포 금지). 공개 저장소에는 집계(건수·용어·검정 결과)만.
+   - PR마다 `guard` 워크플로가 토큰 꼴 문자열·비밀 파일·KCI 원천 필드를 검사한다.
+
+## 2. 저장소 지도
+
+| 위치 | 내용 |
+|---|---|
+| `main` | 앱(`app_mission_control.py` + 모듈), 에이전트 코드(`agents/`), 집계(`data_seed/`), 워크플로 — Streamlit Cloud가 main을 자동 배포 |
+| `data` 브랜치 | 수집 원본(`live/`), 라벨(`labels/`), 판정 기록(`labels/hitl/<INST>/ledger.jsonl` 등) — 봇이 수시로 push, **강제 push 금지** |
+| `water-tech-kci-private` | KCI 원천(`raw/`), 사람 판정 오버라이드(`review/`) |
+
+주요 모듈: `knowledge_notes.py`(지식노트) · `label_review.py`/`label_review_page.py`(라벨 판정 HITL) · `data_cache.py`(공용 캐시) ·
+`agent_flow.py`(🌊 흐름 화면) · `agents/kci_rising.py`(KCI 단어·구 상승 분석) · 설정 `data_seed/*.json`(키워드·목표·문턱 — 연구소가 직접 고침).
+
+## 3. 개발·시험·배포
+
+- 실행: `streamlit run app_mission_control.py`
+- 시험: 바꾼 화면은 `streamlit.testing.v1.AppTest`로 열어 예외가 없는지, 가능하면 Playwright로 화면을 찍어 확인.
+  자동 새로고침이 켜진 화면은 AppTest에서 멈출 수 있으니 `session_state["nav_start"]`로 화면을 고르고, 판정 화면 시험은
+  `HITL_PENDING_DIR`를 임시 폴더로 지정한다 (실제 data 브랜치에 쓰지 말 것 — 직접 저장 시험은 GitHub API를 모의).
+- 화면 추가: 사이드바 `PAGES`(또는 HITL 검토 버튼) + `elif page == …` + 입력 중 초기화되면 안 되는 화면은 자동 새로고침 제외 목록에 추가 + `APP_VERSION` 올림.
+- 에이전트 추가: `AGENT_META` 한 줄 + `data_seed/agents/<id>.json` + 워크플로(실행마다 data 브랜치 상태 기록) + `agent_flow.py` 노드·연결선.
+- PR: 한국어 본문(무엇·왜·시험), 시험 통과 후 **머지까지 진행**하고 사용자에게 무엇이 바뀌었는지 짧게 알린다.
+- 토큰·비용이 드는 작업(LLM 대량 호출, 재수집)은 사용자 승인 후에만.
