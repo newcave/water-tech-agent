@@ -322,7 +322,7 @@ function draw(ms){
     else beam(e, on ? 0.75 : (focus ? 0.13 : 0.3), on ? 7 : 4.2, false);
     if (on){ ctx.save(); ctx.setLineDash([3, 11]); ctx.lineDashOffset = -t * 38 * actE.get(e); ctx.lineWidth = 2; ctx.strokeStyle = "rgba(255,255,255,.75)"; trace(e); ctx.stroke(); ctx.restore(); }
     if (e.label){ const [x, y] = e.lane ? pointAt(e, 0.5) : pointAt(e, 0.5); ctx.font = "600 13px 'Noto Sans KR','Malgun Gothic',sans-serif";
-      ctx.fillStyle = e.lane ? "rgba(244,114,182,.95)" : "rgba(196,215,240,.8)"; ctx.fillText(e.label, x, y - 9); }
+      ctx.fillStyle = e.lane ? "rgba(244,114,182,.95)" : "rgba(196,215,240,.8)"; ctx.lineJoin = "round"; ctx.lineWidth = 4; ctx.strokeStyle = "rgba(6,18,40,.85)"; ctx.strokeText(e.label, x, y - 9); ctx.fillText(e.label, x, y - 9); }
   }
   // 점 (평소: 희미하게 자연 방향 / 재생: 단계 방향으로 밝게)
   if (!paused){
@@ -347,8 +347,9 @@ function draw(ms){
     ctx.fillText(n.icon, n.x, n.y + 1); ctx.textBaseline = "alphabetic";
     if (n.llm){ const bx = n.x + n.r * 0.78, by = n.y - n.r * 0.72; ctx.fillStyle = "#4c1d95"; ctx.beginPath(); ctx.arc(bx, by, 10, 0, Math.PI * 2); ctx.fill();
       ctx.strokeStyle = "#c4b5fd"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.fillStyle = "#ede9fe"; ctx.font = "700 13px sans-serif"; ctx.textBaseline = "middle"; ctx.fillText("✦", bx, by + 1); ctx.textBaseline = "alphabetic"; }
-    ctx.fillStyle = "#eaf2ff"; ctx.font = "800 18px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.fillText(n.label, n.x, n.y + n.r + 23);
-    if (n.sub){ ctx.fillStyle = "#9fb6d8"; ctx.font = "500 14px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.fillText(n.sub.length > 22 ? n.sub.slice(0, 21) + "…" : n.sub, n.x, n.y + n.r + 42); }
+    ctx.lineJoin = "round"; ctx.strokeStyle = "rgba(6,18,40,.88)";   // 글자 뒤 어두운 테두리: 지나가는 선이 글자를 가리지 않게
+    ctx.fillStyle = "#eaf2ff"; ctx.font = "800 18px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 5; ctx.strokeText(n.label, n.x, n.y + n.r + 23); ctx.fillText(n.label, n.x, n.y + n.r + 23);
+    if (n.sub){ const sb = n.sub.length > 22 ? n.sub.slice(0, 21) + "…" : n.sub; ctx.fillStyle = "#9fb6d8"; ctx.font = "500 14px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 4; ctx.strokeText(sb, n.x, n.y + n.r + 42); ctx.fillText(sb, n.x, n.y + n.r + 42); }
     ctx.globalAlpha = 1;
   }
   requestAnimationFrame(draw);

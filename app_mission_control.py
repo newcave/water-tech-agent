@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.3 · 2026-10-26"
+APP_VERSION = "v3.4 · 2026-10-26"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -48,6 +48,18 @@ FLOW_PAGE = "🌊 에이전트 흐름"              # 보여 주기용 흐름 �
 LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
 LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
 WCS_FLOW_PAGE = "AI for Water (코사이언티스트)"  # Agent Flow 확인用 — WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
+HECRAS_FLOW_PAGE = "HEC-RAS Surrogate (서로게이트)"  # Agent Flow 확인用 — HECRAS-surrogate 흐름도 (flows/hecras_agent_flow.html)
+# Agent Flow 확인用 화면: 버튼 이름 → (흐름도 파일, 제목, 설명, 도움말, 공개 메모). 새 흐름도는 flows/에 파일을 두고 여기 한 줄만 더한다
+AGENT_FLOWS = {
+    WCS_FLOW_PAGE: ("flows/wcs_agent_flow.html", "AI for Water (코사이언티스트) — WCS 연구자료 검색의 에이전트 흐름",
+                    "원천 자료 → 자료 준비 → 저장·모델 → 검색 창구 → AI 답변 → 화면 → 사람. 실제 코드 경로(WCS main 90edc2d, 2026-10-26)를 질문 유형별로 재생",
+                    "WCS(K-water 연구자료 검색)의 에이전트 흐름 — 실제 코드 경로를 질문 유형별로 재생하는 구조도 (실시간 상태 아님)",
+                    "hjhj(학준) 동의 후 공개 (2026-10-26)."),
+    HECRAS_FLOW_PAGE: ("flows/hecras_agent_flow.html", "HEC-RAS Surrogate (서로게이트) — 1D HEC-RAS × AI 방류 설계 흐름",
+                       "HEC-RAS 정답 → 자료 → 학습·검증 → 서로게이트 → 후보 탐색 → 방류 설계(P1·P2·P3) → HEC-RAS 1회 확인. 실제 코드 경로(newcave/HECRAS-surrogate main 30c0fc5, 2026-08-18)를 단계별로 재생",
+                       "HEC-RAS Surrogate Studio의 흐름 — 학습·검증부터 P1·P2·P3 방류 설계까지 실제 코드 경로를 재생하는 구조도 (실시간 상태 아님)",
+                       "공개 저장소 newcave/HECRAS-surrogate 기준."),
+}
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
 NAVY, BLUE, CYAN, BG = "#0A3D74", "#0B5FAE", "#1FA8C9", "#F4F7FB"
@@ -438,9 +450,9 @@ with st.sidebar:
               type="primary" if st.session_state.get("side_page") == LR_PAGE else "secondary",
               help="연구소 라벨이 맞는지 OK·NG·이관 판정 — 기계 적합도 점수 + 감사 표본 (시범: 수자원환경연구소)")
     st.markdown('<div class="side-sep">- Agent Flow 확인用 -</div>', unsafe_allow_html=True)
-    st.button(WCS_FLOW_PAGE, key="side_wcs_flow", on_click=_to_side, args=(WCS_FLOW_PAGE,),
-              type="primary" if st.session_state.get("side_page") == WCS_FLOW_PAGE else "secondary",
-              help="WCS(K-water 연구자료 검색)의 에이전트 흐름 — 실제 코드 경로를 질문 유형별로 재생하는 구조도 (실시간 상태 아님)")
+    for i_, (name_, spec_) in enumerate(AGENT_FLOWS.items()):
+        st.button(name_, key=f"side_flow_{i_}", on_click=_to_side, args=(name_,),
+                  type="primary" if st.session_state.get("side_page") == name_ else "secondary", help=spec_[3])
     if st.session_state.get("side_page"):
         page = st.session_state["side_page"]
     elif page is None:
@@ -2069,28 +2081,28 @@ elif page == FLOW_PAGE:
     c2_.caption("세션 내용·개인정보 없이 집계 숫자와 상태만 씁니다. 시각 언어 참고: agent4d(burn001, Apache-2.0)의 ‘흐름’ 표현과 "
                 "그 원형 patoles/agent-flow(Apache-2.0) — 코드는 새로 작성.")
 
-elif page == WCS_FLOW_PAGE:
-    st.markdown('<div class="sect">AI for Water (코사이언티스트) — WCS 연구자료 검색의 에이전트 흐름</div>', unsafe_allow_html=True)
-    st.caption("원천 자료 → 자료 준비 → 저장·모델 → 검색 창구 → AI 답변 → 화면 → 사람. 실제 코드 경로(WCS main 90edc2d, 2026-10-26)를 "
-               "질문 유형별로 재생하는 구조도이며 실시간 상태는 아닙니다. 오른쪽 패널에서 유형 고르기 · 노드를 누르면 상세 · 끌기 이동 · 휠 확대 · ⛶ 전체 화면")
-    wp = Path("flows/wcs_agent_flow.html")
+elif page in AGENT_FLOWS:                              # Agent Flow 확인用 — 다른 시스템의 흐름도 (구조도, 실시간 아님)
+    f_path, f_title, f_desc, _, f_note = AGENT_FLOWS[page]
+    st.markdown(f'<div class="sect">{f_title}</div>', unsafe_allow_html=True)
+    st.caption(f"{f_desc}하는 구조도이며 실시간 상태는 아닙니다. 오른쪽 패널에서 단계 고르기 · 노드를 누르면 상세 · 끌기 이동 · 휠 확대 · ⛶ 전체 화면")
+    f_html = None
     try:
-        wcs_html = wp.read_text(encoding="utf-8") if wp.exists() else None
+        f_html = Path(f_path).read_text(encoding="utf-8") if Path(f_path).exists() else None
     except Exception:
-        wcs_html = None
-    if wcs_html is None:
+        f_html = None
+    if f_html is None:
         try:
-            r = requests.get(_raw("flows/wcs_agent_flow.html"), timeout=15)
-            wcs_html = r.text if r.status_code == 200 else None
+            r = requests.get(_raw(f_path), timeout=15)
+            f_html = r.text if r.status_code == 200 else None
         except Exception:
-            wcs_html = None
-    if wcs_html is None:
-        st.warning("흐름도 파일(flows/wcs_agent_flow.html)을 찾지 못했습니다.")
+            f_html = None
+    if f_html is None:
+        st.warning(f"흐름도 파일({f_path})을 찾지 못했습니다.")
     else:
-        components.html(wcs_html, height=860, scrolling=False)
-        st.download_button("⬇️ 단독 HTML로 받기 (발표용)", wcs_html.encode("utf-8"), file_name="wcs_agent_flow.html",
+        components.html(f_html, height=860, scrolling=False)
+        st.download_button("⬇️ 단독 HTML로 받기 (발표용)", f_html.encode("utf-8"), file_name=Path(f_path).name,
                            mime="text/html", help="브라우저로 바로 열립니다 (인터넷 연결 불필요).")
-        st.caption("코드가 바뀌면 파일 안의 노드·연결선·재생 단계 표(N·E·SCN)만 고칩니다. hjhj(학준) 동의 후 공개 (2026-10-26).")
+        st.caption(f"코드가 바뀌면 파일 안의 노드·연결선·재생 단계 표(N·E·SCN)만 고칩니다. {f_note}")
 
 elif page == LR_PAGE:
     lrp.render(load_json, PLOTLY_LAYOUT)
@@ -2191,5 +2203,5 @@ def _auto_refresh_timer():
         st.rerun(scope="app")
 
 
-if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE, FLOW_PAGE, WCS_FLOW_PAGE):     # 판정·노트 화면은 입력 중 초기화 방지, 흐름 화면은 스스로 갱신
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE, FLOW_PAGE, *AGENT_FLOWS):     # 판정·노트 화면은 입력 중 초기화 방지, 흐름 화면은 스스로 갱신
     _auto_refresh_timer()
