@@ -1,0 +1,80 @@
+name: oa-rising
+
+# openalex(newcave/openalex) 상승 연구주제 분석 결과 → 집계만 공개 (data_seed/oa_rising/)
+# 원본·결과는 비공개 저장소 newcave/openalex-data. 결과 폴더만 받아(논문 전체 목록·코퍼스 원본 제외) agents/oa_rising.py가 집계.
+# 준비: secrets.OPENALEX_DATA_TOKEN = newcave/openalex-data만 Contents: Read-only인 fine-grained PAT
+#       (없으면 경고만 남기고 건너뜀 — 실패로 처리하지 않음)
+on:
+  schedule:
+    - cron: "23 22 * * 0"        # 매주 일요일 22:23 UTC (월요일 07:23 KST) — kci-rising 다음
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oa-rising
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 토큰 확인
+        id: tok
+        env:
+          T: ${{ secrets.OPENALEX_DATA_TOKEN }}
+        run: |
+          if [ -n "$T" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"
+          else echo "::warning::OPENALEX_DATA_TOKEN이 없어 openalex 결과 연동을 건너뜁니다 (Settings → Secrets → Actions)"; echo "ok=0" >> "$GITHUB_OUTPUT"; fi
+
+      - name: openalex-data 결과 폴더만 체크아웃 (비공개 · 읽기 전용)
+        if: steps.tok.outputs.ok == '1'
+        uses: actions/checkout@v4
+        with:
+          repository: newcave/openalex-data
+          token: ${{ secrets.OPENALEX_DATA_TOKEN }}
+          path: oadata
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /results/*/02_full_period/
+            /results/*/03_full_period_review/
+            /results/*/04_windowed/
+            /archive/수자원_논문/results/02_full_period/
+            /archive/수자원_논문/results/03_full_period_review/
+            /archive/수자원_논문/results/04_windowed/
+            !/results/*/03_full_period_review/all_papers.csv
+            !/archive/수자원_논문/results/03_full_period_review/all_papers.csv
+            !**/network.html
+
+      - uses: actions/setup-python@v5
+        if: steps.tok.outputs.ok == '1'
+        with:
+          python-version: "3.11"
+      - if: steps.tok.outputs.ok == '1'
+        run: pip install --quiet pandas pyarrow
+
+      - name: 집계 (공개 범위만)
+        if: steps.tok.outputs.ok == '1'
+        env:
+          OA_DATA_DIR: oadata
+        run: python agents/oa_rising.py
+
+      - name: 집계 커밋 → 공개 저장소 (main만)
+        if: steps.tok.outputs.ok == '1' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add data_seed/oa_rising
+          # 내용이 같으면 oa_rising.py가 파일을 다시 쓰지 않으므로 갱신 시각만 바뀐 커밋은 생기지 않음
+          if git diff --cached --quiet -- data_seed/oa_rising; then echo "변경 없음"; exit 0; fi
+          git commit -m "🤖 oa_rising: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 10
+          done
+          echo "push 실패(3회)"; exit 1

@@ -1,0 +1,31 @@
+{
+ "_doc": "openalex(newcave/openalex) 상승 연구주제 분석 결과 집계 — agents/oa_rising.py가 비공개 openalex-data에서 읽어 씀. 방법: Hamed–Rao MK + BH-FDR(q≤0.05) → association strength 동시출현(≥2) → Louvain(res 1.0, seed 0); 구간별은 5~6년 · τ>0(유의성 검정 없음).",
+ "updated": "2026-10-26T19:06:27Z",
+ "data_commit": "4476bb4",
+ "method_repo": "newcave/openalex",
+ "fields_missing": [
+  "수자원환경",
+  "AI",
+  "물인프라안전",
+  "상하수도",
+  "물에너지",
+  "경영"
+ ],
+ "sources": [
+  {
+   "key": "water_paper",
+   "title": "수자원 12개 핵심 저널 (논문판)",
+   "inst": null,
+   "years": [
+    2000,
+    2025
+   ],
+   "documents": 91125,
+   "rising": 1080,
+   "clusters": 8,
+   "modularity": 0.29981282646716106,
+   "windows": 5,
+   "file": "oa_rising/water_paper.json"
+  }
+ ]
+}
