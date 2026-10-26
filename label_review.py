@@ -17,6 +17,13 @@
   · 기계의 NG·이관 제안은 사람이 판정하기 전엔 적용하지 않는다 (라벨을 지우는 건 사람만)
   · 판정 기록은 append-only JSONL (data 브랜치 labels/hitl/<INST>/*.jsonl). 점수는 판정에
     의존하지 않으므로, 점수 공식을 바꿔도 과거 판정으로 즉시 다시 보정할 수 있다.
+
+v3.8 누르기 쉬운 판정 — 사람이 누른 '버튼'(action)과 기록의 '판정'(decision)을 나눈다.
+  · 내 연구소 목록: 그냥 통과(keep→ok) · 추가 배당(add→ok+also) · 다른 연구소로(move) · 빼기(drop→ng) · 나중에(later→skip)
+  · 받은 논문(받는 쪽, role=receiver, 기록은 보낸 연구소 폴더): 받기(accept→move) · 같이 하기(share→ok+also) ·
+    돌려보내기(reject→ok, 조정자 확인) · 나중에(later→skip)
+  · decision은 예전 값(ok·ng·move·skip) 그대로 → 지난 판정·data 브랜치 hitl_ledger.py·지표가 바뀌지 않는다.
+    action이 없는 예전 기록은 action_of()가 decision에서 거꾸로 읽는다.
 """
 from __future__ import annotations
 
@@ -39,7 +46,22 @@ DOMAIN_NAME = {"W1": "유역·수문", "W2": "댐·저수지 운영", "W3": "수
 DECISION_KO = {"ok": "OK", "ng": "NG", "move": "이관", "skip": "건너뜀", "pending": "미정"}
 REASON_KO = {"nonresearch": "연구 문헌 아님 (심사평·답변·안내)", "out_of_scope": "연구소 범위 밖",
              "not_water": "물 분야 아님", "duplicate": "중복", "other": "기타"}
-ROLE_KO = {"reviewer": "담당자", "director": "소장"}
+REASON_SHORT = {"nonresearch": "연구물 아님", "not_water": "물·K-water 분야 밖", "out_of_scope": "맞는 연구소 없음",
+                "duplicate": "중복", "other": "기타"}
+DROP_REASONS = ["nonresearch", "not_water", "out_of_scope", "duplicate"]
+ROLE_KO = {"reviewer": "담당자", "director": "소장", "receiver": "받는 쪽"}
+INST_SHORT = {k: v[:-3] if v.endswith("연구소") else v for k, v in INST_NAME.items()}     # 수자원환경연구소 → 수자원환경
+
+# 판정 버튼 → 기록 판정값 (decision은 예전 값 그대로)
+ACTION_DEC = {"keep": "ok", "add": "ok", "move": "move", "drop": "ng", "later": "skip",
+              "accept": "move", "share": "ok", "reject": "ok", "skip": "skip"}
+ACTION_KO = {"keep": "그냥 통과", "add": "추가 배당", "move": "다른 연구소로", "drop": "빼기", "later": "나중에",
+             "accept": "받기", "share": "같이 하기", "reject": "돌려보내기", "skip": "건너뜀"}
+ACTION_SUB = {"keep": "해당 연구소 맞음", "add": "우리 것 + 다른 곳도", "move": "우리 것 아님",
+              "drop": "연구물 아님·분야 밖", "later": "모르겠음 → 조정자",
+              "accept": "우리 몫 · 보낸 곳에서 빠짐", "share": "두 연구소 공동 배당", "reject": "보낸 곳 몫이 맞음"}
+MINE_ACTIONS = ["keep", "add", "move", "drop", "later"]
+INCOMING_ACTIONS = ["accept", "share", "reject", "later"]
 STATE_ORDER = ["소장 확정", "담당자 판정", "자동 확정", "미검토"]
 HITL_DIR = "labels/hitl"
 
@@ -274,14 +296,183 @@ def canon_map(items: list[dict]) -> dict:
 
 
 # ───────────────────────── 판정 기록 ─────────────────────────
-def make_record(item: dict, decision: str, reviewer: str, role: str, queue: str,
+def make_record(item: dict, decision: str | None, reviewer: str, role: str, queue: str,
                 to: str | None = None, also: list | None = None, reason: str | None = None,
-                note: str = "") -> dict:
-    return {"id": item["id"], "inst": item["inst"], "decision": decision, "to": to,
-            "also": also or [], "reason": reason, "note": (note or "").strip(), "reviewer": reviewer.strip(),
-            "role": role, "queue": queue, "ts": now_iso(), "score": item.get("score"),
-            "suggestion": item.get("suggestion") + (f":{item['to']}" if item.get("to") else ""),
-            "score_ver": item.get("score_ver"), "dups": len(item.get("dups") or [])}
+                note: str = "", action: str | None = None) -> dict:
+    """action(누른 버튼)을 주면 decision은 ACTION_DEC로 정해진다."""
+    if action:
+        decision = ACTION_DEC[action]
+    rec = {"id": item["id"], "inst": item["inst"], "decision": decision, "to": to,
+           "also": also or [], "reason": reason, "note": (note or "").strip(), "reviewer": reviewer.strip(),
+           "role": role, "queue": queue, "ts": now_iso(), "score": item.get("score"),
+           "suggestion": item.get("suggestion") + (f":{item['to']}" if item.get("to") else ""),
+           "score_ver": item.get("score_ver"), "dups": len(item.get("dups") or [])}
+    if action:
+        rec["action"] = action
+    return rec
+
+
+def action_of(r: dict | None) -> str | None:
+    """기록 → 누른 버튼. action이 없는 예전 기록은 decision에서 읽는다 (OK+공유 = 추가 배당)."""
+    if not r:
+        return None
+    a = r.get("action")
+    if a in ACTION_DEC:
+        return a
+    d = r.get("decision")
+    if d == "ok":
+        return "add" if r.get("also") else "keep"
+    return {"ng": "drop", "move": "move", "skip": "skip"}.get(d, d)
+
+
+def conf_ko(score: float) -> str:
+    return "높음" if score >= 85 else ("보통" if score >= 60 else "낮음")
+
+
+def recommend(it: dict) -> dict:
+    """기계 제안 → 버튼 하나 {'act','to','also','reason','conf'} (확신: 점수 85↑ 높음·60↑ 보통, 이관은 받을 곳 적합도 90%↑ 높음)."""
+    s = it.get("suggestion")
+    if s == "ng":
+        r = it.get("reason") or "out_of_scope"
+        return {"act": "drop", "to": None, "also": [], "reason": r, "conf": "높음" if r == "nonresearch" else "보통"}
+    if s == "move" and it.get("to"):
+        fit = 100 * (it.get("fits") or {}).get(it["to"], 0)
+        return {"act": "move", "to": it["to"], "also": [], "reason": None, "conf": "높음" if fit >= 90 else "보통"}
+    if it.get("also"):
+        return {"act": "add", "to": None, "also": list(it["also"]), "reason": None, "conf": conf_ko(it.get("score") or 0)}
+    return {"act": "keep", "to": None, "also": [], "reason": None, "conf": conf_ko(it.get("score") or 0)}
+
+
+def alloc_text(inst: str, act: str | None, to: str | None = None, also=(), reason: str | None = None) -> str:
+    """판정 하나가 만드는 배당 (주 소관 1곳 + 공동 0곳 이상)."""
+    S = lambda x: INST_SHORT.get(x, x or "?")
+    co = " · ".join(S(x) for x in (also or []))
+    if act == "keep":
+        return f"주 {S(inst)}"
+    if act in ("add", "share"):
+        return f"주 {S(inst)} · 공동 {co}" if co else f"주 {S(inst)}"
+    if act == "move":
+        return f"{S(inst)} → {S(to)} (받는 쪽 확인 대기)"
+    if act == "accept":
+        return f"주 {S(to)} ({S(inst)}에서 빠짐)" + (f" · 공동 {co}" if co else "")
+    if act == "drop":
+        return f"제외 ({REASON_SHORT.get(reason, '사유 없음')})"
+    if act == "reject":
+        return f"주 {S(inst)} 유지 (돌려보냄 → 조정자 확인)"
+    if act == "later":
+        return "보류 → 조정자"
+    return "건너뜀"
+
+
+def rec_alloc(r: dict) -> str:
+    return alloc_text(r.get("inst"), action_of(r), r.get("to"), r.get("also"), r.get("reason"))
+
+
+def make_response(item: dict, action: str, reviewer: str, receiver: str, move_rec: dict | None,
+                  note: str = "") -> dict:
+    """받는 쪽 답 — 보낸 연구소(item['inst']) 라벨에 대한 판정으로 기록한다 (보낸 연구소 폴더에 쌓임).
+    받기 = 이관 확정 · 같이 하기 = 보낸 곳 유지 + 받는 쪽 공동 · 돌려보내기 = 보낸 곳 유지(조정자 확인) · 나중에 = 조정자."""
+    prev = [x for x in (move_rec or {}).get("also") or [] if x != receiver]
+    kw = {"accept": dict(to=receiver, also=prev), "share": dict(also=sorted(set(prev) | {receiver})),
+          "reject": dict(also=prev), "later": dict(to=receiver)}[action]
+    r = make_record(item, None, reviewer, "receiver", "incoming", note=note, action=action, **kw)
+    r["receiver"] = receiver
+    r["re"] = (move_rec or {}).get("ts")          # 어느 보내기 판정에 대한 답인지
+    return r
+
+
+def _latest_by_paper(records: list[dict], skip_inst: str | None = None) -> dict:
+    """(연구소, id) → {'reviewer': 최신 담당자·받는 쪽 판정, 'director': 최신 소장 판정} (건너뜀·나중에 제외)."""
+    out = {}
+    for r in sorted((r for r in records if r.get("id") and r.get("inst") != skip_inst), key=lambda r: r.get("ts") or ""):
+        if r.get("decision") in ("ok", "ng", "move"):
+            out.setdefault((r["inst"], r["id"]), {})["director" if r.get("role") == "director" else "reviewer"] = r
+    return out
+
+
+def incoming_moves(records: list[dict], receiver: str) -> list[dict]:
+    """다른 연구소가 receiver로 보낸 논문 중 받는 쪽 답이 아직 없는 것 → [보내기 기록] (먼저 보낸 순).
+    소장이 보낸 것은 확정이라 묻지 않는다. 받는 쪽이 '나중에'를 누른 것은 조정자에게 가 있으므로 뺀다."""
+    later = {}
+    for r in records:
+        if r.get("role") == "receiver" and r.get("receiver") == receiver and action_of(r) == "later":
+            k = (r.get("inst"), r.get("id"))
+            later[k] = max(later.get(k, ""), r.get("ts") or "")
+    out = []
+    for k, v in _latest_by_paper(records, skip_inst=receiver).items():
+        r = v.get("reviewer")
+        if v.get("director") or not r:
+            continue
+        if r["decision"] == "move" and r.get("to") == receiver and action_of(r) != "accept" \
+                and later.get(k, "") < (r.get("ts") or ""):
+            out.append(r)
+    return sorted(out, key=lambda r: r.get("ts") or "")
+
+
+def shared_in(records: list[dict], receiver: str) -> list[dict]:
+    """다른 연구소가 receiver를 공동으로 넣은 논문 (추가 배당·같이 하기) — 받는 쪽은 확인만."""
+    out = []
+    for v in _latest_by_paper(records, skip_inst=receiver).values():
+        r = v.get("director") or v.get("reviewer")
+        if r and r["decision"] == "ok" and receiver in (r.get("also") or []):
+            out.append(r)
+    return sorted(out, key=lambda r: r.get("ts") or "", reverse=True)
+
+
+def coord_queue(items: list[dict], records: list[dict], inst: str) -> list[tuple[dict, dict]]:
+    """조정자(소장) 목록: '나중에'를 눌렀거나, 받는 쪽이 돌려보내거나 '나중에'를 누른 묶음 중 그 뒤 소장 판정이 없는 것.
+    그 뒤 담당자가 다시 판정했으면 빠진다 → [(대표 항목, 조정 사유가 된 기록)] (오래된 순)."""
+    canon = canon_map(items)
+    by = {it["id"]: it for it in reps(items)}
+    flag = {}
+    for r in sorted((r for r in records if r.get("inst") == inst and r.get("id")), key=lambda r: r.get("ts") or ""):
+        key = canon.get(r["id"], r["id"])
+        a = action_of(r)
+        if r.get("role") == "director" and r.get("decision") in ("ok", "ng", "move"):
+            flag.pop(key, None)
+        elif a in ("later", "reject"):
+            flag[key] = r
+        elif r.get("decision") in ("ok", "ng", "move"):
+            flag.pop(key, None)
+    out = [(by[k], r) for k, r in flag.items() if k in by]
+    return sorted(out, key=lambda x: x[1].get("ts") or "")
+
+
+def bundles(items: list[dict], jstate: dict) -> list[dict]:
+    """비슷한 논문 묶음: 아직 사람이 안 본 묶음을 기계 제안 버튼·대상별로 모은다 (그냥 통과 제안은 묶지 않음).
+    감사 표본(무작위)은 한 장씩 봐야 정확도 추정이 정직하므로 뺀다."""
+    groups = {}
+    for it in reps(items):
+        if it["audit"] or human_decision(jstate.get(it["id"])):
+            continue
+        rc = recommend(it)
+        if rc["act"] == "keep":
+            continue
+        tgt = tuple(rc["also"]) if rc["act"] == "add" else (rc["to"] if rc["act"] == "move" else rc["reason"])
+        groups.setdefault((rc["act"], tgt), []).append((it, rc))
+    out = []
+    for (act, tgt), xs in groups.items():
+        xs.sort(key=lambda x: (x[1]["conf"] != "높음", -x[0]["score"] if act in ("add",) else x[0]["score"], x[0]["id"]))
+        out.append({"act": act, "target": tgt, "items": xs, "n": len(xs),
+                    "high": sum(1 for _, rc in xs if rc["conf"] == "높음")})
+    order = {"drop": 0, "move": 1, "add": 2}
+    return sorted(out, key=lambda g: (order[g["act"]], -g["n"]))
+
+
+def allocation_counts(items: list[dict], jstate: dict) -> dict:
+    """사람 판정 기준 배당 결과 (묶음 수): 그냥 통과·추가 배당·같이 하기·이관(확인 대기/확정)·빼기·돌려받음."""
+    c = Counter()
+    for it in reps(items):
+        r = human_decision(jstate.get(it["id"]))
+        if not r:
+            continue
+        a = action_of(r)
+        if a == "move":
+            a = "move_done" if r.get("role") == "director" else "move_wait"
+        elif a == "accept":
+            a = "move_done"
+        c[a] += 1
+    return dict(c)
 
 
 def rec_key(r: dict) -> tuple:
@@ -566,6 +757,8 @@ def final_table(items: list[dict], jstate: dict, tau: float | None) -> list[dict
                      "machine": it["suggestion"] + (f"→{it['to']}" if it.get("to") else "")
                      + (f"({it['reason']})" if it.get("reason") else ""),
                      "state": s, "decision": (d if s != "미검토" else "pending"), "to": (to if s != "미검토" else None),
+                     "action": ACTION_KO.get(action_of(r), "") if r else ("그냥 통과 (자동)" if s == "자동 확정" else ""),
+                     "alloc": rec_alloc(r) if r else (f"주 {INST_SHORT.get(it['inst'])}" if s == "자동 확정" else ""),
                      "also": ",".join((r or {}).get("also") or []),
                      "reason": (r or {}).get("reason"),
                      "reviewer": (r or {}).get("reviewer"), "role": ROLE_KO.get((r or {}).get("role"), ""),
@@ -594,6 +787,7 @@ def ledger_rows(records: list[dict], items: list[dict], saved_keys: set) -> list
         it = by.get(r.get("id"), {})
         out.append({"시각(KST)": to_kst(r.get("ts")), "판정자": r.get("reviewer") or "",
                     "역할": ROLE_KO.get(r.get("role"), r.get("role") or ""),
+                    "버튼": ACTION_KO.get(action_of(r), ""), "배당": rec_alloc(r),
                     "판정": DECISION_KO.get(r.get("decision"), r.get("decision")),
                     "이관처": INST_NAME.get(r.get("to"), "") if r.get("to") else "",
                     "NG 사유": REASON_KO.get(r.get("reason"), "") if r.get("reason") else "",
