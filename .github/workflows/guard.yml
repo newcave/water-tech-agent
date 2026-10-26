@@ -1,0 +1,40 @@
+name: guard
+
+# PR마다 비밀값·KCI 원천 유출을 검사 (CLAUDE.md 규칙 3). 자동 실행 봇의 직접 push는 대상이 아니다.
+on:
+  pull_request:
+    branches: [main, data]
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 비밀값·비밀 파일·KCI 원천 검사
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          bad=0
+          added=$(git diff "$BASE" "$HEAD" --unified=0 | grep '^+' | grep -v '^+++' || true)
+          # 토큰·키 꼴 (GitHub PAT·OpenAI/Anthropic 키·개인키)
+          if echo "$added" | grep -nE 'github_pat_[A-Za-z0-9_]{20,}|ghp_[A-Za-z0-9]{30,}|sk-(proj-|ant-)?[A-Za-z0-9_-]{24,}|BEGIN [A-Z ]*PRIVATE KEY'; then
+            echo "::error::토큰·키로 보이는 문자열이 추가되었습니다 — GitHub/Streamlit Secrets로 옮기세요"; bad=1
+          fi
+          # 비밀 파일 경로
+          if git diff --name-only "$BASE" "$HEAD" | grep -nE '(^|/)(secrets\.toml|\.env|credentials\.json)$|^private/'; then
+            echo "::error::비밀 파일이 포함되었습니다"; bad=1
+          fi
+          # KCI 원천(국문 초록 필드)이 공개 저장소 데이터 파일에 들어가는지
+          if git diff "$BASE" "$HEAD" --unified=0 -- '*.json' '*.jsonl' '*.csv' | grep '^+' | grep -q '"abstract_k[o]"'; then
+            echo "::error::KCI 원천(국문 초록)이 공개 저장소 데이터 파일에 추가되었습니다 — 비공개 저장소에만 두세요"; bad=1
+          fi
+          [ $bad -eq 0 ] && echo "✅ 비밀값·KCI 원천 유출 없음"
+          exit $bad
