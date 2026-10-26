@@ -70,7 +70,7 @@ def growth_rows(tr: dict, names: dict) -> list:
 
 def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
     years, full, insts, base = series(tr)
-    st.markdown('<div class="sect">🌐 해외 연구 동향 × 연구소 — 최근 5년 (OpenAlex 실측)</div>',
+    st.markdown('<div class="sect">🌐 해외 연구 동향 × 연구소 관련 논문 — 최근 5년 (OpenAlex 실측)</div>',
                 unsafe_allow_html=True)
     if not years or not insts:
         st.info("연구소별 5년 실측은 다음 정기 실측(6시간 주기 heartbeat의 openalex_lite) 뒤에 나타납니다 — "
@@ -94,13 +94,13 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         n_all = sum(r["all"] for r in rows)
         basis = ("연구소 키워드 전체(5~6개) 합집합" if n_all == len(rows) else
                  "연구소 대표 키워드 1개" if n_all == 0 else f"키워드 전체 {n_all}곳 · 대표 키워드 {len(rows) - n_all}곳")
-        st.caption(f"카드 숫자 = {b}년 OpenAlex 논문 수({basis}) · 증감은 끝난 해 {a}→{b}"
+        st.caption(f"카드 숫자 = {b}년 연구소 관련 논문 수 (OpenAlex, {basis} — 연구소가 쓴 논문이 아님) · 증감은 끝난 해 {a}→{b}"
                    + (f" · OpenAlex 전체는 같은 기간 {bg:+.0f}%" if bg is not None else ""))
 
     y_now = str(time.gmtime().tm_year)
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown('<div class="sect">연구소별 연도 추이 (논문 수)</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sect">연구소 관련 논문 연도 추이 (편수)</div>', unsafe_allow_html=True)
         fig = go.Figure()
         for c in sorted(insts):
             by, nm, col = trend_of(insts[c])[0], names.get(c) or insts[c].get("name") or c, colors.get(c, GRAY)
@@ -116,7 +116,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         fig.update_yaxes(gridcolor="#EEF2F7")
         st.plotly_chart(fig, width="stretch", key="inst5_counts")
     with c2:
-        st.markdown(f'<div class="sect">상대 성장 지수 ({a}년 = 100, 해외 전체와 비교)</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="sect">연구소 관련 논문 상대 성장 지수 ({a}년 = 100, 해외 전체와 비교)</div>', unsafe_allow_html=True)
         fig = go.Figure()
         if base.get(a):
             fig.add_trace(go.Scatter(x=full, y=[base.get(y, 0) / base[a] * 100 for y in full], mode="lines",
@@ -145,7 +145,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
                         f"{a}→{b}": f"{bg:+.0f}%" if bg is not None else "-", "해외 대비": "", f"{b} 만 편당": None})
         st.dataframe(pd.DataFrame(tbl), hide_index=True, width="stretch")
         st.caption((tr.get("trend_basis") or "") + ". 해외 대비 = 연구소 증감 − OpenAlex 전체 증감 (DB 자체가 커지는 효과를 뺀 상대 성장). "
-                   "만 편당 = OpenAlex 전체 1만 편 가운데 그 연구소 키워드 논문 수. 키워드 수와 폭이 연구소마다 달라 "
+                   "만 편당 = OpenAlex 전체 1만 편 가운데 그 연구소 관련 논문 수. 키워드 수와 폭이 연구소마다 달라 "
                    "연구소끼리 규모를 견주기보다 같은 연구소 안에서의 추이를 보는 지표.")
 
 
@@ -247,7 +247,7 @@ def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict
                                marker=dict(color=[color if (g_base is None or r["g"] >= g_base) else GRAY for r in rr]),
                                customdata=[[r["first"], r["last"]] for r in rr],
                                hovertemplate="%{y}<br>" + f"{a}→{b} " + "%{x:+.0f}% (%{customdata[0]:,}→%{customdata[1]:,}편)<extra></extra>"))
-        refs = [(v, lab, dash) for v, lab, dash in ((g_inst, "연구소 전체", "solid"), (g_base, "OpenAlex 전체", "dash"))
+        refs = [(v, lab, dash) for v, lab, dash in ((g_inst, "연구소 관련 전체", "solid"), (g_base, "OpenAlex 전체", "dash"))
                 if v is not None]
         for val, lab, dash in refs:                    # 기준선 값은 글자 겹침을 피해 차트 위 한 줄로
             fig.add_vline(x=val, line=dict(color="#0F2744", width=1.5, dash=dash))
@@ -257,4 +257,4 @@ def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict
         fig.update_xaxes(gridcolor="#EEF2F7", zeroline=True, zerolinecolor="#CBD5E1")
         st.plotly_chart(fig, width="stretch", key=f"{key}_growth")
     st.caption("키워드마다 OpenAlex title_and_abstract 검색의 출판연도별 논문 수. 막대 색 = 해외 전체(OpenAlex)보다 빨리 느는 키워드, "
-               "회색 = 해외 전체보다 느린 키워드. 키워드끼리 겹치는 논문이 있어 키워드 합은 연구소 전체보다 큼. 키워드 고치기: data_seed/search_topics.json")
+               "회색 = 해외 전체보다 느린 키워드. 키워드끼리 겹치는 논문이 있어 키워드 합은 연구소 관련 전체보다 큼. 키워드 고치기: data_seed/search_topics.json")

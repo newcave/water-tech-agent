@@ -43,7 +43,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.13.2 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.13.3 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -780,7 +780,7 @@ elif page == "📄 논문 트렌드":
     if not t_years:                                       # 실측 전: 올해 포함 5개 연도로 창만 정함
         t_years = [str(y) for y in range(time.gmtime().tm_year - 4, time.gmtime().tm_year + 1)]
     st.divider()
-    st.markdown('<div class="sect">OpenAlex 수집 논문 · 연구소별 트렌드</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sect">OpenAlex 수집 논문 · 연구소 관련 논문 트렌드</div>', unsafe_allow_html=True)
     st.caption("수집 필드: 제목·발행연도/일·저널·피인용·유형·DOI (메타정보 — 초록은 labels 파이프라인이 보강) · "
                f"연구소 트랙은 최근 5년({t_years[0]}–{t_years[-1]}) — 실시간 수집분 + labels 파이프라인이 모은 지난 연도를 합쳐 봄")
     wj = load_json("water_journals.json") or {}              # 수자원 12개 핵심 저널 레지스트리
@@ -1813,7 +1813,8 @@ elif page == KN_PAGE:
     codes = sorted(inst_names)
 
     st.markdown('<div class="sect">📒 연구소 지식노트 — 연구소 단위 그룹 작업공간</div>', unsafe_allow_html=True)
-    st.caption("수집 문헌의 대상·문제 추출과 W 도메인 라벨(라벨링 파이프라인 산출물)로 연구소마다 지식노트를 만듭니다. "
+    st.caption("연구소 관련 문헌(연구소 키워드로 모은 OpenAlex 논문 — 연구소가 쓴 논문이 아님)의 대상·문제 추출과 "
+               "W 도메인 라벨(라벨링 파이프라인 산출물)로 연구소마다 지식노트를 만듭니다. "
                "추가 LLM 호출 없음 · 개인별 노트(관심 키워드·메모)는 다음 단계")
 
     if not codes:
@@ -1841,7 +1842,7 @@ elif page == KN_PAGE:
         scope = (kr.get("scopes") or {}).get(scope_key, {}) if scope_key else {}
         scope_label = SCOPE_LABEL.get(scope_key, scope_key or "-")
 
-        with st.spinner(f"{iname} 문헌·라벨을 불러오는 중… (처음 한 번만 수 초)"):
+        with st.spinner(f"{iname} 관련 문헌·라벨을 불러오는 중… (처음 한 번만 수 초)"):
             core = dcache.inst_core(sel)                  # 논문 메타·추출·도메인 4개 파일 동시 받기 (라벨 판정과 공용 캐시)
             papers, extract, domain = core["papers"], core["extract"], core["domain"]
         dsum_kn = load_labels("domain/domain_summary_v0.1.json") or {}
@@ -1863,7 +1864,7 @@ elif page == KN_PAGE:
             r30 = kn.recent(recs, anchor, 30)
             col = INST_COLORS.get(sel, NAVY)
 
-            kpis = [("수집 문헌", f"{len({p.get('id') for p in papers}):,}", "OpenAlex · 연구소 키워드", col),
+            kpis = [("연구소 관련 문헌", f"{len({p.get('id') for p in papers}):,}", "OpenAlex · 연구소 키워드로 수집", col),
                     ("노트 대상", f"{len(recs):,}", "대상·문제 추출 + 물 관련", BLUE),
                     ("토픽 묶음", f"{len(comms)}", "핵심어 공출현 · Louvain", NAVY),
                     ("상승 용어 접점", f"{len(rising_hit)}", f"KCI {scope_label}", CYAN),
@@ -1960,35 +1961,35 @@ elif page == KN_PAGE:
                     hit = sorted([t for t in touch if t["n_inst"]], key=lambda t: (-t["n_inst"], -t["sen"]))
                     a, b = st.columns([3, 2])
                     with a:
-                        st.markdown(f'<div class="sect">국내 상승 용어 × {iname} 문헌</div>', unsafe_allow_html=True)
+                        st.markdown(f'<div class="sect">국내 상승 용어 × {iname} 관련 문헌</div>', unsafe_allow_html=True)
                         rr = hit[:20][::-1]
                         if rr:
                             fig = go.Figure(go.Bar(
                                 x=[t["n_inst"] for t in rr], y=[t["term"] for t in rr], orientation="h",
                                 marker=dict(color=col, line=dict(color="#FFFFFF", width=2)),
                                 customdata=[[round(t["sen"] * 1000, 2), t["recent_docs"], round(t["share"] * 100, 1)] for t in rr],
-                                hovertemplate="<b>%{y}</b><br>우리 문헌 %{x}편 (%{customdata[2]}%)"
+                                hovertemplate="<b>%{y}</b><br>연구소 관련 문헌 %{x}편 (%{customdata[2]}%)"
                                               "<br>국내 기울기 %{customdata[0]}‰/년 · 최근3년 %{customdata[1]}편<extra></extra>"))
-                            fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title="우리 연구소 문헌 수",
+                            fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title="연구소 관련 문헌 수",
                                               yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
                             fig.update_xaxes(gridcolor="#EEF2F7")
                             st.plotly_chart(fig, width="stretch")
                     with b:
-                        st.markdown('<div class="sect">아직 우리 문헌에 없는 상승 용어</div>', unsafe_allow_html=True)
+                        st.markdown('<div class="sect">아직 연구소 관련 문헌에 없는 상승 용어</div>', unsafe_allow_html=True)
                         miss = sorted([t for t in touch if not t["n_inst"]], key=lambda t: -t["sen"])[:24]
                         if miss:
                             st.markdown('<div style="line-height:2.2">' + " ".join(
                                 f'<span class="gchip" style="background:#F1F5FA;color:#0F2744;display:inline-block;white-space:nowrap">{t["term"]}</span>'
                                 for t in miss) + "</div>", unsafe_allow_html=True)
-                            st.caption("국내 학회지에서는 오르는데 이 연구소 수집 문헌의 대상·문제에는 나오지 않는 용어 (기울기 순). "
+                            st.caption("국내 학회지에서는 오르는데 이 연구소 관련 문헌의 대상·문제에는 나오지 않는 용어 (기울기 순). "
                                        "수집 키워드 보강 후보로도 볼 수 있음.")
                         else:
-                            st.caption("모든 상승 용어가 연구소 문헌에 한 번 이상 나옵니다.")
+                            st.caption("모든 상승 용어가 연구소 관련 문헌에 한 번 이상 나옵니다.")
 
                     st.markdown('<div class="sect">🧩 결합 공백 후보 — 각각은 다루지만 함께 다룬 문헌이 없는 조합</div>',
                                 unsafe_allow_html=True)
                     if not gaps:
-                        st.info("조건에 맞는 조합이 없습니다 (두 용어 모두 우리 문헌 2편 이상 + 국내 네트워크에 있는 용어).")
+                        st.info("조건에 맞는 조합이 없습니다 (두 용어 모두 연구소 관련 문헌 2편 이상 + 국내 네트워크에 있는 용어).")
                     else:
                         by_id = {r["id"]: r for r in recs}
                         gcols = st.columns(2)
@@ -1997,7 +1998,7 @@ elif page == KN_PAGE:
                                 st.markdown(
                                     f'<div class="card" style="border-left:6px solid {RING};margin-bottom:6px">'
                                     f'<b>{i + 1}. {g["a"]} × {g["b"]}</b>'
-                                    f'<div class="note" style="margin-top:4px">우리 문헌 {g["a"]} {g["n_a"]}편 · {g["b"]} {g["n_b"]}편 · '
+                                    f'<div class="note" style="margin-top:4px">연구소 관련 문헌 {g["a"]} {g["n_a"]}편 · {g["b"]} {g["n_b"]}편 · '
                                     f'<b>함께 0편</b> · 국내 학회지 최근 5년 함께 {g["kci_co"]}편'
                                     f'{" · 국내에서도 서로 다른 묶음" if g["cross"] else ""}</div></div>',
                                     unsafe_allow_html=True)
@@ -2014,7 +2015,7 @@ elif page == KN_PAGE:
                     with st.expander("표로 보기 — 상승 용어 전체"):
                         st.dataframe(pd.DataFrame([{
                             "용어": t["term"], "국내 기울기(‰/년)": round(t["sen"] * 1000, 2), "국내 최근3년": t["recent_docs"],
-                            "우리 문헌": t["n_inst"], "비율(%)": round(t["share"] * 100, 1)}
+                            "연구소 관련 문헌": t["n_inst"], "비율(%)": round(t["share"] * 100, 1)}
                             for t in sorted(touch, key=lambda t: (-t["n_inst"], -t["sen"]))]),
                             hide_index=True, width="stretch")
 
@@ -2033,8 +2034,8 @@ elif page == KN_PAGE:
                     nb = [t for t in btouch if not t["minor"]]
                     kb_ = [("국내 상승 구", f"{bmeta.get('n_rising', 0)}", f"검정 {bmeta.get('tested', 0):,}개 중 · {scope_label}", NAVY),
                            ("구로만 보이는 신호", f"{sum(1 for t in nb if t['novel'])}", "두 단어 모두 단어로는 상승 아님", "#7C3AED"),
-                           ("K-water 강점기술", f"{sum(1 for t in nb if t['n_inst'])}", f"{iname} 문헌 대상·문제에 두 단어가 함께", col),
-                           ("K-water 공백기술", f"{sum(1 for t in nb if not t['n_inst'])}", "연구소 문헌 0편 — 공백 후보", AMBER)]
+                           ("K-water 강점기술", f"{sum(1 for t in nb if t['n_inst'])}", f"{iname} 관련 문헌 대상·문제에 두 단어가 함께", col),
+                           ("K-water 공백기술", f"{sum(1 for t in nb if not t['n_inst'])}", "연구소 관련 문헌 0편 — 공백 후보", AMBER)]
                     st.markdown('<div class="kpis">' + "".join(
                         f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.35rem">{v}</div>'
                         f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>' for l, v, s_, c in kb_) + "</div>",
@@ -2042,10 +2043,10 @@ elif page == KN_PAGE:
                     # 보는 관점 4가지 (v3.13.2 사용자 지정 이름) — 내부 키: main·new·gap·strong
                     BLENS = {"main": ("전체 흐름 (Main)", "국내 학회지에서 비중이 가장 가파르게 오르는 구 · 국내 기울기 순"),
                              "new": ("신규 상승", "국내 최근 3년 비중이 예전의 2배 이상(또는 처음 등장)인데 "
-                                                "연구소 문헌은 1–6편 — 막 떠오르는 초기 신호 · 배율 순"),
-                             "gap": ("K-water 공백기술", "국내에서는 오르는데 연구소 문헌에는 아직 없는 구 · 국내 기울기 순 "
+                                                "연구소 관련 문헌은 1–6편 — 막 떠오르는 초기 신호 · 배율 순"),
+                             "gap": ("K-water 공백기술", "국내에서는 오르는데 연구소 관련 문헌에는 아직 없는 구 · 국내 기울기 순 "
                                                        "(‘기계 학습’ 같은 방법 구는 원래 잘 안 걸려 대상 구 위주로)"),
-                             "strong": ("K-water 강점기술", "연구소 문헌에 많이 나오면서 국내에서도 오르는 구 · 문헌 수 순")}
+                             "strong": ("K-water 강점기술", "연구소 관련 문헌에 많이 나오면서 국내에서도 오르는 구 · 문헌 수 순")}
                     if st.session_state.get("kn_bi_lens") not in (None, *BLENS):     # 예전 이름으로 저장된 선택은 지움
                         st.session_state.pop("kn_bi_lens")
                     lens = st.segmented_control("보는 관점", list(BLENS), format_func=lambda k: BLENS[k][0],
@@ -2083,7 +2084,7 @@ elif page == KN_PAGE:
                             xval = {"main": lambda t: t["sen"] * 1000, "gap": lambda t: t["sen"] * 1000,
                                     "new": lambda t: min(LIFT(t), 60), "strong": lambda t: t["n_inst"]}[lens]
                             xlab = {"main": "국내 기울기 (‰/년)", "gap": "국내 기울기 (‰/년)",
-                                    "new": "최근3년 ÷ 과거 비중 (배, 과거 0편 '신규'는 60으로 표시)", "strong": "연구소 문헌 수"}[lens]
+                                    "new": "최근3년 ÷ 과거 비중 (배, 과거 0편 '신규'는 60으로 표시)", "strong": "연구소 관련 문헌 수"}[lens]
                             fig = go.Figure(go.Bar(
                                 x=[xval(t) for t in rr], y=[t["term"] for t in rr], orientation="h",
                                 marker=dict(color=["#7C3AED" if t["novel"] else col for t in rr],
@@ -2091,7 +2092,7 @@ elif page == KN_PAGE:
                                 customdata=[[round(t["sen"] * 1000, 2), LTXT(t), t["recent_docs"], t["n_inst"],
                                              "구로만" if t["novel"] else "단어도 상승: " + "·".join(t["parts_rising"])] for t in rr],
                                 hovertemplate="<b>%{y}</b><br>국내 기울기 %{customdata[0]}‰/년 · 최근/과거 %{customdata[1]}"
-                                              "<br>국내 최근3년 %{customdata[2]}편 · 우리 문헌 %{customdata[3]}편"
+                                              "<br>국내 최근3년 %{customdata[2]}편 · 연구소 관련 문헌 %{customdata[3]}편"
                                               "<br>%{customdata[4]}<extra></extra>"))
                             fig.update_layout(height=max(320, 22 * len(rr) + 40), xaxis_title=xlab,
                                               yaxis=dict(automargin=True), bargap=0.25, **PLOTLY_LAYOUT)
@@ -2121,14 +2122,14 @@ elif page == KN_PAGE:
                                 + "</div>", unsafe_allow_html=True)
                             by_id_b = {r["id"]: r for r in recs}
                             if t_["ids"]:
-                                st.markdown(f"**{iname} 문헌 {t_['n_inst']}편** (두 단어 함께 · 붙어 나온 것 {t_['n_tight']}편)")
+                                st.markdown(f"**{iname} 관련 문헌 {t_['n_inst']}편** (두 단어 함께 · 붙어 나온 것 {t_['n_tight']}편)")
                                 for pid in t_["ids"][:6]:
                                     r = by_id_b[pid]
                                     st.markdown(f"- [{r['title'][:80]}]({r['doi'] or '#'}) · {r['year'] or '-'}"
                                                 f"  \n  <span class='note'>대상: {r['object']} / 문제: {r['problem']}</span>",
                                                 unsafe_allow_html=True)
                             else:
-                                st.caption(f"{iname} 수집 문헌의 대상·문제에는 아직 없습니다 — 수집 키워드 보강·기획 검토 후보.")
+                                st.caption(f"{iname} 관련 문헌의 대상·문제에는 아직 없습니다 — 수집 키워드 보강·기획 검토 후보.")
                     fall = [r for r in (bmeta.get("falling") or []) if not r.get("minor")
                             and (not water_bi or (r.get("j11_share") or 0) >= 0.2)][:16]
                     if fall:
@@ -2140,7 +2141,7 @@ elif page == KN_PAGE:
                         st.dataframe(pd.DataFrame([{
                             "구": t["term"], "구로만": "✔" if t["novel"] else "", "국내 기울기(‰/년)": round(t["sen"] * 1000, 2),
                             "최근/과거": LTXT(t), "연 증가율(%)": round(t["rate"] * 100) if t.get("rate") is not None else None,
-                            "국내 최근3년": t["recent_docs"], "우리 문헌": t["n_inst"],
+                            "국내 최근3년": t["recent_docs"], "연구소 관련 문헌": t["n_inst"],
                             "수자원학회 비율": t.get("j11_share"),
                             "추이": [v * 100 for v in t["series"]], "저빈도": "✔" if t["minor"] else ""}
                             for t in sorted(btouch, key=lambda t: -t["sen"])]),

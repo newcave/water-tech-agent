@@ -14,7 +14,7 @@ Streamlit에 의존하지 않으므로 단독으로 시험할 수 있다.
   1) 대상·문제 문구에서 핵심어를 뽑는다 (조사·일반 서술어 제거).
   2) 핵심어 공출현 네트워크 → 코사인 정규화 가중치 c_ij / sqrt(f_i f_j) → Louvain 묶음.
      (AI연구소 '상승 연구주제 탐지' 파이프라인과 같은 정규화·군집 방식을 연구소 단위로 적용)
-  3) KCI 상승 용어와 연구소 문헌의 접점, 그리고 '각각은 다루지만 함께는 다루지 않은' 결합 공백 후보.
+  3) KCI 상승 용어와 연구소 관련 문헌의 접점, 그리고 '각각은 다루지만 함께는 다루지 않은' 결합 공백 후보.
   4) 최근 N일 브리핑과 마크다운(YAML 머리말) 노트 묶음 — 특정 열람 도구에 종속되지 않음.
 """
 
@@ -191,7 +191,7 @@ def _term_hits(term: str, recs: list[dict]) -> list[str]:
 
 
 def rising_touchpoints(recs: list[dict], scope: dict, include_minor: bool = False) -> list[dict]:
-    """KCI 상승 용어 각각이 연구소 문헌(대상·문제)에 몇 편 등장하는지."""
+    """KCI 상승 용어 각각이 연구소 관련 문헌(대상·문제)에 몇 편 등장하는지."""
     out = []
     for r in scope.get("rising", []):
         term = r.get("term", "")
@@ -207,8 +207,8 @@ def rising_touchpoints(recs: list[dict], scope: dict, include_minor: bool = Fals
 
 
 def bigram_touchpoints(recs: list[dict], scope: dict, include_minor: bool = False) -> list[dict]:
-    """KCI 상승 바이그램(두 단어 구) 각각이 연구소 문헌(대상·문제)에 몇 편 나오는지.
-    우리 쪽 글은 짧은 대상·문제 문구라, 두 단어가 한 문헌에 함께 있으면 접점으로 센다(붙어 있으면 n_tight에도)."""
+    """KCI 상승 바이그램(두 단어 구) 각각이 연구소 관련 문헌(대상·문제)에 몇 편 나오는지.
+    연구소 관련 문헌 쪽은 짧은 대상·문제 문구라, 두 단어가 한 문헌에 함께 있으면 접점으로 센다(붙어 있으면 n_tight에도)."""
     bg = (scope or {}).get("bigram") or {}
     den = (scope or {}).get("denominator") or []
     out = []
@@ -374,7 +374,7 @@ def build_vault_zip(code: str, name: str, recs: list[dict], net: dict, touch: li
     # 상승 용어 접점
     rl = [_yaml({"institute": code, "kci_scope": scope_label, "tags": [code, "rising"]}),
           f"# {code} {name} · 국내 상승 용어 접점 ({scope_label})", "",
-          "| 용어 | 기울기(‰/년) | 국내 최근3년 논문 | 우리 문헌 | 비율 |", "|---|---:|---:|---:|---:|"]
+          "| 용어 | 기울기(‰/년) | 국내 최근3년 논문 | 연구소 관련 문헌 | 비율 |", "|---|---:|---:|---:|---:|"]
     for t in sorted(touch, key=lambda t: (-t["n_inst"], -t["sen"])):
         rl.append(f"| {t['term']} | {t['sen'] * 1000:.2f} | {t['recent_docs']} | {t['n_inst']} | {t['share'] * 100:.1f}% |")
     files["rising.md"] = "\n".join(rl) + "\n"
@@ -382,11 +382,11 @@ def build_vault_zip(code: str, name: str, recs: list[dict], net: dict, touch: li
     # 결합 공백 후보
     gl = [_yaml({"institute": code, "kci_scope": scope_label, "tags": [code, "gap"]}),
           f"# {code} {name} · 결합 공백 후보", "",
-          "두 상승 용어를 우리 연구소 문헌이 **각각은** 다루지만 **함께 다룬 문헌은 없는** 조합입니다. "
+          "두 상승 용어를 연구소 관련 문헌이 **각각은** 다루지만 **함께 다룬 문헌은 없는** 조합입니다. "
           "국내 학회지에서도 함께 나온 적이 드물수록 위에 둡니다. 후보일 뿐이며 전문가 검토가 필요합니다.", ""]
     for i, g in enumerate(gaps, 1):
         gl += [f"## {i}. {g['a']} × {g['b']}", "",
-               f"- 우리 문헌: {g['a']} {g['n_a']}편 · {g['b']} {g['n_b']}편 · 함께 0편",
+               f"- 연구소 관련 문헌: {g['a']} {g['n_a']}편 · {g['b']} {g['n_b']}편 · 함께 0편",
                f"- 국내 학회지 최근 5년 함께 등장: {g['kci_co']}편" + (" · 서로 다른 국내 묶음" if g["cross"] else ""),
                f"- {g['a']} 대표 문헌: " + "; ".join(plink(p, ".") for p in g["ids_a"][:3]),
                f"- {g['b']} 대표 문헌: " + "; ".join(plink(p, ".") for p in g["ids_b"][:3]), ""]
