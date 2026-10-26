@@ -11,7 +11,9 @@ KCI 이용 준수: 원천 데이터(제목·초록 등)는 재배포 금지 → 
 동작 (2026-09-29 점검으로 확인한 API 특성):
   · articleSearch의 journal= (부분일치) + dateFrom/dateTo(YYYYMM) + displayCount=100 + page
   · journal-name을 레지스트리 kci.names와 대조해 걸러 저장 (정기학술대회논문집 등 제외)
-  · 첫 실행은 전 연도, 이후에는 파일이 없는 연도 + 최근 2년만 다시 받음 (KCI_FULL=1이면 전량 재수집)
+  · 첫 실행은 전 연도, 이후에는 파일이 없는/덜 받은 연도 + 최근 5년 창(KCI_RECENT_YEARS)을 다시 받음
+    - KCI_ROTATE=1(정기 실행): 하루에 1년씩 — 최근 5년 중 오늘 차례인 연도 하나만 (5일이면 창 한 바퀴, 2026-10-27 사용자 지정)
+    - KCI_ROTATE=0: 최근 5년 창 전체 · KCI_FULL=1: 전 연도 재수집
 
 K-water 사이드 수집 (search_topics.json kwater_affiliation.kci_affiliation):
   · J11·J12 레코드에 저자 소속이 K-water이면 kwater=true 표시
@@ -37,6 +39,8 @@ API = "https://open.kci.go.kr/po/openapi/openApiSearch.kci"
 KEY = os.environ.get("KCI_API_KEY", "").strip()
 RAW = Path(os.environ.get("KCI_RAW_DIR", "private")) / "raw"
 FULL = os.environ.get("KCI_FULL") == "1"
+RECENT_YEARS = max(1, int(os.environ.get("KCI_RECENT_YEARS") or 5))   # 다시 받는 최근 연도 창 (올해 포함)
+ROTATE = os.environ.get("KCI_ROTATE") == "1"                          # 하루에 1년씩 순환
 PAGE = 100
 PAUSE = 1.0
 MAX_PAGES = 30
@@ -143,12 +147,25 @@ def fetch_year(journal, names, year: int, extra: dict = None):
     return kept, total, len(uniq)
 
 
+def refresh_years(y1: int, day: int = None) -> set:
+    """이번 실행에서 (이미 받았더라도) 다시 받을 연도. 창 = 올해 포함 최근 RECENT_YEARS년.
+    순환이면 날짜(UTC 일수)로 창 안의 한 해만 고른다 → 올해, 작년, … 순서로 하루 1년."""
+    window = list(range(y1, y1 - RECENT_YEARS, -1))
+    if not ROTATE:
+        return set(window)
+    day = int(time.time() // 86400) if day is None else day
+    return {window[day % len(window)]}
+
+
 def main():
     if not KEY:
         print("❌ KCI_API_KEY 없음")
         return 1
     reg = load_registry()
     y0, y1 = int(reg.get("archive_from_year", 2000)), time.gmtime().tm_year
+    again = refresh_years(y1)
+    print(f"▶ 다시 받을 연도: {sorted(again)} (최근 {RECENT_YEARS}년 창{' · 하루 1년 순환' if ROTATE else ' 전체'}"
+          f"{' · 전 연도 재수집' if FULL else ''}) + 없거나 덜 받은 연도")
     manifest_p = RAW.parent / "manifest.json"
     try:
         manifest = json.loads(manifest_p.read_text(encoding="utf-8"))
@@ -165,7 +182,7 @@ def main():
         for y in range(y0, y1 + 1):
             p = d / f"{y}.jsonl"
             done = m["years"].get(str(y), {}).get("complete")
-            if p.exists() and done and not FULL and y < y1 - 1:   # 완전 수집된 과거 연도만 건너뜀
+            if p.exists() and done and not FULL and y not in again:   # 완전 수집된 연도 중 이번 차례가 아닌 것은 건너뜀
                 continue
             recs, total, got = fetch_year(kci["journal"], names, y)
             if not recs and not p.exists():
@@ -173,7 +190,8 @@ def main():
             p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
             m["years"][str(y)] = {"n": len(recs), "kwater": sum(r["kwater"] for r in recs),
                                   "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs),
-                                  "api_total": total, "got": got, "complete": got >= total}
+                                  "api_total": total, "got": got, "complete": got >= total,
+                                  "fetched": int(time.time())}
             print(f"   {j['code']} {y}: {len(recs)}건 (API {total} / 수신 {got}"
                   f"{'' if got >= total else ' ⚠️누락'}, K-water {m['years'][str(y)]['kwater']}, "
                   f"초록 {m['years'][str(y)]['with_abstract']})")
@@ -188,7 +206,7 @@ def main():
     for y in range(y0, y1 + 1):
         p = d / f"{y}.jsonl"
         done = m["years"].get(str(y), {}).get("complete")
-        if p.exists() and done and not FULL and y < y1 - 1:
+        if p.exists() and done and not FULL and y not in again:
             continue
         seen, recs, raw_n, complete = set(), [], 0, True
         for q in KW_QUERIES:
@@ -208,11 +226,13 @@ def main():
         p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in recs), encoding="utf-8")
         rule_n = sum(r["kwater"] for r in recs)
         m["years"][str(y)] = {"n": len(recs), "rule_kwater": rule_n, "hits": raw_n, "complete": complete,
-                              "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs)}
+                              "with_abstract": sum(bool(r["abstract_ko"] or r["abstract_en"]) for r in recs),
+                              "fetched": int(time.time())}
         print(f"   KWATER {y}: 검색 {len(recs)}건 중 규칙상 K-water {rule_n}건{'' if complete else ' ⚠️누락'}")
     print(f"✅ KWATER 검색 결과 {sum(v['n'] for v in m['years'].values()):,}건 보관 "
           f"(규칙상 K-water {sum(v.get('rule_kwater', 0) for v in m['years'].values()):,}건)")
     manifest["updated"] = int(time.time())
+    manifest["refresh"] = {"window_years": RECENT_YEARS, "rotate": ROTATE, "this_run": sorted(again)}
     manifest["source"] = "KCI(한국학술지인용색인) 데이터 활용 — 재배포 금지, 이용 목적 종료 시 파기"
     manifest_p.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return 0
