@@ -41,7 +41,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.10.1 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -120,6 +120,9 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] label[data-baseweb="radio"]:has(input:checked)
   {background:rgba(255,255,255,.30); font-weight:700;}
 [data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
+.side-brand {margin:2px 0 16px;}
+.side-brand .sb-eb {font-size:.72rem; font-weight:700; letter-spacing:.16em; opacity:.85; line-height:1.4;}
+.side-brand .sb-name {font-size:1.32rem; font-weight:900; letter-spacing:-.3px; line-height:1.3; white-space:nowrap;}
 .side-sep {display:flex; align-items:center; gap:8px; margin:6px 0 0; font-size:.72rem;
   letter-spacing:.12em; opacity:.85;}
 .side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
@@ -457,8 +460,9 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 
 # ═══════════════════════ 사이드바 ═══════════════════════
 with st.sidebar:
-    st.markdown(f"### 💧 Water Co-Scientist")
-    st.caption("K-water연구원 · R&D 데이터 에이전트 플랫폼")
+    # 사이드바 이름: 2단 워드마크 (머리띠에 'Water Co-Scientist 에이전트 관제센터'가 있어 짧게 · v3.10.1)
+    st.markdown('<div class="side-brand"><div class="sb-eb">K-water 연구원</div>'
+                '<div class="sb-name">물 벗 : R&amp;D 에이전트</div></div>', unsafe_allow_html=True)
     PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", OA_PAGE, "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
