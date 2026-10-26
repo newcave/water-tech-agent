@@ -1,0 +1,372 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4B LoRA 흐름</title>
+<!-- kwater-ailab-4b-lora 흐름 구조도. 저장소 기준: newcave/kwater-ailab-4b-lora main 46453b2 (2026-07-10).
+     저장소에는 README·모델 카드·스크립트 2개만 있다 — 학습 단계는 README 기준(코드는 Colab, 저장소 밖)으로 점선 표시.
+     노드·연결선·재생 단계는 아래 N·E·SCN 표. 기본 보기는 BASIC 덮어쓰기로 쉬운 말만 바꾼다. 실시간 상태 아님(구조도). -->
+<style>
+:root{--bg0:#050f22;--bg1:#0b2447;--ink:#e6eefb;--mut:#8ea6c8}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg0);font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;color:var(--ink);overflow:hidden}
+#wrap{position:relative;width:100%;height:100vh;background:radial-gradient(1200px 700px at 55% 40%,#0e2c57 0%,var(--bg1) 35%,var(--bg0) 100%);overflow:hidden}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+canvas:active{cursor:grabbing}
+.hud{position:absolute;pointer-events:none}
+#top{left:18px;top:14px;right:18px;display:flex;align-items:flex-start;gap:14px}
+#ttl{font-weight:900;font-size:19px;letter-spacing:-.2px;white-space:nowrap}
+#ttl small{display:block;font-weight:500;font-size:12px;color:var(--mut);margin-top:2px;white-space:nowrap}
+#kpis{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto;justify-content:flex-end}
+.chip{background:rgba(16,40,80,.72);border:1px solid rgba(120,160,220,.25);border-radius:999px;padding:4px 11px;font-size:12px;color:#cfe0f7;white-space:nowrap;backdrop-filter:blur(4px)}
+.chip b{color:#fff;font-weight:800}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#94a3b8;margin-right:6px;vertical-align:0}
+#btns{position:absolute;left:16px;top:62px;display:flex;gap:6px;flex-wrap:wrap}
+button{background:rgba(16,40,80,.8);color:#cfe0f7;border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+button:hover{background:rgba(36,70,130,.9)}
+#panel{right:16px;top:100px;width:300px;max-height:calc(100% - 170px);overflow:auto;pointer-events:auto;background:linear-gradient(180deg,rgba(9,26,54,.9),rgba(9,26,54,.7));border:1px solid rgba(120,160,220,.18);border-radius:12px;padding:10px 12px;font-size:12px}
+#panel h4{margin:0 0 8px;font-size:12px;color:var(--mut);font-weight:700;letter-spacing:.06em}
+.sc{display:inline-block;margin:0 5px 5px 0;padding:3px 9px;border-radius:999px;border:1px solid rgba(120,160,220,.3);font-size:11.5px;cursor:pointer;color:#cfe0f7;background:rgba(16,40,80,.6)}
+.sc.on{background:#1d4ed8;border-color:#60a5fa;color:#fff}
+#sttl{font-weight:800;font-size:14px;margin:6px 0 2px}
+#sex{color:#9fb6d8;font-size:12px;margin-bottom:4px}
+#steps{margin:6px 0 8px;padding-left:22px}
+#steps li{padding:3px 4px;color:#8ea6c8;cursor:pointer;line-height:1.42;border-radius:6px}
+#steps li.done{color:#c6d6ee}
+#steps li.on{color:#fff;background:rgba(56,189,248,.18)}
+#ctl{display:flex;gap:6px}
+#ctl #play{flex:1}
+#cap{left:50%;transform:translateX(-50%);bottom:46px;width:max-content;max-width:min(760px,62%);background:rgba(9,26,54,.88);border:1px solid rgba(120,160,220,.3);border-radius:10px;padding:7px 14px;font-size:13.5px;text-align:center;line-height:1.45}
+#cap .n{color:#7dd3fc;font-weight:800;margin-right:6px}
+#legend{left:16px;bottom:12px;display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);background:rgba(9,26,54,.6);border-radius:10px;padding:6px 10px}
+#legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:-1px;border:2px solid #9fb6d8;border-radius:3px}
+#legend i.bt{border-style:dashed}#legend i.ex{border-style:dotted}
+#legend b{color:#c4b5fd;margin-right:4px}
+#card{left:16px;top:100px;width:340px;max-height:calc(100% - 170px);overflow:auto;background:rgba(9,26,54,.95);border:1px solid rgba(120,160,220,.3);border-radius:12px;padding:12px 14px;font-size:12.5px;display:none;pointer-events:auto;line-height:1.45}
+#card h3{margin:0 0 6px;font-size:15px;padding-right:18px}
+#card .bd{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin:0 4px 6px 0;background:rgba(56,100,170,.35);color:#dbe8fb}
+#card .bd.llm{background:rgba(167,139,250,.3);color:#e9e2ff}
+#card ul{margin:4px 0 6px;padding-left:18px}#card li{margin:2px 0}
+#card .h{color:var(--mut);margin-top:6px;font-weight:700;font-size:11.5px}
+#card code{font-family:Consolas,'D2Coding',monospace;font-size:11.5px;color:#bfe3ff}
+#card .x{position:absolute;right:10px;top:8px;cursor:pointer;color:var(--mut)}
+@media (max-width:760px){#kpis,#legend,#ttl small{display:none}#cap{max-width:94%;bottom:12px;font-size:12.5px}#panel{top:100px;width:calc(100% - 32px)}}
+#tip{position:absolute;pointer-events:none;background:rgba(5,15,34,.95);border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:7px 10px;font-size:12px;display:none;max-width:280px;line-height:1.45}
+</style></head><body>
+<div id="wrap">
+ <canvas id="cv"></canvas>
+ <div class="hud" id="top">
+  <div id="ttl">🧠 kwater-ailab-4b-lora · 에이전트 흐름<small>AI연구소 첫 LoRA 언어모델 v0.1 · 저장소 기준 main 46453b2 (2026-07-10)</small></div>
+  <div id="kpis"></div>
+ </div>
+ <div id="btns"><button id="fs">⛶ 전체 화면</button><button id="rs">⟲ 시점 초기화</button><button id="pa">⏸ 정지</button><button id="pn">☰ 재생 패널 숨기기</button></div>
+ <div class="hud" id="panel">
+  <h4>▶ 흐름 재생 · 실제 코드 경로</h4>
+  <div id="chips"></div>
+  <div id="sttl"></div><div id="sex"></div>
+  <ol id="steps"></ol>
+  <div id="ctl"><button id="prev">◀</button><button id="play">⏸ 자동 재생 중</button><button id="next">▶</button></div>
+ </div>
+ <div class="hud" id="cap"></div>
+ <div class="hud" id="legend"><span><i></i>코드가 저장소에 있음</span><span><i class="bt"></i>설명만 있음 · 흐리면 앞으로의 계획</span><span><i class="ex"></i>자료·외부 서비스</span><span style="opacity:.8">빛나는 길 = 지금 재생 중인 단계 · 점 = 요청·자료의 이동 방향</span></div>
+ <div class="hud" id="card"><span class="x" id="cx">✕</span><div id="cb"></div></div>
+ <div id="tip"></div>
+</div>
+<script>
+// ───────────────────────── 구조 (저장소 기준) ─────────────────────────
+// 이 저장소에는 README·모델 카드·스크립트 2개만 있다. 학습 노트북은 저장소 밖(Colab)이라
+// k: code = 저장소에 코드 있음 · doc = README 기준(코드는 저장소 밖) · ext = 자료·외부 서비스 · plan = 로드맵 · ppl = 사람
+const COLS = [["원천 자료",90],["데이터 구축",330],["학습",570],["평가·저장",810],["배포",1050],["사용·다음 단계",1290]];
+const VW = 1380, VH = 720;
+const GC = {src:"#7dd3fc", data:"#14b8a6", train:"#a78bfa", eval:"#3b82f6", dep:"#f59e0b", use:"#f472b6", plan:"#94a3b8"};
+const C = n => n.c || GC[n.g];
+const KIND = {code:"저장소에 코드 있음", doc:"README 기준 (코드는 저장소 밖 · Colab)", ext:"자료·외부 서비스", plan:"로드맵 (계획)", ppl:"사람"};
+const RY = 135;
+const N = [
+ {id:"pdf", col:0, row:0.0, g:"src", k:"ext", icon:"📑", label:"공개 연구보고서", sub:"ALIO · 105건",
+  d:["K-water 공개 연구보고서 PDF 105건 — 학습 데이터의 원천"], m:["N = 105 (ALIO 공개 보고서)"], f:["README.md  (학습 파이프라인)"]},
+ {id:"rnddash", col:0, row:1.2, g:"src", k:"ext", icon:"🖥️", label:"인벤토리 대시보드", sub:"rnddata_report",
+  d:["같은 데이터소스 언급 자료로 만든 인벤토리 대시보드 (별도 저장소)"], m:["github.com/newcave/rnddata_report"], f:["README.md", "MODEL_CARD_HF.md  (Links)"]},
+ {id:"corpus", col:0, row:2.4, g:"plan", k:"plan", icon:"🌐", label:"논문·특허 코퍼스", sub:"v1.x 계획",
+  d:["OpenAlex 논문 · KIPRIS 특허로 학습 코퍼스 확장 → 물 특화 모델로"], m:["로드맵 v1.x"], f:["README.md  (로드맵)"]},
+
+ {id:"extract", col:1, row:0.0, g:"data", k:"doc", icon:"🧩", label:"데이터소스 언급 추출", sub:"구조화 JSONL",
+  d:["보고서에서 '어떤 연구에서 · 어떤 데이터가 · 어느 기관으로부터 · 어떻게 활용되었는가'를 뽑아 구조화"],
+  m:["레코드 = (연구, 데이터소스, 제공 기관, 활용 방식) — README 기준","추출 코드는 이 저장소에 없음"], f:["README.md  (학습 파이프라인)"]},
+ {id:"gen", col:1, row:1.2, g:"data", k:"doc", icon:"✍️", label:"instruction 쌍 생성", sub:"규칙 기반 · 3유형",
+  d:["데이터소스 레코드를 규칙 기반 템플릿으로 질문·답 쌍으로 변환","유형: 목록 나열 · 필드 조회 · 카드 요약"],
+  m:["예: 「연구명」에서 사용된 데이터 소스를 나열하시오 → 목록 + 출처","예: 'AR6 SSP scenarios'의 제공 기관은? → 필드 값"], f:["README.md", "MODEL_CARD_HF.md  (Data)"]},
+ {id:"v02", col:1, row:2.4, g:"plan", k:"plan", icon:"🤖", label:"LLM 생성 QA", sub:"v0.2 계획",
+  d:["LLM이 만든 고품질 QA로 재학습 — 표현 다양화"], m:["로드맵 v0.2"], f:["README.md  (로드맵)"]},
+
+ {id:"split", col:2, row:1.2, g:"train", k:"doc", icon:"✂️", label:"train / eval 분리", sub:"평가용 문항 따로",
+  d:["학습용과 평가용 instruction 쌍을 나눔"], f:["README.md  (학습 파이프라인)"]},
+ {id:"lora", col:2, row:2.4, g:"train", k:"doc", icon:"⚡", label:"LoRA 학습", sub:"r16 · α32 · bf16 · 2ep",
+  d:["베이스 모델 가중치는 그대로 두고 저차원 어댑터만 학습","Google Colab Pro+ · NVIDIA A100 40GB · Unsloth + TRL"],
+  m:["LoRA r = 16, α = 32, 대상 = 전체 선형층","bf16 · 2 epochs"], f:["README.md  (모델 카드)", "MODEL_CARD_HF.md  (Details)"]},
+ {id:"base", col:2, row:3.6, g:"src", k:"ext", icon:"🧱", label:"Qwen3-4B-Instruct", sub:"베이스 · Apache-2.0",
+  d:["Qwen/Qwen3-4B-Instruct-2507 — 학습과 추론 모두 이 위에 어댑터를 장착"], m:["40억 파라미터 · Apache 2.0"], f:["MODEL_CARD_HF.md  (base_model)"]},
+
+ {id:"adapter", col:3, row:1.2, g:"eval", k:"doc", icon:"📦", label:"LoRA 어댑터", sub:"수십 MB",
+  d:["학습 결과물 — 베이스 모델 위에 장착하는 작은 가중치","가중치 파일(*.safetensors)은 깃에 올리지 않음"],
+  m:["저장 폴더: kwater-4b-table-lora-final (업로드 스크립트 기준)"], f:["scripts/upload_to_hf.py  (ADAPTER_DIR)", ".gitignore"]},
+ {id:"eval", col:3, row:2.4, g:"eval", k:"doc", icon:"📊", label:"학습 전/후 비교", sub:"셀 조회 자동 채점",
+  d:["같은 문항을 학습 전·후 모델에 물어 자동 채점으로 비교"], m:["v0.1: 학습 범위 안 조회 문항 기준 (일반화 평가는 v0.3)"], f:["README.md  (학습 파이프라인)"]},
+ {id:"v03", col:3, row:3.6, g:"plan", k:"plan", icon:"📏", label:"일반화 평가", sub:"v0.3 계획",
+  d:["홀드아웃 일반화 평가 + LogicKor 회귀 확인 (일반 한국어 능력이 떨어지지 않았는지)"], m:["로드맵 v0.3"], f:["README.md  (로드맵)"]},
+
+ {id:"hf", col:4, row:0.0, g:"dep", k:"ext", icon:"🤗", label:"Hugging Face Hub", sub:"newcave/kwater-ailab-4b-lora",
+  d:["어댑터·모델 카드 공개 (Apache 2.0)","추론 때 베이스 모델(Qwen)과 어댑터를 모두 여기서 내려받음"],
+  m:["모델 카드: base_model Qwen3-4B-Instruct-2507 · library peft · text-generation"], f:["MODEL_CARD_HF.md", "README.md"]},
+ {id:"upload", col:4, row:1.2, g:"dep", k:"code", icon:"⬆️", label:"HF 업로드 스크립트", sub:"upload_to_hf.py · Colab",
+  d:["학습한 어댑터 폴더를 Hugging Face Hub에 올림","기본은 비공개 — 내부 검토 뒤 공개 (현재 공개중)"],
+  m:["login() → create_repo(private=True, exist_ok) → upload_folder(어댑터)","→ 모델 카드(README.md) · 로고 업로드 (선택)"], f:["scripts/upload_to_hf.py"]},
+
+ {id:"infer", col:5, row:0.0, g:"use", k:"code", icon:"🚀", label:"추론 데모", sub:"inference_demo.py",
+  d:["베이스 모델에 어댑터를 장착해 질문에 답함","GPU는 bf16, CPU도 동작(느림)"],
+  m:["PeftModel.from_pretrained(base, \"newcave/kwater-ailab-4b-lora\")","apply_chat_template → generate(max_new_tokens = 256, do_sample = False)"], f:["scripts/inference_demo.py", "requirements.txt  (transformers · peft · torch · accelerate)"]},
+ {id:"user", col:5, row:1.2, g:"use", k:"ppl", icon:"👥", label:"연구자", sub:"출처 표기 답변",
+  d:["예: 「AR6 SSP 기후변화 시나리오 기반 다목적댐 홍수방어기준 개선 연구」에서 사용된 데이터 소스를 나열하시오","학습 범위(105건) 밖 질문은 베이스 모델 능력으로 답함 — 환각 가능"], f:["scripts/inference_demo.py  (QUESTIONS)"]},
+ {id:"rag", col:5, row:2.4, g:"plan", k:"plan", icon:"🔗", label:"RAG 생성 슬롯", sub:"v0.4 계획",
+  d:["사실 조회는 단독 사용이 아니라 RAG 파이프라인의 생성 슬롯에 장착하는 것이 전제","bge-m3 + FAISS 검색 결과로 답을 생성, RAGAS로 비교"], m:["로드맵 v0.4"], f:["README.md  (한계 · 로드맵)"]},
+ {id:"wcs", col:5, row:3.6, g:"plan", k:"plan", icon:"💧", label:"Water Co-Scientist", sub:"연구주기 에이전트",
+  d:["이 모델은 Water Co-Scientist 구상의 첫 기술 검증(PoC)","최종 목표: 물관리 지식·어휘를 갖춘 물 특화 파운데이션 모델"], m:["지식자산 → 4B LoRA v0.1 → RAG → 연구주기 에이전트 → 물 특화 파운데이션"], f:["README.md  (Water Co-Scientist 구상 속의 위치)"]},
+];
+// 연결선: a → b = 흐름 방향. label: 넘겨주는 것. plan: 로드맵 연결(흐린 점선). ghost: 재생 중에만
+const E = [
+ {a:"pdf",b:"extract",label:"PDF 105건"},{a:"extract",b:"rnddash",label:"같은 데이터"},{a:"extract",b:"gen",label:"datasource JSONL"},{a:"gen",b:"split",label:"instruction 쌍 (3유형)"},
+ {a:"split",b:"lora",label:"train"},{a:"base",b:"lora",label:"베이스 가중치 (고정)"},{a:"lora",b:"eval",label:"학습 전/후 모델"},{a:"eval",b:"adapter",label:"검증된 어댑터"},
+ {a:"adapter",b:"upload",label:"어댑터 폴더"},{a:"upload",b:"hf",label:"upload_folder"},{a:"hf",b:"infer",label:"base + adapter"},{a:"infer",b:"user",label:"출처 표기 답변"},
+ {a:"v02",b:"gen",plan:1,color:"148,163,184"},{a:"v03",b:"eval",plan:1,color:"148,163,184"},{a:"corpus",b:"extract",plan:1,color:"148,163,184"},
+ {a:"hf",b:"rag",plan:1,color:"148,163,184",label:"v0.4 생성 슬롯"},{a:"rag",b:"wcs",plan:1,color:"148,163,184"},
+];
+const SCN = [
+ {t:"① 데이터 구축", ex:"보고서 → 학습용 질문·답", s:[
+  {h:[["pdf","extract"]], x:"ALIO 공개 연구보고서 PDF 105건에서 데이터소스 언급 추출 → 구조화 JSONL (어떤 연구 · 어떤 데이터 · 어느 기관 · 어떻게 활용)"},
+  {h:[["extract","rnddash"]], x:"같은 자료로 인벤토리 대시보드(rnddata_report) 구성"},
+  {h:[["extract","gen"]], x:"규칙 기반 템플릿으로 instruction 쌍 생성 — 목록 나열 · 필드 조회 · 카드 요약 3유형"},
+  {h:[["gen","split"]], x:"train / eval 분리 (README 기준 — 이 단계들의 코드는 저장소 밖 Colab)"},
+ ]},
+ {t:"② LoRA 학습·평가", ex:"Qwen3-4B + LoRA", s:[
+  {h:[["split","lora"],["base","lora"]], x:"베이스 Qwen3-4B-Instruct-2507은 고정, LoRA(r 16 · α 32 · 전체 선형층)만 학습 — bf16 · 2 epochs · Unsloth + TRL · Colab A100 40GB"},
+  {h:[["lora","eval"]], x:"학습 전/후 비교 — 같은 조회 문항을 자동 채점"},
+  {h:[["eval","adapter"]], x:"어댑터 저장 (수십 MB) — 가중치 파일은 깃에 올리지 않음"},
+ ]},
+ {t:"③ 배포·추론", ex:"Hugging Face 공개 → 질문에 답하기", s:[
+  {h:[["adapter","upload"],["upload","hf"]], x:"upload_to_hf.py: 로그인 → 저장소 생성(기본 비공개) → 어댑터 폴더·모델 카드·로고 업로드 → 현재 공개"},
+  {h:[["user","infer"]], x:"질문 예: 「AR6 SSP … 다목적댐 홍수방어기준 개선 연구」에서 사용된 데이터 소스를 나열하시오"},
+  {h:[["hf","infer"]], x:"inference_demo.py: 베이스 모델과 어댑터를 Hub에서 내려받아 PeftModel로 장착 (GPU bf16 · CPU도 가능)"},
+  {h:[["infer","user"]], x:"chat 템플릿 → greedy 생성(최대 256토큰) → 출처를 표기한 답변"},
+ ]},
+ {t:"④ 한계·로드맵", ex:"v0.1 → 물 특화 파운데이션", s:[
+  {h:[], n:["gen","lora"], x:"v0.1 한계: 규칙 템플릿 학습쌍이라 표현 다양성 제한 — 사실 암기보다 응답 형식(출처 표기)·도메인 어투를 학습"},
+  {h:[], n:["infer","user"], x:"학습 범위(105건) 밖 질문은 베이스 모델 능력으로 답함 — 환각 가능"},
+  {h:[["v02","gen"]], x:"v0.2: LLM이 만든 고품질 QA로 재학습 (표현 다양화)"},
+  {h:[["v03","eval"]], x:"v0.3: 홀드아웃 일반화 평가 + LogicKor 회귀 확인"},
+  {h:[["hf","rag"]], x:"v0.4: RAG(bge-m3 + FAISS) 생성 슬롯 장착 · RAGAS 비교 — 사실 조회는 RAG 전제"},
+  {h:[["corpus","extract"]], x:"v1.x: OpenAlex 논문 · KIPRIS 특허로 코퍼스 확장"},
+  {h:[["rag","wcs"]], x:"Water Co-Scientist 연구주기 에이전트 → 물 특화 파운데이션 모델"},
+ ]},
+];
+
+// ── 기본 보기: 같은 구조(N·E·SCN 연결)에 쉬운 말만 덮어씀 ──
+const BASIC = {
+ pdf:["공개 연구보고서","105건",["K-water 공개 연구보고서 105건 — 학습 재료"]],
+ rnddash:["자료 현황판","rnddata_report",["같은 자료로 만든 현황판 (별도 저장소)"]],
+ corpus:["논문·특허 더하기","나중 계획",["논문·특허까지 학습 자료를 넓힐 계획"]],
+ extract:["데이터 정보 뽑기","보고서 → 표",["보고서마다 어떤 데이터를 어디서 받아 어떻게 썼는지 정리"]],
+ gen:["문제·정답 만들기","3가지 질문 유형",["정리한 표로 학습용 질문과 정답을 만듦 (목록 · 조회 · 요약)"]],
+ v02:["더 다양한 문제","다음 버전 계획",["AI로 더 자연스러운 질문·답을 만들어 다시 학습할 계획"]],
+ split:["학습용·시험용 나누기","시험 문제 따로",["일부 문제는 시험용으로 떼어 둠"]],
+ lora:["가볍게 추가 학습","LoRA",["큰 모델은 그대로 두고 작은 '덧붙임'만 학습 — GPU 한 대로 가능"]],
+ base:["바탕 모델","Qwen3-4B",["공개된 40억 규모 한국어 가능 모델 — 이 위에 덧붙임을 얹음"]],
+ adapter:["학습 결과 (덧붙임)","수십 MB",["바탕 모델 위에 얹는 작은 파일"]],
+ eval:["학습 전후 비교","자동 채점",["같은 문제를 학습 전과 후에 풀게 해 점수 비교"]],
+ v03:["더 엄격한 평가","다음 버전 계획",["처음 보는 문제와 일반 한국어 능력까지 확인할 계획"]],
+ hf:["Hugging Face 공개","누구나 내려받기",["학습 결과를 공개 저장소에 올림"]],
+ upload:["올리기 스크립트","upload_to_hf.py",["학습 결과를 Hugging Face에 올리는 코드 (이 저장소에 있음)"]],
+ infer:["질문에 답하기","inference_demo.py",["바탕 모델에 덧붙임을 얹어 질문에 답하는 예제 코드"]],
+ user:["연구자","출처와 함께 답 받기",["예: 어떤 연구에서 쓴 데이터 소스를 물으면 출처와 함께 답함","학습하지 않은 내용은 틀릴 수 있음"]],
+ rag:["검색과 함께 쓰기","다음 버전 계획",["문서 검색 결과를 보고 답하는 방식에 붙일 계획"]],
+ wcs:["Water Co-Scientist","최종 목표",["물 분야 연구를 돕는 AI 체계, 나아가 물 특화 언어모델"]],
+};
+const BASIC_COLS = ["재료","자료 만들기","학습","확인·저장","공개","쓰기·다음 단계"];
+const BASIC_SCN = {
+ "① 데이터 구축":["공개 연구보고서 105건에서 '어떤 데이터를 어디서 받아 어떻게 썼는지'를 뽑아 표로 정리","같은 표로 자료 현황판도 만듦","표를 바탕으로 학습용 질문과 정답을 만듦 (목록 · 조회 · 요약)","일부 문제는 시험용으로 떼어 둠"],
+ "② LoRA 학습·평가":["바탕 모델(Qwen3-4B)은 그대로 두고 작은 덧붙임(LoRA)만 학습 — GPU 한 대로 가능","같은 문제를 학습 전과 후에 풀게 해 점수 비교","학습 결과(작은 파일)를 저장"],
+ "③ 배포·추론":["스크립트로 학습 결과를 Hugging Face에 올려 공개","연구자가 질문 — 예: 어떤 연구에서 쓴 데이터 소스는?","바탕 모델에 덧붙임을 얹어 답을 만듦","출처와 함께 답함"],
+ "④ 한계·로드맵":["지금은 첫 버전 — 정해진 틀의 문제로 배워 표현이 단조로움","학습하지 않은 내용을 물으면 틀릴 수 있음","다음: AI로 더 다양한 문제를 만들어 다시 학습","다음: 처음 보는 문제로 더 엄격하게 평가","다음: 문서 검색과 함께 쓰는 방식에 붙이기","나중: 논문·특허까지 학습 자료 넓히기","최종 목표: Water Co-Scientist와 물 특화 언어모델"],
+};
+const BASIC_EX = {"① 데이터 구축":"보고서로 학습 문제 만들기","② LoRA 학습·평가":"작은 덧붙임만 학습","③ 배포·추론":"공개하고 질문에 답하기","④ 한계·로드맵":"첫 버전에서 다음 단계로"};
+N.forEach(n => { const b = BASIC[n.id]; if (b) { n.label = b[0]; n.sub = b[1]; n.d = b[2]; } delete n.m; });
+COLS.forEach((c, i) => { c[0] = BASIC_COLS[i]; });
+E.forEach(e => { delete e.label; });
+SCN.forEach(sc => { const t = BASIC_SCN[sc.t]; if (t) sc.s.forEach((st, i) => { if (t[i]) st.x = t[i]; }); if (BASIC_EX[sc.t]) sc.ex = BASIC_EX[sc.t]; });
+Object.assign(KIND, {code:"코드가 저장소에 있음", doc:"설명만 있음 (코드는 다른 곳)", ext:"자료·외부 서비스", plan:"앞으로의 계획"});
+
+// ───────────────────────── 준비 ─────────────────────────
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const byId = Object.fromEntries(N.map(n => [n.id, n]));
+N.forEach(n => { n.x = COLS[n.col][1]; n.y = RY + n.row * 124; n.r = n.k === "ext" ? 34 : (n.k === "ppl" ? 40 : 44); });
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function resample(raw, n){ const cum = [0]; for (let i = 1; i < raw.length; i++) cum.push(cum[i-1] + Math.hypot(raw[i][0]-raw[i-1][0], raw[i][1]-raw[i-1][1]));
+  const L = cum[cum.length-1] || 1, out = []; let j = 0;
+  for (let k = 0; k < n; k++){ const d = L * k / (n - 1); while (j < cum.length - 2 && cum[j+1] < d) j++;
+    const seg = (cum[j+1] - cum[j]) || 1, u = Math.min(1, (d - cum[j]) / seg); out.push([raw[j][0] + (raw[j+1][0]-raw[j][0]) * u, raw[j][1] + (raw[j+1][1]-raw[j][1]) * u]); }
+  return out; }
+function curvePts(a, b, bend){ const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+  const k = bend === undefined ? 0.08 * L : bend; const mx = (a.x + b.x) / 2 + nx * k, my = (a.y + b.y) / 2 + ny * k, raw = [];
+  for (let i = 0; i <= 40; i++){ const t = i / 40, u = 1 - t; raw.push([u*u*a.x + 2*u*t*mx + t*t*b.x, u*u*a.y + 2*u*t*my + t*t*b.y]); } return raw; }
+function lanePts(a, b, Ly){ const rr = 34, raw = [], s = Math.sign(b.x - a.x) || 1, va = Math.sign(Ly - a.y) || 1, vb = Math.sign(Ly - b.y) || 1;
+  const seg = (x0, y0, x1, y1, n) => { for (let i = 0; i <= n; i++) raw.push([x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]); };
+  const q = (p0, c, p1, n) => { for (let i = 1; i <= n; i++){ const t = i / n, u = 1 - t; raw.push([u*u*p0[0] + 2*u*t*c[0] + t*t*p1[0], u*u*p0[1] + 2*u*t*c[1] + t*t*p1[1]]); } };
+  seg(a.x, a.y, a.x, Ly - va * rr, 12); q([a.x, Ly - va * rr], [a.x, Ly], [a.x + s * rr, Ly], 8);
+  seg(a.x + s * rr, Ly, b.x - s * rr, Ly, 40); q([b.x - s * rr, Ly], [b.x, Ly], [b.x, Ly - vb * rr], 8); seg(b.x, Ly - vb * rr, b.x, b.y, 12); return raw; }
+E.forEach(e => { const a = byId[e.a], b = byId[e.b]; if (!a || !b) { console.warn("flow: 없는 노드", e); return; }
+  e.pts = resample(e.lane ? lanePts(a, b, e.lane) : curvePts(a, b, e.bend), 64); });
+function findEdge(x, y){ for (const e of E){ if (e.a === x && e.b === y) return {e, dir: 1}; if (e.a === y && e.b === x) return {e, dir: -1}; }
+  console.warn("flow: 연결선 없음", x, "→", y); return null; }
+// 재생 단계를 미리 연결선에 묶어 둠 (없는 연결은 경고)
+SCN.forEach(sc => sc.s.forEach(st => { st.hops = (st.h || []).map(([x, y]) => findEdge(x, y)).filter(Boolean);
+  st.nodes = new Set([...(st.n || []), ...(st.h || []).flat()]); }));
+function pointAt(e, t){ const P = e.pts, f = Math.max(0, Math.min(1, t)) * (P.length - 1), i = Math.min(P.length - 2, Math.floor(f)), u = f - i;
+  return [P[i][0] + (P[i+1][0] - P[i][0]) * u, P[i][1] + (P[i+1][1] - P[i][1]) * u]; }
+
+// ───────────────────────── 재생 상태 ─────────────────────────
+let cur = {s: 0, k: 0}, auto = true, paused = false, stepAt = performance.now(), hold = 0;
+const STEP_MS = 3200, END_MS = 1800;
+let actE = new Map(), actN = new Set();   // 지금 단계의 연결선(방향)·노드
+let packets = [];
+function applyStep(){ const st = SCN[cur.s].s[cur.k]; actE = new Map(); for (const h of st.hops) actE.set(h.e, h.dir); actN = st.nodes;
+  for (const h of st.hops) for (let i = 0; i < 4; i++) packets.push({e: h.e, dir: h.dir, t: -i * 0.08, sp: 0.55 + Math.random() * 0.15, big: 1});
+  stepAt = performance.now(); hold = 0; renderPanel(); }
+function go(s, k, keepAuto){ cur = {s, k}; if (!keepAuto) setAuto(false); applyStep(); }
+function nextStep(){ const n = SCN[cur.s].s.length; if (cur.k < n - 1) cur.k++; else { cur.s = (cur.s + 1) % SCN.length; cur.k = 0; } applyStep(); }
+function prevStep(){ if (cur.k > 0) cur.k--; else { cur.s = (cur.s - 1 + SCN.length) % SCN.length; cur.k = SCN[cur.s].s.length - 1; } applyStep(); }
+function setAuto(v){ auto = v; document.getElementById("play").textContent = auto ? "⏸ 자동 재생 중" : "▶ 자동 재생"; stepAt = performance.now(); }
+
+function renderPanel(){
+  const sc = SCN[cur.s];
+  document.getElementById("chips").innerHTML = SCN.map((x, i) => `<span class="sc${i === cur.s ? " on" : ""}" data-i="${i}">${esc(x.t)}</span>`).join("");
+  document.getElementById("sttl").textContent = sc.t; document.getElementById("sex").textContent = sc.ex;
+  document.getElementById("steps").innerHTML = sc.s.map((x, i) => `<li class="${i === cur.k ? "on" : i < cur.k ? "done" : ""}" data-k="${i}">${esc(x.x)}</li>`).join("");
+  document.getElementById("cap").innerHTML = `<span class="n">${esc(sc.t)} · ${cur.k + 1}/${sc.s.length}</span>${esc(sc.s[cur.k].x)}`;
+  const on = document.querySelector("#steps li.on"); if (on && on.scrollIntoView) on.scrollIntoView({block: "nearest"});
+}
+document.getElementById("chips").addEventListener("click", ev => { const i = ev.target.dataset && ev.target.dataset.i; if (i !== undefined) go(+i, 0, true); });
+document.getElementById("steps").addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) go(cur.s, +li.dataset.k, false); });
+document.getElementById("prev").onclick = () => { setAuto(false); prevStep(); };
+document.getElementById("next").onclick = () => { setAuto(false); nextStep(); };
+document.getElementById("play").onclick = () => setAuto(!auto);
+
+function renderKpis(){
+  document.getElementById("kpis").innerHTML = [["무엇", "AI연구소 첫 자체 학습 모델"], ["자료", "공개 보고서 105건"], ["공개", "Hugging Face"], ["<span class='dot'></span>구조도", "실시간 아님"]].map(([a, b]) => `<span class="chip">${a} <b>${b}</b></span>`).join("");
+}
+
+// ───────────────────────── 카메라 ─────────────────────────
+let W = 0, H = 0, DPR = Math.max(1, window.devicePixelRatio || 1), zoom = 1, panX = 0, panY = 0;
+let showPanel = true;
+function resize(){ const r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * DPR; cv.height = H * DPR; }
+window.addEventListener("resize", resize); document.addEventListener("fullscreenchange", () => setTimeout(resize, 60));
+// 그래프 자리: 위 제목·단추 95px, 아래 설명 줄·범례 92px, 넓은 화면이면 오른쪽 재생 패널(330px)을 비켜 둔다
+function area(){ const aw = (showPanel && W > 900) ? W - 330 : W; return {aw, ah: H - 187}; }
+function tf(t){ const s = Math.min(area().aw / VW, area().ah / VH) * zoom; const {aw, ah} = area(); const drift = paused ? 0 : 1;
+  const ox = (aw - VW * s) / 2 + 8 + panX + Math.sin(t * 0.07) * 5 * drift;
+  const oy = 95 + (ah - VH * s) / 2 + panY + Math.cos(t * 0.05) * 3 * drift; return {s, ox, oy}; }
+
+// ───────────────────────── 그리기 ─────────────────────────
+function hex(x, y, r){ ctx.beginPath(); for (let i = 0; i < 6; i++){ const ang = Math.PI / 3 * i; const px = x + r * Math.cos(ang), py = y + r * Math.sin(ang);
+  i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
+function beam(e, alpha, w0, flip){ const P = e.pts, n = P.length, L = [], Rr = [];
+  for (let i = 0; i < n; i++){ const p = P[i], q = P[Math.min(n - 1, i + 1)], o = P[Math.max(0, i - 1)]; let dx = q[0] - o[0], dy = q[1] - o[1];
+    const l = Math.hypot(dx, dy) || 1; dx /= l; dy /= l; const tt = flip ? 1 - i / (n - 1) : i / (n - 1); const w = w0 * (1 - tt) + 0.9 * tt;
+    L.push([p[0] - dy * w, p[1] + dx * w]); Rr.push([p[0] + dy * w, p[1] - dx * w]); }
+  const a = byId[e.a], b = byId[e.b], g = ctx.createLinearGradient(a.x, a.y, b.x, b.y); g.addColorStop(0, C(a)); g.addColorStop(1, C(b));
+  ctx.globalAlpha = alpha; ctx.fillStyle = g; ctx.beginPath(); L.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+  for (let i = Rr.length - 1; i >= 0; i--) ctx.lineTo(Rr[i][0], Rr[i][1]); ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1; }
+function trace(e){ ctx.beginPath(); e.pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); }
+const stars = Array.from({length: 140}, () => ({x: Math.random(), y: Math.random(), z: Math.random() * 0.8 + 0.2}));
+
+function draw(ms){
+  const t = ms / 1000; ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H);
+  // 자동 재생
+  if (auto && !paused){ const last = cur.k === SCN[cur.s].s.length - 1; if (ms - stepAt > STEP_MS + (last ? END_MS : 0)) nextStep(); }
+  for (const s of stars){ const x = (s.x * W + t * 6 * s.z) % W, y = s.y * H; ctx.globalAlpha = 0.25 + 0.5 * s.z * (0.6 + 0.4 * Math.sin(t * s.z * 2 + s.x * 9));
+    ctx.fillStyle = "#bcd3f5"; ctx.fillRect(x, y, s.z * 1.6, s.z * 1.6); } ctx.globalAlpha = 1;
+  const {s, ox, oy} = tf(t); ctx.setTransform(DPR * s, 0, 0, DPR * s, DPR * ox, DPR * oy);
+  // 단계 머리글·안내선
+  ctx.textAlign = "center"; ctx.font = "700 17px 'Noto Sans KR','Malgun Gothic',sans-serif";
+  for (const [name, x] of COLS){ ctx.strokeStyle = "rgba(140,170,215,.10)"; ctx.lineWidth = 1; ctx.setLineDash([4, 8]);
+    ctx.beginPath(); ctx.moveTo(x, 50); ctx.lineTo(x, VH - 40); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "rgba(170,195,230,.75)"; ctx.fillText(name, x, 36); }
+  const focus = actE.size > 0 || actN.size > 0;
+  // 빔
+  for (const e of E){ if (!e.pts) continue; const on = actE.has(e);
+    if (e.ghost && !on) continue;
+    if (e.ghost || e.lane || e.plan){ ctx.setLineDash(e.lane ? [8, 6] : [6, 7]); ctx.lineWidth = on ? 2.6 : 1.8;
+      ctx.strokeStyle = e.color ? `rgba(${e.color},${on ? .95 : .45})` : "rgba(196,181,253,.9)"; trace(e); ctx.stroke(); ctx.setLineDash([]); }
+    else beam(e, on ? 0.75 : (focus ? 0.13 : 0.3), on ? 7 : 4.2, false);
+    if (on){ ctx.save(); ctx.setLineDash([3, 11]); ctx.lineDashOffset = -t * 38 * actE.get(e); ctx.lineWidth = 2; ctx.strokeStyle = "rgba(255,255,255,.75)"; trace(e); ctx.stroke(); ctx.restore(); }
+    if (e.label && (!e.ghost || on)){ const [x, y] = pointAt(e, e.lt || 0.5); ctx.font = "600 12.5px 'Noto Sans KR','Malgun Gothic',sans-serif";
+      ctx.fillStyle = e.color ? `rgba(${e.color},.95)` : "rgba(196,215,240,.8)"; ctx.lineJoin = "round"; ctx.lineWidth = 4; ctx.strokeStyle = "rgba(6,18,40,.85)"; ctx.strokeText(e.label, x, y - 9); ctx.fillText(e.label, x, y - 9); }
+  }
+  // 점 (평소: 희미하게 자연 방향 / 재생: 단계 방향으로 밝게)
+  if (!paused){
+    for (const e of E){ if (!e.pts || e.ghost || e.plan) continue; if (Math.random() < (focus ? 0.05 : 0.22) / 60) packets.push({e, dir: 1, t: 0, sp: 0.16 + Math.random() * 0.06, big: 0}); }
+    for (const [e, dir] of actE) if (Math.random() < 2.4 / 60) packets.push({e, dir, t: 0, sp: 0.42 + Math.random() * 0.12, big: 1});
+  }
+  packets = packets.filter(p => p.t <= 1);
+  for (const p of packets){ if (!paused) p.t += p.sp / 60; if (p.t < 0) continue;
+    const [x, y] = pointAt(p.e, p.dir > 0 ? p.t : 1 - p.t); const src = byId[p.dir > 0 ? p.e.a : p.e.b]; const rr = p.big ? 6.5 : 3.8;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, rr * 2.4); g.addColorStop(0, "#ffffff"); g.addColorStop(0.25, C(src)); g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.globalAlpha = p.big ? 1 : (focus ? 0.35 : 0.7); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rr * 2.4, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+  // 노드
+  for (const n of N){ const col = C(n), on = actN.has(n.id), dim = focus && !on;
+    const base_a = n.k === "plan" ? 0.6 : 1; ctx.globalAlpha = dim ? 0.5 * base_a : base_a;
+    ctx.save(); ctx.shadowColor = col; ctx.shadowBlur = on ? 34 + 10 * Math.sin(t * 4) : 14;
+    hex(n.x, n.y, n.r); const g = ctx.createLinearGradient(n.x, n.y - n.r, n.x, n.y + n.r); g.addColorStop(0, "#16345f"); g.addColorStop(1, "#0a1d3c");
+    ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    ctx.lineWidth = 2.2; ctx.strokeStyle = col; ctx.setLineDash(n.k === "batch" || n.k === "opt" || n.k === "doc" || n.k === "plan" ? [6, 5] : n.k === "ext" ? [2, 4] : []); hex(n.x, n.y, n.r); ctx.stroke(); ctx.setLineDash([]);
+    if (on){ const ph = (t * 0.8) % 1; ctx.lineWidth = 2.6; ctx.strokeStyle = "#e0f2fe"; ctx.globalAlpha = 1 - ph; hex(n.x, n.y, n.r + 6 + 7 * ph); ctx.stroke(); ctx.globalAlpha = 1; }
+    else { ctx.lineWidth = 1.4; ctx.strokeStyle = col; ctx.globalAlpha = dim ? 0.2 : 0.4; hex(n.x, n.y, n.r + 6); ctx.stroke(); ctx.globalAlpha = dim ? 0.5 * base_a : base_a; }
+    ctx.font = (n.r < 40 ? 26 : 32) + "px 'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(n.icon, n.x, n.y + 1); ctx.textBaseline = "alphabetic";
+    if (n.llm){ const bx = n.x + n.r * 0.78, by = n.y - n.r * 0.72; ctx.fillStyle = "#4c1d95"; ctx.beginPath(); ctx.arc(bx, by, 10, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#c4b5fd"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.fillStyle = "#ede9fe"; ctx.font = "700 13px sans-serif"; ctx.textBaseline = "middle"; ctx.fillText("✦", bx, by + 1); ctx.textBaseline = "alphabetic"; }
+    ctx.lineJoin = "round"; ctx.strokeStyle = "rgba(6,18,40,.88)";   // 글자 뒤 어두운 테두리: 지나가는 선이 글자를 가리지 않게
+    ctx.fillStyle = "#eaf2ff"; ctx.font = "800 18px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 5; ctx.strokeText(n.label, n.x, n.y + n.r + 23); ctx.fillText(n.label, n.x, n.y + n.r + 23);
+    if (n.sub){ const sb = n.sub.length > 22 ? n.sub.slice(0, 21) + "…" : n.sub; ctx.fillStyle = "#9fb6d8"; ctx.font = "500 14px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 4; ctx.strokeText(sb, n.x, n.y + n.r + 42); ctx.fillText(sb, n.x, n.y + n.r + 42); }
+    ctx.globalAlpha = 1;
+  }
+  requestAnimationFrame(draw);
+}
+
+// ───────────────────────── 마우스 ─────────────────────────
+let drag = null; const tip = document.getElementById("tip");
+function hit(mx, my){ const {s, ox, oy} = tf(performance.now() / 1000); const x = (mx - ox) / s, y = (my - oy) / s;
+  return N.find(n => Math.hypot(n.x - x, n.y - y) < n.r + 8); }
+cv.addEventListener("mousedown", e => { drag = {x: e.clientX, y: e.clientY, px: panX, py: panY, moved: false}; });
+window.addEventListener("mouseup", e => { if (drag && !drag.moved){ const r = cv.getBoundingClientRect(); const n = hit(e.clientX - r.left, e.clientY - r.top); if (n) showCard(n); } drag = null; });
+cv.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); const mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (drag){ const dx = e.clientX - drag.x, dy = e.clientY - drag.y; if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true; panX = drag.px + dx; panY = drag.py + dy; tip.style.display = "none"; return; }
+  const n = hit(mx, my); if (!n){ tip.style.display = "none"; return; }
+  tip.innerHTML = `<b>${n.icon} ${esc(n.label)}</b>${n.llm ? " <span style='color:#c4b5fd'>✦ LLM</span>" : ""}<br>${esc(n.sub)}<br><span style="color:#8ea6c8">${KIND[n.k]} · 클릭하면 자세히</span>`;
+  tip.style.display = "block"; tip.style.left = Math.min(mx + 14, W - 290) + "px"; tip.style.top = (my + 12) + "px"; });
+cv.addEventListener("wheel", e => { e.preventDefault(); zoom = Math.min(2.4, Math.max(0.6, zoom * (e.deltaY < 0 ? 1.08 : 0.93))); }, {passive: false});
+cv.addEventListener("dblclick", () => { zoom = 1; panX = panY = 0; });
+function showCard(n){
+  const lab = (e, other) => byId[other].label + (e.label && !e.lane ? ` (${e.label})` : "");
+  const ins = E.filter(e => e.b === n.id && !e.ghost).map(e => lab(e, e.a)), outs = E.filter(e => e.a === n.id && !e.ghost).map(e => lab(e, e.b));
+  let h = `<h3>${n.icon} ${esc(n.label)}</h3><span class="bd">${COLS[n.col][0]}</span><span class="bd">${KIND[n.k]}</span>${n.llm ? '<span class="bd llm">✦ LLM 사용</span>' : ""}`;
+  h += `<div style="color:#9fb6d8">${esc(n.sub)}</div><ul>${n.d.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  if (ins.length || outs.length) h += `<div class="h">연결</div>` + (ins.length ? `<div>← ${ins.map(esc).join(" · ")}</div>` : "") + (outs.length ? `<div>→ ${outs.map(esc).join(" · ")}</div>` : "");
+  if (n.m && n.m.length) h += `<div class="h">사양 · 수식</div>${n.m.map(x => `<div style="margin:2px 0"><code>${esc(x)}</code></div>`).join("")}`;
+  h += `<div class="h">코드</div>${n.f.map(x => `<div><code>${esc(x)}</code></div>`).join("")}`;
+  document.getElementById("cb").innerHTML = h; document.getElementById("card").style.display = "block"; }
+document.getElementById("cx").onclick = () => document.getElementById("card").style.display = "none";
+document.getElementById("fs").onclick = () => { const w = document.getElementById("wrap"); document.fullscreenElement ? document.exitFullscreen() : w.requestFullscreen && w.requestFullscreen(); };
+document.getElementById("rs").onclick = () => { zoom = 1; panX = panY = 0; };
+document.getElementById("pa").onclick = e => { paused = !paused; e.target.textContent = paused ? "▶ 움직임 재생" : "⏸ 정지"; stepAt = performance.now(); };
+function setPanel(v){ showPanel = v; document.getElementById("panel").style.display = v ? "block" : "none"; document.getElementById("pn").textContent = v ? "☰ 재생 패널 숨기기" : "☰ 재생 패널 보기"; }
+document.getElementById("pn").onclick = () => setPanel(!showPanel);
+
+resize(); if (W < 760) setPanel(false); renderKpis(); applyStep(); requestAnimationFrame(draw);
+</script></body></html>
