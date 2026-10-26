@@ -43,7 +43,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.13 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.13.1 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -811,10 +811,12 @@ elif page == "📄 논문 트렌드":
         a, b = st.columns(2)
         with a:  # 연구소 트랙: 연도별 수집 vs 실측 / 그 밖: 월별(date 있으면) 또는 연도별
             if is_inst:
+                _ps = load_labels("pipeline_state.json") or {}          # labels 파이프라인 상태 (다시 훑기 차례·수집 기준)
                 itr.render_coverage(df, (t_insts.get(sel[0]) or {}).get("by_year") or {}, t_years,
                                     INST_COLORS.get(sel[0], BLUE), PLOTLY_LAYOUT, key=f"cov_{sel[0]}",
-                                    next_year=(load_labels("pipeline_state.json") or {}).get("resweep_next_year"),
-                                    by_year_all=(t_insts.get(sel[0]) or {}).get("by_year_all"))
+                                    next_year=_ps.get("resweep_next_year"),
+                                    by_year_all=(t_insts.get(sel[0]) or {}).get("by_year_all"),
+                                    basis=_ps.get("collect_basis"), basis_since=_ps.get("collect_basis_since"))
             else:
                 monthly = None
                 if "date" in df and df["date"].notna().sum() >= max(30, len(df) // 2):
