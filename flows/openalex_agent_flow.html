@@ -1,0 +1,430 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAlex 연구트렌드 흐름</title>
+<!-- newcave/openalex 흐름 구조도. 저장소 기준: main b1a9f10 (2026-10-27).
+     수집(pipeline_codes) → 분석(analysis_codes n_01~n_06) → 화면(webapp Dash · streamlit_app 뷰어).
+     노드·연결선·재생 단계는 아래 N·E·SCN 표. 기본 보기는 BASIC 덮어쓰기로 쉬운 말만 바꾼다. 실시간 상태 아님(구조도). -->
+<style>
+:root{--bg0:#050f22;--bg1:#0b2447;--ink:#e6eefb;--mut:#8ea6c8}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg0);font-family:'Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;color:var(--ink);overflow:hidden}
+#wrap{position:relative;width:100%;height:100vh;background:radial-gradient(1200px 700px at 55% 40%,#0e2c57 0%,var(--bg1) 35%,var(--bg0) 100%);overflow:hidden}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab}
+canvas:active{cursor:grabbing}
+.hud{position:absolute;pointer-events:none}
+#top{left:18px;top:14px;right:18px;display:flex;align-items:flex-start;gap:14px}
+#ttl{font-weight:900;font-size:19px;letter-spacing:-.2px;white-space:nowrap}
+#ttl small{display:block;font-weight:500;font-size:12px;color:var(--mut);margin-top:2px;white-space:nowrap}
+#kpis{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto;justify-content:flex-end}
+.chip{background:rgba(16,40,80,.72);border:1px solid rgba(120,160,220,.25);border-radius:999px;padding:4px 11px;font-size:12px;color:#cfe0f7;white-space:nowrap;backdrop-filter:blur(4px)}
+.chip b{color:#fff;font-weight:800}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#94a3b8;margin-right:6px;vertical-align:0}
+#btns{position:absolute;left:16px;top:62px;display:flex;gap:6px;flex-wrap:wrap}
+button{background:rgba(16,40,80,.8);color:#cfe0f7;border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+button:hover{background:rgba(36,70,130,.9)}
+#panel{right:16px;top:100px;width:300px;max-height:calc(100% - 170px);overflow:auto;pointer-events:auto;background:linear-gradient(180deg,rgba(9,26,54,.9),rgba(9,26,54,.7));border:1px solid rgba(120,160,220,.18);border-radius:12px;padding:10px 12px;font-size:12px}
+#panel h4{margin:0 0 8px;font-size:12px;color:var(--mut);font-weight:700;letter-spacing:.06em}
+.sc{display:inline-block;margin:0 5px 5px 0;padding:3px 9px;border-radius:999px;border:1px solid rgba(120,160,220,.3);font-size:11.5px;cursor:pointer;color:#cfe0f7;background:rgba(16,40,80,.6)}
+.sc.on{background:#1d4ed8;border-color:#60a5fa;color:#fff}
+#sttl{font-weight:800;font-size:14px;margin:6px 0 2px}
+#sex{color:#9fb6d8;font-size:12px;margin-bottom:4px}
+#steps{margin:6px 0 8px;padding-left:22px}
+#steps li{padding:3px 4px;color:#8ea6c8;cursor:pointer;line-height:1.42;border-radius:6px}
+#steps li.done{color:#c6d6ee}
+#steps li.on{color:#fff;background:rgba(56,189,248,.18)}
+#ctl{display:flex;gap:6px}
+#ctl #play{flex:1}
+#cap{left:50%;transform:translateX(-50%);bottom:46px;width:max-content;max-width:min(760px,62%);background:rgba(9,26,54,.88);border:1px solid rgba(120,160,220,.3);border-radius:10px;padding:7px 14px;font-size:13.5px;text-align:center;line-height:1.45}
+#cap .n{color:#7dd3fc;font-weight:800;margin-right:6px}
+#legend{left:16px;bottom:12px;display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);background:rgba(9,26,54,.6);border-radius:10px;padding:6px 10px}
+#legend i{display:inline-block;width:14px;height:10px;margin-right:5px;vertical-align:-1px;border:2px solid #9fb6d8;border-radius:3px}
+#legend i.bt{border-style:dashed}#legend i.ex{border-style:dotted}
+#legend b{color:#c4b5fd;margin-right:4px}
+#card{left:16px;top:100px;width:340px;max-height:calc(100% - 170px);overflow:auto;background:rgba(9,26,54,.95);border:1px solid rgba(120,160,220,.3);border-radius:12px;padding:12px 14px;font-size:12.5px;display:none;pointer-events:auto;line-height:1.45}
+#card h3{margin:0 0 6px;font-size:15px;padding-right:18px}
+#card .bd{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;margin:0 4px 6px 0;background:rgba(56,100,170,.35);color:#dbe8fb}
+#card .bd.llm{background:rgba(167,139,250,.3);color:#e9e2ff}
+#card ul{margin:4px 0 6px;padding-left:18px}#card li{margin:2px 0}
+#card .h{color:var(--mut);margin-top:6px;font-weight:700;font-size:11.5px}
+#card code{font-family:Consolas,'D2Coding',monospace;font-size:11.5px;color:#bfe3ff}
+#card .x{position:absolute;right:10px;top:8px;cursor:pointer;color:var(--mut)}
+@media (max-width:760px){#kpis,#legend,#ttl small{display:none}#cap{max-width:94%;bottom:12px;font-size:12.5px}#panel{top:100px;width:calc(100% - 32px)}}
+#tip{position:absolute;pointer-events:none;background:rgba(5,15,34,.95);border:1px solid rgba(120,160,220,.3);border-radius:8px;padding:7px 10px;font-size:12px;display:none;max-width:280px;line-height:1.45}
+</style></head><body>
+<div id="wrap">
+ <canvas id="cv"></canvas>
+ <div class="hud" id="top">
+  <div id="ttl">🌊 OpenAlex 연구트렌드 · 에이전트 흐름<small>연구소별 Rising 용어 → 연구주제 커뮤니티 · 저장소 기준 newcave/openalex main b1a9f10 (2026-10-27)</small></div>
+  <div id="kpis"></div>
+ </div>
+ <div id="btns"><button id="fs">⛶ 전체 화면</button><button id="rs">⟲ 시점 초기화</button><button id="pa">⏸ 정지</button><button id="pn">☰ 재생 패널 숨기기</button></div>
+ <div class="hud" id="panel">
+  <h4>▶ 흐름 재생 · 실제 코드 경로</h4>
+  <div id="chips"></div>
+  <div id="sttl"></div><div id="sex"></div>
+  <ol id="steps"></ol>
+  <div id="ctl"><button id="prev">◀</button><button id="play">⏸ 자동 재생 중</button><button id="next">▶</button></div>
+ </div>
+ <div class="hud" id="cap"></div>
+ <div class="hud" id="legend"><span><i></i>코드가 저장소에 있음</span><span><i class="ex"></i>자료·외부 서비스</span><span style="color:#94a3b8">회색 = 미리 해 본 실험</span><span style="opacity:.8">빛나는 길 = 지금 재생 중인 단계 · 점 = 자료의 이동 방향</span></div>
+ <div class="hud" id="card"><span class="x" id="cx">✕</span><div id="cb"></div></div>
+ <div id="tip"></div>
+</div>
+<script>
+// ───────────────────────── 구조 (저장소 기준) ─────────────────────────
+// newcave/openalex main b1a9f10 (2026-10-27). 수집(pipeline_codes) → 분석(analysis_codes n_01~n_06) → 화면(webapp Dash · streamlit_app 뷰어).
+// k: code = 저장소에 코드 있음 · ext = 자료·외부 서비스 · ppl = 사람
+const COLS = [["설정·원천",90],["수집",305],["코퍼스·용어",520],["추세 검정",735],["네트워크·커뮤니티",950],["근거·AI 해석",1165],["화면·사람",1390]];
+const VW = 1490, VH = 850;
+const GC = {src:"#7dd3fc", col:"#f59e0b", prep:"#14b8a6", stat:"#a78bfa", net:"#3b82f6", ai:"#fb7185", ui:"#22c55e", ppl:"#f472b6", exp:"#94a3b8"};
+const C = n => n.c || GC[n.g];
+const KIND = {code:"저장소에 코드 있음", doc:"README 기준", ext:"자료·외부 서비스", plan:"계획", ppl:"사람"};
+const RY = 135;
+const N = [
+ {id:"cfg", col:0, row:0.0, g:"src", k:"code", icon:"⚙️", label:"수집 대상 설정", sub:"config.py · 6분야 · 저널 68종",
+  d:["분야 하나 = 연구소 하나: AI · 수자원환경 · 물인프라안전 · 상하수도 · 물에너지 · 경영","분야별 수집 대상 저널(이름 · Print/Electronic ISSN) — 같은 저널도 분야마다 따로 받음"],
+  m:["분야×저널 83건 (고유 저널 68종, OpenAlex 미등록 4종은 건너뜀)","Domain(key, name, department, journals) → dataset/<분야>/ · results/<분야>/01~04"], f:["config.py"]},
+ {id:"oa", col:0, row:1.2, g:"src", k:"ext", icon:"🌐", label:"OpenAlex API", sub:"works · sources",
+  d:["공개 학술 메타데이터 — 저널(ISSN)·연도 조건으로 논문을 받음","API 키 여러 개를 순서대로 쓰고, 하루 한도가 다 차면 초기화 시각까지 기다렸다 이어 받음"],
+  m:["기본 수집 범위 2000–2025","OpenAlex 저널 정보 오류 보정표: 한국물환경학회지는 DOI 접두어(10.15681/kswe)로, EER의 일본 논문집(10.11532/proes)은 제외"], f:["pipeline_codes/n_01_openalex.py  (DOI_PREFIX_SOURCES · EXCLUDED_DOI_PREFIXES)","pipeline_codes/pipeline.py  (collect_domains)"]},
+ {id:"oai", col:0, row:2.4, g:"src", k:"ext", icon:"🤖", label:"OpenAI API", sub:"새 저널 분야 판단",
+  d:["목록에 없는 새 저널(ISSN)의 분야를 고를 때만 부름"], m:["모델: config.OPENAI_MODEL (temperature 지정 없음)"], f:["pipeline_codes/journal_router.py","config.py  (OPENAI_MODEL)"]},
+
+ {id:"router", col:1, row:0.0, g:"col", k:"code", icon:"🧭", label:"저장할 분야 정하기", sub:"journal_router",
+  d:["목록에 있는 ISSN → 목록의 분야(여러 개 가능), AI 호출 없음","목록에 없는 ISSN → OpenAlex 저널 정보(이름·주요 토픽·최근 논문 제목 20개)를 보고 AI가 분야 0~여러 개 선택"],
+  m:["판단은 dataset/ai_journal_assignments.json에 쌓고 같은 저널은 다시 묻지 않음 — 틀리면 domains를 직접 고침"], f:["pipeline_codes/journal_router.py"]},
+ {id:"fetch", col:1, row:1.2, g:"col", k:"code", icon:"📥", label:"논문 수집", sub:"n_01_openalex · 연도별",
+  d:["저널 × 연도마다 논문을 받아 DOI 없는 논문은 제목으로 역검색해 보강"],
+  m:["Works().filter(journal | doi_starts_with, 연도).select(필드 13개).paginate(per_page = 200)","429·오류 → 지수 백오프 재시도 최대 7회","DOI 보강: 정규화 제목 완전 일치 + 출판연도 일치일 때만 (동시 5건)"], f:["pipeline_codes/n_01_openalex.py","pipeline_codes/pipeline.py  (run)"]},
+ {id:"inst", col:1, row:2.4, g:"col", k:"code", icon:"🏛️", label:"소속기관 파싱", sub:"n_02 · authorships → ROR",
+  d:["저자 소속기관(ROR·기관명)을 정리 — OpenAlex가 authorships에 이미 매칭해 줌","(선택) ROR 덤프로 매칭 보강 · 기관 협업 네트워크 시각화"],
+  f:["pipeline_codes/n_02_institution_extract.py","pipeline_codes/n_03_ror_local_match.py  (수동)","pipeline_codes/n_04_visualize.py"]},
+ {id:"cache", col:1, row:3.6, g:"col", k:"code", icon:"💾", label:"연도별 저장", sub:"cache_manager · 이어받기",
+  d:["파일 하나 = 저널 하나의 1년치 — 이미 받은 연도는 건너뜀","중단돼도 다시 누르면 이어서 받음","수집·분석 이벤트는 logs/events/*.jsonl에 기록 → 수집현황 모니터링"],
+  m:["dataset/<분야>/<저널명>_<ISSN>_<연도>.parquet"], f:["pipeline_codes/cache_manager.py","pipeline_codes/event_log.py"]},
+
+ {id:"store", col:2, row:3.6, g:"src", k:"ext", icon:"🔒", label:"openalex-data", sub:"비공개 데이터 리포",
+  d:["수집 원본 dataset/와 분석 산출물 results/를 코드와 분리해 보관","코드는 .env의 OPENALEX_DATA_ROOT로 이 폴더를 가리킴"],
+  m:["dataset/<분야>/*.parquet → results/<분야>/01_corpus · 02_full_period · 03_full_period_review · 04_windowed"], f:["config.py  (DATA_ROOT)","README.md"]},
+ {id:"corpus", col:2, row:2.4, g:"prep", k:"code", icon:"🧹", label:"코퍼스 필터", sub:"n_01_build_corpus",
+  d:["분석할 논문만 남김 — 순서: 유형 → comment/reply → 언어"],
+  m:["type ∈ {article, review, letter}","제목이 reply · response to · discussion of · letter to the editor 로 시작하거나 comments on 포함 → 제외","language ∈ {en, ko} · 용어빈도 분모는 en만 (토크나이저가 영어 전용)"], f:["analysis_codes/n_01_build_corpus.py  → 01_corpus/filtered_corpus.parquet"]},
+ {id:"terms", col:2, row:1.2, g:"prep", k:"code", icon:"✂️", label:"제목 용어 추출", sub:"n_02 · 유니·바이그램",
+  d:["제목을 단어(유니그램)와 두 단어 구(바이그램)로 쪼개 문서×용어 표로 저장","study·model 같은 도메인어는 일부러 남김 — 사람이 정규화 사전에서 판단"],
+  m:["정제: 태그 구문 제거(<scp>·<sub>, 내용은 보존) · 하이픈류 통일 · 'HESS Opinions:' 접두어 제거","유니그램: 불용어·1글자 제외, 문서당 중복 제거 · 바이그램: 두 단어 모두 실질어"], f:["analysis_codes/n_02_term_frequency.py  → unigram_long · bigram_long","analysis_codes/text_utils.py"]},
+ {id:"norm", col:2, row:0.0, g:"prep", k:"code", icon:"📖", label:"용어 정규화 사전", sub:"단·복수·철자 통일",
+  d:["같은 뜻 다른 표기를 하나로 (models → model, modelling → modeling)","읽을 때 적용 — 원시 빈도표는 그대로 둠"],
+  m:["새 분야는 시작본 복사: 변환 155건 중 152건이 단·복수 통일"], f:["analysis_codes/normalization.py","analysis_codes/term_normalization_seed.csv","01_corpus/term_normalization_dict.csv"]},
+
+ {id:"hot", col:3, row:0.0, g:"stat", k:"code", icon:"⚡", label:"보조 신호", sub:"z-score · MACD 버스트",
+  d:["추세 판정과 별개 지표로 같이 보여 줌 — 하나로 합치지 않음","최근에서야 움직이기 시작한 용어를 잡기 위한 신호"],
+  m:["z = (최근 3년 평균 − 과거 평균) / 과거 표준편차","MACD 버스트: EMA span (6, 12, 3) — Tattershall et al. (2020)"], f:["analysis_codes/trend_tags.py"]},
+ {id:"mk", col:3, row:1.2, g:"stat", k:"code", icon:"📈", label:"Mann-Kendall 추세검정", sub:"Hamed–Rao 보정 · Sen 기울기",
+  d:["용어마다 '그 해 논문 중 이 용어가 든 비중(%)'의 연도 추세를 검정","포화된 핵심어(water 등)는 Not Significant가 맞는 판정 — 크기(평균 비중)는 따로 표시"],
+  m:["후보: 전체 기간 문서 15건 이상 (MIN_TOTAL_COUNT = 15)","비중_t = 용어 문서수_t / 그 해 문서수_t × 100","자기상관 보정 MK (Hamed & Rao 1998) → τ, p, Sen's slope"], f:["analysis_codes/n_03_rising_terms.py  (load_inputs · build_fdr_tags)","analysis_codes/trend_tags.py  (_mk_stats)"]},
+ {id:"fdr", col:3, row:2.4, g:"stat", k:"code", icon:"🎯", label:"BH-FDR → Rising", sub:"q ≤ 0.05 · τ > 0",
+  d:["수천 개 용어를 한꺼번에 검정하므로 다중검정 보정 (Benjamini–Hochberg)"],
+  m:["Rising: q ≤ 0.05 & τ > 0 · Declining: q ≤ 0.05 & τ < 0","그 밖 Not Significant · p 계산 실패는 판정불가"], f:["analysis_codes/n_03_rising_terms.py  → 02_full_period/trend_tags_unigram_fdr"]},
+
+ {id:"win", col:4, row:1.2, g:"net", k:"code", icon:"🪟", label:"구간별 분석", sub:"n_06 · 5~6년 구간",
+  d:["연도 범위를 5~6년 비중복 구간으로 자동 분할 (2000–2025 → 5구간)","구간마다 연도가 5~6개뿐이라 BH 보정 뒤 Rising이 거의 0 → τ > 0(증가 방향)만으로 고름","'유의하게 부상한 주제'가 아니라 '그 구간에서 증가 방향을 보인 용어의 구조'로 읽어야 함"],
+  m:["나머지 조건은 전체기간과 같음: 15건 이상 · 동시출현 ≥ 2 · association strength · Louvain(res 1.0, seed 0)"], f:["analysis_codes/n_06_windowed_analysis.py  → 04_windowed/<시작>_<끝>/ · windows_summary.csv"]},
+ {id:"net", col:4, row:2.4, g:"net", k:"code", icon:"🕸️", label:"동시출현 네트워크", sub:"association strength",
+  d:["Rising 용어끼리 같은 제목에 함께 나온 횟수로 그래프를 만듦","허브 용어(water 등)가 아무 용어와나 강하게 이어지는 것을 정규화로 보정"],
+  m:["엣지: 동시출현 c_ij ≥ 2 (MIN_COOCCUR)","w_ij = c_ij / √(f_i · f_j) — Van Eck & Waltman (2009), VOSviewer 방식"], f:["analysis_codes/n_04_cluster_network.py  (build_clusters_association)"]},
+ {id:"louvain", col:4, row:3.6, g:"net", k:"code", icon:"🧩", label:"Louvain 커뮤니티", sub:"resolution 1.0 · seed 0",
+  d:["네트워크를 연구주제 커뮤니티로 나누고 커뮤니티별 연도 추이를 계산"],
+  m:["modularity Q = Σ_c [ L_c / m − γ (d_c / 2m)² ],  γ = 1.0","커뮤니티 비중_t = 커뮤니티 용어가 든 문서수_t / 그 해 문서수_t → MK·Sen·최근5−처음5"], f:["analysis_codes/n_04_cluster_network.py","analysis_codes/n_03_rising_terms.py  (build_cluster_trends) → cluster_trends_summary_fdr_assoc.csv"]},
+ {id:"exp", col:4, row:4.8, g:"exp", k:"code", icon:"🧪", label:"수자원 논문판 실험", sub:"archive · 파라미터 근거",
+  d:["수자원 분야 논문 버전에서 조건을 실측으로 정한 기록 (웹앱과 무관)"],
+  m:["원시 횟수 → association strength: modularity 0.192 → 0.300 (군집 5 → 8, 고립 0)","min_cooccur 3은 Q 0.32지만 군집 16~22개로 과분할 → 기각","resolution 0.5~10 훑음: 1.0에서 최대 · seed 안정성 · 최소빈도 10/15/20 민감도"], f:["archive/analysis_experiments/  (seed_stability · weight_scheme_ablation · sensitivity_min_count · explore_louvain_resolution)"]},
+
+ {id:"llm", col:5, row:0.0, g:"ai", k:"ext", icon:"🧠", label:"LLM", sub:"OpenAI · Gemma 4 12B",
+  d:["OpenAI API 또는 서버에서 직접 돌리는 Gemma 4 12B (vLLM, OpenAI 호환)"], m:["Gemma: 입력+출력 8,192 토큰 한도 · API 키 불필요"], f:["config.py  (OPENAI_MODEL · GEMMA_*)","webapp/backend/ai_insights.py  (PROVIDERS)"]},
+ {id:"chat", col:5, row:1.2, g:"ai", k:"code", icon:"💬", label:"AI와 대화하기", sub:"브리핑 · 근거 기반 답변",
+  d:["대화창을 열면 첫 브리핑은 AI 없이 저장된 분석 결과로 채움 (숫자가 틀릴 일 없음)","답변은 [분석 자료]에 있는 것만 사실로 — 일반 지식은 끝의 [참고] 문단에만","통합 화면: 6개 분야 결과를 각각 모아 답함 (분야를 합쳐 다시 분석하지 않음)"],
+  m:["스트리밍 답변 · Gemma는 자료를 줄인 판(compact)을 보내고, 넘치면 오래된 대화부터 뺌","대화 기록은 화면에만 (저장 안 함)"], f:["webapp/backend/chat.py"]},
+ {id:"label", col:5, row:2.4, g:"ai", k:"code", icon:"🏷️", label:"커뮤니티 이름·해설", sub:"ai_insights · ai_labels.json",
+  d:["전체기간: '분석 진행하기' 마지막 단계에서 커뮤니티마다 이름+해설을 만들어 저장 (분석마다 새로)","구간별: Louvain 재실행 때 구성이 바뀔 수 있어 저장하지 않음 — 'AI 해석 보기'를 누를 때만 즉석 생성"],
+  m:["화면에는 'AI 해석(참고용)'으로 표시"], f:["webapp/backend/ai_insights.py  (generate_full_labels · generate_live_insight)"]},
+ {id:"evid", col:5, row:3.6, g:"ai", k:"code", icon:"📚", label:"커뮤니티 근거문서", sub:"n_05 · terms · edges · papers",
+  d:["커뮤니티마다 용어 통계 · 내부/외부 연결 · 해당 논문 목록을 정리 — 웹앱이 읽는 근거","선정 논문은 대표 표본이 아니라 표시용(용어 60 · 제목 12 · 초기/최근 3)"],
+  m:["03_full_period_review/: terms.csv · edges.csv · all_papers.csv · evidence.md · manifest.json(입력 파일 해시)"], f:["analysis_codes/n_05_review_docs.py"]},
+
+ {id:"dash", col:6, row:1.2, g:"ui", k:"code", icon:"🖥️", label:"연구트렌드 대시보드", sub:"Dash · EC2 :8050",
+  d:["데이터셋 현황 · 데이터 수집 · 수집현황 모니터링(15초 갱신) · 분야별 분석(글로벌 트렌드 · 키워드 검색) · 통합(전체 분야)","'데이터 수집' → pipeline_codes, '분석 진행하기' → analysis_codes 실행 (전처리는 dataset이 바뀌었을 때만 다시)"],
+  m:["systemd 서비스로 서버 부팅 때 자동 시작"], f:["webapp/app.py","webapp/backend/services.py · monitor.py","deploy/openalex-webapp.service"]},
+ {id:"user", col:6, row:2.4, g:"ppl", k:"ppl", icon:"👥", label:"연구소 연구자", sub:"6개 연구소",
+  d:["분야별로 떠오르는 연구주제 후보를 보고, 근거 논문까지 확인","AI 이름·해설은 참고용 — 판단 근거는 용어·연결·논문"], f:["README.md  (화면 구성)"]},
+ {id:"viewer", col:6, row:3.6, g:"ui", k:"code", icon:"👁️", label:"결과 뷰어", sub:"Streamlit Cloud · 읽기 전용",
+  d:["이미 만들어진 results/<분야>/만 보여 줌 — 수집·분석·AI 생성 없음","시작할 때 비공개 리포에서 결과 폴더만 받아옴 (원본 dataset/ 제외)"],
+  m:["sparse checkout: results · archive/수자원_논문/results (읽기 전용 토큰은 Streamlit Secrets)"], f:["streamlit_app.py"]},
+];
+// 연결선: a → b = 흐름 방향. label: 넘겨주는 것. bend: 휘는 정도
+const E = [
+ {a:"cfg",b:"router",label:"분야별 ISSN"},{a:"oai",b:"router"},{a:"router",b:"fetch"},{a:"oa",b:"fetch",label:"works (연도별)",lt:0.42},
+ {a:"fetch",b:"inst"},{a:"inst",b:"cache"},{a:"cache",b:"store",label:"parquet"},
+ {a:"store",b:"corpus"},{a:"corpus",b:"terms"},{a:"terms",b:"mk",label:"문서×용어"},{a:"norm",b:"mk"},
+ {a:"mk",b:"hot"},{a:"mk",b:"fdr"},{a:"mk",b:"win",label:"구간마다 τ"},
+ {a:"fdr",b:"net",label:"Rising 용어"},{a:"win",b:"net"},{a:"net",b:"louvain"},{a:"exp",b:"louvain",color:"148,163,184"},
+ {a:"louvain",b:"evid",label:"커뮤니티 · 연도 추이"},{a:"evid",b:"label"},{a:"llm",b:"label",bend:165},{a:"llm",b:"chat"},{a:"label",b:"chat"},
+ {a:"label",b:"dash"},{a:"chat",b:"dash",label:"대화창"},{a:"evid",b:"viewer",label:"results/"},
+ {a:"dash",b:"user"},{a:"viewer",b:"user"},
+];
+const SCN = [
+ {t:"① 저널 수집", ex:"분야별 저널 → 연도별 parquet", s:[
+  {h:[["cfg","router"]], x:"config.py의 분야별 저널 목록 — 목록에 있는 ISSN은 그 분야로 (같은 저널도 분야마다 따로)"},
+  {h:[["oai","router"]], x:"목록에 없는 새 저널: 이름·주요 토픽·최근 제목 20개를 보고 OpenAI가 분야 선택 → ai_journal_assignments.json에 기록, 다시 묻지 않음"},
+  {h:[["router","fetch"],["oa","fetch"]], x:"저널 × 연도(2000–2025)마다 OpenAlex works 수집 — 200건씩, 429면 백오프 재시도, 키 한도가 차면 초기화까지 대기"},
+  {h:[["fetch","inst"]], x:"DOI 없는 논문은 제목 역검색으로 보강(제목 완전 일치 + 연도 일치) → 저자 소속기관(ROR) 파싱"},
+  {h:[["inst","cache"],["cache","store"]], x:"저널_ISSN_연도.parquet로 저장 — 이미 받은 연도는 건너뛰어 중단돼도 이어받기 · 원본은 비공개 리포 openalex-data"},
+ ]},
+ {t:"② 코퍼스·용어", ex:"분석할 논문과 제목 용어", s:[
+  {h:[["store","corpus"]], x:"유형(article·review·letter) → comment/reply 제목 패턴 → 언어(en·ko) 순서로 걸러 filtered_corpus"},
+  {h:[["corpus","terms"]], x:"제목 정제(태그·하이픈·HESS Opinions 접두어) → 유니그램·바이그램 롱테이블 (문서당 중복 제거)"},
+  {h:[["norm","mk"]], x:"정규화 사전(단·복수·철자 통일)은 읽을 때 적용 — 원시 빈도표는 그대로 둠"},
+ ]},
+ {t:"③ Rising 용어", ex:"MK 추세검정 + BH-FDR", s:[
+  {h:[["terms","mk"]], x:"용어마다 연도별 비중(%) = 용어 문서수 / 그 해 문서수 — 전체 기간 15건 이상만 후보"},
+  {h:[], n:["mk"], x:"자기상관 보정 Mann-Kendall(Hamed–Rao)로 τ·p, Sen's slope 계산"},
+  {h:[["mk","fdr"]], x:"Benjamini–Hochberg 보정: q ≤ 0.05 & τ > 0 → Rising, τ < 0 → Declining, 나머지 Not Significant"},
+  {h:[["mk","hot"]], x:"보조 신호(최근 3년 z-score · MACD 버스트)는 추세 라벨과 합치지 않고 따로 표시"},
+ ]},
+ {t:"④ 연구주제 커뮤니티", ex:"동시출현 네트워크 → Louvain", s:[
+  {h:[["fdr","net"]], x:"Rising 용어끼리 같은 제목 동시출현 ≥ 2인 쌍을 잇고, association strength(c_ij / √f_i f_j)로 허브 효과 보정"},
+  {h:[["net","louvain"]], x:"Louvain(resolution 1.0, seed 0)으로 연구주제 커뮤니티 도출 + 커뮤니티별 연도 비중 추이(MK·Sen)"},
+  {h:[["exp","louvain"]], x:"조건의 근거(수자원 논문판 실험): 정규화로 modularity 0.192 → 0.300, min_cooccur 3은 과분할로 기각"},
+  {h:[["louvain","evid"]], x:"커뮤니티마다 용어 통계 · 연결 · 논문 목록 근거문서 (입력 파일 해시 manifest 포함)"},
+ ]},
+ {t:"⑤ 구간별 분석", ex:"5~6년 구간 · 증가 방향", s:[
+  {h:[["mk","win"]], x:"연도 범위를 5~6년 구간으로 자동 분할 (2000–2025 → 5구간), 구간마다 MK τ 계산"},
+  {h:[], n:["win"], x:"구간당 연도 5~6개라 BH 후 Rising이 거의 0 → τ > 0만으로 고름 ('유의한 부상'이 아니라 '증가 방향'으로 읽기)"},
+  {h:[["win","net"]], x:"나머지 조건은 전체기간과 같게 — 동시출현 ≥ 2 · association strength · Louvain"},
+  {h:[], n:["label"], x:"구간별 커뮤니티는 재실행 때 달라질 수 있어 AI 해석을 저장하지 않음 — 누를 때만 즉석 생성"},
+ ]},
+ {t:"⑥ AI 해석·대화", ex:"이름·해설 · 근거 기반 답", s:[
+  {h:[["evid","label"],["llm","label"]], x:"분석 마지막 단계에서 커뮤니티마다 이름+해설 생성 → ai_labels.json (분석마다 새로)"},
+  {h:[["label","dash"]], x:"대시보드에 'AI 해석(참고용)'으로 표시 — 판단 근거는 용어·연결·논문"},
+  {h:[["label","chat"],["llm","chat"]], x:"AI와 대화하기: 첫 브리핑은 AI 없이 저장 결과로, 답변은 [분석 자료]만 사실로 · 일반 지식은 [참고]에만"},
+  {h:[["chat","dash"]], x:"OpenAI 또는 서버의 Gemma 4 12B 선택 — Gemma는 8K 토큰에 맞춰 자료를 줄여 보냄"},
+ ]},
+ {t:"⑦ 화면", ex:"Dash(EC2) · Streamlit 뷰어", s:[
+  {h:[["dash","user"]], x:"대시보드: 데이터셋 현황 · 데이터 수집 · 수집현황 모니터링 · 분야별 분석 · 통합"},
+  {h:[], n:["dash","router","louvain"], x:"'데이터 수집'·'분석 진행하기' 버튼이 수집·분석 파이프라인을 실행 (전처리는 dataset이 바뀌었을 때만 다시)"},
+  {h:[["evid","viewer"],["viewer","user"]], x:"결과 뷰어(Streamlit Cloud): 비공개 리포에서 results/만 받아 읽기 전용으로 보여 줌"},
+ ]},
+];
+
+// ── 기본 보기: 같은 구조(N·E·SCN 연결)에 쉬운 말만 덮어씀 ──
+const BASIC = {
+ cfg:["연구소별 저널 목록","6개 분야 · 68종",["연구소마다 챙겨 볼 학술지 목록 — 이 목록대로 논문을 모음"]],
+ oa:["OpenAlex","공개 논문 정보",["전 세계 학술 논문 정보를 무료로 주는 공개 서비스"]],
+ oai:["AI 분류","새 저널은 AI가 판단",["목록에 없는 학술지는 AI가 어느 연구소 분야인지 골라 줌"]],
+ router:["어느 연구소 몫?","목록 → 없으면 AI",["학술지마다 어느 연구소 자료로 저장할지 정함 (한 번 정하면 기억)"]],
+ fetch:["논문 모으기","연도별로",["학술지 × 연도마다 논문 정보를 받아 옴 — 빠진 DOI도 채움"]],
+ inst:["소속기관 정리","저자 → 기관",["논문 저자가 어느 기관 소속인지 정리"]],
+ cache:["연도별 저장","끊겨도 이어받기",["학술지 1년치씩 파일로 저장 — 이미 받은 연도는 건너뜀"]],
+ store:["자료 보관소","비공개 저장소",["모은 원본과 분석 결과를 코드와 따로 보관"]],
+ corpus:["분석할 논문 고르기","논문·리뷰만",["댓글·답글·사설 같은 글은 빼고 연구 논문만 남김"]],
+ terms:["제목 단어 뽑기","단어·두 단어 구",["논문 제목을 단어로 쪼갬 — 예: drought, machine learning"]],
+ norm:["같은 말 묶기","models → model",["복수형·철자 차이를 하나로 묶음"]],
+ hot:["최근 급등 신호","보조 지표",["최근 몇 년 사이 갑자기 늘어난 단어도 따로 표시"]],
+ mk:["늘고 있나?","연도별 비중 추세",["단어가 든 논문 비중이 해마다 꾸준히 느는지 통계로 확인"]],
+ fdr:["떠오르는 단어","Rising",["우연이 아니라고 볼 만큼 꾸준히 늘어난 단어만 고름"]],
+ win:["시기별로 보기","5~6년씩",["2000년부터 5~6년씩 나눠 그 시기에 늘어난 단어를 봄 (가벼운 기준)"]],
+ net:["단어 연결망","함께 나오는 단어",["같은 제목에 자주 함께 나오는 단어끼리 잇기"]],
+ louvain:["연구주제 묶음","커뮤니티",["가깝게 이어진 단어끼리 묶어 '떠오르는 연구주제' 후보로"]],
+ exp:["기준 정한 실험","수자원 논문판",["어떤 기준이 가장 잘 묶이는지 미리 실험해 정한 기록"]],
+ llm:["AI","OpenAI · 자체 서버",["외부 AI 또는 서버에서 직접 돌리는 AI"]],
+ chat:["AI에게 묻기","분석 결과 기반",["분석 결과를 바탕으로 질문에 답함 — 결과에 없는 얘기는 [참고]로 구분"]],
+ label:["주제 이름 붙이기","AI 해석 (참고용)",["묶음마다 AI가 이름과 설명을 붙임 — 참고용"]],
+ evid:["근거 정리","단어 · 연결 · 논문",["묶음마다 어떤 단어·논문 때문에 그렇게 묶였는지 정리"]],
+ dash:["연구트렌드 대시보드","수집·분석·보기",["논문 모으기부터 분석 결과 보기까지 하는 화면"]],
+ user:["연구소 연구자","6개 연구소",["우리 분야에서 떠오르는 주제를 보고 근거 논문까지 확인"]],
+ viewer:["결과 뷰어","보기 전용",["분석이 끝난 결과만 보여 주는 화면 (Streamlit)"]],
+};
+const BASIC_COLS = ["준비","논문 모으기","단어 정리","늘고 있나?","주제 묶기","근거·AI","화면·사람"];
+const BASIC_SCN = {
+ "① 저널 수집":["연구소별 학술지 목록대로 어느 연구소 몫인지 정함","목록에 없는 새 학술지는 AI가 분야를 골라 줌","학술지 × 연도마다 OpenAlex에서 논문 정보를 받아 옴","빠진 DOI를 채우고 저자 소속기관을 정리","1년치씩 파일로 저장 — 끊겨도 이어받기"],
+ "② 코퍼스·용어":["댓글·답글 같은 글은 빼고 연구 논문만 남김","제목을 단어와 두 단어 구로 쪼갬","복수형·철자 차이를 하나로 묶음"],
+ "③ Rising 용어":["단어마다 해마다 그 단어가 든 논문 비중을 계산","비중이 꾸준히 느는지 통계로 확인","우연이 아닌 단어만 '떠오르는 단어'로","최근 급등한 단어는 따로 표시"],
+ "④ 연구주제 커뮤니티":["같은 제목에 자주 함께 나오는 떠오르는 단어끼리 잇기","가깝게 이어진 단어끼리 묶어 연구주제 후보로","묶는 기준은 미리 실험해서 정함","묶음마다 근거(단어·논문)를 정리"],
+ "⑤ 구간별 분석":["2000년부터 5~6년씩 나눠서 봄","시기마다 늘어난 단어로 (전체 기간보다 가벼운 기준)","같은 방법으로 주제 묶기","시기별 AI 해석은 누를 때만 만듦"],
+ "⑥ AI 해석·대화":["묶음마다 AI가 이름과 설명을 붙임","화면에는 참고용으로 표시","AI에게 물으면 분석 결과를 바탕으로 답함","외부 AI 또는 자체 서버 AI 중 선택"],
+ "⑦ 화면":["대시보드에서 모으기·분석·결과 보기","버튼 하나로 모으기·분석 실행","결과 뷰어로 누구나 결과만 보기"],
+};
+const BASIC_EX = {"① 저널 수집":"학술지 논문 모으기","② 코퍼스·용어":"제목 단어 정리","③ Rising 용어":"꾸준히 느는 단어 찾기","④ 연구주제 커뮤니티":"단어를 주제로 묶기","⑤ 구간별 분석":"시기별로 다시 보기","⑥ AI 해석·대화":"이름 붙이고 묻고 답하기","⑦ 화면":"대시보드와 뷰어"};
+N.forEach(n => { const b = BASIC[n.id]; if (b) { n.label = b[0]; n.sub = b[1]; n.d = b[2]; } delete n.m; });
+COLS.forEach((c, i) => { c[0] = BASIC_COLS[i]; });
+E.forEach(e => { delete e.label; });
+SCN.forEach(sc => { const t = BASIC_SCN[sc.t]; if (t) sc.s.forEach((st, i) => { if (t[i]) st.x = t[i]; }); if (BASIC_EX[sc.t]) sc.ex = BASIC_EX[sc.t]; });
+Object.assign(KIND, {code:"코드가 저장소에 있음", ext:"자료·외부 서비스", ppl:"사람"});
+
+// ───────────────────────── 준비 ─────────────────────────
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const byId = Object.fromEntries(N.map(n => [n.id, n]));
+N.forEach(n => { n.x = COLS[n.col][1]; n.y = RY + n.row * 124; n.r = n.k === "ext" ? 34 : (n.k === "ppl" ? 40 : 44); });
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function resample(raw, n){ const cum = [0]; for (let i = 1; i < raw.length; i++) cum.push(cum[i-1] + Math.hypot(raw[i][0]-raw[i-1][0], raw[i][1]-raw[i-1][1]));
+  const L = cum[cum.length-1] || 1, out = []; let j = 0;
+  for (let k = 0; k < n; k++){ const d = L * k / (n - 1); while (j < cum.length - 2 && cum[j+1] < d) j++;
+    const seg = (cum[j+1] - cum[j]) || 1, u = Math.min(1, (d - cum[j]) / seg); out.push([raw[j][0] + (raw[j+1][0]-raw[j][0]) * u, raw[j][1] + (raw[j+1][1]-raw[j][1]) * u]); }
+  return out; }
+function curvePts(a, b, bend){ const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+  const k = bend === undefined ? 0.08 * L : bend; const mx = (a.x + b.x) / 2 + nx * k, my = (a.y + b.y) / 2 + ny * k, raw = [];
+  for (let i = 0; i <= 40; i++){ const t = i / 40, u = 1 - t; raw.push([u*u*a.x + 2*u*t*mx + t*t*b.x, u*u*a.y + 2*u*t*my + t*t*b.y]); } return raw; }
+function lanePts(a, b, Ly){ const rr = 34, raw = [], s = Math.sign(b.x - a.x) || 1, va = Math.sign(Ly - a.y) || 1, vb = Math.sign(Ly - b.y) || 1;
+  const seg = (x0, y0, x1, y1, n) => { for (let i = 0; i <= n; i++) raw.push([x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]); };
+  const q = (p0, c, p1, n) => { for (let i = 1; i <= n; i++){ const t = i / n, u = 1 - t; raw.push([u*u*p0[0] + 2*u*t*c[0] + t*t*p1[0], u*u*p0[1] + 2*u*t*c[1] + t*t*p1[1]]); } };
+  seg(a.x, a.y, a.x, Ly - va * rr, 12); q([a.x, Ly - va * rr], [a.x, Ly], [a.x + s * rr, Ly], 8);
+  seg(a.x + s * rr, Ly, b.x - s * rr, Ly, 40); q([b.x - s * rr, Ly], [b.x, Ly], [b.x, Ly - vb * rr], 8); seg(b.x, Ly - vb * rr, b.x, b.y, 12); return raw; }
+E.forEach(e => { const a = byId[e.a], b = byId[e.b]; if (!a || !b) { console.warn("flow: 없는 노드", e); return; }
+  e.pts = resample(e.lane ? lanePts(a, b, e.lane) : curvePts(a, b, e.bend), 64); });
+function findEdge(x, y){ for (const e of E){ if (e.a === x && e.b === y) return {e, dir: 1}; if (e.a === y && e.b === x) return {e, dir: -1}; }
+  console.warn("flow: 연결선 없음", x, "→", y); return null; }
+// 재생 단계를 미리 연결선에 묶어 둠 (없는 연결은 경고)
+SCN.forEach(sc => sc.s.forEach(st => { st.hops = (st.h || []).map(([x, y]) => findEdge(x, y)).filter(Boolean);
+  st.nodes = new Set([...(st.n || []), ...(st.h || []).flat()]); }));
+function pointAt(e, t){ const P = e.pts, f = Math.max(0, Math.min(1, t)) * (P.length - 1), i = Math.min(P.length - 2, Math.floor(f)), u = f - i;
+  return [P[i][0] + (P[i+1][0] - P[i][0]) * u, P[i][1] + (P[i+1][1] - P[i][1]) * u]; }
+
+// ───────────────────────── 재생 상태 ─────────────────────────
+let cur = {s: 0, k: 0}, auto = true, paused = false, stepAt = performance.now(), hold = 0;
+const STEP_MS = 3200, END_MS = 1800;
+let actE = new Map(), actN = new Set();   // 지금 단계의 연결선(방향)·노드
+let packets = [];
+function applyStep(){ const st = SCN[cur.s].s[cur.k]; actE = new Map(); for (const h of st.hops) actE.set(h.e, h.dir); actN = st.nodes;
+  for (const h of st.hops) for (let i = 0; i < 4; i++) packets.push({e: h.e, dir: h.dir, t: -i * 0.08, sp: 0.55 + Math.random() * 0.15, big: 1});
+  stepAt = performance.now(); hold = 0; renderPanel(); }
+function go(s, k, keepAuto){ cur = {s, k}; if (!keepAuto) setAuto(false); applyStep(); }
+function nextStep(){ const n = SCN[cur.s].s.length; if (cur.k < n - 1) cur.k++; else { cur.s = (cur.s + 1) % SCN.length; cur.k = 0; } applyStep(); }
+function prevStep(){ if (cur.k > 0) cur.k--; else { cur.s = (cur.s - 1 + SCN.length) % SCN.length; cur.k = SCN[cur.s].s.length - 1; } applyStep(); }
+function setAuto(v){ auto = v; document.getElementById("play").textContent = auto ? "⏸ 자동 재생 중" : "▶ 자동 재생"; stepAt = performance.now(); }
+
+function renderPanel(){
+  const sc = SCN[cur.s];
+  document.getElementById("chips").innerHTML = SCN.map((x, i) => `<span class="sc${i === cur.s ? " on" : ""}" data-i="${i}">${esc(x.t)}</span>`).join("");
+  document.getElementById("sttl").textContent = sc.t; document.getElementById("sex").textContent = sc.ex;
+  document.getElementById("steps").innerHTML = sc.s.map((x, i) => `<li class="${i === cur.k ? "on" : i < cur.k ? "done" : ""}" data-k="${i}">${esc(x.x)}</li>`).join("");
+  document.getElementById("cap").innerHTML = `<span class="n">${esc(sc.t)} · ${cur.k + 1}/${sc.s.length}</span>${esc(sc.s[cur.k].x)}`;
+  const on = document.querySelector("#steps li.on"); if (on && on.scrollIntoView) on.scrollIntoView({block: "nearest"});
+}
+document.getElementById("chips").addEventListener("click", ev => { const i = ev.target.dataset && ev.target.dataset.i; if (i !== undefined) go(+i, 0, true); });
+document.getElementById("steps").addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) go(cur.s, +li.dataset.k, false); });
+document.getElementById("prev").onclick = () => { setAuto(false); prevStep(); };
+document.getElementById("next").onclick = () => { setAuto(false); nextStep(); };
+document.getElementById("play").onclick = () => setAuto(!auto);
+
+function renderKpis(){
+  document.getElementById("kpis").innerHTML = [["무엇", "떠오르는 연구주제 찾기"], ["자료", "OpenAlex 논문"], ["<span class='dot'></span>구조도", "실시간 아님"]].map(([a, b]) => `<span class="chip">${a} <b>${b}</b></span>`).join("");
+}
+
+// ───────────────────────── 카메라 ─────────────────────────
+let W = 0, H = 0, DPR = Math.max(1, window.devicePixelRatio || 1), zoom = 1, panX = 0, panY = 0;
+let showPanel = true;
+function resize(){ const r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * DPR; cv.height = H * DPR; }
+window.addEventListener("resize", resize); document.addEventListener("fullscreenchange", () => setTimeout(resize, 60));
+// 그래프 자리: 위 제목·단추 95px, 아래 설명 줄·범례 92px, 넓은 화면이면 오른쪽 재생 패널(330px)을 비켜 둔다
+function area(){ const aw = (showPanel && W > 900) ? W - 330 : W; return {aw, ah: H - 187}; }
+function tf(t){ const s = Math.min(area().aw / VW, area().ah / VH) * zoom; const {aw, ah} = area(); const drift = paused ? 0 : 1;
+  const ox = (aw - VW * s) / 2 + 8 + panX + Math.sin(t * 0.07) * 5 * drift;
+  const oy = 95 + (ah - VH * s) / 2 + panY + Math.cos(t * 0.05) * 3 * drift; return {s, ox, oy}; }
+
+// ───────────────────────── 그리기 ─────────────────────────
+function hex(x, y, r){ ctx.beginPath(); for (let i = 0; i < 6; i++){ const ang = Math.PI / 3 * i; const px = x + r * Math.cos(ang), py = y + r * Math.sin(ang);
+  i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
+function beam(e, alpha, w0, flip){ const P = e.pts, n = P.length, L = [], Rr = [];
+  for (let i = 0; i < n; i++){ const p = P[i], q = P[Math.min(n - 1, i + 1)], o = P[Math.max(0, i - 1)]; let dx = q[0] - o[0], dy = q[1] - o[1];
+    const l = Math.hypot(dx, dy) || 1; dx /= l; dy /= l; const tt = flip ? 1 - i / (n - 1) : i / (n - 1); const w = w0 * (1 - tt) + 0.9 * tt;
+    L.push([p[0] - dy * w, p[1] + dx * w]); Rr.push([p[0] + dy * w, p[1] - dx * w]); }
+  const a = byId[e.a], b = byId[e.b], g = ctx.createLinearGradient(a.x, a.y, b.x, b.y); g.addColorStop(0, C(a)); g.addColorStop(1, C(b));
+  ctx.globalAlpha = alpha; ctx.fillStyle = g; ctx.beginPath(); L.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]));
+  for (let i = Rr.length - 1; i >= 0; i--) ctx.lineTo(Rr[i][0], Rr[i][1]); ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1; }
+function trace(e){ ctx.beginPath(); e.pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); }
+const stars = Array.from({length: 140}, () => ({x: Math.random(), y: Math.random(), z: Math.random() * 0.8 + 0.2}));
+
+function draw(ms){
+  const t = ms / 1000; ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H);
+  // 자동 재생
+  if (auto && !paused){ const last = cur.k === SCN[cur.s].s.length - 1; if (ms - stepAt > STEP_MS + (last ? END_MS : 0)) nextStep(); }
+  for (const s of stars){ const x = (s.x * W + t * 6 * s.z) % W, y = s.y * H; ctx.globalAlpha = 0.25 + 0.5 * s.z * (0.6 + 0.4 * Math.sin(t * s.z * 2 + s.x * 9));
+    ctx.fillStyle = "#bcd3f5"; ctx.fillRect(x, y, s.z * 1.6, s.z * 1.6); } ctx.globalAlpha = 1;
+  const {s, ox, oy} = tf(t); ctx.setTransform(DPR * s, 0, 0, DPR * s, DPR * ox, DPR * oy);
+  // 단계 머리글·안내선
+  ctx.textAlign = "center"; ctx.font = "700 17px 'Noto Sans KR','Malgun Gothic',sans-serif";
+  for (const [name, x] of COLS){ ctx.strokeStyle = "rgba(140,170,215,.10)"; ctx.lineWidth = 1; ctx.setLineDash([4, 8]);
+    ctx.beginPath(); ctx.moveTo(x, 50); ctx.lineTo(x, VH - 40); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = "rgba(170,195,230,.75)"; ctx.fillText(name, x, 36); }
+  const focus = actE.size > 0 || actN.size > 0;
+  // 빔
+  for (const e of E){ if (!e.pts) continue; const on = actE.has(e);
+    if (e.ghost && !on) continue;
+    if (e.ghost || e.lane || e.plan){ ctx.setLineDash(e.lane ? [8, 6] : [6, 7]); ctx.lineWidth = on ? 2.6 : 1.8;
+      ctx.strokeStyle = e.color ? `rgba(${e.color},${on ? .95 : .45})` : "rgba(196,181,253,.9)"; trace(e); ctx.stroke(); ctx.setLineDash([]); }
+    else beam(e, on ? 0.75 : (focus ? 0.13 : 0.3), on ? 7 : 4.2, false);
+    if (on){ ctx.save(); ctx.setLineDash([3, 11]); ctx.lineDashOffset = -t * 38 * actE.get(e); ctx.lineWidth = 2; ctx.strokeStyle = "rgba(255,255,255,.75)"; trace(e); ctx.stroke(); ctx.restore(); }
+    if (e.label && (!e.ghost || on)){ const [x, y] = pointAt(e, e.lt || 0.5); ctx.font = "600 12.5px 'Noto Sans KR','Malgun Gothic',sans-serif";
+      ctx.fillStyle = e.color ? `rgba(${e.color},.95)` : "rgba(196,215,240,.8)"; ctx.lineJoin = "round"; ctx.lineWidth = 4; ctx.strokeStyle = "rgba(6,18,40,.85)"; ctx.strokeText(e.label, x, y - 9); ctx.fillText(e.label, x, y - 9); }
+  }
+  // 점 (평소: 희미하게 자연 방향 / 재생: 단계 방향으로 밝게)
+  if (!paused){
+    for (const e of E){ if (!e.pts || e.ghost || e.plan) continue; if (Math.random() < (focus ? 0.05 : 0.22) / 60) packets.push({e, dir: 1, t: 0, sp: 0.16 + Math.random() * 0.06, big: 0}); }
+    for (const [e, dir] of actE) if (Math.random() < 2.4 / 60) packets.push({e, dir, t: 0, sp: 0.42 + Math.random() * 0.12, big: 1});
+  }
+  packets = packets.filter(p => p.t <= 1);
+  for (const p of packets){ if (!paused) p.t += p.sp / 60; if (p.t < 0) continue;
+    const [x, y] = pointAt(p.e, p.dir > 0 ? p.t : 1 - p.t); const src = byId[p.dir > 0 ? p.e.a : p.e.b]; const rr = p.big ? 6.5 : 3.8;
+    const g = ctx.createRadialGradient(x, y, 0, x, y, rr * 2.4); g.addColorStop(0, "#ffffff"); g.addColorStop(0.25, C(src)); g.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.globalAlpha = p.big ? 1 : (focus ? 0.35 : 0.7); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, rr * 2.4, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }
+  // 노드
+  for (const n of N){ const col = C(n), on = actN.has(n.id), dim = focus && !on;
+    const base_a = n.k === "plan" ? 0.6 : 1; ctx.globalAlpha = dim ? 0.5 * base_a : base_a;
+    ctx.save(); ctx.shadowColor = col; ctx.shadowBlur = on ? 34 + 10 * Math.sin(t * 4) : 14;
+    hex(n.x, n.y, n.r); const g = ctx.createLinearGradient(n.x, n.y - n.r, n.x, n.y + n.r); g.addColorStop(0, "#16345f"); g.addColorStop(1, "#0a1d3c");
+    ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    ctx.lineWidth = 2.2; ctx.strokeStyle = col; ctx.setLineDash(n.k === "batch" || n.k === "opt" || n.k === "doc" || n.k === "plan" ? [6, 5] : n.k === "ext" ? [2, 4] : []); hex(n.x, n.y, n.r); ctx.stroke(); ctx.setLineDash([]);
+    if (on){ const ph = (t * 0.8) % 1; ctx.lineWidth = 2.6; ctx.strokeStyle = "#e0f2fe"; ctx.globalAlpha = 1 - ph; hex(n.x, n.y, n.r + 6 + 7 * ph); ctx.stroke(); ctx.globalAlpha = 1; }
+    else { ctx.lineWidth = 1.4; ctx.strokeStyle = col; ctx.globalAlpha = dim ? 0.2 : 0.4; hex(n.x, n.y, n.r + 6); ctx.stroke(); ctx.globalAlpha = dim ? 0.5 * base_a : base_a; }
+    ctx.font = (n.r < 40 ? 26 : 32) + "px 'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(n.icon, n.x, n.y + 1); ctx.textBaseline = "alphabetic";
+    if (n.llm){ const bx = n.x + n.r * 0.78, by = n.y - n.r * 0.72; ctx.fillStyle = "#4c1d95"; ctx.beginPath(); ctx.arc(bx, by, 10, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = "#c4b5fd"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.fillStyle = "#ede9fe"; ctx.font = "700 13px sans-serif"; ctx.textBaseline = "middle"; ctx.fillText("✦", bx, by + 1); ctx.textBaseline = "alphabetic"; }
+    ctx.lineJoin = "round"; ctx.strokeStyle = "rgba(6,18,40,.88)";   // 글자 뒤 어두운 테두리: 지나가는 선이 글자를 가리지 않게
+    ctx.fillStyle = "#eaf2ff"; ctx.font = "800 18px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 5; ctx.strokeText(n.label, n.x, n.y + n.r + 23); ctx.fillText(n.label, n.x, n.y + n.r + 23);
+    if (n.sub){ const sb = n.sub.length > 22 ? n.sub.slice(0, 21) + "…" : n.sub; ctx.fillStyle = "#9fb6d8"; ctx.font = "500 14px 'Noto Sans KR','Malgun Gothic',sans-serif"; ctx.lineWidth = 4; ctx.strokeText(sb, n.x, n.y + n.r + 42); ctx.fillText(sb, n.x, n.y + n.r + 42); }
+    ctx.globalAlpha = 1;
+  }
+  requestAnimationFrame(draw);
+}
+
+// ───────────────────────── 마우스 ─────────────────────────
+let drag = null; const tip = document.getElementById("tip");
+function hit(mx, my){ const {s, ox, oy} = tf(performance.now() / 1000); const x = (mx - ox) / s, y = (my - oy) / s;
+  return N.find(n => Math.hypot(n.x - x, n.y - y) < n.r + 8); }
+cv.addEventListener("mousedown", e => { drag = {x: e.clientX, y: e.clientY, px: panX, py: panY, moved: false}; });
+window.addEventListener("mouseup", e => { if (drag && !drag.moved){ const r = cv.getBoundingClientRect(); const n = hit(e.clientX - r.left, e.clientY - r.top); if (n) showCard(n); } drag = null; });
+cv.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); const mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (drag){ const dx = e.clientX - drag.x, dy = e.clientY - drag.y; if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true; panX = drag.px + dx; panY = drag.py + dy; tip.style.display = "none"; return; }
+  const n = hit(mx, my); if (!n){ tip.style.display = "none"; return; }
+  tip.innerHTML = `<b>${n.icon} ${esc(n.label)}</b>${n.llm ? " <span style='color:#c4b5fd'>✦ LLM</span>" : ""}<br>${esc(n.sub)}<br><span style="color:#8ea6c8">${KIND[n.k]} · 클릭하면 자세히</span>`;
+  tip.style.display = "block"; tip.style.left = Math.min(mx + 14, W - 290) + "px"; tip.style.top = (my + 12) + "px"; });
+cv.addEventListener("wheel", e => { e.preventDefault(); zoom = Math.min(2.4, Math.max(0.6, zoom * (e.deltaY < 0 ? 1.08 : 0.93))); }, {passive: false});
+cv.addEventListener("dblclick", () => { zoom = 1; panX = panY = 0; });
+function showCard(n){
+  const lab = (e, other) => byId[other].label + (e.label && !e.lane ? ` (${e.label})` : "");
+  const ins = E.filter(e => e.b === n.id && !e.ghost).map(e => lab(e, e.a)), outs = E.filter(e => e.a === n.id && !e.ghost).map(e => lab(e, e.b));
+  let h = `<h3>${n.icon} ${esc(n.label)}</h3><span class="bd">${COLS[n.col][0]}</span><span class="bd">${KIND[n.k]}</span>${n.llm ? '<span class="bd llm">✦ LLM 사용</span>' : ""}`;
+  h += `<div style="color:#9fb6d8">${esc(n.sub)}</div><ul>${n.d.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  if (ins.length || outs.length) h += `<div class="h">연결</div>` + (ins.length ? `<div>← ${ins.map(esc).join(" · ")}</div>` : "") + (outs.length ? `<div>→ ${outs.map(esc).join(" · ")}</div>` : "");
+  if (n.m && n.m.length) h += `<div class="h">사양 · 수식</div>${n.m.map(x => `<div style="margin:2px 0"><code>${esc(x)}</code></div>`).join("")}`;
+  h += `<div class="h">코드</div>${n.f.map(x => `<div><code>${esc(x)}</code></div>`).join("")}`;
+  document.getElementById("cb").innerHTML = h; document.getElementById("card").style.display = "block"; }
+document.getElementById("cx").onclick = () => document.getElementById("card").style.display = "none";
+document.getElementById("fs").onclick = () => { const w = document.getElementById("wrap"); document.fullscreenElement ? document.exitFullscreen() : w.requestFullscreen && w.requestFullscreen(); };
+document.getElementById("rs").onclick = () => { zoom = 1; panX = panY = 0; };
+document.getElementById("pa").onclick = e => { paused = !paused; e.target.textContent = paused ? "▶ 움직임 재생" : "⏸ 정지"; stepAt = performance.now(); };
+function setPanel(v){ showPanel = v; document.getElementById("panel").style.display = v ? "block" : "none"; document.getElementById("pn").textContent = v ? "☰ 재생 패널 숨기기" : "☰ 재생 패널 보기"; }
+document.getElementById("pn").onclick = () => setPanel(!showPanel);
+
+resize(); if (W < 760) setPanel(false); renderKpis(); applyStep(); requestAnimationFrame(draw);
+</script></body></html>
