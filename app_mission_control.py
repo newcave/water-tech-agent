@@ -43,7 +43,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.13.1 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.13.2 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -169,6 +169,12 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 .kpi .k-lab {font-size:.78rem; color:#64748B; font-weight:500;}
 .kpi .k-val {font-size:1.7rem; font-weight:900; color:#17427C; line-height:1.2;}
 .kpi .k-sub {font-size:.74rem; color:#94A3B8; margin-top:2px;}
+.lens-desc {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:2px 0 10px;}   /* 보는 관점 설명 (v3.13.2) */
+.lens-desc .ld {font-size:.74rem; line-height:1.4; color:#94A3B8; padding:6px 9px; border-radius:8px; border:1px solid transparent;}
+.lens-desc .ld b {display:block; font-size:.78rem; color:#64748B; margin-bottom:1px;}
+.lens-desc .ld.on {background:#EAF1FA; border-color:#C9DAF0; color:#475569;}
+.lens-desc .ld.on b {color:#17427C;}
+@media (max-width:900px) {.lens-desc {grid-template-columns:repeat(2,minmax(0,1fr));}}
 .kpis.k7 {display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px;}   /* 7개 연구소 한 줄 (v3.12) */
 .kpis.k7 .kpi {padding:12px 12px; border-left-width:5px;}
 .kpis.k7 .k-val {font-size:1.45rem;}
@@ -2027,19 +2033,27 @@ elif page == KN_PAGE:
                     nb = [t for t in btouch if not t["minor"]]
                     kb_ = [("국내 상승 구", f"{bmeta.get('n_rising', 0)}", f"검정 {bmeta.get('tested', 0):,}개 중 · {scope_label}", NAVY),
                            ("구로만 보이는 신호", f"{sum(1 for t in nb if t['novel'])}", "두 단어 모두 단어로는 상승 아님", "#7C3AED"),
-                           ("우리 문헌과 접점", f"{sum(1 for t in nb if t['n_inst'])}", f"{iname} 대상·문제에 두 단어가 함께", col),
-                           ("아직 없는 구", f"{sum(1 for t in nb if not t['n_inst'])}", "우리 문헌 0편 — 공백 후보", AMBER)]
+                           ("K-water 강점기술", f"{sum(1 for t in nb if t['n_inst'])}", f"{iname} 문헌 대상·문제에 두 단어가 함께", col),
+                           ("K-water 공백기술", f"{sum(1 for t in nb if not t['n_inst'])}", "연구소 문헌 0편 — 공백 후보", AMBER)]
                     st.markdown('<div class="kpis">' + "".join(
                         f'<div class="kpi" style="border-left-color:{c}"><div class="k-val" style="font-size:1.35rem">{v}</div>'
                         f'<div class="k-lab">{l}</div><div class="k-sub">{s_}</div></div>' for l, v, s_, c in kb_) + "</div>",
                         unsafe_allow_html=True)
-                    BLENS = {"국내 상승 순": "국내 학회지에서 비중이 가장 가파르게 오르는 구",
-                             "신흥 접점": "국내 최근 급증(최근3년/과거 2배 이상)인데 우리 문헌은 1–6편 — 초기 신호",
-                             "공백": "국내에서는 오르는데 우리 문헌에는 아직 없는 구 (‘기계 학습’ 같은 방법 구는 우리 쪽 글이 "
-                                     "개선 대상·문제만 담아 원래 잘 안 걸립니다 — 대상 구 위주로 보세요)",
-                             "우리 접점 순": "우리 문헌에 많이 나오는 순 (연구소가 이미 하는 것 확인용)"}
-                    c1_, c2_, c3_, c4_ = st.columns([4, 2, 2, 2])
-                    lens = c1_.segmented_control("보는 관점", list(BLENS), default="국내 상승 순", key="kn_bi_lens") or "국내 상승 순"
+                    # 보는 관점 4가지 (v3.13.2 사용자 지정 이름) — 내부 키: main·new·gap·strong
+                    BLENS = {"main": ("전체 흐름 (Main)", "국내 학회지에서 비중이 가장 가파르게 오르는 구 · 국내 기울기 순"),
+                             "new": ("신규 상승", "국내 최근 3년 비중이 예전의 2배 이상(또는 처음 등장)인데 "
+                                                "연구소 문헌은 1–6편 — 막 떠오르는 초기 신호 · 배율 순"),
+                             "gap": ("K-water 공백기술", "국내에서는 오르는데 연구소 문헌에는 아직 없는 구 · 국내 기울기 순 "
+                                                       "(‘기계 학습’ 같은 방법 구는 원래 잘 안 걸려 대상 구 위주로)"),
+                             "strong": ("K-water 강점기술", "연구소 문헌에 많이 나오면서 국내에서도 오르는 구 · 문헌 수 순")}
+                    if st.session_state.get("kn_bi_lens") not in (None, *BLENS):     # 예전 이름으로 저장된 선택은 지움
+                        st.session_state.pop("kn_bi_lens")
+                    lens = st.segmented_control("보는 관점", list(BLENS), format_func=lambda k: BLENS[k][0],
+                                                default="main", key="kn_bi_lens") or "main"       # 네 버튼이 다 보이게 한 줄 전체
+                    st.markdown('<div class="lens-desc">' + "".join(          # 관점별 설명 (작은 글씨, 고른 것만 진하게)
+                        f'<div class="ld{" on" if k == lens else ""}"><b>{nm}</b><span>{ds}</span></div>'
+                        for k, (nm, ds) in BLENS.items()) + "</div>", unsafe_allow_html=True)
+                    c2_, c3_, c4_ = st.columns(3)
                     only_novel = c2_.toggle("구로만 보이는 신호만", value=False, key="kn_bi_novel")
                     with_minor = c3_.toggle("저빈도 포함", value=False, key="kn_bi_minor",
                                             help="국내 최근 3년 5편 미만인 구도 보기")
@@ -2047,17 +2061,16 @@ elif page == KN_PAGE:
                     water_bi = c4_.toggle("수자원학회 쪽 구만", value=True, key="kn_bi_water", disabled=not has_j11,
                                           help="수자원학회+토목학회 범위에서, 수자원학회 논문에서 나온 비율이 20% 미만인 구"
                                                "(콘크리트·포장 등 토목 구조 분야)를 숨깁니다.") if has_j11 else False
-                    st.caption(f"**{lens}** — {BLENS[lens]}")
                     pool = [t for t in btouch if (with_minor or not t["minor"]) and (not only_novel or t["novel"])
                             and (not water_bi or (t.get("j11_share") or 0) >= 0.2)]
                     LIFT = lambda t: t["lift"] if t["lift"] is not None else 999.0       # 과거 0편 → '신규'(최상위)
                     LTXT = lambda t: "신규" if t["lift"] is None else f"{t['lift']}배"
-                    if lens == "국내 상승 순":
+                    if lens == "main":
                         view = sorted(pool, key=lambda t: -t["sen"])
-                    elif lens == "신흥 접점":
+                    elif lens == "new":
                         view = sorted([t for t in pool if 1 <= t["n_inst"] <= 6 and LIFT(t) >= 2],
                                       key=lambda t: (-LIFT(t), -t["sen"]))
-                    elif lens == "공백":
+                    elif lens == "gap":
                         view = sorted([t for t in pool if not t["n_inst"]], key=lambda t: -t["sen"])
                     else:
                         view = sorted([t for t in pool if t["n_inst"]], key=lambda t: (-t["n_inst"], -t["sen"]))
@@ -2067,10 +2080,10 @@ elif page == KN_PAGE:
                         a_, b_ = st.columns([3, 2])
                         with a_:
                             rr = view[:20][::-1]
-                            xval = {"국내 상승 순": lambda t: t["sen"] * 1000, "공백": lambda t: t["sen"] * 1000,
-                                    "신흥 접점": lambda t: min(LIFT(t), 60), "우리 접점 순": lambda t: t["n_inst"]}[lens]
-                            xlab = {"국내 상승 순": "국내 기울기 (‰/년)", "공백": "국내 기울기 (‰/년)",
-                                    "신흥 접점": "최근3년 ÷ 과거 비중 (배, 과거 0편 '신규'는 60으로 표시)", "우리 접점 순": "우리 연구소 문헌 수"}[lens]
+                            xval = {"main": lambda t: t["sen"] * 1000, "gap": lambda t: t["sen"] * 1000,
+                                    "new": lambda t: min(LIFT(t), 60), "strong": lambda t: t["n_inst"]}[lens]
+                            xlab = {"main": "국내 기울기 (‰/년)", "gap": "국내 기울기 (‰/년)",
+                                    "new": "최근3년 ÷ 과거 비중 (배, 과거 0편 '신규'는 60으로 표시)", "strong": "연구소 문헌 수"}[lens]
                             fig = go.Figure(go.Bar(
                                 x=[xval(t) for t in rr], y=[t["term"] for t in rr], orientation="h",
                                 marker=dict(color=["#7C3AED" if t["novel"] else col for t in rr],
