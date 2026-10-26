@@ -41,7 +41,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10.2 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.10.3 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -121,8 +121,10 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
   {background:rgba(255,255,255,.30); font-weight:700;}
 [data-testid="stSidebar"] hr {border-color:rgba(255,255,255,.3);}
 .side-brand {margin:2px 0 16px;}
-.side-brand .sb-eb {font-size:.72rem; font-weight:700; letter-spacing:.16em; opacity:.85; line-height:1.4;}
+.side-brand .sb-top {display:flex; align-items:center; gap:10px;}
+.side-brand .sb-mark {flex-shrink:0;}
 .side-brand .sb-name {font-size:1.32rem; font-weight:900; letter-spacing:-.3px; line-height:1.3; white-space:nowrap;}
+.side-brand .sb-sub {font-size:.8rem; opacity:.85; margin-top:6px; line-height:1.4; white-space:nowrap;}
 .side-sep {display:flex; align-items:center; gap:8px; margin:6px 0 0; font-size:.72rem;
   letter-spacing:.12em; opacity:.85;}
 .side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
@@ -461,8 +463,15 @@ last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 # ═══════════════════════ 사이드바 ═══════════════════════
 with st.sidebar:
     # 사이드바 이름: 2단 워드마크 (머리띠에 'Water Co-Scientist 에이전트 관제센터'가 있어 짧게 · v3.10.1)
-    st.markdown('<div class="side-brand"><div class="sb-eb">K-water 연구원</div>'
-                '<div class="sb-name">물벗 : R&amp;D 에이전트</div></div>', unsafe_allow_html=True)
+    # 로고 마크(물방울 속 연결된 점 = 함께 일하는 에이전트) + K-water연구원 / 아래 작은 글씨 '물벗 : R&D 에이전트' (v3.10.3)
+    st.markdown('<div class="side-brand"><div class="sb-top">'
+                '<svg class="sb-mark" width="30" height="36" viewBox="0 0 34 40" role="img" aria-label="물벗 로고">'
+                '<path d="M17 2 C17 2 3 18 3 26 a14 14 0 0 0 28 0 C31 18 17 2 17 2Z" fill="#FFFFFF" fill-opacity=".95"/>'
+                '<g stroke="#17549A" stroke-width="2" fill="#17549A"><line x1="11" y1="28" x2="17" y2="20"/>'
+                '<line x1="17" y1="20" x2="23" y2="28"/><line x1="11" y1="28" x2="23" y2="28"/>'
+                '<circle cx="11" cy="28" r="2.6"/><circle cx="17" cy="20" r="2.6"/><circle cx="23" cy="28" r="2.6"/></g></svg>'
+                '<span class="sb-name">K-water연구원</span></div>'
+                '<div class="sb-sub">물벗 : R&amp;D 에이전트</div></div>', unsafe_allow_html=True)
     PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", OA_PAGE, "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
