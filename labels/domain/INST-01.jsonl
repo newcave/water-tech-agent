@@ -1948,3 +1948,4 @@
 {"id": "W7223416828", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전기 산업의 효율적인 운영", "problem": "전기 산업의 다양한 요구를 충족시키기 위한 펌프 솔루션 제공"}
 {"id": "W7223375633", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토사 유출 방지 구조물", "problem": "지하수 압력으로 인한 토사 유출 문제 해결"}
 {"id": "W7214142173", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 수력 발전 시스템", "problem": "유연성 요구 증가에 따른 현대화 필요성 해결"}
+{"id": "W7223467255", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캐나다의 도시 물 분배 시스템에서의 물 수요", "problem": "12시간 앞선 물 수요 예측"}

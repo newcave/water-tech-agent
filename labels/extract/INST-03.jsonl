@@ -4580,3 +4580,10 @@
 {"id": "W7223383463", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7223394000", "object": "북부 지역의 음용수 시스템", "problem": "DBP 형성의 취약성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7223306835", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS 제거 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223446465", "object": "Wistar 쥐의 지질 프로필과 인슐린 저항성", "problem": "Gnetum africanum의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223462634", "object": "미세아교세포", "problem": "과도한 과당 섭취로 인한 불안 유발 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223463572", "object": "서부 이리 호수의 미세시안 독소 위험", "problem": "미세시안 독소 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223465329", "object": "5세 이하 아동의 급성 설사", "problem": "급성 설사와 관련된 요인 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223281498", "object": "유제품 산업의 폐수", "problem": "유제품 산업 폐수의 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223453947", "object": "미국의 음용수 및 폐수 운영자 인증에서 사이버 보안", "problem": "사이버 보안 교육 요구 사항 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223445685", "object": "Kirkuk의 음용수 원천", "problem": "중금속 오염 해결", "relevant": true, "model": "gpt-4o-mini"}

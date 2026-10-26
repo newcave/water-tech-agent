@@ -1626,3 +1626,5 @@
 {"id": "W7223324450", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "관개 수로의 낙차 구조물", "problem": "자동으로 낙차 구조물 식별하기"}
 {"id": "W7223311265", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 전력 시스템의 주파수 및 전압 안정성", "problem": "주파수 및 전압 안정성 문제 해결"}
 {"id": "W7223320232", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 프로젝트의 디지털 인수 관리", "problem": "모델 정보 단절 및 단계 간 데이터 불연속성 해결"}
+{"id": "W7223367436", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전기화학적 인 회수 과정에서의 수소 공동 생산", "problem": "환경적 및 경제적 기여 평가"}
+{"id": "W7223496240", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "매니토바 수력 발전 시스템", "problem": "기후 변화 영향 평가"}

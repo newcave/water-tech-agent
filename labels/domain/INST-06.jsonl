@@ -3614,3 +3614,8 @@
 {"id": "W7223254257", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 엽록소 농도", "problem": "정확한 해양 엽록소 회수 개선"}
 {"id": "W7223281406", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양의 이산화탄소 플럭스", "problem": "이산화탄소 플럭스의 시공간 동역학 추정"}
 {"id": "W7223299551", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 수질", "problem": "위성 원격 감지 기술을 통한 수질 모니터링 개선"}
+{"id": "W7223270016", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산먼만의 수질 및 퇴적물 상태", "problem": "퇴적물 농도 증가 원인 규명"}
+{"id": "W7223307421", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 수질", "problem": "해양 변수 공동 추정"}
+{"id": "W7223340946", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 자원", "problem": "가뭄 관리 개선"}
+{"id": "W7223347034", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 모니터링", "problem": "자연 재해 관리 개선"}
+{"id": "W7223388803", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 수관련 재해", "problem": "모니터링 및 평가 개선"}

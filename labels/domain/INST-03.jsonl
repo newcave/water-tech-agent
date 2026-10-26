@@ -4492,3 +4492,10 @@
 {"id": "W7223374912", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 공급 및 위생 시스템", "problem": "디지털 도구를 통한 효율성 향상"}
 {"id": "W7223394000", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 지역의 음용수 시스템", "problem": "DBP 형성의 취약성 이해하기"}
 {"id": "W7223306835", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS 제거 효율 향상"}
+{"id": "W7223446465", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wistar 쥐의 지질 프로필과 인슐린 저항성", "problem": "Gnetum africanum의 효과 조사"}
+{"id": "W7223462634", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미세아교세포", "problem": "과도한 과당 섭취로 인한 불안 유발 메커니즘 이해"}
+{"id": "W7223463572", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서부 이리 호수의 미세시안 독소 위험", "problem": "미세시안 독소 예측 개선"}
+{"id": "W7223465329", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "5세 이하 아동의 급성 설사", "problem": "급성 설사와 관련된 요인 조사"}
+{"id": "W7223281498", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "유제품 산업의 폐수", "problem": "유제품 산업 폐수의 오염물질 제거"}
+{"id": "W7223453947", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "미국의 음용수 및 폐수 운영자 인증에서 사이버 보안", "problem": "사이버 보안 교육 요구 사항 파악"}
+{"id": "W7223445685", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kirkuk의 음용수 원천", "problem": "중금속 오염 해결"}
