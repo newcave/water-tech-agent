@@ -40,13 +40,13 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.7.2 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.7.3 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
-HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
+HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
 FLOW_PAGE = "🌊 에이전트 흐름"              # 보여 주기용 흐름 화면 (agent_flow.py) — 운영 화면은 관제센터 그대로
-LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
-LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
+LR_PAGE = "연구소별 분류 적정성"             # HITL (전문가) 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
+LR1_PAGE = "라벨링 1차 샘플링"              # HITL (전문가) 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
 # Agent Flow 확인用 버튼 이름 (2026-10-26 사용자 지정 · 순서는 AGENT_FLOWS 순서)
 WCS_FLOW_PAGE = "Co-Scientist 개념도"        # WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
 RNDHELP_FLOW_PAGE = "수탁과제 관리 Tool"       # rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
@@ -114,15 +114,17 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
   letter-spacing:.12em; opacity:.85;}
 .side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
 /* 사이드바 단추(HITL 검토·Agent Flow): 폭은 모두 사이드바 너비로 같게, 높이·간격은 작게 (v3.7.2) */
-[data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.stButton) {width:100% !important; margin-bottom:-9px;}
+[data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.stButton) {width:100% !important; margin-bottom:-10px;}
 [data-testid="stSidebar"] .stButton, [data-testid="stSidebar"] .stButton > div,
 [data-testid="stSidebar"] .stButton [data-testid="stTooltipIcon"],
 [data-testid="stSidebar"] .stButton [data-testid="stTooltipHoverTarget"] {width:100% !important;}
-[data-testid="stSidebar"] .stButton button {width:100%; justify-content:flex-start; border-radius:10px; min-height:0;
-  background:rgba(255,255,255,.13); border:1px dashed rgba(255,255,255,.55); color:#fff; padding:4px 12px;
-  line-height:1.35;}
+[data-testid="stSidebar"] .stButton button {width:100%; justify-content:flex-start; border-radius:9px;
+  background:rgba(255,255,255,.13); border:1px dashed rgba(255,255,255,.55); color:#fff;
+  padding:2px 10px !important; min-height:0 !important; height:auto !important;}
 [data-testid="stSidebar"] .stButton button > div {justify-content:flex-start; width:100%;}
-[data-testid="stSidebar"] .stButton button p {font-size:.9rem; text-align:left;}
+[data-testid="stSidebar"] .stButton button, [data-testid="stSidebar"] .stButton button * {
+  font-size:.8rem !important; line-height:1.3 !important; white-space:nowrap;}
+[data-testid="stSidebar"] .stButton button p {text-align:left; margin:0 !important; overflow:hidden; text-overflow:ellipsis;}
 [data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
   font-weight:700;}
 .block-container {padding-top:1.1rem; max-width:1500px;}
@@ -461,13 +463,13 @@ with st.sidebar:
 
     nav_kw = {} if "nav_radio" in st.session_state else {"index": st.session_state["nav_start"]}
     page = st.radio("메뉴", PAGES, key="nav_radio", label_visibility="collapsed", on_change=_to_main_menu, **nav_kw)
-    st.markdown('<div class="side-sep">HITL 검토</div>', unsafe_allow_html=True)
+    st.markdown('<div class="side-sep">HITL (전문가) 검토</div>', unsafe_allow_html=True)
     st.button(HITL_PAGE, key="side_hitl", on_click=_to_side, args=(HITL_PAGE,),
               type="primary" if st.session_state.get("side_page") == HITL_PAGE else "secondary",
               help="KCI K-water 소속 분류를 사람이 검증하는 판정 게임 (HITL)")
     st.button(LR1_PAGE, key="side_lr1", on_click=_to_side, args=(LR1_PAGE,),
               type="primary" if st.session_state.get("side_page") == LR1_PAGE else "secondary",
-              help="연구소 라벨 1차 샘플 — 무작위 고정 60장을 판정자마다 따로(블라인드) 판정해 적합률·기계 일치·판정자 간 일치를 먼저 확인")
+              help="라벨링 1차 샘플링 — 무작위 고정 60장을 판정자마다 따로(블라인드) 판정해 적합률·기계 일치·판정자 간 일치를 먼저 확인")
     st.button(LR_PAGE, key="side_lr", on_click=_to_side, args=(LR_PAGE,),
               type="primary" if st.session_state.get("side_page") == LR_PAGE else "secondary",
               help="연구소 라벨이 맞는지 OK·NG·이관 판정 — 기계 적합도 점수 + 감사 표본 (시범: 수자원환경연구소)")
@@ -1284,7 +1286,7 @@ elif page == "🇰🇷 KCI 트렌드":
                             " · 엇갈림 {c} (엇갈린 항목은 규칙대로 둠). ").format(
                                f=hr.get("files", 0), ai=rl.get("affiliation_include", 0), ae=rl.get("affiliation_exclude", 0),
                                pi=rl.get("paper_include", 0), pe=rl.get("paper_exclude", 0), c=hr.get("conflicts", 0))
-                           + "판정은 사이드바 HITL 검토의 🎮 K-water 논문 판정(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
+                           + "판정은 사이드바 HITL (전문가) 검토의 K-water 문헌 적정성(tools/kwater_hitl.html)으로 하고, 결과를 비공개 저장소 "
                              "review/overrides*.json으로 저장하면 다음 주간 분석부터 반영됨.")
                 st.caption("범위 선택에서 'K-water 소속 논문'을 고르면 이 논문들만으로 상승 용어·묶음을 볼 수 있음. "
                            f"{kw['source']}")
@@ -2039,9 +2041,9 @@ elif page == KN_PAGE:
                                        mime="application/zip")
                 st.caption("다음 단계(개인화): 연구원별 관심 키워드·읽음 표시·메모를 저장해 개인 노트로 확장 — 지금은 연구소 단위 그룹 노트입니다.")
 
-# ═══════════════ HITL 검토: K-water 논문 판정 (사람 판정 게임) ═══════════════
+# ═══════════════ HITL (전문가) 검토: K-water 문헌 적정성 (사람 판정 게임) ═══════════════
 elif page == HITL_PAGE:
-    st.markdown('<div class="sect">🎮 K-water 논문 판정 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sect">K-water 문헌 적정성 — 사람 판정(HITL) 게임</div>', unsafe_allow_html=True)
     st.caption("KCI에서 모은 K-water 소속 논문 분류(저자 소속 규칙)를 사람이 빠르게 검증합니다. 판정 파일은 이 브라우저 안에서만 "
                "열리고 서버로 보내지 않습니다. 처음엔 가상 연습 데이터로 열립니다.")
     hp = Path("tools/kwater_hitl.html")

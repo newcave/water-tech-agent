@@ -1,5 +1,5 @@
 """
-관제센터 '🏷️ 연구소 라벨 판정' 화면 (HITL 검토) — 계산은 label_review.py
+관제센터 '연구소별 분류 적정성' 화면 (HITL (전문가) 검토) — 계산은 label_review.py
 
 저장 방식 두 가지 (자동 선택)
   A. 직접 저장: Streamlit secrets에 [hitl] github_token(+ passcode)이 있으면 판정 묶음을 data 브랜치
@@ -763,7 +763,7 @@ def _tab_sample_guide(n):
     st.markdown(f"""
 #### 1차 샘플은 무엇인가
 수자원환경연구소 라벨 가운데 **무작위로 고정한 {n}장**입니다. 누가 열어도 같은 {n}장이 같은 순서로 나옵니다.
-전체 판정(🏷️ 연구소 라벨 판정)을 시작하기 전에 이것부터 보면 세 가지를 바로 알 수 있습니다.
+전체 판정(연구소별 분류 적정성)을 시작하기 전에 이것부터 보면 세 가지를 바로 알 수 있습니다.
 
 1. **기존 라벨이 몇 % 맞는가** — 무작위 표본이라 편향 없는 추정 (95% 범위 함께)
 2. **기계 점수가 쓸 만한가** — 점수 구간별 OK 비율, 기계 제안과의 일치율
@@ -838,11 +838,11 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
         return
     n1 = (prof.get("first_round") or {}).get("size", 60)
     if mode == "sample":
-        st.markdown(f'<div class="sect">🧪 라벨 1차 샘플 — 무작위 {n1}장으로 먼저 감 잡기</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="sect">라벨링 1차 샘플링 — 무작위 {n1}장으로 먼저 감 잡기</div>', unsafe_allow_html=True)
         st.caption(f"누가 열어도 같은 {n1}장(무작위 고정)을 판정자마다 따로, 기계 점수를 가린 채 봅니다. 끝나면 기존 라벨 적합률·"
                    "기계 일치율·판정자 간 일치도가 나옵니다. 여기 판정은 전체 판정 지표에도 그대로 들어갑니다.")
     else:
-        st.markdown('<div class="sect">🏷️ 연구소 라벨 판정 — 이 논문이 이 연구소 것이 맞나요?</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sect">연구소별 분류 적정성 — 이 논문이 이 연구소 것이 맞나요?</div>', unsafe_allow_html=True)
         st.caption("기계가 모든 논문에 적합도 점수를 매기고, 사람은 무작위 감사 표본과 기계가 헷갈리거나 바꾸자고 한 논문만 봅니다. "
                    "판정이 쌓이면 '사람이 안 봐도 되는 점수 문턱(τ)'을 다시 계산합니다. 원리는 맨 오른쪽 탭.")
     sec = _secrets()
