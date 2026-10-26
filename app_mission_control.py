@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.5 · 2026-10-26"
+APP_VERSION = "v3.6 · 2026-10-26"
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "🎮 K-water 논문 판정"          # HITL 검토 — 사이드바 구분선 아래 별도 항목
@@ -49,6 +49,7 @@ LR_PAGE = "🏷️ 연구소 라벨 판정"            # HITL 검토 — 연구�
 LR1_PAGE = "🧪 라벨 1차 샘플"              # HITL 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
 WCS_FLOW_PAGE = "AI for Water (코사이언티스트)"  # Agent Flow 확인用 — WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
 HECRAS_FLOW_PAGE = "HEC-RAS Surrogate (서로게이트)"  # Agent Flow 확인用 — HECRAS-surrogate 흐름도 (flows/hecras_agent_flow.html)
+RNDHELP_FLOW_PAGE = "RND-HELP (수탁과제 관리)"     # Agent Flow 확인用 — rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
 # Agent Flow 확인用 화면: 버튼 이름 → (흐름도 파일, 제목, 설명, 도움말, 공개 메모). 새 흐름도는 flows/에 파일을 두고 여기 한 줄만 더한다
 # 파일 자리에 {보기 이름: 파일}을 주면 화면 위에 보기 전환 버튼이 생긴다 (한 번에 하나만 보임)
 AGENT_FLOWS = {
@@ -61,6 +62,11 @@ AGENT_FLOWS = {
                        "HEC-RAS 정답 → 자료 → 학습·검증 → 서로게이트 → 후보 탐색 → 방류 설계(P1·P2·P3) → HEC-RAS 1회 확인. 실제 코드 경로(newcave/HECRAS-surrogate main 30c0fc5, 2026-08-18)를 단계별로 재생",
                        "HEC-RAS Surrogate Studio의 흐름 — 학습·검증부터 P1·P2·P3 방류 설계까지 실제 코드 경로를 재생하는 구조도 (실시간 상태 아님)",
                        "공개 저장소 newcave/HECRAS-surrogate 기준."),
+    RNDHELP_FLOW_PAGE: ({"🌊 기본 보기": "flows/rndhelp_agent_flow.html", "🔬 전문가 보기": "flows/rndhelp_agent_flow_expert.html"},
+                        "RND-HELP (수탁과제 관리) — 국가R&D 과제관리 도우미 흐름",
+                        "원천 자료 → 판정 엔진(룰·AI·점검·현물·편성·검색) → 결합 → 업무 화면 → 산출물 → 피드백 재학습. 실제 코드 경로(newcave/rndhelp main 9ebf611, 2026-10-23)를 업무별로 재생",
+                        "RND-HELP(rndaid.streamlit.app)의 흐름 — 비목 매핑·정산 점검·현물·제안서·FAQ를 실제 코드 경로대로 재생하는 구조도 (실시간 상태 아님)",
+                        "공개 저장소 newcave/rndhelp 기준 (자료는 가상 샘플)."),
 }
 
 # 브랜드 팔레트 (K-water 계열 딥블루)
@@ -2093,7 +2099,7 @@ elif page in AGENT_FLOWS:                              # Agent Flow 확인用 �
         with vc1:
             view_ = st.segmented_control("보기", views_, default=views_[0], key=f"flow_view_{views_[0]}_{page}",
                                          label_visibility="collapsed") or views_[0]
-        vc2.caption("전문가 보기: 기술 용어·사양과 수식(목적함수·검증 지표), 연결선 위에 넘겨주는 자료(P(N×4)·OOF Ŷ·Ŷ(n′×73) 등)"
+        vc2.caption("전문가 보기: 기술 용어와 판정 기준·수식, 연결선 위에 넘겨주는 자료, 노드를 누르면 '사양·수식' 칸"
                     if "전문가" in view_ else "기본 보기: 처음 보는 사람도 따라갈 수 있게 쉬운 말로 정리한 흐름")
         f_path = f_path[view_]
     f_html = None
