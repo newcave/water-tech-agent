@@ -161,18 +161,23 @@ def coverage_rows(df: pd.DataFrame, by_year: dict, years: list) -> list:
 
 
 def render_coverage(df: pd.DataFrame, by_year: dict, years: list, color: str, layout: dict, key: str,
-                    next_year=None, by_year_all: dict = None):
-    rows = coverage_rows(df, by_year, years)
+                    next_year=None, by_year_all: dict = None, basis: str = None, basis_since: str = None):
+    """연도별 수집 vs 실측. 수집 기준(basis)은 labels 파이프라인이 pipeline_state.json에 남김:
+    all = 연구소 키워드 전체로 수집 (2026-10-27~) → 키워드 전체 실측과 비교 / 그 밖 = 대표 키워드 1개."""
+    all_basis = basis == "all" and bool(by_year_all)
+    ref, ref_lab = (by_year_all, "키워드 전체") if all_basis else (by_year, "대표 키워드")
+    other, other_lab = (by_year, "대표 키워드") if all_basis else (by_year_all, "키워드 전체")
+    rows = coverage_rows(df, ref, years)
     st.markdown('<div class="sect">연도별 수집 vs OpenAlex 실측 (최근 5년)</div>', unsafe_allow_html=True)
     fig = go.Figure(go.Bar(x=[r["연도"] for r in rows], y=[r["수집"] for r in rows], name="수집",
                            marker_color=color, hovertemplate="%{x}년 수집 %{y:,}편<extra></extra>"))
-    if by_year_all and by_year_all != by_year:
-        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[by_year_all.get(r["연도"], 0) for r in rows],
-                                 name="실측 · 키워드 전체", mode="lines+markers",
+    if other and other != ref:
+        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[other.get(r["연도"], 0) for r in rows],
+                                 name=f"실측 · {other_lab}", mode="lines+markers",
                                  line=dict(color=GRAY, width=2, dash="dash"), marker=dict(size=7),
-                                 hovertemplate="%{x}년 키워드 전체 %{y:,}편<extra></extra>"))
-    if by_year:
-        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[r["실측"] for r in rows], name="실측 · 대표 키워드(수집 기준)",
+                                 hovertemplate="%{x}년 " + other_lab + " %{y:,}편<extra></extra>"))
+    if ref:
+        fig.add_trace(go.Scatter(x=[r["연도"] for r in rows], y=[r["실측"] for r in rows], name=f"실측 · {ref_lab}(수집 기준)",
                                  mode="lines+markers", line=dict(color="#0F2744", width=2, dash="dot"),
                                  marker=dict(size=8, symbol="diamond"),
                                  hovertemplate="%{x}년 실측 %{y:,}편<extra></extra>"))
@@ -185,15 +190,20 @@ def render_coverage(df: pd.DataFrame, by_year: dict, years: list, color: str, la
     if low:
         st.caption("⚠️ 수집이 실측보다 많이 적은 해: " + " · ".join(f"{r['연도']} {r['수집률']}" for r in low) +
                    f" — labels 파이프라인이 최근 5년을 하루에 1년씩 다시 받아 채우는 중{nxt}.")
-    elif not by_year:
+    elif not ref:
         st.caption("OpenAlex 실측(점선)은 다음 정기 실측 뒤에 나타납니다 · 수집 = 실시간 수집분 + labels 파이프라인의 지난 연도"
                    f" · 최근 5년은 하루에 1년씩 다시 받는 중{nxt}.")
-    full = [y for y in years if int(y) < time.gmtime().tm_year]
-    if by_year_all and by_year and full and by_year_all != by_year:
-        y = full[-1]
-        extra = by_year_all.get(y, 0) - by_year.get(y, 0)
-        st.caption(f"수집은 대표 키워드 1개 기준 — 키워드 전체로 넓히면 {y}년 기준 연 약 {extra:,}편 더 "
-                   f"({by_year.get(y, 0):,} → {by_year_all.get(y, 0):,}, 라벨링 LLM 비용이 늘어 승인 후 진행).")
+    if basis == "all":
+        st.caption(f"수집 기준: 연구소 키워드 전체{f' ({basis_since}부터)' if basis_since else ''} — 키워드마다 따로 검색해 id로 합침. "
+                   f"최근 5년은 하루에 1년씩 키워드 전체로 다시 받는 중{nxt}, 새 논문은 초록 보강 → LLM 라벨링(회차당 상한 3,000편)."
+                   + ("" if by_year_all else " 키워드 전체 실측은 다음 정기 실측 뒤에 나타남."))
+    else:
+        full = [y for y in years if int(y) < time.gmtime().tm_year]
+        if by_year_all and by_year and full and by_year_all != by_year:
+            y = full[-1]
+            extra = by_year_all.get(y, 0) - by_year.get(y, 0)
+            st.caption(f"수집은 대표 키워드 1개 기준 — 키워드 전체로 넓히면 {y}년 기준 연 약 {extra:,}편 더 "
+                       f"({by_year.get(y, 0):,} → {by_year_all.get(y, 0):,}).")
     return rows
 
 
