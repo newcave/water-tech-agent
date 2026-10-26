@@ -14,6 +14,7 @@ v2 변경점 (2026-07-13):
 실행:  streamlit run app_mission_control.py
 """
 
+import base64
 import json
 import math
 import time
@@ -41,7 +42,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.10.5 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.10.6 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -125,6 +126,10 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 .side-brand .sb-sub {display:flex; justify-content:center; align-items:center; gap:6px; margin-top:4px;
   font-size:.92rem; font-size:min(.95rem, 7.5cqi); opacity:.9; line-height:1.4; white-space:nowrap;}
 .side-brand .sb-mark {flex-shrink:0;}
+.side-brand .sb-logo {background:#FFFFFF; border-radius:10px; padding:9px 12px; margin:0 auto; max-width:214px;
+  box-shadow:0 1px 3px rgba(4,30,66,.25);}
+.side-brand .sb-logo img {display:block; width:100%; height:auto;}
+.side-brand .sb-logo + .sb-sub {margin-top:9px;}
 .side-sep {display:flex; align-items:center; gap:8px; margin:6px 0 0; font-size:.72rem;
   letter-spacing:.12em; opacity:.85;}
 .side-sep::before, .side-sep::after {content:""; flex:1; border-top:1px solid rgba(255,255,255,.45);}
@@ -460,11 +465,24 @@ def next_heartbeat_kst() -> str:
 
 last_hb = max([a.get("last_run") or 0 for a in agents.values()] + [0])
 
+@st.cache_resource(show_spinner=False)
+def _logo_b64() -> str:
+    """사이드바 기관 로고 (없으면 빈 문자열 → 글자로 대신)."""
+    try:
+        return base64.b64encode((Path(__file__).parent / "assets" / "kwater_institute_logo.png").read_bytes()).decode("ascii")
+    except Exception:
+        return ""
+
+
 # ═══════════════════════ 사이드바 ═══════════════════════
 with st.sidebar:
     # 사이드바 이름: 2단 워드마크 (머리띠에 'Water Co-Scientist 에이전트 관제센터'가 있어 짧게 · v3.10.1)
-    # 가운데 정렬: 굵은 K-water연구원 / 작은 로고 마크 + '물벗 : R&D 에이전트' — 글자 크기는 사이드바 폭에 맞춰 줄어듦 (v3.10.4, v3.10.5에서 한 단계 키움)
-    st.markdown('<div class="side-brand"><div class="sb-name">K-water연구원</div><div class="sb-sub">'
+    # 기관 로고(assets/kwater_institute_logo.png, 흰 바탕 카드) / 작은 물벗 마크 + '물벗 : R&D 에이전트' (v3.10.6)
+    #   로고 파일이 없으면 글자 'K-water연구원'으로 대신함. 더 선명한 원본(CI 가이드 PNG·SVG)을 같은 이름으로 넣으면 그대로 바뀜.
+    _logo = _logo_b64()
+    _top = (f'<div class="sb-logo"><img src="data:image/png;base64,{_logo}" alt="K-water 연구원"></div>' if _logo
+            else '<div class="sb-name">K-water연구원</div>')
+    st.markdown('<div class="side-brand">' + _top + '<div class="sb-sub">'
                 '<svg class="sb-mark" width="17" height="20" viewBox="0 0 34 40" role="img" aria-label="물벗 로고">'
                 '<path d="M17 2 C17 2 3 18 3 26 a14 14 0 0 0 28 0 C31 18 17 2 17 2Z" fill="#FFFFFF" fill-opacity=".95"/>'
                 '<g stroke="#17549A" stroke-width="2.4" fill="#17549A"><line x1="11" y1="28" x2="17" y2="20"/>'
