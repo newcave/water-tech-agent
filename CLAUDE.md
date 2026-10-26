@@ -21,6 +21,7 @@ K-water연구원 AI연구소의 R&D 데이터 에이전트 플랫폼. 수집(Ope
    - 코드·문서·커밋·PR·채팅에 토큰·키를 쓰지 않는다. 예시는 `github_pat_...`처럼 줄임표로만.
    - 예외: 홈서버 self-hosted 러너의 `.env` (PC 안에서만, `.gitignore` 등록됨 — 절대 커밋 금지).
    - **KCI 원천 자료는 비공개 저장소 `newcave/water-tech-kci-private` 밖으로 내보내지 않는다** (재배포 금지). 공개 저장소에는 집계(건수·용어·검정 결과)만.
+   - `newcave/openalex-data`(openalex 수집 원본·분석 결과, 비공개)도 공개 저장소에는 집계만 — 논문 해석 원문·검토 메모·전체 논문 목록·코퍼스 원본은 옮기지 않는다.
    - PR마다 `guard` 워크플로가 토큰 꼴 문자열·비밀 파일·KCI 원천 필드를 검사한다.
 
 ## 2. 저장소 지도
@@ -32,7 +33,7 @@ K-water연구원 AI연구소의 R&D 데이터 에이전트 플랫폼. 수집(Ope
 | `water-tech-kci-private` | KCI 원천(`raw/`), 사람 판정 오버라이드(`review/`) |
 
 주요 모듈: `knowledge_notes.py`(지식노트) · `label_review.py`/`label_review_page.py`(라벨 판정 HITL) · `data_cache.py`(공용 캐시) ·
-`agent_flow.py`(🌊 흐름 화면) · `flows/*_agent_flow.html`(사이드바 Agent Flow 확인用 — WCS·HEC-RAS 서로게이트·RND-HELP·4B LoRA·OpenAlex 연구트렌드 흐름도, 표 N·E·SCN만 고침, 버튼은 `AGENT_FLOWS` 한 줄, 보기가 여럿이면 {보기: 파일} — WCS 외에는 기본·전문가 두 보기) · `agents/kci_rising.py`(KCI 단어·구 상승 분석) · 연구소 배정 판정 기록: `decision`은 예전 값(ok·ng·move·skip) 그대로, 누른 버튼은 `action`(keep·add·move·drop·later / 받는 쪽 accept·share·reject, role=receiver, 보낸 연구소 폴더에 기록) — data 브랜치 `hitl_ledger.py`와 호환 · 설정 `data_seed/*.json`(키워드·목표·문턱 — 연구소가 직접 고침).
+`agent_flow.py`(🌊 흐름 화면) · `flows/*_agent_flow.html`(사이드바 Agent Flow 확인用 — WCS·HEC-RAS 서로게이트·RND-HELP·4B LoRA·OpenAlex 연구트렌드 흐름도, 표 N·E·SCN만 고침, 버튼은 `AGENT_FLOWS` 한 줄, 보기가 여럿이면 {보기: 파일} — WCS 외에는 기본·전문가 두 보기) · `agents/kci_rising.py`(KCI 단어·구 상승 분석) · `agents/oa_rising.py`·`oa_rising_page.py`(🔭 상승 연구주제 — 방법의 주인은 newcave/openalex, 여기서는 비공개 newcave/openalex-data 결과를 `secrets.OPENALEX_DATA_TOKEN`(읽기 전용)으로 매주 읽어 집계만 `data_seed/oa_rising/`에 씀 · 다시 계산하지 않음) · 연구소 배정 판정 기록: `decision`은 예전 값(ok·ng·move·skip) 그대로, 누른 버튼은 `action`(keep·add·move·drop·later / 받는 쪽 accept·share·reject, role=receiver, 보낸 연구소 폴더에 기록) — data 브랜치 `hitl_ledger.py`와 호환 · 설정 `data_seed/*.json`(키워드·목표·문턱 — 연구소가 직접 고침).
 
 ## 3. 개발·시험·배포
 
