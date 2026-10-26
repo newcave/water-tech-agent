@@ -40,7 +40,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.7.3 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.7.4 · 2026-10-26"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -101,6 +101,8 @@ STATE_LABEL = {"run": ("가동 중", GREEN), "idle": ("정상 대기", BLUE),
 st.markdown("""<style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun Gothic',sans-serif;}
+/* 아이콘 글꼴은 되돌림 — 위 글꼴 규칙이 아이콘까지 바꿔 'keyboard_double_arrow_right' 같은 이름이 글자로 보였음 (v3.7.4) */
+[data-testid="stIconMaterial"], [class*="material-symbols"], .material-icons {font-family:'Material Symbols Rounded','Material Icons' !important;}
 .stApp {background:#F3F7FC;}
 [data-testid="stSidebar"] {background:linear-gradient(180deg,#17549A 0%,#3E8ED0 100%);}
 [data-testid="stSidebar"] * {color:#fff !important;}
@@ -127,12 +129,12 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] .stButton button p {text-align:left; margin:0 !important; overflow:hidden; text-overflow:ellipsis;}
 [data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
   font-weight:700;}
-.block-container {padding-top:1.1rem; max-width:1500px;}
+.block-container {padding-top:3.8rem; max-width:1500px;}   /* 위쪽 도구줄(60px)에 머리띠가 가리지 않게 (v3.7.4) */
 
 /* 헤더 밴드 */
 .hdr {background:linear-gradient(100deg,#0F3A73 0%,#17549A 55%,#2E77C6 100%);
       border-radius:16px; padding:20px 26px; color:#fff; margin-bottom:16px;
-      box-shadow:0 6px 18px rgba(15,58,115,.25);}
+      box-shadow:0 6px 18px rgba(15,58,115,.25); box-sizing:border-box; max-width:100%; overflow-wrap:anywhere;}
 .hdr .org {font-size:.8rem; letter-spacing:.14em; opacity:.85; font-weight:500;}
 .hdr .ttl {font-size:1.5rem; font-weight:900; margin-top:2px;}
 .hdr .sub {font-size:.85rem; opacity:.85; margin-top:4px;}
@@ -436,7 +438,7 @@ n_wait = len(agents) - n_run - n_idle
 
 
 def next_heartbeat_kst() -> str:
-    """GitHub Actions cron(17 */6 UTC) 기준 다음 심박 시각(KST)."""
+    """GitHub Actions cron(17 */6 UTC) 기준 다음 수행 예정시간(KST)."""
     u = dt.datetime.now(dt.timezone.utc)
     cand = u.replace(minute=17, second=0, microsecond=0, hour=(u.hour // 6) * 6)
     if cand <= u:
@@ -496,8 +498,8 @@ st.markdown(f"""<div class="hdr">
     <span class="badge">🟡 대기·예정 {n_wait}</span>
     <span class="badge">에이전트 {len(agents)}</span>
     <span class="badge"><span class="livedot"></span>LIVE · 30초 갱신</span>
-    <span class="badge">💓 최근 심박 {ago(last_hb)}</span>
-    <span class="badge">⏱️ 다음 자율심박 ~{next_heartbeat_kst()} KST</span>
+    <span class="badge">🕒 최근 수행 {ago(last_hb)}</span>
+    <span class="badge">⏱️ 다음 수행 예정시간 ~{next_heartbeat_kst()} KST</span>
   </div></div>""", unsafe_allow_html=True)
 
 # ═══════════════ 페이지 1: 관제센터 ═══════════════
@@ -575,7 +577,7 @@ if page == "🛰️ 관제센터":
             counts = " · ".join(                       # 숫자·문자 혼용 안전 (에이전트가 "1/8" 등도 보냄)
                 f"{k} <b>{v:,}</b>" if isinstance(v, (int, float)) else f"{k} <b>{v}</b>"
                 for k, v in (a.get("counts") or {}).items()) or "&nbsp;"
-            nxt = f"다음: {a['next_run']}" if a.get("next_run") else ""
+            nxt = f"다음 수행 예정: {a['next_run']}" if a.get("next_run") else ""
             cards += f"""<div class="agent" style="border-left-color:{color}">
               <div class="a-top">
                 <span class="a-name">{meta['icon']} {meta['ko']} <span class="a-id">{name}</span><span class="gchip">{meta.get('grp','')}</span></span>
@@ -584,7 +586,7 @@ if page == "🛰️ 관제센터":
               </div>
               <div class="a-role">{a.get('summary') or meta['role']}</div>
               <div class="a-cnt">{counts}</div>
-              <div class="a-next">심박 {ago(a.get('last_run'))} &nbsp; {nxt}</div>
+              <div class="a-next">최근 수행 {ago(a.get('last_run'))} &nbsp; {nxt}</div>
             </div>"""
         st.markdown(f'<div class="fleet">{cards or "에이전트 데이터 없음"}</div>', unsafe_allow_html=True)
         st.markdown('<div class="note" style="margin-top:6px">미가동 에이전트는 🟡 대기로 정직하게 표기됩니다 '
@@ -721,7 +723,7 @@ elif page == "📄 논문 트렌드":
     st.caption(f"OpenAlex 실측 저널×연도 건수 ({wj.get('archive_from_year', 2000)}~) · "
                f"연관성·트렌드 분석: {wj.get('analysis_status', '미실시')}")
     if not trj:
-        st.info("저널 코퍼스 실측 전입니다 — 다음 심박(6시간 주기)에서 openalex_lite가 기록합니다.")
+        st.info("저널 코퍼스 실측 전입니다 — 다음 수행(6시간 주기)에서 openalex_lite가 기록합니다.")
     else:
         cur_year = time.gmtime().tm_year
         cov_to = {j["code"]: j.get("openalex_coverage_to") for j in wj.get("journals", [])}
