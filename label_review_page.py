@@ -9,12 +9,14 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import html
 import json
 import os
 import re
 import threading
 import time
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -51,7 +53,22 @@ CSS = """<style>
 .lr-chip {display:inline-block; font-size:.72rem; background:#EAF1FA; color:#17549A; border-radius:6px;
   padding:1px 7px; margin:1px 2px;}
 .lr-mini {font-size:.78rem; color:#64748B; line-height:1.7;}
+.lr-sug {background:#EEF4FC; border:1px solid #C9DAF0; border-radius:12px; padding:9px 14px; margin:2px 0;}
+.lr-sug .t {font-size:.76rem; color:#4A5B70;} .lr-sug .v {font-size:1rem; font-weight:800; color:#0F3A73; line-height:1.45;}
+.lr-sug .w {font-size:.76rem; color:#4A5B70; margin-top:2px;}
+.lr-log {border-left:4px solid #94A3B8; background:#F8FAFD; border-radius:6px; padding:5px 9px; margin:6px 0;}
+.lr-log .a {font-size:.72rem; font-weight:800;} .lr-log .b {font-size:.84rem; font-weight:700; color:#0F3A73; line-height:1.35;}
+.lr-log .c {font-size:.72rem; color:#64748B; line-height:1.35;}
+.lr-ask {font-size:.82rem; font-weight:800; color:#17549A; margin:0 0 2px;}
+[data-testid="stMain"] .stButton button p {white-space:pre-line !important; overflow:visible !important;
+  text-overflow:clip !important; line-height:1.35;}
 </style>"""
+
+ACT_ICON = {"keep": "✅", "add": "➕", "move": "↪️", "drop": "✖️", "later": "⏸️",
+            "accept": "📥", "share": "🤝", "reject": "↩️", "skip": "⏭️"}
+ACT_COL = {"keep": "#15803D", "add": "#1D4ED8", "move": "#B45309", "drop": "#B91C1C", "later": "#475569",
+           "accept": "#15803D", "share": "#1D4ED8", "reject": "#B45309", "skip": "#94A3B8"}
+CONF_COL = {"높음": "#15803D", "보통": "#B45309", "낮음": "#B91C1C"}
 
 
 # ───────────────────────── 데이터 ─────────────────────────
@@ -194,11 +211,18 @@ def _why_html(it: dict, prof: dict) -> str:
 
 QKIND = {"audit": ("감사 표본 (무작위)", "#7C3AED", "#F3EEFF"),
          "triage": ("선별 (기계가 헷갈리거나 바꾸자고 한 것)", "#0B5FAE", "#EAF1FA"),
-         "sample1": ("1차 샘플 (무작위 · 판정자마다 따로)", "#0F766E", "#E6F6F4")}
+         "sample1": ("1차 샘플 (무작위 · 판정자마다 따로)", "#0F766E", "#E6F6F4"),
+         "incoming": ("받은 논문", "#B45309", "#FDF3E7"),
+         "coord": ("조정 필요 (나중에 · 의견 갈림)", "#475569", "#EEF1F5")}
 
 
-def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, blind: bool = False):
+def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, blind: bool = False,
+          recv: str | None = None, move_rec: dict | None = None):
+    """논문 카드 (왼쪽) + 기계 점수 카드 (오른쪽). 오른쪽 칸을 돌려준다 (배당 미리보기를 이어 붙임).
+    recv: 받은 논문 화면 — 오른쪽에 받는 연구소 적합도와 보낸 사람을 보여 준다."""
     qtxt, *qcol = QKIND.get(qkind, QKIND["triage"])
+    if recv:
+        qtxt = f"{lr.INST_NAME[it['inst']]}가 보냈습니다 — 받으시겠어요?"
     doi = it.get("doi") or ""
     title = _clean(it["title"]) or "(제목 없음)"
     title_html = f'<a href="{html.escape(doi)}" target="_blank">{title} ↗</a>' if doi.startswith("http") else title
@@ -210,14 +234,15 @@ def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, 
     if dups:
         extra.append(f'<span class="lr-chip">같은 제목 레코드 {dups}건 함께 판정</span>')
     if js.get("skips"):
-        extra.append(f'<span class="lr-chip">건너뜀 {js["skips"]}회</span>')
+        extra.append(f'<span class="lr-chip">나중에·건너뜀 {js["skips"]}회</span>')
     dn = lr.DOMAIN_NAME.get(it["domain_primary"], it["domain_primary"])
     sc = it["score"]
     sg = it["suggestion"]
-    sg_txt = SUGG_KO[sg] + (f" → {lr.INST_NAME[it['to']]}" if it.get("to") else "") + \
-        (f" ({lr.REASON_KO.get(it['reason'], '')})" if it.get("reason") else "")
+    rc_ = lr.recommend(it)
+    sg_txt = f"{ACT_ICON[rc_['act']]} {lr.ACTION_KO[rc_['act']]} — " + \
+        lr.alloc_text(it["inst"], rc_["act"], rc_["to"], rc_["also"], rc_["reason"])
     abstract = _clean(it.get("abstract") or "")
-    short = abstract if len(abstract) <= 900 else abstract[:900] + " …"
+    short = abstract if len(abstract) <= 520 else abstract[:520] + " …"
     left, right = st.columns([5, 2])
     with left:
         st.markdown(f"""<div class="lr-card">
@@ -229,7 +254,7 @@ def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, 
     &nbsp;<span class="lr-chip">{html.escape(it['domain_primary'])} {html.escape(dn)}</span></div>
   <div class="lr-abs">{short or '<i>초록 없음</i>'}</div>
 </div>""", unsafe_allow_html=True)
-        if len(abstract) > 900:
+        if len(abstract) > 520:
             with st.expander("초록 전체"):
                 st.markdown(f'<div class="lr-abs">{abstract}</div>', unsafe_allow_html=True)
     with right:
@@ -238,13 +263,28 @@ def _card(it: dict, qkind: str, pos: int, total: int, prof: dict, jstate: dict, 
   <div class="lr-score" style="color:#CBD5E1">?</div>
   <div class="lr-why">블라인드 판정 중 — 기계 점수·제안을 가려 사람 판단이 기계에 끌려가지 않게 합니다.
   판정 뒤 <b>1차 결과</b> 탭에서 기계와 얼마나 맞았는지 공개됩니다.</div></div>""", unsafe_allow_html=True)
-            return
+            return right
+        if recv:
+            fit = round(100 * (it.get("fits") or {}).get(recv, 0))
+            rt = it["best_other_terms"] if it.get("best_other") == recv else []
+            chips = lambda ts: " ".join(f'<span class="lr-chip">{html.escape(t)}</span>' for t in ts[:6]) or "–"
+            mv = move_rec or {}
+            st.markdown(f"""<div class="lr-card">
+  <div class="lr-meta">{lr.INST_NAME[recv]} 적합도</div>
+  <div class="lr-score" style="color:{_score_col(fit)}">{fit}<span style="font-size:1rem;color:#94A3B8"> %</span></div>
+  <div class="lr-why">• {lr.INST_NAME[recv]}와 맞는 단어 {chips(rt)}<br>
+  • 보낸 곳({lr.INST_SHORT[it['inst']]})과 맞는 단어 {chips(it['home_terms'])}<br>
+  • 보낸 사람: <b>{html.escape(mv.get('reviewer') or '?')}</b> · {lr.to_kst(mv.get('ts'))}
+  {('<br>• 메모: ' + html.escape(mv['note'])) if mv.get('note') else ''}</div>
+</div>""", unsafe_allow_html=True)
+            return right
         st.markdown(f"""<div class="lr-card">
   <div class="lr-meta">기계 적합도 점수</div>
   <div class="lr-score" style="color:{_score_col(sc)}">{sc}<span style="font-size:1rem;color:#94A3B8"> / 100</span></div>
-  <div style="margin-top:8px"><span class="lr-sugg" style="background:{SUGG_COL[sg]}1A;color:{SUGG_COL[sg]}">기계 제안: {html.escape(sg_txt)}</span></div>
+  <div style="margin-top:8px"><span class="lr-sugg" style="background:{ACT_COL[rc_['act']]}1A;color:{ACT_COL[rc_['act']]}">기계 제안: {html.escape(sg_txt)}</span></div>
   <div class="lr-why">{_why_html(it, prof)}</div>
 </div>""", unsafe_allow_html=True)
+    return right
 
 
 # ───────────────────────── 기록 쌓기 ─────────────────────────
@@ -308,138 +348,455 @@ def _pending() -> _Pending:
 
 
 def _push(rec: dict):
+    """판정 한 줄 → 그 기록의 연구소(inst) 보관함. 받은 논문 답은 보낸 연구소 보관함에 쌓인다."""
     _pending().add(rec)
     st.session_state["lr_last"] = rec
 
 
-def _on_decide(it: dict, decision: str, qkind: str, who: str, role: str):
-    k = it["id"]
-    to = st.session_state.get(f"lr_to_{k}") if decision == "move" else None
-    reason = st.session_state.get(f"lr_reason_{k}") if decision == "ng" else None
-    also = st.session_state.get(f"lr_also_{k}") or [] if decision in ("ok", "move") else []
-    note = st.session_state.get(f"lr_note_{k}") or ""
-    _push(lr.make_record(it, decision, who, role, qkind, to=to, also=list(also), reason=reason, note=note))
+def _close_pick(mk: str):
+    st.session_state.pop(mk, None)
 
 
-def _undo_last(inst: str, who: str):
-    """내 가장 최근 판정(아직 GitHub에 안 올린 것) 하나를 지운다."""
+def _open_pick(mk: str, act: str):
+    st.session_state[mk] = act
+
+
+def _on_act(it: dict, act: str, qkind: str, who: str, role: str, to=None, also=None, reason=None, mk: str = ""):
+    """버튼 하나 = 판정 하나 (그냥 통과·추가 배당·다른 연구소로·빼기·나중에)."""
+    note = st.session_state.get(f"lr_note_{it['id']}") or ""
+    also = [x for x in (also or []) if x != it["inst"]] if act == "add" else []
+    _push(lr.make_record(it, None, who, role, qkind, to=to if act == "move" else None, also=also,
+                         reason=reason if act == "drop" else None, note=note, action=act))
+    if mk:
+        _close_pick(mk)
+
+
+def _on_resp(it: dict, act: str, who: str, recv: str, mv: dict):
+    """받은 논문 답 (받기·같이 하기·돌려보내기·나중에)."""
+    note = st.session_state.get(f"lr_note_in_{it['id']}") or ""
+    _push(lr.make_response(it, act, who, recv, mv, note=note))
+
+
+def _on_bundle(pairs: list, who: str, role: str):
+    """묶음 판정 — 고른 논문마다 기계 제안 버튼을 그대로 기록한다."""
+    for it, rc in pairs:
+        _push(lr.make_record(it, None, who, role, "bundle", to=rc["to"], also=rc["also"], reason=rc["reason"],
+                             action=rc["act"]))
+
+
+def _on_resp_bulk(pairs: list, act: str, who: str, recv: str):
+    for it, mv in pairs:
+        _push(lr.make_response(it, act, who, recv, mv))
+
+
+def _my_unsaved(who: str) -> list[dict]:
+    """내 미저장 판정 — 모든 연구소 보관함에서 (받은 논문 답은 보낸 연구소 쪽에 있으므로)."""
+    return [r for i in lr.INSTS for r in _pending().read(i) if r.get("reviewer") == who and not r.get("_flushed")]
+
+
+def _undo_last(who: str):
+    """내 가장 최근 판정(아직 GitHub에 안 올린 것) 하나를 지운다 — 어느 연구소 보관함에 있든."""
+    mine = _my_unsaved(who)
+    if not mine:
+        return
+    last = max(mine, key=lambda r: r.get("ts") or "")
+    key = lr.rec_key(last)
+
     def fn(rows):
         for i in range(len(rows) - 1, -1, -1):
-            if rows[i].get("reviewer") == who and not rows[i].get("_flushed"):
+            if lr.rec_key(rows[i]) == key and not rows[i].get("_flushed"):
                 return rows[:i] + rows[i + 1:]
         return None
-    _pending().update(inst, fn)
+    _pending().update(last["inst"], fn)
     st.session_state["lr_last"] = None
-
-
-def _my_unsaved(inst: str, who: str) -> list[dict]:
-    return [r for r in _pending().read(inst) if r.get("reviewer") == who and not r.get("_flushed")]
 
 
 def _clean_rec(r: dict) -> dict:
     return {k: v for k, v in r.items() if not k.startswith("_")}
 
 
-def _my_unsaved_clean(inst: str, who: str) -> list[dict]:
-    return [_clean_rec(r) for r in _my_unsaved(inst, who)]
+def _my_unsaved_clean(who: str) -> list[dict]:
+    return [_clean_rec(r) for r in _my_unsaved(who)]
 
 
-def _save_direct(inst: str, who: str) -> tuple[bool, str]:
-    """내 미저장 판정을 묶음 파일 하나로 data 브랜치에 커밋 (보관함에는 '올림' 표시만, GitHub에서 보이면 자동 정리)."""
-    rows = _my_unsaved(inst, who)
+def _by_inst(rows: list[dict]) -> dict:
+    out = {}
+    for r in rows:
+        out.setdefault(r["inst"], []).append(r)
+    return out
+
+
+def _save_direct(who: str) -> tuple[bool, str]:
+    """내 미저장 판정을 연구소별 묶음 파일로 data 브랜치에 커밋 (보관함에는 '올림' 표시만, GitHub에서 보이면 자동 정리)."""
+    rows = _my_unsaved(who)
     if not rows:
         return True, "저장할 판정 없음"
-    ok, msg = _gh_put(lr.batch_path(inst, who), lr.to_jsonl([_clean_rec(r) for r in rows]),
-                      f"🏷️ HITL 라벨 판정 {inst} {len(rows)}건 ({who})")
-    if not ok:
-        return False, msg
-    keys, now = {lr.rec_key(r) for r in rows}, time.time()
-    _pending().update(inst, lambda all_: [({**r, "_flushed": now} if lr.rec_key(r) in keys else r) for r in all_])
+    done = 0
+    for inst, grp in _by_inst(rows).items():
+        ok, msg = _gh_put(lr.batch_path(inst, who), lr.to_jsonl([_clean_rec(r) for r in grp]),
+                          f"🏷️ HITL 라벨 판정 {inst} {len(grp)}건 ({who})")
+        if not ok:
+            return False, (f"{done}건 저장 후 " if done else "") + msg
+        keys, now = {lr.rec_key(r) for r in grp}, time.time()
+        _pending().update(inst, lambda all_: [({**r, "_flushed": now} if lr.rec_key(r) in keys else r) for r in all_])
+        done += len(grp)
     _list_batches.clear()
-    return True, f"GitHub 저장 {len(rows)}건"
+    _ledgers.clear()
+    return True, f"GitHub 저장 {done}건"
+
+
+@st.cache_data(ttl=120, show_spinner=False)
+def _ledgers() -> dict:
+    """모든 연구소의 판정 대장(ledger.jsonl) — 받은 논문·공동 배당을 찾는 데 쓴다 (raw 파일이라 API 한도와 무관)."""
+    urls = [f"{dc.RAW}/{BRANCH}/{lr.HITL_DIR}/{i}/ledger.jsonl" for i in lr.INSTS]
+    return {i: lr.parse_jsonl(t) for i, t in zip(lr.INSTS, dc.fetch_many(urls, timeout=15)) if t is not None}
+
+
+def _all_records(records: list[dict], inst: str) -> list[dict]:
+    """지금 연구소의 판정 기록 + 다른 연구소의 대장·임시 보관분 (받은 논문 찾기용)."""
+    led = _ledgers()
+    out = list(records)
+    for i in lr.INSTS:
+        if i == inst:
+            continue
+        if i in led:
+            _pending().reconcile(i, {lr.rec_key(r) for r in led[i]})
+        out += led.get(i, []) + [_clean_rec(r) for r in _pending().read(i)]
+    return _dedupe(out)
+
+
+def _pj(prof: dict) -> str:
+    return json.dumps(prof, sort_keys=True, ensure_ascii=False)
 
 
 # ───────────────────────── 탭 ─────────────────────────
-def _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info):
+def _rec_why(it: dict, rc: dict) -> str:
+    """기계 제안의 근거 한 줄."""
+    a, fits = rc["act"], it.get("fits") or {}
+    terms = ", ".join(html.escape(t) for t in it.get("home_terms", [])[:3])
+    if a == "keep":
+        return f"점수 {it['score']} · 우리 쪽 단어 {terms or '–'}"
+    if a == "add":
+        return "다른 곳과도 맞음: " + " · ".join(f"{lr.INST_SHORT[x]} {round(100 * fits.get(x, 0))}%" for x in rc["also"])
+    if a == "move":
+        return (f"{lr.INST_SHORT[rc['to']]} 적합도 {round(100 * fits.get(rc['to'], 0))}% · "
+                f"우리 연구소 적합 {round(100 * it.get('home_fit', 0))}%")
+    if rc["reason"] == "nonresearch":
+        return f"심사평·답변·안내 같은 연구 문헌이 아닌 유형 ({html.escape(it.get('type') or '')})"
+    return "우리·다른 연구소 모두 적합도가 낮음"
+
+
+def _recent_box(who: str):
+    """오른쪽 칸 — 내 최근 판정과 그 배당 결과 (주 소관 · 공동)."""
+    recs = sorted((r for r in st.session_state.get("lr_allrecs", []) if r.get("reviewer") == who),
+                  key=lambda r: r.get("ts") or "", reverse=True)[:6]
+    titles = st.session_state.get("lr_titles", {})
+    if not recs:
+        body = '<div class="lr-mini">판정하면 여기에 배당 결과(주 소관 · 공동)가 쌓입니다.</div>'
+    else:
+        body = ""
+        for r in recs:
+            a = lr.action_of(r)
+            col = ACT_COL.get(a, GRAY)
+            tag = " (받은 논문)" if r.get("role") == "receiver" else (" (묶음)" if r.get("queue") == "bundle" else "")
+            t = _clean(titles.get(r.get("id")) or r.get("id") or "")
+            body += (f'<div class="lr-log" style="border-left-color:{col}"><div class="a" style="color:{col}">'
+                     f'{lr.ACTION_KO.get(a, a)}{tag}</div><div class="b">{html.escape(lr.rec_alloc(r))}</div>'
+                     f'<div class="c">{t[:80]}</div></div>')
+    st.markdown(f'<div class="lr-card"><div class="lr-meta" style="font-weight:800;color:#0F2744">판정하면 이렇게 '
+                f'배당됩니다</div>{body}</div>', unsafe_allow_html=True)
+
+
+def _tab_judge(items, jstate, prof, inst, who, role, tau_info, records):
     tau = tau_info["tau"]
-    rv = prof.get("review", {})
     q = lr.build_queue(items, jstate, prof, who, tau=tau)
     R = lr.reps(items)
-    rv_me = (lr.by_reviewer(st.session_state.get("lr_records", []), inst, lr.canon_map(items)).get(who)
-             or {"dec": {}})
-    mine = len(rv_me["dec"])
-    unsaved = len(_my_unsaved(inst, who))
+    rv_me = lr.by_reviewer(records, inst, lr.canon_map(items)).get(who) or {"dec": {}}
     n_aud = sum(1 for _, k in q if k == "audit")
     auto_n = sum(1 for it in R if not lr.human_decision(jstate.get(it["id"])) and it["suggestion"] == "ok"
                  and it["score"] >= tau)
+    n_coord = len(lr.coord_queue(items, records, inst))
+    n_bundle = sum(g["n"] for g in lr.bundles(items, jstate))
     _kpis([("남은 판정 카드", f"{len(q):,}", f"감사 {n_aud} · 선별 {len(q) - n_aud}", NAVY),
-           ("내 판정 (누적)", f"{mine}", f"GitHub 미저장 {unsaved}건 (서버 임시 보관)", BLUE),
-           ("자동 확정 (사람 생략)", f"{auto_n:,}", f"제안 OK & 점수 ≥ τ {tau}" + ("" if tau_info["calibrated"] else " (잠정)"), CYAN),
+           ("내 판정 (누적)", f"{len(rv_me['dec'])}", f"GitHub 미저장 {len(_my_unsaved(who))}건 (서버 임시 보관)", BLUE),
+           ("자동 확정 (사람 생략)", f"{auto_n:,}", f"제안 그냥 통과 & 점수 ≥ τ {tau}" + ("" if tau_info["calibrated"] else " (잠정)"), CYAN),
+           ("조정자 대기", f"{n_coord}", "나중에 · 받는 쪽이 돌려보낸 것", GRAY),
            ("판정 단위", f"{len(R):,}", f"레코드 {len(items):,} (같은 제목 {len(items) - len(R)}건 묶음)", GRAY)])
-
-    bulk = lr.bulk_candidates(items, jstate)
-    if bulk:
-        with st.expander(f"⚡ 일괄 판정 — 기계가 '연구 문헌 아님'으로 본 {len(bulk)}건 (심사평·답변·안내 등)", expanded=False):
-            st.caption("한 장씩 볼 필요가 적은 것들입니다. 제목을 훑고 동의하지 않는 줄만 체크를 풀고 저장하세요. "
-                       "체크된 줄은 NG(연구 문헌 아님)로 기록됩니다.")
-            df = pd.DataFrame([{"동의": True, "점수": it["score"], "유형": it["type"],
-                                "제목": _TAG.sub("", it["title"])[:110], "대상": it["object"][:40], "id": it["id"]}
-                               for it in bulk])
-            ed = st.data_editor(df, key=f"lr_bulk_{inst}", hide_index=True, width="stretch",
-                                disabled=["점수", "유형", "제목", "대상", "id"], height=min(420, 40 + 35 * len(df)),
-                                column_config={"동의": st.column_config.CheckboxColumn("NG 동의", width="small"),
-                                               "id": None})
-            chosen = ed[ed["동의"]]["id"].tolist()
-            if st.button(f"체크한 {len(chosen)}건 NG로 판정", key=f"lr_bulk_go_{inst}", disabled=not chosen):
-                byid = {it["id"]: it for it in bulk}
-                for pid in chosen:
-                    _push(lr.make_record(byid[pid], "ng", who, role, "bulk", reason="nonresearch"))
-                _rerun()
-
+    if n_bundle:
+        st.caption(f"🧺 기계 제안이 같은 논문 {n_bundle:,}편은 **비슷한 논문 묶음** 탭에서 한 번에 처리할 수 있습니다.")
     if not q:
         st.success("판정할 카드가 없습니다 — 남은 논문은 모두 사람 판정 또는 자동 확정 구간입니다. 👏")
         return
     it, qkind = q[0]
-    _card(it, qkind, 1, len(q), prof, jstate)
-    _controls(it, qkind, inst, who, role, direct, prof, nxt=[(x, kk) for x, kk in q[1:6]])
+    right = _card(it, qkind, 1, len(q), prof, jstate)
+    _controls(it, qkind, inst, who, role, prof, nxt=q[1:6], right=right)
 
 
-def _controls(it, qkind, inst, who, role, direct, prof, nxt=(), blind=False):
-    """판정 입력줄(NG 사유·이관처·공유·메모) + OK/NG/이관/건너뛰기/되돌리기 + 다음 카드."""
+def _controls(it, qkind, inst, who, role, prof, nxt=(), blind=False, right=None, acts=None):
+    """판정 버튼: [제안대로 하기] + 그냥 통과 · 추가 배당 · 다른 연구소로 · 빼기 · 나중에.
+    추가 배당·다른 연구소로·빼기는 누르면 연구소/사유 고르는 줄이 열리고(기계 제안이 미리 골라져 있음) 확정으로 끝난다.
+    블라인드(1차 샘플)면 기계 제안을 보이지도, 미리 고르지도 않는다."""
     k = it["id"]
-    others = [i for i in lr.INSTS if i != inst]
-    default_to = others[0] if blind else (it.get("to") or it.get("best_other") or others[0])
-    c1, c2, c3, c4 = st.columns([2, 2, 3, 3])
-    c1.selectbox("NG 사유", list(lr.REASON_KO), key=f"lr_reason_{k}",
-                 index=list(lr.REASON_KO).index("out_of_scope" if blind else (it.get("reason") or "out_of_scope")),
-                 format_func=lambda x: lr.REASON_KO[x])
-    c2.selectbox("이관할 연구소", others, key=f"lr_to_{k}", index=others.index(default_to) if default_to in others else 0,
-                 format_func=lambda x: lr.INST_NAME[x])
-    c3.multiselect("함께 볼 연구소 (공유, 선택)", others, key=f"lr_also_{k}",
-                   default=[] if blind else [x for x in it.get("also", []) if x in others], format_func=lambda x: lr.INST_NAME[x])
-    c4.text_input("메모 (선택)", key=f"lr_note_{k}", placeholder="판정 근거·애매한 점")
-    b1, b2, b3, b4, b5 = st.columns([2, 2, 2, 2, 1.4])
-    b1.button("✅ OK — 이 연구소 맞음", key=f"lr_ok_{k}", type="primary", width="stretch",
-              on_click=_on_decide, args=(it, "ok", qkind, who, role))
-    b2.button("❌ NG — 빼기", key=f"lr_ng_{k}", width="stretch",
-              on_click=_on_decide, args=(it, "ng", qkind, who, role))
-    b3.button("↪️ 이관 — 다른 연구소로", key=f"lr_mv_{k}", width="stretch",
-              on_click=_on_decide, args=(it, "move", qkind, who, role))
-    b4.button("⏭️ 건너뛰기", key=f"lr_sk_{k}", width="stretch",
-              on_click=_on_decide, args=(it, "skip", qkind, who, role))
-    b5.button("↩︎ 되돌리기", key=f"lr_undo_{k}", width="stretch", on_click=_undo_last, args=(inst, who),
-              disabled=not _my_unsaved(inst, who))
+    acts = acts or lr.MINE_ACTIONS
+    rc = None if blind else lr.recommend(it)
+    ra = rc["act"] if rc else None
+    mk = f"lr_mode_{qkind}_{k}"
+    if rc:
+        s1, s2 = st.columns([5, 1.5], vertical_alignment="center")
+        s1.markdown(f'<div class="lr-sug"><div class="t">기계 제안 · 확신 <b style="color:{CONF_COL[rc["conf"]]}">'
+                    f'{rc["conf"]}</b></div><div class="v">{ACT_ICON[ra]} {lr.ACTION_KO[ra]} — '
+                    f'{html.escape(lr.alloc_text(inst, ra, rc["to"], rc["also"], rc["reason"]))}</div>'
+                    f'<div class="w">{_rec_why(it, rc)}</div></div>', unsafe_allow_html=True)
+        s2.button("👍 제안대로 하기", key=f"lr_rec_{qkind}_{k}", type="primary", width="stretch",
+                  on_click=_on_act, args=(it, ra, qkind, who, role),
+                  kwargs=dict(to=rc["to"], also=rc["also"], reason=rc["reason"], mk=mk),
+                  help="기계 제안을 연구소·사유까지 그대로 확정합니다.")
+    mode = st.session_state.get(mk)
+    for col, a in zip(st.columns(len(acts)), acts):
+        label = f"{ACT_ICON[a]} {lr.ACTION_KO[a]}\n{lr.ACTION_SUB[a]}"
+        typ = "primary" if (a == mode or (not mode and a == ra)) else "secondary"
+        if a in ("add", "move", "drop"):
+            col.button(label, key=f"lr_b_{a}_{qkind}_{k}", type=typ, width="stretch", on_click=_open_pick, args=(mk, a))
+        else:
+            col.button(label, key=f"lr_b_{a}_{qkind}_{k}", type=typ, width="stretch",
+                       on_click=_on_act, args=(it, a, qkind, who, role), kwargs=dict(mk=mk))
+
+    if mode in ("add", "move", "drop") and mode in acts:
+        others = [i for i in lr.INSTS if i != inst]
+        near = it.get("best_other") if (it.get("best_other_fit") or 0) >= .4 else None
+        with st.container(border=True):
+            if mode == "add":
+                pre = [] if blind else [x for x in (rc["also"] if ra == "add" else [near] if near else []) if x in others]
+                val = st.pills("어느 연구소와 함께 배당할까요? (여러 곳 가능)", others, selection_mode="multi", default=pre,
+                               key=f"lr_pk_add_{qkind}_{k}", format_func=lambda x: lr.INST_NAME[x])
+                ok_lab = (f"➕ 추가 배당 확정 — {lr.alloc_text(inst, 'add', also=val)}" if val else "연구소를 골라 주세요")
+                kw, hint = dict(also=list(val or [])), "공동 연구소의 '받은 논문' 탭에 확인용으로 보입니다."
+            elif mode == "move":
+                pre = None if blind else (rc["to"] if ra == "move" else near)
+                val = st.pills("어느 연구소 몫인가요? (한 곳)", others, selection_mode="single", default=pre,
+                               key=f"lr_pk_move_{qkind}_{k}", format_func=lambda x: lr.INST_NAME[x])
+                ok_lab = f"↪️ {lr.INST_NAME[val]}로 보내기" if val else "연구소를 골라 주세요"
+                kw = dict(to=val)
+                hint = ("소장(조정자) 판정이라 받는 쪽 확인 없이 확정됩니다." if role == "director"
+                        else "받는 연구소 담당자가 '받은 논문' 탭에서 한 번 더 확인합니다.")
+            else:
+                pre = None if blind else (rc["reason"] if ra == "drop" else None)
+                val = st.pills("왜 빼나요?", lr.DROP_REASONS, selection_mode="single", default=pre,
+                               key=f"lr_pk_drop_{qkind}_{k}", format_func=lambda x: lr.REASON_SHORT[x])
+                ok_lab = f"✖️ 빼기 확정 — {lr.REASON_SHORT[val]}" if val else "사유를 골라 주세요"
+                kw, hint = dict(reason=val), "어느 연구소 편수에도 넣지 않습니다."
+            b1, b2, b3 = st.columns([3, 1, 4], vertical_alignment="center")
+            b1.button(ok_lab, key=f"lr_ok_{mode}_{qkind}_{k}", type="primary", width="stretch", disabled=not val,
+                      on_click=_on_act, args=(it, mode, qkind, who, role), kwargs={**kw, "mk": mk})
+            b2.button("취소", key=f"lr_cx_{qkind}_{k}", width="stretch", on_click=_close_pick, args=(mk,))
+            b3.caption(hint)
+
+    n1, n2, n3 = st.columns([4, 1.3, 4.7], vertical_alignment="bottom")
+    n1.text_input("메모 (선택)", key=f"lr_note_{k}", placeholder="판정 근거·애매한 점")
+    n2.button("↩︎ 되돌리기", key=f"lr_undo_{qkind}_{k}", width="stretch", on_click=_undo_last, args=(who,),
+              disabled=not _my_unsaved(who), help="내 마지막 판정(GitHub 저장 전)을 지웁니다.")
+    _last_line(n3)
+    if nxt:
+        dot = {"audit": "🟣", "triage": "🔵", "sample1": "🟢", "coord": "⚪"}
+        rows = ""
+        for x, kk in nxt:
+            r2 = None if blind else lr.recommend(x)
+            rows += (f"<div>{dot.get(kk, '🔵')} " + ("" if blind else
+                     f"<b>{x['score']}</b> <span style='color:{ACT_COL[r2['act']]}'>{lr.ACTION_KO[r2['act']]}</span> — ")
+                     + f"{_clean(x['title'])[:90]}</div>")
+        st.markdown(f'<div class="lr-mini"><b>다음 카드</b>{rows}</div>', unsafe_allow_html=True)
+    if right is not None:
+        with right:
+            _recent_box(who)
+
+
+def _last_line(slot):
     last = st.session_state.get("lr_last")
     if last:
-        st.caption(f"방금: {lr.DECISION_KO.get(last['decision'], last['decision'])}"
-                   + (f" → {lr.INST_NAME.get(last.get('to'), '')}" if last.get("to") else "")
-                   + f" · {last['id']}")
+        a = lr.action_of(last)
+        slot.markdown(f'<div class="lr-mini">방금: <b style="color:{ACT_COL.get(a, GRAY)}">{lr.ACTION_KO.get(a, a)}</b> → '
+                      f'{html.escape(lr.rec_alloc(last))}</div>', unsafe_allow_html=True)
+
+
+# ───────────────────────── 받은 논문 ─────────────────────────
+def _tab_incoming(inst, who, prof, allrecs):
+    moves = lr.incoming_moves(allrecs, inst)
+    shared = lr.shared_in(allrecs, inst)
+    by_src = Counter(r["inst"] for r in moves)
+    _kpis([("받은 논문 (확인 대기)", f"{len(moves):,}",
+            " · ".join(f"{lr.INST_SHORT[s]} {n}" for s, n in by_src.most_common()) or "보낸 곳 없음", AMBER),
+           ("공동으로 받은 논문", f"{len(shared):,}", "추가 배당·같이 하기 — 확인만 하면 됨", BLUE),
+           ("내 미저장", f"{len(_my_unsaved(who)) if who else 0}건", "모든 연구소 보관함 합계", GRAY)])
+    st.caption(f"다른 연구소가 '다른 연구소로'를 눌러 {lr.INST_NAME[inst]}로 보낸 논문입니다. 받는 쪽이 확인해야 배당이 바뀌고, "
+               "돌려보내거나 '나중에'를 누르면 조정자(소장)에게 갑니다. 보낸 곳이 위성·AI처럼 '방법' 연구소면 "
+               "같이 하기(공동 배당)를 먼저 제안합니다.")
+    pj = _pj(prof)
+    cache = {}
+
+    def src_item(r):
+        if r["inst"] not in cache:
+            cache[r["inst"]] = {x["id"]: x for x in _items(r["inst"], pj)}
+        return cache[r["inst"]].get(r["id"])
+
+    if not who:
+        st.info("위에 **판정자 이름**을 넣으면 받은 논문 카드가 열립니다.")
+    elif not moves:
+        st.success("확인할 받은 논문이 없습니다.")
+    else:
+        mv = moves[0]
+        with st.spinner(f"{lr.INST_NAME[mv['inst']]} 목록 불러오는 중…"):
+            it = src_item(mv)
+        right = None
+        if it is None:
+            st.warning(f"보낸 논문({mv['id']})을 {lr.INST_NAME[mv['inst']]} 목록에서 찾지 못했습니다 — 돌려보내거나 나중에로 넘기세요.")
+            it = {"id": mv["id"], "inst": mv["inst"], "title": mv["id"], "score": mv.get("score"), "suggestion": "move",
+                  "to": inst, "score_ver": mv.get("score_ver"), "dups": [], "fits": {}, "home_terms": []}
+        else:
+            right = _card(it, "incoming", 1, len(moves), prof, {}, recv=inst, move_rec=mv)
+        nxt = [(src_item(x), x) for x in moves[1:6]]
+        _incoming_controls(it, mv, inst, who, prof, right, [(x, m) for x, m in nxt if x])
+        if len(moves) > 1:
+            _incoming_bulk(moves, src_item, inst, who, prof)
+    if shared:
+        with st.expander(f"🤝 공동으로 받은 논문 {len(shared):,}편 — 확인만 (판정 필요 없음)"):
+            st.dataframe(pd.DataFrame([{"보낸 곳": lr.INST_NAME.get(r["inst"], r["inst"]),
+                                        "버튼": lr.ACTION_KO.get(lr.action_of(r), ""), "배당": lr.rec_alloc(r),
+                                        "판정자": r.get("reviewer") or "", "시각(KST)": lr.to_kst(r.get("ts")),
+                                        "논문 ID": r["id"]} for r in shared[:500]]),
+                         hide_index=True, width="stretch", height=min(380, 40 + 35 * min(len(shared), 500)))
+
+
+def _incoming_controls(it, mv, recv, who, prof, right, nxt):
+    k, src = it["id"], it["inst"]
+    method = src in prof.get("method_institutes", [])
+    fit = round(100 * (it.get("fits") or {}).get(recv, 0))
+    ra = "share" if method else "accept"
+    conf = "높음" if fit >= 90 else ("보통" if fit >= 60 else "낮음")
+    prev = [x for x in mv.get("also") or [] if x != recv]
+    alloc = (lr.alloc_text(src, "accept", to=recv, also=prev) if ra == "accept"
+             else lr.alloc_text(src, "share", also=sorted(set(prev) | {recv})))
+    why = (f"{lr.INST_NAME[src]}는 ‘방법’(위성·AI) 연구소 — 분야는 {lr.INST_SHORT[recv]}, 함께 배당" if method
+           else f"{lr.INST_SHORT[recv]} 적합도 {fit}%")
+    s1, s2 = st.columns([5, 1.5], vertical_alignment="center")
+    s1.markdown(f'<div class="lr-sug"><div class="t">기계 제안 · 확신 <b style="color:{CONF_COL[conf]}">{conf}</b></div>'
+                f'<div class="v">{ACT_ICON[ra]} {lr.ACTION_KO[ra]} — {html.escape(alloc)}</div>'
+                f'<div class="w">{html.escape(why)}</div></div>', unsafe_allow_html=True)
+    s2.button("👍 제안대로 하기", key=f"lr_in_rec_{k}", type="primary", width="stretch",
+              on_click=_on_resp, args=(it, ra, who, recv, mv))
+    for col, a in zip(st.columns(len(lr.INCOMING_ACTIONS)), lr.INCOMING_ACTIONS):
+        col.button(f"{ACT_ICON[a]} {lr.ACTION_KO[a]}\n{lr.ACTION_SUB.get(a, '모르겠음 → 조정자')}", key=f"lr_in_{a}_{k}",
+                   type="primary" if a == ra else "secondary", width="stretch",
+                   on_click=_on_resp, args=(it, a, who, recv, mv))
+    n1, n2, n3 = st.columns([4, 1.3, 4.7], vertical_alignment="bottom")
+    n1.text_input("메모 (선택)", key=f"lr_note_in_{k}", placeholder="받거나 돌려보내는 이유")
+    n2.button("↩︎ 되돌리기", key=f"lr_in_undo_{k}", width="stretch", on_click=_undo_last, args=(who,),
+              disabled=not _my_unsaved(who))
+    _last_line(n3)
     if nxt:
-        dot = {"audit": "🟣", "triage": "🔵", "sample1": "🟢"}
-        rows = "".join(f"<div>{dot.get(kk, '🔵')} " + ("" if blind else
-                       f"<b>{x['score']}</b> <span style='color:{SUGG_COL[x['suggestion']]}'>"
-                       f"{SUGG_KO[x['suggestion']]}</span> — ") + f"{_clean(x['title'])[:90]}</div>" for x, kk in nxt)
-        st.markdown(f'<div class="lr-mini"><b>다음 카드</b>{rows}</div>', unsafe_allow_html=True)
+        rows = "".join(f"<div>📥 <b>{lr.INST_SHORT[m['inst']]}</b> → {round(100 * (x.get('fits') or {}).get(recv, 0))}% — "
+                       f"{_clean(x['title'])[:90]}</div>" for x, m in nxt)
+        st.markdown(f'<div class="lr-mini"><b>다음 받은 논문</b>{rows}</div>', unsafe_allow_html=True)
+    if right is not None:
+        with right:
+            _recent_box(who)
+
+
+def _incoming_bulk(moves, src_item, recv, who, prof):
+    with st.expander(f"🧺 한꺼번에 답하기 — 받은 논문 {len(moves):,}편", expanded=False):
+        st.caption("보낸 연구소별로 모았습니다. 체크는 적합도 90% 이상인 것에만 미리 해 두었습니다 — 예외만 바꾸고 버튼 하나로 답하세요.")
+        groups = {}
+        for m in moves:
+            groups.setdefault(m["inst"], []).append(m)
+        for src, ms in sorted(groups.items(), key=lambda x: -len(x[1])):
+            pairs = [(src_item(m), m) for m in ms[:200]]
+            pairs = [(x, m) for x, m in pairs if x]
+            if not pairs:
+                continue
+            st.markdown(f"**{lr.INST_NAME[src]}에서 보낸 {len(ms):,}편**" + (" (처음 200편)" if len(ms) > 200 else ""))
+            df = pd.DataFrame([{"선택": (x.get("fits") or {}).get(recv, 0) >= .9,
+                                "적합도": round(100 * (x.get("fits") or {}).get(recv, 0)),
+                                "제목": _TAG.sub("", x["title"])[:110], "보낸 사람": m.get("reviewer") or "",
+                                "id": x["id"]} for x, m in pairs])
+            sig = hashlib.sha1("|".join(df["id"]).encode("utf-8")).hexdigest()[:8]
+            ed = st.data_editor(df, key=f"lr_inb_{recv}_{src}_{sig}", hide_index=True, width="stretch",
+                                disabled=["적합도", "제목", "보낸 사람", "id"], height=min(380, 40 + 35 * len(df)),
+                                column_config={"선택": st.column_config.CheckboxColumn("선택", width="small"), "id": None})
+            chosen = set(ed[ed["선택"]]["id"])
+            sel = [(x, m) for x, m in pairs if x["id"] in chosen]
+            c1, c2, c3 = st.columns(3)
+            first = "share" if src in prof.get("method_institutes", []) else "accept"
+            for c, a in zip((c1, c2, c3), [first, "accept" if first == "share" else "share", "reject"]):
+                c.button(f"{ACT_ICON[a]} 선택한 {len(sel)}편 모두 {lr.ACTION_KO[a]}", key=f"lr_inb_{a}_{recv}_{src}_{sig}",
+                         type="primary" if a == first else "secondary", width="stretch", disabled=not sel,
+                         on_click=_on_resp_bulk, args=(sel, a, who, recv))
+
+
+# ───────────────────────── 비슷한 논문 묶음 ─────────────────────────
+def _bundle_text(g: dict) -> tuple[str, str]:
+    a, t = g["act"], g["target"]
+    if a == "drop":
+        s = lr.REASON_SHORT.get(t, t)
+        return f"‘{s}’으로 보이는 논문", f"✖️ 모두 빼기 ({s})"
+    if a == "move":
+        return f"{lr.INST_NAME[t]} 몫으로 보이는 논문", f"↪️ 모두 {lr.INST_NAME[t]}로 보내기"
+    names = " · ".join(lr.INST_NAME[x] for x in t)
+    return f"{names}와도 맞는 논문", f"➕ 모두 추가 배당 ({' · '.join(lr.INST_SHORT[x] for x in t)} 공동)"
+
+
+def _tab_bundles(items, jstate, prof, inst, who, role):
+    gs = lr.bundles(items, jstate)
+    st.caption("기계 제안이 같은 논문을 묶었습니다. 체크는 기계 확신이 ‘높음’인 것에만 미리 해 두었습니다 — 제목을 훑고 "
+               "예외만 바꾼 뒤 버튼 하나로 처리하세요. 감사 표본(무작위)은 정확도 추정을 위해 묶음에서 빼고 "
+               "‘내 연구소 목록’에서 한 장씩 봅니다.")
+    if not who:
+        st.info("위에 **판정자 이름**을 넣으면 묶음이 열립니다.")
+        return
+    if not gs:
+        st.success("묶어서 처리할 논문이 없습니다.")
+        return
+    _kpis([("묶음", f"{len(gs)}", "기계 제안 버튼·대상 연구소별", NAVY),
+           ("묶인 논문", f"{sum(g['n'] for g in gs):,}", "아직 사람이 안 본 것 (감사 표본 제외)", BLUE),
+           ("확신 높음", f"{sum(g['high'] for g in gs):,}", "미리 체크된 것", GREEN)])
+    for gi, g in enumerate(gs[:15]):
+        title, btn = _bundle_text(g)
+        xs = g["items"][:200]
+        with st.expander(f"{ACT_ICON[g['act']]} {title} — {g['n']:,}편 (확신 높음 {g['high']:,})", expanded=gi == 0):
+            df = pd.DataFrame([{"선택": rc["conf"] == "높음", "확신": rc["conf"], "점수": x["score"],
+                                "제목": _TAG.sub("", x["title"])[:110], "대상": (x.get("object") or "")[:40],
+                                "근거": (f"유형 {x.get('type') or '?'}" if g["target"] == "nonresearch" else
+                                         ", ".join((x["best_other_terms"] if g["act"] in ("move", "add")
+                                                    else x["home_terms"])[:4])),
+                                "id": x["id"]} for x, rc in xs])
+            sig = hashlib.sha1("|".join(df["id"]).encode("utf-8")).hexdigest()[:8]
+            ed = st.data_editor(df, key=f"lr_bd_{inst}_{gi}_{sig}", hide_index=True, width="stretch",
+                                disabled=[c for c in df.columns if c != "선택"], height=min(420, 40 + 35 * len(df)),
+                                column_config={"선택": st.column_config.CheckboxColumn("선택", width="small"), "id": None})
+            chosen = set(ed[ed["선택"]]["id"])
+            pairs = [(x, rc) for x, rc in xs if x["id"] in chosen]
+            c1, c2 = st.columns([3, 4], vertical_alignment="center")
+            c1.button(f"{btn} — 선택한 {len(pairs)}편", key=f"lr_bdgo_{inst}_{gi}_{sig}", type="primary", width="stretch",
+                      disabled=not pairs, on_click=_on_bundle, args=(pairs, who, role))
+            c2.caption((f"처음 {len(xs)}편만 보입니다 — 처리하면 다음 것이 올라옵니다. " if g["n"] > len(xs) else "")
+                       + ("보내기는 받는 연구소가 한 번 더 확인합니다." if g["act"] == "move" else ""))
+
+
+# ───────────────────────── 조정자 ─────────────────────────
+def _tab_coord(items, jstate, records, prof, inst, who):
+    cq = lr.coord_queue(items, records, inst)
+    if not cq:
+        st.success("조정할 논문이 없습니다 — ‘나중에’를 누르거나 받는 쪽이 돌려보낸 논문이 여기 모입니다.")
+        return
+    it, r = cq[0]
+    a = lr.action_of(r)
+    msg = (f"**조정 사유** — {lr.ROLE_KO.get(r.get('role'), '')} {r.get('reviewer') or '?'}: {lr.ACTION_KO.get(a, a)}"
+           + (f" ({lr.INST_NAME.get(r.get('receiver'), '')}가 받지 않음)" if a == "reject" else "")
+           + (f" ({lr.INST_NAME.get(r.get('receiver'), '')}가 판단 보류)" if a == "later" and r.get("receiver") else "")
+           + (f" · 메모: {r['note']}" if r.get("note") else ""))
+    st.info(msg)
+    st.caption(f"조정 대기 {len(cq)}건. 소장(조정자)이 고르면 바로 확정됩니다 — 다른 연구소로 보내도 받는 쪽 확인 없이 확정됩니다.")
+    right = _card(it, "coord", 1, len(cq), prof, jstate)
+    _controls(it, "coord", inst, who, "director", prof, nxt=[(x, "coord") for x, _ in cq[1:6]], right=right,
+              acts=["keep", "add", "move", "drop"])
 
 
 def _tab_director(items, jstate, prof, inst, who):
@@ -510,6 +867,15 @@ def _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout):
     if enough and m["expected_bad"] is not None:
         st.caption(f"감사 표본으로 추정하면 {lr.INST_NAME[inst]} 라벨 {m['N']:,}건 중 약 **{m['expected_bad']:,}건**이 "
                    f"NG 또는 다른 연구소 몫입니다 (95% 범위 {round((1 - hi) * m['N']):,}–{round((1 - lo) * m['N']):,}).")
+
+    al = lr.allocation_counts(items, jstate)
+    st.markdown('<div class="sect">배당 결과 — 사람 판정 기준 (묶음 수)</div>', unsafe_allow_html=True)
+    _kpis([("그냥 통과", f"{al.get('keep', 0):,}", "주 소관 = 이 연구소", "#15803D"),
+           ("추가 배당·같이 하기", f"{al.get('add', 0) + al.get('share', 0):,}", "주 = 이 연구소 + 공동", "#1D4ED8"),
+           ("이관 — 받는 쪽 확인 대기", f"{al.get('move_wait', 0):,}", "받으면 주 소관이 옮겨감", "#B45309"),
+           ("이관 확정", f"{al.get('move_done', 0):,}", "받는 쪽이 받음 · 소장 이관", "#B45309"),
+           ("빼기", f"{al.get('drop', 0):,}", "어느 연구소 편수에도 안 넣음", "#B91C1C"),
+           ("돌려받음 (조정)", f"{al.get('reject', 0):,}", "받는 쪽이 돌려보냄 → 조정자", "#475569")])
 
     c1, c2 = st.columns(2)
     with c1:
@@ -658,9 +1024,10 @@ def _tab_log(items, jstate, records, inst, tau, n_files, err, saved_keys=frozens
                     decision=v["decision"].map(lambda d: lr.DECISION_KO.get(d, d)),
                     to=v["to"].map(lambda t: lr.INST_NAME.get(t, "") if t else ""))
     show = show.fillna("")
-    st.dataframe(show[["state", "decision", "to", "score", "machine", "title", "year", "domain", "reviewer",
-                       "role", "reason", "also", "dup_of", "doi"]].rename(columns={
-                           "state": "상태", "decision": "판정", "to": "이관처", "score": "점수", "machine": "기계 제안",
+    st.dataframe(show[["state", "action", "alloc", "decision", "to", "score", "machine", "title", "year", "domain",
+                       "reviewer", "role", "reason", "also", "dup_of", "doi"]].rename(columns={
+                           "state": "상태", "action": "버튼", "alloc": "배당", "decision": "판정", "to": "이관처",
+                           "score": "점수", "machine": "기계 제안",
                            "title": "제목", "year": "연도", "domain": "도메인", "reviewer": "판정자", "role": "역할",
                            "reason": "NG 사유", "also": "공유", "dup_of": "중복 대표", "doi": "DOI"}),
                  hide_index=True, width="stretch", height=420,
@@ -684,7 +1051,7 @@ def _tab_sample(items, sample, rvw, prof, inst, who, role, blind):
     others = {w: c for w, c in others.items() if c}
     _kpis([("내 진행", f"{done} / {n}", "남은 " + f"{n - done}장" + (f" (건너뜀 {len(mine['skip'])})" if mine["skip"] else ""), "#0F766E"),
            ("함께 판정 중", f"{len(others)}명", ", ".join(f"{w} {c}" for w, c in list(others.items())[:4]) or "아직 없음", BLUE),
-           ("GitHub 미저장", f"{len(_my_unsaved(inst, who))}건", "서버에 임시 보관 중 — GitHub 저장이 최종 기록", AMBER),
+           ("GitHub 미저장", f"{len(_my_unsaved(who))}건", "서버에 임시 보관 중 — GitHub 저장이 최종 기록", AMBER),
            ("예상 소요", f"약 {max(1, round((n - done) * 0.6))}분", "장당 30–40초 기준", GRAY)])
     st.progress(done / n if n else 0.0, text=f"1차 샘플 {done}/{n}")
     if not q:
@@ -692,8 +1059,8 @@ def _tab_sample(items, sample, rvw, prof, inst, who, role, blind):
                    "다른 판정자와의 일치를 확인하세요.")
         return
     it = q[0]
-    _card(it, "sample1", done + 1, n, prof, {}, blind=blind)
-    _controls(it, "sample1", inst, who, role, False, prof, nxt=[(x, "sample1") for x in q[1:4]], blind=blind)
+    right = _card(it, "sample1", done + 1, n, prof, {}, blind=blind)
+    _controls(it, "sample1", inst, who, role, prof, nxt=[(x, "sample1") for x in q[1:4]], blind=blind, right=right)
 
 
 KAPPA_TXT = [(0.8, "거의 완벽"), (0.6, "상당히 일치"), (0.4, "보통"), (0.2, "약함"), (-1, "낮음 — 판정 기준 정리 필요")]
@@ -785,7 +1152,25 @@ def _tab_guide(direct, has_token):
     st.markdown(f"""
 #### 이 화면이 하는 일
 논문은 **어느 연구소 키워드로 검색됐는가**로 연구소 라벨이 붙습니다. 이 라벨이 맞는지 사람이 판정합니다.
-**OK**(맞음) · **NG**(빼기: 연구소 범위 밖, 연구 문헌 아님, 물 분야 아님, 중복) · **이관**(다른 연구소 몫) · **건너뛰기**.
+판정하는 사람은 "이 논문이 어디 몫인가"만 고르고, 배당·이관·조정자 전달은 화면이 합니다 (v3.8).
+
+| 탭 | 버튼 | 배당 결과 |
+|---|---|---|
+| 내 연구소 목록 | ✅ **그냥 통과** — 해당 연구소 맞음 | 주 소관 = 이 연구소 |
+| | ➕ **추가 배당** — 우리 것 + 다른 곳도 (여러 곳) | 주 = 이 연구소 · 공동 = 고른 곳 |
+| | ↪️ **다른 연구소로** — 우리 것 아님 (한 곳) | 받는 연구소가 확인하면 주 소관 이전 |
+| | ✖️ **빼기** — 연구물 아님 · 물·K-water 분야 밖 · 맞는 연구소 없음 · 중복 | 어느 연구소 편수에도 안 넣음 |
+| | ⏸️ **나중에** — 모르겠음 | 그대로 두고 조정자(소장) 목록으로 |
+| 받은 논문 | 📥 **받기** | 주 = 받는 연구소 (보낸 곳에서 빠짐) |
+| | 🤝 **같이 하기** | 주 = 보낸 곳 · 공동 = 받는 연구소 |
+| | ↩️ **돌려보내기** | 보낸 곳 유지 · 조정자 확인 |
+| | ⏸️ **나중에** | 조정자 목록으로 |
+
+- **👍 제안대로 하기**: 기계 제안(연구소·사유까지)을 한 번에 확정합니다. 제안된 버튼은 색이 채워져 있습니다.
+- **비슷한 논문 묶음**: 기계 제안이 같은 논문을 모아 체크한 것만 한 번에 처리합니다 (감사 표본은 제외).
+- **되돌리기**: GitHub 저장 전이면 마지막 판정을 지웁니다.
+- 기록 형식: 예전 판정값(OK·NG·이관·건너뜀)을 그대로 쓰고 누른 버튼을 `action`에 남깁니다 — 지난 판정은 그대로
+  이어집니다 (OK → 그냥 통과, OK+공유 → 추가 배당, NG → 빼기, 이관 → 다른 연구소로).
 
 #### 사람 손을 아끼는 방법 — 기계 점수 + 두 갈래 표본
 1. **기계 적합도 점수(0–100)** — 본 연구소 적합(W 도메인 0.5 + 제목·초록·대상/문제 키워드 0.5)과
@@ -843,8 +1228,9 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
                    "기계 일치율·판정자 간 일치도가 나옵니다. 여기 판정은 전체 판정 지표에도 그대로 들어갑니다.")
     else:
         st.markdown('<div class="sect">연구소별 분류 적정성 — 이 논문이 이 연구소 것이 맞나요?</div>', unsafe_allow_html=True)
-        st.caption("기계가 모든 논문에 적합도 점수를 매기고, 사람은 무작위 감사 표본과 기계가 헷갈리거나 바꾸자고 한 논문만 봅니다. "
-                   "판정이 쌓이면 '사람이 안 봐도 되는 점수 문턱(τ)'을 다시 계산합니다. 원리는 맨 오른쪽 탭.")
+        st.caption("기계 제안이 맞으면 **👍 제안대로 하기** 한 번, 다르면 버튼 다섯 개(그냥 통과·추가 배당·다른 연구소로·빼기·나중에) 중 "
+                   "하나를 누릅니다. 다른 연구소로 보낸 논문은 받는 연구소가 **받은 논문** 탭에서 한 번 더 확인하고, 비슷한 논문은 "
+                   "**묶음** 탭에서 한 번에 처리합니다. 원리는 맨 오른쪽 탭.")
     sec = _secrets()
     has_token = bool(sec.get("github_token"))
     direct_possible = has_token and bool(sec.get("passcode"))
@@ -852,7 +1238,7 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
 
     c1, c2, c3, c4 = st.columns([2.2, 2, 1.6, 2])
     inst = c1.selectbox("연구소", pilot, key="lr_inst", format_func=lambda x: f"{lr.INST_NAME[x]} ({x})",
-                        help="시범: 수자원환경연구소. 다른 연구소는 label_review_profiles.json의 pilot에 추가하면 열립니다.")
+                        help="담당자는 자기 연구소를 고릅니다. 목록은 label_review_profiles.json의 pilot에서 정합니다.")
     who = c2.text_input("판정자 이름", key="lr_who", placeholder="예: 홍길동").strip()
     role = c3.radio("역할", ["reviewer", "director"], key="lr_role", horizontal=True,
                     format_func=lambda x: lr.ROLE_KO[x])
@@ -874,13 +1260,13 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
         st.warning(auth_msg)
 
     with st.spinner(f"{lr.INST_NAME[inst]} 라벨 불러오는 중…"):
-        items = _items(inst, json.dumps(prof, sort_keys=True, ensure_ascii=False))
+        items = _items(inst, _pj(prof))
     if not items:
         st.warning("라벨 데이터를 불러오지 못했습니다 (data 브랜치 labels/domain·extract).")
         return
     save_every = prof.get("review", {}).get("save_every", 5)
-    if direct and who and len(_my_unsaved(inst, who)) >= save_every:
-        ok, msg = _save_direct(inst, who)                     # 직접 저장: save_every건마다 자동 커밋 (화면 그리기 전에)
+    if direct and who and len(_my_unsaved(who)) >= save_every:
+        ok, msg = _save_direct(who)                           # 직접 저장: save_every건마다 자동 커밋 (화면 그리기 전에)
         (st.toast if ok else st.error)(f"자동 저장: {msg}")
     remote, n_files, err = _remote_records(inst)
     if not err:                                               # GitHub에 올라간 건 보관함에서 자동으로 뺀다
@@ -890,36 +1276,41 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
     records = _dedupe(remote + st.session_state.get("lr_saved", []) + pend)
     records = [r for r in records if r.get("inst") == inst]
     st.session_state["lr_records"] = records
+    allrecs = _all_records(records, inst)                      # 다른 연구소 대장까지 — 받은 논문·공동 배당 찾기
+    st.session_state["lr_allrecs"] = allrecs
+    st.session_state["lr_titles"] = {it["id"]: it["title"] for it in items}
     jstate = lr.judgment_state(records, inst, lr.canon_map(items))
     tau_info = lr.recommend_tau(items, jstate, prof)
 
     # ── 저장 상태 줄: 판정은 누르는 즉시 서버에 쌓이고(누적), GitHub 저장이 최종 기록 ──
-    mine = _my_unsaved_clean(inst, who) if who else []
+    mine = _my_unsaved_clean(who) if who else []
     others_pending = sum(1 for r in pend if r.get("reviewer") != who)
     if mine:
         s1, s2 = st.columns([5, 2])
         if direct:
             s1.info(f"내 판정 {len(mine)}건이 서버에 임시 보관 중 — {save_every}건마다 GitHub에 자동 저장됩니다.")
             if s2.button("💾 지금 저장", key="lr_save_now", type="primary", width="stretch"):
-                ok, msg = _save_direct(inst, who)
+                ok, msg = _save_direct(who)
                 (st.toast if ok else st.error)(msg)
                 if ok:
                     _rerun()
         else:
             s1.info(f"내 판정 **{len(mine)}건이 서버에 임시 보관** 중입니다 (새로고침·창 닫기에도 유지, 화면에는 이미 누적 반영). "
                     "최종 기록은 오른쪽 링크를 열어 GitHub에서 **Commit changes** — 올라가면 1–2분 안에 자동 정리됩니다.")
-            links = lr.prefill_urls(REPO, BRANCH, inst, who, mine)
+            links = [(u, n, i_) for i_, grp in _by_inst(mine).items() for u, n in lr.prefill_urls(REPO, BRANCH, i_, who, grp)]
             with s2:
-                for i, (u, n) in enumerate(links):
-                    st.link_button(f"💾 GitHub에 저장 {i + 1}/{len(links)} ({n}건)", u, width="stretch")
+                for j, (u, n, i_) in enumerate(links):
+                    st.link_button(f"💾 GitHub에 저장 {j + 1}/{len(links)} ({lr.INST_SHORT[i_]} {n}건)", u, width="stretch")
             with s1:
                 d1, d2 = st.columns(2)
                 d1.download_button("⬇️ 판정 파일 받기 (.jsonl)", lr.to_jsonl(mine).encode("utf-8"),
-                                   file_name=lr.batch_path(inst, who).split("/")[-1],
+                                   file_name=(lr.batch_path(inst, who).split("/")[-1] if len(_by_inst(mine)) == 1
+                                              else f"hitl_{len(_by_inst(mine))}연구소.jsonl"),
                                    mime="application/json", width="stretch")
                 if d2.button("🔄 GitHub 저장 확인", width="stretch", key="lr_check_saved",
                              help="Commit 뒤 누르면 바로 대조해 임시 보관함을 정리합니다 (안 눌러도 1–2분 안에 자동)"):
                     _list_batches.clear()
+                    _ledgers.clear()
                     _rerun()
     if others_pending > 0:
         st.caption(f"다른 판정자의 임시 보관 판정 {others_pending}건도 화면에 함께 누적되어 있습니다 (GitHub 저장 전).")
@@ -945,22 +1336,28 @@ def _render_body(load_json, plotly_layout: dict, mode: str):
             _tab_sample_guide(len(sample))
         return
 
-    tabs = st.tabs(["✍️ 판정하기", "📊 현황·지표", "🗂️ 판정 기록", "ℹ️ 운영 원리"])
+    tabs = st.tabs(["✍️ 내 연구소 목록", "📥 받은 논문", "🧺 비슷한 논문 묶음", "📊 현황·지표", "🗂️ 판정 기록", "ℹ️ 운영 원리"])
     with tabs[0]:
         if not who:
             st.info("위에 **판정자 이름**을 넣으면 판정 카드가 열립니다. (이름은 판정 기록에 남습니다)")
         elif role == "director":
-            mode = st.radio("소장 화면", ["소장 확인 대기", "직접 판정"], horizontal=True, key="lr_dir_mode",
-                            label_visibility="collapsed")
-            if mode == "소장 확인 대기":
+            dmode = st.radio("소장 화면", ["소장 확인 대기", "조정 필요", "직접 판정"], horizontal=True, key="lr_dir_mode",
+                             label_visibility="collapsed")
+            if dmode == "소장 확인 대기":
                 _tab_director(items, jstate, prof, inst, who)
+            elif dmode == "조정 필요":
+                _tab_coord(items, jstate, records, prof, inst, who)
             else:
-                _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info)
+                _tab_judge(items, jstate, prof, inst, who, role, tau_info, records)
         else:
-            _tab_judge(items, jstate, prof, inst, who, role, direct, tau_info)
+            _tab_judge(items, jstate, prof, inst, who, role, tau_info, records)
     with tabs[1]:
-        _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout)
+        _tab_incoming(inst, who, prof, allrecs)
     with tabs[2]:
-        _tab_log(items, jstate, records, inst, tau_info["tau"], n_files, err, saved_keys, plotly_layout)
+        _tab_bundles(items, jstate, prof, inst, who, role)
     with tabs[3]:
+        _tab_metrics(items, jstate, prof, inst, tau_info, plotly_layout)
+    with tabs[4]:
+        _tab_log(items, jstate, records, inst, tau_info["tau"], n_files, err, saved_keys, plotly_layout)
+    with tabs[5]:
         _tab_guide(direct, has_token)
