@@ -1,0 +1,13 @@
+{
+ "_doc": "🗄️ 지식자산 현황 화면의 숫자. 통합 물 지식 자산 정보검색 시스템(WCS) 기준 — 숫자가 바뀌면 count와 as_of만 고친다.",
+ "as_of": "2026-10-27",
+ "system": "통합 물 지식 자산 정보검색 시스템 (WCS)",
+ "items": [
+  {"key": "reports", "label": "연구보고서", "unit": "건", "count": 1814,
+   "note": "K-water 연구보고서 (2026-10-27 담당자 제공)"},
+  {"key": "papers", "label": "논문", "unit": "편", "count": 555500,
+   "note": "WCS 논문 DB (archive.paper_works)"},
+  {"key": "patents", "label": "특허", "unit": "건", "count": 8750,
+   "note": "WCS 특허 DB (archive.patents, 특허팀 복사본 2026-10-22)"}
+ ]
+}
