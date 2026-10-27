@@ -335,3 +335,4 @@
 {"ts": "2026-10-27T06:57:41Z", "forward": 10, "hist_year": 2025, "hist": 3280, "backfilled": 3290, "extracted": 2755, "assigned": 2724, "total": 16465, "failures": 45, "duration_s": 4468}
 {"ts": "2026-10-27T12:45:50Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 16465, "failures": 0, "duration_s": 1}
 {"ts": "2026-10-27T18:23:15Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 16465, "failures": 0, "duration_s": 1}
+{"ts": "2026-10-27T22:40:19Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 16465, "failures": 0, "duration_s": 2}
