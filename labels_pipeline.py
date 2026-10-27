@@ -16,8 +16,9 @@ HISTORY_START_YEAR = 2025      # 첫 역사 수집 연도 (2025 상반기 공백
 HISTORY_FLOOR_YEAR = 2015      # 여기까지 후진하면 역사 수집 완료
 MAX_PAGES_FORWARD = 120
 MAX_PAGES_PER_MONTH = 60
-COLLECT_ALL_KEYWORDS = True    # 2026-10-27 사용자 승인("논문 수집 진행"): 연구소 키워드 전체(5~6개)로 수집
-                               #   키워드마다 따로 검색(지금과 같은 띄어쓰기 검색) → id로 합침. False면 대표 키워드 1개
+COLLECT_ALL_KEYWORDS = False   # 연구소 키워드 전체(5~6개)로 수집 — 2026-10-27 승인 뒤 실측 규모(최근 5년 약 20.7만 편 → 약 17만 편 추가,
+                               #   라벨링 30~50달러)가 추정의 3배라 사용자 지시로 '일단 대기'. True로 바꾸면 키워드마다 따로 검색해 id로 합침.
+                               #   False = 대표 키워드 1개 (최근 5년 하루 1년 다시 훑기는 그대로 진행)
 RESWEEP_YEARS = 5              # 역사 수집 완주 뒤: 최근 5년(올해 포함)을 하루에 1년씩 다시 훑음 (2026-10-27 사용자 지정)
                                #   첫 차례는 작년(2025 상반기 공백) → 2024 → … → 5년 전 → 올해 → 작년 … 순환. id로 중복 제거
 TOPICS_URL = ("https://raw.githubusercontent.com/newcave/water-tech-agent/"
