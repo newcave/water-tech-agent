@@ -70,7 +70,9 @@ jobs:
         if: github.event_name != 'schedule' || github.event.schedule == '11 21 * * 0'
         env:
           KCI_RAW_DIR: private
-        run: python agents/kci_rising.py
+        run: |
+          python agents/kci_rising.py
+          python agents/kci_inst.py
 
       - name: 집계 커밋 → 공개 저장소 (main만)
         if: github.ref == 'refs/heads/main' && (github.event_name != 'schedule' || github.event.schedule == '11 21 * * 0')
@@ -79,6 +81,7 @@ jobs:
           git config user.email "co-scientist-bot@users.noreply.github.com"
           git add data_seed/kci_rising.json
           [ -f data_seed/kci_kwater.json ] && git add data_seed/kci_kwater.json
+          [ -f data_seed/kci_inst.json ] && git add data_seed/kci_inst.json
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -m "🤖 kci_rising: $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3; do
