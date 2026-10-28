@@ -337,3 +337,4 @@
 {"ts": "2026-10-27T18:23:15Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 16465, "failures": 0, "duration_s": 1}
 {"ts": "2026-10-27T22:40:19Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 16465, "failures": 0, "duration_s": 2}
 {"ts": "2026-10-28T07:15:55Z", "forward": 37, "hist_year": 2024, "hist": 2507, "backfilled": 2544, "extracted": 2091, "assigned": 2063, "total": 18528, "failures": 37, "duration_s": 3229}
+{"ts": "2026-10-28T13:35:47Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 18528, "failures": 0, "duration_s": 1}
