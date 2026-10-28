@@ -38,6 +38,9 @@ MAILTO = "newcave.kwater@gmail.com"          # OpenAlex polite pool (아무 연�
 RECENT_FROM = "2025-07-01"                   # '최근 1년' 트렌드 창
 TREND_YEARS = 5                              # 연구소별 연도 추이 창 (올해 포함 5개 연도, 2026-10-27 사용자 지정)
 TOP10 = "citation_normalized_percentile.is_in_top_10_percent:true"   # 피인용 상위 10% (분야·연도 보정, OpenAlex 계산)
+# OpenAlex 무키 사용량은 하루 $0.10(검색 1건 ≈ $0.001 → 검색 약 100건). 지금 실측이 검색 약 56건을 쓰므로
+# 피인용(검색 약 7건/연구소)은 한 번에 다 하지 않고 6시간 실행마다 연구소를 4묶음으로 돌려 하루에 한 바퀴 (2026-10-28 429 확인)
+CIT_SLOTS = 4
 
 AGENT = SEED / "agents" / "openalex_collector.json"
 TRENDS = SEED / "openalex_trends.json"
@@ -160,7 +163,9 @@ def main():
     trend_years = [str(y) for y in range(y1 - TREND_YEARS + 1, y1 + 1)]
     span = f"from_publication_date:{trend_years[0]}-01-01,to_publication_date:{y1}-12-31"   # 미래 날짜(오기) 제외
     per_inst, n_related = {}, 0
-    for inst in topics.get("institutes", []):
+    cit_slot = (now // (6 * 3600)) % CIT_SLOTS
+    for idx, inst in enumerate(topics.get("institutes", [])):
+        do_cit = idx % CIT_SLOTS == cit_slot              # 이번 실행에 피인용을 새로 셀 연구소
         kws = inst.get("openalex_keywords") or []
         if not kws:
             continue
@@ -188,12 +193,17 @@ def main():
                 time.sleep(0.4)
             ent["keywords"], ent["by_kw"] = kws, by_kw
             try:                                      # 피인용 상위 10% — 키워드별 (실패해도 편수 값은 유지)
+                if not do_cit:
+                    raise StopIteration
                 by_kw_top = {}
                 for k in kws:
                     b = oa_by_year(f"title_and_abstract.search:{k},{span},{TOP10}")
                     by_kw_top[k] = {y: min(b.get(y, 0), by_kw[k].get(y, 0)) for y in trend_years}
                     time.sleep(0.4)
                 ent["by_kw_top10"] = by_kw_top
+                ent["cit_updated"] = now
+            except StopIteration:
+                pass
             except Exception as e:
                 errors.append(f"{inst['code']} 피인용(키워드): {e}")
             if len(kws) > 1:
@@ -202,10 +212,14 @@ def main():
                 time.sleep(0.4)
                 if union_ok(u, by_kw, trend_years):
                     ent["by_year_all"] = u
-                    try:                              # 피인용 상위 10% — 합집합
+                    try:                              # 피인용 상위 10% — 합집합 (이번 차례 연구소만)
+                        if not do_cit:
+                            raise StopIteration
                         b = oa_by_year(f"title_and_abstract.search:{union_search(kws)},{span},{TOP10}")
                         ent["by_year_all_top10"] = {y: min(b.get(y, 0), u.get(y, 0)) for y in trend_years}
                         time.sleep(0.4)
+                    except StopIteration:
+                        pass
                     except Exception as e:
                         errors.append(f"{inst['code']} 피인용(합집합): {e}")
                 else:
@@ -272,6 +286,7 @@ def main():
         msg = "⚠️ OpenAlex API 오류: " + "; ".join(str(e)[:60] for e in errors[:2])
     ev.append({"ts": now, "msg": msg})
     ag["events"] = ev[-20:]                           # 최근 20개만 유지
+    ag["last_errors"] = [str(e)[:200] for e in errors[:15]]   # 원인 확인용 (429 = OpenAlex 하루 사용량 초과)
     save(AGENT, ag)
 
     # ── 4. 트렌드 기록 (위크시그널 재료) ──
@@ -282,7 +297,7 @@ def main():
         if per_inst:
             for code, v in per_inst.items():          # 연도별 조회만 실패한 연구소는 지난 값 유지
                 old = (tr.get("institutes") or {}).get(code, {})
-                for f in ("by_year", "by_year_all", "by_kw", "keywords", "by_year_all_top10", "by_kw_top10"):
+                for f in ("by_year", "by_year_all", "by_kw", "keywords", "by_year_all_top10", "by_kw_top10", "cit_updated"):
                     if f not in v and old.get(f):
                         v[f] = old[f]
             tr["institutes"] = per_inst
