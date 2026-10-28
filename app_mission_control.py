@@ -38,6 +38,25 @@ import inst_trend as itr      # 연구소별 5년 추이 — 해외(OpenAlex) �
 import citation_page as citp   # 🏅 피인용 질 — 피인용 상위 10% 비중 (v3.16)
 import asset_page as astp     # 🗄️ 지식자산 현황 — WCS 연구보고서·논문·특허 구성 (v3.14)
 
+
+def _fresh_modules(*mods):
+    """Streamlit Cloud가 git pull 뒤에도 예전 보조 모듈을 메모리에 쥐고 있는 일이 있어(2026-10-28 🏅 피인용 질 탭
+    AttributeError — 새 citation_page가 예전 inst_trend를 봄), 처음 보는 모듈은 한 번, 그 뒤로는 파일이 바뀌면 다시 읽음.
+    importlib.reload는 같은 모듈 객체를 고쳐 쓰므로 다른 모듈이 쥔 참조(citation_page의 itr 등)도 함께 새것이 됨."""
+    import importlib
+    import os
+    for m in mods:
+        try:
+            mt = os.path.getmtime(m.__file__)
+            if getattr(m, "_wca_mtime", None) is None or mt > m._wca_mtime:
+                importlib.reload(m)
+                m._wca_mtime = mt
+        except Exception:
+            pass
+
+
+_fresh_modules(itr, citp, astp, oarp, kn, lrp, af)   # data_cache는 캐시를 쥐고 있어 제외 · 순서: 기반 모듈(itr) 먼저
+
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
                    layout="wide", initial_sidebar_state="expanded")
 st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이머가 '마지막 전체 그리기' 시각으로 씀
@@ -45,7 +64,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.16 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.16.1 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
