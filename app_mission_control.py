@@ -35,6 +35,7 @@ import knowledge_notes as kn
 import label_review_page as lrp
 import oa_rising_page as oarp
 import inst_trend as itr      # 연구소별 5년 추이 — 해외(OpenAlex) 실측 (v3.12)
+import citation_page as citp   # 🏅 피인용 질 — 피인용 상위 10% 비중 (v3.16)
 import asset_page as astp     # 🗄️ 지식자산 현황 — WCS 연구보고서·논문·특허 구성 (v3.14)
 
 st.set_page_config(page_title="K-water Co-Scientist 관제센터", page_icon="💧",
@@ -44,7 +45,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.15 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.16 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -52,6 +53,7 @@ FLOW_PAGE = "🌊 에이전트 흐름"              # 보여 주기용 흐름 �
 LR_PAGE = "연구소별 분류 적정성"             # HITL (전문가) 검토 — 연구소 라벨 OK·NG·이관 판정 (label_review_page.py)
 LR1_PAGE = "라벨링 1차 샘플링"              # HITL (전문가) 검토 — 무작위 고정 60장, 판정자마다 따로·블라인드
 ASSET_PAGE = "🗄️ 지식자산 현황"                 # WCS 연구보고서·논문·특허 구성 파이 (asset_page.py · data_seed/wcs_assets.json)
+CIT_PAGE = "🏅 피인용 질"                       # 연구소 관련 논문의 피인용 상위 10% 비중 (citation_page.py · openalex_trends.json *_top10)
 OA_PAGE = "🔭 상승 연구주제"                  # openalex 상승 연구주제 분석 결과 연동 (oa_rising_page.py · data_seed/oa_rising/)
 # Agent Flow 확인用 버튼 이름 (2026-10-26 사용자 지정 · 순서는 AGENT_FLOWS 순서)
 WCS_FLOW_PAGE = "Co-Scientist 개념도"        # WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
@@ -551,7 +553,7 @@ with st.sidebar:
                 '<line x1="17" y1="20" x2="23" y2="28"/><line x1="11" y1="28" x2="23" y2="28"/>'
                 '<circle cx="11" cy="28" r="3"/><circle cx="17" cy="20" r="3"/><circle cx="23" cy="28" r="3"/></g></svg>'
                 '<span>물벗 : R&amp;D 에이전트</span></div></div>', unsafe_allow_html=True)
-    PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", ASSET_PAGE, AC_PAGE, "📄 논문 트렌드", "🇰🇷 KCI 트렌드", OA_PAGE, "🏷️ 라벨링 로그", "🏢 7개 연구소",
+    PAGES = ["🛰️ 관제센터", FLOW_PAGE, "📚 수집 현황", ASSET_PAGE, AC_PAGE, "📄 논문 트렌드", CIT_PAGE, "🇰🇷 KCI 트렌드", OA_PAGE, "🏷️ 라벨링 로그", "🏢 7개 연구소",
              KN_PAGE, "🔥 FT 모니터", "🗂️ 인벤토리"]
     if "nav_start" not in st.session_state:          # ?inst=INST-0x 주소로 들어오면 지식노트부터 (세션당 1회만 결정)
         st.session_state["nav_start"] = PAGES.index(KN_PAGE) if st.query_params.get("inst") else 0
@@ -1468,6 +1470,10 @@ elif page == "🇰🇷 KCI 트렌드":
 # ═══════════════ 페이지: 지식자산 현황 (WCS 연구보고서·논문·특허) ═══════════════
 elif page == ASSET_PAGE:
     astp.render(load_json, PLOTLY_LAYOUT)
+
+# ═══════════════ 페이지: 피인용 질 (피인용 상위 10% 비중) ═══════════════
+elif page == CIT_PAGE:
+    citp.render(load_json("openalex_trends.json") or {}, summary.get("inst_names", {}), INST_COLORS, PLOTLY_LAYOUT)
 
 # ═══════════════ 페이지: 상승 연구주제 (openalex 분석 연동) ═══════════════
 elif page == OA_PAGE:
@@ -2416,5 +2422,5 @@ def _auto_refresh_timer():
         st.rerun(scope="app")
 
 
-if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE, FLOW_PAGE, OA_PAGE, ASSET_PAGE, *AGENT_FLOWS):     # 판정·노트 화면은 입력 중 초기화 방지, 흐름 화면은 스스로 갱신
+if auto and page not in (KN_PAGE, AC_PAGE, HITL_PAGE, LR_PAGE, LR1_PAGE, FLOW_PAGE, OA_PAGE, ASSET_PAGE, CIT_PAGE, *AGENT_FLOWS):     # 판정·노트 화면은 입력 중 초기화 방지, 흐름 화면은 스스로 갱신
     _auto_refresh_timer()

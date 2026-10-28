@@ -152,7 +152,7 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         fig.update_yaxes(gridcolor="#EEF2F7")
         st.plotly_chart(fig, width="stretch", key="inst5_index")
 
-    render_citation(tr, rows, names, colors, layout, full)
+    render_citation(tr, rows, names, colors, layout, full, more=True)
 
     with st.expander("연도별 표 · 방법"):
         tbl = [{"연구소": r["name"], "키워드": r["keyword"],
@@ -184,7 +184,7 @@ def _alt_pos(ys: list) -> list:
     return pos
 
 
-def render_citation(tr: dict, rows: list, names: dict, colors: dict, layout: dict, full: list):
+def render_citation(tr: dict, rows: list, names: dict, colors: dict, layout: dict, full: list, more: bool = False):
     """피인용 질 — 연구소 관련 논문 중 피인용 상위 10% 비중 (끝난 해 합산) + 성장 × 피인용 위치."""
     rows = [r for r in rows if r.get("top10") is not None]
     if not rows or not full:
@@ -247,7 +247,8 @@ def render_citation(tr: dict, rows: list, names: dict, colors: dict, layout: dic
         st.caption(f"오른쪽 위 = 해외 전체보다 빨리 크면서 많이 인용되는 분야 · 점 크기 = {b}년 편수 · 가로 실선 0 = 해외 전체와 같은 성장")
     st.caption("피인용 상위 10% = OpenAlex가 논문마다 계산한 '같은 분야·같은 출판연도 논문 중 피인용 백분위'가 상위 10%인 논문. "
                "분야와 연도를 보정한 값이라 오래된 논문이 유리하지 않음. 최근 해의 논문은 아직 인용이 쌓이는 중이라 "
-               "값이 해마다 조금씩 바뀔 수 있음. 우리가 받아 둔 피인용 수(받은 날의 숫자)는 쓰지 않음.")
+               "값이 해마다 조금씩 바뀔 수 있음. 우리가 받아 둔 피인용 수(받은 날의 숫자)는 쓰지 않음."
+               + (" 키워드 순위·연도별 추이는 사이드바 '🏅 피인용 질'." if more else ""))
 
 
 def coverage_rows(df: pd.DataFrame, by_year: dict, years: list) -> list:
@@ -360,15 +361,35 @@ def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict
     st.caption("키워드마다 OpenAlex title_and_abstract 검색의 출판연도별 논문 수. 막대 색 = 해외 전체(OpenAlex)보다 빨리 느는 키워드, "
                "회색 = 해외 전체보다 느린 키워드. 키워드끼리 겹치는 논문이 있어 키워드 합은 연구소 관련 전체보다 큼. 키워드 고치기: data_seed/search_topics.json")
 
-    top_kw = ent.get("by_kw_top10") or {}           # 키워드별 성장 × 피인용 질 (v3.15)
+    render_kw_citation(ent, years, base, layout, key, base_top10)
+
+
+def kw_citation_points(ent: dict, years: list):
+    """연구소 키워드별 (성장, 피인용 상위 10% 비중, 편수) — 끝난 해 첫해→마지막 해, 피인용은 끝난 해 합산."""
+    by_kw = ent.get("by_kw") or {}
+    full = [y for y in years if int(y) < time.gmtime().tm_year]
+    if len(full) < 2:
+        return [], full
+    a, b = full[0], full[-1]
+    top_kw = ent.get("by_kw_top10") or {}
     pts = []
     for i, k in enumerate(by_kw):
         sh = top_share(top_kw.get(k), by_kw[k], full)
         g = _pct(by_kw[k].get(a, 0), by_kw[k].get(b, 0))
         if sh is not None and g is not None:
-            pts.append({"kw": k, "g": g, "top10": sh, "last": by_kw[k].get(b, 0), "col": KW_COLORS[i % len(KW_COLORS)]})
+            pts.append({"kw": k, "g": g, "top10": sh, "last": by_kw[k].get(b, 0), "first": by_kw[k].get(a, 0),
+                        "n": sum(by_kw[k].get(y, 0) for y in full), "col": KW_COLORS[i % len(KW_COLORS)]})
+    return pts, full
+
+
+def render_kw_citation(ent: dict, years: list, base: dict, layout: dict, key: str, base_top10: dict = None):
+    """키워드별 성장 × 피인용 질 산점도 (v3.15) — 연구소 트랙과 🏅 피인용 질 화면이 함께 씀."""
+    pts, full = kw_citation_points(ent, years)
     if not pts:
         return
+    a, b = full[0], full[-1]
+    g_base = _pct(base.get(a, 0), base.get(b, 0)) if base else None
+    all_by, _ = trend_of(ent)
     b_share = top_share(base_top10, base, full) if base_top10 else None
     i_share = top_share(top10_of(ent), all_by, full)
     st.markdown(f'<div class="sect">키워드별 성장 × 피인용 질 — 어디가 크면서 영향력도 있나 ({a}→{b})</div>',
