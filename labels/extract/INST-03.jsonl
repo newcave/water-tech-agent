@@ -5139,3 +5139,377 @@
 {"id": "W7219529519", "object": "음용수 시스템", "problem": "안전하고 고품질의 음용수 제공 보장", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407136797", "object": "지하수 공급 시스템", "problem": "표면수의 영향을 평가하기 위한 Giardia 및 총 호기성 포자 검출", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406537067", "object": "치료 제품의 환경적 영향", "problem": "치료 제품의 이익-위험 평가에 환경 위험 데이터를 포함시키기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223668382", "object": "PDAM Kabupaten Lombok Timur의 재무제표", "problem": "재무제표의 공정성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223648395", "object": "5세 이하 아동의 급성 하부 호흡기 질환", "problem": "급성 호흡기 질환 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223654436", "object": "지하수 정수 처리 과정에서 생성된 슬러지", "problem": "슬러지의 특성 규명 및 관리 기준 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223656669", "object": "구리 중독", "problem": "구리 제거를 위한 안전하고 효과적인 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223674635", "object": "물의 오염 수준", "problem": "물의 오염 수준을 예측하고 모니터링하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223684661", "object": "유럽의 도시 하수 처리 시스템", "problem": "미세오염물질과 병원균 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223687730", "object": "필터 요소의 오염된 매체", "problem": "매체를 정화하는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223689074", "object": "임신한 쥐의 신장 기능", "problem": "납 아세테이트로 인한 신독성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223695058", "object": "버지니아 주의 개인 음용수 샘플", "problem": "PFAS 발생과의 연관성 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223657243", "object": "병아리의 대장균 감염", "problem": "레보플록사신의 치료 및 예방 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223695953", "object": "음용수 품질", "problem": "기후 변화로 인한 오염물질 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223210506", "object": "유럽 도시 호수의 수질", "problem": "질소와 산소 주입으로 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223722691", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4407253256", "object": "농업 화학물질로 오염된 물", "problem": "2,4-D 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217008790", "object": "수돗물 및 폐수 처리 시스템", "problem": "사이버 공격으로 인한 공공 안전 위험", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220287048", "object": "물의 질", "problem": "질소의 역할과 균형 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220317582", "object": "물 자원 관리", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405894252", "object": "하수 처리장에서의 배출수", "problem": "음용수로의 업그레이드", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416651991", "object": "Meizimera-kihihi 강의 수질", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217300811", "object": "Bunaji yearlings", "problem": "성장 성능 및 생산 경제성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220145442", "object": "산업 지역의 수질", "problem": "화학 및 생물 오염물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223177406", "object": "즉석 용도용 드래곤 과일 껍질 음료", "problem": "가열 시간에 따른 화학적 품질 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220221173", "object": "음용수 공급의 오염물질", "problem": "오염물질 제거를 위한 필터링 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216116466", "object": "인도네시아 전통 허브 음료", "problem": "해조류를 첨가하여 기능적 가치 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404752205", "object": "복부 수술 후 환자의 통증 관리", "problem": "통증 관리의 비효율성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219990726", "object": "브로일러 닭의 혈액 생화학적 매개변수", "problem": "혈액 생화학적 매개변수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404622119", "object": "방글라데시의 5세 이하 아동의 영양 상태", "problem": "가정 환경 조건과 아동 영양 간의 관계 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221290844", "object": "소의 소변에서 추출한 유로키나제", "problem": "유로키나제의 분리 및 정제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404780181", "object": "일본 메추라기", "problem": "스트레스에 의한 생화학적 변화 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219303322", "object": "오존 발생기에서의 오존 농도", "problem": "배출 제어를 위한 온라인 모니터링 시스템 구현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403902139", "object": "불소 오염된 지하수", "problem": "건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220464630", "object": "Paya Seunara 댐의 수질", "problem": "주변 주민의 오수 배출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215135914", "object": "산란계의 생산성과 계란 품질", "problem": "피토제닉 화합물 보충으로 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7199537651", "object": "브로일러 치킨 생산", "problem": "자연 사료 첨가제가 성장 및 경제성에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402996139", "object": "니켈-티타늄 아치 와이어", "problem": "구강 세척제에 따른 부식 정도 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403000309", "object": "심장 섬유증", "problem": "심장 섬유증 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219324016", "object": "브로일러의 시체 품질", "problem": "지방과 콜레스테롤 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402910870", "object": "소규모 육계 생산", "problem": "약물 및 첨가물의 부적절한 사용 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220522631", "object": "개와 고양이의 요로결석증", "problem": "요로결석증의 유병률 조사 및 치료 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217215655", "object": "수질 오염 물질", "problem": "PAC의 사용량 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215213878", "object": "학교의 환경 위생", "problem": "환경 건강 문제 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217803396", "object": "깨끗한 식수", "problem": "콜리폼 및 대장균 감소 차이 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402057445", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4403147418", "object": "젖소의 수분 섭취 및 행동", "problem": "단기적인 물 제한의 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217138564", "object": "Baixada Santista 지역의 기본 위생 서비스", "problem": "보편적 위생 서비스 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217491645", "object": "Jundiaí 시의 수돗물", "problem": "독성 및 돌연변이 물질의 존재 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401224421", "object": "소아에서의 장티푸스 및 파라티푸스 감염", "problem": "항생제 내성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217280355", "object": "Apete Community의 수자원 및 위생 상태", "problem": "불충분한 수자원과 불건전한 위생 관행으로 인한 감염병 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219987053", "object": "원주율 농촌 지역의 안전한 식수 접근성", "problem": "물 관련 질병 예방 및 위생 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214902628", "object": "제1형 당뇨병 모델에서의 β-세포 재생", "problem": "미세조류 추출물의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216920161", "object": "Tarum Barat Canal의 수질", "problem": "PAC 소비 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217887578", "object": "PDAM Tirta Bangka의 음용수 공급 시스템", "problem": "고객의 지불 의사 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400916338", "object": "건강 서비스 접근성", "problem": "건강 서비스에 대한 접근성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217062493", "object": "대장염", "problem": "대장염의 중증도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219971447", "object": "남성 Wistar 쥐의 간과 신장 생화학적 프로필", "problem": "Lacatomtom 음료 섭취로 인한 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220499391", "object": "Chikun 지역의 중학생들", "problem": "요로 수종병의 유병률과 위험 요인 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221197135", "object": "음용수의 품질", "problem": "항생제 내성 박테리아의 식별 및 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215531168", "object": "물의 안전한 공급", "problem": "미생물 비활성화 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216967150", "object": "브로일러 치킨의 건강 및 장기 발달", "problem": "비터 리프 추출물의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217489523", "object": "육계의 성장 성능 및 행동", "problem": "ACV의 간헐적 투여 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215611454", "object": "음용수 리필 저장소의 위생 상태", "problem": "위생 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217302876", "object": "알츠하이머병", "problem": "알코올로 인한 신경퇴행 및 인지장애 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216560195", "object": "식수 오염", "problem": "식수 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217195717", "object": "산란계의 성능 및 계란 품질 특성", "problem": "클로브 추출물의 효과를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216721271", "object": "육계의 성장 성능", "problem": "양파 추출물의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396576412", "object": "음용수 분배 시스템의 기회병원체", "problem": "기회병원체의 발생 및 위험 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396510996", "object": "담수의 자연 유기물(NOM)", "problem": "HPSEC-TOC 분석의 적합성 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396509052", "object": "조기 육계의 장내 미생물 군집 및 면역 기능", "problem": "항생제 혼합물의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396529929", "object": "수돗물 공급의 안전성", "problem": "미세플라스틱의 부작용 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396532707", "object": "가정용 수처리 시스템", "problem": "미생물 오염 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396534006", "object": "peat water", "problem": "깨끗한 물 제공을 위한 정화 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396936574", "object": "쥐의 혈당 수치 및 췌장 조직", "problem": "혈당 수치 감소 및 췌장 조직 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396575920", "object": "E. coli", "problem": "비활성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396561449", "object": "음용수의 철 오염", "problem": "철 제거를 위한 효과적인 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396569894", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4396589910", "object": "브로일러 닭의 혈액 무게, 깃털 무게, 머리 무게", "problem": "Averrhoa Bilimbi의 사용 효과를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396701505", "object": "한우의 배설물 특성", "problem": "악취 완화 효율 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400336262", "object": "브로일러 닭의 도체 품질과 도체 비율", "problem": "프로바이오틱스의 효과 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165631703", "object": "Türkiye'deki balneoterapi uygulama merkezleri", "problem": "balneoterapinin etkinliğini araştırmak", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165639726", "object": "balneoterapi", "problem": "su ve gazların özelliklerini 설명하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215263605", "object": "환경과 인간 건강", "problem": "제약 오염물질의 영향 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396240044", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS의 생물축적 및 운명 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396223428", "object": "Wistar 쥐의 신경 행동", "problem": "플루오르화나트륨으로 유도된 신경 행동 결핍 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396240498", "object": "수돗물 품질", "problem": "TDS 수준 초과 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396220212", "object": "지하수의 품질", "problem": "지하수의 오염 수준 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396214360", "object": "도로 건설에서의 플라스틱 폐기물", "problem": "플라스틱 폐기물의 처리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396223227", "object": "음용수의 품질과 안전성", "problem": "소독 부산물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396224128", "object": "국내 수돗물에 대한 전반적인 만족도", "problem": "수돗물에 대한 신뢰 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396842715", "object": "식수 및 유제품의 미생물 오염", "problem": "S. aureus 감염 위험 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396227912", "object": "sc‐FOS가 풍부한 물", "problem": "미생물 오염 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395954434", "object": "여성 자손의 전두엽 피질", "problem": "모성 플루옥세틴 노출로 인한 시냅스 가소성 손상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396214192", "object": "브로일러 치킨의 생산성 및 장 건강", "problem": "클로로겐산의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395961301", "object": "Mula-Mutha 강의 수질", "problem": "수질 적합성 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395694747", "object": "간 건강", "problem": "간 손상 위험 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395695623", "object": "궤양성 대장염", "problem": "궤양성 대장염 증상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395699656", "object": "고지방 및 과당 유도 제2형 당뇨병 쥐의 내장 지방 조직", "problem": "UCN3 발현 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398211444", "object": "알코올 금단 증후군", "problem": "금단 증상 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163828015", "object": "우유 생산 관리 관행", "problem": "개선된 우유 생산 관리 관행의 채택 정도 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220267250", "object": "교도소 내 간염 A 바이러스 감염 환자", "problem": "간염 A 바이러스 감염 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395675945", "object": "닭의 신장", "problem": "카드뮴 유발 신장 손상 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395665452", "object": "닭의 장 건강 바이오마커", "problem": "장 건강 바이오마커를 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395671371", "object": "과민성 대장 증후군", "problem": "상태 개선을 위한 대체 치료법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404820560", "object": "수돗물 공급의 위생적 측면", "problem": "수돗물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396845794", "object": "지하수 및 필터 수돗물 샘플", "problem": "분변 오염 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395671748", "object": "지하수의 품질", "problem": "오염된 지하수의 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395955017", "object": "건설 자재로서의 수처리 슬러지", "problem": "시멘트의 부분 대체를 통한 환경적 이점 증대", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401863660", "object": "오염된 물", "problem": "미생물 및 오염물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395665581", "object": "남조류 유해 조류 발생(HAB)", "problem": "HAB 사건의 신속한 처리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135265291", "object": "1,4-디옥산 오염물질", "problem": "1,4-디옥산의 효과적인 처리 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198344754", "object": "Waccamaw 및 Great Pee Dee 강 유역", "problem": "오염물질 감소를 통한 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395464225", "object": "음용수의 오염 및 건강 위험", "problem": "PTEs와 MPs의 농도 평가 및 건강 위험 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395677460", "object": "Paraopeba River", "problem": "금속 확산 완화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395676715", "object": "BTEX 오염된 폐수", "problem": "효율적인 처리 및 재사용 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395675173", "object": "모성 건강 관리", "problem": "모성 건강 관리 만족도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395672083", "object": "Southeast Florida의 하수 처리 옵션", "problem": "인간의 건강 위험 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395479932", "object": "폐수 내 6가 크롬(Cr(VI))", "problem": "효율적으로 환원하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395456672", "object": "Kosti와 Rabak 도시의 음용수", "problem": "대장균 오염 수준 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395452846", "object": "갑상선 호르몬 수치", "problem": "CYP 유도 갑상선 기능 저하증 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215327571", "object": "Bhisi village의 음용수 품질", "problem": "음용수의 높은 탁도와 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215562384", "object": "지하수의 음용수 적합성", "problem": "음용수의 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395082460", "object": "물 처리에서 금속-유기 구조체(MOF)", "problem": "MOF의 대규모 생산 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395082753", "object": "브로일러 병아리의 성장 성능 및 면역 상태", "problem": "발효된 밀 배아 추출물의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395081671", "object": "수돗물 분배 시스템의 생물막", "problem": "생물막 제거를 위한 대체 방법 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395114518", "object": "지하수층", "problem": "최적의 정화 전략 계획", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395112810", "object": "파킨슨병 환자의 삼킴 장애", "problem": "삼킴 기능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395451208", "object": "Ewu-Elepe 쓰레기 매립지의 토양 및 지하수 자원", "problem": "매립지의 오염 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395466888", "object": "열병 환자에서의 장티푸스 유병률", "problem": "사회 인구학적 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395073884", "object": "르완다의 음용수 공급", "problem": "물 공급 및 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395081920", "object": "Punjab의 가축 건강과 관리", "problem": "가축 질병 예방 및 치료 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220809751", "object": "음용수의 6가 크롬 오염", "problem": "지속적인 생물학적 처리로 최대 오염물질 수준 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395049227", "object": "병원에서 퇴원한 아동의 β-락타마제 생성 Klebsiella spp.", "problem": "β-락타마제 생성 Klebsiella spp.의 발생 및 전파 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395048643", "object": "가정의 물 접근성", "problem": "가정의 물 서비스에 대한 불만과 우려 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395038691", "object": "안전하지 않은 물 소비로 인한 영양실조", "problem": "물의 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395048993", "object": "소아의 구인두 톨레레미아", "problem": "구인두 톨레레미아 치료의 도전 과제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395030262", "object": "음용수 및 산업 폐수 내 망간 농도", "problem": "망간 농도 조절 및 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395037922", "object": "중생대 지층의 지하수", "problem": "지하수의 화학적 조성 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395048557", "object": "Morton Jaffray Water Treatment Works의 수처리 효율", "problem": "필터 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395695062", "object": "유방암 동물 모델", "problem": "치료 효과 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394997882", "object": "음용수의 불소 오염", "problem": "불소 제거를 위한 효과적인 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395006259", "object": "Turbi ward의 유목민 커뮤니티", "problem": "행동적 분변 노출 경로 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394010620", "object": "브로일러 닭의 단백질 효율 비율", "problem": "단백질 효율 비율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393850110", "object": "Gundlapochampally 지역의 지하수", "problem": "지하수의 화학적 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399973301", "object": "물의 무결성과 지속 가능성", "problem": "깨끗한 음용수 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400508826", "object": "Sprague-Dawley 쥐의 생화학적 및 조직병리학적 지표", "problem": "설탕의 건강에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155355537", "object": "Igbo-ukwu 지역의 지하수", "problem": "지하수의 화학적 특성 평가 및 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216829591", "object": "Premier Air Force Base Kaduna의 수도관 분배 네트워크 내의 수질", "problem": "수질 기준 미달 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399144385", "object": "광업에서의 기술적 물", "problem": "물의 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393342754", "object": "가정용 폐수", "problem": "폐수 처리 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393338640", "object": "젊은 여성과 그 가족의 건강", "problem": "불안정한 환경에서의 건강 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403517840", "object": "Moringa leaf tea", "problem": "화학적 및 관능적 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408254589", "object": "도축장 폐수의 중금속 오염", "problem": "오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393321327", "object": "PFAS(퍼플루오로알킬물질)", "problem": "EU의 PFAS 위험 평가 일관성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393357775", "object": "옥수수 짚", "problem": "염료 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394794612", "object": "노인 고혈압 환자", "problem": "혈압 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393901033", "object": "Wistar 쥐의 신장", "problem": "신장 내 아테로엠볼리즘의 조직병리학적 특징 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409589117", "object": "boba 토핑의 특성", "problem": "토핑의 질감 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393302755", "object": "폐수", "problem": "깨끗한 물 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409578174", "object": "마토아 잎 허브 차", "problem": "온도와 건조 시간의 영향을 규명하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409589121", "object": "전통 발리 음료인 loloh don cemcem", "problem": "항산화 활성을 개선하려는 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393252620", "object": "물속의 모노클로라민, 아질산염, 질산염", "problem": "동시 분석 및 검출 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393279436", "object": "Mbarara 시의 음용수", "problem": "음용수의 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394717484", "object": "저준위 방사성 액체의 세슘 이온", "problem": "세슘 이온 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393265224", "object": "식수의 순도를 개선하기 위한 모링가 올레페라 씨앗", "problem": "식수의 불순물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393306624", "object": "Ain Zada 댐의 수질", "problem": "수질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220602929", "object": "Tre 닭의 성장 성능 및 건강 상태", "problem": "프로바이오틱스와 유기산 보충의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393232087", "object": "물의 정화 및 담수화", "problem": "셀룰로오스 기반 재료의 효율성 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393219717", "object": "의료 시설에서 발생하는 폐수의 약물 오염", "problem": "약물 제거 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393236995", "object": "N-nitrosamines", "problem": "산업 폐수에서의 제거 효율성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393225481", "object": "LDL 수용체 결핍 마우스", "problem": "수은 노출로 인한 동맥경화증 악화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393234827", "object": "음용수 처리 슬러지", "problem": "슬러지의 저장 및 환경적 영향 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393275224", "object": "Taluka Bulri Shah Karim의 지하수", "problem": "지하수 품질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395469629", "object": "지하수의 불소 및 염화물 이온 농도", "problem": "구강 건강에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393218925", "object": "수면수의 오염원", "problem": "생물학적 오염의 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393232238", "object": "깨끗한 음용수", "problem": "제공하는 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393269212", "object": "대사 증후군을 가진 쥐의 행동 장애", "problem": "행동 장애의 교정 및 예방", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393315389", "object": "수돗물 공급의 위생적 측면", "problem": "물 공급의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393234620", "object": "세마랑시의 통합 도시 수자원 관리", "problem": "정수원 관리의 질적 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393235543", "object": "담수 시스템", "problem": "염분 농도 증가 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393235722", "object": "차가운 지역의 수자원 및 폐수 처리", "problem": "차가운 지역에서의 수자원 및 폐수 처리의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119334762", "object": "수자원 오염", "problem": "신흥 오염물질의 존재 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217448941", "object": "안전한 식수 공급", "problem": "개발도상국의 안전한 식수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220227749", "object": "Diyala 강 유역의 국제 지류", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393187015", "object": "방사성 아이오딘 오염물질", "problem": "아이오딘 포집 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399271513", "object": "칸트의 인종적 관점과 인종주의", "problem": "칸트의 인종적 관점이 인종주의 형성에 미친 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393204454", "object": "Barekese Drinking Water Treatment Plant의 폴리머 후처리 슬러지", "problem": "인간과 생태 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393188056", "object": "폐수에서의 영양소 제거", "problem": "미세조류를 이용한 폐수 처리 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393197705", "object": "알츠하이머병", "problem": "신경 염증 완화 및 인지 기능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393187642", "object": "농촌 음용수 처리 기술의 지속 가능한 구현", "problem": "지속 가능성을 위한 요구 사항 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393192604", "object": "월경 전 증후군(PMS)", "problem": "증상의 심각성 감소 및 삶의 질 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393363836", "object": "브로일러 닭의 도체 생산", "problem": "모링가 잎 추출물의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393363839", "object": "육계의 최종 체중, 캐러스 비율, 비캐러스 및 복부 지방", "problem": "사료 유형과 비타민 수준의 영향을 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393197995", "object": "DSS 유도 대장염", "problem": "IAA의 치료 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393157230", "object": "Chennai의 수원", "problem": "PFAS 오염 수준 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393158044", "object": "스위스 알비노 생쥐의 간", "problem": "크롬 VI의 만성 저용량 노출로 인한 간 손상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393314371", "object": "육계의 성장 성능", "problem": "항생제 대체물질로서의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394965428", "object": "Toxocara canis 알", "problem": "소독 방법을 통한 알의 비활성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395037391", "object": "토끼의 혈액 성분 및 비장과 신장 구조", "problem": "자기장 물의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393152906", "object": "신경 염증", "problem": "CAW의 신경 염증에 대한 영향을 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393197021", "object": "샹황 육계의 성장 성능 및 육질", "problem": "육질 개선을 위한 발효 두부 가공 폐수의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395054194", "object": "고양이의 요로 결석증", "problem": "결석 형성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393151085", "object": "병원성 박테리아 및 유해 남조류", "problem": "병원성 박테리아 제어", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393946379", "object": "브로일러 면역", "problem": "체리 잎 티백의 투여 시간에 따른 면역 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394771495", "object": "브로일러 닭의 성장 성능 및 면역 반응", "problem": "면역력 향상 및 Newcastle disease virus에 대한 항체 반응 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218076496", "object": "Cisarua Subdistrict의 음용수 공급", "problem": "향후 20년간 음용수 수요를 충족시키기 위한 계획 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393131785", "object": "청색조류 블룸", "problem": "모니터링 및 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393126599", "object": "음용수 처리 시설의 탄소 발자국", "problem": "온실가스 배출원 파악 및 감소 방안 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393199616", "object": "브로일러 닭의 도축 제품", "problem": "미생물 분석 및 안전 기준 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360801171", "object": "브로일러 닭에서의 카바페넴제 생산 및 확장 스펙트럼 베타-락타마제 생산 대장균의 전파", "problem": "CPE의 전파를 정량화하고 비교하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393129183", "object": "캘리포니아의 물 소비 패턴", "problem": "물 소비 패턴의 변화에 따른 물 불균형 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393130720", "object": "임신한 여성의 헤모글로빈 수치", "problem": "헤모글로빈 수치 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393135517", "object": "노인 고혈압", "problem": "고혈압 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393141894", "object": "물에 오염된 곰팡이", "problem": "곰팡이로 인한 감염 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393160699", "object": "산업 및 가정 하수", "problem": "오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393119332", "object": "가정용 폐수", "problem": "불순물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393089363", "object": "해수 담수화 및 수질 정화", "problem": "효율적인 태양열 인터페이스 증발 기술 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393080710", "object": "COVID-19 환자에서의 멜리오이드증", "problem": "오염된 수돗물로 인한 감염 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393070461", "object": "수질", "problem": "수질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393074720", "object": "Stevens-Johnson syndrome에서의 구강 점막 통증", "problem": "구강 점막 통증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393071678", "object": "여성 ACI 쥐의 유선", "problem": "유선 증식 및 비대 유도", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393097119", "object": "젊은 여성 마우스의 폐암 발병", "problem": "반복적인 심리적 스트레스가 폐암 부담을 증가시키는 것", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393083901", "object": "북키프로스의 물 공급 시스템", "problem": "물 공급 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393089092", "object": "암", "problem": "특정 암 세포를 표적하여 치료하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392298028", "object": "이스파한의 음용수", "problem": "금속의 발암 및 비발암 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392293060", "object": "칠레의 음용수 처리 시설", "problem": "에너지 효율성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392284378", "object": "지하수의 비소 오염", "problem": "비소 오염의 원인 규명 및 영향 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392290674", "object": "지하수의 수질", "problem": "플루오르와 비소 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392359181", "object": "산림 관리 및 생태계", "problem": "극단적인 산불 위험 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392342400", "object": "쥐의 생화학적 및 정자 매개변수", "problem": "에너지 음료의 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392388886", "object": "Santa Lucía 강 유역의 수질", "problem": "글리포세이트와 그 대사산물 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392347652", "object": "블라디미르 시의 수 surface water", "problem": "화학 오염 수준 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392354624", "object": "음용수 저수지", "problem": "물 품질 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392296276", "object": "음용수의 품질", "problem": "음용수의 안전성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392965393", "object": "오염된 호수 수질", "problem": "호수 수질 개선을 위한 필터링 효율성 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392965428", "object": "물의 여과 특성", "problem": "막 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394597031", "object": "식수 처리 공장", "problem": "물의 품질 기준 충족하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120340183", "object": "근육 활동 및 피로와 통증", "problem": "HD-tDCS의 급성 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7210203186", "object": "아일랜드의 크립토스포리디움 감염증", "problem": "인간의 크립토스포리디움 감염증의 유병률과 역학을 이해하려는", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223498603", "object": "토양 특성", "problem": "하수의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392240109", "object": "수돗물의 나노플라스틱 및 미세플라스틱", "problem": "수돗물에서 나노플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392242480", "object": "음료수 처리에서의 암모늄 제거 효율", "problem": "여과 속도가 질소화 효율에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392266579", "object": "Krabbe disease (KD)", "problem": "병리적 표현형 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392241516", "object": "토마토 수경재배 폐수", "problem": "폐수의 특성 평가 및 관리 방안 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392239701", "object": "지연형 과민반응", "problem": "해양 생물 접촉 후 피부 증상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392232730", "object": "5세 이하 아동의 영양 및 건강 상태", "problem": "WASH와 아동의 질병 및 영양 상태 간의 관계 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4397009968", "object": "브로일러 치킨의 성장 성능 및 혈액 프로필", "problem": "신선한 생강을 통한 성장 성능 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392264696", "object": "농촌 음용수 공급 시스템", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392287498", "object": "크림 제품의 품질", "problem": "다양한 공정 방법으로 동일한 제품 품질 달성 여부 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392313233", "object": "니아메의 음용수 처리 시스템", "problem": "두 음용수 처리 시스템의 기능적 및 차원적 특성 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392948444", "object": "지역 사회의 건강과 발전", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4397009938", "object": "브로일러 치킨의 성장 성능", "problem": "성장 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405494409", "object": "지하수", "problem": "수질 개선 및 안전성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409814837", "object": "메추리 알의 무게, 껍질 무게 및 껍질 두께", "problem": "벤토나이트 추가의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119263456", "object": "3종의 자생 산림 식물 묘목", "problem": "수분 보유 폴리머의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392201094", "object": "물의 이온 조성과 pH 상태", "problem": "자연 제올라이트를 이용한 물 처리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392389061", "object": "Sulaimani City의 음용수", "problem": "PAH 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392197572", "object": "백색 지방 조직", "problem": "심혈관 대사 변화로 인한 손상 보호", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392198420", "object": "식수의 자연 유기 물질(NOM)", "problem": "NOM 제거 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392664122", "object": "Yato 정수장 슬러지", "problem": "슬러지를 유기 비료로 활용하여 토양 구조와 양이온 균형 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392664127", "object": "Yato 정수장 슬러지", "problem": "슬러지의 오염 상태 평가 및 토양에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403339178", "object": "코코넛 물 이소토닉 음료", "problem": "최적의 이소토닉 음료 특성 결정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392202463", "object": "이탈리아 로마냐 지역의 음용수 시스템", "problem": "내분비 교란 화학물질의 제거 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392169187", "object": "Erdenet 지역의 지하수 품질", "problem": "지하수 오염 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392156482", "object": "신장 질환", "problem": "환경 요인에 의한 신장 손상 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392157096", "object": "즉석 생강 음료의 물리화학적 및 감각적 특성", "problem": "최적의 물 비율 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392161724", "object": "해수 담수화 효율", "problem": "전통적인 단층 직물의 비효율성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392142156", "object": "노화 관련 청력 손실", "problem": "CHEA의 작용 메커니즘 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392133639", "object": "음용수의 질", "problem": "질산 농도 증가 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392133687", "object": "유럽의 수면수에서의 제약물질 농도", "problem": "가뭄이 제약물질 농도에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392120334", "object": "비소 오염 지하수", "problem": "비소 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392167597", "object": "깨끗한 식수 접근성", "problem": "오염으로 인한 식수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392139730", "object": "음용수의 품질", "problem": "물리적 및 화학적 특성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392092200", "object": "식물 기반 음료", "problem": "분말 형태로의 전환 및 건조 수율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392094486", "object": "비결핵성 마이코박테리아(NTM)", "problem": "환경에서 NTM 종의 분포와 변동 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392123806", "object": "인도네시아 지역 사회의 수돗물", "problem": "중금속 오염으로 인한 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392132422", "object": "수 surface 및 groundwater supplies", "problem": "폐기물 매립지가 수질에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392094820", "object": "궤양성 대장염", "problem": "장 염증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392157689", "object": "SAA에서 공급되는 음용수의 품질", "problem": "음용수 품질 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392773781", "object": "콜 음료에 의해 침식된 치근 상아질", "problem": "미세 경도 및 광물 변화 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392058622", "object": "심층 토양수의 불소 오염", "problem": "불소 제거를 위한 효과적인 방법 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392028578", "object": "Rayen 분지의 지하수", "problem": "지하수의 질과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391995523", "object": "자궁 동맥 기능", "problem": "자궁 동맥의 혈관 기능 장애 및 리모델링 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392782060", "object": "알코올 금단으로 유발된 과민증", "problem": "과민증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392062595", "object": "음용수 처리에 사용되는 원수", "problem": "청색세균 세포 용해 및 미세시스트 방출 실시간 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391964858", "object": "안전한 음용수", "problem": "물의 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391927366", "object": "수돗물의 품질", "problem": "플록큘레이션 과정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391918758", "object": "성장하는 돼지", "problem": "열 스트레스에 의한 성장 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391947064", "object": "가정의 수자원, 위생 및 청결 조건", "problem": "SAM 재발 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391933574", "object": "Crescentia cujete 과일 껍질", "problem": "물의 탁도를 줄이기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391931795", "object": "정수 처리 과정에서의 물리적 특성", "problem": "플록 응집 과정 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391984297", "object": "기니피그에서의 마이코플라스마 감염", "problem": "마이코플라스마 감염으로 인한 임상 증상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392782597", "object": "Diabetes insipidus (DI)", "problem": "환자의 안전성을 증가시키는 방법을 이해하려는 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118173090", "object": "수돗물 및 폐수 처리", "problem": "오염물질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391920106", "object": "자웅동체 물고기(제브라피시와 지방머리미노)", "problem": "신경독소의 분자 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391948418", "object": "역삼투압 공정의 농축 용액", "problem": "비소 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391896922", "object": "산업 폐수의 품질", "problem": "재사용을 위한 폐수 처리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391948866", "object": "브로민산염", "problem": "물에서 브로민산염 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391914298", "object": "후각 시스템", "problem": "메틸수은에 의한 후각 기능 손상 메커니즘 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391432685", "object": "지하수의 고농도 지각 비소", "problem": "건강 위험 평가 및 안전한 음용수 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391377981", "object": "음용수 처리 시설의 온실가스 배출", "problem": "온실가스 배출량 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391445193", "object": "브란덴부르크 지역의 농업 생산에서의 관개용수", "problem": "물 재사용을 통한 물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391380651", "object": "물에 존재하는 다중 병원성 박테리아 및 바이러스", "problem": "효능 평가 및 치료법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391380709", "object": "임신한 여성의 전통적, 보완적 및 대체 치료 방법", "problem": "코로나19 팬데믹 동안의 치료 방법 사용 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391475076", "object": "신드 지역 초등학교 어린이의 로타바이러스 관련 설사 질병 부담", "problem": "로타바이러스 관련 설사 위험 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391817016", "object": "Shadangapaniya", "problem": "여러 질병에서 균형 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392789084", "object": "soursop leaves", "problem": "온도에 따른 건조 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407050459", "object": "만성 전립선염 환자", "problem": "치료 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407073677", "object": "퇴비 품질", "problem": "최적의 슬러지 혼합 비율 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391400509", "object": "수돗물 및 음용수에서의 PFAS", "problem": "PFAS 제거 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391352891", "object": "음용수 분배 시스템의 자연 유기물", "problem": "NOM 특성의 영향을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391362378", "object": "양쯔강의 경미한 미세오염 원수", "problem": "응집 처리 효율 개선 및 제거 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407278119", "object": "어린이의 성장 발달", "problem": "영양 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391337971", "object": "타우병의 에너지 기능 장애", "problem": "에너지 기능 장애를 완화하려는 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392392717", "object": "물의 탁도", "problem": "탁도 감소를 위한 응집제 대체물질 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119619915", "object": "수질 오염", "problem": "약물의 장기 독성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120223716", "object": "수질 오염", "problem": "약물의 환경적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391329481", "object": "수질 오염", "problem": "중금속 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391317465", "object": "말라리아에 취약한 지역 사회의 지식과 예방 관행", "problem": "말라리아 통제의 도전 과제 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398149798", "object": "신장 손상", "problem": "과당 유도 대사 증후군에서 신장 손상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391315249", "object": "신장", "problem": "미세시스트인-LR에 의한 손상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391815551", "object": "산란계의 성능과 계란 품질", "problem": "프로바이오틱스의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391323671", "object": "불가리아 젊은이들의 식품 안전 지식과 태도", "problem": "식품 안전 지식과 실천 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391361822", "object": "제브라피시 유생의 두개안면 발달", "problem": "두개안면 발달의 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137724526", "object": "Sierra Nevada de Santa Marta 생태계", "problem": "환경 지속 가능성을 개선하고 지역 사회에 미치는 영향을 이해하려는", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391294367", "object": "대규모 오스트리아 음용수 분배 네트워크의 생물학적 안정성", "problem": "생물학적 불안정성의 잠재성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391288773", "object": "지하수 오염", "problem": "매립지에서의 침출수 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391276864", "object": "Al-Hashimiyah 수처리 시설의 환경 영향", "problem": "수처리 과정의 환경 성능 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392006175", "object": "브로일러 치킨의 건강 상태", "problem": "항생제 대체 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406047099", "object": "날짜 모링가 주스 음료", "problem": "감각 품질 및 선호도 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391255651", "object": "음용수에서의 PFAS 농도", "problem": "PFAS 제거 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391247535", "object": "안전한 시아노박테리아 바이오매스", "problem": "고비용 동물 사료 대체물 생산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391255665", "object": "메트헤모글로빈혈증", "problem": "메트헤모글로빈혈증의 원인 규명 및 치료", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391257347", "object": "수질 및 산업 폐수에서의 카드뮴", "problem": "카드뮴 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391221416", "object": "오염된 수 surface water", "problem": "수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391215482", "object": "IgA 신병증", "problem": "신장 손상 진행 지연", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391214953", "object": "폐수 처리 과정", "problem": "인간 건강과 환경에 대한 폐수의 위협 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391192449", "object": "환자의 위장 기능 회복", "problem": "수술 후 위장 기능 회복 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391192772", "object": "테네시의 농촌 및 저소득 지역 사회의 음용수 및 폐수 처리 시스템", "problem": "음용수 및 폐수 처리의 불균형을 조사하고 그 영향을 분석하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391218696", "object": "궤양성 대장염", "problem": "염증 해결 및 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391227467", "object": "생체 분자", "problem": "저농도의 농약이 생체 분자의 조절을 방해하는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391228497", "object": "로젤(히비스커스 사바다리파)", "problem": "근부腐 및 줄기 부腐 발생 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391242767", "object": "당근 음료에서의 그람 음성 병원균", "problem": "그람 음성 병원균의 항생제 내성 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223127061", "object": "Lae Soraya 강의 수질", "problem": "수질 오염 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W2889754995", "object": "냉침 커피의 유통 기한", "problem": "유통 기한 연장 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391160913", "object": "F4-ETEC 감염에 대한 새끼 돼지", "problem": "F4-ETEC에 의한 설사 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391169854", "object": "일본 메추라기에서의 항코크시디움 효과", "problem": "유기 제품의 대체물 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391169919", "object": "구강 편평세포암(OSCC)", "problem": "종양 침윤 림프구 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401763437", "object": "셀러리 잎", "problem": "선택된 건조 방법으로 셀러리 잎의 유통 기한 연장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215320416", "object": "Kirkuk 지역의 수돗물 품질", "problem": "수돗물 품질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391132086", "object": "PFAS(퍼 및 폴리플루오로알킬 물질)", "problem": "수질에서 PFAS 제거를 위한 전해산화 공정의 적용 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391146486", "object": "소규모 육계 농업의 수익성", "problem": "약물 및 첨가제의 부적절한 사용을 피하는 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391124253", "object": "심부전으로 인한 심장 기능", "problem": "심장 기능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391089606", "object": "음용수에서의 오염물질", "problem": "폐수 방출로 인한 오염물질의 운명 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400566335", "object": "개발도상국의 여성 건강 접근성", "problem": "성별에 따른 의료 접근성 불균형 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391100151", "object": "지하수 및 표면수의 생분해성 유기물질", "problem": "오존 처리 후 생분해성 유기물질 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392304771", "object": "간 손상", "problem": "중금속으로 인한 간 독성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391483450", "object": "초콜릿 음료", "problem": "생강 첨가 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391074594", "object": "식수 정화", "problem": "Moringa oleifera의 응집 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391071219", "object": "담석", "problem": "약용 식물의 사용 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391054120", "object": "Upper Awash River sub-basin의 음용수", "problem": "공공 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391110726", "object": "식수 자원", "problem": "물 부족 및 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391067654", "object": "산란계의 생산성 및 미생물 품질", "problem": "한국산 야생 인삼 잔여물 추출물의 약리 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391051570", "object": "열 스트레스에 노출된 염소", "problem": "열 스트레스에 대한 적응력과 생산성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403495106", "object": "지하수의 품질", "problem": "중금속의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391359507", "object": "허브 음료의 화학적 품질", "problem": "허브 음료의 화학적 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220324122", "object": "Bengali Hindu-Muslim 관계", "problem": "관계 악화의 원인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391051786", "object": "이라크의 수질 오염", "problem": "공공 건강과 안전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393322092", "object": "브로일러 치킨의 슬aughter 제품 및 내부 장기", "problem": "프로바이오틱스의 투여가 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391030625", "object": "prediabetes", "problem": "산화 스트레스와 염증 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391027618", "object": "염증성 장 질환(IBD)", "problem": "IBD의 병리 과정에서 syndecan-1의 역할과 치료 효과 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393283806", "object": "브로일러 치킨의 소화 기관", "problem": "소화 기관의 무게와 길이 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391110103", "object": "닭의 점막 면역 반응", "problem": "브롬헥신의 효과를 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393981537", "object": "길랭-바레 증후군 환자", "problem": "임상적 특징 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400969583", "object": "육계의 성장 성능", "problem": "사료 보충의 효과 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390974730", "object": "수돗물 및 재활용수의 생물학적 활성", "problem": "수처리 과정에 따른 생물학적 활성 감소", "relevant": true, "model": "gpt-4o-mini"}

@@ -2437,3 +2437,368 @@
 {"id": "W7114926246", "object": "모로코의 쌀 재배 지역", "problem": "정확한 쌀 모니터링 및 홍수 매핑", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4410005629", "object": "지방 공기업의 효율성", "problem": "혁신의 도입으로 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413772573", "object": "라호르의 공공 물 유틸리티", "problem": "시민의 불만 및 고충 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223568346", "object": "양식업의 생태계", "problem": "오염물질 완화 및 생태계 보존", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223648880", "object": "대기 질 개선", "problem": "효율적인 공기 질 계획 실행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223657739", "object": "수돗물의 오염물질 제거 기술", "problem": "경제적 및 환경적 결정 공간 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223685367", "object": "공공 유틸리티 조직의 재무 성과", "problem": "재고 관리 시스템의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218207710", "object": "무릎 관절의 통증", "problem": "무릎 통증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218215671", "object": "Ramganga 강의 수질", "problem": "수질 악화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223627244", "object": "Way Belerang 온천 관광지", "problem": "관광지 개선을 위한 정보 수집", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219366114", "object": "Ban Pha Chor 지역 사회", "problem": "환경 보존을 위한 불교 원칙 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203608357", "object": "고온가스로 원자로의 사용된 연료의 총량", "problem": "연료 사용량 감소를 위한 고온가스로 원자로 설계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W3184516532", "object": "전력 원자력 발전소의 정보 관리 시스템", "problem": "문서 검색 및 정보 업데이트 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203596796", "object": "원자력 발전소의 성능", "problem": "운영 비용 절감 및 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203608482", "object": "증기 발생기(SG) 성능", "problem": "노화 및 열화의 영향을 예측하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203611458", "object": "CANDU 증기 발생기(SG)에서 사용되는 Alloy 800 튜빙 재료", "problem": "부식 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203628964", "object": "Alloy 800의 스트레스 부식 균열 취약성", "problem": "스트레스 부식 균열 조건 예측 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203638965", "object": "증기 발생기 튜브 재료", "problem": "부식 열화 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203653664", "object": "CANDU 발전소의 구성 요소 피로", "problem": "구성 요소 피로 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406077926", "object": "유제품 산업", "problem": "효율성과 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207630593", "object": "터키 기업의 비즈니스 연속성 관리", "problem": "비즈니스 연속성 관리 필요성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218326809", "object": "UTHM Pagoh의 물 파이프 배급 시스템", "problem": "인프라 관리의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404708532", "object": "아프리카 대호수의 블루 경제", "problem": "오염 문제 해결 및 지속 가능한 관리 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405008651", "object": "전력 자원 믹스", "problem": "전력 수요 증가에 따른 자원 계획의 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404327700", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7198781592", "object": "소규모 곡물 농민의 생산성과 소득", "problem": "젠더에 따른 자금 조달 메커니즘의 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219328070", "object": "프라나콘시 아유타야 주의 지역 사회의 물 관리", "problem": "물 관리 프로세스를 개선하고 지속 가능한 물 관리 네트워크를 구축하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215360953", "object": "주택 프로젝트", "problem": "주택 프로젝트의 관리 및 비용 불균형 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217692988", "object": "도시 집합체의 커뮤니티 인프라", "problem": "현대화 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7199886109", "object": "소말리아 지역의 난민 및 호스트 커뮤니티", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207135803", "object": "Lake Erie의 수질", "problem": "수질에 영향을 미치는 요인 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198573286", "object": "개발 지역의 수질 모니터링", "problem": "스마트폰 앱의 적합성과 정확성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204317035", "object": "Lake St Lucia의 수질", "problem": "위성 이미지를 활용한 수질 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416653081", "object": "성인 패혈성 쇼크 환자", "problem": "체액 재활 요법을 위한 EVLW 추정의 유용성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214114240", "object": "재생 가능 에너지 자원", "problem": "정확한 단기 발전 예측 및 지능형 배치 전략 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401555592", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7217542420", "object": "자원 공급 조직의 채권 관리", "problem": "채무자 분류 기준 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400664402", "object": "담수 생태계", "problem": "시민 과학을 통한 관찰 공백 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416647393", "object": "성인 패혈성 쇼크 환자", "problem": "체액 재활 치료를 위한 EVLW 추정의 유용성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218267742", "object": "Lhokseumawe City의 식수 요구", "problem": "식수 접근성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401005842", "object": "미세플라스틱", "problem": "정확한 탐지 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401002386", "object": "고급 재료 특성 분석 시설(AMCF)", "problem": "민감한 기기 성능을 위한 환경 안정성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400135537", "object": "농업 생태계에서의 잡초", "problem": "잡초의 생태계 서비스 개선 및 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198735705", "object": "개방 수로에서의 액체와 고체 혼합물의 흐름", "problem": "혼합물의 흐름 동역학 이해 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217533249", "object": "Tirta Nene Mallomo 지역 수도 회사의 운영 효율성", "problem": "직원 출석 시스템 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399652176", "object": "극단적인 기상 현상(열대성 사이클론)", "problem": "해양 상태가 극단적인 기상 현상에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402796379", "object": "냉수 시스템", "problem": "가장 빈번한 고장 파악하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398793122", "object": "브라질 국가수자원 및 기초위생청(ANA)", "problem": "조직 문화와 거버넌스를 개선하려는", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400345067", "object": "브라질 국가 물 및 기본 위생 기관(ANA)", "problem": "조직 문화와 거버넌스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219267282", "object": "District Khushab의 물 자원 관리", "problem": "강우 패턴의 복잡성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401904179", "object": "냉수 시스템", "problem": "가장 자주 발생하는 결함 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399027200", "object": "캐나다 건물 관리 시스템", "problem": "정기적인 유지보수 절차 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398793865", "object": "철강 공장의 물 및 에너지 소비 최적화", "problem": "소비 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207156967", "object": "음용수 배급 시스템의 물질 축적 및 재부유 동역학", "problem": "운영 및 시스템 특성이 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396559665", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4410465499", "object": "강수 패턴", "problem": "합성 강수 분포 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396241255", "object": "도시 물 공급 시스템", "problem": "위험 기반 계획 프로세스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396216349", "object": "포도밭의 물 스트레스", "problem": "정확한 물 요구량 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396496957", "object": "Bonga FPSO 자산", "problem": "자산 관리 우수성 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414214731", "object": "상수도 처리 시스템의 백워시 수", "problem": "백워시 수 재사용을 위한 처리 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395683004", "object": "토양 건강", "problem": "경작 시스템이 토양 건강과 농업적 특성 간의 상관관계를 이해하려는 것", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395455289", "object": "피나무 바늘로 만든 파인피트", "problem": "환경적으로 지속 가능한 성장 매체 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400232984", "object": "IoT 보안", "problem": "사이버 보안 취약점 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4397289405", "object": "의료 서비스 부문의 이해관계자 관계", "problem": "이해관계자 관계 관리의 전략적 목표 정렬", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395072556", "object": "덴게 바이러스 전파 추적을 위한 Breteau Index (BI)", "problem": "BI 예측의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400672827", "object": "켄마의 고형 폐기물 관리", "problem": "고형 폐기물 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400673045", "object": "건물의 지속 가능한 물 관리", "problem": "물 절약 전략 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395004800", "object": "산업 기계 유지보수", "problem": "효과적인 유지보수 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395007850", "object": "물리적 연결성(Inter-Well Connectivity, IWC)", "problem": "정확한 생산률 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394983978", "object": "주거용 음용수 요금", "problem": "요금의 공정성과 저렴함 보장하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394984441", "object": "저비용 주택", "problem": "저비용 주택의 다양한 측면 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394989718", "object": "자연가스 열병합 발전 에너지 관리 센터(EMC)", "problem": "자연가스 소비 및 비용 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394923599", "object": "나이지리아의 수문학적 모델링", "problem": "수문학적 모델의 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401154651", "object": "비수익수(水) 관리", "problem": "물 손실을 줄이기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394924633", "object": "Cantareira Water Supply System", "problem": "가뭄으로 인한 재정적 손실 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394923111", "object": "성숙한 피칸 과수원", "problem": "관개 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395047296", "object": "물 관리 시스템", "problem": "물 관리 시스템의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394922978", "object": "점적 관개에서의 물 이동 시간", "problem": "물 이동 시간 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394881202", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4394881990", "object": "폭풍수 자산 관리", "problem": "폭풍수 자산의 성능 추적 및 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394909814", "object": "도시 인프라의 유지 관리", "problem": "유지 관리 중심의 관점에서의 도전 과제 탐구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394819956", "object": "오염된 레크리에이션 하천 수역에서의 인간 건강 위험", "problem": "수영 시즌 동안 고위험 일자 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394845067", "object": "몬태나의 하천 습지 평가 도구", "problem": "적절한 평가 도구 선택하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394865977", "object": "Radium Springs 지열 시스템", "problem": "지열 시스템의 열 유입 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394807004", "object": "IoT 시스템", "problem": "안전하고 효율적인 데이터 전송 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394812482", "object": "수자원 및 폐수 관리의 자동화 시스템", "problem": "기술적 및 경제적 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394783378", "object": "가난한 농민의 생활 수준", "problem": "가난 완화 방안 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396862119", "object": "물 공급 및 유통 시스템", "problem": "물 자원의 관리 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396761925", "object": "Region of Peel의 하수도 시스템", "problem": "하수도 시스템의 흐름 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772943", "object": "Brevard County의 하수도 시스템", "problem": "하수도 시스템의 구조적 결함으로 인한 과도한 유입 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772992", "object": "워싱턴 D.C.의 하수 및 오수 시스템", "problem": "하수 및 오수 시스템의 상태를 점검하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772995", "object": "하수 인프라 관리", "problem": "하수 맨홀 평가의 오랜 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773013", "object": "하수도 유지보수 프로그램", "problem": "AI를 활용하여 하수도 상태 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773307", "object": "하수관의 내부 압력과 누수 문제", "problem": "하수관의 압력을 견딜 수 있는지 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781776", "object": "Beverly 시의 하수 시스템", "problem": "하수 시스템의 유입 및 침투 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781779", "object": "포츠머스의 하수 시스템", "problem": "침투 및 유입(I/I) 문제를 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781781", "object": "폭우 배수 시스템의 하수 오염", "problem": "하수 오염을 신속하게 탐지하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781784", "object": "수집 시스템 프로젝트", "problem": "프로젝트 실행 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773357", "object": "하수도 수집 시스템", "problem": "AI를 활용하여 운영 및 유지보수 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396761906", "object": "지역 사회의 폭풍수 공원", "problem": "폭풍수 관리 및 지역 사회 혜택 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396761911", "object": "밀집 도시 환경에서의 녹색 폭풍수 인프라", "problem": "적합한 설치 위치 식별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772865", "object": "하수도 수집 시스템의 상태", "problem": "정확한 결함 코딩 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772979", "object": "Union Square 지역의 도시 홍수 문제", "problem": "도시 홍수 완화 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772989", "object": "하수 네트워크의 악취, 부식 및 안전 관리", "problem": "악취 관리 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772996", "object": "Holyoke시의 하수도 시스템", "problem": "하수도 시스템의 혼합 하수 유출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773006", "object": "브라이트모어 지역의 하수도 시스템", "problem": "복합 하수 유출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773012", "object": "배수 인프라", "problem": "배수 인프라 문제 우선순위 정하기 및 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773016", "object": "Sassaquin Pond", "problem": "수질 개선을 위한 계획 수립 및 실행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773021", "object": "매디슨시의 홍수 완화 계획", "problem": "극단적인 폭풍 이후의 홍수 대응 및 회복력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773352", "object": "수자원 인프라", "problem": "홍수 취약성에 대한 적응 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773359", "object": "하수도 시스템", "problem": "하수도 오버플로우 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773363", "object": "하수관 막힘 예방 시스템", "problem": "하수관 막힘으로 인한 건조 날씨 오버플로우 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781790", "object": "폐수 수집 시스템 자산 관리", "problem": "폐수 시스템의 지능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781791", "object": "맨체스터의 하수 시스템", "problem": "노후화되고 실패하는 하수 인프라 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781793", "object": "혼합 하수 유출(CSO) 관리 시스템", "problem": "CSO 모니터링 및 제어 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781794", "object": "Jefferson County의 하수도 시스템", "problem": "하수도 시스템의 위생 오버플로우 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394676080", "object": "극단적인 일일 강수량", "problem": "기후 변화에 따른 극단적인 강수 패턴 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396761923", "object": "체스apeake Bay의 수질 개선", "problem": "총 인, 총 질소 및 총 부유 고형물의 배출 제한", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396761985", "object": "혼합 하수 유출(CSO) 관리", "problem": "공공 경고 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772469", "object": "하수 자산 관리", "problem": "운영 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396772926", "object": "Bellingham 시의 하수 리프트 스테이션", "problem": "해수면 상승과 쓰나미 영향을 고려한 설계 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773015", "object": "제조된 수질 처리 장치의 성능", "problem": "표준화된 성능 측정 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396773354", "object": "폭우 관련 인프라 시스템", "problem": "재해에 대한 회복력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781801", "object": "도시의 폭우 수확 및 이용", "problem": "물 공급 증가 및 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781803", "object": "브롱크스의 도시 우수 관리 시스템", "problem": "도시 우수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396781804", "object": "Falls Lake의 수질 개선", "problem": "영향을 받는 지역 사회의 협력적 접근을 통한 영양소 감소 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395083512", "object": "저수지 특성화 및 관리", "problem": "정확한 지질 정보 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399397478", "object": "사이클론 가브리엘의 범위", "problem": "홍수 범위 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394060615", "object": "비수익수 관리", "problem": "비수익수 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134892920", "object": "세네갈의 수처리 시스템", "problem": "모델의 예측 정확성 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393935485", "object": "빙하가 있는 산유역의 수자원", "problem": "유출원 기여도 파악하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393935726", "object": "카메룬의 도시 물 분배 시스템", "problem": "비수익 수水를 평가하고 줄이기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393860769", "object": "COVID-19 환자", "problem": "심혈관 기능 저하 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393682482", "object": "수자원 공급 시스템의 운영 효율성", "problem": "에너지 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393428143", "object": "르완다의 농촌 물 공급 프로젝트의 지속 가능성", "problem": "지속 가능성 결정 요인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393529684", "object": "만성 간 질환 관리", "problem": "모바일 앱을 통한 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393393698", "object": "지속 가능한 농업용수 관리", "problem": "물 절약을 위한 정책 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399722263", "object": "치과 진료에서의 생물 의학 폐기물 관리", "problem": "생물 의학 폐기물의 증가와 인식 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7199498609", "object": "매디슨의 물 손실", "problem": "온실가스 배출량 감소 및 물 손실 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394014867", "object": "지방 자치 단체의 기능과 권한", "problem": "공공 서비스 제공의 어려움", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396495931", "object": "아부자의 도시 인프라", "problem": "도시 인프라의 회복력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393319469", "object": "영국의 태평양 굴 (Magallana gigas)", "problem": "자연화된 확산을 방지하려는 정책의 효과", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393277745", "object": "지하수 오염물질 운반 모델링", "problem": "정확한 환경 조건의 표현 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393902959", "object": "물, 위생 및 고형 폐기물 부문에서의 혁신 생태계", "problem": "혁신 생태계의 발전과 기존 장애물 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400389118", "object": "지역 수도 유틸리티의 자산 관리 및 압력 모니터링", "problem": "자산 관리 및 압력 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393141938", "object": "지하수 관리", "problem": "실제 데이터 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393083100", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4392980686", "object": "아일랜드 수질 지수(IEWQI) 모델", "problem": "데이터 이상치의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392986759", "object": "매립된 수도 및 위생 파이프라인", "problem": "지진 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220573081", "object": "환경 건강 관리", "problem": "관광 도시의 건강한 관광 모델 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392956031", "object": "물 수요 예측 시스템", "problem": "신뢰할 수 있는 단기 물 수요 예측 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393009172", "object": "도시 물 공급 네트워크", "problem": "효율적인 관리 및 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392953091", "object": "수자원 관리", "problem": "물 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392918610", "object": "지상 둥지를 틀고 있는 야생동물 개체군", "problem": "침입 개미의 영향을 줄이기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392960824", "object": "물 관리 시스템", "problem": "고객 참여를 통한 서비스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409354041", "object": "일본의 수자원 관리", "problem": "공공-민간 파트너십의 필요성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392884235", "object": "음용수의 생물 안전성", "problem": "생물 안전성을 확보하는 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392851850", "object": "UAE의 근로자", "problem": "환경 지속 가능성에 대한 직원의 헌신을 높이는 방법", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392884973", "object": "유해 조류 발생 모니터링", "problem": "모니터링 프로그램의 장점과 한계 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394712307", "object": "물 관리 및 보존", "problem": "물 낭비를 줄이고 효율성을 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392884949", "object": "수돗물 품질", "problem": "GIP에서 납 축적 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403467210", "object": "지하 건설에서의 지오메카니컬 리스크", "problem": "리스크 평가 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392810052", "object": "수자원 관리", "problem": "블록체인 기술의 실제 적용 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392808063", "object": "습지 식물 종", "problem": "습지 식물 종 구별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393868647", "object": "비수익수(水) 관리 시스템", "problem": "비수익수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392697412", "object": "생물막 영향을 받는 질소화 탱크의 염소아민 수준", "problem": "질소화 억제 및 염소아민 수준 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393953080", "object": "물 분배 시스템의 비수익수", "problem": "비수익수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392647722", "object": "건물의 수요 관리", "problem": "수요 관리 채택의 장애물 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392662191", "object": "Qingcaosha Reservoir", "problem": "극심한 가뭄 모니터링 및 수자원 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392655020", "object": "음용수 배급 네트워크의 누수", "problem": "누수 탐지 기술의 실용적 구현 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392655324", "object": "홍수 범위", "problem": "구름 아래에서 홍수 범위 정확히 구분하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392657902", "object": "중국의 수문 예측 시스템", "problem": "정확한 수문 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392659649", "object": "수생 생태계", "problem": "외부 스트레스 요인의 영향을 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392661281", "object": "도시 녹지 공간", "problem": "침식 방지 목표와의 통합 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7217585952", "object": "벨고로드 지역의 공공 기관", "problem": "에너지 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392623709", "object": "홍수 위험 관리에서의 불확실성", "problem": "불확실성을 다루기 위한 대처 전략 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392623817", "object": "캘리포니아의 물 공급 및 수요 관리 전략", "problem": "물 공급과 수요 관리 전략 간의 상호작용 및 거래 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392758187", "object": "지반 기술 인프라 자산", "problem": "상태 평가 및 유지 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392758888", "object": "북미 대평원 저수지의 수질", "problem": "DOC 농도의 극단적 변동 원인 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392759474", "object": "동아프리카 농목축지의 토양 건강", "problem": "토양 상태를 신속하게 평가하고 회복하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392759496", "object": "음용수 배급 네트워크", "problem": "설계 문제 정의 조정 및 최적화 복잡성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392760433", "object": "서부 미국의 도시 물 시스템 관리", "problem": "시스템 성능에 대한 조기 추정 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392777002", "object": "모젤 강의 수면 및 지하수 상호작용", "problem": "표면-지하수 상호작용을 반영하는 트리튬 및 지속성 유기 미세오염물질의 능력 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392594116", "object": "농업 활동 관리", "problem": "지오매틱 도구의 활용 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392603317", "object": "북극의 미세플라스틱 오염", "problem": "미세플라스틱의 출처와 오염 패턴 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392578454", "object": "지구의 건조 지수와 잠재적 증발산 데이터베이스", "problem": "기후 변화에 따른 수자원 관리 및 농업 생태계에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392599793", "object": "해양 환경 데이터", "problem": "데이터의 장기 보존 및 공유 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392585647", "object": "수문 예측의 품질", "problem": "결정론적 및 확률론적 접근 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392588164", "object": "지하수 상태 및 동향", "problem": "지하수 모니터링 데이터 접근성 및 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392588312", "object": "스웨덴의 농업 가뭄", "problem": "농업 가뭄의 모니터링 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392590002", "object": "아프리카의 수자원 관리", "problem": "수자원 관리 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392597597", "object": "지중해 저수지의 수질 및 주변 식생", "problem": "환경 흐름 관리가 수질 및 식생에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392598622", "object": "알프스 수력 발전소의 저수지 유입량", "problem": "유입량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392601688", "object": "브라질의 수자원 공공 서비스", "problem": "지속적인 가뭄과 홍수에 대한 보험 도입 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392602492", "object": "스코틀랜드의 이탄지에서의 탄소 플럭스", "problem": "탄소 동역학을 정확하게 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392602762", "object": "유럽과 아프리카의 증발 데이터셋", "problem": "고해상도 증발 추정치 개발 및 확장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392603648", "object": "토양 수분 추정", "problem": "정확한 토양 수분 측정 방법 비교 및 조화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392603691", "object": "금속 오염 지역", "problem": "환경 관리 모델 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392616388", "object": "도시 배수 네트워크", "problem": "합성 모델의 유용성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392617287", "object": "중간 깊이의 침하 과정", "problem": "인간 유발 침하의 기여 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393281109", "object": "생산된 물 관리", "problem": "지속 가능한 대안 탐색 및 전통적 처리 방법의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392474578", "object": "알바니아의 수자원 서비스", "problem": "시민의 인식을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392457602", "object": "환경 정의", "problem": "기술을 통한 환경 건강 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393382563", "object": "오염된 수생 생태계", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392342576", "object": "폐수 처리 시설의 에너지 효율성", "problem": "에너지 효율성을 개선하고 지속 가능한 발전을 위한 기술 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392381352", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7162074771", "object": "공공 수자원 관리 시스템", "problem": "클라우드 기반 GIS 플랫폼의 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392843781", "object": "물 부족 문제 해결을 위한 빗물 수확 시스템", "problem": "주민 선호도 조사 및 대안 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401909097", "object": "몬테레이 및 그 대도시 지역의 물 공급과 품질", "problem": "물 부족 및 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403403509", "object": "아삼의 산업 단지", "problem": "산업 단지의 성능과 지속 가능성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392245821", "object": "폐수 재사용 관행", "problem": "정책 및 규제 정렬의 장벽을 극복하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392186042", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4392143660", "object": "수생 생태계의 환경적 무결성", "problem": "화학 오염물질의 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392165461", "object": "도시 물 공급 및 관리", "problem": "지속 가능한 도시 물 관리 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392111469", "object": "미국, 멕시코, 캐나다의 담수 어류 및 내수 어업", "problem": "FishBase의 미국 내수 어류 데이터베이스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391968350", "object": "위험에 처한 북미 서부 어종의 미토콘드리아 유전체", "problem": "환경 DNA 분석 및 종 모니터링을 위한 참조 유전체의 가용성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392916124", "object": "몰디브의 블루 경제", "problem": "지속 가능한 자연 자원 및 환경 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965869", "object": "Raleigh Water의 통합 마스터 계획", "problem": "효율성을 높이기 위한 통합 계획 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965874", "object": "Noman M Cole Pollution Control Plant의 에너지 관리 시스템", "problem": "온실가스 배출 및 에너지 소비 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956408", "object": "하수도 수집 시스템", "problem": "규제 사건 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956794", "object": "공공수도 및 하수도 유틸리티의 전략적 계획", "problem": "공공 신뢰를 향상시키기 위한 전략적 계획 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956806", "object": "Pittsburgh Water and Sewer Authority의 환경 준수 및 윤리 문화", "problem": "환경 준수 및 윤리 문화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956807", "object": "뉴올리언스 하수도 및 수자원 위원회(SWBNO)", "problem": "전략 계획의 실행 및 문화 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956843", "object": "지하수 및 표면수 요금 전략", "problem": "지하수 사용량 감소를 위한 요금 차별화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957286", "object": "루이빌 메트로 지역의 하수도 서비스", "problem": "지역 파트너십 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957399", "object": "Northeast Ohio 지역 하수도 지구의 고객 경제적 지원 프로그램", "problem": "고객의 경제적 부담 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957468", "object": "고객의 물 사용 패턴 및 누수 문제", "problem": "고객에게 정확한 사용량 알림 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965395", "object": "물 소비 패턴", "problem": "물 절약 기회를 식별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965450", "object": "하수 시스템", "problem": "하수 유출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965519", "object": "도시의 폭우 관리 시스템", "problem": "비용 절감 및 홍수 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965559", "object": "시애틀 공공 유틸리티의 장기 물 수요 예측 모델", "problem": "장기 물 수요 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965736", "object": "Lead service lines in New London", "problem": "대체 프로그램의 공정성 및 인센티브 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965761", "object": "Boise의 수도 서비스 수준", "problem": "수도 서비스 수준을 의사결정 기준으로 변환하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971799", "object": "지역 폐수 관리", "problem": "지역의 폐수 처리 필요 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392011308", "object": "Miami-Dade Water and Sewer Department", "problem": "전략적 방향 전환 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391839621", "object": "대규모 물리적 네트워크의 재발 실패 데이터", "problem": "재발 실패 예측 및 운영 관리 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391847102", "object": "수자원 유틸리티의 서비스 수준", "problem": "서비스 제공 목표 정의하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957004", "object": "Polk County Utilities의 자산 관리 프로그램", "problem": "CMMS 선택 및 구현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971878", "object": "수돗물 서비스 제공 효율성", "problem": "고급 기술 채택 저항 극복하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396884838", "object": "스마트 물 그리드", "problem": "물 분배 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391840284", "object": "Lee County의 물 및 폐수 유틸리티", "problem": "개선 영역을 식별하고 성능 및 효율성을 향상시키기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391844244", "object": "수돗물 서비스의 품질", "problem": "고품질 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956512", "object": "Puget Sound 가정의 하수도 서비스 요금", "problem": "하수도 서비스 요금의 감당 가능성 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956714", "object": "수돗물 배관 시스템", "problem": "배관 고장 가능성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956719", "object": "세인트루이스 하수구청의 사이버 회복력", "problem": "사이버 위험 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956726", "object": "뉴포트시의 폐수, 우수 및 음용수 시스템", "problem": "선제적 자산 관리 관행 구현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956735", "object": "가정의 물 소비", "problem": "가정의 물 절약을 촉진하기 위한 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956744", "object": "하수도 유지보수 프로그램", "problem": "AI를 활용하여 하수도 상태 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956788", "object": "물 분야의 인공지능 활용", "problem": "AI의 위험과 기회를 이해하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956802", "object": "수자원 회수 시설의 에너지 관리", "problem": "에너지 사용 최소화 및 규제 준수", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956810", "object": "수자원 관리 및 자산 관리", "problem": "효율적이고 비용 효과적인 자본 프로그램 전달", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957066", "object": "워터 회복력 전략", "problem": "자본 프로젝트 필요 우선순위 설정 및 자금 조달", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957126", "object": "수자원 관리", "problem": "AI를 활용한 효율적인 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957164", "object": "서비스 라인 재고", "problem": "서비스 라인 재고 개발을 위한 데이터 처리 속도 및 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957568", "object": "하수 네트워크", "problem": "하수 시스템 성능 개선 및 규제 준수", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957595", "object": "Pima County RWRD의 성과 대시보드 시스템", "problem": "대시보드 기술을 활용하여 성과 지표 수집 및 시각화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957598", "object": "피츠버그 수자원 및 하수도 당국(PWSA)", "problem": "신뢰 회복 및 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965426", "object": "불리한 지역 사회의 안전한 식수 접근성", "problem": "공정성과 환경 정의 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965441", "object": "노스캐롤라이나의 수도 서비스 제공자", "problem": "고객의 요금 지불 능력과 유틸리티의 재정 건강 간의 관계 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965455", "object": "주거가 없는 커뮤니티", "problem": "주거가 없는 커뮤니티의 밀집 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965472", "object": "물 분야의 성별 다양성", "problem": "여성의 참여를 통한 조직 성과 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965483", "object": "포틀랜드 수자원국의 자산 관리 시스템", "problem": "데이터 수집 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965527", "object": "유틸리티 부서 간 협력", "problem": "부서 간의 갈등 해소 및 협력 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965657", "object": "수자원 인프라", "problem": "조달 관행 혁신을 통한 자산 관리 및 지속 가능성 목표 정렬", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965679", "object": "하수관로 시스템", "problem": "하수관로 청소 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965720", "object": "샌디에이고 메트로 하수도 시스템의 비용 할당 및 청구 프레임워크", "problem": "비용 공정 분배 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391970275", "object": "수자원/폐수 처리 프로젝트", "problem": "프로젝트 일정 및 예산 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391970408", "object": "음용수 유틸리티 시스템의 신뢰성", "problem": "기후 변화가 시스템 신뢰성에 미치는 영향 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391970844", "object": "인프라 프로젝트의 건설", "problem": "대체 제품 선택의 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971768", "object": "수돗물 품질", "problem": "고객의 수돗물 품질에 대한 신뢰 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971783", "object": "공공 유틸리티의 다양성, 형평성 및 포용성", "problem": "DEI를 조직의 모든 관행에 통합하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971788", "object": "보이시 커뮤니티의 다양성, 형평성, 포용성 및 소속감", "problem": "형평성 목표를 추구하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971819", "object": "Chesapeake Bay의 위생 하수 유출 문제", "problem": "하수 유출에 대한 인식 개선 및 교육", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971830", "object": "북미의 물 수요 예측 및 관리", "problem": "물 수요 예측의 정확성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971842", "object": "인프라 및 유틸리티의 지속 가능성", "problem": "ChatGPT의 지속 가능성 편향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971872", "object": "음용수 관리", "problem": "디지털 전환을 통한 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971899", "object": "Cape Fear Public Utilities Authority의 데이터 관리 시스템", "problem": "효과적인 데이터 활용을 위한 계획 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391987480", "object": "보이시의 물 재생 시스템", "problem": "신뢰성과 중복성 이해 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957591", "object": "수자원 부문 유틸리티", "problem": "기후 변화 위험을 효과적으로 관리하고 공개하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391821621", "object": "표재성 비담관 십이지장 선암(SNADAC)", "problem": "종양의 점막 침윤 여부 결정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956500", "object": "Pearland의 하수 처리 시설", "problem": "하수 처리 시설 통합을 통한 비용 절감 및 인프라 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956713", "object": "하수도 서비스 통합", "problem": "하수도 서비스의 효율적인 통합 및 고객 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956724", "object": "Parker Water & Sanitation District의 물 공급 계획", "problem": "이해관계자 참여와 시스템 성능 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956747", "object": "수자원 인프라 자산 관리 프로그램", "problem": "노후 자산 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956759", "object": "지역 프로젝트의 재정 계획", "problem": "재정적 요구 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956781", "object": "PWB의 통합 SCADA 시스템", "problem": "자동화 시스템 현대화 및 통합 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956847", "object": "Hampton Roads Sanitation District (HRSD)", "problem": "미래의 불확실성을 제거하기 위한 전략적 계획 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391956991", "object": "하수 처리 및 수자원 관리 분야의 인력", "problem": "인력 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957422", "object": "수자원 관리 시스템", "problem": "디지털 전환의 경로를 명확히 하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957564", "object": "수돗물 품질 및 운영 효율성", "problem": "운영 성과 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957567", "object": "직원 유지", "problem": "직원 이탈 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391957588", "object": "수자원/폐수 산업의 근로 환경", "problem": "근로자 유지율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965468", "object": "수자원 및 폐수 관리 인력", "problem": "인력 채용 및 유지 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965479", "object": "Milwaukee Metropolitan Sewerage District의 디지털 전환", "problem": "디지털 전환을 위한 내부 합의 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965490", "object": "Antelope Valley 지역의 물 공급 회복력", "problem": "물 공급 회복력 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965494", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4391965507", "object": "유틸리티 인력", "problem": "인력 개발 및 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965509", "object": "샬럿의 하수 시스템", "problem": "하수 시스템 오버플로우(SSO) 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965684", "object": "하수 처리 시설의 운영 인력", "problem": "자격을 갖춘 운영 인력 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391965742", "object": "하수 처리 분야의 인턴 프로그램", "problem": "젊은 엔지니어를 공공 부문으로 유도하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971832", "object": "Loudoun Water의 프로젝트 관리 시스템", "problem": "프로젝트 관리 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391971838", "object": "DC Water의 자본 투자에서의 형평성", "problem": "형평성을 고려한 자본 투자 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391394710", "object": "수자원 손실 관리", "problem": "수자원 손실 관리 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391384772", "object": "스마트 시티의 보안 시스템", "problem": "스마트 시티 감시의 안전성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391318911", "object": "수돗물 배급 네트워크", "problem": "기존 수돗물 배급 네트워크의 압력 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391290303", "object": "내수의 유해 남조류 발생", "problem": "조기 경고 시스템 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391357611", "object": "주택 및 공공 서비스 직원의 의료 서비스 만족도", "problem": "의료 서비스의 질과 조건 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391309092", "object": "인공적으로 수정된 슬러지 기반 바이오차", "problem": "인공적으로 수정된 슬러지 기반 바이오차의 인산 제거 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391275795", "object": "Beringian 담수 어류", "problem": "담수 어류의 분포와 유전적 다양성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405125697", "object": "Rihand catchment의 수자원 가용성", "problem": "강우 유출 시뮬레이션 정확도 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391172875", "object": "MRI 바이오마커", "problem": "MRI를 통한 생물학적 과정 및 질병 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408940520", "object": "노후화된 수자원 인프라", "problem": "효율적인 관리 및 예측 분석 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391142225", "object": "물 공급 시스템의 지속 가능성", "problem": "물 수요 변화로 인한 공급 시설의 유휴화 및 수익 손실 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391144556", "object": "물 공급 시스템의 지속 가능성", "problem": "물 수요 변화로 인한 공급 시설의 유휴화 및 수익 손실 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391046871", "object": "물 수요", "problem": "정확한 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391103324", "object": "수돗물의 품질", "problem": "염소 분해 모델링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390990384", "object": "산림 생태계", "problem": "지속적인 모니터링을 통한 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393140898", "object": "도로 인프라에서의 식수와 전기 자전거 충전소", "problem": "물과 에너지 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390913210", "object": "심각한 저나트륨혈증 환자의 체액 상태", "problem": "체액 상태 평가의 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390880545", "object": "원거리 감지 기반 증발산 데이터", "problem": "정확성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390859053", "object": "물 공급 시스템의 지속 가능성", "problem": "물 수요 변화로 인한 공급 시설의 유휴화 및 수익 손실 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390863745", "object": "비수익수(Non Revenue Water)", "problem": "비수익수 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390814054", "object": "하수 처리장", "problem": "하수 처리 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390740110", "object": "만성 신장 질환", "problem": "산화 스트레스 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390745070", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4390663280", "object": "폴리에틸렌 테레프탈레이트(PET) 물병 시스템", "problem": "환경 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390658645", "object": "비수익수(Non-Revenue Water)", "problem": "비수익수 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390583203", "object": "도시 인프라의 안전성과 효율성", "problem": "유틸리티 네트워크의 설계 및 건설에 대한 연구 필요성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390579534", "object": "미국의 축소 도시에서의 수자원 인프라 시스템 신뢰", "problem": "수자원 인프라에 대한 신뢰를 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220426654", "object": "Nagari Taba 지역", "problem": "관광 마을 개발 전략 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390512342", "object": "수돗물 및 하수도 서비스 품질", "problem": "서비스 품질 평가 절차의 비교 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390504521", "object": "비수익수(Non Revenue Water)", "problem": "비수익수 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412441627", "object": "보일러 상태 관리 시스템", "problem": "보일러 성능 최적화 및 가용성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391032735", "object": "멸종 위기 어종인 델타 스멜트", "problem": "eDNA 탐지 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399205704", "object": "primary biliary cholangitis에서의 피로와 가려움증", "problem": "피로와 가려움증의 원인 이해 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400188350", "object": "유틸리티의 자산 관리", "problem": "자산 관리의 연구 격차를 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403258292", "object": "물 저장소의 수질", "problem": "수질 오염 및 침전물 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396965708", "object": "소아 신경척수염 스펙트럼 장애(NMOSD)", "problem": "급성 난치성 뇌간 증후군 치료", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401851067", "object": "지하수", "problem": "지하수 잠재력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164384742", "object": "정밀 농업 및 자원 관리", "problem": "AI와 ML을 활용한 농업 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392606262", "object": "그라스 카프의 침입 범위", "problem": "침입 범위 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394757831", "object": "남구자라트 지역의 강수량 변화", "problem": "기후 변화에 따른 강수량 추세 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402343228", "object": "사과 달팽이 생물량", "problem": "eDNA 농도와의 예측 관계 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407026629", "object": "공공수도 서비스의 운영 효율성", "problem": "운영 효율성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407749109", "object": "HEC-RAS 모델", "problem": "홍수 예측 및 수자원 계획 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405900452", "object": "우크라이나 헤르손 지역의 수자원", "problem": "군사 오염 복구 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395051360", "object": "네팔의 가우샬라에서의 소의 생식 장애", "problem": "소의 생식 문제를 파악하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396692851", "object": "Camden, NJ 지역의 홍수 문제", "problem": "기후 변화에 따른 결합 하수도 유출 및 지역 홍수 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392621293", "object": "토양 건강", "problem": "나노하이드록시아파타이트의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396681160", "object": "수돗물 유통 시스템의 압력 관리", "problem": "물 누수 감소를 위한 압력 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401020256", "object": "물 관리 효율성", "problem": "스마트 미터 도입의 경제적 및 환경적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398187900", "object": "호치민시의 물 공급 시스템", "problem": "위기 상황에서의 적응 전략 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401648732", "object": "수자원 관리", "problem": "환경 및 사회적 지속 가능성 증진을 위한 예산 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402693831", "object": "유역 수자원 관리", "problem": "수자원 관리 결정을 지원하기 위한 이해 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404176880", "object": "전력 변압기의 상태", "problem": "상태 평가를 위한 데이터 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404181601", "object": "건물의 성능 및 안전성", "problem": "모니터링 부족으로 인한 피해 평가 및 개조 지연", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405859967", "object": "도시 난방 시스템", "problem": "개별 난방 포인트로의 전환을 통한 비용 절감 및 서비스 품질 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391987322", "object": "수자원 관리", "problem": "기후 변화의 영향 정량화 및 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396552794", "object": "수중 센서 네트워크(UWSN)", "problem": "데이터 전달 비용을 고려한 다중 모드 데이터 전송 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398187883", "object": "아파트 건물의 물 소비", "problem": "야간 물 소비 기간 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399205552", "object": "수돗물 공급 시스템의 물 손실", "problem": "물 손실을 줄이기 위한 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399896426", "object": "수원 공급 시스템", "problem": "재생 가능 에너지의 변동성을 관리하여 지속적인 물 공급 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400738032", "object": "인도의 수자원 관리", "problem": "수자원 관리의 비효율성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405915426", "object": "도시 인프라 및 환경 관리", "problem": "지속 가능한 도시 개발을 위한 데이터 통합 및 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393395076", "object": "Sacramento–San Joaquin Delta의 수질 상태", "problem": "영양소 순환 및 수송 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391112028", "object": "수자원 관리 운영", "problem": "디지털 도구를 활용하여 운영 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391340936", "object": "수자원 관리", "problem": "수자원 관리의 복잡한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392398280", "object": "Beaufort-Jasper Water and Sewer Authority의 수자원", "problem": "비계획적 재사용의 범위 이해 및 규제 개발", "relevant": true, "model": "gpt-4o-mini"}
