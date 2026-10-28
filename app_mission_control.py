@@ -44,7 +44,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.14 · 2026-10-27"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.15 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -852,7 +852,7 @@ elif page == "📄 논문 트렌드":
 
         if is_inst and t_insts.get(sel[0]):                 # 연구소 키워드별 5년 추이 (v3.13)
             itr.render_keywords(t_insts[sel[0]], t_years, t_base, INST_COLORS.get(sel[0], BLUE), PLOTLY_LAYOUT,
-                                key=f"kw_{sel[0]}")
+                                key=f"kw_{sel[0]}", base_top10=(oa_tr.get("baseline") or {}).get("by_year_top10"))
         st.markdown('<div class="sect">피인용 상위 논문</div>', unsafe_allow_html=True)
         top = (df.assign(cited=df["cited"].fillna(0).astype(int))
                  .sort_values("cited", ascending=False).head(15)
@@ -861,6 +861,8 @@ elif page == "📄 논문 트렌드":
                                   "cited": "피인용", "doi": "DOI"}))
         st.dataframe(top, hide_index=True, width="stretch",
                      column_config={"DOI": st.column_config.LinkColumn("DOI", display_text="🔗 열기")})
+        st.caption("피인용 = 우리가 논문을 받은 날의 피인용 수(그 뒤로 갱신 안 함) — 오래된 논문일수록 크게 나옴. "
+                   "분야·연도를 보정한 비교는 위 '피인용 질' 그림(피인용 상위 10% 비중)을 볼 것.")
 
     # ═══════════════ 수자원 12개 핵심 저널 코퍼스 (분모) ═══════════════
     st.divider()

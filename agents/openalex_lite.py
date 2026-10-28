@@ -10,6 +10,9 @@ openalex_lite — GitHub Actions에서 6시간마다 실행되는 경량 논문 
      + 같은 5년의 OpenAlex 전체 논문 수(해외 전체 기준선) — 연구소 키워드의 상대 성장 비교용
      + 연구소 키워드 5~6개 전체: 키워드별 연도 수(by_kw)와 합집합(OR 검색, by_year_all) — 소별 트렌드 (v3.13)
        (by_year·recent_1y는 수집 기준인 대표 키워드 1개 그대로 — 수집률 비교용)
+     + 피인용 질 (v3.15): 같은 검색에 '피인용 상위 10%' 조건을 더한 연도별 수 — by_year_all_top10 · by_kw_top10,
+       OpenAlex 전체 기준선 baseline.by_year_top10, K-water 소속 논문 kwater_citation
+       (OpenAlex citation_normalized_percentile: 같은 분야·같은 출판연도 논문 안에서의 피인용 백분위 → 세계 평균 약 10%)
   2b. water_journals.json의 수자원 12개 핵심 저널 × 연도 논문 수 실측 (트렌드 분석 분모 코퍼스)
       — 연관성·트렌드 분석 자체는 아직 미실시, 분모만 기록
   3. data_seed/agents/openalex_collector.json 갱신 → 관제센터 심박
@@ -34,6 +37,7 @@ API = "https://api.openalex.org/works"
 MAILTO = "newcave.kwater@gmail.com"          # OpenAlex polite pool (아무 연락용 메일이면 됨)
 RECENT_FROM = "2025-07-01"                   # '최근 1년' 트렌드 창
 TREND_YEARS = 5                              # 연구소별 연도 추이 창 (올해 포함 5개 연도, 2026-10-27 사용자 지정)
+TOP10 = "citation_normalized_percentile.is_in_top_10_percent:true"   # 피인용 상위 10% (분야·연도 보정, OpenAlex 계산)
 
 AGENT = SEED / "agents" / "openalex_collector.json"
 TRENDS = SEED / "openalex_trends.json"
@@ -183,18 +187,37 @@ def main():
                 by_kw[k] = {y: b.get(y, 0) for y in trend_years}
                 time.sleep(0.4)
             ent["keywords"], ent["by_kw"] = kws, by_kw
+            try:                                      # 피인용 상위 10% — 키워드별 (실패해도 편수 값은 유지)
+                by_kw_top = {}
+                for k in kws:
+                    b = oa_by_year(f"title_and_abstract.search:{k},{span},{TOP10}")
+                    by_kw_top[k] = {y: min(b.get(y, 0), by_kw[k].get(y, 0)) for y in trend_years}
+                    time.sleep(0.4)
+                ent["by_kw_top10"] = by_kw_top
+            except Exception as e:
+                errors.append(f"{inst['code']} 피인용(키워드): {e}")
             if len(kws) > 1:
                 b = oa_by_year(f"title_and_abstract.search:{union_search(kws)},{span}")
                 u = {y: b.get(y, 0) for y in trend_years}
                 time.sleep(0.4)
                 if union_ok(u, by_kw, trend_years):
                     ent["by_year_all"] = u
+                    try:                              # 피인용 상위 10% — 합집합
+                        b = oa_by_year(f"title_and_abstract.search:{union_search(kws)},{span},{TOP10}")
+                        ent["by_year_all_top10"] = {y: min(b.get(y, 0), u.get(y, 0)) for y in trend_years}
+                        time.sleep(0.4)
+                    except Exception as e:
+                        errors.append(f"{inst['code']} 피인용(합집합): {e}")
                 else:
                     errors.append(f"{inst['code']}: 키워드 합집합 검산 어긋남 {u} — 합집합 미기록")
             else:
                 ent["by_year_all"] = ent["by_year"]
+                if ent.get("by_kw_top10"):
+                    ent["by_year_all_top10"] = ent["by_kw_top10"][kw]
             print(f"      키워드 {len(kws)}개 합집합: "
-                  + " ".join(f"{y}:{ent.get('by_year_all', {}).get(y, '-')}" for y in trend_years))
+                  + " ".join(f"{y}:{ent.get('by_year_all', {}).get(y, '-')}" for y in trend_years)
+                  + " · 피인용 상위10%: "
+                  + " ".join(f"{y}:{ent.get('by_year_all_top10', {}).get(y, '-')}" for y in trend_years))
         except Exception as e:
             errors.append(f"{inst['code']} 키워드 전체: {e}")
 
@@ -204,8 +227,26 @@ def main():
         by = oa_by_year(span)
         baseline = {"label": "OpenAlex 전체", "by_year": {y: by.get(y, 0) for y in trend_years}}
         print("   OpenAlex 전체: " + " ".join(f"{y}:{by.get(y, 0):,}" for y in trend_years))
+        time.sleep(0.4)
+        bt = oa_by_year(f"{span},{TOP10}")
+        baseline["by_year_top10"] = {y: bt.get(y, 0) for y in trend_years}
+        print("   OpenAlex 전체 피인용 상위10%: " + " ".join(f"{y}:{bt.get(y, 0):,}" for y in trend_years))
     except Exception as e:
         errors.append(f"전체 기준선: {e}")
+
+    # ── 2a'. K-water 소속 논문의 피인용 질 (같은 5년) — 연구소 관련 논문과 견주는 참고값 ──
+    kwater_cit = None
+    if inst_id:
+        try:
+            kf = f"authorships.institutions.lineage:{inst_id},{span}"
+            ka, kt = oa_by_year(kf), oa_by_year(f"{kf},{TOP10}")
+            kwater_cit = {"label": inst_name or "K-water", "by_year": {y: ka.get(y, 0) for y in trend_years},
+                          "by_year_top10": {y: min(kt.get(y, 0), ka.get(y, 0)) for y in trend_years}}
+            print("   K-water 소속 논문 (상위10%/전체): "
+                  + " ".join(f"{y}:{kwater_cit['by_year_top10'][y]}/{kwater_cit['by_year'][y]}" for y in trend_years))
+            time.sleep(0.4)
+        except Exception as e:
+            errors.append(f"K-water 피인용: {e}")
 
     # ── 2b. 수자원 12개 핵심 저널 × 연도 (분모 코퍼스) ──
     journals = journal_corpus(errors)
@@ -241,7 +282,7 @@ def main():
         if per_inst:
             for code, v in per_inst.items():          # 연도별 조회만 실패한 연구소는 지난 값 유지
                 old = (tr.get("institutes") or {}).get(code, {})
-                for f in ("by_year", "by_year_all", "by_kw", "keywords"):
+                for f in ("by_year", "by_year_all", "by_kw", "keywords", "by_year_all_top10", "by_kw_top10"):
                     if f not in v and old.get(f):
                         v[f] = old[f]
             tr["institutes"] = per_inst
@@ -249,7 +290,13 @@ def main():
             tr["trend_basis"] = ("연구소 키워드 전체(5~6개)를 OR로 묶은 title_and_abstract.search, 출판연도별 실측 "
                                  "(키워드마다 지금 수집과 같은 띄어쓰기 검색 · 올해는 진행 중·색인 지연)")
         if baseline:
+            if "by_year_top10" not in baseline and (tr.get("baseline") or {}).get("by_year_top10"):
+                baseline["by_year_top10"] = tr["baseline"]["by_year_top10"]
             tr["baseline"] = baseline
+        if kwater_cit:
+            tr["kwater_citation"] = kwater_cit
+        tr["citation_basis"] = ("피인용 상위 10% = OpenAlex citation_normalized_percentile.is_in_top_10_percent "
+                                "(같은 분야·같은 출판연도 논문 중 피인용 상위 10%) — 세계 평균 약 10%, 최근 연도는 인용이 쌓이는 중")
         if journals:                                  # 일부 실패 시 이전 값 유지
             tr["journals"] = {**tr.get("journals", {}), **journals}
         tr.setdefault("history", []).append(

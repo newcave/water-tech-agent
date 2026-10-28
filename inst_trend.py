@@ -9,6 +9,8 @@
   · institutes.<INST>.by_year      대표 키워드 1개(= 실제 수집 검색식)의 연도별 수 — 수집률 비교 기준 (by_year_all 없으면 이것으로 대신)
   · baseline.by_year            같은 연도의 OpenAlex 전체 논문 수 (해외 전체 기준선)
   · trend_years                 올해 포함 최근 5개 연도
+  · *_top10 (v3.15)             같은 검색에 '피인용 상위 10%'(OpenAlex citation_normalized_percentile — 같은 분야·같은 해 논문 안의
+                                피인용 백분위) 조건을 더한 연도별 수 → 피인용 상위 10% 비중(세계 평균 약 10%)
 올해는 진행 중이고 색인 지연이 있어 증감 계산은 끝난 해(작년까지)만 쓴다.
 수집률 = 우리가 모은 논문(live + labels/openalex_extended, id 중복 제거) / 실측 — 공백 연도를 드러내는 용도.
 """
@@ -38,6 +40,20 @@ def trend_of(ent: dict):
     return ent.get("by_year") or {}, False
 
 
+def top10_of(ent: dict) -> dict:
+    """trend_of와 같은 검색 기준의 '피인용 상위 10%' 연도별 수 (아직 실측 전이면 {})."""
+    if ent.get("by_year_all"):
+        return ent.get("by_year_all_top10") or {}
+    return (ent.get("by_kw_top10") or {}).get(ent.get("keyword"), {})
+
+
+def top_share(top: dict, tot: dict, years: list):
+    """연도 합산 피인용 상위 10% 비중(%) — 분모가 없거나 상위 10% 값이 없으면 None."""
+    n = sum((tot or {}).get(y, 0) for y in years)
+    t = sum((top or {}).get(y, 0) for y in years)
+    return t / n * 100 if n and top else None
+
+
 def series(tr: dict):
     """→ (연도 목록, 끝난 연도 목록, {연구소: by_year}, 기준선 by_year). 실측 전이면 빈 값."""
     years = [str(y) for y in (tr or {}).get("trend_years") or []]
@@ -64,7 +80,8 @@ def growth_rows(tr: dict, names: dict) -> list:
                      "keyword": (f"{len(kws)}개: " + " · ".join(kws)) if all_kw else insts[c].get("keyword", ""),
                      "first": by.get(a, 0), "last": by.get(b, 0),
                      "growth": g, "vs_base": (g - bg) if g is not None and bg is not None else None,
-                     "per10k": by.get(b, 0) / base[b] * 1e4 if base.get(b) else None})
+                     "per10k": by.get(b, 0) / base[b] * 1e4 if base.get(b) else None,
+                     "top10": top_share(top10_of(insts[c]), by, full)})
     return rows
 
 
@@ -85,10 +102,11 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         col = "#16A34A" if (d or 0) > 5 else "#DC2626" if (d or 0) < -5 else GRAY
         g_s = f"{g:+.0f}%" if g is not None else "-"
         d_s = f"해외 대비 {d:+.0f}%p" if d is not None else ""
+        t_s = f'<br>피인용 상위10% <b>{r["top10"]:.1f}%</b>' if r.get("top10") is not None else ""
         return (f'<div class="kpi" style="border-left-color:{colors.get(r["code"], GRAY)}">'
                 f'<div class="k-val">{r["last"]:,}</div>'
                 f'<div class="k-lab" title="{r["name"]}">{_short(r["name"])}</div>'
-                f'<div class="k-sub"><b style="color:{col}">{g_s}</b> ({a[2:]}→{b[2:]})<br>{d_s}</div></div>')
+                f'<div class="k-sub"><b style="color:{col}">{g_s}</b> ({a[2:]}→{b[2:]})<br>{d_s}{t_s}</div></div>')
     if rows:
         st.markdown('<div class="kpis k7">' + "".join(card(r) for r in rows) + '</div>', unsafe_allow_html=True)
         n_all = sum(r["all"] for r in rows)
@@ -134,19 +152,102 @@ def render_overview(tr: dict, names: dict, colors: dict, layout: dict):
         fig.update_yaxes(gridcolor="#EEF2F7")
         st.plotly_chart(fig, width="stretch", key="inst5_index")
 
+    render_citation(tr, rows, names, colors, layout, full)
+
     with st.expander("연도별 표 · 방법"):
         tbl = [{"연구소": r["name"], "키워드": r["keyword"],
                 **{y: trend_of(insts[r["code"]])[0].get(y, 0) for y in years},
                 f"{a}→{b}": f"{r['growth']:+.0f}%" if r["growth"] is not None else "-",
                 "해외 대비": f"{r['vs_base']:+.0f}%p" if r["vs_base"] is not None else "-",
-                f"{b} 만 편당": round(r["per10k"], 2) if r["per10k"] is not None else None} for r in rows]
+                f"{b} 만 편당": round(r["per10k"], 2) if r["per10k"] is not None else None,
+                "피인용 상위10%": f"{r['top10']:.1f}%" if r.get("top10") is not None else "-"} for r in rows]
         if base:
             tbl.append({"연구소": "OpenAlex 전체", "키워드": "(전 분야)", **{y: base.get(y, 0) for y in years},
-                        f"{a}→{b}": f"{bg:+.0f}%" if bg is not None else "-", "해외 대비": "", f"{b} 만 편당": None})
+                        f"{a}→{b}": f"{bg:+.0f}%" if bg is not None else "-", "해외 대비": "", f"{b} 만 편당": None,
+                        "피인용 상위10%": (lambda v: f"{v:.1f}%" if v is not None else "-")(
+                            top_share((tr.get("baseline") or {}).get("by_year_top10"), base, full))})
         st.dataframe(pd.DataFrame(tbl), hide_index=True, width="stretch")
         st.caption((tr.get("trend_basis") or "") + ". 해외 대비 = 연구소 증감 − OpenAlex 전체 증감 (DB 자체가 커지는 효과를 뺀 상대 성장). "
                    "만 편당 = OpenAlex 전체 1만 편 가운데 그 연구소 관련 논문 수. 키워드 수와 폭이 연구소마다 달라 "
                    "연구소끼리 규모를 견주기보다 같은 연구소 안에서의 추이를 보는 지표.")
+
+
+CIT_INK = "#0F2744"
+
+
+def _alt_pos(ys: list) -> list:
+    """점 이름이 겹치지 않게 — 세로로 이웃한 점끼리 이름을 위·아래로 번갈아 둠."""
+    order = sorted(range(len(ys)), key=lambda i: ys[i])
+    pos = [""] * len(ys)
+    for n, i in enumerate(order):
+        pos[i] = "bottom center" if n % 2 == 0 else "top center"
+    return pos
+
+
+def render_citation(tr: dict, rows: list, names: dict, colors: dict, layout: dict, full: list):
+    """피인용 질 — 연구소 관련 논문 중 피인용 상위 10% 비중 (끝난 해 합산) + 성장 × 피인용 위치."""
+    rows = [r for r in rows if r.get("top10") is not None]
+    if not rows or not full:
+        st.caption("피인용 질(피인용 상위 10% 비중)은 다음 정기 실측(6시간 주기) 뒤에 나타납니다.")
+        return
+    base = (tr.get("baseline") or {})
+    b_share = top_share(base.get("by_year_top10"), base.get("by_year"), full)
+    kw = tr.get("kwater_citation") or {}
+    k_share = top_share(kw.get("by_year_top10"), kw.get("by_year"), full)
+    a, b = full[0], full[-1]
+    st.markdown(f'<div class="sect">피인용 질 — 피인용 상위 10% 논문 비중 ({a}~{b} 합산, 분야·연도 보정)</div>',
+                unsafe_allow_html=True)
+    c1, c2 = st.columns(2)
+    with c1:
+        rr = sorted(rows, key=lambda r: r["top10"])
+        ys = [_short(r["name"]) for r in rr]
+        xs = [r["top10"] for r in rr]
+        cols = [colors.get(r["code"], GRAY) for r in rr]
+        if k_share is not None:                        # K-water 소속 논문 — 참고 막대
+            ys, xs, cols = ["K-water 소속 논문"] + ys, [k_share] + xs, ["#64748B"] + cols
+        fig = go.Figure(go.Bar(x=xs, y=ys, orientation="h", marker=dict(color=cols, cornerradius=4),
+                               text=[f"{v:.1f}%" for v in xs], textposition="outside", cliponaxis=False,
+                               hovertemplate="%{y} · 피인용 상위 10% 비중 %{x:.1f}%<extra></extra>"))
+        if b_share is not None:
+            fig.add_vline(x=b_share, line=dict(color=CIT_INK, width=1.5, dash="dash"))
+        fig.update_layout(height=330, showlegend=False, **layout)
+        fig.update_xaxes(ticksuffix="%", gridcolor="#EEF2F7", rangemode="tozero",
+                         range=[0, max(xs + [b_share or 0]) * 1.22])
+        st.plotly_chart(fig, width="stretch", key="inst5_top10")
+        st.caption("점선 = OpenAlex 전체 논문의 같은 비중"
+                   + (f" ({b_share:.1f}%)" if b_share is not None else "")
+                   + " · 정의상 세계 평균은 약 10% — 이보다 높으면 그 연구소 관련 논문이 평균보다 많이 인용됨")
+    with c2:
+        pts = [r for r in rows if r.get("vs_base") is not None]
+        fig = go.Figure()
+        if pts:
+            mx = max(r["last"] for r in pts) or 1
+            fig.add_trace(go.Scatter(
+                x=[r["vs_base"] for r in pts], y=[r["top10"] for r in pts], mode="markers+text",
+                text=[_short(r["name"]) for r in pts],
+                textposition=_alt_pos([r["top10"] for r in pts]),
+                textfont=dict(size=11, color=CIT_INK),
+                marker=dict(size=[12 + 26 * (r["last"] / mx) ** 0.5 for r in pts],
+                            color=[colors.get(r["code"], GRAY) for r in pts], opacity=0.85,
+                            line=dict(color="#FFFFFF", width=1.5)),
+                customdata=[[r["name"], r["growth"], r["last"]] for r in pts],
+                hovertemplate="<b>%{customdata[0]}</b><br>해외 대비 성장 %{x:+.0f}%p (" + f"{a}→{b} " +
+                              "%{customdata[1]:+.0f}%)<br>피인용 상위 10% %{y:.1f}%<br>" + f"{b}년 " +
+                              "%{customdata[2]:,}편<extra></extra>", showlegend=False))
+            fig.add_vline(x=0, line=dict(color="#CBD5E1", width=1))
+            if b_share is not None:
+                fig.add_hline(y=b_share, line=dict(color=CIT_INK, width=1.2, dash="dash"))
+            fig.add_annotation(xref="paper", yref="paper", x=1, y=1, text="빨리 크고 많이 인용 ↗", showarrow=False,
+                               xanchor="right", yanchor="top", font=dict(size=10, color="#94A3B8"))
+        fig.update_layout(height=330, **layout)
+        fig.update_xaxes(title_text=f"해외 전체 대비 성장 ({a}→{b}, %p)", ticksuffix="%p", gridcolor="#EEF2F7",
+                         zeroline=False)
+        fig.update_yaxes(title_text="피인용 상위 10% 비중", ticksuffix="%", gridcolor="#EEF2F7")
+        st.plotly_chart(fig, width="stretch", key="inst5_cit_map")
+        st.caption(f"오른쪽 위 = 해외 전체보다 빨리 크면서 많이 인용되는 분야 · 점 크기 = {b}년 편수 · 가로 실선 0 = 해외 전체와 같은 성장")
+    st.caption("피인용 상위 10% = OpenAlex가 논문마다 계산한 '같은 분야·같은 출판연도 논문 중 피인용 백분위'가 상위 10%인 논문. "
+               "분야와 연도를 보정한 값이라 오래된 논문이 유리하지 않음. 최근 해의 논문은 아직 인용이 쌓이는 중이라 "
+               "값이 해마다 조금씩 바뀔 수 있음. 우리가 받아 둔 피인용 수(받은 날의 숫자)는 쓰지 않음.")
 
 
 def coverage_rows(df: pd.DataFrame, by_year: dict, years: list) -> list:
@@ -207,7 +308,7 @@ def render_coverage(df: pd.DataFrame, by_year: dict, years: list, color: str, la
     return rows
 
 
-def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict, key: str):
+def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict, key: str, base_top10: dict = None):
     """연구소 키워드별 5년 추이 — 연구소 안에서 어떤 세부 주제가 오르는지 (by_kw)."""
     by_kw = ent.get("by_kw") or {}
     if len(by_kw) < 2:
@@ -258,3 +359,41 @@ def render_keywords(ent: dict, years: list, base: dict, color: str, layout: dict
         st.plotly_chart(fig, width="stretch", key=f"{key}_growth")
     st.caption("키워드마다 OpenAlex title_and_abstract 검색의 출판연도별 논문 수. 막대 색 = 해외 전체(OpenAlex)보다 빨리 느는 키워드, "
                "회색 = 해외 전체보다 느린 키워드. 키워드끼리 겹치는 논문이 있어 키워드 합은 연구소 관련 전체보다 큼. 키워드 고치기: data_seed/search_topics.json")
+
+    top_kw = ent.get("by_kw_top10") or {}           # 키워드별 성장 × 피인용 질 (v3.15)
+    pts = []
+    for i, k in enumerate(by_kw):
+        sh = top_share(top_kw.get(k), by_kw[k], full)
+        g = _pct(by_kw[k].get(a, 0), by_kw[k].get(b, 0))
+        if sh is not None and g is not None:
+            pts.append({"kw": k, "g": g, "top10": sh, "last": by_kw[k].get(b, 0), "col": KW_COLORS[i % len(KW_COLORS)]})
+    if not pts:
+        return
+    b_share = top_share(base_top10, base, full) if base_top10 else None
+    i_share = top_share(top10_of(ent), all_by, full)
+    st.markdown(f'<div class="sect">키워드별 성장 × 피인용 질 — 어디가 크면서 영향력도 있나 ({a}→{b})</div>',
+                unsafe_allow_html=True)
+    mx = max(p["last"] for p in pts) or 1
+    fig = go.Figure(go.Scatter(
+        x=[p["g"] for p in pts], y=[p["top10"] for p in pts], mode="markers+text", text=[p["kw"] for p in pts],
+        textposition=_alt_pos([p["top10"] for p in pts]), textfont=dict(size=11, color=CIT_INK),
+        marker=dict(size=[12 + 26 * (p["last"] / mx) ** 0.5 for p in pts], color=[p["col"] for p in pts], opacity=0.85,
+                    line=dict(color="#FFFFFF", width=1.5)),
+        customdata=[[p["last"]] for p in pts],
+        hovertemplate="<b>%{text}</b><br>" + f"{a}→{b} " + "%{x:+.0f}%<br>피인용 상위 10% %{y:.1f}%<br>"
+                      + f"{b}년 " + "%{customdata[0]:,}편<extra></extra>"))
+    refs = []
+    if g_base is not None:
+        fig.add_vline(x=g_base, line=dict(color="#0F2744", width=1.2, dash="dash"))
+        refs.append(f"세로 점선 OpenAlex 전체 성장 {g_base:+.0f}%")
+    if b_share is not None:
+        fig.add_hline(y=b_share, line=dict(color="#0F2744", width=1.2, dash="dash"))
+        refs.append(f"가로 점선 OpenAlex 전체 피인용 상위 10% 비중 {b_share:.1f}%")
+    if i_share is not None:
+        refs.append(f"이 연구소 관련 전체 {i_share:.1f}%")
+    fig.update_layout(height=360, showlegend=False, **layout)
+    fig.update_xaxes(title_text=f"{a}→{b} 증감", ticksuffix="%", gridcolor="#EEF2F7", zeroline=True, zerolinecolor="#CBD5E1")
+    fig.update_yaxes(title_text="피인용 상위 10% 비중", ticksuffix="%", gridcolor="#EEF2F7")
+    st.plotly_chart(fig, width="stretch", key=f"{key}_cit")
+    st.caption("오른쪽 위 = 해외 전체보다 빨리 크면서 평균보다 많이 인용되는 키워드 · 점 크기 = " + f"{b}년 편수 · "
+               + " · ".join(refs) + f" · 피인용 비중은 {a}~{b} 합산(분야·연도 보정)")
