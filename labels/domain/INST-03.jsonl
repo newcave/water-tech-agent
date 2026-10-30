@@ -5801,3 +5801,345 @@
 {"id": "W4317743498", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캄보디아 해안 지역 주민의 음용수", "problem": "화학 오염물질로 인한 건강 위험 평가"}
 {"id": "W4317751937", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리에서의 생체막 기술", "problem": "수질 오염 문제 해결"}
 {"id": "W4317906789", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알코올 유도 지방간 질환(AFLD)", "problem": "AFLD의 발생 방지"}
+{"id": "W7224092309", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소금 민감성 고혈압", "problem": "체내 K + 및 수분 손실로 인한 고혈압의 원인 이해"}
+{"id": "W7224101425", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "철피석곡의 품질", "problem": "재배 조건이 품질에 미치는 영향 이해하기"}
+{"id": "W7224103835", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물과 위생 시스템에서의 미생물 위험", "problem": "신흥 미생물 위험을 이해하고 관리하기"}
+{"id": "W7224107822", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토끼 코크시디오시스", "problem": "코크시디오시스 유병률 및 치료 효과 비교"}
+{"id": "W7224117586", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 미생물 오염", "problem": "공중 보건 위험 감소"}
+{"id": "W7224123205", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장티푸스", "problem": "전염 경로 이해하기"}
+{"id": "W7224115783", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "상하이의 지역사회 거주 노인들", "problem": "인지적 허약의 사회적 결정 요인 파악 및 수정 가능한 요인 우선순위 설정"}
+{"id": "W7224133305", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 시체 특성", "problem": "CO–AA 추출물 비율의 영향 평가"}
+{"id": "W7223136805", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 대사 효율과 육질", "problem": "장내 미생물 균형과 항산화 및 면역 반응 조절"}
+{"id": "W7204364078", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저장된 빗물의 생물학적 품질", "problem": "물borne 병원체 제어"}
+{"id": "W7215356140", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "정신 질환자", "problem": "정신 질환자의 치료 방법 연구"}
+{"id": "W7215597288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nineveh Governorate의 지하수", "problem": "음용수로서의 적합성 평가"}
+{"id": "W7218813207", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알츠하이머병", "problem": "알코올로 인한 신경퇴행성 변화 개선"}
+{"id": "W7221241906", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sungai Sengkuang 마을의 식수 공급", "problem": "식수 수요 분석"}
+{"id": "W7215280344", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Borisallo 마을의 깨끗한 물 공급", "problem": "깨끗한 물 부족 문제 해결"}
+{"id": "W7218045217", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 정화 시설 건설 프로젝트 관리", "problem": "프로젝트 관리 관행 평가"}
+{"id": "W7220330094", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "월경 불순 치료에 대한 지혜", "problem": "월경 불순 문제 해결"}
+{"id": "W7218747169", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수의 생물학적 분해", "problem": "악취 감소를 고려하기"}
+{"id": "W7219975535", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노인 STEMI 환자의 급성 신장 손상", "problem": "대조 물질 관련 급성 신장 손상 예방"}
+{"id": "W7217550306", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "엘제나 시의 음용수 품질", "problem": "음용수의 계절적 변화 평가"}
+{"id": "W7218130893", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "코로나19 팬데믹", "problem": "팬데믹에 대한 이해와 대응 방안 모색"}
+{"id": "W7204351172", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "안전하게 관리되는 음용수 접근성", "problem": "안전한 음용수 접근성을 개선하기 위한 혁신적인 분산 솔루션 필요"}
+{"id": "W7197899107", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신한 여성의 변비", "problem": "변비 치료 방법 개선"}
+{"id": "W7216600360", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Killiyar 강의 수질", "problem": "미생물 오염 평가"}
+{"id": "W4307751510", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 질산염 오염", "problem": "질산염 제거 시스템 찾기"}
+{"id": "W7219942518", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Red Sokoto Goats", "problem": "사료 섭취량 개선"}
+{"id": "W4307826973", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tapti River water quality", "problem": "수질 오염 상태 개선"}
+{"id": "W7218113040", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "젊은 여성의 생리통", "problem": "생리통 완화"}
+{"id": "W7220633351", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식물의 방어 시스템", "problem": "산업 폐수의 영향 조사"}
+{"id": "W4307584710", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "식도-피부 누공", "problem": "누공 폐쇄를 위한 치료 방법 개선"}
+{"id": "W7220606338", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 잔여물", "problem": "환경에 미치는 영향을 최소화하기 위한 폐기물 처리 방법 부족"}
+{"id": "W7220493392", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아제르바이잔의 미네랄 워터", "problem": "의료 관광 발전을 위한 효율적 활용 방안 모색"}
+{"id": "W7215141027", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "성인 수컷 쥐의 생식 및 생화학적 매개변수", "problem": "에너지 음료의 영향 평가"}
+{"id": "W7217309291", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "쥐의 담관 폐쇄 상태", "problem": "지질 프로파일 변화 평가"}
+{"id": "W4292242325", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "HIV 감염으로 인한 신경 염증", "problem": "신경 염증 감소"}
+{"id": "W7217648341", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 오염", "problem": "형광등 폐기 시 수은으로 인한 오염"}
+{"id": "W7216535350", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "학교의 물 품질", "problem": "물 품질 개선"}
+{"id": "W4286231440", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Salmonella 감염", "problem": "Salmonella 부하 감소"}
+{"id": "W7219987267", "domain_primary": "W2", "domain_secondary": ["W4"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Minerva 음용수 저수지", "problem": "오존 처리 효율성 결정"}
+{"id": "W4283740458", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 소독 과정", "problem": "소독 부산물 문제 해결"}
+{"id": "W4327845480", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "크롬 독성", "problem": "크롬 독성의 위험 인식 제고"}
+{"id": "W4283655187", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환자의 얼굴 기능", "problem": "실패한 점막 이식의 재활"}
+{"id": "W4283658543", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lobia Creek의 수질 및 박테리아 분포", "problem": "인간 활동이 박테리아의 분포와 항생제 내성에 미치는 영향 분석"}
+{"id": "W7216889124", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Aponmu river", "problem": "탁도 감소를 위한 자연 응집제 사용"}
+{"id": "W7220011160", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어린이의 불소 중독", "problem": "불소 중독 예방 및 치료"}
+{"id": "W7217487524", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카모마일 차의 항산화 활성", "problem": "온도와 우림 시간에 따른 항산화력 변화 확인"}
+{"id": "W7219368243", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식중독 질병", "problem": "식중독 발생의 역학적 특성 설명 및 예방 조치"}
+{"id": "W4226429808", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 물에서 중금속", "problem": "중금속 제거"}
+{"id": "W4225386861", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수 처리 공장 내 박테리아 군집", "problem": "박테리아 군집의 동태 이해"}
+{"id": "W4365807364", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 및 폐수 처리에서의 암모니아", "problem": "암모니아 제거를 위한 생물학적 처리 방법의 적용"}
+{"id": "W4225307121", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 과정에서의 할로아세타미드(HAcAms)", "problem": "HAcAms의 형성과 제거 효율 개선"}
+{"id": "W4312636366", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재사용 음용수의 미생물학적 품질", "problem": "미생물 오염 문제 해결"}
+{"id": "W4280612119", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모유 생산", "problem": "모유 생산을 개선하려는 효과 분석"}
+{"id": "W4412632011", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티그리스 강의 수질", "problem": "수질 적합성 평가"}
+{"id": "W4229022387", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인체 위장관 내 미생물의 생존력", "problem": "과산화 음이온 라디칼의 영향을 연구하여 생존력 조절"}
+{"id": "W4225162764", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Nili Ravi 물소 송아지", "problem": "사료 효율성 및 성장 개선"}
+{"id": "W4280509947", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어린이 설사 사례", "problem": "어린이 설사 발생과 어머니의 PHBS 지식 간의 관계 이해하기"}
+{"id": "W4312669849", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "트랜스 장애를 경험하는 환자", "problem": "트랜스 장애의 원인 발견 및 치료 방법 개선"}
+{"id": "W4385210223", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생물", "problem": "미세플라스틱의 영향 이해 및 제거 방법 개발"}
+{"id": "W4225383514", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스리랑카의 지하수 품질 관리", "problem": "지하수의 안전한 음용수 공급 확보"}
+{"id": "W4225411387", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 불소 농도", "problem": "불소 제거 능력 비교"}
+{"id": "W4225115348", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비만 천식", "problem": "AHR 완화"}
+{"id": "W4225160170", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대만 인구의 혈액 악성 종양 발생률", "problem": "아르센산의 음용수 노출과 혈액 악성 종양 발생 간의 관계 조사"}
+{"id": "W4280621568", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 안전성과 품질", "problem": "PMMoV의 적합성 평가"}
+{"id": "W4225114821", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전립선암", "problem": "녹차의 보호 효과 검증"}
+{"id": "W4283361845", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "액체 분뇨 처리 기술", "problem": "액체 분뇨의 효과적인 처리 방법 분석"}
+{"id": "W4281563872", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전력 인프라와 수자원 유틸리티", "problem": "위험 기반 리스크 평가 통합"}
+{"id": "W4286651394", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Berberis thunbergii DC. (일본 바베리)", "problem": "회색수 관개에 대한 내성 평가"}
+{"id": "W4225117263", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "만성 통증", "problem": "수면 방해 해결하기"}
+{"id": "W4225091453", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 비공식 정착지의 폐수 인프라", "problem": "폐수 처리 시스템의 지속 가능성 확보"}
+{"id": "W4225156248", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "쥐의 심장과 신장", "problem": "세포 스트레스 반응의 성별 의존적 영향 분석"}
+{"id": "W4225408332", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호텔 X의 가정용 폐수", "problem": "안전하게 처리하고 재활용하기"}
+{"id": "W4225014230", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신생아 쥐의 뇌", "problem": "미엘리네이션 감소 및 올리고덴드로사이트 세포사멸 유발"}
+{"id": "W4224942982", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자유 에스트로겐", "problem": "자유 에스트로겐의 광화학적 분해 이해하기"}
+{"id": "W4293251422", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 수돗물 필터", "problem": "철로 인한 조기 막힘 문제 해결"}
+{"id": "W4225008438", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "장내 투과성 및 세포 독성", "problem": "경구 또는 정맥 노출 모사 중 변화 평가"}
+{"id": "W4224979055", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 미생물 오염", "problem": "유해 미생물 제거"}
+{"id": "W4225097001", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 공장", "problem": "내독소 제거 효율 개선"}
+{"id": "W4283080382", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우물 물의 탁도", "problem": "탁도 감소 최적화"}
+{"id": "W4225137909", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "부에노스아이레스 대도시 지역의 SARS-CoV-2 감염 예측", "problem": "하수에서 SARS-CoV-2 바이러스 로드 모니터링"}
+{"id": "W4226359158", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "담즙 기생충 감염", "problem": "기생충의 이동 원인 이해"}
+{"id": "W4224988818", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물과 병에 담긴 물에서의 미세플라스틱", "problem": "미세플라스틱의 존재와 건강 위험성 이해"}
+{"id": "W4224560361", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 나노플라스틱", "problem": "나노플라스틱 제거 효율 개선"}
+{"id": "W4224938510", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수원 유역의 수질", "problem": "화재 후 수질 변화 이해하기"}
+{"id": "W4224870224", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "불소 오염이 있는 지하수", "problem": "불소 제거"}
+{"id": "W4224879685", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천의 유기물 수출 조절 지점", "problem": "유기물 수출 문제 이해하기"}
+{"id": "W4229042499", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Borneo Island의 농촌 주민들", "problem": "청정 수자원 접근성 향상"}
+{"id": "W4224441347", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "적혈구 내 비소 축적", "problem": "비소 축적을 증가시키는 저 셀레늄 상태"}
+{"id": "W4224437602", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Pb(II)", "problem": "정확한 정량 분석"}
+{"id": "W4224778804", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신생아의 뇌", "problem": "모체 갑상선 기능 저하증으로 인한 신경세포 세포사멸 방지"}
+{"id": "W4224853213", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Iringa 시의 지하수 자원", "problem": "중금속 오염 문제 해결"}
+{"id": "W4283379513", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염", "problem": "슬러지 사용으로 인한 추가 오염 방지"}
+{"id": "W4287251540", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물과 에너지의 통합 정책", "problem": "주 정부의 통합 물 및 에너지 절약 정책 개발 문제"}
+{"id": "W4292481372", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인지 기억 결핍", "problem": "신경 가소성 보존"}
+{"id": "W4385193126", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비소 중독", "problem": "비소 중독 치료의 효과적인 방법 찾기"}
+{"id": "W4224311847", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 품질", "problem": "지하수 품질 개선"}
+{"id": "W4225149327", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shatt Al-Arab 강의 수질", "problem": "수질 오염 평가 및 개선"}
+{"id": "W4224314556", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 공정에서의 미생물 저항성", "problem": "미생물 저항성 문제 해결"}
+{"id": "W4224308155", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "당뇨병 쥐의 만성 신장 질환", "problem": "겐타마이신으로 유도된 신장 기능 저하 개선"}
+{"id": "W4224602511", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "성인 인슐린 저항성 쥐", "problem": "탄수화물 대사 개선"}
+{"id": "W4224861528", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "E. coli", "problem": "제거 효율 개선"}
+{"id": "W7161518494", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우즈베키스탄의 음용수 품질", "problem": "음용수 품질 개선"}
+{"id": "W4280527606", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "닭의 복지와 성장 성과", "problem": "복지를 개선하고 성장 성과를 향상시키기"}
+{"id": "W4224254506", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모델 지하수", "problem": "비소 제거"}
+{"id": "W4281641831", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오리의 사료 효율성 및 도체 비율", "problem": "프로바이오틱스의 효과를 평가하기"}
+{"id": "W4281918219", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캄풍 슈퍼 치킨의 성능", "problem": "프로바이오틱스의 효과를 평가하기"}
+{"id": "W4224310381", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장내 대사 기능 변화", "problem": "cefoperazone 처리에 따른 장내 미생물 변화 평가"}
+{"id": "W4280518777", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 생태계의 지속 가능성과 회복력", "problem": "도시 녹지 인프라의 평가 및 계획 문제 해결"}
+{"id": "W4280515604", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Morris Creek Watershed의 수생 곤충 다양성", "problem": "AMD가 수생 곤충의 다양성과 풍부성에 미치는 영향"}
+{"id": "W4318250623", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 관리 포트폴리오", "problem": "물 재사용 기술의 효율성 증명"}
+{"id": "W4224290244", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 공급 시스템", "problem": "담수 부족 해결"}
+{"id": "W4225275666", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "어린이의 체온 측정 방법", "problem": "비교하여 적합한 방법 선택하기"}
+{"id": "W4224239147", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "젖소", "problem": "성장 성능 개선"}
+{"id": "W4226518112", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 시스템의 바이러스 군집", "problem": "바이러스 다양성과 대사 잠재력 이해하기"}
+{"id": "W4224312987", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브로일러 닭의 장내 미생물군 및 간 전사체", "problem": "항생제 성장 촉진제와 비교하여 에센셜 오일 혼합물의 효과 평가"}
+{"id": "W4221017721", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모르핀 의존성", "problem": "모르핀 소비 감소를 위한 치료법 평가"}
+{"id": "W4224617594", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 내 납 오염", "problem": "납 노출 위험 감소"}
+{"id": "W4226369929", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 및 폐수 처리 시설의 운영 상태", "problem": "최적 운영 모드 설정"}
+{"id": "W4312793793", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비알콜성 지방간 질환", "problem": "비알콜성 지방간 질환의 생화학적 마커 분석"}
+{"id": "W4281762693", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Luhu Mini Dam의 수질", "problem": "수질 적합성 평가"}
+{"id": "W4229458060", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "패션프루트 음료", "problem": "음료의 보존 기간 연장"}
+{"id": "W4224304882", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농촌 가정의 식수 공급", "problem": "식수 접근성 부족 해결"}
+{"id": "W4280538318", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "쥐 새끼 건강", "problem": "모성 건강 최적화"}
+{"id": "W4220855493", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염수", "problem": "PFAS 제거"}
+{"id": "W4221050360", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "케일의 성장과 수확량", "problem": "관개 빈도와 양에 따른 영향 분석"}
+{"id": "W4225131966", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 불소 오염", "problem": "불소 농도 초과로 인한 건강 문제 해결"}
+{"id": "W4226286023", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대사 증후군", "problem": "로사르탄 치료 효과 비교"}
+{"id": "W4281286621", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브로일러 닭의 육체적 특성과 면역학적 및 미생물적 특성", "problem": "음료수에 석류 껍질 추출물과 모링가 잎 가루 추가의 효과 분석"}
+{"id": "W4281297380", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 육체적 특성과 면역학적 특성", "problem": "음료수에 추가 성분을 통한 개선"}
+{"id": "W4312530978", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.0, "domain_ver": "v0.1", "object": "쥐의 자손", "problem": "발달 이상을 교정하다"}
+{"id": "W7120308710", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 생산성", "problem": "유해 곰팡이 독소의 영향 개선"}
+{"id": "W7220168908", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Türkiye'deki çevresel göstergeler", "problem": "çevresel kirlenmeyi azaltmak"}
+{"id": "W4221066862", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "숲의 수질 정화 서비스", "problem": "경제적 가치를 정량화하기"}
+{"id": "W4221088859", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "심혈관 및 신장 시스템", "problem": "납 아세테이트 유도 독성 완화"}
+{"id": "W4403905636", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Barus 지역의 재충전된 음용수", "problem": "음용수의 오염 문제 해결"}
+{"id": "W4221114687", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카의 어린이 급성 수성 설사", "problem": "장 바이러스의 유병률을 이해하고 개선하기"}
+{"id": "W4221040947", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "녹색 빗물 인프라", "problem": "비효율적인 빗물 관리 시스템으로 인한 문제 예방"}
+{"id": "W4224275730", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 오염물질", "problem": "모니터링하여 인체 건강 보호"}
+{"id": "W4224444486", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 식수", "problem": "유해 세균 제거"}
+{"id": "W4221033875", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 시스템의 PFAS", "problem": "PFAS의 발생 및 제거 조사"}
+{"id": "W4221121772", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수의 생애 주기 평가", "problem": "지하수의 생애 주기 평가 연구의 과학적 생산 분석"}
+{"id": "W4221084909", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염소 우유 요구르트의 품질", "problem": "레드 생강 첨가로 향상시키기"}
+{"id": "W4220676347", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 음용수의 미생물 오염", "problem": "미생물 오염 감소"}
+{"id": "W4223483662", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bactrian camel의 임신 상태", "problem": "Toxoplasma gondii 감염으로 인한 유산 문제 해결"}
+{"id": "W4220685870", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "5세 이하 아동의 설사 질병", "problem": "WASH 관행 개선 및 수질 오염 감소"}
+{"id": "W4220906041", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대장 종양", "problem": "비암성 물질이 대장 종양을 유도하는지 검토"}
+{"id": "W4226128102", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간세포암(HCC)", "problem": "DEN 유도 간세포암에 대한 보호 역할 평가"}
+{"id": "W4407057846", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "ungurahuí (Oenocarpus bataua) 네트르", "problem": "항산화 능력 평가"}
+{"id": "W7216669582", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 항균제 내성 세균 오염", "problem": "건강 위험 및 관련 요인 파악"}
+{"id": "W4221121897", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신경학적 장애", "problem": "비소 노출로 인한 신경 독성 메커니즘 이해"}
+{"id": "W4221044074", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Awash Basin의 수질", "problem": "수질 악화 해결"}
+{"id": "W4220695286", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사료 결핍 상태의 홀스타인 수소", "problem": "체중 감소 및 혈액 산염기 균형 개선"}
+{"id": "W4220737186", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카자흐스탄의 물 공급 및 위생 시스템", "problem": "중앙 집중식 물 공급 및 위생 시스템의 지속 가능성 평가"}
+{"id": "W4220814917", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "라파스 시의 수자원 공급", "problem": "물 부족 문제 해결"}
+{"id": "W4220916107", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "페리도시 지하수 유역", "problem": "오염 위험 평가 및 관리"}
+{"id": "W4221094629", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 우수에서의 새로운 오염물질", "problem": "오염물질의 제거 성능 향상"}
+{"id": "W4221132591", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염된 수돗물", "problem": "PFAS의 분해 효율성 향상"}
+{"id": "W4221038255", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "축구 및 풋살 선수의 VO2 최대 용량", "problem": "스포츠 젤 음료의 효과를 평가하기"}
+{"id": "W4220673054", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유기 탄소의 흐름", "problem": "유기 탄소의 이동과 분해를 모델링하기"}
+{"id": "W4220742371", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "uMsunduzi 강의 수질", "problem": "미생물 오염원 및 전파 경로 이해"}
+{"id": "W4220754659", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 지하수", "problem": "약물 오염 문제 해결"}
+{"id": "W4220762171", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "리비아의 닭 사육장에서 사용되는 음용수", "problem": "음용수의 미생물 오염 및 화학적 품질 개선"}
+{"id": "W4220851223", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상수도 수질", "problem": "수력발전소 운영의 불규칙성이 수질에 미치는 영향 평가"}
+{"id": "W4220998893", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비소 오염된 수원", "problem": "비소 흡착 개선"}
+{"id": "W4221005653", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFASs의 토양 및 콜로이드 활성탄에 대한 흡착", "problem": "PFASs의 리칭 행동 이해하기"}
+{"id": "W4221029446", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지진 발생 예측 가능성", "problem": "지진 예측을 위한 다학제적 접근 분석"}
+{"id": "W4221128147", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 저수지 및 유역의 용해된 유기물 질", "problem": "음용수 생산을 위한 용해된 유기물의 문제 해결"}
+{"id": "W4221128505", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 품질", "problem": "지하수 흐름 경로 예측"}
+{"id": "W4220843739", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lahore Canal의 수질", "problem": "병원균 오염 문제 해결"}
+{"id": "W4220902409", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 식수 회사의 슬러지 생산", "problem": "슬러지 발생 흐름 및 품질 파악"}
+{"id": "W4323022872", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Uli와 Ihiala 지역의 포장 생수", "problem": "물리적 및 미생물학적 품질 평가"}
+{"id": "W4220937768", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IL-10+IgM+ 플라즈마 세포", "problem": "플라즈마 세포의 분화를 유도하는 메커니즘 규명"}
+{"id": "W4229070905", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리에서의 플록 크기", "problem": "저비용 방법론 개발 및 테스트"}
+{"id": "W4221101367", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 병원성 미생물", "problem": "미생물 제거를 위한 효과적인 방법 개발"}
+{"id": "W4229040468", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Oji River의 샘물", "problem": "계절 변화가 샘물의 물리화학적 특성에 미치는 영향 분석"}
+{"id": "W4226479659", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "회색수 처리", "problem": "적합한 모래를 이용한 생물반응기 설계"}
+{"id": "W4223907998", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나일강 생태계의 유해 블룸 형성 남조류 Microcystis aeruginosa", "problem": "남조류의 성장 동태 이해하기"}
+{"id": "W4220674245", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFASs 오염된 토양", "problem": "PFASs의 고정화 및 장기 용출 특성 평가"}
+{"id": "W4224275056", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토종 닭", "problem": "생존율 향상 및 성장 반응 개선"}
+{"id": "W4229077787", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신종 코로나바이러스(SARS-CoV-2)", "problem": "물과 폐수에서의 생존 및 전파 가능성 이해"}
+{"id": "W4280558001", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 내 납 오염", "problem": "납 노출 위험 감소"}
+{"id": "W4293087472", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 성장 성능", "problem": "나노 캡슐화된 과일 추출물의 영향 조사"}
+{"id": "W4323022753", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 오염", "problem": "오염물질 분포 조사"}
+{"id": "W4323022762", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 음용수 자원", "problem": "독성 감소를 위한 생물복원"}
+{"id": "W4220945291", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 항생제 내성", "problem": "항생제 및 내성 유전자의 제거"}
+{"id": "W4220947102", "domain_primary": "W6", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "담수 공급 및 하수 처리", "problem": "담수 부족 및 하수 처리 문제 해결"}
+{"id": "W4221017768", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물에서의 크롬(VI) 농도", "problem": "크롬(VI) 제거 기술 개발"}
+{"id": "W4220688536", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북경 오리의 생산 성능", "problem": "항생제 사용으로 인한 문제 해결"}
+{"id": "W4220725073", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내몽골 자치구의 음용수 품질", "problem": "음용수 품질 개선"}
+{"id": "W4220763342", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수에서의 농약 잔여물", "problem": "다양한 농약 잔여물 검출"}
+{"id": "W4220845948", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Syzygium nervosum 잎으로 만든 건조 차", "problem": "항영양소 제거 및 항산화 물질 보존"}
+{"id": "W4312407665", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "선천 면역 시스템", "problem": "COVID-19 감염 예방 및 면역력 증진"}
+{"id": "W4220666820", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cape Fear 강의 수질", "problem": "PFAS 오염 수준 평가 및 감소 추세 분석"}
+{"id": "W4220685420", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비알콜성 지방간염(NASH)", "problem": "간 염증 및 섬유증 감소"}
+{"id": "W4220675868", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "온대 변온동물의 생리적 스트레스 상태", "problem": "열파와 가뭄의 복합적 영향 평가"}
+{"id": "W4225463706", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "불소 오염이 있는 식수", "problem": "불소 제거 방법 탐색"}
+{"id": "W4220841971", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "점용수 처리에서의 세균 제거를 위한 란탄(III) 코팅 세라믹 필터", "problem": "세균 제거 개선"}
+{"id": "W4221006200", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "응집-플록 형성 과정", "problem": "플록 성장과 수질 정화의 상관관계 이해하기"}
+{"id": "W4221031311", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "종양을 가진 마우스의 골격근", "problem": "근육 위축과 약화를 개선하려는 연구"}
+{"id": "W4214752580", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이의 음용수 품질", "problem": "기후 변화로 인한 음용수 품질 악화"}
+{"id": "W4214644341", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "과산화수소(H2O2)", "problem": "지속적인 과산화수소 생산"}
+{"id": "W4214621800", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지의 수질", "problem": "탁도 예측"}
+{"id": "W4214509670", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Al-Mussaib drinking water treatment plant", "problem": "수돗물 품질 평가"}
+{"id": "W4214635550", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소고기 사육우의 행동", "problem": "음식과 물 부족 및 이동 시간의 영향 평가"}
+{"id": "W4280632123", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 생산 성능", "problem": "열 스트레스 조건에서 최적화"}
+{"id": "W4214853454", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.85, "domain_ver": "v0.1", "object": "비중앙 집중식 음용수 공급 시스템의 지하수", "problem": "질산염 제거 최적화"}
+{"id": "W4281608547", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "브로일러", "problem": "물 소비량과 체중 증가 개선"}
+{"id": "W4405598520", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kerawang 물 저장소의 위생 및 위생 상태", "problem": "위생 및 수질 기준 미달 문제 해결"}
+{"id": "W7171175810", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염물질 제거", "problem": "식물, 동물 및 미생물의 역할 이해하기"}
+{"id": "W7171226212", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리", "problem": "물 오염 문제 해결"}
+{"id": "W4214482942", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 우라늄 오염", "problem": "우라늄 농도 감소 및 건강 문제 해결"}
+{"id": "W4214756762", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "에티오피아 북서부 지역의 어린이들", "problem": "장내 기생충에 대한 환경 노출 평가"}
+{"id": "W4214611481", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하 석탄 광부의 건강 비용", "problem": "석탄 광산 오염으로 인한 질병 비용 비교"}
+{"id": "W4214857820", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Stryi 지역의 음용수", "problem": "음용수의 질 개선"}
+{"id": "W4220773205", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 생산 성능", "problem": "자연 첨가제의 효과"}
+{"id": "W4214831719", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생산 공정수", "problem": "총 대장균군 감소 및 수질 경도 개선"}
+{"id": "W4214546771", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Microcystis spp.", "problem": "HABs 탐지 및 정량화"}
+{"id": "W4214757601", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티그리스 강의 수질", "problem": "수질이 로티퍼 군집에 미치는 영향 평가"}
+{"id": "W4293228593", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비소 유도 간 손상", "problem": "비소로 인한 간 손상 완화"}
+{"id": "W4214599445", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Upper and Middle Cheliff groundwater quality", "problem": "수질 적합성 평가"}
+{"id": "W4214676300", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "열 스트레스에 노출된 닭의 생산성과 난질", "problem": "열 스트레스 완화 방법 개선"}
+{"id": "W7133066557", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Embera Katio Gito Docabu 지역 사회의 식수", "problem": "식수 접근성 문제 해결"}
+{"id": "W7151943735", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "여성 쥐의 생식 기능", "problem": "중금속 혼합물에 의한 생식 기능의 파괴"}
+{"id": "W4214581207", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "임신 중 태아 손실", "problem": "BP-3 노출로 인한 태아 손실 메커니즘 규명"}
+{"id": "W4220668773", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "마카사르시의 건강한 섬", "problem": "깨끗한 물 공급을 지표로 삼기"}
+{"id": "W4214767950", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 비소 오염", "problem": "비소 제거를 위한 흡착제의 효용성 평가"}
+{"id": "W4213450653", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노화 관련 황반 변성", "problem": "기능 저하를 늦추기 위한 자가포식 타겟팅 치료"}
+{"id": "W4214911371", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Maroon 및 Jarahi 유역의 수자원", "problem": "수질 변화 이해 및 보존 관리"}
+{"id": "W4213422450", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 오염물질과 미생물", "problem": "오염물질과 미생물 동시 제거"}
+{"id": "W4214572661", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 비소 오염", "problem": "비소 오염 문제 해결"}
+{"id": "W4214585035", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "어린 양의 성장 및 혈액 생화학 지표", "problem": "CG 보충의 효과 조사"}
+{"id": "W4283386621", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하류 쿠반니 강 유역의 지하수 품질", "problem": "인간 활동이 지하수 품질에 미치는 영향 분석"}
+{"id": "W4213388189", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강의 항생제 내성 유전자", "problem": "항생제 내성 유전자 농도 증가 문제 해결"}
+{"id": "W4212838703", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시스템의 항생제 내성 유전자 및 항생제 내성 박테리아", "problem": "항생제 내성 유전자 모니터링 및 관리 필요성"}
+{"id": "W4213241794", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kibuku 지역의 개선된 수원에서의 수질", "problem": "수질 개선을 위한 요인 분석"}
+{"id": "W4213149876", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS의 유해한 영향 평가 및 규제 필요"}
+{"id": "W4212800715", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에탄올 의존성", "problem": "에탄올 소비 감소"}
+{"id": "W4213143000", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미세 오염 화학물질(TOrCs)", "problem": "TOrCs의 생물전환 메커니즘 이해"}
+{"id": "W4293227270", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "2-Aminopyridine", "problem": "물에서 2-Aminopyridine 분해"}
+{"id": "W4220799825", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 안전한 식수", "problem": "식수 부족 문제 해결"}
+{"id": "W4213268671", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "온두라스의 음용수 자원에서의 생물살해제 발생", "problem": "생물살해제의 발생 이해 및 관리"}
+{"id": "W4212890954", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대장염", "problem": "면역 관용 유도"}
+{"id": "W4212842223", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "급성 대장염", "problem": "NFEPP의 반복 투여 효과 평가"}
+{"id": "W4212966178", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)", "problem": "PGC1-α 억제가 염증 반응 악화"}
+{"id": "W4213081217", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장내 염증성 장질환(IBD)", "problem": "장내 염증 및 손상 감소"}
+{"id": "W4213197552", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장내 염증", "problem": "E. coli에 의해 유도된 염증 수준 비교"}
+{"id": "W4212836962", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물에서 인산염 제거를 위한 폐기물", "problem": "폐수 처리 과정에서 발생하는 폐기물의 인산염 제거 능력 조사"}
+{"id": "W4213365949", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 품질", "problem": "미네랄 수준을 안정화하고 이원 금속을 제거하기"}
+{"id": "W4225788809", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 에티오피아의 유아 사망률", "problem": "수인성 질병으로 인한 유아 사망 위험 요인 파악"}
+{"id": "W4213376545", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비알콜성 지방간염(NASH)", "problem": "저용량 카드뮴의 영향을 조사하다"}
+{"id": "W4213058286", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비만", "problem": "플루오르화물에 의한 비만 악화"}
+{"id": "W4212777673", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "젖소 송아지의 구강 행동", "problem": "정상 및 비정상 구강 행동의 시간 변화 평가"}
+{"id": "W4212863743", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청색조류 유해 조류 발생(cHABs) 및 시안 독소", "problem": "청색조류 및 시안 독소 제거"}
+{"id": "W4213073980", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산란계의 성장 성능 및 장기 구조", "problem": "날짜 추출물의 효과를 평가하기"}
+{"id": "W4213124853", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고기 오리의 뼈 건강", "problem": "E. coli로 유도된 뼈 손실 완화"}
+{"id": "W4213144857", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 프탈레이트 에스터 노출", "problem": "일일 노출 및 누적 건강 위험 평가"}
+{"id": "W4212792802", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농촌 네팔의 식수 품질", "problem": "식수 오염 문제 해결"}
+{"id": "W4212906220", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간의 일주기 시계", "problem": "메트포르민의 만성 치료가 일주기 시계를 손상시키는지 여부"}
+{"id": "W4212839589", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 물 관리에서의 자원 회수", "problem": "자원 회수의 필요성을 재구상하기"}
+{"id": "W4220764626", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Delonix regia 잎", "problem": "요로결석 치료 효과 조사"}
+{"id": "W4220946718", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "S. grandiflora의 항결석 효과", "problem": "화학적으로 유도된 결석 예방"}
+{"id": "W4220964882", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "ER+ 유방암 모델", "problem": "풀베스트란트 저항성 이해"}
+{"id": "W7220539413", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Abia 주의 지하수 품질", "problem": "정부의 수돗물 공급 부족으로 인한 대체수원 문제 해결"}
+{"id": "W7220617072", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Abia 주의 지하수 품질", "problem": "지하수 오염 문제 해결"}
+{"id": "W4212836193", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 시스템의 소독 부산물(DBP)", "problem": "소독 부산물의 양 예측"}
+{"id": "W4213068071", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "만성 담낭염 및 신우신염 환자", "problem": "신경조절 효과 개선"}
+{"id": "W4214596854", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Kaltungo 지역의 지하수", "problem": "지하수의 적합성 평가"}
+{"id": "W4212973105", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 성능 및 장내 미생물", "problem": "장내 세균 수 감소"}
+{"id": "W4210979668", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "HFpEF(심부전)", "problem": "HFpEF의 병인 개선"}
+{"id": "W4211170063", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 음용수 품질", "problem": "음용수 품질 기준 미달"}
+{"id": "W4213109036", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수 처리 슬러지 내 남조류 및 남조류 독소", "problem": "남조류 및 독소 감소를 위한 산화의 효과 평가"}
+{"id": "W4213332383", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "고급 방실 차단", "problem": "증상 완화"}
+{"id": "W4211161185", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 질", "problem": "물의 질을 지속적으로 모니터링하기"}
+{"id": "W4212868785", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 조류의 면역학적 및 혈액학적 매개변수", "problem": "면역 반응 개선"}
+{"id": "W4210279665", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "흉부 대동맥 박리", "problem": "LGMN 신호를 통한 대동맥 박리 예방 및 치료"}
+{"id": "W4211155029", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "만성 담낭염 및 신우신염 환자", "problem": "신경내분비-면역 복합체 및 대사 변화 이해"}
+{"id": "W4210359490", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "헬스케어 및 의료 의사결정", "problem": "소비자 중심의 헬스케어 이해 증진"}
+{"id": "W4225772407", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Okrika 지역의 수질 및 미생물학적 품질", "problem": "수질 오염 및 공공 건강 위험 평가"}
+{"id": "W4224607703", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shabu 지역의 손으로 파는 우물의 수질", "problem": "중금속과 박테리아 오염 문제 해결"}
+{"id": "W4281286170", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 혈청 생화학적 특성", "problem": "산화 스트레스에 대한 반응 개선"}
+{"id": "W4281288706", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산란계의 생산성", "problem": "이온화된 물의 효과를 조사하다"}
+{"id": "W4283380978", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물", "problem": "진균 군집 감소"}
+{"id": "W4285027852", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기억 손상 및 신경 염증", "problem": "신경 보호 효과 평가"}
+{"id": "W4293257095", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bengkulu 지역의 식수 품질", "problem": "식수 처리 과정의 문제 해결"}
+{"id": "W4412631695", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바그다드 주의 수처리 시설", "problem": "수처리 성능 평가"}
+{"id": "W4210774356", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남아프리카 공화국의 음용수 처리 공장에서의 자연 유기물(NOM)", "problem": "자연 유기물 제거 개선"}
+{"id": "W4220970419", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Hibiscus rosa sinensis", "problem": "신장 결석 성장 감소 및 예방"}
+{"id": "W4382140031", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 안전성", "problem": "물borne 질병 예방을 위한 소독 기술 설명"}
+{"id": "W4210308100", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 오염물질", "problem": "지속적인 수질 오염물질 분해"}
+{"id": "W4223597245", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "상업적 부분의 브로일러 닭 카르카스", "problem": "MBR 개선을 위한 NEMD 효과 분석"}
+{"id": "W4225078810", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Hepatitis E 감염 환자", "problem": "G6PD 결핍으로 인한 황달 연장 문제"}
+{"id": "W4210720119", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유기 오염물질", "problem": "유기 오염물질을 분해하기 위한 효율적인 처리 기술 연구"}
+{"id": "W4220689273", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알루미늄 기반 슬러지", "problem": "지속 가능한 재사용 방안 모색"}
+{"id": "W4210431247", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "어린이의 치아 건강", "problem": "CWF 중단 후 치료율 증가"}
+{"id": "W4210324088", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비육 토끼의 성장 및 장 건강", "problem": "영양소 소화 개선 및 육질 향상"}
+{"id": "W4210670651", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cibangkong 마을의 사회적 지원 수혜자", "problem": "수혜 자격 여부 판단"}
+{"id": "W4212996211", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "전통적인 수처리 시설에서의 미생물 안전성", "problem": "전통적인 수처리 시설의 미생물 오염 평가"}
+{"id": "W4212975928", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정의 음용수 안전성", "problem": "가정에서의 안전한 물 처리 및 저장 개선"}
+{"id": "W4210501444", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아시아계 이민자의 수면 건강", "problem": "이민자의 문화적 스트레스가 수면에 미치는 영향 이해하기"}
+{"id": "W4210370394", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 및 나노 크기 Fe 2 O 3 색소", "problem": "청정수 및 색소 생산을 위한 회수 과정 평가"}
+{"id": "W4210538562", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Minas Frescal 치즈", "problem": "Kombucha의 항균 활성을 평가하기"}
+{"id": "W4210332923", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생수 배급 파이프라인의 미생물 부식", "problem": "미생물 부식 문제 해결"}
+{"id": "W4210373613", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "골수에서의 거대혈소판 생성", "problem": "카드뮴의 영향 조사"}
+{"id": "W4210390848", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "포장된 음용수의 품질", "problem": "수질 기준 미달 문제 평가"}
+{"id": "W4220982308", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 폴리 및 퍼플루오로알킬 물질(PFAS)", "problem": "PFAS의 신속한 제거"}
+{"id": "W4210713455", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강물에서의 제약 및 개인 관리 제품", "problem": "제거 성능 향상"}
+{"id": "W4225496130", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수, 표면수 및 음용수의 오염물질", "problem": "물 오염물질 제거 방법 검토"}
+{"id": "W7204105707", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위험 폐기물 및 오염된 지하수", "problem": "복잡한 혼합물에서 유기 화합물 파괴"}
+{"id": "W7204138400", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 지하수", "problem": "지하수 정화 기술 평가"}
+{"id": "W4207051089", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제2형 당뇨병 쥐 모델", "problem": "지질 프로필 및 탄수화물 대사 개선"}
+{"id": "W4210337861", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "혈압 및 혈관 기능", "problem": "고혈압을 유발하는 기전 이해"}
+{"id": "W4210433590", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "DSS 유도 대장염", "problem": "대장염 개선"}
+{"id": "W4220957921", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "kencur rhizome (Kaempferia galangal L.)", "problem": "물과 에센셜 오일 함량 비율 결정하기"}
+{"id": "W4226058308", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ala 강의 수질", "problem": "계절에 따른 수질 변화 분석"}
+{"id": "W4210518757", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 용해된 유기물", "problem": "새로운 방법을 찾다"}
+{"id": "W4318060830", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고혈압 환자의 혈압", "problem": "혈압을 낮추는 방법 찾기"}
+{"id": "W4206981551", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염 환경 매체", "problem": "PFAS 제거 및 관리 방법 개선"}
+{"id": "W4210437495", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "자연림 지역", "problem": "수돗물 처리 비용 감소"}
+{"id": "W4210717283", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 식수 접근성", "problem": "유량이 필터 성능에 미치는 영향 평가"}
+{"id": "W4210350663", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Entamoeba 감염", "problem": "유병률 및 관련 요인 파악"}
+{"id": "W4210249841", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wistar 쥐의 총 콜레스테롤", "problem": "독성 영향 평가"}
+{"id": "W4206927686", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질", "problem": "오염된 폐수 정화"}
+{"id": "W4393621187", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리 공정", "problem": "미세오염물질 제거 및 수질 개선"}
+{"id": "W4207011047", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폴리아미드 멤브레인 시스템의 생물 오염", "problem": "생물 오염 방지 전략 개발"}
+{"id": "W4206953087", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)에서의 장 점액 세포", "problem": "SMYD2 결핍이 EGF 치료와 시너지 효과를 내는지 조사"}
+{"id": "W4206996128", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "장내 투과성 및 세균 전이", "problem": "DUOX2 활성화로 인한 장내 장벽 기능 결함 해결"}
+{"id": "W4207031061", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환", "problem": "PL8177의 효과를 평가하고 기전을 규명하려는 연구"}
+{"id": "W4225097361", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD) 환자", "problem": "면역 반응 조절"}
+{"id": "W4206927880", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "mast cell-associated disorders of the gastrointestinal tract", "problem": "mast cell 증가 방지 및 염증 완화"}
+{"id": "W4205377487", "domain_primary": "W6", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업에서의 폐수 재사용", "problem": "사회문화적 및 경제적 결과 평가"}
+{"id": "W4205116672", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소아의 과민성 장 증후군", "problem": "정수된 물 소비의 영향 분석"}
+{"id": "W4205589352", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전기 방사 나노섬유 막", "problem": "기계적 성질 개선"}
+{"id": "W4205610385", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알코올 재발", "problem": "알코올 재발 억제"}
+{"id": "W4206528148", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소의 복합 전두엽 기형", "problem": "고나트륨혈증과 무갈증의 병인 이해"}
+{"id": "W4280557007", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 및 기후 변화 문제", "problem": "오염물질 제거 방법 개선"}
+{"id": "W4206113838", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상업 농장에서 사육되는 닭의 장내 미생물 군집", "problem": "장내 미생물의 건강 및 생산성에 미치는 영향 이해하기"}
+{"id": "W4206473771", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "병원성 세균", "problem": "물에서 전파되는 세균 감염의 주요 요인 이해하기"}
+{"id": "W4206021263", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Legionella pneumophila", "problem": "수돗물 및 수조에서의 박테리아 확산 위험 평가"}
+{"id": "W4206545730", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간세포암", "problem": "생존율 향상"}
+{"id": "W7119011380", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아마존 새우 (Macrobrachium amazonicum)", "problem": "주민의 어업 활동에 대한 사회환경적 영향 파악"}
+{"id": "W4205432816", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 시스템의 미생물 군집", "problem": "미생물 군집의 조성 변화 이해하기"}
+{"id": "W4205742417", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구강 발암", "problem": "구강 발암 예방 효과 조사"}

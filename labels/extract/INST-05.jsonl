@@ -2886,3 +2886,290 @@
 {"id": "W4367307772", "object": "수력-풍력-태양광 하이브리드 시스템", "problem": "장기 운영의 불확실성 극복", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4368248695", "object": "Baspa 강의 신뢰할 수 있는 유량", "problem": "신뢰할 수 있는 유량 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4382626572", "object": "수생 생태계", "problem": "수력 발전소 운영에 따른 수리학적 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224109476", "object": "페루의 전력 시스템", "problem": "재생 가능 에너지 통합의 경제적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224129999", "object": "Kapchagay Hydropower Plant (HPP)", "problem": "수위 감소 원인 규명 및 안전성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224111369", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4319920590", "object": "수생 잡초인 물봉선", "problem": "환경과 인간 생계에 미치는 부정적 영향 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386531701", "object": "수력 발전소 설계 및 개발", "problem": "모듈식 수력 발전소의 효율성과 환경적 이점 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388895312", "object": "재생 가능 에너지 발전 장비", "problem": "합금 원소의 메탈러지 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312923975", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4295350431", "object": "아프리카의 수력 발전 댐", "problem": "전력 생산을 위한 기후 친화적 에너지 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4294308150", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7219243936", "object": "Pulong Mangga Caduang Tete Macabebe Pampanga 지역의 안전한 통행로", "problem": "위험한 다리의 조명 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285727825", "object": "수력 발전", "problem": "전력 생성의 복잡한 제약 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198032698", "object": "레소토의 에너지 공급 안정성", "problem": "에너지 불안정성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198300122", "object": "레소토의 전력 공급원 포트폴리오", "problem": "전력 수요 충족을 위한 최적화 접근법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205946754", "object": "풍력 에너지의 시장 가치", "problem": "시장 불확실성을 줄이기 위한 유연성 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4288762999", "object": "태양광 발전 시스템", "problem": "성능 평가에 대한 전력 예측의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281973932", "object": "터키의 총 전력 소비", "problem": "하수 처리장에서의 미소 수력 발전 비율 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281743813", "object": "지속 가능한 에너지 시스템", "problem": "블록체인 기술을 통한 지속 가능한 에너지 전환 모델 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281842525", "object": "히말라야 지역의 토지 피복 유형", "problem": "다양한 분류기를 사용하여 토지 피복 유형을 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281802706", "object": "3D 터널 모델", "problem": "터널 안정성 분석을 위한 데이터 수집 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281937564", "object": "수력 발전 시스템의 안정성", "problem": "부분 부하 조건에서의 안정성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4290997892", "object": "수력 발전소", "problem": "디지털 전환을 통한 효율적이고 지능적인 전력 공급 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4290997747", "object": "전력 시스템의 탄소 배출", "problem": "탄소 배출 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281790700", "object": "건물의 에너지 효율성", "problem": "재생 가능 에너지의 그리드 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215564727", "object": "지하 수소 저장", "problem": "지하 수소 저장의 기술적 측면과 실행 가능성 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4282039997", "object": "수력 발전 시스템", "problem": "최대 방출 제약의 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281742902", "object": "다중 전력 보완 발전 시스템", "problem": "전력 시스템의 불안정성 및 신재생 에너지 수용 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281569313", "object": "에티오피아의 농촌 전력화", "problem": "전력 공급 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281478865", "object": "저수지의 생태적 운영", "problem": "수생 생태계의 지속 가능성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220535203", "object": "브라질과 수리남의 아프로 후손 농촌 공동체", "problem": "전기화가 사회적, 경제적, 환경적, 문화적, 공간적 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281251628", "object": "코트디부아르의 수력 발전", "problem": "기후 변화가 수력 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293249846", "object": "사탕수수 기반 전력 생성 시스템", "problem": "기후 변화로 인한 가뭄 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281260644", "object": "알래스카의 그리드에 연결되지 않은 커뮤니티", "problem": "디젤 의존도 감소 및 에너지 프로필 다양화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280505549", "object": "오스트리아의 에너지 소비", "problem": "에너지 소비의 탈탄소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280596757", "object": "Bagré 댐의 수력 발전", "problem": "수력 발전에 미치는 수문 기후 경향과 상류 수자원 관리의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280552428", "object": "지하 석탄 광산에서 배수된 물의 에너지를 이용한 마이크로 수력 발전 시스템", "problem": "마이크로 수력 발전 시스템의 잠재적 전력 용량 계산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280584211", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4280607957", "object": "Nashe 수력 발전 저수지", "problem": "수력 발전을 위한 최적 운영 시나리오 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280582883", "object": "에티오피아와 모잠비크의 에너지 시스템", "problem": "지속 가능한 에너지 전환 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280630630", "object": "삼협-게주바 연계 수력 발전소의 저수지 스케줄링 모델", "problem": "전력 생산 이익 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280598005", "object": "Pemakö의 문화와 공동체", "problem": "문화적 생존과 번영", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4282932004", "object": "수력 발전소의 에너지 효과", "problem": "새로운 발전소 건설로 인한 발전량 증가 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280568347", "object": "전력 산업의 탄소 배출", "problem": "전력 거래가 탄소 배출에 미치는 영향 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280619055", "object": "스위스의 고산 수역에서의 전기 생산 잠재력", "problem": "전기 생산 잠재력을 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280621435", "object": "복잡한 균열이 있는 댐 기초의 정지 수조", "problem": "정지 수조의 응력 및 변형 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293246917", "object": "스마트 마이크로그리드", "problem": "소규모 수력 발전 통합 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280590102", "object": "환경의 지속 가능성", "problem": "지속 가능한 개발을 위한 환경 보호와 자원 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280598113", "object": "소규모 수력 발전 잠재력", "problem": "환경 문제를 해결하기 위한 방법론 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280574632", "object": "Karun-4 수력 발전소", "problem": "에너지 생성 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280601830", "object": "ASEAN 국가의 탈탄소화 기술", "problem": "탈탄소화 기술의 평가 및 우선순위 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4286305564", "object": "수력 발전 시스템", "problem": "모델 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4229032731", "object": "제로 에너지 건물", "problem": "건물 부문의 탈탄소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4229035770", "object": "ASEAN 국가들의 탈탄소화 로드맵", "problem": "탈탄소화 기술을 통한 CO2 배출 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4229011234", "object": "수자원 회수 시설 (WRRFs)", "problem": "에너지 시스템의 지속 가능성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285557148", "object": "터키의 재생 가능 에너지 잠재력", "problem": "재생 가능 에너지의 효과적인 활용 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225302954", "object": "중국의 수력 발전", "problem": "기후 변화가 수력 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312344397", "object": "전력 생성 시스템", "problem": "신뢰할 수 있는 에너지 공급 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283710480", "object": "소규모 수력 발전소에서의 펌프", "problem": "적합한 펌프 선택의 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7158976788", "object": "중국 서남부 주요 강의 수원 지역의 수자원 관리", "problem": "수자원 변화 이해 및 지속 가능한 관리 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4365796846", "object": "수자원 시스템", "problem": "지속 가능한 수자원 개발을 위한 복합적 접근 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281287673", "object": "비전력 댐(NPD) 인프라", "problem": "NPD의 발전 가능성을 개선하고 혁신을 촉진하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280564507", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4312431156", "object": "저수지 지역의 산사태", "problem": "산사태로 인한 급류의 발생 및 전파 시뮬레이션", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4389157237", "object": "풍력-태양광-수력-수소-저장 통합 보완 재생 에너지 제조 시스템", "problem": "탄소 정점 및 중립 목표 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280601508", "object": "하천 생태계", "problem": "수력 발전의 환경적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225256687", "object": "부강강 유역의 수력 발전", "problem": "전력 손실 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283374853", "object": "Shiroro 수력 발전소의 전력 생산 능력", "problem": "전력 생산 능력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283215163", "object": "전력 시스템의 주파수 조절", "problem": "전력 시스템의 주파수 및 연결선 진동 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225133904", "object": "수리남의 전력 수요 및 수력 발전", "problem": "기후 변화가 전력 생산 및 수요에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283446558", "object": "나일 강 유역", "problem": "댐 건설로 인한 경제적 영향 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225009022", "object": "미국 대륙의 수력 발전", "problem": "수력 발전의 지속 가능성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224923030", "object": "전력 생산 용량 투자 문제", "problem": "기후 변화로 인한 가뭄 위협을 고려한 투자 계획", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226501936", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4224669779", "object": "유럽 국가의 CO2 배출량", "problem": "재생 가능 에너지의 공간적 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285815985", "object": "수력 발전-하이브리드 시스템", "problem": "빠른 주파수 응답 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4284670307", "object": "네팔 Thingan 지역의 삼중 발전 미니 그리드", "problem": "시스템의 신뢰성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224780998", "object": "Beipan River의 생태 지표", "problem": "생태 지표 보장을 위한 최적 배분 방안 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393783830", "object": "미국 에너지 시스템", "problem": "온실가스 및 공기 오염물질 배출 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224213951", "object": "네팔의 산업화와 고용 상황", "problem": "산업화 부족으로 인한 고용 기회 결여", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224210172", "object": "서부 히말라야 지역의 전통 수차", "problem": "전기 생산을 위한 기존 수차의 활용 가능성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224224852", "object": "전력망", "problem": "수력-태양광 통합의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281572790", "object": "슬릿 위어 근처의 저수지에서의 침식량", "problem": "침식량 감소를 위한 슬릿 위어의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224996646", "object": "뉴잉글랜드 전력 시스템", "problem": "신뢰성과 경제성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223936049", "object": "풍력-태양광-수력 하이브리드 시스템", "problem": "안정적인 전력 시스템 운영을 위한 최적화된 조정 운영", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224040168", "object": "태양열 에너지 전환 및 활용", "problem": "에너지 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223445425", "object": "서부 미국의 수력 및 태양광 발전", "problem": "계절적 상호 보완성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223621875", "object": "프레이저 강의 연어 개체군", "problem": "자원 갈등 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283724683", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4223496708", "object": "Samanalawewa Reservoir Hydropower Project", "problem": "기후 변화가 전력 생산에 미치는 영향 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226490093", "object": "Lower Nelson River Basin의 수자원 공급 및 수력 발전 잠재력", "problem": "기후 변화에 따른 수자원 공급 및 수력 발전 잠재력 변화 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224291990", "object": "재생 가능 에너지의 지속 가능성", "problem": "지속 가능성 평가를 위한 다기준 의사결정 프레임워크 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226530051", "object": "네팔의 전력 공급", "problem": "부하 분산 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4297920572", "object": "알갈 바이오연료", "problem": "재생 가능한 에너지 자원 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385832859", "object": "나이지리아의 바이오매스 자원", "problem": "사회경제적 발전을 위한 에너지 자원 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225759374", "object": "중국의 수력 발전", "problem": "수력 발전의 기술적 진보를 통한 발전", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224298009", "object": "중앙아시아의 수자원 갈등", "problem": "갈등 해결 기회 구조 식별하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225983410", "object": "리비우 지역의 재생 가능 에너지 시설", "problem": "재생 가능 에너지 시설의 개발 현황과 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220494480", "object": "리비우 지역의 재생 가능 에너지 시설", "problem": "재생 가능 에너지의 발전과 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223918885", "object": "스리랑카의 기후 서비스", "problem": "기후 예측의 통합 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4229028611", "object": "크로스 플로우 터빈", "problem": "진동 억제 메커니즘 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223422130", "object": "수력 발전소의 전력 생산", "problem": "전력 생산 증가 및 물 소비 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225143290", "object": "수력 발전을 위한 수조 구조물", "problem": "영구적인 수력 발전용 셀룰러 코퍼댐 설계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224141857", "object": "멕시코의 청정 에너지 자원 잠재력", "problem": "재생 가능 에너지 기술을 신속하게 배포하기 위한 경로 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226032069", "object": "Flaming Gorge Dam과 Aspinall Unit의 수력 발전 운영", "problem": "운영 제한으로 인한 경제적 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224262387", "object": "연속 수력 발전소의 운영", "problem": "운영 최적화 및 내비게이션 수요 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4282029899", "object": "전력 산업의 탄소 배출", "problem": "탄소 배출 정점 도달 및 전력 공급과 수요 균형 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224008389", "object": "자연력으로 물을 끌어올리는 방법", "problem": "자연력으로 물을 끌어올리는 데 필요한 힘의 계산을 재조명하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224122688", "object": "자연력으로 물을 끌어올리는 기계", "problem": "자연력으로 물을 끌어올리는 데 필요한 힘의 합리적 계산 재조명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401648683", "object": "투르겐 강의 수자원", "problem": "소형 수력 발전소 건설을 위한 수리적 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4229363467", "object": "Little Ruaha catchment", "problem": "기후 변화로 인한 유량 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221126438", "object": "슬로바키아의 수소 생산 가능성", "problem": "수소 생산을 위한 재생 가능 자원 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4310563372", "object": "수질", "problem": "영양소 및 독소 지표의 농도 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400359592", "object": "글로벌 에너지 소비", "problem": "지속 가능한 발전을 위한 에너지 소비 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220752344", "object": "상류 양쯔강 유역의 강수 변화", "problem": "미래 강수 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226090444", "object": "아프리카의 수력 발전", "problem": "전력 시스템 모델링을 위한 데이터셋 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293106637", "object": "중국의 재생 가능 에너지 발전 효율", "problem": "발전 효율 개선을 위한 주요 제약 요인 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285552855", "object": "전력 시스템의 신재생 에너지 소비", "problem": "신재생 에너지의 소비 촉진 및 운영 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220882029", "object": "페루 안데스 지역의 수자원과 농업", "problem": "기후 극단 현상과 가뭄 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220693375", "object": "브라질 전력 시스템의 풍력 발전", "problem": "월별 풍력 발전의 불확실성 표현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220811996", "object": "오스트리아의 자연 및 기술적 눈", "problem": "기후 변화가 눈에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220822608", "object": "3S 강 시스템", "problem": "댐 개발로 인한 퇴적물 연결성 저하 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283802764", "object": "브라질의 에너지 시스템", "problem": "에너지 믹스 다각화 및 탄소 배출 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220665402", "object": "Chirchik 강 유역의 수자원 관리", "problem": "기상 가뭄에 대한 수문학적 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220711679", "object": "수력 발전 투자", "problem": "기술적 변화에 적응하기 위한 계획 전략 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220781308", "object": "소규모 수력 발전소", "problem": "재무적 타당성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220783934", "object": "양쯔강 유역의 수력 발전 잠재력", "problem": "기후 변화에 따른 계절적 수문학적 가뭄의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220870366", "object": "남미 유역의 수력 발전", "problem": "계절 예측의 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220880448", "object": "전력망의 수력 발전 스케줄링", "problem": "복잡한 강 동역학을 고려하지 않은 수력 발전 시뮬레이션의 한계 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221001437", "object": "국경을 초월한 다목적 수자원 관리", "problem": "새로운 댐의 비협력적 운영으로 인한 부정적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221005967", "object": "지중해 지역의 수력 발전 시스템", "problem": "홍수 사건에 대한 조기 경고 시스템 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220810662", "object": "하이브리드 디젤 마이크로그리드", "problem": "전력 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221115022", "object": "수자원 및 에너지 시스템", "problem": "피드백 메커니즘 이해 및 운영 결정 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220715225", "object": "사막 지역의 수자원 관리", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220827883", "object": "농업 채널의 미소 수력 발전 시스템", "problem": "미소 수력 발전의 전기 생성 불안정성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220928260", "object": "알프스 지역의 하천 유출량 및 수력 발전", "problem": "기후 변화로 인한 빙하 후퇴로 인한 유출량 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220681447", "object": "북부 스웨덴의 봄 홍수", "problem": "예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220732757", "object": "하류 수생 생태계", "problem": "수생 생태계의 동태 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220783143", "object": "노르웨이의 전력 미래에 대한 사회기술적 상상", "problem": "전력 용량 구축에 대한 공적 논의 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220796061", "object": "Turtmänna 강 유역의 빙하 유래 수자원", "problem": "기후 변화와 수력 발전의 복합적 영향 추적", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220831497", "object": "유럽의 재생 가능 전력 시스템", "problem": "극단적인 에너지 생성 저하 및 잔여 부하 증가 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220870427", "object": "동남아시아의 수력 발전 가능성", "problem": "기후 변화가 수력 발전에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220888410", "object": "국경을 초월한 강 유역의 물-에너지-식량 넥서스", "problem": "무역오프 완화 및 국제 협정 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220901116", "object": "수력 발전 운영", "problem": "다양한 목표 간의 이해관계 균형 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220937381", "object": "Gunt River의 유량 특성", "problem": "유량 추정 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220966691", "object": "열대 강의 생물 다양성 및 홍수 평원", "problem": "수력 발전의 환경적 영향을 최소화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221006948", "object": "북미의 계절적 유량 예측", "problem": "계절적 유량 예측의 정확성을 향상시키기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220920681", "object": "Upper Indus 유역의 수력 발전 잠재력", "problem": "기후 변화와 물-에너지-식량 연계로 인한 도전 과제 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220980585", "object": "영국과 아일랜드의 하천 수력 발전", "problem": "기후 변화가 수력 발전 잠재력에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221009658", "object": "중동 및 북아프리카 지역의 수력 발전 및 양수 수력 저장", "problem": "수요와 공급 균형을 위한 에너지 저장 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220922259", "object": "황하 유역의 물, 에너지, 식량의 조화로운 관계", "problem": "조화로운 균형을 연구하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221021355", "object": "유럽의 개방형 갈탄 광산에서의 수력화학적 영향", "problem": "PHS 운영에 따른 환경 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224536417", "object": "수력 발전소의 변압기", "problem": "돌입 전류 억제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218144095", "object": "수력 발전", "problem": "효율적인 재생 가능 에너지 원천으로서의 가능성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221107891", "object": "수력 발전소의 운영 효율성", "problem": "두 단계의 수력 발전 운영에서의 효용 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221063748", "object": "소규모 수력 발전 시설", "problem": "건설 비용 절감 및 유지 관리 편리성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293242633", "object": "과테말라의 에너지 정책", "problem": "정의의 결여로 인한 재생 가능 에너지 개발 실패", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220977831", "object": "콜롬비아의 에너지 믹스", "problem": "재생 가능 에너지 다각화 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293100414", "object": "댐 건설을 위한 적합한 부지", "problem": "적합한 댐 부지 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293107622", "object": "Marsyangdi 강 유역의 수자원 가용성", "problem": "기후 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220735636", "object": "콜롬비아 전력 시스템의 토지 사용", "problem": "전력 생산을 위한 대규모 재생 가능 프로젝트의 환경적 및 사회적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220792953", "object": "남부 필리핀 농촌 지역의 하이브리드 재생 가능 에너지 마이크로 그리드", "problem": "전력 공급 신뢰성 및 비용 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220688914", "object": "중국 전력 산업", "problem": "전통적인 화력 발전의 환경 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215348022", "object": "수자원 및 수력 발전 회사 성과", "problem": "국제 인적 자원 관리 관행의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221114237", "object": "중국의 전력 생산에서의 총 탄소 강도", "problem": "총 탄소 강도 변화의 원인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221043330", "object": "수력 에너지 수확을 위한 F-GO/PVDF 복합막", "problem": "TENG 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220680228", "object": "수력 발전 시스템의 물-에너지-생태계 연결 고리", "problem": "물 사용의 상충 관계 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221064470", "object": "크로스 플로우 수력 터빈", "problem": "터빈 효율 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220955189", "object": "Eurasian Economic Union의 수력 발전 용량", "problem": "미래 전력 소비 예측에 따른 수력 발전 용량 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220948508", "object": "중국의 전력 생성 시스템", "problem": "온실가스 배출량 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220994146", "object": "원격 지역의 전력 공급 관리 시스템", "problem": "전력 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220718502", "object": "수력 발전 터빈", "problem": "이상 상태 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220736113", "object": "계단식 수력 발전소의 최적 운영", "problem": "제한된 수자원 하에서 발전량 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226314345", "object": "수력 발전", "problem": "기후 변화가 수력 발전 출력에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220715218", "object": "수력 발전소의 안전 상태", "problem": "실시간 안전 모니터링 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220932091", "object": "전력 시스템의 주파수 안정성", "problem": "주파수 응답 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221032999", "object": "수력 발전 프로젝트", "problem": "프로젝트 투자 결정을 위한 기술 경제적 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220765770", "object": "대규모 수력 발전소의 전력 수요 예측", "problem": "전력 수요 예측의 불확실성 극복하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220859493", "object": "전력 부문", "problem": "전력 시스템의 지속 가능성과 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221064337", "object": "농업 부문의 에너지 생산", "problem": "에너지 생산의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393486196", "object": "전력 시스템 운영", "problem": "극한 기후 사건에 대한 민감도 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119240088", "object": "수력 발전소의 발전 용량", "problem": "생태 흐름 유지로 인한 발전 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221113974", "object": "서아프리카의 수력 발전", "problem": "기후 및 토지 이용 변화가 수력 발전에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398766763", "object": "하천 생태계", "problem": "하천 규제의 영향 평가 및 개선 방안 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214856876", "object": "수력 발전 시스템", "problem": "홍수 관리 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4282829356", "object": "수력 발전 시스템", "problem": "시뮬레이션의 계산 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214872621", "object": "메콩 유역의 수자원 관리", "problem": "효과적인 하위 지역 협력 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214877237", "object": "잠베지 강 유역의 수력 발전", "problem": "기후 변화에 따른 수력 발전 감소 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4281560276", "object": "소형 수력 발전소의 성능", "problem": "재생 가능 자원으로부터 더 많은 시설을 얻기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220790474", "object": "지속 가능한 발전 목표의 국내화", "problem": "지속 가능한 발전의 비용과 환경적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219329486", "object": "재생 가능 에너지 기술의 환경적 및 사회적 영향", "problem": "환경적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4280526526", "object": "네팔의 수력 발전 프로젝트", "problem": "프로젝트 금융 기준과 거버넌스 구조의 관계 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7132369753", "object": "부유식 태양광 발전 및 수력 발전 하이브리드 시스템", "problem": "성능 분석 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214750259", "object": "인도네시아의 재생 가능 에너지 비율", "problem": "재생 가능 에너지의 간헐성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214626301", "object": "루피지 분지의 물 자원", "problem": "물 보존의 비용과 잠재적 절약 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214739235", "object": "비스툴라 강의 에너지 잠재력", "problem": "지속 가능한 에너지 생산을 위한 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214764674", "object": "수력 발전 함수", "problem": "발전 스케줄링 문제에서 수력 발전 함수의 적절한 모델링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214816399", "object": "파키스탄의 에너지 지속 가능성", "problem": "최적의 물 사용 및 전기 에너지 생산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212832899", "object": "양쯔강의 온실가스 동역학", "problem": "댐 건설로 인한 온실가스 배출 증가 여부 판단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4288279637", "object": "Idaho Falls Power 배전망의 블랙 스타트 능력", "problem": "블랙 스타트 능력 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221133542", "object": "전력망", "problem": "전력 생산 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212958820", "object": "콩고 강 유역의 수자원 관리", "problem": "수자원 데이터의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212792350", "object": "통합 재생 가능 에너지 및 에너지 저장 시스템", "problem": "최적 수익 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213082756", "object": "소형 수력 발전 프로젝트", "problem": "전력 생산 비용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213368480", "object": "티베트 전력망의 저관성 전력 시스템", "problem": "전력 시스템의 균형 제어 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213349954", "object": "수력 발전 시스템", "problem": "고장 진단 및 전력 공급 중단 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225588024", "object": "풍력 에너지 산업", "problem": "야생 생물 보호를 위한 모니터링 및 최소화 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213193453", "object": "브라질의 수력 발전", "problem": "수리적 가뭄 패턴과 그 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212916891", "object": "나이지리아의 수력 발전 산업", "problem": "수력 발전 잠재력 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212876884", "object": "건강한 하천 생태계", "problem": "인간 활동의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213042459", "object": "저수지-펌프 스테이션 시스템", "problem": "수자원 공급과 전력 순수익 간의 균형 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213026869", "object": "에티오피아의 전력 시스템", "problem": "기후 변화가 전력 생산에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211247583", "object": "수력 발전기 건강 상태", "problem": "건강 상태 평가 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213045707", "object": "내수면 생태계", "problem": "인간 활동의 영향을 줄이기 위한 관리 전략 논의", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212961547", "object": "수력 발전소의 에너지 생산", "problem": "최적화 방법 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210967219", "object": "펌프 수력 에너지 저장소", "problem": "적합한 위치 식별 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312575058", "object": "스리랑카의 콘크리트 중력 댐", "problem": "지진 하중에 대한 댐의 구조적 거동 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211152585", "object": "하천 유량 예측", "problem": "단기 일일 유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211228495", "object": "소규모 분산형 재생 가능 에너지 생성 인프라", "problem": "전기 생산을 위한 마이크로 수력 발전 시스템 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211194148", "object": "풍력 발전소의 전력 생산 예측", "problem": "전력 생산 예측의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211038231", "object": "에너지 시스템", "problem": "기후 변화로 인한 HILP 사건에 대한 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210940695", "object": "Michell–Banki Turbine (MBT)", "problem": "최대 이론적 효율성 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210543769", "object": "불리한 지역 사회", "problem": "재생 가능 에너지 배치 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213070491", "object": "프란시스 터빈 기계 세트의 수명 평가", "problem": "기계 부품의 수명 평가를 위한 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210417277", "object": "두 개의 하천 지역 사회", "problem": "홍수 대응 및 에너지 요구 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210700246", "object": "오스트리아의 대형 하천 유역", "problem": "저수지의 홍수 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210522877", "object": "저수지 운영", "problem": "최적 솔루션 선택 범위 축소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212897924", "object": "연속 수력 발전소 그룹의 협력 운영", "problem": "물 소비율 과다 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213377682", "object": "북부 리파리안 지역의 식생", "problem": "인간의 압력이 식생 구성에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210451241", "object": "저수지의 홍수 제한 수위", "problem": "홍수 자원의 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393735770", "object": "메콩 유역의 수문학적 변화", "problem": "댐 재운영을 통한 수문학적 변화 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210305940", "object": "RCC 댐", "problem": "Class C 플라이 애쉬의 적용 가능성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210642136", "object": "옴블 다목적 수력 발전 시스템", "problem": "환경 보존을 위한 구조물 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210552940", "object": "Yeywa Hydropower Reservoir", "problem": "여름 전력 생산 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210539921", "object": "Bakhtiari 수력 발전 댐", "problem": "장기적인 수익성 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4207033013", "object": "Northeast Brazil의 수력 발전", "problem": "기후가 수력 발전에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221005929", "object": "수력 발전소의 에너지 생성", "problem": "더 잘 예측하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393545906", "object": "텍사스 전력 시스템의 겨울철 대비", "problem": "겨울철 대비 인센티브의 충분성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206936091", "object": "수력 에너지 저장 시스템의 운영 상태", "problem": "운영 상태 인식 및 진단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210707655", "object": "대규모 수력 발전 프로젝트", "problem": "민간 투자 유치의 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4212865015", "object": "전력 시스템의 성능", "problem": "전력 불균형 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206963357", "object": "볼리비아 전력 부문", "problem": "온실가스 배출량 감소를 위한 정책 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4207074704", "object": "스위스의 전력 수입에서의 온실가스 배출", "problem": "정확한 온실가스 함량을 고려하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206910778", "object": "스리랑카의 풍력 에너지 생산", "problem": "일일 풍력 에너지 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4207025183", "object": "아제르바이잔의 재생 가능 에너지 자원", "problem": "재생 가능 에너지 투자 용량 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4207084150", "object": "수자원", "problem": "도시화의 재앙적 영향 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205563210", "object": "빙하와 얼음 덮개", "problem": "기후 변화에 대한 빙하 질량 균형의 비선형 민감도 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206466386", "object": "온타리오의 북미 어류 군집", "problem": "수조 내 수력 발전 시설과의 상호작용 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205105295", "object": "암석 질량 구조 정보", "problem": "정확하게 추출하고 설명하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205704910", "object": "서부 조지아의 수력 자원", "problem": "전력 수요와 공급의 불균형 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206018973", "object": "에티오피아의 전력 생산을 위한 재생 가능 에너지 공급 옵션", "problem": "최적의 재생 가능 에너지 믹스 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206515655", "object": "히말라야 지역의 눈과 빙하 자원", "problem": "기후 변화에 따른 흐름 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205941268", "object": "수력 발전소 운영", "problem": "유입 유량 불확실성을 고려한 최적 운영 방안 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206360441", "object": "네팔의 수력 발전 거래", "problem": "내부 개발 장벽 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205331081", "object": "소규모 중력 소용돌이 수력 발전 시스템", "problem": "최적의 터빈 블레이드 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205841776", "object": "미래 전력 시스템의 에너지 저장", "problem": "재생 가능 에너지의 변동성과 간헐성을 완화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205289699", "object": "재생 가능 에너지 시스템", "problem": "전력망 효율성 및 신뢰성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W3156221138", "object": "말레이시아의 재생 가능 에너지 시스템", "problem": "전력 생산 능력 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226455563", "object": "수력 발전의 그리드 통합", "problem": "그리드 계획 및 운영 모델링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205119371", "object": "전력 시스템의 안정성", "problem": "주파수 유지 보조 서비스 제공의 부적합성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226288277", "object": "수력 발전 프로젝트", "problem": "복잡한 규제를 탐색하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205515772", "object": "기존 수력 인프라에서의 수력 발전", "problem": "기술적 격차 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205324960", "object": "수력 발전 프로젝트", "problem": "댐 변형 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216910803", "object": "우간다의 수력 발전소", "problem": "PPP 모델의 위험 탐색 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206706486", "object": "소형 수력 발전 시스템", "problem": "전압 및 주파수 제어 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205482692", "object": "Memve’ele 수력 발전 저수지", "problem": "전력 생산 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205830934", "object": "나일 강 유역", "problem": "국경을 초월한 협력 기회 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205781458", "object": "베트남의 민간 원자력 에너지 개발", "problem": "윤리적 및 위험 문제를 조사하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226313659", "object": "고립 전력 시스템의 주파수 품질", "problem": "주파수 편차 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4289537838", "object": "에너지 저장 시스템", "problem": "재생 가능 에너지의 공급과 수요 불균형 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285269836", "object": "이집트 전력 시스템", "problem": "전력 시스템 주파수 안정성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4327924011", "object": "Karnafuli Basin의 물 자원", "problem": "물 자원의 효율적 배분 및 경제적 수익 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220771679", "object": "브라질의 전력 생성", "problem": "전염병 동안 전력 생성 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4286355516", "object": "수력 발전 유닛", "problem": "로터 건강 지표 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4289656389", "object": "수직 샤프트", "problem": "결함 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4289913086", "object": "중국의 수력 발전 가격 옵션", "problem": "전력 공급 부족 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312972825", "object": "우크라이나의 소수력 발전", "problem": "소수력 발전소 배치의 재정적 및 비경제적 장벽", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285133338", "object": "전력 시스템의 디지털 전환", "problem": "전력 시스템의 효율성 향상 및 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285119797", "object": "수력 발전", "problem": "수력 발전의 경제성과 장단점 탐구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226488732", "object": "전력 생성 포트폴리오", "problem": "탄소세 불확실성에 따른 대체 전략 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285290110", "object": "Lake Victoria의 수위 및 수자원 관리", "problem": "기후 극단 사건으로 인한 위험 평가 및 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293195487", "object": "발전소의 안전 운영 조건", "problem": "안전 운영 위험 분석 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226228426", "object": "말라위 블란타이어시의 태양광 에너지 기술 사용", "problem": "태양광 에너지 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225846775", "object": "하류 강의 어류 번식 조건", "problem": "하류 수조의 수리 조건 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285154358", "object": "다목적 저수지 시스템", "problem": "홍수 피해 감소 및 수력 발전 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206416434", "object": "파이프 내 구형 수력 터빈", "problem": "수력 에너지 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285268157", "object": "Koshibu Dam의 퇴적물 유입", "problem": "퇴적물 유입을 효과적으로 줄이는 방법 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285119397", "object": "나이지리아의 수력 발전 프로젝트", "problem": "수력 발전 생산성 향상 및 수자원 수요 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285258788", "object": "수력 발전 프로젝트", "problem": "기후 변화에 대한 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
