@@ -1237,3 +1237,34 @@
 {"id": "W4293063642", "object": "하천 용존 산소", "problem": "하천 용존 산소 농도 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4393534760", "object": "수문 예측을 위한 데이터 세트", "problem": "통합된 벤치마크 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7116062871", "object": "수문학적 시스템", "problem": "정확한 수문학적 시뮬레이션 제공 및 이해 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224494399", "object": "빙하의 하부 환경", "problem": "빙하의 미끄러짐 속도 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224084359", "object": "해양 생태계의 부영양화 위험", "problem": "수질 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223488115", "object": "Stordalen Mire의 토지 피복", "problem": "온실가스 동역학 이해를 위한 정확한 토지 피복 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203899984", "object": "생태계 이질성", "problem": "관측 네트워크의 대표성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172277167", "object": "Tangsige Marsh Wetland", "problem": "수자원 및 수문학적 요인 진단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223919463", "object": "전통 생태 수자원 관리", "problem": "현대 환경 데이터와의 통합 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167737253", "object": "중앙아시아의 발크하쉬 호수", "problem": "물 균형 동태 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220268626", "object": "환경 지속 가능성", "problem": "다양한 생태계에서 온실가스 플럭스 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204841715", "object": "지구과학에서 인공지능 연구", "problem": "연구 격차 및 협력 동향 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166512504", "object": "중국 최대의 계절성 범람원인 포양호의 식물 광합성 활동", "problem": "수생 식물의 광합성 반응 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213490424", "object": "보고타의 기후 변화에 따른 재해", "problem": "기후 변화에 따른 재해에 대한 회복력 강화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7164313356", "object": "AI 기반 수문 예측의 신뢰성", "problem": "운영 예측 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171506055", "object": "홍수 관리", "problem": "기후 변화에 따른 수문학적 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171560621", "object": "홍수 관리", "problem": "기후 변화에 따른 수문학적 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171563431", "object": "홍수", "problem": "홍수 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215132560", "object": "광시 카르스트 지역의 무기 탄소 싱크", "problem": "카르스트 무기 탄소 싱크의 지역적 규모와 제어 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161988222", "object": "지하수 수준", "problem": "지하수 수준 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160445500", "object": "수 surface water hydrology", "problem": "수문 모델링 및 분석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7199617160", "object": "핀란드 담수의 수질", "problem": "담수의 갈색화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160324277", "object": "산사태 및 공학 지구과학", "problem": "산사태 탐지 및 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172525806", "object": "광산 영향을 받은 농업용 토지", "problem": "오염 위험을 평가하고 농업 생산 잠재력을 과소 평가하는 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160040059", "object": "물 자원 관리", "problem": "물 자원의 효율적 사용 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169699707", "object": "말레이시아 셀랑고르의 강 유역", "problem": "홍수 예측을 위한 강우 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128302285", "object": "Tinggimoncong 지역의 토사재해 취약성", "problem": "신뢰할 수 있는 취약성 평가 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126017928", "object": "산사태 경고 시스템", "problem": "태풍에 적응한 위험 경고 시스템 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125832764", "object": "수문학 및 수리학에서의 데이터 기반 모델링", "problem": "인공 신경망의 한계 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7152989321", "object": "광업에서의 지리정보시스템(GIS)", "problem": "GIS의 응용 및 도전 과제 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131376832", "object": "토양 염분", "problem": "정확한 염분 지도 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131403257", "object": "토양 염분", "problem": "염분 모니터링 및 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204152534", "object": "강우 유발 집단 산사태", "problem": "정확한 위험 식별 및 예방", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219633201", "object": "산악 환경에서의 눈의 바람에 의한 재분포", "problem": "눈의 재분포 모델링", "relevant": true, "model": "gpt-4o-mini"}
