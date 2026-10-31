@@ -72,7 +72,7 @@ class Budget(Exception):
 
 class OA:
     def __init__(self, budget: int):
-        self.left, self.used, self.errors = budget, 0, []
+        self.left, self.used, self.errors, self.last_429 = budget, 0, [], None
 
     def _get(self, path: str, params: dict, search: bool):
         if search:
@@ -92,8 +92,13 @@ class OA:
                     raise RuntimeError(clean(e)) from None
                 time.sleep(3 * (i + 1))
                 continue
-            if r.status_code == 429:
-                raise Budget()                     # 하루 사용량 끝 — 다음 실행에 이어서
+            if r.status_code == 429:                # 하루 사용량 끝 — 다음 실행에 이어서 (잠깐 막힌 것이면 한 번 기다림)
+                wait = r.headers.get("Retry-After", "")
+                if i == 0 and wait.isdigit() and int(wait) <= 90:
+                    time.sleep(int(wait) + 1)
+                    continue
+                self.last_429 = clean(r.text)[:160]
+                raise Budget()
             if r.status_code >= 500:
                 time.sleep(3 * (i + 1))
                 continue
@@ -186,6 +191,8 @@ def main():
                 time.sleep(0.12)
     except Budget:
         print(f"⏸ 사용량 한도 — 검색 {oa.used}회 쓰고 멈춤, 다음 실행이 이어서 함")
+        if oa.last_429:                                               # 429 = OpenAlex 하루 한도 (무키는 IP 공용이라 시작부터 막히기도 함)
+            oa.errors.append(f"OpenAlex 429 (검색 {oa.used}회 뒤){'' if KEY else ' · 무키 공용 한도 — secrets.OPENALEX_API_KEY 필요'}: {oa.last_429}")
     except Exception as e:
         oa.errors.append(clean(e))
         print("⚠️", clean(e))
@@ -232,7 +239,7 @@ def main():
 
     ag = load(AGENT, {"agent": "tech_map", "events": []})
     done = len(units) * (len(STAGES) - 1 + len(years))
-    ag.update(agent="tech_map", state="error" if oa.errors and not oa.used else ("run" if pend else "idle"), last_run=now,
+    ag.update(agent="tech_map", state="error" if oa.errors and not oa.used else ("standby" if pend else "idle"), last_run=now,
               next_run="6시간마다 (GitHub Actions)" + ("" if KEY else " · API 키 없음 — 한 번에 25회씩"),
               summary=f"기술 지도 논문 축 — 세부 기술 {len(units)}개 · {Y0}~{y1} · 진행 {max(0, done - pend)}/{done} · 저널 {len(jr['journals'])}곳",
               counts={"세부 기술": len(units), "남은 조회": pend, "저널 지표": len(jr["journals"]), "이번 검색": oa.used},
