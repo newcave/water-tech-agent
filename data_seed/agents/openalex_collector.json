@@ -1,19 +1,15 @@
 {
  "agent": "openalex_collector",
  "state": "idle",
- "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 412건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 0개 저널 코퍼스 0건",
+ "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 412건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 12개 저널 코퍼스 117,231건",
  "counts": {
   "K-water 논문(실측)": 412,
-  "관련논문(최근1년)": 16385,
-  "12개 저널 코퍼스": 0
+  "관련논문(최근1년)": 17065,
+  "12개 저널 코퍼스": 117231
  },
- "last_run": 1793425796,
+ "last_run": 1793450348,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1792928244,
-   "msg": "☁️ 정기 실측 — K-water 412건 · 관련(최근1년) 17,023건 · 저널 코퍼스 103,829건(12개)"
-  },
   {
    "ts": 1792945644,
    "msg": "☁️ 정기 실측 — K-water 412건 · 관련(최근1년) 17,023건 · 저널 코퍼스 103,829건(12개)"
@@ -89,22 +85,11 @@
   {
    "ts": 1793425796,
    "msg": "☁️ 정기 실측 — K-water 412건 · 관련(최근1년) 16,385건 · 저널 코퍼스 0건(0개) · 일부 오류 14"
+  },
+  {
+   "ts": 1793450348,
+   "msg": "☁️ 정기 실측 — K-water 412건 · 관련(최근1년) 17,065건 · 저널 코퍼스 117,231건(12개)"
   }
  ],
- "last_errors": [
-  "INST-07: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Amachine+learning+hydrology%2Cfrom_publication_date%3A2025-07-01&per-page=1&mailt",
-  "K-water 피인용: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=authorships.institutions.lineage%3AI4405260881%2Cfrom_publication_date%3A2022-01-01%2Cto_publication_dat",
-  "J01: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0043-1397%7C1944-7973&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J02: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0022-1694&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J03: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0309-1708%7C1872-9657&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J04: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0920-4741%7C1573-1650&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J05: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0733-9496%7C1943-5452&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J06: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A1027-5606%7C1607-7938&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J07: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0885-6087%7C1099-1085&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J08: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A1084-0699%7C1943-5584&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J09: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0043-1354%7C1879-2448&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J10: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A0169-7722%7C1873-6009&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J11: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A1226-6280%7C2287-6138&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com",
-  "J12: 429 Client Error: Too Many Requests for url: https://api.openalex.org/sources?filter=issn%3A1015-6348%7C2799-9629&select=id%2Cdisplay_name%2Cissn_l&mailto=newcave.kwater%40gmail.com"
- ]
+ "last_errors": []
 }
