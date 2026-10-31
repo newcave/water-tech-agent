@@ -1,0 +1,86 @@
+name: tech-map
+
+# 🗺️ 논문 × 특허 기술 지도 (v3.18) — 세부 기술 41개의 연도별 논문 점수(X)·실용화 점수(Y)
+#  ① agents/tech_map.py        OpenAlex 연도별 건수·피인용 상위10%·기업 공저·K-water·주제·게재 저널 (건수만, 이어 받기)
+#  ② agents/tech_map_patents.py WCS 특허 CSV(비공개 저장소 wcs/patents.csv)가 있으면 세부 기술별 출원·등록·기업 비율 집계
+#  ③ agents/tech_map_score.py   해마다 41개 사이 백분위로 X·Y 점수 → data_seed/tech_map/scores.json
+# 준비(선택): secrets.OPENALEX_API_KEY — 무료 키(하루 $1)면 한 번에 끝남. 없으면 실행마다 검색 25회씩(하루 약 100회 = 무료 한도) 이어서.
+#             secrets.KCI_PRIVATE_TOKEN — 비공개 저장소 읽기 (특허 CSV). 없으면 특허 단계 건너뜀.
+on:
+  schedule:
+    - cron: "41 1,7,13,19 * * *"   # 6시간마다 (heartbeat :17과 겹치지 않게)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data_seed/tech_map/units.json"
+      - "agents/tech_map.py"
+      - "agents/tech_map_patents.py"
+      - "agents/tech_map_score.py"
+      - ".github/workflows/tech-map.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tech-map
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet requests
+
+      - name: ① 논문 축 — OpenAlex 건수 (이어 받기)
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        run: python agents/tech_map.py
+
+      - name: 특허 CSV 확인 (비공개 저장소)
+        id: tok
+        env:
+          T: ${{ secrets.KCI_PRIVATE_TOKEN }}
+        run: if [ -n "$T" ]; then echo "ok=1" >> "$GITHUB_OUTPUT"; else echo "ok=0" >> "$GITHUB_OUTPUT"; fi
+
+      - name: 비공개 저장소의 wcs/ 폴더만 받기 (읽기)
+        if: steps.tok.outputs.ok == '1'
+        continue-on-error: true
+        uses: actions/checkout@v7
+        with:
+          repository: newcave/water-tech-kci-private
+          token: ${{ secrets.KCI_PRIVATE_TOKEN }}
+          path: private
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /wcs/
+
+      - name: ② 특허 축 — WCS 특허 집계 (CSV가 있을 때만)
+        env:
+          PATENTS_CSV: private/wcs/patents.csv
+        run: python agents/tech_map_patents.py
+
+      - name: ③ 점수 — 연도별 X·Y
+        run: python agents/tech_map_score.py
+
+      - name: 집계 커밋 (main만 · 원천 없음)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          rm -rf private                                    # 원천은 절대 커밋하지 않음 (.gitignore에도 있음)
+          git config user.name "co-scientist-bot"
+          git config user.email "co-scientist-bot@users.noreply.github.com"
+          git add data_seed/tech_map data_seed/agents/tech_map.json
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "🤖 tech_map: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "push 실패 ($i/3) — 15초 후 재시도"; sleep 15
+          done
+          echo "push 3회 실패"; exit 1

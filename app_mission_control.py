@@ -128,6 +128,7 @@ AGENT_META = {
     "alio_parser":        dict(icon="🧠", ko="파싱·추출",   role="데이터소스 추출 (4단계)",  grp="처리"),
     "normalizer":         dict(icon="🧩", ko="정규화",      role="레지스트리·인벤토리 (5단계)", grp="처리"),
     "oa_rising":          dict(icon="🔭", ko="상승 주제 연동", role="openalex 분석 결과 연동 (MK+FDR·Louvain)", grp="분석"),
+    "tech_map":           dict(icon="🗺️", ko="기술 지도", role="논문×특허 세부 기술 연도별 점수", grp="분석"),
     "ft_trainer":         dict(icon="🔥", ko="FT 학습",     role="QLoRA 파인튜닝 (코랩)",   grp="학습"),
 }
 STATE_LABEL = {"run": ("가동 중", GREEN), "idle": ("정상 대기", BLUE),
