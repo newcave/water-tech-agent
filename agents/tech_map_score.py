@@ -6,6 +6,7 @@ tech_map_score — 세부 기술마다 해마다 '논문 점수(X)'와 '실용�
 재료: tech_map/units.json · papers.json(OpenAlex 2016~, tech_map.py) · journals.json(저널 2년 평균 피인용)
       · patents.json(WCS 특허 집계, tech_map_patents.py) · openalex_trends.json(papers.json이 아직 비어 있을 때 2022~ 임시)
 점수는 모두 '그해 41개 세부 기술 사이의 백분위'(0~100, 50 = 가운데) — 서로 다른 단위를 같은 눈금에 올리려고.
+  구성 지표 백분위를 가중 평균한 뒤 그 평균을 다시 41개 사이 백분위로 편다 (평균은 가운데로 몰리므로).
   X 논문 = 규모 V(최근 3년 논문 수) · 성장 G(최근 5년 기울기) · 질 Q(피인용 상위 10% 비율, 3년) · 저널 J(게재 저널 2년 평균 피인용, 2년)
   Y 실용화 = 특허 규모 PV · 특허 성장 PG · 등록률 PR(2~4년 전 출원) · 기업 출원 비율 PC · 산업계 공저 비율 I(논문, 3년)
             특허 자료가 없으면 I만으로 임시 Y (화면에 '임시' 표시)
@@ -165,9 +166,12 @@ def main():
             return round(sum(v * wt for v, wt in got) / sum(wt for _, wt in got), 1) if got else None
 
         wy = WY if patents else {"I": 1.0}
+        # 가중 평균은 가운데로 몰리므로 그해 41개 사이 백분위로 다시 편다 (50선 = 중앙값)
+        xr = pct_rank({uid: wmean(uid, WX) for uid in ids})
+        yr_ = pct_rank({uid: wmean(uid, wy) for uid in ids})
         for uid in ids:
             o = out_units[uid]
-            x, y = wmean(uid, WX), wmean(uid, wy)
+            x, y = xr.get(uid), yr_.get(uid)
             o["x"][ty], o["y"][ty] = x, y
             o["c"][ty] = {k: pr[k].get(uid) for k in pr if pr[k]}
             o["r"][ty] = {"n3": n3[uid], "g": None if comp["G"][uid] is None else round((math.exp(comp["G"][uid]) - 1) * 100, 1),
