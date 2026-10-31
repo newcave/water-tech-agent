@@ -1,0 +1,1 @@
+{"journals":{},"_doc":"저널 지표 보관 — OpenAlex /sources (CC0). if2 = 최근 2년 논문당 평균 피인용(summary_stats.2yr_mean_citedness — JIF와 같은 꼴의 공개 지표, 받은 날의 현재 값), h = h-index, by_year = 연도별 [논문 수, 그해 받은 피인용]. 연도별 SJR(Cites/Doc 2년)이 들어오면 그 해 값으로 바꿔 씀","updated":1793483323}
