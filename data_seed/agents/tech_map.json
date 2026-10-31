@@ -1,0 +1,1 @@
+{"agent":"tech_map","state":"standby","summary":"논문 × 특허 기술 지도 — 세부 기술 41개 · 2016~2025 연도별 점수 (첫 실행 대기)","counts":{"세부 기술":41},"last_run":null,"next_run":"6시간마다 (GitHub Actions)","events":[],"_doc":"tech_map 에이전트 상태 — tech-map 워크플로가 실행마다 갱신"}

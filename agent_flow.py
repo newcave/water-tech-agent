@@ -17,7 +17,7 @@ import time
 
 REPO = "newcave/water-tech-agent"
 POLL_AGENTS = ["openalex_collector", "alio_crawler", "kipris_collector", "article_collector",
-               "alio_parser", "normalizer", "ft_trainer", "oa_rising"]
+               "alio_parser", "normalizer", "ft_trainer", "oa_rising", "tech_map"]
 
 
 def _iso_ts(s):
@@ -154,6 +154,7 @@ const N = [
  {id:"alio_parser", col:2, row:2.9, g:"pro", icon:"🧠", label:"파싱·추출", agent:"alio_parser"},
  {id:"normalizer", col:2, row:4.0, g:"pro", icon:"🧩", label:"정규화", agent:"normalizer"},
  {id:"oa_rising", col:2, row:6.2, g:"pro", icon:"🔭", label:"상승 주제 연동", agent:"oa_rising"},
+ {id:"tech_map", col:2, row:5.1, g:"pro", icon:"🗺️", label:"기술 지도 점수", agent:"tech_map"},
  {id:"kn", col:3, row:1.25, g:"kno", icon:"📒", label:"연구소 지식노트"},
  {id:"kci_trend", col:3, row:2.5, g:"kno", icon:"📈", label:"KCI 트렌드"},
  {id:"oa_trend", col:3, row:5.0, g:"kno", icon:"🔭", label:"상승 연구주제"},
@@ -171,6 +172,7 @@ const E = [
  ["kn","dash"],["kci_trend","dash"],["achieve","dash"],["hitl_label","dash"],
  ["kipris_collector","labels",1],["article_collector","kn",1],
  ["src_oa_ext","oa_rising"],["oa_rising","oa_trend"],["oa_trend","dash",0,0,200],
+ ["src_openalex","tech_map"],["src_kipris","tech_map",1],["tech_map","oa_trend"],
 ];
 const byId = Object.fromEntries(N.map(n => [n.id, n]));
 N.forEach(n => { n.x = COLS[n.col][1]; n.y = 110 + n.row * 124; n.r = n.g === "src" ? 34 : 44; n.flash = 0; });
