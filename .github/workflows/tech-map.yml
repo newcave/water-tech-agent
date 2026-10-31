@@ -4,7 +4,7 @@ name: tech-map
 #  ① agents/tech_map.py        OpenAlex 연도별 건수·피인용 상위10%·기업 공저·K-water·주제·게재 저널 (건수만, 이어 받기)
 #  ② agents/tech_map_patents.py WCS 특허 CSV(비공개 저장소 wcs/patents.csv)가 있으면 세부 기술별 출원·등록·기업 비율 집계
 #  ③ agents/tech_map_score.py   해마다 41개 사이 백분위로 X·Y 점수 → data_seed/tech_map/scores.json
-# 준비(선택): secrets.OPENALEX_API_KEY — 무료 키(하루 $1)면 한 번에 끝남. 없으면 실행마다 검색 90회씩 이어서.
+# 준비(선택): secrets.OPENALEX_API_KEY — 무료 키(하루 $1)면 한 번에 끝남. 없으면 실행마다 검색 25회씩(하루 약 100회 = 무료 한도) 이어서.
 #             secrets.KCI_PRIVATE_TOKEN — 비공개 저장소 읽기 (특허 CSV). 없으면 특허 단계 건너뜀.
 on:
   schedule:

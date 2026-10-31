@@ -85,15 +85,15 @@ def main():
     src_used = set()
     for u in units:
         e = (pap.get("units") or {}).get(u["id"]) or {}
-        by, t10 = e.get("by_year"), e.get("top10")
+        ent = (tr.get("institutes") or {}).get(u["inst"]) or {}
+        by, t10 = e.get("by_year"), e.get("top10")              # 항목마다 papers.json 우선, 아직 없으면 openalex_trends(2022~, 같은 검색식)
         if by:
             src_used.add("papers")
         else:
-            ent = (tr.get("institutes") or {}).get(u["inst"]) or {}
             by = (ent.get("by_kw") or {}).get(u["en"])
+            src_used.add("trends") if by else None
+        if not t10:
             t10 = (ent.get("by_kw_top10") or {}).get(u["en"])
-            if by:
-                src_used.add("trends")
         by = {y: v for y, v in (by or {}).items() if int(y) < this_year}
         raw[u["id"]] = {"n": by, "top10": {y: v for y, v in (t10 or {}).items() if y in by},
                         "ind": e.get("industry") or {}, "kw": e.get("kwater") or {}, "venue": e.get("venue") or {},

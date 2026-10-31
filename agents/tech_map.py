@@ -16,7 +16,7 @@ tech_map — 논문 × 특허 기술 지도의 '논문 축' 재료를 OpenAlex�
 저널 지표: venue에 나온 저널마다 /sources/{id} (단건 조회 — 무료) → 2년 평균 피인용(summary_stats.2yr_mean_citedness = JIF와 같은 꼴,
   현재 값), h-index, 연도별 [논문 수, 받은 피인용] → data_seed/tech_map/journals.json  (JCR은 유료 라이선스라 쓰지 않음)
 
-사용량: 검색 1건 ≈ $0.001. 키가 없으면 하루 $0.10(같은 IP 공유)이라 실행마다 90회까지, OPENALEX_API_KEY(Secrets)가 있으면
+사용량: 검색 1건 ≈ $0.001. 키가 없으면 하루 $0.10(검색 약 100회)이라 6시간마다 25회씩(하루 약 100회), OPENALEX_API_KEY(Secrets)가 있으면
   하루 $1이라 한 번에 다 모은다(700회). 429(한도)를 만나면 멈추고 다음 실행이 이어서 한다. 받은 값은 30일(최근 2년)·90일 뒤 다시 셈.
 """
 import json
@@ -36,7 +36,7 @@ AGENT = ROOT / "data_seed" / "agents" / "tech_map.json"
 API = "https://api.openalex.org"
 MAILTO = "newcave.kwater@gmail.com"
 KEY = os.environ.get("OPENALEX_API_KEY", "").strip()
-BUDGET = int(os.environ.get("TECHMAP_MAX_CALLS") or (700 if KEY else 90))
+BUDGET = int(os.environ.get("TECHMAP_MAX_CALLS") or (700 if KEY else 25))      # 무키: 6시간 4회 × 25 = 하루 약 100회(무료 한도)
 SRC_BUDGET = int(os.environ.get("TECHMAP_MAX_SOURCES") or 1500)
 KWATER_ROR = "04dtgat87"
 Y0 = 2016
@@ -233,7 +233,7 @@ def main():
     ag = load(AGENT, {"agent": "tech_map", "events": []})
     done = len(units) * (len(STAGES) - 1 + len(years))
     ag.update(agent="tech_map", state="error" if oa.errors and not oa.used else ("run" if pend else "idle"), last_run=now,
-              next_run="6시간마다 (GitHub Actions)" + ("" if KEY else " · API 키 없음 — 한 번에 90회씩"),
+              next_run="6시간마다 (GitHub Actions)" + ("" if KEY else " · API 키 없음 — 한 번에 25회씩"),
               summary=f"기술 지도 논문 축 — 세부 기술 {len(units)}개 · {Y0}~{y1} · 진행 {max(0, done - pend)}/{done} · 저널 {len(jr['journals'])}곳",
               counts={"세부 기술": len(units), "남은 조회": pend, "저널 지표": len(jr["journals"]), "이번 검색": oa.used},
               last_errors=oa.errors[:10])
