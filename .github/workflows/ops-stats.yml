@@ -1,0 +1,63 @@
+name: ops-stats
+
+# 🛰️ 에이전트 수집 현황판 재료 — 매시 git 기록·Actions 실행 기록·파이프라인 로그·공개 집계를 건수로 모아
+#    data 브랜치 live/ops/ops.json에 씀 (main 무커밋 → 앱 재배포 없음). 화면: water-tech-agent2 '수집 현황'
+on:
+  schedule:
+    - cron: "53 * * * *"           # 매시 53분 (UTC)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "agents/ops_stats.py"
+      - ".github/workflows/ops-stats.yml"
+
+permissions:
+  contents: write                  # data 브랜치 live/ops/ops.json 쓰기
+  actions: read                    # 실행 기록 읽기
+
+concurrency:
+  group: ops-stats
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0             # 모든 브랜치의 커밋 기록 (파일 내용은 필요한 것만 그때 받음)
+          filter: blob:none
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet requests
+
+      - name: 현황 집계
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OPS_OUT: /tmp/ops.json
+        run: python agents/ops_stats.py
+
+      - name: data 브랜치 live/ops/ops.json 쓰기
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          API="repos/$GITHUB_REPOSITORY/contents/live/ops/ops.json"
+          for i in 1 2 3; do
+            SHA=$(gh api "$API?ref=data" --jq .sha 2>/dev/null || true)
+            python3 - "$SHA" > /tmp/body.json <<'PY'
+          import base64, json, sys, time
+          body = {"message": "🛰️ ops 현황판 " + time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), "branch": "data",
+                  "content": base64.b64encode(open("/tmp/ops.json", "rb").read()).decode()}
+          if sys.argv[1]:
+              body["sha"] = sys.argv[1]
+          print(json.dumps(body))
+          PY
+            gh api -X PUT "$API" --input /tmp/body.json > /dev/null && { echo "기록 완료"; exit 0; }
+            sleep 5
+          done
+          echo "::warning::ops.json 기록 실패"; exit 0
