@@ -35,7 +35,19 @@ JOURNALS = DIR / "journals.json"
 AGENT = ROOT / "data_seed" / "agents" / "tech_map.json"
 API = "https://api.openalex.org"
 MAILTO = "newcave.kwater@gmail.com"
-KEY = os.environ.get("OPENALEX_API_KEY", "").strip()
+def _keys() -> list:
+    """OpenAlex 키 목록 — newcave/openalex와 같은 규칙: OPENALEX_API_KEY(콤마로 여러 개 가능) 다음 _2, _3 … 순서.
+    앞 키의 하루 한도가 차면(429) 다음 키로 바꿔 받던 요청부터 이어 간다."""
+    ks = []
+    for name in ["OPENALEX_API_KEY"] + [f"OPENALEX_API_KEY_{i}" for i in range(2, 6)]:
+        for k in os.environ.get(name, "").split(","):
+            if k.strip() and k.strip() not in ks:
+                ks.append(k.strip())
+    return ks
+
+
+KEYS = _keys()
+KEY = KEYS[0] if KEYS else ""
 BUDGET = int(os.environ.get("TECHMAP_MAX_CALLS") or (700 if KEY else 25))      # 무키: 6시간 4회 × 25 = 하루 약 100회(무료 한도)
 SRC_BUDGET = int(os.environ.get("TECHMAP_MAX_SOURCES") or 1500)
 KWATER_ROR = "04dtgat87"
@@ -63,8 +75,8 @@ def save(p: Path, obj):
 def clean(msg) -> str:
     """오류 문장에 붙는 요청 주소에서 키를 지운다 (papers.json은 공개 저장소에 커밋됨)."""
     s = str(msg)
-    if KEY:
-        s = s.replace(KEY, "***")
+    for k in KEYS:
+        s = s.replace(k, "***")
     return s[:200]
 
 
@@ -74,7 +86,7 @@ class Budget(Exception):
 
 class OA:
     def __init__(self, budget: int):
-        self.left, self.used, self.errors, self.last_429 = budget, 0, [], None
+        self.left, self.used, self.errors, self.last_429, self.ki = budget, 0, [], None, 0
 
     def _get(self, path: str, params: dict, search: bool):
         if search:
@@ -83,10 +95,10 @@ class OA:
             self.left -= 1
             self.used += 1
         p = {"mailto": MAILTO, **params}
-        if KEY:
-            p["api_key"] = KEY
+        if KEYS:
+            p["api_key"] = KEYS[self.ki]
         r = None
-        for i in range(3):
+        for i in range(3 + len(KEYS)):
             try:
                 r = requests.get(f"{API}{path}", params=p, timeout=45)
             except requests.RequestException as e:
@@ -98,6 +110,11 @@ class OA:
                 wait = r.headers.get("Retry-After", "")
                 if i == 0 and wait.isdigit() and int(wait) <= 90:
                     time.sleep(int(wait) + 1)
+                    continue
+                if self.ki + 1 < len(KEYS):             # 다음 키로 바꿔 같은 요청부터
+                    self.ki += 1
+                    p["api_key"] = KEYS[self.ki]
+                    print(f"🔑 키 {self.ki}번 한도 → {self.ki + 1}번 키로")
                     continue
                 self.last_429 = clean(r.text)[:160]
                 raise Budget()
@@ -235,7 +252,7 @@ def main():
     st.update({"_doc": "논문 × 특허 기술 지도 — 논문 축 재료 (OpenAlex 건수 집계만, 논문 목록 없음, 학술 논문 type:article|review만). units.<id>: by_year·top10·industry·kwater "
                        "(연도별 수: 전체·피인용 상위10%·기업 저자 참여·K-water 소속), topics(10년 합산 주제 상위 [id, 이름, 편수]), "
                        "venue(연도별 게재 저널 상위 [저널 id, 편수]). 저널 지표는 journals.json",
-               "updated": now, "years": years, "api_key": bool(KEY), "calls_last_run": oa.used, "pending_tasks": pend,
+               "updated": now, "years": years, "api_key": len(KEYS), "calls_last_run": oa.used, "pending_tasks": pend,
                "errors": oa.errors[:10]})
     save(OUT, st)
 
@@ -249,7 +266,7 @@ def main():
     ag["events"] = (ag.get("events") or [])[-19:] + [{"ts": now, "msg": f"🗺️ 검색 {oa.used}회 · 새 저널 {got}곳 · 남은 조회 {pend}건"}]
     ag["_doc"] = "tech_map 에이전트 상태 — tech-map 워크플로가 실행마다 갱신"
     save(AGENT, ag)
-    print(f"✅ 검색 {oa.used}회 · 저널 {len(jr['journals'])}곳(+{got}) · 남은 조회 {pend}건 · 키 {'있음' if KEY else '없음'}")
+    print(f"✅ 검색 {oa.used}회 · 저널 {len(jr['journals'])}곳(+{got}) · 남은 조회 {pend}건 · 키 {len(KEYS)}개 (마지막 {oa.ki + 1 if KEYS else 0}번)")
     for m in oa.errors[:10]:
         print("  ·", m)
     return 0

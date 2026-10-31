@@ -40,7 +40,9 @@ jobs:
 
       - name: ① 논문 축 — OpenAlex 건수 (이어 받기)
         env:
-          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}       # newcave/openalex의 .env와 같은 키를 넣으면 됨 (콤마로 여러 개 가능)
+          OPENALEX_API_KEY_2: ${{ secrets.OPENALEX_API_KEY_2 }}
+          OPENALEX_API_KEY_3: ${{ secrets.OPENALEX_API_KEY_3 }}
         run: python agents/tech_map.py
 
       - name: 특허 CSV 확인 (비공개 저장소)
