@@ -23,6 +23,7 @@ import json
 import os
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 
 import requests
@@ -51,6 +52,9 @@ KEY = KEYS[0] if KEYS else ""
 BUDGET = int(os.environ.get("TECHMAP_MAX_CALLS") or (700 if KEY else 25))      # 무키: 6시간 4회 × 25 = 하루 약 100회(무료 한도)
 SRC_BUDGET = int(os.environ.get("TECHMAP_MAX_SOURCES") or 1500)
 KWATER_ROR = "04dtgat87"
+T0 = time.time()
+SEARCH_MIN = float(os.environ.get("TECHMAP_SEARCH_MIN") or 22)   # 검색은 22분까지, 저널 조회는 32분까지 — 작업 제한(40분) 안에 꼭 저장하고 끝나게
+SOURCE_MIN = float(os.environ.get("TECHMAP_SOURCE_MIN") or 32)
 Y0 = 2016
 TOP10 = "citation_normalized_percentile.is_in_top_10_percent:true"
 COMPANY = "authorships.institutions.type:company"
@@ -90,7 +94,7 @@ class OA:
 
     def _get(self, path: str, params: dict, search: bool):
         if search:
-            if self.left <= 0:
+            if self.left <= 0 or time.time() - T0 > SEARCH_MIN * 60:
                 raise Budget()
             self.left -= 1
             self.used += 1
@@ -219,10 +223,16 @@ def main():
     # 저널 지표 (단건 조회 — 무료, 새로 나온 저널과 180일 지난 것만)
     jr = load(JOURNALS, {})
     jr.setdefault("journals", {})
-    seen = {sid for e in st["units"].values() for v in (e.get("venue") or {}).values() for sid, _ in v}
-    todo = [s for s in sorted(seen) if s not in jr["journals"] or age(jr["journals"][s].get("ts")) > 180][:SRC_BUDGET]
+    use = Counter()                                                   # 많이 실린 저널부터 (IF 가중 평균에 크게 들어가는 순)
+    for e in st["units"].values():
+        for v in (e.get("venue") or {}).values():
+            for sid, c in v:
+                use[sid] += c
+    todo = [s for s, _ in use.most_common() if s not in jr["journals"] or age(jr["journals"][s].get("ts")) > 180][:SRC_BUDGET]
     got = 0
     for sid in todo:
+        if time.time() - T0 > SOURCE_MIN * 60:                       # 남은 저널은 다음 실행에
+            break
         try:
             s = oa.entity(f"/sources/{sid}", "id,display_name,issn_l,summary_stats,counts_by_year,type,works_count")
             ss = s.get("summary_stats") or {}
@@ -241,6 +251,8 @@ def main():
                   "JIF와 같은 꼴의 공개 지표, 받은 날의 현재 값), h = h-index, by_year = 연도별 [논문 수, 그해 받은 피인용]. "
                   "연도별 SJR(Cites/Doc 2년)이 들어오면 그 해 값으로 바꿔 씀")
     jr["updated"] = now
+    jr["coverage"] = {"venues": len(use), "fetched": sum(1 for s in use if s in jr["journals"]),
+                      "papers_covered": round(sum(c for s, c in use.items() if s in jr["journals"]) / max(1, sum(use.values())), 3)}
     save(JOURNALS, jr)
 
     # 남은 일 세기
