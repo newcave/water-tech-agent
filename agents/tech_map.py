@@ -5,7 +5,7 @@ tech_map — 논문 × 특허 기술 지도의 '논문 축' 재료를 OpenAlex�
 
 단위: data_seed/tech_map/units.json (세부 기술 41개 — en = OpenAlex 제목·초록 검색어, 연구소 키워드와 같음)
 연도: 2016 ~ 작년 (올해는 진행 중이라 제외)
-모으는 것 (단위마다, 모두 '건수' — 논문 목록은 저장하지 않음):
+모으는 것 (단위마다, 학술 논문 type:article|review만, 모두 '건수' — 논문 목록은 저장하지 않음):
   · by_year   출판연도별 논문 수                                       (group_by=publication_year, 검색 1회)
   · top10     같은 검색 + 피인용 상위 10%(분야·연도 보정)의 연도별 수      (검색 1회)
   · industry  같은 검색 + 기업 소속 저자가 1명 이상인 논문의 연도별 수     (검색 1회) — 실용화 쪽 보조 지표
@@ -42,6 +42,8 @@ KWATER_ROR = "04dtgat87"
 Y0 = 2016
 TOP10 = "citation_normalized_percentile.is_in_top_10_percent:true"
 COMPANY = "authorships.institutions.type:company"
+TYPES = "type:article|review"         # 학술 논문만 (데이터셋·책 장·프리프린트·편집물 제외) — 저널 IF와 짝이 맞게
+QV = "a1"                             # 검색식 판 — 바뀌면 그 단위를 처음부터 다시 받음
 VENUE_KEEP, TOPIC_KEEP = 60, 10
 STAGES = ("by_year", "top10", "industry", "kwater", "topics", "venue")
 
@@ -146,21 +148,21 @@ def main():
 
     for u in units:                                                   # 검색어가 바뀐 단위는 처음부터
         e = st["units"].setdefault(u["id"], {})
-        if e.get("en") and e["en"] != u["en"]:
+        if (e.get("en") and e["en"] != u["en"]) or (e and e.get("qv") != QV):
             st["units"][u["id"]] = e = {}
-        e.update(en=u["en"], inst=u["inst"], name=u["name"])
+        e.update(en=u["en"], inst=u["inst"], name=u["name"], qv=QV)
         e.setdefault("ts", {})
 
     try:
-        if age((st.get("baseline") or {}).get("ts")) > 30:
-            g = oa.group(span, "publication_year", search=False)
-            st["baseline"] = {"by_year": by_year(g, years), "ts": now}
+        if age((st.get("baseline") or {}).get("ts")) > 30 or (st.get("baseline") or {}).get("qv") != QV:
+            g = oa.group(f"{span},{TYPES}", "publication_year", search=False)
+            st["baseline"] = {"by_year": by_year(g, years), "ts": now, "qv": QV}
         # 값싼 것부터 모든 단위에: 연도별 수 → 피인용 상위10% → 기업 참여 → K-water → 주제 → 연도별 저널(최근 해부터)
         for stage in STAGES:
             for u in units:
                 e = st["units"][u["id"]]
                 ts = e["ts"]
-                q = f"title_and_abstract.search:{u['en']}"
+                q = f"title_and_abstract.search:{u['en']},{TYPES}"
                 if stage == "venue":
                     vts = ts.setdefault("venue", {})
                     for y in reversed(years):
@@ -230,7 +232,7 @@ def main():
         ts = st["units"][u["id"]]["ts"]
         pend += sum(age(ts.get(k)) >= (90 if k == "topics" else 30) for k in STAGES if k != "venue")
         pend += sum(age((ts.get("venue") or {}).get(y)) >= fresh_days(y) for y in years)
-    st.update({"_doc": "논문 × 특허 기술 지도 — 논문 축 재료 (OpenAlex 건수 집계만, 논문 목록 없음). units.<id>: by_year·top10·industry·kwater "
+    st.update({"_doc": "논문 × 특허 기술 지도 — 논문 축 재료 (OpenAlex 건수 집계만, 논문 목록 없음, 학술 논문 type:article|review만). units.<id>: by_year·top10·industry·kwater "
                        "(연도별 수: 전체·피인용 상위10%·기업 저자 참여·K-water 소속), topics(10년 합산 주제 상위 [id, 이름, 편수]), "
                        "venue(연도별 게재 저널 상위 [저널 id, 편수]). 저널 지표는 journals.json",
                "updated": now, "years": years, "api_key": bool(KEY), "calls_last_run": oa.used, "pending_tasks": pend,

@@ -84,16 +84,18 @@ def main():
     # ── 연도별 원자료 모으기 (papers.json 우선, 없으면 openalex_trends의 2022~ 키워드별 값) ──
     raw = {}
     src_used = set()
+    # openalex_trends(2022~, 모든 형태의 works)는 papers.json(학술 논문만)이 하나도 없을 때만 임시로 씀 — 섞으면 단위끼리 눈금이 달라짐
+    use_trends = not any(((pap.get("units") or {}).get(u["id"]) or {}).get("by_year") for u in units)
     for u in units:
         e = (pap.get("units") or {}).get(u["id"]) or {}
         ent = (tr.get("institutes") or {}).get(u["inst"]) or {}
         by, t10 = e.get("by_year"), e.get("top10")              # 항목마다 papers.json 우선, 아직 없으면 openalex_trends(2022~, 같은 검색식)
         if by:
             src_used.add("papers")
-        else:
+        elif use_trends:
             by = (ent.get("by_kw") or {}).get(u["en"])
             src_used.add("trends") if by else None
-        if not t10:
+        if not t10 and use_trends:
             t10 = (ent.get("by_kw_top10") or {}).get(u["en"])
         by = {y: v for y, v in (by or {}).items() if int(y) < this_year}
         raw[u["id"]] = {"n": by, "top10": {y: v for y, v in (t10 or {}).items() if y in by},
@@ -211,7 +213,8 @@ def main():
            "updated": int(time.time()), "years": [str(t) for t in score_years],
            "basis": {"x": sorted(k for k in ("V", "G", "Q", "J") if any(out_units[u]["c"].get(str(score_years[-1]), {}).get(k) is not None for u in ids)),
                      "y": "patents" if patents else ("industry" if any(raw[u]["ind"] for u in ids) else None),
-                     "paper_source": sorted(src_used), "patents_total": pat.get("matched") if patents else None},
+                     "paper_source": sorted(src_used), "patents_total": pat.get("matched") if patents else None,
+                     "units_scored": sum(1 for u in ids if out_units[u]["x"].get(str(score_years[-1])) is not None)},
            "weights": {"x": WX, "y": WY if patents else {"I": 1.0}}, "quadrants": QUAD,
            "shrink": {"paper_m": M_PAPER, "patent_m": M_PATENT}, "units": res_units}
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
