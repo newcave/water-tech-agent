@@ -157,6 +157,8 @@ def main():
     daily_min = Counter()
     recent = []
     for x in rr:
+        if x.get("name") == "ops-stats" and x.get("status") != "completed":
+            continue                                   # 지금 이 집계를 돌리는 자기 자신 — 끝나지 않은 채로 남아 '실행 중'으로 보이지 않게
         t0, t1 = iso_ts(x.get("run_started_at") or x.get("created_at") or ""), iso_ts(x.get("updated_at") or "")
         if not t0:
             continue
