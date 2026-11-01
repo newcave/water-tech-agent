@@ -1047,3 +1047,10 @@
 {"id": "W7125941002", "object": "Wolwedans 댐", "problem": "구조 및 재료의 행동 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7152989321", "object": "광업의 공간적 복잡성", "problem": "GIS를 통한 효율적 관리 및 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7162851486", "object": "댐의 안정성", "problem": "댐의 안정성 안전 계수 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224761845", "object": "Depot Air Minum (DAM)", "problem": "위생 및 위생 기준 준수 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224749812", "object": "Lempake Dam의 수위 모니터링 시스템", "problem": "홍수 조기 경고를 위한 수위 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414576366", "object": "Dokyiwaa Tailings Storage Facility (TSF)", "problem": "저장 용량 변화 및 댐 실패 위험 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413117499", "object": "내부 덤프의 안정성", "problem": "내부 덤프의 침하 및 변형 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411918969", "object": "내부 덤프의 안정성", "problem": "내부 덤프의 변형 및 안정성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216664242", "object": "선박 충돌 사고", "problem": "충돌 사고를 유발하는 요인 분석 및 예방 조치 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416993670", "object": "기존의 tailings embankment 댐", "problem": "안정성 평가", "relevant": true, "model": "gpt-4o-mini"}

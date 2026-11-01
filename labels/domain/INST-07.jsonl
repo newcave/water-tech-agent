@@ -1240,3 +1240,8 @@
 {"id": "W7131403257", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 염분", "problem": "염분 모니터링 및 매핑"}
 {"id": "W7204152534", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강우 유발 집단 산사태", "problem": "정확한 위험 식별 및 예방"}
 {"id": "W7219633201", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산악 환경에서의 눈의 바람에 의한 재분포", "problem": "눈의 재분포 모델링"}
+{"id": "W7224857156", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전국적인 홍수 취약성 지도", "problem": "홍수 취약 지역 식별 및 모델 성능 비교"}
+{"id": "W7224897757", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학 모델과 기계 학습 모델", "problem": "예측의 정확성을 비교하다"}
+{"id": "W7224926078", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sacramento Soil Moisture Accounting (SAC-SMA)", "problem": "모델 평가 개선"}
+{"id": "W7224500056", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정"}
+{"id": "W4413452350", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 유량 예측", "problem": "모델 성능 향상"}

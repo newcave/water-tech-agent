@@ -1779,3 +1779,13 @@
 {"id": "W7202091028", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Purna Irrigation Project의 수자원 관리", "problem": "수자원 할당 최적화"}
 {"id": "W7202388371", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 통합 관리", "problem": "물 자원 효율성 향상"}
 {"id": "W7203970525", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상류 핑강 유역의 강수량", "problem": "신뢰할 수 있는 강수량 강제력 평가"}
+{"id": "W7224757429", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지중해 지역의 담수 생태계", "problem": "생태계 상태와 생태계 서비스 개선"}
+{"id": "W4415400553", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산림 생태계", "problem": "기후와 토지 이용 변화가 수문학적 과정에 미치는 영향 이해하기"}
+{"id": "W4413147490", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Po 강 유역의 수자원", "problem": "수자원 관리 전략 전환"}
+{"id": "W4409833589", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 부족 지수", "problem": "식물의 CO2 반응이 물 부족 완화에 미치는 영향 평가"}
+{"id": "W4408473156", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공의 기후 및 환경 문제에 대한 감정", "problem": "부정적인 공공 감정의 원인 분석"}
+{"id": "W4408474798", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 이탈리아의 눈 물 자원", "problem": "눈 물 등가량(SWE) 추정 방법 개선"}
+{"id": "W4408475080", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학 모델", "problem": "모델의 확장성과 하드웨어 효율성 향상"}
+{"id": "W4408475365", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수생 생태계의 수문학적 과정", "problem": "수문학적 과정 이해를 위한 데이터 재분석"}
+{"id": "W4408487861", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티그리스-유프라테스 강 유역의 수자원", "problem": "인공 수자원 이전을 통한 수자원 흐름 개선"}
+{"id": "W4409543406", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Katsina-Ala Basin의 수자원 지속 가능성", "problem": "수자원 불균형 완화"}

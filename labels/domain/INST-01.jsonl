@@ -3184,3 +3184,30 @@
 {"id": "W7219273305", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카리브해의 수자원 관리 회사에서의 작업장 안전", "problem": "작업장에서의 미끄러짐/넘어짐/떨어짐 사고의 위험 요인 평가"}
 {"id": "W7217312328", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙 술라웨시 주의 지역 상수도 회사(PDAM) 성과", "problem": "재무 변수가 PDAM 성과에 미치는 영향 분석"}
 {"id": "W7217790405", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알제리 수자원 회사의 팀 성과", "problem": "직원 동기 부여 및 팀 활성화 개선"}
+{"id": "W7224804482", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "돈가스 제조 시설", "problem": "효율적인 생산 시스템 구축"}
+{"id": "W7224829937", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기업의 환경 성과", "problem": "경제 성과와 환경 성과 간의 관계 분석"}
+{"id": "W7224912597", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "멕시코시티의 물 공급 및 배수 시스템", "problem": "조직 위기 해결"}
+{"id": "W7125464717", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 호수의 수질 개선", "problem": "노후화된 습지의 성능 평가 및 모니터링 방법 탐색"}
+{"id": "W7223710201", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "SCADA, Yaka, AMR 프로젝트의 성과", "problem": "프로젝트 복잡성 관리와 성과 간의 관계 개선"}
+{"id": "W4417482962", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생태독성 데이터의 보고 품질", "problem": "보고 기준 개선"}
+{"id": "W7125489911", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시의 물 관리", "problem": "물 소비 효율성 향상"}
+{"id": "W4417124972", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 시스템 내 지방, 기름 및 그리스(FOG) 축적", "problem": "지속 가능한 관리 방법 개발"}
+{"id": "W4416330837", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "DAF 부유 슬러지", "problem": "중금속 제거 및 최종 처분"}
+{"id": "W4416797210", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Aden's First Water Supply Zone", "problem": "심각한 물 불균형과 높은 비수익 수水 문제 해결"}
+{"id": "W7160150271", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Corral Summit Pumped Storage Hydropower 프로젝트의 부지", "problem": "부지 적합성 평가"}
+{"id": "W7215782706", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "태양광 발전 시스템의 에너지 수익", "problem": "에너지 손실을 최소화하기 위한 청소 일정 최적화"}
+{"id": "W4414139744", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 하수 시스템", "problem": "화학 물질의 통합 관리로 시스템 성능 향상"}
+{"id": "W7112837598", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역 생물 다양성", "problem": "대형 산불이 생물 다양성에 미치는 영향 이해하기"}
+{"id": "W4413377211", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나탈의 물 공급 인프라", "problem": "물 공급 문제 해결"}
+{"id": "W7202202139", "domain_primary": "W1", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Sirwan-Diyala transboundary basin", "problem": "물 부족 상황에서 물 자원 할당 최적화"}
+{"id": "W7128872506", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서비스 생태계", "problem": "서비스 생태계의 영향 경로 통합"}
+{"id": "W7127213145", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 공급 시스템", "problem": "실시간 자원 관리의 복잡성 해결"}
+{"id": "W7130270914", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "포르투갈의 공공 수자원 관리 시스템", "problem": "운영 효율성 평가"}
+{"id": "W4410558724", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "화학 부문의 지속 가능성", "problem": "지속 가능성 및 안전성 평가 개선"}
+{"id": "W4409108680", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Palmer amaranth (Amaranthus palmeri)", "problem": "이중 제초제 저항성의 기작 이해"}
+{"id": "W4408135487", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물과 식량의 연결 고리", "problem": "환경 지속 가능성 문제 해결"}
+{"id": "W4413085312", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유틸리티 인프라 관리", "problem": "디지털 트윈 기술의 효과적인 구현과 성과 향상"}
+{"id": "W4411019283", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가우텡 대도시 자치체의 비수익 수자원 관리", "problem": "비수익 수자원 감소를 위한 전략 식별 및 효과성 향상"}
+{"id": "W4410828775", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캔자스 시티의 하수 시스템", "problem": "하수 범람 문제 해결"}
+{"id": "W4406804293", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사이곤-돈나이 조수 하천 시스템의 수자원 관리", "problem": "수자원 관리에 필요한 정확한 유량 추정 개선"}
+{"id": "W4416819858", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리", "problem": "공공 건강 및 물 자원 관리에 대한 데이터 활용 개선"}

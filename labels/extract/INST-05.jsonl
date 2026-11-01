@@ -3244,3 +3244,18 @@
 {"id": "W7160014788", "object": "유체 역학 시뮬레이션", "problem": "모델의 사실성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7123556782", "object": "에너지 시스템 및 자원 관리", "problem": "세대 간 지속 가능성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7125638486", "object": "부탄의 경제 성장", "problem": "경제 다각화를 촉진하고 외국인 직접 투자를 유치하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224943923", "object": "전력 시스템", "problem": "주파수 변동 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224750003", "object": "도시의 폭우 저류조", "problem": "저류조를 변환하여 전력망 안정성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224924128", "object": "소규모 수력 발전소의 카플란 터빈", "problem": "운영 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224941399", "object": "대형 수력 발전 유닛의 주파수 조절 성능", "problem": "주파수 조절 성능과 그리드 안정성 간의 균형을 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224823583", "object": "소형 및 중형 수력 발전소", "problem": "전력 손실을 고려한 전력 배분 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224034047", "object": "전기 도매 가격", "problem": "재생 가능 에너지 투자 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416331640", "object": "전력 생산의 환경 영향", "problem": "전력 생산에서의 오염 및 건강 위험 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416992789", "object": "수소 생산을 위한 나트륨 보로하이드라이드 반응", "problem": "열역학적 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415282793", "object": "전력 시스템의 주파수 조절", "problem": "예기치 않은 부하 조건에서 주파수 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223980235", "object": "수력 발전 시스템", "problem": "다목적 최적 스케줄링 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411029389", "object": "케냐의 에너지 개발 및 활용", "problem": "청정하고 지속 가능한 에너지 공급을 위한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223694301", "object": "미국 수력 발전소", "problem": "운영 수명 연장 및 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409724702", "object": "강 하류의 수량 및 수질", "problem": "수력 발전과 생태 보호 간의 균형을 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414364103", "object": "에티오피아의 세 개 강의 수력 발전 잠재력", "problem": "수력 발전 잠재력을 평가하다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414551376", "object": "유럽의 기후 정책", "problem": "국제 기후 보호에서의 자유 탑승 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
