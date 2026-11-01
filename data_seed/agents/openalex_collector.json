@@ -7,13 +7,9 @@
   "관련논문(최근1년)": 17116,
   "12개 저널 코퍼스": 117543
  },
- "last_run": 1793482771,
+ "last_run": 1793513643,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1792961661,
-   "msg": "⚠️ OpenAlex API 오류: 소속검색: 429 Client Error: Too Many Requests for url: https://a; INST-01: 429 Client Error: Too Many Requests for url: https:"
-  },
   {
    "ts": 1792990366,
    "msg": "☁️ 정기 실측 — K-water 412건 · 관련(최근1년) 17,023건 · 저널 코퍼스 103,829건(12개)"
@@ -88,6 +84,10 @@
   },
   {
    "ts": 1793482771,
+   "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 17,116건 · 저널 코퍼스 117,543건(12개)"
+  },
+  {
+   "ts": 1793513643,
    "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 17,116건 · 저널 코퍼스 117,543건(12개)"
   }
  ],
