@@ -65,7 +65,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.17 · 2026-10-28"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.17.1 · 2026-11-01"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -76,6 +76,8 @@ ASSET_PAGE = "🗄️ 지식자산 현황"                 # WCS 연구보고서
 KCIKW_PAGE = "🆚 K-water 비교(KCI)"              # 최근 5년 KCI — 연구소 분야별 K-water 논문 vs 국내 학회지 (kci_compare_page.py · kci_inst.json)
 CIT_PAGE = "🏅 피인용 질"                       # 연구소 관련 논문의 피인용 상위 10% 비중 (citation_page.py · openalex_trends.json *_top10)
 OA_PAGE = "🔭 상승 연구주제"                  # openalex 상승 연구주제 분석 결과 연동 (oa_rising_page.py · data_seed/oa_rising/)
+SHOWCASE_URL = "https://water-tech-agent2.streamlit.app"   # 홍보·시연용 쇼케이스 (newcave/water-tech-agent2, 2026-11-01)
+
 # Agent Flow 확인用 버튼 이름 (2026-10-26 사용자 지정 · 순서는 AGENT_FLOWS 순서)
 WCS_FLOW_PAGE = "Co-Scientist 개념도"        # WCS(연구자료 검색) 흐름도 (flows/wcs_agent_flow.html)
 RNDHELP_FLOW_PAGE = "수탁과제 관리 Tool"       # rndhelp 흐름도 (flows/rndhelp_agent_flow*.html)
@@ -175,6 +177,14 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] .stButton button p {text-align:left; margin:0 !important; overflow:hidden; text-overflow:ellipsis;}
 [data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
   font-weight:700;}
+/* 쇼케이스 바로가기 (새 창) — 바깥 링크라 실선 테두리 (v3.17.1) */
+[data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.stLinkButton) {width:100% !important; margin-bottom:-10px;}
+[data-testid="stSidebar"] .stLinkButton a {width:100%; justify-content:flex-start; border-radius:9px; padding:2px 10px !important;
+  min-height:0 !important; background:rgba(255,255,255,.20); border:1px solid rgba(255,255,255,.75); color:#fff !important;}
+[data-testid="stSidebar"] .stLinkButton a:hover {background:rgba(255,255,255,.32);}
+[data-testid="stSidebar"] .stLinkButton a, [data-testid="stSidebar"] .stLinkButton a * {
+  font-size:.8rem !important; line-height:1.3 !important; white-space:nowrap; color:#fff !important; font-weight:600;}
+[data-testid="stSidebar"] .stLinkButton a p {text-align:left; margin:0 !important;}
 .block-container {padding-top:3.8rem; max-width:1500px;}   /* 위쪽 도구줄(60px)에 머리띠가 가리지 않게 (v3.7.4) */
 
 /* 헤더 밴드 */
@@ -603,6 +613,11 @@ with st.sidebar:
     for i_, (name_, spec_) in enumerate(AGENT_FLOWS.items()):
         st.button(name_, key=f"side_flow_{i_}", on_click=_to_side, args=(name_,),
                   type="primary" if st.session_state.get("side_page") == name_ else "secondary", help=spec_[3])
+    st.markdown('<div class="side-sep">쇼케이스 (새 창)</div>', unsafe_allow_html=True)
+    st.link_button("🛰️ 에이전트 수집 현황판", f"{SHOWCASE_URL}/ops", width="stretch",
+                   help="에이전트 실제 작업 기록 — 일자별·월별·분야별·실시간 실행 로그 (매시 갱신)")
+    st.link_button("✨ Water Co-Scientist 쇼케이스", SHOWCASE_URL, width="stretch",
+                   help="홍보·시연용 대시보드 — 세계 연구 흐름·국내·떠오르는 주제·기술 지도")
     if st.session_state.get("side_page"):
         page = st.session_state["side_page"]
     elif page is None:
