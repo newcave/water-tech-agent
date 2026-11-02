@@ -3317,3 +3317,16 @@
 {"id": "W4410828775", "object": "캔자스 시티의 하수 시스템", "problem": "하수 범람 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406804293", "object": "사이곤-돈나이 조수 하천 시스템의 수자원 관리", "problem": "수자원 관리에 필요한 정확한 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4416819858", "object": "물 자원 관리", "problem": "공공 건강 및 물 자원 관리에 대한 데이터 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224990921", "object": "펜실베니아의 식수 유틸리티에서의 산사태 잠재 지역", "problem": "산사태로 인한 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224992105", "object": "수돗물 유출 위치", "problem": "유출 위치를 정확하게 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225010009", "object": "Manado City Public Health Laboratory", "problem": "청정수 및 폐수 관리 시스템의 요구 사항 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405334224", "object": "물 자원 상태", "problem": "기후 변화에 따른 물 자원 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401626998", "object": "생태계 복원 및 관리", "problem": "인간의 복지 혜택을 향상시키기 위한 복잡한 환경 관리 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399900843", "object": "저소득 국가의 물 서비스", "problem": "가뭄 위험 재정 서비스 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399699164", "object": "Lake Malawi/Niassa/Nyasa의 클로로필-a 농도", "problem": "클로로필-a 농도 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396576412", "object": "음용수 분배 시스템의 기회병원체", "problem": "기회병원체의 발생 및 위험 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392950227", "object": "도시의 물 자원 관리", "problem": "지속 가능한 도시 물 관리로의 전환 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392925563", "object": "버려진 땅에서의 자연림 재생", "problem": "자연림 재생의 가능성을 평가하는 잘못된 가정 수정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400205024", "object": "ESG 통합 관행", "problem": "ESG의 문제 해결 및 가치 창출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391108369", "object": "도시의 환경 문제", "problem": "데이터를 활용한 도시 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390949337", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

@@ -1863,3 +1863,14 @@
 {"id": "W4408475365", "object": "수생 생태계의 수문학적 과정", "problem": "수문학적 과정 이해를 위한 데이터 재분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4408487861", "object": "티그리스-유프라테스 강 유역의 수자원", "problem": "인공 수자원 이전을 통한 수자원 흐름 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4409543406", "object": "Katsina-Ala Basin의 수자원 지속 가능성", "problem": "수자원 불균형 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224990741", "object": "Amudaryoning quyi oqimidagi suv resurslari", "problem": "iqlim o‘zgarishlari ta'sirida suv resurslarining holatini yaxshilash", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400055672", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4396907978", "object": "Helmand River Basin의 수자원", "problem": "수자원 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393212102", "object": "육상 담수 생태계", "problem": "온실가스 배출 이해 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392595756", "object": "히말라야 숲 생태계", "problem": "산불에 대한 생태수리학적 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392109224", "object": "염알칼리 토양", "problem": "토양 개선 및 활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391444201", "object": "자연재해와 재난", "problem": "위험 평가 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390949337", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4404708361", "object": "남부 네바다의 수원", "problem": "산소 및 수소 동위원소 데이터 수집", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405243528", "object": "지속 가능한 농업", "problem": "농업에서 정보 접근 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405501626", "object": "Periyar River Basin의 수자원", "problem": "기후 변화에 따른 수자원 지속 가능성 평가", "relevant": true, "model": "gpt-4o-mini"}

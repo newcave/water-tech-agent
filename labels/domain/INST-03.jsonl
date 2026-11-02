@@ -6263,3 +6263,17 @@
 {"id": "W4408133725", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 수돗물", "problem": "수돗물의 오염으로 인한 건강 위험 감소"}
 {"id": "W4406842293", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "당뇨병 및 고혈압", "problem": "예방, 조기 발견 및 치료 관리 개선"}
 {"id": "W7224971099", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 시스템", "problem": "시스템 개선 및 규정 준수 향상"}
+{"id": "W7224993769", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 비용", "problem": "물질의 질적 측정이 비용에 미치는 영향 이해하기"}
+{"id": "W7224996438", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유방암", "problem": "BPS에 의한 전이 촉진"}
+{"id": "W7225004025", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리용 생물학적 여과 시스템의 박테리아 군집", "problem": "심각한 유해 조류 발생의 영향 분석"}
+{"id": "W7225007867", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "말라리아와 간질환", "problem": "공동 감염의 위험 요인 이해하기"}
+{"id": "W7225010982", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비오레텐션 시스템의 오염물질", "problem": "오염물질 제거 및 동역학 이해"}
+{"id": "W7225018066", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서 리튬", "problem": "리튬 제거"}
+{"id": "W7224789031", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "드라쿤쿨루스 메디넨시스 질병", "problem": "질병의 근절을 위한 공중 보건 개입"}
+{"id": "W7224870347", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이퐁시의 수돗물 원수", "problem": "탁도와 계절적 망간 패턴 구분"}
+{"id": "W7224994291", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "홀스타인-프리지안 송아지", "problem": "수분 섭취 및 성장 효율 개선"}
+{"id": "W7224632269", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가금류 및 반추동물의 음용수 품질", "problem": "음용수 품질이 건강과 생산성에 미치는 영향 이해하기"}
+{"id": "W4402117369", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산란계의 AI 및 ND 항체 수준", "problem": "AI 및 ND 항체 수준을 개선하려는 연구"}
+{"id": "W4400014593", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신흥 오염물질(EPs)", "problem": "저소득 국가에서 신흥 오염물질의 관리 문제 해결"}
+{"id": "W2614666507", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미세조류 분리", "problem": "효율적인 분리 방법 최적화"}
+{"id": "W4391053161", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "녹내장 환자의 시신경 유두 및 망막 신경 섬유층", "problem": "녹내장 진행 상태의 변화 이해"}

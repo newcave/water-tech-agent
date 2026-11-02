@@ -1054,3 +1054,7 @@
 {"id": "W4411918969", "object": "내부 덤프의 안정성", "problem": "내부 덤프의 변형 및 안정성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7216664242", "object": "선박 충돌 사고", "problem": "충돌 사고를 유발하는 요인 분석 및 예방 조치 제안", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4416993670", "object": "기존의 tailings embankment 댐", "problem": "안정성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225013485", "object": "댐의 내진 안전성", "problem": "내진 응답 및 분석 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7132645582", "object": "Wildfleisch의 안전성", "problem": "화학 오염물질의 위험 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393948676", "object": "인간 건강과 웰빙", "problem": "기후 변화로 인한 건강 영향 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391444201", "object": "자연재해와 재난", "problem": "위험 평가 및 지속 가능성 향상", "relevant": true, "model": "gpt-4o-mini"}

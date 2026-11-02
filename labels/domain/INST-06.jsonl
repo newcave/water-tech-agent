@@ -5694,3 +5694,46 @@
 {"id": "W4406508383", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "밀 생산", "problem": "물 부족 문제 해결"}
 {"id": "W4406220724", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 시스템", "problem": "지하수 탐사 및 관리 개선"}
 {"id": "W4406228463", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 변화에 대한 원거리 감지 데이터", "problem": "기후 행동 지원을 위한 데이터 정확성 향상"}
+{"id": "W7225002652", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스마트 농업", "problem": "농업의 복잡한 문제 해결"}
+{"id": "W7225016354", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 호흡 구역 노출", "problem": "기상 과정과 오염물질 간의 연결 이해하기"}
+{"id": "W7224881649", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "루칸가 습지의 콜레라 발생", "problem": "환경 요인 평가"}
+{"id": "W7225002101", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "하층 대기(LT)의 수분 열역학 구조", "problem": "수분 구조의 3D 특성 개선"}
+{"id": "W7225017044", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알하바니야 호수", "problem": "호수 변화 모니터링"}
+{"id": "W7225016759", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "복숭아 과수원에서의 단기 물 스트레스", "problem": "단기 물 스트레스 감지"}
+{"id": "W7225032582", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "지하수 자원 고갈 예측"}
+{"id": "W7220534643", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ea Sup district, Dak Lak province", "problem": "모니터링 및 평가를 통한 가뭄 상황 개선"}
+{"id": "W4399851396", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "감염병 감시 및 통제", "problem": "공간 정보 기술을 활용한 감염병의 분포 및 전파 분석"}
+{"id": "W4396667453", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "테라스", "problem": "테라스의 경계 정확히 분할하기"}
+{"id": "W4396641814", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "한국의 메탄(CH4) 배출량", "problem": "정확한 메탄 배출량 추정 개선"}
+{"id": "W4396625990", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 생태계 내의 토지 표면 온도", "problem": "기후 변화와 도시화의 영향 분석"}
+{"id": "W4396534849", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물 수확량", "problem": "정확한 예측을 통한 식량 안보 전략 개발"}
+{"id": "W4394686981", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수 수위", "problem": "센티넬-6MF의 수위 검증"}
+{"id": "W4394610790", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "캘리포니아 해류 시스템의 표면 특성", "problem": "표면 과정의 변동성 조사"}
+{"id": "W4394610457", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "Yamunanagar 지역의 농림업 지역", "problem": "농림업 지역의 매핑 및 모니터링"}
+{"id": "W4394615773", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ulu Muda Forest Reserve", "problem": "신뢰할 수 있는 산림 분류 방법 제공"}
+{"id": "W7105794867", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세네갈의 대규모 농업 투자(LSAI)", "problem": "LSAI의 자동 탐지 및 특성화"}
+{"id": "W4392880752", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "불법 물 사용 위치", "problem": "불법 물 사용 식별"}
+{"id": "W4392798424", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Laguna de Aculeo의 물 사용", "problem": "불법 물 사용 위치 식별"}
+{"id": "W4392741580", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계의 총 생물 생산성(GPP)과 증발산(ET)", "problem": "시간 단위로 GPP와 ET를 추정하는 문제 해결"}
+{"id": "W4392763170", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 질", "problem": "고주파 실시간 모니터링"}
+{"id": "W4392775727", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "테라 노바 만의 해안 폴리냐", "problem": "폴리냐의 범위와 해수의 면적 비율 추정 개선"}
+{"id": "W4392763429", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서부 미국의 침엽수 숲", "problem": "나무의 수분 스트레스 평가"}
+{"id": "W4392762443", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Klisova Lagoon의 생태계", "problem": "환경 평가 및 보존 계획 수립"}
+{"id": "W4392697975", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Urmia Lake basin", "problem": "가뭄과 염분 변화 평가"}
+{"id": "W4392715247", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "연안 해역의 수심", "problem": "위성 데이터로 수심 추정"}
+{"id": "W4392859232", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Batur 호수", "problem": "호수의 해안선 변화 분석 및 예측"}
+{"id": "W4399885906", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "리차드 톨 지역의 토지 이용 및 토지 피복 변화", "problem": "위성 이미지에서 변화 탐지"}
+{"id": "W4392685387", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토지 이용 및 토지 피복", "problem": "정확한 LULC 매핑을 통한 지속 가능한 개발 보장"}
+{"id": "W4392713912", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수역 식별 및 경계 설정", "problem": "고해상도 원격 감지 이미지에서 수역 추출 개선"}
+{"id": "W4392640075", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토지 이용/토지 피복 (LULC)", "problem": "정확한 LULC 매핑을 위한 기계 학습 분류기 성능 비교"}
+{"id": "W4392166350", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식물 다양성", "problem": "정확한 식물 다양성 분포 추정의 어려움"}
+{"id": "W4391603384", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "곡물 작물의 품질과 수확량", "problem": "abiotic stress의 영향 이해 및 완화"}
+{"id": "W4391569598", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 담수 생태계", "problem": "다양한 수질 이상 실시간 모니터링 및 조기 경고 필요"}
+{"id": "W4391567192", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cladophora의 형태", "problem": "공간적 및 시간적 변화 분석"}
+{"id": "W4392300781", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Silavathurai 해안의 수심", "problem": "해양 풍력 터빈 운송을 위한 항로 설계"}
+{"id": "W4392373140", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대도시 공원 및 정원의 관개 관리", "problem": "관개 효율성 향상"}
+{"id": "W4391517369", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산호초 서식지", "problem": "정확한 수심 및 생물군집 매핑"}
+{"id": "W4391143763", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하구 생태계", "problem": "하구 생태계의 모니터링 및 모델링 개선"}
+{"id": "W4390729348", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Tabriz 도시의 토지 표면 온도", "problem": "토지 이용과의 관계 평가"}
+{"id": "W4391889404", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 붕괴", "problem": "구조물 붕괴의 원인 규명"}
+{"id": "W4393028179", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 및 식생 수분 함량", "problem": "고해상도 및 빈번한 관측 제공"}
