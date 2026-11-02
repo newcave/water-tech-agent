@@ -1,0 +1,19 @@
+{
+ "agent": "oa_rising",
+ "state": "idle",
+ "summary": "openalex 연동 — 수자원 12개 핵심 저널 (논문판) 91,125편 · Rising 1,080 · 커뮤니티 8 · 분야별 결과 0/6",
+ "counts": {
+  "연동 논문": 91125,
+  "Rising 용어": 1080,
+  "커뮤니티": 8,
+  "분야별 결과": "0/6"
+ },
+ "last_run": 1793583260,
+ "next_run": "매주 월 07:23 KST (GitHub Actions)",
+ "events": [
+  {
+   "ts": 1793583260,
+   "msg": "🔭 openalex 연동 확인 (변경 없음) — Rising 1,080 · 커뮤니티 8 · 91,125편"
+  }
+ ]
+}
