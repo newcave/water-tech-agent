@@ -3223,3 +3223,13 @@
 {"id": "W4392925563", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "버려진 땅에서의 자연림 재생", "problem": "자연림 재생의 가능성을 평가하는 잘못된 가정 수정하기"}
 {"id": "W4400205024", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "ESG 통합 관행", "problem": "ESG의 문제 해결 및 가치 창출"}
 {"id": "W4391108369", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시의 환경 문제", "problem": "데이터를 활용한 도시 관리 개선"}
+{"id": "W7225041783", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "SPM 호스 교체 캠페인", "problem": "해양 작업의 안전성과 효율성 개선"}
+{"id": "W7225044506", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "성숙 가스전의 압력 및 생산 예측", "problem": "희소한 연간 필드 기록을 고해상도 일일 데이터셋으로 변환하여 예측 지원"}
+{"id": "W7225050119", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "광물 회수 및 에너지 효율성 개선"}
+{"id": "W7225048446", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 분배 네트워크", "problem": "부시파이어 위험 평가 개선"}
+{"id": "W7225035707", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기후 민감 감염병(CSID)", "problem": "경제적 평가를 통한 기후 정보 기반 개입 및 적응 전략의 효과 분석"}
+{"id": "W4391411053", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유틸리티 서비스", "problem": "복잡한 사회 기술 시스템에서 수요 관리하기"}
+{"id": "W4390722234", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간 구강 암종에서 전이하는 암 줄기 세포", "problem": "전이 예측을 위한 암 줄기 세포 마커 식별"}
+{"id": "W4390712348", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간 구강 암에서 전이하는 종양 세포", "problem": "전이 예측을 위한 세포 표지자 식별"}
+{"id": "W4366603131", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "성인 심장 수술 환자에서의 인간 혈청 알부민 사용", "problem": "HSA 사용에 대한 전문가 합의 개발"}
+{"id": "W4386711559", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "카타르의 탄소 포집 및 저장 가능성", "problem": "CO2 관리의 장기적 도전 과제 분석"}

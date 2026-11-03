@@ -3330,3 +3330,15 @@
 {"id": "W4400205024", "object": "ESG 통합 관행", "problem": "ESG의 문제 해결 및 가치 창출", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391108369", "object": "도시의 환경 문제", "problem": "데이터를 활용한 도시 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4390949337", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225041783", "object": "SPM 호스 교체 캠페인", "problem": "해양 작업의 안전성과 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225044506", "object": "성숙 가스전의 압력 및 생산 예측", "problem": "희소한 연간 필드 기록을 고해상도 일일 데이터셋으로 변환하여 예측 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225050119", "object": "지하수 자원", "problem": "광물 회수 및 에너지 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225048446", "object": "물 분배 네트워크", "problem": "부시파이어 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225035707", "object": "기후 민감 감염병(CSID)", "problem": "경제적 평가를 통한 기후 정보 기반 개입 및 적응 전략의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391411053", "object": "유틸리티 서비스", "problem": "복잡한 사회 기술 시스템에서 수요 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390722234", "object": "인간 구강 암종에서 전이하는 암 줄기 세포", "problem": "전이 예측을 위한 암 줄기 세포 마커 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390712348", "object": "인간 구강 암에서 전이하는 종양 세포", "problem": "전이 예측을 위한 세포 표지자 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4366603131", "object": "성인 심장 수술 환자에서의 인간 혈청 알부민 사용", "problem": "HSA 사용에 대한 전문가 합의 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4320176500", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4386711559", "object": "카타르의 탄소 포집 및 저장 가능성", "problem": "CO2 관리의 장기적 도전 과제 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4319987697", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

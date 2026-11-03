@@ -3191,3 +3191,4 @@
 {"id": "W4396672456", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 에너지 시스템", "problem": "재생 가능 에너지 통합 문제 해결"}
 {"id": "W4392471622", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "HVDC 전송 시스템", "problem": "연속 통신 실패 문제 해결"}
 {"id": "W4391882995", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업의 물-에너지-식량 넥서스", "problem": "지속 가능한 자원 관리 방안 모색"}
+{"id": "W7225058573", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 재생 가능 에너지 발전 및 제한", "problem": "운영 및 정책 요인에 따른 발전 제한 문제 해결"}

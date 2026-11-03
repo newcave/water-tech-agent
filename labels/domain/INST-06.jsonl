@@ -5737,3 +5737,35 @@
 {"id": "W4390729348", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Tabriz 도시의 토지 표면 온도", "problem": "토지 이용과의 관계 평가"}
 {"id": "W4391889404", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구조물 붕괴", "problem": "구조물 붕괴의 원인 규명"}
 {"id": "W4393028179", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 및 식생 수분 함량", "problem": "고해상도 및 빈번한 관측 제공"}
+{"id": "W7225039411", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 열섬 현상", "problem": "기후 변화에 따른 도시 열섬 현상 평가"}
+{"id": "W7225041872", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알프스 지역의 눈 물 등가물(SWE)", "problem": "고해상도 SWE 추정 개선"}
+{"id": "W7225054904", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수심 추정", "problem": "정확한 수심 재구성"}
+{"id": "W7225065722", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Irobo 분류림의 산림 면적", "problem": "산림 면적 감소 분석"}
+{"id": "W7224739579", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "환경 디지털 트윈의 자연 자원", "problem": "위성 원격 감지를 통한 데이터 통합"}
+{"id": "W7133218812", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "복숭아 과수원에서의 단기 물 스트레스", "problem": "단기 물 스트레스 감지"}
+{"id": "W4376862564", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사헬 지역의 소규모 수역", "problem": "수역의 수리학적 체계를 이해하고 수자원 흐름을 정량화하기"}
+{"id": "W4376862574", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카르스트 대수층을 덮고 있는 토양의 수문학적 체계", "problem": "지하수 재충전 이해 및 평가"}
+{"id": "W4376862650", "domain_primary": "W1", "domain_secondary": ["W9"], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분", "problem": "위성 기반 토양 수분 데이터의 검증 및 보정"}
+{"id": "W4382630112", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업용수 사용량", "problem": "정확한 관개 매개변수 최적화"}
+{"id": "W4382630113", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 유역의 수리학적 특성", "problem": "수리학적 모델을 보정하기 위한 데이터 수집"}
+{"id": "W4382630129", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "캘리포니아의 목본 다년생 작물", "problem": "물 자원 관리 효율성 극대화"}
+{"id": "W4362640026", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "감비아 해안선", "problem": "해안 침식 및 퇴적 문제 해결"}
+{"id": "W4362633618", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 매개변수", "problem": "원격 감지를 통한 수질 모니터링 개선"}
+{"id": "W4362558362", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "테헤란시의 토지 이용 변화", "problem": "토지 이용 변화의 영향을 분석하고 최적화하기"}
+{"id": "W4362524295", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수", "problem": "홍수 범위 자동 탐지 개선"}
+{"id": "W4362560745", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Villarrica 호수의 수질", "problem": "조류 발생 탐지 및 클로로필-a 예측"}
+{"id": "W4362560818", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천 바닥의 수역 및 모래톱", "problem": "하천 바닥의 수역 및 모래톱을 매핑하는 문제"}
+{"id": "W4362560648", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "망그로브가 있는 조간대", "problem": "조간대의 변화 상태 이해하기"}
+{"id": "W4366830538", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남부 브라질 만 연안 수역의 클로로필-a 농도", "problem": "위성 데이터에서 클로로필-a 농도 회수"}
+{"id": "W4362589453", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토지 이용 및 토지 피복 변화", "problem": "변화 탐지 기법 비교 및 개선 필요성 논의"}
+{"id": "W4323363473", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lower Mekong River Basin의 가뭄", "problem": "2015-16년 가뭄의 역사적 평가"}
+{"id": "W4323310956", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Baikal의 수질", "problem": "산불의 영향 분석"}
+{"id": "W4323319484", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토지 이용 및 토지 피복(LULC) 지도", "problem": "SAR 이미지에서 LULC 세분화"}
+{"id": "W4323276362", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지표면 온도", "problem": "지표면 지수에 대한 의존성 분석"}
+{"id": "W4323318934", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양의 클로로필 a 함량", "problem": "측정 품질 개선을 위한 보정 방법 모색"}
+{"id": "W4323074461", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위성 이미지", "problem": "이미지 처리 기술 비교"}
+{"id": "W4393630371", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 하천 시스템의 수질", "problem": "금 및 귀금속 채굴의 영향 분석"}
+{"id": "W4323046509", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "빙하 질량 균형", "problem": "원격 탐사를 통한 연구 개발 단계 및 한계 이해"}
+{"id": "W4327630710", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북서부 방글라데시의 밀 생산 시스템", "problem": "물 생산성 향상"}
+{"id": "W4313459902", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Urmia 호수의 수위 변화", "problem": "GRACE 데이터의 해상도 문제 해결"}
+{"id": "W4313594570", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티베트 고원에서의 에너지 및 물 교환 과정", "problem": "정확한 시공간 변동성 추정"}

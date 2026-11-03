@@ -6382,3 +6382,11 @@
 {"id": "W4400014593", "object": "신흥 오염물질(EPs)", "problem": "저소득 국가에서 신흥 오염물질의 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W2614666507", "object": "미세조류 분리", "problem": "효율적인 분리 방법 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391053161", "object": "녹내장 환자의 시신경 유두 및 망막 신경 섬유층", "problem": "녹내장 진행 상태의 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225049692", "object": "해안 델타 지역의 안전한 식수 접근성", "problem": "담수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225012670", "object": "물에서의 오염물질 제거 효율", "problem": "복합재료의 성능 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225069984", "object": "프로바이오틱 음료", "problem": "최적의 품질 특성을 가진 음료 생산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386260361", "object": "폐의 항바이러스 면역", "problem": "응급 골수 단핵구 반응 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360856468", "object": "폴리전해질 다층 나노여과막", "problem": "현재 나노여과막의 한계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360599719", "object": "유기 오염물질", "problem": "유기 오염물질 제거의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360620357", "object": "지하수에서의 비소 제거", "problem": "비소 농도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360603014", "object": "도시 수돗물 시스템에서의 소독 부산물", "problem": "소독 부산물 발생 제한", "relevant": true, "model": "gpt-4o-mini"}

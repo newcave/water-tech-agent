@@ -1046,3 +1046,7 @@
 {"id": "W7132645582", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wildfleisch의 안전성", "problem": "화학 오염물질의 위험 조사"}
 {"id": "W4393948676", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인간 건강과 웰빙", "problem": "기후 변화로 인한 건강 영향 개선"}
 {"id": "W4391444201", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "자연재해와 재난", "problem": "위험 평가 및 지속 가능성 향상"}
+{"id": "W7225036339", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "적응형 제어 시스템", "problem": "부분 관찰 하의 적대적 제어 문제 해결"}
+{"id": "W4388651541", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 조절 메커니즘 이해"}
+{"id": "W4388640449", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 압력의 분자 상관관계 이해"}
+{"id": "W4388651710", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 압력의 분자 상관관계 이해"}
