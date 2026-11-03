@@ -7,13 +7,9 @@
   "관련논문(최근1년)": 17115,
   "12개 저널 코퍼스": 117577
  },
- "last_run": 1793635979,
+ "last_run": 1793667667,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1793103487,
-   "msg": "☁️ 정기 실측 — K-water 415건 · 관련(최근1년) 17,116건 · 저널 코퍼스 103,831건(12개)"
-  },
   {
    "ts": 1793139488,
    "msg": "☁️ 정기 실측 — K-water 415건 · 관련(최근1년) 17,282건 · 저널 코퍼스 103,800건(12개)"
@@ -89,7 +85,18 @@
   {
    "ts": 1793635979,
    "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 17,115건 · 저널 코퍼스 117,577건(12개)"
+  },
+  {
+   "ts": 1793667667,
+   "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 17,115건 · 저널 코퍼스 117,577건(12개) · 일부 오류 6"
   }
  ],
- "last_errors": []
+ "last_errors": [
+  "INST-01 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Awater+economics+pricing%2Cfrom_publication_date%3A2022-01-01%2Cto_publica",
+  "INST-02 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Awatershed+management%2Cfrom_publication_date%3A2022-01-01%2Cto_publicatio",
+  "INST-03: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Adrinking+water+treatment%2Cfrom_publication_date%3A2022-01-01%2Cto_publication_d",
+  "INST-05: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Ahydropower+generation%2Cfrom_publication_date%3A2022-01-01%2Cto_publication_date",
+  "INST-06 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Ariver+discharge+remote+sensing%2Cfrom_publication_date%3A2022-01-01%2Cto_",
+  "INST-07 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Adeep+learning+water+quality+prediction%2Cfrom_publication_date%3A2022-01-"
+ ]
 }
