@@ -40,6 +40,7 @@ K-water연구원 AI연구소의 R&D 데이터 에이전트 플랫폼. 수집(Ope
 ## 3. 개발·시험·배포
 
 - 실행: `streamlit run app_mission_control.py`
+- **Streamlit 버전 고정 (2026-11-04)**: `requirements.txt`의 `streamlit==1.66.1`(쇼케이스 water-tech-agent2도 같음). 버전이 배포 때마다 바뀌면 오래 열린 탭이 화면 조각(js)을 못 찾아 `Failed to fetch dynamically imported module` 오류가 난다 — 두 앱 모두 이 오류를 보면 한 번만 새로고침하는 `HEAL_JS`(사이드바·상단 숨김)를 넣어 둠. 버전을 올릴 때는 고정값을 직접 바꾸고, 사라질 예정인 `components.html`을 `st.iframe`으로 바꿨는지 함께 점검
 - 시험: 바꾼 화면은 `streamlit.testing.v1.AppTest`로 열어 예외가 없는지, 가능하면 Playwright로 화면을 찍어 확인.
   자동 새로고침이 켜진 화면은 AppTest에서 멈출 수 있으니 `session_state["nav_start"]`로 화면을 고르고, 판정 화면 시험은
   `HITL_PENDING_DIR`를 임시 폴더로 지정한다 (실제 data 브랜치에 쓰지 말 것 — 직접 저장 시험은 GitHub API를 모의).

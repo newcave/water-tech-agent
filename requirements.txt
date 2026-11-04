@@ -1,4 +1,4 @@
-streamlit>=1.46
+streamlit==1.66.1   # 고정 (2026-11-04): 배포 때마다 버전이 바뀌면 열린 탭이 화면 조각을 못 찾음 — 올릴 때는 직접 바꾸고 components.html → st.iframe 함께 점검
 pandas
 requests
 plotly
