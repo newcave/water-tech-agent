@@ -1,19 +1,15 @@
 {
  "agent": "openalex_collector",
  "state": "idle",
- "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 414건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 12개 저널 코퍼스 117,597건",
+ "summary": "OpenAlex 실측 감시 [Korea Water Resources Corporation (South Korea)] — 논문 413건(2020~) · 7개 소 키워드 트렌드 추적 · 수자원 12개 저널 코퍼스 116,377건",
  "counts": {
-  "K-water 논문(실측)": 414,
-  "관련논문(최근1년)": 5155,
-  "12개 저널 코퍼스": 117597
+  "K-water 논문(실측)": 413,
+  "관련논문(최근1년)": 17191,
+  "12개 저널 코퍼스": 116377
  },
- "last_run": 1793773890,
+ "last_run": 1793821740,
  "next_run": "6시간 주기 (GitHub Actions)",
  "events": [
-  {
-   "ts": 1793192458,
-   "msg": "☁️ 정기 실측 — K-water 415건 · 관련(최근1년) 17,403건 · 저널 코퍼스 117,179건(12개) · 일부 오류 5"
-  },
   {
    "ts": 1793227101,
    "msg": "☁️ 정기 실측 — K-water 415건 · 관련(최근1년) 17,418건 · 저널 코퍼스 117,179건(12개)"
@@ -89,15 +85,11 @@
   {
    "ts": 1793773890,
    "msg": "☁️ 정기 실측 — K-water 414건 · 관련(최근1년) 5,155건 · 저널 코퍼스 117,597건(12개) · 일부 오류 7"
+  },
+  {
+   "ts": 1793821740,
+   "msg": "☁️ 정기 실측 — K-water 413건 · 관련(최근1년) 17,191건 · 저널 코퍼스 116,377건(12개)"
   }
  ],
- "last_errors": [
-  "INST-01: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Awater+utility+management%2Cfrom_publication_date%3A2022-01-01%2Cto_publication_d",
-  "INST-02: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Awater+resources+hydrology%2Cfrom_publication_date%3A2025-07-01&per-page=1&mailto",
-  "INST-03: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Adrinking+water+treatment%2Cfrom_publication_date%3A2025-07-01&per-page=1&mailto=",
-  "INST-04 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Apipeline+structural+health+water%2Cfrom_publication_date%3A2022-01-01%2Ct",
-  "INST-05 키워드 전체: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Asmall+hydro+turbine%2Cfrom_publication_date%3A2022-01-01%2Cto_publication",
-  "INST-06: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Asatellite+remote+sensing+water%2Cfrom_publication_date%3A2025-07-01&per-page=1&m",
-  "INST-07: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title_and_abstract.search%3Amachine+learning+hydrology%2Cfrom_publication_date%3A2025-07-01&per-page=1&mailt"
- ]
+ "last_errors": []
 }
