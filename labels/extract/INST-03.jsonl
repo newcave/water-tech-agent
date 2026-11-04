@@ -6390,3 +6390,16 @@
 {"id": "W4360599719", "object": "유기 오염물질", "problem": "유기 오염물질 제거의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4360620357", "object": "지하수에서의 비소 제거", "problem": "비소 농도 감소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4360603014", "object": "도시 수돗물 시스템에서의 소독 부산물", "problem": "소독 부산물 발생 제한", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225080830", "object": "고품질 수자원", "problem": "수질 및 중금속 오염 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225102374", "object": "음용수 처리 공장에서의 슬러지 관리 효율", "problem": "슬러지 배출 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225104079", "object": "지하수의 오염 상태", "problem": "수질 및 미생물 부하 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225105789", "object": "일본의 제2형 당뇨병 환자", "problem": "HbA1c < 7.0% 달성에 영향을 미치는 예측 인자 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225111176", "object": "중앙아시아의 물 공급 및 위생 서비스", "problem": "물 품질 개선 및 위생 서비스 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225117105", "object": "중국의 음용수 저수지에서의 질소 회계 및 결제 설계", "problem": "질소 제거 비용 및 수익 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225120371", "object": "PFAS 오염", "problem": "수원에서의 오염 원인 규명 및 예방", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225124623", "object": "호주 원주율 지역 사회의 음용수 안전성", "problem": "음용수 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225104399", "object": "알코올 사용 장애(AUD)", "problem": "알코올 소비 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225130533", "object": "Babelan District의 원수 공급 시스템", "problem": "원수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7132781908", "object": "실험실 쥐의 뇌", "problem": "항산화 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133170896", "object": "청소년 생쥐의 정서적 기억과 공간 기억 및 인식 기억", "problem": "BD 알코올로 인한 기억 손상 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312630726", "object": "동기 부여", "problem": "보상 유인 노력 수행의 개선", "relevant": true, "model": "gpt-4o-mini"}

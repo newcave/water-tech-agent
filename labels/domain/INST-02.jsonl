@@ -1806,3 +1806,9 @@
 {"id": "W4377082890", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Fairfax County의 수자원", "problem": "관리 관행의 효과 평가"}
 {"id": "W4366506986", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gwinnett County의 수질 및 수문 특성", "problem": "수질 및 수문 변화 분석"}
 {"id": "W4388196413", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Elk Hills Oil Field 인근의 지하수 자원", "problem": "지하수와 석유 및 가스 개발 간의 관계 이해하기"}
+{"id": "W7225115266", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Great Salt Lake의 South Arm", "problem": "South Arm의 염분 관리 및 모니터링 개선"}
+{"id": "W7222770570", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Rio Grande Valley의 수자원", "problem": "수자원 유지 방안 모색"}
+{"id": "W4318246781", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "핵 응용 및 기술", "problem": "AI를 활용한 효율성 및 정확성 향상"}
+{"id": "W4213115664", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 화학적 품질", "problem": "수자원 품질 개선 및 이해"}
+{"id": "W4281567064", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "영국의 기후 위험 평가 및 관리", "problem": "기후 변화에 따른 위험을 평가하고 관리하기"}
+{"id": "W4294882659", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 수문 기후", "problem": "수문 기후의 변동성 이해 및 물 가용성 정량화"}

@@ -1275,3 +1275,4 @@
 {"id": "W7224500056", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413452350", "object": "유역의 유량 예측", "problem": "모델 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4400055672", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4318246781", "object": "핵 응용 및 기술", "problem": "AI를 활용한 효율성 및 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}

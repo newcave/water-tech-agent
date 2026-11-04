@@ -1062,3 +1062,7 @@
 {"id": "W4388651541", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 조절 메커니즘 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4388640449", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 압력의 분자 상관관계 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4388651710", "object": "Drosophila의 깊은 수면 상태", "problem": "수면 독립적 효과를 고려한 수면 압력의 분자 상관관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225087444", "object": "댐 건설의 환경적 및 사회적 영향", "problem": "댐 건설로 인한 환경적 비용 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225116351", "object": "오그보모소의 수생 환경", "problem": "농약 잔여물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225124996", "object": "spillways", "problem": "체계적인 감시 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226016609", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

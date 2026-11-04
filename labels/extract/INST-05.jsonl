@@ -3267,3 +3267,8 @@
 {"id": "W4392471622", "object": "HVDC 전송 시스템", "problem": "연속 통신 실패 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391882995", "object": "농업의 물-에너지-식량 넥서스", "problem": "지속 가능한 자원 관리 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225058573", "object": "브라질의 재생 가능 에너지 발전 및 제한", "problem": "운영 및 정책 요인에 따른 발전 제한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225084488", "object": "재생 가능 에너지 채택", "problem": "국가 간 재생 가능 에너지 채택의 차이 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412952600", "object": "하류 진샤 강 저수지 그룹과 삼협 저수지의 홍수 수자원 활용", "problem": "예측 불확실성 하의 홍수 수자원 활용 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225097858", "object": "수력 발전 프로젝트", "problem": "디자인 및 계약 조건 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225121301", "object": "소수력 기반의 그린 수소 시스템", "problem": "전해조 용량 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225132225", "object": "Mada River의 수력 발전", "problem": "전력 공급의 기술적 타당성 재평가", "relevant": true, "model": "gpt-4o-mini"}

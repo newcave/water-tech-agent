@@ -3342,3 +3342,14 @@
 {"id": "W4320176500", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W4386711559", "object": "카타르의 탄소 포집 및 저장 가능성", "problem": "CO2 관리의 장기적 도전 과제 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4319987697", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225073230", "object": "자원 최적화 및 폐기물 감소", "problem": "효율적인 데이터 기반 의사결정으로 자원 소비 최소화 및 폐기물 발생 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225096676", "object": "지리정보 시스템", "problem": "지도 제작 자동화 및 데이터 수집 과정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225102990", "object": "도시 홍수", "problem": "홍수 피해를 줄이기 위한 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225115096", "object": "Hunsur Taluk의 식생 커버", "problem": "정확한 지역 규모의 식생 평가 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225124623", "object": "호주 원주율 지역 사회의 음용수 안전성", "problem": "음용수 품질 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225128865", "object": "지하수 자산 손실 및 수역 간 수분 이동", "problem": "구조적 저하 및 수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225129176", "object": "지역 시민 문제", "problem": "보고 및 해결 프로세스 조직화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203843696", "object": "두 개의 저수지의 수질", "problem": "수질 악화와 유해 남조류 성장 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224091370", "object": "수자원 관리에서의 온실가스 배출", "problem": "온실가스 배출 경로와 영향 요인 분석 및 측정 방법 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226089715", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4224988811", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

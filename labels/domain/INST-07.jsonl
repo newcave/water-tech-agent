@@ -1245,3 +1245,4 @@
 {"id": "W7224926078", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sacramento Soil Moisture Accounting (SAC-SMA)", "problem": "모델 평가 개선"}
 {"id": "W7224500056", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 및 에너지 교환", "problem": "모델 파라미터의 효과적인 값 결정"}
 {"id": "W4413452350", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 유량 예측", "problem": "모델 성능 향상"}
+{"id": "W4318246781", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "핵 응용 및 기술", "problem": "AI를 활용한 효율성 및 정확성 향상"}

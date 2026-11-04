@@ -5769,3 +5769,24 @@
 {"id": "W4327630710", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북서부 방글라데시의 밀 생산 시스템", "problem": "물 생산성 향상"}
 {"id": "W4313459902", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Urmia 호수의 수위 변화", "problem": "GRACE 데이터의 해상도 문제 해결"}
 {"id": "W4313594570", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티베트 고원에서의 에너지 및 물 교환 과정", "problem": "정확한 시공간 변동성 추정"}
+{"id": "W7225040480", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해안 수역의 탄소 분획", "problem": "탄소 분획을 매핑하는 방법 개발"}
+{"id": "W7225074106", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 관리 시스템", "problem": "AI를 통한 환경 모니터링 및 규제 준수 개선"}
+{"id": "W7225113456", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "호수 얼음의 눈 덮인 상태", "problem": "눈과 얼음 상호작용 이해하기"}
+{"id": "W7225078388", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "자연 자원 관리", "problem": "자원 악화 감소 조건 설명"}
+{"id": "W4293008096", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "위성 이미지의 대기 보정", "problem": "정확한 대기 보정을 통한 농업 생산성 향상"}
+{"id": "W4310689826", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "대규모 표면 유동 인공 습지", "problem": "재생수 개선 및 도시 빗물 처리"}
+{"id": "W4225876597", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 모니터링", "problem": "정확도 제한 문제 해결"}
+{"id": "W4226166764", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "전 세계 농경지의 총 생물 생산량", "problem": "농경지 GPP 추정의 정확성 향상"}
+{"id": "W4226453970", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 시스템의 물 생산성", "problem": "물 생산성 향상"}
+{"id": "W4225396330", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "플래시 가뭄", "problem": "정확한 플래시 가뭄 식별"}
+{"id": "W4221097269", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "굴 양식 지역", "problem": "적합한 양식 지역을 선택하기"}
+{"id": "W4220869174", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 대기에서의 해염 에어로졸", "problem": "해염 에어로졸의 양과 분포를 정량화하고 기후적 변동성을 이해하기"}
+{"id": "W4220873454", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북극 지역의 사회경제적 활동", "problem": "기후 변화에 따른 영향 평가"}
+{"id": "W4220884234", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 저장 변화", "problem": "위성 관측을 통한 수분 저장 변화 분석"}
+{"id": "W4206433097", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분", "problem": "정확한 토양 수분 패턴 생성"}
+{"id": "W4213377045", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "육상 탄소 순환 이해", "problem": "GPP 예측 개선"}
+{"id": "W4312426292", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대기 중 수증기 함량", "problem": "정확한 수증기 함량 모니터링"}
+{"id": "W4312472339", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 중국의 탁한 호수에서의 수질", "problem": "VIIRS 데이터로 수질 제품 개선"}
+{"id": "W4285260167", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티베트 고원의 얕은 호수", "problem": "호수 수심 추정 및 매핑 개선"}
+{"id": "W4311374496", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관개 시스템", "problem": "관개 시스템 분류"}
+{"id": "W4289792482", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lesser Slave Lake의 수면 수자원/얼음 동역학", "problem": "모니터링 및 변화 지도 생성"}

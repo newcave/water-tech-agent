@@ -1882,3 +1882,10 @@
 {"id": "W4377082890", "object": "Fairfax County의 수자원", "problem": "관리 관행의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4366506986", "object": "Gwinnett County의 수질 및 수문 특성", "problem": "수질 및 수문 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4388196413", "object": "Elk Hills Oil Field 인근의 지하수 자원", "problem": "지하수와 석유 및 가스 개발 간의 관계 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225115266", "object": "Great Salt Lake의 South Arm", "problem": "South Arm의 염분 관리 및 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222770570", "object": "Rio Grande Valley의 수자원", "problem": "수자원 유지 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4318246781", "object": "핵 응용 및 기술", "problem": "AI를 활용한 효율성 및 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213115664", "object": "수자원 화학적 품질", "problem": "수자원 품질 개선 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4206029034", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4281567064", "object": "영국의 기후 위험 평가 및 관리", "problem": "기후 변화에 따른 위험을 평가하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4294882659", "object": "지역 수문 기후", "problem": "수문 기후의 변동성 이해 및 물 가용성 정량화", "relevant": true, "model": "gpt-4o-mini"}
