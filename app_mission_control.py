@@ -65,7 +65,7 @@ st.session_state["_full_run_ts"] = time.time()      # 자동 새로고침 타이
 # ═══════════════════════ 설정 (확장 포인트) ═══════════════════════
 GITHUB_REPO = "newcave/water-tech-agent"
 LOCAL_SEED = Path("data_seed")
-APP_VERSION = "v3.17.1 · 2026-11-01"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
+APP_VERSION = "v3.17.2 · 2026-11-04"   # 화면·기능 추가는 v3.N, 이름·순서·문구 같은 작은 수정은 v3.N.x
 KN_PAGE = "📒 연구소 지식노트"
 AC_PAGE = "🎯 수집 달성도"
 HITL_PAGE = "K-water 문헌 적정성"            # HITL (전문가) 검토 — K-water 소속 논문 판정 게임 (사이드바 구분선 아래 별도 항목)
@@ -76,6 +76,24 @@ ASSET_PAGE = "🗄️ 지식자산 현황"                 # WCS 연구보고서
 KCIKW_PAGE = "🆚 K-water 비교(KCI)"              # 최근 5년 KCI — 연구소 분야별 K-water 논문 vs 국내 학회지 (kci_compare_page.py · kci_inst.json)
 CIT_PAGE = "🏅 피인용 질"                       # 연구소 관련 논문의 피인용 상위 10% 비중 (citation_page.py · openalex_trends.json *_top10)
 OA_PAGE = "🔭 상승 연구주제"                  # openalex 상승 연구주제 분석 결과 연동 (oa_rising_page.py · data_seed/oa_rising/)
+HEAL_JS = r'''<script>
+(function () {
+  /* 앱이 새로 배포된 뒤 오래 열린 탭은 예전 화면 파일(js 조각)을 찾다 실패한다 → 한 번만 새로고침 (2분 안 반복 없음) */
+  if (window.__wcaHeal) return; window.__wcaHeal = 1;
+  var PAT = /Failed to fetch dynamically imported module|Importing a module script failed|error loading dynamically imported module|Loading chunk [\w-]+ failed/i;
+  var KEY = "wca_heal_ts", busy = false;
+  function heal() {
+    try { var t = +(sessionStorage.getItem(KEY) || 0); if (Date.now() - t < 120000) return; sessionStorage.setItem(KEY, String(Date.now())); } catch (e) { return; }
+    location.reload();
+  }
+  window.addEventListener("unhandledrejection", function (e) { var r = e && e.reason; if (PAT.test(String((r && r.message) || r || ""))) heal(); });
+  window.addEventListener("error", function (e) { if (PAT.test(String((e && e.message) || ""))) heal(); }, true);
+  new MutationObserver(function () {
+    if (busy) return; busy = true;
+    setTimeout(function () { busy = false; if (PAT.test(document.body ? document.body.innerText : "")) heal(); }, 1500);
+  }).observe(document.body, { childList: true, subtree: true });
+})();
+</script>'''
 SHOWCASE_URL = "https://water-tech-agent2.streamlit.app"   # 홍보·시연용 쇼케이스 (newcave/water-tech-agent2, 2026-11-01)
 
 # Agent Flow 확인用 버튼 이름 (2026-10-26 사용자 지정 · 순서는 AGENT_FLOWS 순서)
@@ -177,6 +195,7 @@ html, body, [class*="st-"], [class*="css"] {font-family:'Noto Sans KR','Malgun G
 [data-testid="stSidebar"] .stButton button p {text-align:left; margin:0 !important; overflow:hidden; text-overflow:ellipsis;}
 [data-testid="stSidebar"] .stButton button[kind="primary"] {background:rgba(255,255,255,.30); border-style:solid;
   font-weight:700;}
+[data-testid="stSidebar"] .st-key-wca_heal, [data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.st-key-wca_heal) {display:none !important;}
 /* 쇼케이스 바로가기 (새 창) — 바깥 링크라 실선 테두리 (v3.17.1) */
 [data-testid="stSidebar"] [data-testid="stElementContainer"]:has(.stLinkButton) {width:100% !important; margin-bottom:-10px;}
 [data-testid="stSidebar"] .stLinkButton a {width:100%; justify-content:flex-start; border-radius:9px; padding:2px 10px !important;
@@ -626,6 +645,8 @@ with st.sidebar:
     auto = st.toggle("실시간 갱신 (30초)", value=True)
     st.caption(f"데이터 기준: {ago(summary.get('generated_at'))}")
     st.caption(APP_VERSION)
+    with st.container(key="wca_heal"):               # 배포 뒤 오래 열린 탭이 예전 화면 조각(js)을 찾다 실패하면 한 번만 새로고침 (v3.17.2)
+        st.html(HEAL_JS, unsafe_allow_javascript=True)
 
 # ═══════════════════════ 헤더 밴드 (공통) ═══════════════════════
 st.markdown(f"""<div class="hdr">
