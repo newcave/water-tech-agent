@@ -1,11 +1,6 @@
 {
  "history": [
   {
-   "ts": 1790604127,
-   "kwater": 413,
-   "related_1y": 2743
-  },
-  {
    "ts": 1790637532,
    "kwater": 413,
    "related_1y": 16940
@@ -717,74 +712,17 @@
    "kwater": 413,
    "related_1y": 17191,
    "journal_corpus": 116377
+  },
+  {
+   "ts": 1793861618,
+   "kwater": 413,
+   "related_1y": 11406,
+   "journal_corpus": 116377
   }
  ],
- "updated": 1793821740,
+ "updated": 1793861618,
  "window_from": "2025-07-01",
  "institutes": {
-  "INST-01": {
-   "name": "경영연구소",
-   "keyword": "water utility management",
-   "recent_1y": 2050,
-   "by_year": {
-    "2022": 608,
-    "2023": 692,
-    "2024": 935,
-    "2025": 1286,
-    "2026": 1437
-   },
-   "keywords": [
-    "water utility management",
-    "water policy governance",
-    "water economics pricing",
-    "water industry innovation",
-    "integrated water resources management policy"
-   ],
-   "by_kw": {
-    "water utility management": {
-     "2022": 608,
-     "2023": 692,
-     "2024": 935,
-     "2025": 1286,
-     "2026": 1437
-    },
-    "water policy governance": {
-     "2022": 678,
-     "2023": 814,
-     "2024": 1064,
-     "2025": 2729,
-     "2026": 4463
-    },
-    "water economics pricing": {
-     "2022": 84,
-     "2023": 86,
-     "2024": 99,
-     "2025": 112,
-     "2026": 232
-    },
-    "water industry innovation": {
-     "2022": 511,
-     "2023": 605,
-     "2024": 1022,
-     "2025": 1633,
-     "2026": 1386
-    },
-    "integrated water resources management policy": {
-     "2022": 261,
-     "2023": 245,
-     "2024": 415,
-     "2025": 734,
-     "2026": 803
-    }
-   },
-   "by_year_all": {
-    "2022": 1900,
-    "2023": 2173,
-    "2024": 3165,
-    "2025": 5761,
-    "2026": 7426
-   }
-  },
   "INST-02": {
    "name": "수자원환경연구소",
    "keyword": "water resources hydrology",
@@ -796,14 +734,13 @@
     "2025": 660,
     "2026": 643
    },
-   "keywords": [
-    "water resources hydrology",
-    "watershed management",
-    "river water quality",
-    "harmful algal bloom reservoir",
-    "aquatic ecosystem restoration",
-    "drought flood risk water"
-   ],
+   "by_year_all": {
+    "2022": 8563,
+    "2023": 9353,
+    "2024": 10445,
+    "2025": 13083,
+    "2026": 13348
+   },
    "by_kw": {
     "water resources hydrology": {
      "2022": 502,
@@ -848,13 +785,14 @@
      "2026": 1025
     }
    },
-   "by_year_all": {
-    "2022": 8563,
-    "2023": 9353,
-    "2024": 10445,
-    "2025": 13083,
-    "2026": 13348
-   }
+   "keywords": [
+    "water resources hydrology",
+    "watershed management",
+    "river water quality",
+    "harmful algal bloom reservoir",
+    "aquatic ecosystem restoration",
+    "drought flood risk water"
+   ]
   },
   "INST-03": {
    "name": "상하수도연구소",
@@ -867,14 +805,13 @@
     "2025": 4402,
     "2026": 4108
    },
-   "keywords": [
-    "drinking water treatment",
-    "water distribution network",
-    "membrane filtration water",
-    "sewage wastewater treatment",
-    "water quality sensor pipeline",
-    "non-revenue water leakage"
-   ],
+   "by_year_all": {
+    "2022": 9137,
+    "2023": 9308,
+    "2024": 10197,
+    "2025": 11540,
+    "2026": 12064
+   },
    "by_kw": {
     "drinking water treatment": {
      "2022": 3801,
@@ -919,207 +856,14 @@
      "2026": 66
     }
    },
-   "by_year_all": {
-    "2022": 9137,
-    "2023": 9308,
-    "2024": 10197,
-    "2025": 11540,
-    "2026": 12064
-   }
-  },
-  "INST-04": {
-   "name": "물인프라안전연구소",
-   "keyword": "dam safety monitoring",
-   "recent_1y": 805,
-   "by_year": {
-    "2022": 145,
-    "2023": 223,
-    "2024": 276,
-    "2025": 494,
-    "2026": 545
-   },
    "keywords": [
-    "dam safety monitoring",
-    "water infrastructure resilience",
-    "pipeline structural health water",
-    "seismic safety dam",
-    "aging water infrastructure",
-    "levee embankment safety"
-   ],
-   "by_kw": {
-    "dam safety monitoring": {
-     "2022": 145,
-     "2023": 223,
-     "2024": 276,
-     "2025": 494,
-     "2026": 545
-    },
-    "water infrastructure resilience": {
-     "2022": 503,
-     "2023": 597,
-     "2024": 1178,
-     "2025": 2925,
-     "2026": 4086
-    },
-    "pipeline structural health water": {
-     "2022": 21,
-     "2023": 10,
-     "2024": 23,
-     "2025": 34,
-     "2026": 64
-    },
-    "seismic safety dam": {
-     "2022": 81,
-     "2023": 77,
-     "2024": 108,
-     "2025": 221,
-     "2026": 203
-    },
-    "aging water infrastructure": {
-     "2022": 352,
-     "2023": 393,
-     "2024": 609,
-     "2025": 1014,
-     "2026": 1416
-    },
-    "levee embankment safety": {
-     "2022": 2,
-     "2023": 10,
-     "2024": 10,
-     "2025": 10,
-     "2026": 12
-    }
-   },
-   "by_kw_top10": {
-    "dam safety monitoring": {
-     "2022": 23,
-     "2023": 36,
-     "2024": 43,
-     "2025": 69,
-     "2026": 68
-    },
-    "water infrastructure resilience": {
-     "2022": 76,
-     "2023": 111,
-     "2024": 225,
-     "2025": 437,
-     "2026": 445
-    },
-    "pipeline structural health water": {
-     "2022": 2,
-     "2023": 2,
-     "2024": 1,
-     "2025": 3,
-     "2026": 6
-    },
-    "seismic safety dam": {
-     "2022": 6,
-     "2023": 7,
-     "2024": 6,
-     "2025": 13,
-     "2026": 20
-    },
-    "aging water infrastructure": {
-     "2022": 55,
-     "2023": 71,
-     "2024": 83,
-     "2025": 114,
-     "2026": 118
-    },
-    "levee embankment safety": {
-     "2022": 0,
-     "2023": 1,
-     "2024": 2,
-     "2025": 0,
-     "2026": 2
-    }
-   },
-   "cit_updated": 1793821740,
-   "by_year_all": {
-    "2022": 1031,
-    "2023": 1210,
-    "2024": 2063,
-    "2025": 4319,
-    "2026": 5845
-   },
-   "by_year_all_top10": {
-    "2022": 151,
-    "2023": 205,
-    "2024": 342,
-    "2025": 591,
-    "2026": 609
-   }
-  },
-  "INST-05": {
-   "name": "물에너지연구소",
-   "keyword": "hydropower generation",
-   "recent_1y": 2250,
-   "by_year": {
-    "2022": 956,
-    "2023": 997,
-    "2024": 1190,
-    "2025": 1450,
-    "2026": 1592
-   },
-   "keywords": [
-    "hydropower generation",
-    "pumped storage hydropower",
-    "floating photovoltaic reservoir",
-    "small hydro turbine",
-    "water energy nexus",
-    "green hydrogen water"
-   ],
-   "by_kw": {
-    "hydropower generation": {
-     "2022": 956,
-     "2023": 997,
-     "2024": 1190,
-     "2025": 1450,
-     "2026": 1592
-    },
-    "pumped storage hydropower": {
-     "2022": 197,
-     "2023": 215,
-     "2024": 300,
-     "2025": 363,
-     "2026": 464
-    },
-    "floating photovoltaic reservoir": {
-     "2022": 54,
-     "2023": 62,
-     "2024": 85,
-     "2025": 97,
-     "2026": 138
-    },
-    "small hydro turbine": {
-     "2022": 93,
-     "2023": 120,
-     "2024": 114,
-     "2025": 112,
-     "2026": 107
-    },
-    "water energy nexus": {
-     "2022": 955,
-     "2023": 898,
-     "2024": 1135,
-     "2025": 1204,
-     "2026": 1593
-    },
-    "green hydrogen water": {
-     "2022": 1591,
-     "2023": 2167,
-     "2024": 3052,
-     "2025": 3750,
-     "2026": 3845
-    }
-   },
-   "by_year_all": {
-    "2022": 3553,
-    "2023": 4090,
-    "2024": 5366,
-    "2025": 6354,
-    "2026": 7078
-   }
+    "drinking water treatment",
+    "water distribution network",
+    "membrane filtration water",
+    "sewage wastewater treatment",
+    "water quality sensor pipeline",
+    "non-revenue water leakage"
+   ]
   },
   "INST-06": {
    "name": "수자원위성연구소",
@@ -1132,14 +876,13 @@
     "2025": 2960,
     "2026": 3025
    },
-   "keywords": [
-    "satellite remote sensing water",
-    "SAR flood mapping",
-    "water body detection satellite",
-    "soil moisture satellite",
-    "river discharge remote sensing",
-    "water quality remote sensing"
-   ],
+   "by_year_all": {
+    "2022": 3018,
+    "2023": 3253,
+    "2024": 4146,
+    "2025": 5247,
+    "2026": 5914
+   },
    "by_kw": {
     "satellite remote sensing water": {
      "2022": 1722,
@@ -1184,84 +927,14 @@
      "2026": 1828
     }
    },
-   "by_year_all": {
-    "2022": 3018,
-    "2023": 3253,
-    "2024": 4146,
-    "2025": 5247,
-    "2026": 5914
-   }
-  },
-  "INST-07": {
-   "name": "AI연구소",
-   "keyword": "machine learning hydrology",
-   "recent_1y": 680,
-   "by_year": {
-    "2022": 151,
-    "2023": 199,
-    "2024": 281,
-    "2025": 385,
-    "2026": 510
-   },
    "keywords": [
-    "machine learning hydrology",
-    "deep learning water quality prediction",
-    "digital twin water system",
-    "AI water management",
-    "large language model water",
-    "anomaly detection water infrastructure"
-   ],
-   "by_kw": {
-    "machine learning hydrology": {
-     "2022": 151,
-     "2023": 199,
-     "2024": 281,
-     "2025": 385,
-     "2026": 510
-    },
-    "deep learning water quality prediction": {
-     "2022": 128,
-     "2023": 196,
-     "2024": 314,
-     "2025": 523,
-     "2026": 531
-    },
-    "digital twin water system": {
-     "2022": 138,
-     "2023": 213,
-     "2024": 339,
-     "2025": 665,
-     "2026": 1264
-    },
-    "AI water management": {
-     "2022": 231,
-     "2023": 417,
-     "2024": 992,
-     "2025": 2492,
-     "2026": 3219
-    },
-    "large language model water": {
-     "2022": 95,
-     "2023": 145,
-     "2024": 179,
-     "2025": 380,
-     "2026": 883
-    },
-    "anomaly detection water infrastructure": {
-     "2022": 29,
-     "2023": 42,
-     "2024": 85,
-     "2025": 225,
-     "2026": 340
-    }
-   },
-   "by_year_all": {
-    "2022": 698,
-    "2023": 1060,
-    "2024": 1922,
-    "2025": 4062,
-    "2026": 5681
-   }
+    "satellite remote sensing water",
+    "SAR flood mapping",
+    "water body detection satellite",
+    "soil moisture satellite",
+    "river discharge remote sensing",
+    "water quality remote sensing"
+   ]
   }
  },
  "journals": {
