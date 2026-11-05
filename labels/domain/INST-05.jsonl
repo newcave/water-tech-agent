@@ -3197,3 +3197,22 @@
 {"id": "W7225097858", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 프로젝트", "problem": "디자인 및 계약 조건 최적화"}
 {"id": "W7225121301", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소수력 기반의 그린 수소 시스템", "problem": "전해조 용량 최적화"}
 {"id": "W7225132225", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mada River의 수력 발전", "problem": "전력 공급의 기술적 타당성 재평가"}
+{"id": "W7225153687", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아르키메데스 나사 터빈의 성능", "problem": "제조 공차로 인한 최대 효율 점의 변화"}
+{"id": "W7225110734", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 공급의 신뢰성과 지속 가능성", "problem": "전력 생산의 다양화 및 화석 연료 의존도 감소"}
+{"id": "W7167887824", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유럽의 전력 시스템", "problem": "수소 의존도 감소"}
+{"id": "W7167893997", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 용량", "problem": "용량 제약 수정에 따른 물 가치 변화"}
+{"id": "W7167903390", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르딕 전력 시장의 수력 발전 스케줄링", "problem": "수력 발전 스케줄링의 복잡성 해결"}
+{"id": "W7167903825", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이의 수력 발전 시스템", "problem": "유연한 용량을 통한 단기 변동성 균형"}
+{"id": "W7167908251", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에너지 시스템의 운영 조건", "problem": "기후 변화가 에너지 시스템 계획에 포함되어야 하는 시점 파악"}
+{"id": "W7167913823", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전의 입찰 곡선", "problem": "시간 지연의 영향을 분석하기"}
+{"id": "W7167919741", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남동유럽의 전력망 혼잡 비용", "problem": "혼잡 비용의 원인 분석"}
+{"id": "W7167926668", "domain_primary": "W2", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 댐의 홍수 관리", "problem": "홍수 완화 목표를 운영 일정 모델에 통합하기"}
+{"id": "W7167929145", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "퀘벡의 수력 발전 시스템", "problem": "단기 수력 발전 스케줄링 문제 해결"}
+{"id": "W7167945019", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 입찰", "problem": "수익성과 운영 가능성을 고려한 입찰 최적화"}
+{"id": "W7167951027", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 수력 발전 및 배터리 에너지 저장 시스템", "problem": "에너지 및 보조 서비스 시장 참여를 위한 최적 스케줄링"}
+{"id": "W7167963795", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "노르웨이 전력 시장", "problem": "전기 가격 영향 분석"}
+{"id": "W7225045876", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이라크의 재생 가능 에너지 시스템", "problem": "세금 시스템 평가 및 투자 촉진 방안 모색"}
+{"id": "W7164882490", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 전력 공급 능력", "problem": "수력 발전소의 수자원 조절 수요를 충족시키기"}
+{"id": "W7164895347", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력망의 안전성과 안정성", "problem": "전력 출력 안정성 개선"}
+{"id": "W7169772287", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템 운영", "problem": "불확실성 감소"}
+{"id": "W7121280006", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 저수지 수위", "problem": "정확한 예측"}

@@ -6403,3 +6403,15 @@
 {"id": "W7132781908", "object": "실험실 쥐의 뇌", "problem": "항산화 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7133170896", "object": "청소년 생쥐의 정서적 기억과 공간 기억 및 인식 기억", "problem": "BD 알코올로 인한 기억 손상 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4312630726", "object": "동기 부여", "problem": "보상 유인 노력 수행의 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225151048", "object": "장내 장벽의 무결성", "problem": "편두통 유사 통증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225174440", "object": "식품과 안전한 음용수에 대한 보편적 평등 보호", "problem": "예방 가능한 위해로부터 보호", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225177689", "object": "원시 바이오가스", "problem": "이산화탄소 및 불순물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225184278", "object": "수면수의 미생물 품질 및 인간 건강 위험", "problem": "수면수의 오염과 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225186861", "object": "세차 폐수", "problem": "세차 폐수 처리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225188869", "object": "미세플라스틱", "problem": "미세플라스틱의 이동 및 정체 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225151102", "object": "내륙 및 해안 샘물의 미생물 안전성", "problem": "미생물 오염 수준 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225166762", "object": "가돌리늄 오염", "problem": "환경에서의 가돌리늄의 순환 및 인간과 식물과의 상호작용 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225193952", "object": "Tapi 강의 수질", "problem": "수질 악화 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225172513", "object": "궤양성 대장염", "problem": "치료 효과 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214088107", "object": "티푸스", "problem": "공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7132839323", "object": "Yucatán 반도 해안 카르스트 대수층의 수질", "problem": "오염물질의 분포와 농도 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}

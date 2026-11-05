@@ -1812,3 +1812,8 @@
 {"id": "W4213115664", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 화학적 품질", "problem": "수자원 품질 개선 및 이해"}
 {"id": "W4281567064", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "영국의 기후 위험 평가 및 관리", "problem": "기후 변화에 따른 위험을 평가하고 관리하기"}
 {"id": "W4294882659", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 수문 기후", "problem": "수문 기후의 변동성 이해 및 물 가용성 정량화"}
+{"id": "W7196992188", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lower Most Omo River sub watershed", "problem": "토지 피복 변화와 하천 변화의 관계 이해"}
+{"id": "W7215069361", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고대 건조 환경에서의 인간 이동성과 사회적 상호작용", "problem": "물 자원의 변동이 사회적 유대에 미치는 영향 분석"}
+{"id": "W7223894962", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water", "problem": "수체 모니터링 및 변화 탐지"}
+{"id": "W7132845226", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지표수, 토양수, 지하수의 상호작용", "problem": "모델의 정확도와 예측 능력 향상"}
+{"id": "W7168280549", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북반구 산악 지역의 눈 깊이", "problem": "눈 깊이 모니터링의 한계 해결"}

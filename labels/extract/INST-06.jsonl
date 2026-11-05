@@ -5840,3 +5840,13 @@
 {"id": "W4285260167", "object": "티베트 고원의 얕은 호수", "problem": "호수 수심 추정 및 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4311374496", "object": "관개 시스템", "problem": "관개 시스템 분류", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4289792482", "object": "Lesser Slave Lake의 수면 수자원/얼음 동역학", "problem": "모니터링 및 변화 지도 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212418394", "object": "Phragmites australis의 탄소 저장 잠재력", "problem": "탄소 저장 용량을 정량화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225079686", "object": "스웨덴 내수 수질", "problem": "신뢰할 수 있는 수질 예측을 위한 데이터 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225196805", "object": "Cauvery River Basin의 수자원", "problem": "수자원 관리 개선을 위한 수문학적 반응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225087698", "object": "구름 분류 연구", "problem": "구름 상태 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225104556", "object": "홍수 피해 평가 및 경고 시스템", "problem": "홍수 경고 및 피해 평가 지연 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225142030", "object": "해안 생태계", "problem": "변화 모니터링을 위한 적절한 센서 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224736355", "object": "우크라이나 스텝 지역의 수생 생태계", "problem": "수생 생태계의 변화와 수자원 고갈 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225108739", "object": "토양 비옥도", "problem": "토양 비옥도 개선을 위한 문제 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221802908", "object": "지중해 숲", "problem": "기후 변화와 인간 압력으로 인한 생태계 퇴화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7130524156", "object": "Padma 강의 은행 형태", "problem": "강변 형태 변화와 사회환경적 영향 조사", "relevant": true, "model": "gpt-4o-mini"}

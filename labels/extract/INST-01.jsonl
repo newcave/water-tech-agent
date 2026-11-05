@@ -3353,3 +3353,16 @@
 {"id": "W4224091370", "object": "수자원 관리에서의 온실가스 배출", "problem": "온실가스 배출 경로와 영향 요인 분석 및 측정 방법 제공", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4226089715", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W4224988811", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225173731", "object": "하수 시스템의 침투 및 유입 관리", "problem": "침투 및 유입수 관리의 복잡한 의사결정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225176002", "object": "인도의 공공 인프라", "problem": "안전한 운영과 효율적인 사용 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225194420", "object": "우크라이나의 수자원 공공 서비스", "problem": "전시 상황에서 에너지 효율성 개선 및 자율성 강화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225087698", "object": "구름 분류 연구", "problem": "구름의 상태 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225094339", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7224566155", "object": "물 분배 네트워크의 물 손실", "problem": "압력 변동에 따른 물 손실 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7172282303", "object": "Chicamocha 강의 미생물 군집", "problem": "인간 활동에 따른 미생물 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7168139851", "object": "하수관의 수명 예측", "problem": "하수관의 수명 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169510177", "object": "중요 인프라의 신원 관리 및 접근 제어", "problem": "신원 취약점으로 인한 기업 침해 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154953525", "object": "지하수 역학", "problem": "지하수 시스템의 동적 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165740467", "object": "쌀 생산에서의 자원 사용 효율성", "problem": "비료 투입량 감소 및 수확량 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7168414068", "object": "물의 안전성 및 미네랄 분석", "problem": "전통적인 수질 평가 방법의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127038546", "object": "Terrassa의 물 서비스", "problem": "공공 자원의 공유 및 공동체 이익을 위한 재조정", "relevant": true, "model": "gpt-4o-mini"}

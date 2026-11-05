@@ -5790,3 +5790,13 @@
 {"id": "W4285260167", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티베트 고원의 얕은 호수", "problem": "호수 수심 추정 및 매핑 개선"}
 {"id": "W4311374496", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관개 시스템", "problem": "관개 시스템 분류"}
 {"id": "W4289792482", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lesser Slave Lake의 수면 수자원/얼음 동역학", "problem": "모니터링 및 변화 지도 생성"}
+{"id": "W7212418394", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Phragmites australis의 탄소 저장 잠재력", "problem": "탄소 저장 용량을 정량화하기"}
+{"id": "W7225079686", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스웨덴 내수 수질", "problem": "신뢰할 수 있는 수질 예측을 위한 데이터 통합"}
+{"id": "W7225196805", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cauvery River Basin의 수자원", "problem": "수자원 관리 개선을 위한 수문학적 반응 평가"}
+{"id": "W7225087698", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "구름 분류 연구", "problem": "구름 상태 모니터링 개선"}
+{"id": "W7225104556", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 피해 평가 및 경고 시스템", "problem": "홍수 경고 및 피해 평가 지연 문제 해결"}
+{"id": "W7225142030", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안 생태계", "problem": "변화 모니터링을 위한 적절한 센서 선택"}
+{"id": "W7224736355", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나 스텝 지역의 수생 생태계", "problem": "수생 생태계의 변화와 수자원 고갈 문제 해결"}
+{"id": "W7225108739", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 비옥도", "problem": "토양 비옥도 개선을 위한 문제 파악"}
+{"id": "W7221802908", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지중해 숲", "problem": "기후 변화와 인간 압력으로 인한 생태계 퇴화 이해"}
+{"id": "W7130524156", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Padma 강의 은행 형태", "problem": "강변 형태 변화와 사회환경적 영향 조사"}
