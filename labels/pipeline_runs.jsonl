@@ -360,3 +360,4 @@
 {"ts": "2026-11-05T07:34:46Z", "forward": 36, "hist_year": 2026, "hist": 50, "backfilled": 86, "extracted": 71, "assigned": 70, "total": 22722, "failures": 64, "duration_s": 439}
 {"ts": "2026-11-05T20:19:24Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 22722, "failures": 0, "duration_s": 2}
 {"ts": "2026-11-06T07:34:06Z", "forward": 42, "hist_year": 2025, "hist": 64, "backfilled": 106, "extracted": 94, "assigned": 91, "total": 22813, "failures": 43, "duration_s": 426}
+{"ts": "2026-11-06T19:43:52Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 22813, "failures": 0, "duration_s": 1}
