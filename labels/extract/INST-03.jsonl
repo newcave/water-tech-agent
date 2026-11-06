@@ -6415,3 +6415,29 @@
 {"id": "W7225172513", "object": "궤양성 대장염", "problem": "치료 효과 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7214088107", "object": "티푸스", "problem": "공중 보건 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7132839323", "object": "Yucatán 반도 해안 카르스트 대수층의 수질", "problem": "오염물질의 분포와 농도 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225250027", "object": "음용수 슬러지", "problem": "지속 가능한 재활용 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225232839", "object": "막 여과 시스템", "problem": "원료의 분리 및 농축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225236128", "object": "어린이 설사", "problem": "위험 요인 조사 및 전통 약용 식물 문서화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225238672", "object": "상업용 RO 플랜트", "problem": "물의 품질을 개선하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225242004", "object": "음용수 처리 성능", "problem": "응집제 용량 예측 및 해석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225245565", "object": "고순도 물 생산을 위한 EDI 정수 시스템", "problem": "고순도 물의 지속적인 공급을 위한 해결책 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225246438", "object": "부탄의 열대 아시아 지역 성인", "problem": "레프토스피라 노출 추정 및 위험 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225247268", "object": "Wistar 쥐의 혈액학적 지표", "problem": "고염식이로 인한 변화 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225267020", "object": "하천 하구의 지하수", "problem": "지하수의 지질학적 염분과 분변 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225272244", "object": "담수 시스템의 미세플라스틱 및 플라스틱 첨가물 오염", "problem": "미세플라스틱과 플라스틱 첨가물의 특성 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225164823", "object": "염소화 폴리염화비닐(CPVC) 막", "problem": "상업적으로 유효한 막 재료 범위 확장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225192746", "object": "Quilombola 커뮤니티의 물과 기본 위생", "problem": "물의 질과 접근성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225180537", "object": "음용수에서의 퍼플루오로알킬물질(PFAS)", "problem": "인간 건강 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225189921", "object": "1차 개방각 녹내장 환자", "problem": "안압 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225262760", "object": "수크랄로스의 생태독성", "problem": "수생 환경에서의 수크랄로스의 잠재적 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225265266", "object": "인도네시아의 음용수 품질", "problem": "미생물 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225275412", "object": "브로일러 닭의 성장 성능", "problem": "EM4 보충의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225275458", "object": "음용수의 미세플라스틱 오염", "problem": "미세플라스틱 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415748232", "object": "해안 지역의 농업과 수자원", "problem": "염분 침입에 대한 적응 전략의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7104048829", "object": "상수원에서의 살모넬라 오염", "problem": "상수원에서 살모넬라의 존재와 항생제 내성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161104902", "object": "하이브리드 처리 시스템에서의 미생물 군집 구조", "problem": "NSAIDs 제거 효율 평가 및 미생물 군집에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410615170", "object": "음용수의 생물학적 안정성", "problem": "생물학적 안정성 손실 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410259532", "object": "파키스탄의 수자원", "problem": "수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409717367", "object": "음용수 취수 시설의 수질", "problem": "수질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409722810", "object": "식수의 Cryptosporidium parvum oocysts", "problem": "오염 감소 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407723237", "object": "음용수 처리에서의 미생물 생태계", "problem": "미생물 군집의 생태적 역학 이해하기", "relevant": true, "model": "gpt-4o-mini"}

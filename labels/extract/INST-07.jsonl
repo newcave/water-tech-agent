@@ -1280,3 +1280,5 @@
 {"id": "W7220473546", "object": "토양 수분", "problem": "GNSS-R 모델의 예측을 해석하기 위한 비위치 예측 변수와 위치 의존적 반응의 구분", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221730984", "object": "일리노이 주의 수질", "problem": "인산염 오염 추세 분석 및 영향 요인 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221787826", "object": "산업 시스템의 복잡성과 자원 관리", "problem": "다양한 공학 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222917683", "object": "Upper Vistula River system", "problem": "저유량 조건의 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222377561", "object": "Dry Creek 유역의 수계 시스템", "problem": "도시화와 기후 변동이 수계 시스템에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}

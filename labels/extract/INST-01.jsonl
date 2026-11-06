@@ -3366,3 +3366,14 @@
 {"id": "W7165740467", "object": "쌀 생산에서의 자원 사용 효율성", "problem": "비료 투입량 감소 및 수확량 증가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7168414068", "object": "물의 안전성 및 미네랄 분석", "problem": "전통적인 수질 평가 방법의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7127038546", "object": "Terrassa의 물 서비스", "problem": "공공 자원의 공유 및 공동체 이익을 위한 재조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225238672", "object": "상업용 RO 플랜트", "problem": "물의 품질을 개선하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225245755", "object": "쿠웨이트의 담수 공급 시스템", "problem": "담수 공급의 최적화 및 제약 조건 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225234376", "object": "비수익수(Non-Revenue Water)", "problem": "예측 및 운영 제어", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225144888", "object": "다기능 건조 및 반건조 경관", "problem": "경관 구조 재조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225232472", "object": "고혈압 관리", "problem": "약물 복용 순응도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417265963", "object": "포도나무 뿌리 시스템 아키텍처", "problem": "토양 변동성이 포도나무 뿌리 시스템에 미치는 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213993837", "object": "물 공급 시스템의 누수 및 파열", "problem": "누수 및 파열 탐지 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413286810", "object": "도시 수돗물 배관 시스템", "problem": "배관 고장 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7169805274", "object": "수자원 공급 모니터링", "problem": "전통적인 수자원 모니터링 시스템의 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414344030", "object": "발리의 수자원 관리", "problem": "환경적 고려와 조화를 이루는 정책 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414039381", "object": "식물 생물 보안 위협", "problem": "생물 보안 위협 탐지", "relevant": true, "model": "gpt-4o-mini"}

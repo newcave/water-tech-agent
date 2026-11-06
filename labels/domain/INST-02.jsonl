@@ -1817,3 +1817,11 @@
 {"id": "W7223894962", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water", "problem": "수체 모니터링 및 변화 탐지"}
 {"id": "W7132845226", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지표수, 토양수, 지하수의 상호작용", "problem": "모델의 정확도와 예측 능력 향상"}
 {"id": "W7168280549", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북반구 산악 지역의 눈 깊이", "problem": "눈 깊이 모니터링의 한계 해결"}
+{"id": "W7225255774", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캠퍼스의 폭풍우 관리 및 지속 가능성", "problem": "폭풍우를 자원으로 전환하기 위한 연구"}
+{"id": "W7225260126", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 개발의 수자원 적합성", "problem": "수자원 제약을 고려한 도시 성장 평가"}
+{"id": "W7225273875", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "트리니다드의 수자원", "problem": "수자원의 동위원소 변동성 이해"}
+{"id": "W4415762926", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분 및 지하수", "problem": "극한 강우 및 인공 재충전 기간 동안의 상호작용 이해"}
+{"id": "W7225258068", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 건강과 지속 가능성", "problem": "유역 관리 결정을 개선하기 위한 방법과 지표 검토"}
+{"id": "W7225245941", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 이해하기"}
+{"id": "W4417213974", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비가뇨수집 저수지 위치", "problem": "최적 위치 식별하기"}
+{"id": "W4406779288", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제3극의 수자원", "problem": "환경 변화에 대한 수자원, 사람, 생태계의 반응 이해하기"}

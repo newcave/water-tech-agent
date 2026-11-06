@@ -3291,3 +3291,16 @@
 {"id": "W7164895347", "object": "전력망의 안전성과 안정성", "problem": "전력 출력 안정성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7169772287", "object": "전력 시스템 운영", "problem": "불확실성 감소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7121280006", "object": "수력 발전소의 저수지 수위", "problem": "정확한 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225258744", "object": "로키산맥 지역의 펌프 저장 수력 발전소", "problem": "잠재적 치명적 결함을 피하기 위한 부지 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225254462", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225265196", "object": "에너지 전환", "problem": "생물 다양성에 미치는 영향 고려하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225271839", "object": "네팔의 에너지, 토지, 물, 농업 시스템", "problem": "기후 변화에 따른 위험과 지속 가능한 발전의 균형을 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165738968", "object": "온두라스의 에너지 배급 시스템", "problem": "기후 변화로 인한 에너지 비용 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225029346", "object": "소규모 재생 가능 에너지 시스템", "problem": "마이크로 터빈의 효율성과 전력 출력을 비교하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225220243", "object": "아이슬란드의 육상 풍력 에너지 프로젝트 위치", "problem": "위치 선택에 영향을 미치는 기준 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409320428", "object": "도시 녹지 공간", "problem": "재생 가능 에너지 적용의 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165020749", "object": "스코틀랜드 수력 발전소의 터빈 성능", "problem": "터빈이 정격 용량 이하로 떨어지는 시간 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220188666", "object": "알바니아의 태양광 에너지 전환", "problem": "민간 부문의 역할을 탐구하고 투자 장벽을 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413845255", "object": "계단식 수력 발전소", "problem": "전력 생산 시 물 소비 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159745062", "object": "Türkiye의 전기차와 내연기관차의 환경적 영향", "problem": "장기적인 환경 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411072964", "object": "온두라스의 수력 발전을 통한 녹색 수소 생산", "problem": "전력망 안정화를 위한 대체 에너지 솔루션 모색", "relevant": true, "model": "gpt-4o-mini"}

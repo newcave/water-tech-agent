@@ -5850,3 +5850,34 @@
 {"id": "W7225108739", "object": "토양 비옥도", "problem": "토양 비옥도 개선을 위한 문제 파악", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221802908", "object": "지중해 숲", "problem": "기후 변화와 인간 압력으로 인한 생태계 퇴화 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7130524156", "object": "Padma 강의 은행 형태", "problem": "강변 형태 변화와 사회환경적 영향 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405978345", "object": "내륙 및 연안 수역의 수질", "problem": "위성 이미지에서 원격 감지 반사율을 정확하게 도출하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215882461", "object": "Lower Amu Darya State Biosphere Reserve", "problem": "모니터링 및 시각화 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225226972", "object": "환경 모니터링", "problem": "지속 가능한 환경 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225233379", "object": "호수 수질 매개변수", "problem": "화산 플룸의 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225234635", "object": "중국 연안 수역의 용존 무기 질소 및 인 데이터셋", "problem": "정확한 수질 모니터링 및 분석을 위한 데이터 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225259707", "object": "Case-1 optically shallow waters", "problem": "정확한 수심 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225273666", "object": "노후 도시 주거 지역의 건물 결함", "problem": "건물 결함 식별 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225272512", "object": "농업 시스템", "problem": "생산성 및 자원 효율성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117358658", "object": "카라칼팍스탄의 식생 및 가뭄", "problem": "식생 변화 분석 및 가뭄 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415342574", "object": "산림과 수자원 간의 관계", "problem": "산림 조작에 대한 유량 반응 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215806352", "object": "도시화가 미치는 토지 이용 및 토지 피복 변화", "problem": "도시화의 부정적 영향을 완화하기 위한 효과적인 계획 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412749490", "object": "La Caimanera marsh의 맹그로브 생태계", "problem": "계절 변화에 따른 식생 피복 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411418816", "object": "휴스턴, 텍사스의 얕은 대류 구름", "problem": "얕은 대류 구름의 시공간 변동성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411433419", "object": "지하수 잠재력 구역", "problem": "지하수 개발 실패 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221566266", "object": "비하르 주의 도시화, 토지 변화 및 환경 품질", "problem": "불균형한 도시화 및 환경 품질 분포 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409306337", "object": "요르단의 농업 부문", "problem": "기후 변동성이 농작물 수확량에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409231898", "object": "북미 서부의 빙하", "problem": "최대 연간 일시적 눈선 고도 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409214406", "object": "Buzwagi 금광 지역의 토지 이용 및 토지 피복", "problem": "토지 이용 및 피복 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410295175", "object": "수역", "problem": "정확한 수역 추출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412010532", "object": "Mamu River Forest Reserve", "problem": "LULC 변화로 인한 환경 악화 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409181614", "object": "Kargil Town의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화로 인한 생태계 위협", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408467235", "object": "견과류 과수원에서의 수분 증발량 모니터링", "problem": "일일 수분 증발량 추정의 불확실성 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408429244", "object": "태양계 행성과 위성의 역학", "problem": "행성과 위성의 대기 안정성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407760639", "object": "해양 색상 원격 감지에서의 해양 반사율", "problem": "BRDF 효과를 고려한 해양 반사율 보정 방법 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407388576", "object": "위성 해수면 바람", "problem": "고해상도 해수면 바람 필드 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410225114", "object": "브라질 동남부의 열대 초원", "problem": "온실가스 배출 및 물 사용 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406241851", "object": "2022년 인더스 강 유역의 홍수", "problem": "홍수의 발생 및 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406281463", "object": "지중해 숲의 생태계 증발산", "problem": "화재로 인한 증발산 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406166828", "object": "우레마 호수와 그 주변의 수자원", "problem": "수자원 변화 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408703475", "object": "인도양의 고래", "problem": "정확한 탐지 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406174838", "object": "로스앤젤레스 해안 수역의 수질", "problem": "위성 데이터와 기계 학습을 통한 탁도 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
