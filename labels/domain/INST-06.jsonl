@@ -5831,3 +5831,14 @@
 {"id": "W4406166828", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우레마 호수와 그 주변의 수자원", "problem": "수자원 변화 추정"}
 {"id": "W4408703475", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도양의 고래", "problem": "정확한 탐지 및 모니터링"}
 {"id": "W4406174838", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "로스앤젤레스 해안 수역의 수질", "problem": "위성 데이터와 기계 학습을 통한 탁도 모니터링 개선"}
+{"id": "W7225317101", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "알 아인 지역의 날짜 야자 확장을 위한 토지 우선순위", "problem": "지역 내 토지 및 수자원 평가 전 지역 스크리닝 필요"}
+{"id": "W7225341683", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Dongting Lake의 냉각 서비스", "problem": "물 손실이 냉각 서비스 감소에 미치는 영향 이해하기"}
+{"id": "W7225228195", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "호수 얼음 위의 눈 덮개", "problem": "눈과 얼음 상호작용 이해하기"}
+{"id": "W7225299369", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북부 카스피 해안선", "problem": "해안선 변화 모니터링 및 예측"}
+{"id": "W2288030514", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해안 업welling 시스템", "problem": "해안 업welling 반응 이해하기"}
+{"id": "W4397044380", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관개 시스템의 물 사용 효율", "problem": "관개 관행 개선 필요"}
+{"id": "W7120384520", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cerrado의 자연 자원 관리", "problem": "정확한 생물량 및 탄소 추정"}
+{"id": "W4394568496", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업의 영양 및 관개 물 관리", "problem": "지속 가능하고 효율적인 자원 관리 필요"}
+{"id": "W4392239183", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남극의 빙붕", "problem": "빙붕의 균열 속도 제한 이해하기"}
+{"id": "W4391515542", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Guangüiltagua Metropolitan Park의 생태계 건강", "problem": "식생 건강 평가 및 물 부족 탐지"}
+{"id": "W4393028527", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 모델 및 수치 기상 예측 개선", "problem": "정확한 기상 변수 측정"}

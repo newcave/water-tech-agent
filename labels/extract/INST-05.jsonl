@@ -3304,3 +3304,16 @@
 {"id": "W4413845255", "object": "계단식 수력 발전소", "problem": "전력 생산 시 물 소비 최소화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7159745062", "object": "Türkiye의 전기차와 내연기관차의 환경적 영향", "problem": "장기적인 환경 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4411072964", "object": "온두라스의 수력 발전을 통한 녹색 수소 생산", "problem": "전력망 안정화를 위한 대체 에너지 솔루션 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225299476", "object": "전 세계 수력 발전 프로젝트", "problem": "전력 생산과 강의 영향 간의 균형 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225309835", "object": "하천 댐의 수력 에너지", "problem": "전기 생산을 위한 에너지 회수", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225331782", "object": "전력망의 재생 가능 에너지 생성", "problem": "이론적 생성과 실제 주입 간의 차이 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403279089", "object": "재생 가능 에너지 기술과 스마트 그리드", "problem": "에너지 경관의 변화를 이끌다", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400345067", "object": "브라질의 물 공급 및 위생 서비스", "problem": "물 공급 및 위생 서비스의 개선과 회복력 강화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399306624", "object": "미국의 수로 수력 발전", "problem": "수력 발전 잠재력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392465817", "object": "수자원 분배 시스템", "problem": "수압 조절 중 에너지 손실 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392449457", "object": "탄소 중립 항구", "problem": "CO2 배출 감소를 위한 수소 수요 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7113686954", "object": "Ceyhan Basin의 수력 발전", "problem": "기후 변화가 수력 발전에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390613507", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4401121871", "object": "댐 안전 관리 시스템", "problem": "댐 안전 모니터링 및 관리 플랫폼 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405962939", "object": "우크라이나의 분산 에너지 시스템", "problem": "분산 에너지 시스템으로의 전환 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403066627", "object": "댐의 테일레이스에서의 수력 발전", "problem": "소수력 발전의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}

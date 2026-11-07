@@ -3377,3 +3377,14 @@
 {"id": "W7169805274", "object": "수자원 공급 모니터링", "problem": "전통적인 수자원 모니터링 시스템의 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4414344030", "object": "발리의 수자원 관리", "problem": "환경적 고려와 조화를 이루는 정책 수립", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4414039381", "object": "식물 생물 보안 위협", "problem": "생물 보안 위협 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225308840", "object": "비수익수(Non-Revenue Water) 관리", "problem": "누수 탐지 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225309485", "object": "생태계 지속 가능성 및 건강 문제", "problem": "자연 유래 바이오흡착제의 활용 가능성 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225290056", "object": "사우디 아라비아의 화학 제조업에서의 물 자원 관리", "problem": "지속 가능한 물 자원 활용 및 제로 액체 배출 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224129753", "object": "TFA(트리플루오로아세테이트)", "problem": "TFA 제거 효율과 잔여물 관리 균형 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7157516803", "object": "이스탄불의 도시화된 유역", "problem": "비가 물 관리 시스템 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405098151", "object": "토양의 식물 이용 가능 수분 용량 (PAWC)", "problem": "PAWC 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W31265743", "object": "온대 암초 어류의 분산 및 개체군 연결성", "problem": "분산 및 개체군 연결성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135156092", "object": "환경 정의", "problem": "기술을 통한 환경 건강 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392782188", "object": "몰디브의 자연 자본과 환경 관리", "problem": "지속 가능한 블루 경제로의 전환을 위한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407774182", "object": "농작물 증발산", "problem": "정확한 증발산 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405409995", "object": "수돗물 서비스 제공", "problem": "서비스 제공 개선", "relevant": true, "model": "gpt-4o-mini"}

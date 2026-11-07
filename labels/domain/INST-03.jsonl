@@ -6336,3 +6336,25 @@
 {"id": "W4409717367", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 취수 시설의 수질", "problem": "수질 저하 문제 해결"}
 {"id": "W4409722810", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 Cryptosporidium parvum oocysts", "problem": "오염 감소 예측"}
 {"id": "W4407723237", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리에서의 미생물 생태계", "problem": "미생물 군집의 생태적 역학 이해하기"}
+{"id": "W7225291755", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wistar 쥐의 생리적 및 영양적 반응", "problem": "식이 보충제의 효과 평가"}
+{"id": "W7225324519", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Romi River의 수질", "problem": "물리화학적 오염 및 PAH 오염 해결"}
+{"id": "W7225328345", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 질", "problem": "에피제네틱 요인에 미치는 영향 조사"}
+{"id": "W7225331169", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하천의 내수 및 수돗물에서의 내분비 활성 화합물", "problem": "환경 오염물의 감소 및 이해"}
+{"id": "W7225346085", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소독 부산물(DBPs)", "problem": "DBPs의 독성 이해 부족 해결하기"}
+{"id": "W7225360651", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수", "problem": "항생제 내성 세균의 발생 및 분포 평가"}
+{"id": "W7225226031", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "비대칭 수돗물 시스템에서의 미생물 안전성", "problem": "병원균 제거"}
+{"id": "W7225304901", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Angonabeng 및 Bediabewu 하천의 수질", "problem": "수질 오염 문제 해결"}
+{"id": "W7225308378", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Mulotane 지역의 여성들", "problem": "물 부족의 영향 완화"}
+{"id": "W7225302357", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 성장 성능과 영양소 이용", "problem": "항생제 성장 촉진제 대체 효과 검토"}
+{"id": "W7132175304", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생쥐의 뇌", "problem": "산화 스트레스 개선"}
+{"id": "W7113370447", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리장에서의 약물 오염물질", "problem": "약물 제거 및 변환 생성물의 운명 조사"}
+{"id": "W7217065528", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 오염 물질 및 지하수 정화제", "problem": "수질 오염 물질의 이동 및 제거 이해"}
+{"id": "W7113690178", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해수 및 염색수에서의 염분과 염료 제거를 위한 나노필tration 멤브레인", "problem": "멤브레인 효율성 향상 및 경제성 분석"}
+{"id": "W4399034821", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간 손상", "problem": "KDM4A의 역할을 이해하고 조절하기"}
+{"id": "W4396623945", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kesikköprü Baraj Gölü", "problem": "점 오염원으로 인한 수질 악화"}
+{"id": "W7130653958", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "성인 만성 인후염", "problem": "만성 인후염의 원인 및 치료 방법 이해하기"}
+{"id": "W4393280485", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 PFAS 오염물질", "problem": "PFOA 처리의 효율성 향상"}
+{"id": "W4392240734", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 질", "problem": "다이옥신 오염 문제 해결"}
+{"id": "W4391527303", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어린이 비만", "problem": "행동 변화의 역학 조사"}
+{"id": "W4391219530", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수", "problem": "안전하고 저렴한 식수 접근성 개선"}
+{"id": "W4390971935", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shending River backwater의 식물플랑크톤", "problem": "식물플랑크톤 분포의 시공간적 특성 분석 및 부영양화 문제 해결"}

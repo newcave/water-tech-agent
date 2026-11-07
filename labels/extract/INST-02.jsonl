@@ -1904,3 +1904,13 @@
 {"id": "W4417213974", "object": "비가뇨수집 저수지 위치", "problem": "최적 위치 식별하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406779288", "object": "제3극의 수자원", "problem": "환경 변화에 대한 수자원, 사람, 생태계의 반응 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4413808269", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225302361", "object": "물 부족 현상", "problem": "물 부족의 인간적 차원 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405764814", "object": "콜롬비아 안데스 지역의 수자원 관리", "problem": "지속 가능한 수자원 관리 정책 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403516956", "object": "콩고 강 유역의 수자원 관리", "problem": "위성 강수 추정치의 정확성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120662777", "object": "토양", "problem": "농업 생산성 향상 및 생태계 서비스 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393305909", "object": "지하수 잠재력", "problem": "지하수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392194007", "object": "농업용 관개 작물 면적", "problem": "물 부족 문제 해결을 위한 농업 적응 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7113686954", "object": "Ceyhan Basin의 수력 발전", "problem": "기후 변화가 수력 발전에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406625393", "object": "우크라이나의 토지 수문학 및 수문 기상 서비스의 규제 문서", "problem": "수문학적 활동의 규제 문서 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408220203", "object": "Susquehanna River Network의 유량", "problem": "유량 변동성을 조사하고 추정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120526341", "object": "세미 아리드 지역의 수자원 관리", "problem": "기후 변화가 수문학적 사건에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
