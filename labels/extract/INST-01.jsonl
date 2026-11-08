@@ -3388,3 +3388,15 @@
 {"id": "W4392782188", "object": "몰디브의 자연 자본과 환경 관리", "problem": "지속 가능한 블루 경제로의 전환을 위한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407774182", "object": "농작물 증발산", "problem": "정확한 증발산 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4405409995", "object": "수돗물 서비스 제공", "problem": "서비스 제공 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225386612", "object": "도시의 지속 가능한 식품 시스템", "problem": "도시 식품 제공의 책임감 있고 공정한 기여 조건 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225407709", "object": "해조류 생태계", "problem": "생태 건강 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225402164", "object": "서비스 연결", "problem": "전 세계 물 손실 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120723310", "object": "Technosols 및 Oxisols의 토양 구조 품질", "problem": "토양 구조 품질 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388074558", "object": "생태계의 생물 다양성", "problem": "생물 다양성 평가의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220749377", "object": "SNAP 자격 성인들의 요리 기술", "problem": "요리 빈도 증가를 위한 장벽 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4362637694", "object": "미국의 수자원 공공 유틸리티", "problem": "정치적 간섭으로 인한 성과 저하", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117397998", "object": "스마트 도시의 물 분배 시스템", "problem": "물 자원의 효율적 관리 및 적절한 데이터 모델 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415605610", "object": "중요 인프라 시스템", "problem": "사이버 위협으로부터 보호하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393222342", "object": "이집트 환대 산업", "problem": "지속 가능성을 확보하기 위한 관리 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4389766906", "object": "수자원 유틸리티의 프로젝트 생애 주기 모델", "problem": "프로젝트 스폰서의 역할과 요구되는 속성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390043665", "object": "수도 및 하수도 공공 서비스", "problem": "생산 잠재력 평가", "relevant": true, "model": "gpt-4o-mini"}

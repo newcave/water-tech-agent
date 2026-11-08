@@ -1914,3 +1914,11 @@
 {"id": "W4406625393", "object": "우크라이나의 토지 수문학 및 수문 기상 서비스의 규제 문서", "problem": "수문학적 활동의 규제 문서 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4408220203", "object": "Susquehanna River Network의 유량", "problem": "유량 변동성을 조사하고 추정하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7120526341", "object": "세미 아리드 지역의 수자원 관리", "problem": "기후 변화가 수문학적 사건에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161037034", "object": "Drammen 강 유역의 수자원 관리", "problem": "기후 변화가 수자원 관리에 미치는 영향", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225382314", "object": "지속 가능한 수자원 관리", "problem": "물 자원 관리 및 배분 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225408996", "object": "Lower Virgin River (LVR) watershed", "problem": "수문학적 영향 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225433723", "object": "서부 미국의 수문학적 취약성", "problem": "기후 변화에 따른 수문학적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225381289", "object": "저수지", "problem": "저수지의 사회적, 생태적 이해를 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390054852", "object": "가정의 생계", "problem": "물 관리로 생계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390622679", "object": "우크라이나의 수자원 관리 및 품질", "problem": "수자원 오염 가능성 고려하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391748779", "object": "Buffalo River catchment의 수자원 가용성", "problem": "기후 변화가 수자원 가용성에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}

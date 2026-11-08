@@ -1254,3 +1254,4 @@
 {"id": "W7222377561", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dry Creek 유역의 수계 시스템", "problem": "도시화와 기후 변동이 수계 시스템에 미치는 영향 이해하기"}
 {"id": "W7225317513", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수평야의 식생 분류", "problem": "식생 구조 및 서식지 모니터링 개선"}
 {"id": "W7225270742", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아마존 홍수 평야 및 고지대 토양의 곰팡이 군집", "problem": "곰팡이 군집의 다양성과 기능적 잠재력 이해하기"}
+{"id": "W7111495514", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 분야", "problem": "농업 분야의 모니터링 및 환경 요인과 농업 활동 간의 상관관계 이해"}

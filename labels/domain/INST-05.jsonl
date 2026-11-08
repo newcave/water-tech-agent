@@ -3240,3 +3240,12 @@
 {"id": "W4401121871", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 관리 시스템", "problem": "댐 안전 모니터링 및 관리 플랫폼 부족"}
 {"id": "W4405962939", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 분산 에너지 시스템", "problem": "분산 에너지 시스템으로의 전환 필요성 해결"}
 {"id": "W4403066627", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 테일레이스에서의 수력 발전", "problem": "소수력 발전의 효율성 향상"}
+{"id": "W7225411737", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인디라 사가르 저수지", "problem": "저수지 운영 정책의 균형 잡기"}
+{"id": "W7225389372", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Son La Reservoir의 수질 및 오염물질 하중", "problem": "수질 변화 및 오염물질 하중의 계절적 변동 이해"}
+{"id": "W4385297041", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "재생 가능 에너지 전환", "problem": "분배적 불공정 해결하기"}
+{"id": "W7198476102", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "펌프 저장 수력 발전소", "problem": "에너지 생성 및 저장 문제 해결"}
+{"id": "W4362731883", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수산물 보호 및 안전한 통과", "problem": "수산물의 유입 및 충돌 방지"}
+{"id": "W4389499895", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수력 발전 잠재력", "problem": "수력 발전 잠재력 평가"}
+{"id": "W4385641038", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "소용돌이 흐름 유입구", "problem": "소용돌이 흐름을 생성하는 방법 이해하기"}
+{"id": "W4390072942", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유럽 국가의 재생 가능 에너지 발전", "problem": "재생 가능 에너지 발전의 경향 분석"}
+{"id": "W4387422444", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수소 에너지 공급 시스템", "problem": "안전한 에너지 공급 보장"}

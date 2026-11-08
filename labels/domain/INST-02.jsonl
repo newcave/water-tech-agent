@@ -1835,3 +1835,11 @@
 {"id": "W4406625393", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 토지 수문학 및 수문 기상 서비스의 규제 문서", "problem": "수문학적 활동의 규제 문서 개발"}
 {"id": "W4408220203", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Susquehanna River Network의 유량", "problem": "유량 변동성을 조사하고 추정하기"}
 {"id": "W7120526341", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세미 아리드 지역의 수자원 관리", "problem": "기후 변화가 수문학적 사건에 미치는 영향 이해하기"}
+{"id": "W7161037034", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Drammen 강 유역의 수자원 관리", "problem": "기후 변화가 수자원 관리에 미치는 영향"}
+{"id": "W7225382314", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지속 가능한 수자원 관리", "problem": "물 자원 관리 및 배분 개선"}
+{"id": "W7225408996", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lower Virgin River (LVR) watershed", "problem": "수문학적 영향 예측"}
+{"id": "W7225433723", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서부 미국의 수문학적 취약성", "problem": "기후 변화에 따른 수문학적 영향 이해하기"}
+{"id": "W7225381289", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "저수지", "problem": "저수지의 사회적, 생태적 이해를 개선하려는 문제"}
+{"id": "W4390054852", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가정의 생계", "problem": "물 관리로 생계 개선"}
+{"id": "W4390622679", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 수자원 관리 및 품질", "problem": "수자원 오염 가능성 고려하기"}
+{"id": "W4391748779", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Buffalo River catchment의 수자원 가용성", "problem": "기후 변화가 수자원 가용성에 미치는 영향 평가"}

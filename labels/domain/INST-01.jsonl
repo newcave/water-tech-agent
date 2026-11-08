@@ -3276,3 +3276,15 @@
 {"id": "W4392782188", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "몰디브의 자연 자본과 환경 관리", "problem": "지속 가능한 블루 경제로의 전환을 위한 도전 과제 해결"}
 {"id": "W4407774182", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물 증발산", "problem": "정확한 증발산 추정"}
 {"id": "W4405409995", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 서비스 제공", "problem": "서비스 제공 개선"}
+{"id": "W7225386612", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시의 지속 가능한 식품 시스템", "problem": "도시 식품 제공의 책임감 있고 공정한 기여 조건 탐색"}
+{"id": "W7225407709", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해조류 생태계", "problem": "생태 건강 평가"}
+{"id": "W7225402164", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서비스 연결", "problem": "전 세계 물 손실 감소"}
+{"id": "W7120723310", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Technosols 및 Oxisols의 토양 구조 품질", "problem": "토양 구조 품질 평가 및 개선"}
+{"id": "W4388074558", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생태계의 생물 다양성", "problem": "생물 다양성 평가의 한계 극복"}
+{"id": "W7220749377", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "SNAP 자격 성인들의 요리 기술", "problem": "요리 빈도 증가를 위한 장벽 해결"}
+{"id": "W4362637694", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수자원 공공 유틸리티", "problem": "정치적 간섭으로 인한 성과 저하"}
+{"id": "W7117397998", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스마트 도시의 물 분배 시스템", "problem": "물 자원의 효율적 관리 및 적절한 데이터 모델 선택"}
+{"id": "W4415605610", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중요 인프라 시스템", "problem": "사이버 위협으로부터 보호하기"}
+{"id": "W4393222342", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이집트 환대 산업", "problem": "지속 가능성을 확보하기 위한 관리 방안 모색"}
+{"id": "W4389766906", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 유틸리티의 프로젝트 생애 주기 모델", "problem": "프로젝트 스폰서의 역할과 요구되는 속성 이해하기"}
+{"id": "W4390043665", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수도 및 하수도 공공 서비스", "problem": "생산 잠재력 평가"}

@@ -6358,3 +6358,38 @@
 {"id": "W4391527303", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어린이 비만", "problem": "행동 변화의 역학 조사"}
 {"id": "W4391219530", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수", "problem": "안전하고 저렴한 식수 접근성 개선"}
 {"id": "W4390971935", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shending River backwater의 식물플랑크톤", "problem": "식물플랑크톤 분포의 시공간적 특성 분석 및 부영양화 문제 해결"}
+{"id": "W2909843736", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 25개 정수 처리 시설에서의 수원 및 처리수", "problem": "에스트로겐 활성 비교"}
+{"id": "W2910416501", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수 처리 비용", "problem": "탁도와 기타 변수가 식수 처리 비용에 미치는 영향 이해하기"}
+{"id": "W7225376756", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미생물 병원체", "problem": "수돗물의 오염 문제 해결"}
+{"id": "W7225377842", "domain_primary": "W5", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 네트워크의 악취 오염", "problem": "파이프 부식으로 인한 악취 생성 메커니즘 규명"}
+{"id": "W7225381447", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "실험적 MASLD 상태", "problem": "장 담즙산 대사 및 간 miR-34a-5p/SIRT1 신호 전달 변화"}
+{"id": "W7225386775", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 소독 부산물", "problem": "효율적으로 제거하기"}
+{"id": "W7225386818", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미니애폴리스의 원수 수질", "problem": "토지 피복 변화가 원수 수질에 미치는 영향 평가"}
+{"id": "W7225388925", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파킨슨병의 바디-퍼스트 아형", "problem": "비운동 증상 예방"}
+{"id": "W7225395672", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아마소마의 음용수 안전성", "problem": "기후 변화가 음용수 안전성에 미치는 영향 평가"}
+{"id": "W7225398767", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Amassoma의 음용수 안전성", "problem": "기후 변화가 음용수 안전성에 미치는 영향 평가"}
+{"id": "W7225399905", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "피닉스 대도시 지역의 음용수 품질", "problem": "음용수 품질 문제 해결"}
+{"id": "W7225418088", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 음용수 시스템에서의 바이러스 병원체 발생", "problem": "바이러스 존재 및 제거 평가"}
+{"id": "W7225423133", "domain_primary": "W4", "domain_secondary": ["W5"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 시스템", "problem": "오염물질 제거"}
+{"id": "W7225424846", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아마소마의 음용수 안전성", "problem": "기후 변화가 음용수 안전성에 미치는 영향 평가"}
+{"id": "W7225432809", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음료수의 암모니아 수준", "problem": "암모니아 제거"}
+{"id": "W7225394609", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 수원에서의 PFAS 제거", "problem": "PFAS의 높은 거부율 달성 및 수분 투과성 유지"}
+{"id": "W7225409480", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염된 음용수", "problem": "PFAS 관련 건강 영향을 줄이기"}
+{"id": "W7120792324", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 기본 위생 상태", "problem": "인권으로서의 물 접근성 개선"}
+{"id": "W7225162340", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토마토 즉석 음료의 특성", "problem": "몰토덱스트린 농도와 건조 시간의 영향을 규명"}
+{"id": "W4386174549", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 품질", "problem": "음용수 품질 문제를 식별하고 개선하기"}
+{"id": "W4382753512", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "항생제 내성 부담", "problem": "수질 및 위생 접근성 개선"}
+{"id": "W4367315704", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cauvery River의 수질", "problem": "수질 예측 정확도 향상"}
+{"id": "W4383313439", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "크론병", "problem": "성 스테로이드 호르몬의 역할 조사"}
+{"id": "W7132329688", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산란계의 생산성 및 알 껍질 품질", "problem": "풀빅산이 알 껍질 품질에 미치는 영향 평가"}
+{"id": "W4390515554", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Wistar 쥐의 행동 및 신경독성", "problem": "TCOEW의 하위 만성 노출로 인한 행동 변화 평가"}
+{"id": "W4382536202", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "샤우레 계곡의 샘물", "problem": "음용수로 적합성 평가"}
+{"id": "W4360612959", "domain_primary": "W4", "domain_secondary": ["W6"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 및 폐수", "problem": "금속 이온 제거"}
+{"id": "W4360600098", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 내성 결핵 환자", "problem": "치료 중 환자 유지"}
+{"id": "W4360602331", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세계의 물 관리 상황", "problem": "정치적 관심 부족으로 인한 물 관리 문제 해결"}
+{"id": "W4360105512", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수", "problem": "지하수 오염 평가"}
+{"id": "W4353029260", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오르화합물)", "problem": "PFAS의 환경 오염 및 인체 건강에 미치는 영향 해결"}
+{"id": "W4321371751", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "요오드화 소독 부산물(I-DBPs)", "problem": "요리 중 요오드화 소금과 수돗물의 반응으로 인한 I-DBPs 형성"}
+{"id": "W4324136282", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전립선암 환자의 방광 채움 준수", "problem": "디지털 행동 개입을 통한 방광 채움 준수 개선"}
+{"id": "W4318260184", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 비소 오염", "problem": "비소 제거를 위한 효과적인 생물학적 처리 방법 개발"}
+{"id": "W4302158766", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 비소 오염", "problem": "비소 제거 방법 개발"}
