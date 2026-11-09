@@ -3288,3 +3288,11 @@
 {"id": "W4393222342", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이집트 환대 산업", "problem": "지속 가능성을 확보하기 위한 관리 방안 모색"}
 {"id": "W4389766906", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 유틸리티의 프로젝트 생애 주기 모델", "problem": "프로젝트 스폰서의 역할과 요구되는 속성 이해하기"}
 {"id": "W4390043665", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수도 및 하수도 공공 서비스", "problem": "생산 잠재력 평가"}
+{"id": "W7225458506", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "SIA Ķekavas nami의 공공 유틸리티 거버넌스", "problem": "재무 성과 및 투명성 문제 해결"}
+{"id": "W7225458964", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지르코늄 가공 기술", "problem": "기술의 경제적 및 환경적 성과 비교"}
+{"id": "W7225416285", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중요 인프라 용량 정보", "problem": "정보의 단편화를 해결하려는"}
+{"id": "W7225458188", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국 상장 수도 회사의 수익성", "problem": "수익성 개선을 위한 운영 변화 분석"}
+{"id": "W4312106716", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lefock 유역의 대체 수자원", "problem": "수자원의 오염 문제 탐색"}
+{"id": "W4310572152", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ralstonia solanacearum 균주", "problem": "R. solanacearum의 제거 방법 검증"}
+{"id": "W7225547929", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "합성 폴리머와 농업 폐기물", "problem": "상호작용을 이해하고 기회를 평가하기"}
+{"id": "W7225283409", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "매립된 압력수관의 상태", "problem": "상태 평가 및 재활"}

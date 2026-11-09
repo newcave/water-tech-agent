@@ -1066,3 +1066,7 @@
 {"id": "W7225406636", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지반-암댐의 위험성", "problem": "위험 평가 방법론 개선"}
 {"id": "W7225386655", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "롤러 압축 콘크리트 댐의 구조적 건강", "problem": "구조적 건강 모니터링 프레임워크 개발"}
 {"id": "W7120742524", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "경사면의 안정성", "problem": "불안정 지표 식별"}
+{"id": "W7225448788", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 변형", "problem": "댐 변형 모니터링의 정확도 향상"}
+{"id": "W7225452277", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "초고층 아치 댐의 변형", "problem": "변형 예측 정확도 향상"}
+{"id": "W7225457370", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "초고층 아치 댐의 구조적 안전성", "problem": "온도 회복 메커니즘 이해 및 구조적 반응 분석"}
+{"id": "W7225463271", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐의 균열 개방 예측", "problem": "예측 정확도 및 강건성 향상"}

@@ -3326,3 +3326,6 @@
 {"id": "W4385641038", "object": "소용돌이 흐름 유입구", "problem": "소용돌이 흐름을 생성하는 방법 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4390072942", "object": "유럽 국가의 재생 가능 에너지 발전", "problem": "재생 가능 에너지 발전의 경향 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4387422444", "object": "수소 에너지 공급 시스템", "problem": "안전한 에너지 공급 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225450259", "object": "그랜드 에티오피아 부흥 댐의 첫 번째 충전", "problem": "하류 영향 완화 방안 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225450150", "object": "고밀도 데이터 센터 인프라", "problem": "재생 가능 및 저장 용량 할당 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4287583457", "object": "미니 수력 발전소의 성능", "problem": "성능 평가 및 비교", "relevant": true, "model": "gpt-4o-mini"}

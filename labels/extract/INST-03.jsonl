@@ -6500,3 +6500,23 @@
 {"id": "W4324136282", "object": "전립선암 환자의 방광 채움 준수", "problem": "디지털 행동 개입을 통한 방광 채움 준수 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4318260184", "object": "지하수의 비소 오염", "problem": "비소 제거를 위한 효과적인 생물학적 처리 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4302158766", "object": "식수의 비소 오염", "problem": "비소 제거 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225452134", "object": "고염수에서의 중금속", "problem": "중금속 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225463030", "object": "열대 안데스 농업 생태계의 수질", "problem": "수질 오염 위험 분석 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225465847", "object": "안전한 식수 접근성", "problem": "안전한 식수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225463233", "object": "안전한 식수", "problem": "저소득 및 농촌 지역의 안전한 식수 접근성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225460025", "object": "Bo City의 물, 위생 및 위생 관행", "problem": "WASH 프로그램의 효과적인 실행과 가정 내 실천 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225451512", "object": "우기 동안의 빗물", "problem": "물리적, 화학적 및 미생물 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225483465", "object": "뇌졸중 후 삼킴 곤란 환자", "problem": "삼킴 곤란 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4313357253", "object": "장내 염증", "problem": "CTRP3의 기능을 규명하고 장내 염증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220182583", "object": "미세플라스틱", "problem": "음용수에서의 미세플라스틱 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4323842314", "object": "산업 폐수", "problem": "유해 오염물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4294754689", "object": "음용수 처리 슬러지", "problem": "환경 영향을 줄이기 위한 재사용 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224281032", "object": "Upper Iskar sub-catchment water quality", "problem": "treated wastewater discharge의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224241762", "object": "수자원 품질", "problem": "오염된 수자원 재활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224304025", "object": "고혈압", "problem": "고혈압 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4289228344", "object": "티그리스 강의 수질", "problem": "수질 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4313314519", "object": "방글라데시 농촌 지역의 노인 건강 문제", "problem": "노인의료 서비스 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226066169", "object": "지하수의 오염물질 농도", "problem": "오염물질 농도를 측정하여 지하수의 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221021973", "object": "음용수의 품질", "problem": "유기 미세오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211171964", "object": "소분자 유기물(SMW-OM)", "problem": "정수 처리 과정에서의 운명 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210616095", "object": "궤양성 대장염에서의 점막 재생", "problem": "점막 재생을 위한 줄기세포의 기원 규명", "relevant": true, "model": "gpt-4o-mini"}

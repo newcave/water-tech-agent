@@ -5866,3 +5866,10 @@
 {"id": "W7120750187", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "옥수수와 콩 작물의 증발산", "problem": "증발산 추정 정확도 향상"}
 {"id": "W7117397249", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문 모델의 수자원 관리", "problem": "모델의 실제 증발산과 수자원 균형 개선"}
 {"id": "W7117396509", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "태양 복사량", "problem": "정확한 태양 복사량 예측"}
+{"id": "W7225461859", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "수자원 추출 방법", "problem": "위성 이미지에서 수자원 추출 성능 비교"}
+{"id": "W7172565221", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해바라기 하이브리드의 생리적 발달", "problem": "가뭄의 영향 평가"}
+{"id": "W4226390581", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "림의 밀도", "problem": "정확한 밀도 추정 방법 제안"}
+{"id": "W4224293953", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "망그로브 생태계의 총 생물량 생산성(GPP)", "problem": "연도별 GPP 특성 인식"}
+{"id": "W4387863270", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토지 위성 원격 감지 모니터링 시스템", "problem": "토지 사용 모니터링 개선"}
+{"id": "W4220977894", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Aniangzhai 지역의 고대 산사태", "problem": "산사태의 재활성화 원인 분석 및 상태 평가"}
+{"id": "W4382706550", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "세밀한 수체", "problem": "세밀한 수체 추출 정확도 향상"}

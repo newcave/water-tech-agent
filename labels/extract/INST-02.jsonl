@@ -1922,3 +1922,7 @@
 {"id": "W4390054852", "object": "가정의 생계", "problem": "물 관리로 생계 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4390622679", "object": "우크라이나의 수자원 관리 및 품질", "problem": "수자원 오염 가능성 고려하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391748779", "object": "Buffalo River catchment의 수자원 가용성", "problem": "기후 변화가 수자원 가용성에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225455461", "object": "수자원 및 가뭄 분석", "problem": "Google Earth Engine을 활용한 분석 방법론 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225817367", "object": "Talezang Basin의 월간 유량", "problem": "유량 예측 정확도 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4288519991", "object": "상류 유역의 수자원 관리", "problem": "효과적이고 지속 가능한 수자원 관리 모델 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4300409049", "object": "Latorytsia 강 유역의 수자원 상태", "problem": "수자원 관리 문제 해결 및 최적화 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
