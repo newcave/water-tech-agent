@@ -3329,3 +3329,8 @@
 {"id": "W7225450259", "object": "그랜드 에티오피아 부흥 댐의 첫 번째 충전", "problem": "하류 영향 완화 방안 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225450150", "object": "고밀도 데이터 센터 인프라", "problem": "재생 가능 및 저장 용량 할당 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4287583457", "object": "미니 수력 발전소의 성능", "problem": "성능 평가 및 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225457990", "object": "Ghowr Pozalich의 소수력 발전", "problem": "기후 변화가 에너지 생산에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225261366", "object": "Way Cimarias Sub Watershed의 수자원", "problem": "지속 가능한 수자원 관리를 위한 수자원 균형 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165191714", "object": "중앙아시아 전력 시스템", "problem": "태양광 발전 통합의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165201834", "object": "Toora-Khem 마을의 전력 공급 시스템", "problem": "디젤 연료 비용 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7166591498", "object": "연속적인 소수력 발전소의 최적 스케줄링", "problem": "최적 스케줄링 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

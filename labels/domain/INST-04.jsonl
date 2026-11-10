@@ -1070,3 +1070,8 @@
 {"id": "W7225452277", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "초고층 아치 댐의 변형", "problem": "변형 예측 정확도 향상"}
 {"id": "W7225457370", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "초고층 아치 댐의 구조적 안전성", "problem": "온도 회복 메커니즘 이해 및 구조적 반응 분석"}
 {"id": "W7225463271", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 댐의 균열 개방 예측", "problem": "예측 정확도 및 강건성 향상"}
+{"id": "W7225588823", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이집트와 수단의 수자원 관리", "problem": "댐의 하류 위험 평가"}
+{"id": "W7223018087", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화학 공장 내 화재 및 연기 감지", "problem": "조기 화재 감지 문제 해결"}
+{"id": "W7225144261", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 성능 모니터링 데이터", "problem": "데이터 품질 개선 및 관리"}
+{"id": "W7170035685", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 구조물", "problem": "정확한 검사 및 결함 탐지 개선"}
+{"id": "W7202139352", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 위험", "problem": "홍수 위험을 줄이기 위한 자동화된 대응 시스템 구현"}

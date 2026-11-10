@@ -5924,3 +5924,14 @@
 {"id": "W4387863270", "object": "토지 위성 원격 감지 모니터링 시스템", "problem": "토지 사용 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4220977894", "object": "Aniangzhai 지역의 고대 산사태", "problem": "산사태의 재활성화 원인 분석 및 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4382706550", "object": "세밀한 수체", "problem": "세밀한 수체 추출 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225576332", "object": "양쯔강의 유량 추정", "problem": "유량 추정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225588079", "object": "양쯔강의 유량 추정", "problem": "유량 추정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225266950", "object": "수생 서식지 및 생태계 건강", "problem": "서식지 평가 및 생태계 건강 진단", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225273579", "object": "수생 서식지", "problem": "서식지 변화 및 생태계 악화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225519326", "object": "토양 수분", "problem": "토양 수분 추정 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225454013", "object": "카불시의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165650101", "object": "농작물 물 스트레스 및 가뭄 모니터링", "problem": "농업 가뭄으로 인한 식량 안전 위협 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165151508", "object": "델리 NCT의 토지 이용 및 토지 피복(LULC)", "problem": "정확도 평가 및 변화 분석 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167213101", "object": "물의 침식에 취약한 지역", "problem": "물의 침식 취약성 식별 및 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7167254723", "object": "드립 관개 올리브 과수원", "problem": "증발산 모델의 정확한 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204236895", "object": "지구 관측 기술", "problem": "기술과 사회적 요구 간의 복잡한 상호작용 이해하기", "relevant": true, "model": "gpt-4o-mini"}

@@ -1255,3 +1255,10 @@
 {"id": "W7225317513", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수평야의 식생 분류", "problem": "식생 구조 및 서식지 모니터링 개선"}
 {"id": "W7225270742", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아마존 홍수 평야 및 고지대 토양의 곰팡이 군집", "problem": "곰팡이 군집의 다양성과 기능적 잠재력 이해하기"}
 {"id": "W7111495514", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 분야", "problem": "농업 분야의 모니터링 및 환경 요인과 농업 활동 간의 상관관계 이해"}
+{"id": "W7204886082", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자연 수문학적 과정의 복잡성", "problem": "모델 의존으로 인한 이해 부족"}
+{"id": "W7213268795", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 및 산사태 예측", "problem": "자연 재해 예측 개선"}
+{"id": "W7213517134", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 예측 및 경고 시스템", "problem": "정확한 홍수 예측 개선"}
+{"id": "W7213557214", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산사태", "problem": "사전적 탐지 방법 부족"}
+{"id": "W7225090574", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "Multivariate Gamma distribution", "problem": "효율적인 파라미터 추정"}
+{"id": "W7165553401", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 추정", "problem": "공간적 및 시간적 범위 개선"}
+{"id": "W7151295439", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수의 인과관계", "problem": "질소와 인 농도 변화 이해하기"}

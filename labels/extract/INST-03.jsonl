@@ -6520,3 +6520,18 @@
 {"id": "W4221021973", "object": "음용수의 품질", "problem": "유기 미세오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4211171964", "object": "소분자 유기물(SMW-OM)", "problem": "정수 처리 과정에서의 운명 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4210616095", "object": "궤양성 대장염에서의 점막 재생", "problem": "점막 재생을 위한 줄기세포의 기원 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225564834", "object": "파키스탄의 공공 건강 시스템", "problem": "정부의 부패로 인한 건강 위기 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225567767", "object": "인간 태반 가수분해물", "problem": "노화 가속 모델에서의 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225567670", "object": "HFrEF 심장", "problem": "OM 치료가 HFrEF 심장의 기계적 성능과 세포 건강을 개선하는지 테스트", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225573957", "object": "당뇨병성 심근병증", "problem": "상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225588502", "object": "HFpEF(심부전)", "problem": "심부전 치료 옵션 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225600021", "object": "HFpEF 환자에서 장 건강", "problem": "장 건강 개선 및 염증 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225335018", "object": "브로일러 성능 및 영양소 소화율", "problem": "에코-폴트리 솔루션™의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225596578", "object": "중앙아시아의 수자원 관리", "problem": "녹색 수소 개발을 위한 수자원과 에너지의 상호작용 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224129753", "object": "TFA(트리플루오로아세테이트)", "problem": "TFA 제거 효율과 잔여물 관리 균형 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225299122", "object": "자가면역 갑상선염", "problem": "치료 효과 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225461742", "object": "Perumda Tirta Mayang의 소비자에게 공급되는 수돗물", "problem": "수돗물 품질 비교 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223467482", "object": "즉석 음료의 단백질 성분", "problem": "열 안정성 개선 및 유화 특성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225291907", "object": "토종 슈퍼 닭의 장기 및 대장균 오염", "problem": "대장균 오염 감소 및 장기 비율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171416451", "object": "Dadru Kushtha (Tinea corporis)", "problem": "치료 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225362201", "object": "제2형 당뇨병 환자", "problem": "혈당 수치 감소", "relevant": true, "model": "gpt-4o-mini"}

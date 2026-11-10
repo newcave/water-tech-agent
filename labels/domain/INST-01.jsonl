@@ -3296,3 +3296,12 @@
 {"id": "W4310572152", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ralstonia solanacearum 균주", "problem": "R. solanacearum의 제거 방법 검증"}
 {"id": "W7225547929", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "합성 폴리머와 농업 폐기물", "problem": "상호작용을 이해하고 기회를 평가하기"}
 {"id": "W7225283409", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "매립된 압력수관의 상태", "problem": "상태 평가 및 재활"}
+{"id": "W7225562747", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우즈베키스탄 경제", "problem": "공공 서비스 관리 시스템 개발"}
+{"id": "W7214088107", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티푸스", "problem": "공중 보건 문제 해결"}
+{"id": "W7225416815", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Birgunj Metropolitan City의 환경 상태", "problem": "환경 질 저하 해결"}
+{"id": "W7225601755", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "CCR 비산먼지", "problem": "비산먼지 배출 최소화"}
+{"id": "W7225244106", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심각한 지역사회 획득 폐렴 환자", "problem": "조기 임상 회복 예측"}
+{"id": "W7225317095", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지구의 열적 평형", "problem": "열적 안정화"}
+{"id": "W7162213752", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북서 이베리아 반도의 수생 생태계", "problem": "광학 및 식물플랑크톤 변동성 이해"}
+{"id": "W7165014115", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Snake River Basin의 물 사용량", "problem": "물 사용량 추정 오류 감소"}
+{"id": "W7171571831", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "P-C 결합 형성 반응", "problem": "촉매 반응에서 나트륨의 반응성을 향상시키기"}
