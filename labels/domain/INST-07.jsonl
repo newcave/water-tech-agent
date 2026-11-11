@@ -1262,3 +1262,5 @@
 {"id": "W7225090574", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "Multivariate Gamma distribution", "problem": "효율적인 파라미터 추정"}
 {"id": "W7165553401", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분 추정", "problem": "공간적 및 시간적 범위 개선"}
 {"id": "W7151295439", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수의 인과관계", "problem": "질소와 인 농도 변화 이해하기"}
+{"id": "W7225622460", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지구 과학에서의 인공지능 활용", "problem": "정확한 예측 및 의사결정 개선"}
+{"id": "W7225649923", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결"}

@@ -5884,3 +5884,13 @@
 {"id": "W7167213101", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 침식에 취약한 지역", "problem": "물의 침식 취약성 식별 및 매핑"}
 {"id": "W7167254723", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "드립 관개 올리브 과수원", "problem": "증발산 모델의 정확한 추정"}
 {"id": "W7204236895", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구 관측 기술", "problem": "기술과 사회적 요구 간의 복잡한 상호작용 이해하기"}
+{"id": "W7225626864", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "플로리다의 홍수 상황", "problem": "홍수의 수문기상 조건과 수면 변화 조사"}
+{"id": "W7225659124", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농업 시스템의 물 사용 효율성", "problem": "물 절약 및 지속 가능성 향상"}
+{"id": "W7225661831", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파키스탄의 사탕수수 품종", "problem": "정확한 품종 분류"}
+{"id": "W7120321124", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Funil Reservoir의 수질", "problem": "환경 상태 진단 및 오염물질 식별"}
+{"id": "W4411429739", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 주요 하천 유역의 탄소-물 생태계 서비스", "problem": "탄소-물 생태계 서비스의 결합 이해"}
+{"id": "W4410348063", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "숲의 열적 비등방성", "problem": "열적 비등방성의 이해 및 개선"}
+{"id": "W4408431978", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "산림 생태계의 수분 역학", "problem": "고해상도 SAR 기반 VOD 추정"}
+{"id": "W4408467314", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분", "problem": "토양 수분 추정 개선"}
+{"id": "W4407264401", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "리토로지 분류", "problem": "식생 간섭 최소화"}
+{"id": "W4406175828", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티베트 고원 생태계의 토양 수분 함량", "problem": "CRNS를 통한 토양 수분 함량 측정 가능성 평가"}

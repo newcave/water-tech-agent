@@ -3257,3 +3257,8 @@
 {"id": "W7165191714", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아 전력 시스템", "problem": "태양광 발전 통합의 도전 과제 해결"}
 {"id": "W7165201834", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Toora-Khem 마을의 전력 공급 시스템", "problem": "디젤 연료 비용 최소화"}
 {"id": "W7166591498", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "연속적인 소수력 발전소의 최적 스케줄링", "problem": "최적 스케줄링 문제 해결"}
+{"id": "W7225610388", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가나의 전력 접근성", "problem": "전력 접근성 격차 해소"}
+{"id": "W7225629630", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 운영", "problem": "수력 발전을 위한 물 배분 최적화"}
+{"id": "W7225654255", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우즈베키스탄의 수력 발전 효율성", "problem": "자원 활용 효율성 평가"}
+{"id": "W7225618926", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "글레이셔가 퇴화하는 티엔산의 소수력 발전소", "problem": "전력 생산 비용을 개선하려는"}
+{"id": "W4411550994", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 유닛의 결함 진단", "problem": "결함 데이터 부족 문제 해결"}

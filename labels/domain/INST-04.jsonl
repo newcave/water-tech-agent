@@ -1075,3 +1075,4 @@
 {"id": "W7225144261", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 성능 모니터링 데이터", "problem": "데이터 품질 개선 및 관리"}
 {"id": "W7170035685", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 구조물", "problem": "정확한 검사 및 결함 탐지 개선"}
 {"id": "W7202139352", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 위험", "problem": "홍수 위험을 줄이기 위한 자동화된 대응 시스템 구현"}
+{"id": "W7225636035", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 피해", "problem": "조기 경고 개선"}

@@ -3305,3 +3305,12 @@
 {"id": "W7162213752", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북서 이베리아 반도의 수생 생태계", "problem": "광학 및 식물플랑크톤 변동성 이해"}
 {"id": "W7165014115", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Snake River Basin의 물 사용량", "problem": "물 사용량 추정 오류 감소"}
 {"id": "W7171571831", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "P-C 결합 형성 반응", "problem": "촉매 반응에서 나트륨의 반응성을 향상시키기"}
+{"id": "W7225566810", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기존 아파트 단지의 에너지 데이터 플랫폼", "problem": "신뢰할 수 있는 데이터 운영자 필요"}
+{"id": "W7225621908", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 인프라의 지속 가능한 관리", "problem": "누수 및 고장 조기 탐지"}
+{"id": "W7225655127", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지자체 하수도 시스템", "problem": "운영 배출량과 자본 지출의 균형을 맞추기"}
+{"id": "W7225588010", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 회복력", "problem": "블루-그린 인프라(BGI) 채택을 위한 장벽 분석"}
+{"id": "W7120662987", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티에테-자카레 유역의 수처리에서 발생하는 폐기물 관리", "problem": "폐기물 관리 개선 및 미래 시나리오 예측"}
+{"id": "W4412366331", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "염증성 장 질환(IBD)", "problem": "식이요법을 통한 질병 관리 개선"}
+{"id": "W4415250460", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건물 유지보수", "problem": "의사결정 지원 개선"}
+{"id": "W4409287058", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "생물다양성", "problem": "생물다양성 손실을 역전시키기 위한 방법을 이해하고 기회를 찾기"}
+{"id": "W4416798284", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "눈 깊이", "problem": "정확한 고해상도 눈 깊이 맵 생성"}

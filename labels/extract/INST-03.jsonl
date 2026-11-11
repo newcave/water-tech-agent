@@ -6535,3 +6535,12 @@
 {"id": "W7225291907", "object": "토종 슈퍼 닭의 장기 및 대장균 오염", "problem": "대장균 오염 감소 및 장기 비율 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7171416451", "object": "Dadru Kushtha (Tinea corporis)", "problem": "치료 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225362201", "object": "제2형 당뇨병 환자", "problem": "혈당 수치 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225610850", "object": "오디샤 주의 지하수", "problem": "지하수 품질 평가 및 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225618519", "object": "대사 기능 장애 및 지방산 산화 불균형", "problem": "과당 유도 대사 장애 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225647216", "object": "청소년의 신경 발달", "problem": "환경 리튬 노출의 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225652955", "object": "수질과 환경 건강", "problem": "인간 노출과 수질 관측 연결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225654212", "object": "인간의 생물학적 건강과 대사 조화", "problem": "인공 조명과 미네랄 결핍으로 인한 심장 정지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225662147", "object": "장티푸스", "problem": "항생제 내성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225643301", "object": "미국 가정의 음용수", "problem": "오염물질로부터 보호하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407756852", "object": "알츠하이머병 관련 기저 뇌병리", "problem": "청소년 binge 음주로 인한 알츠하이머병 관련 신경면역 신호 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7111635605", "object": "세탁기에서의 미세플라스틱 섬유 오염", "problem": "미세플라스틱 섬유의 방출 방지", "relevant": true, "model": "gpt-4o-mini"}
