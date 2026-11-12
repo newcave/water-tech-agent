@@ -1851,3 +1851,10 @@
 {"id": "W7213558548", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "황하 원천 지역의 청정 전기 개발", "problem": "안전한 개발 여유 식별하기"}
 {"id": "W7225615885", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 수력 발전", "problem": "AI를 활용한 수력 발전 혁신 추진"}
 {"id": "W7225617307", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 담수 자원", "problem": "민주적 거버넌스 필요성 제기"}
+{"id": "W7225741800", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "페루와 에콰도르의 고안데스 유역", "problem": "물 안전성 위협 요인 이해하기"}
+{"id": "W7225698337", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Upper Ganga Basin의 수자원 관리", "problem": "신뢰할 수 있는 수문 기상 데이터 확보"}
+{"id": "W7225728019", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파키스탄 인더스 분지의 수자원 관리", "problem": "무역 법률을 통한 수자원 관리 전략 개선"}
+{"id": "W7225757283", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미시시피 강 유역의 농업 생산성", "problem": "관개가 농업 생산성에 미치는 영향 평가"}
+{"id": "W7120590779", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Maracanã 강 유역의 수자원 지속 가능성", "problem": "수자원 관리 개선"}
+{"id": "W4392596539", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토양 수분", "problem": "정확한 토양 수분 예측"}
+{"id": "W4392599924", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 변화가 수자원에 미치는 영향", "problem": "데이터와 전문 지식을 실무자에게 전달하기"}

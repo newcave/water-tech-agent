@@ -3429,3 +3429,12 @@
 {"id": "W4415250460", "object": "건물 유지보수", "problem": "의사결정 지원 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4409287058", "object": "생물다양성", "problem": "생물다양성 손실을 역전시키기 위한 방법을 이해하고 기회를 찾기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4416798284", "object": "눈 깊이", "problem": "정확한 고해상도 눈 깊이 맵 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225706062", "object": "어촌 정주지", "problem": "지속 가능한 해안 지역으로의 전환", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225714451", "object": "반건조 지역의 토지 표면 온도 변동성", "problem": "토지 이용 및 토지 피복 변화에 따른 온도 변동 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225735121", "object": "Negua Canal의 미세 해양 생물 군집", "problem": "미세 해양 생물 군집의 분포 및 일주기 변동 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225750228", "object": "도시의 지하 인프라", "problem": "자동화된 점검 및 유지보수 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225611146", "object": "텍사스의 에너지 경제", "problem": "물 관리가 에너지 정책에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225737957", "object": "공공 유틸리티 관리", "problem": "디지털 전환을 통한 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225767192", "object": "산업에서의 물 관리 및 지속 가능성", "problem": "물 재사용 관행의 채택 촉진을 위한 조직적 의사결정 과정 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402701589", "object": "전력망 운영", "problem": "전력망 운영의 주요 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404998516", "object": "물 공급 체인 관리", "problem": "4차 산업혁명에 따른 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}

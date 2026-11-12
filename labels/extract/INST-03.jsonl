@@ -6544,3 +6544,18 @@
 {"id": "W7225643301", "object": "미국 가정의 음용수", "problem": "오염물질로부터 보호하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407756852", "object": "알츠하이머병 관련 기저 뇌병리", "problem": "청소년 binge 음주로 인한 알츠하이머병 관련 신경면역 신호 증가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7111635605", "object": "세탁기에서의 미세플라스틱 섬유 오염", "problem": "미세플라스틱 섬유의 방출 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225737846", "object": "폐수", "problem": "폐수의 품질 개선 및 재사용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7131405432", "object": "만성 신장 질환(CKD)", "problem": "신장 및 혈관 손상 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225696848", "object": "농촌 지역의 식수", "problem": "깨끗한 식수 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225710034", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225717163", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225718596", "object": "유해 수질 오염물질", "problem": "정확한 측정 및 재사용 가능한 처리 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225721453", "object": "소아의 튤레미아", "problem": "진단 지연 및 수인성 노출 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225726102", "object": "질소산화물로 오염된 지하수", "problem": "질소산화물 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225726732", "object": "재난 후 음용수", "problem": "안전한 음용수 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225734221", "object": "항생제 오염수", "problem": "항생제 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225758141", "object": "노인 3×Tg-AD 마우스의 해마", "problem": "해마의 신경 밀도 및 시냅스 마커 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161687380", "object": "루안다의 시장 및 국경 지역 사회에서의 통합 조기 아동 발달 서비스", "problem": "안전하고 저렴한 보육 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395688482", "object": "중부 안다만의 해안 지하수", "problem": "지하수의 염수 침입과 수질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393095244", "object": "비소세포 폐암", "problem": "암 줄기세포 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120598560", "object": "지하수의 품질", "problem": "고품질 식수 확보", "relevant": true, "model": "gpt-4o-mini"}

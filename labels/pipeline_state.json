@@ -1,17 +1,12 @@
 {
-  "last_collect_date": "2026-11-11",
+  "last_collect_date": "2026-11-12",
   "history_next_year": 2014,
-  "resweep_next_year": 2024,
+  "resweep_next_year": 2023,
   "resweep_window": [
     2022,
     2026
   ],
   "resweep_log": [
-    {
-      "date": "2026-11-02",
-      "year": 2024,
-      "added": 77
-    },
     {
       "date": "2026-11-03",
       "year": 2023,
@@ -56,6 +51,11 @@
       "date": "2026-11-11",
       "year": 2025,
       "added": 17
+    },
+    {
+      "date": "2026-11-12",
+      "year": 2024,
+      "added": 27
     }
   ],
   "collect_basis": "rep",

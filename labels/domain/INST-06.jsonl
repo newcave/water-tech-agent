@@ -5894,3 +5894,16 @@
 {"id": "W4408467314", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "토양 수분", "problem": "토양 수분 추정 개선"}
 {"id": "W4407264401", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "리토로지 분류", "problem": "식생 간섭 최소화"}
 {"id": "W4406175828", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "티베트 고원 생태계의 토양 수분 함량", "problem": "CRNS를 통한 토양 수분 함량 측정 가능성 평가"}
+{"id": "W7225716949", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수 생태계", "problem": "기후 변화의 영향을 모니터링하고 이해하기"}
+{"id": "W7225721403", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "작은 강의 수질", "problem": "수질 평가를 위한 데이터 통합"}
+{"id": "W7225723517", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dwarkeswar River Basin의 소규모 수역", "problem": "소규모 수역의 공간적 및 수문학적 동태 이해"}
+{"id": "W7225740291", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "지하수의 행동 이해 및 특정 수율 추정"}
+{"id": "W7225749177", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 악화 및 기후 취약성", "problem": "환경 변화의 공간 패턴 탐지 및 기후 위협에 대한 취약성 평가"}
+{"id": "W7225751778", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "코기 주의 취약한 지역 사회", "problem": "홍수 위험의 영향 조사 및 관리 전략 분석"}
+{"id": "W7225722127", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 도시 하천의 부영양화 위험", "problem": "부영양화 위험 평가"}
+{"id": "W7225616150", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 도체강의 수질 및 퇴적물 상태", "problem": "퇴적물 농도 및 수질 지표의 장기적 변화 이해"}
+{"id": "W7120861665", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Bolonha와 Água Preta 호수 유역", "problem": "토지 피복 및 사용 변화 분석"}
+{"id": "W4396631369", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mahilpur 블록의 토지 이용 및 토지 피복", "problem": "토지 이용 및 피복 변화 분석"}
+{"id": "W4394855259", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 가뭄 평가", "problem": "미래 기후 변화에 따른 농업 가뭄 평가 개선"}
+{"id": "W4392183122", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "메탄 플룸", "problem": "메탄 플룸 탐지 개선"}
+{"id": "W4392181313", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "방글라데시의 농업 토지 이용 변화", "problem": "농업 집약화의 영향 이해하기"}

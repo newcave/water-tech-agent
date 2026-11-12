@@ -1089,3 +1089,5 @@
 {"id": "W7170035685", "object": "콘크리트 구조물", "problem": "정확한 검사 및 결함 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7202139352", "object": "홍수 위험", "problem": "홍수 위험을 줄이기 위한 자동화된 대응 시스템 구현", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225636035", "object": "홍수 피해", "problem": "조기 경고 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225742501", "object": "댐 안전성", "problem": "규제 비대칭 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225707528", "object": "탄소 포집 및 저장 기술", "problem": "탄소 배출 감소를 위한 기술 개선", "relevant": true, "model": "gpt-4o-mini"}

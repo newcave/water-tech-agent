@@ -3339,3 +3339,12 @@
 {"id": "W7225654255", "object": "우즈베키스탄의 수력 발전 효율성", "problem": "자원 활용 효율성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225618926", "object": "글레이셔가 퇴화하는 티엔산의 소수력 발전소", "problem": "전력 생산 비용을 개선하려는", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4411550994", "object": "수력 발전 유닛의 결함 진단", "problem": "결함 데이터 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225696924", "object": "수력 발전 잠재력", "problem": "수력 발전 자원의 실제 생성량을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225717679", "object": "소형 수력 발전의 단기 발전 예측", "problem": "단기 발전 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225719234", "object": "저수지의 수력 발전 효율", "problem": "증발로 인한 에너지 손실", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225736149", "object": "나이지리아의 에너지 안보", "problem": "재생 가능 에너지 솔루션을 통한 기후 변화 대응", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225742594", "object": "남아시아의 재생 가능 에너지 생산", "problem": "재생 가능 에너지 생산을 증가시키는 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225737111", "object": "사하라 이남 아프리카의 전력 시스템", "problem": "전력 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225722481", "object": "기후 자원 지수 및 결핍 사건", "problem": "기후 변화에 따른 자원 조건 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4397032992", "object": "마이크로그리드의 배터리 에너지 저장 시스템", "problem": "비용 효율적이고 신뢰할 수 있는 운영 유지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392545669", "object": "수력 발전", "problem": "미래 에너지 생산 예측", "relevant": true, "model": "gpt-4o-mini"}
