@@ -1304,3 +1304,5 @@
 {"id": "W4393831028", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W4393841943", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W4394046995", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7205709662", "object": "양쯔강 유역의 퇴적물 공급", "problem": "퇴적물 농도 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225791367", "object": "Faisalabad 지역의 지하수 품질", "problem": "금속 오염 검출을 위한 데이터 분석", "relevant": true, "model": "gpt-4o-mini"}

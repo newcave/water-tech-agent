@@ -3348,3 +3348,11 @@
 {"id": "W7225722481", "object": "기후 자원 지수 및 결핍 사건", "problem": "기후 변화에 따른 자원 조건 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4397032992", "object": "마이크로그리드의 배터리 에너지 저장 시스템", "problem": "비용 효율적이고 신뢰할 수 있는 운영 유지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392545669", "object": "수력 발전", "problem": "미래 에너지 생산 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225774242", "object": "전력 시스템의 신뢰성 및 경제적 성능", "problem": "전력 시스템의 탈탄소화에 따른 운영 불확실성의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225782126", "object": "중국의 풍력 및 태양광 발전", "problem": "탄소 배출 거래가 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225793801", "object": "중앙 아시아의 물 관리", "problem": "안전하고 지속 가능하며 갈등 없는 관리 방안 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225806694", "object": "OECD 국가들의 재생 가능 에너지 전환", "problem": "국가별 구조적 에너지 특성 반영한 벤치마크 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225812772", "object": "Enugu 도시 지역의 고형 폐기물", "problem": "고형 폐기물 관리와 에너지 부족 연결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225791220", "object": "원격 지역의 전력 공급", "problem": "신뢰할 수 있는 전력 공급 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225781046", "object": "대규모 수력 발전소의 수위 조절", "problem": "홍수 안전 확보 및 발전 효율 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127846652", "object": "헨리 카운티 공공 서비스 당국의 물 공급", "problem": "물 공급 부족 해결", "relevant": true, "model": "gpt-4o-mini"}

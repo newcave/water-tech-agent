@@ -1937,3 +1937,8 @@
 {"id": "W7120590779", "object": "Maracanã 강 유역의 수자원 지속 가능성", "problem": "수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392596539", "object": "토양 수분", "problem": "정확한 토양 수분 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392599924", "object": "기후 변화가 수자원에 미치는 영향", "problem": "데이터와 전문 지식을 실무자에게 전달하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225776100", "object": "동남아시아의 국경 지역의 카르스트 수자원", "problem": "수자원 개발과 환경 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225784787", "object": "석회암 지역의 생물 다양성", "problem": "경제 활동으로 인한 교란", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225824234", "object": "Douro 강 댐", "problem": "과학 관광 제품 및 경험 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117389475", "object": "지구의 수자원 및 자연 생태계", "problem": "물 저장 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4321793908", "object": "Upper Gilgel Abbay watershed의 수문학적 상태", "problem": "토지 이용/토지 피복 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}

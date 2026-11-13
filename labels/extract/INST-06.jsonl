@@ -5958,3 +5958,12 @@
 {"id": "W4394855259", "object": "농업 가뭄 평가", "problem": "미래 기후 변화에 따른 농업 가뭄 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392183122", "object": "메탄 플룸", "problem": "메탄 플룸 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392181313", "object": "방글라데시의 농업 토지 이용 변화", "problem": "농업 집약화의 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225803825", "object": "저기압과 고기압의 기상 조건이 있는 저구름", "problem": "CCN과 INP의 변동성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225804692", "object": "인도의 수자원 관리", "problem": "디지털 기술을 통한 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225824679", "object": "파키스탄의 수면 수역 범위", "problem": "홍수와 관련된 수면 수역 범위 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225777434", "object": "산림 나무와 농작물의 가뭄 스트레스", "problem": "가뭄 스트레스 탐지 및 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120588554", "object": "아그로 생태계", "problem": "목초지 품질 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4367184379", "object": "몽골의 채굴 지역 주변의 토양 손실", "problem": "토양 침식 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7163458658", "object": "해안림 식재 기초의 생육 환경", "problem": "식재된 검은 소나무의 저조한 생장 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4360984675", "object": "Yazd 카운티의 도시 열섬", "problem": "LST와 토지 이용 유형 간의 관계 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4375816993", "object": "Mula right bank canal command area", "problem": "토지 이용 및 토지 피복의 퇴화 수준 평가", "relevant": true, "model": "gpt-4o-mini"}

@@ -1091,3 +1091,7 @@
 {"id": "W7225636035", "object": "홍수 피해", "problem": "조기 경고 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225742501", "object": "댐 안전성", "problem": "규제 비대칭 해소", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225707528", "object": "탄소 포집 및 저장 기술", "problem": "탄소 배출 감소를 위한 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225777804", "object": "수리 구조물의 취약성 및 위험", "problem": "위험 평가를 위한 확률적 방법 사용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225794653", "object": "댐 변형 예측", "problem": "불확실성 정량화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225813209", "object": "수리 구조물", "problem": "지진 위험에 대한 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225791132", "object": "수력 발전소 하류 변동 역수역", "problem": "수력 변동의 전파 메커니즘과 에너지 소산 법칙 규명", "relevant": true, "model": "gpt-4o-mini"}

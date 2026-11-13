@@ -1267,3 +1267,5 @@
 {"id": "W7225741800", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "페루와 에콰도르의 고안데스 유역", "problem": "물 안전성 위협 해결"}
 {"id": "W7130522308", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "황하 상류의 수생 유기물 역학", "problem": "기후 변화에 따른 수생 유기물 반응 이해하기"}
 {"id": "W7223551903", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "표준화된 가뭄 지수", "problem": "예측 가능성 평가"}
+{"id": "W7205709662", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "양쯔강 유역의 퇴적물 공급", "problem": "퇴적물 농도 변화 이해하기"}
+{"id": "W7225791367", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Faisalabad 지역의 지하수 품질", "problem": "금속 오염 검출을 위한 데이터 분석"}

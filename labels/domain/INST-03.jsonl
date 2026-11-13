@@ -6450,3 +6450,15 @@
 {"id": "W4395688482", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중부 안다만의 해안 지하수", "problem": "지하수의 염수 침입과 수질 저하 문제 해결"}
 {"id": "W4393095244", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비소세포 폐암", "problem": "암 줄기세포 제거"}
 {"id": "W7120598560", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 품질", "problem": "고품질 식수 확보"}
+{"id": "W7225773360", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인지 기능", "problem": "납 노출로 인한 손상 이해"}
+{"id": "W7225781173", "domain_primary": "W3", "domain_secondary": [], "confidence": 1.0, "domain_ver": "v0.1", "object": "Kaveri 강의 수질", "problem": "수질 저하 문제 해결"}
+{"id": "W7225808162", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전성", "problem": "댐 안전성을 개선하려는 문제"}
+{"id": "W7225808473", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 공급의 수질", "problem": "오염 위험 해결"}
+{"id": "W7225817133", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜레라 발생", "problem": "콜레라 감염 요인 파악"}
+{"id": "W7225826595", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 음용수 분배 시스템에서의 소독 부산물 및 공동 오염물", "problem": "소독 부산물의 특성 규명 및 위험 기반 우선순위 설정"}
+{"id": "W2207779335", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대장암", "problem": "대장암 세포 성장 억제 및 예방"}
+{"id": "W7225807833", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 오염", "problem": "고급 흡착 재료 개발"}
+{"id": "W7225814597", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가정용 필터링 기술", "problem": "탁수에서 수질 개선"}
+{"id": "W7225819712", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 납(Pb(II))", "problem": "납 제거를 위한 필터 개발"}
+{"id": "W7225777681", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 뉴캐슬병", "problem": "뉴캐슬병의 효과적인 제어 방법 평가"}
+{"id": "W7225776863", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간의 이상", "problem": "카드뮴 유도 간 이상 개선"}
