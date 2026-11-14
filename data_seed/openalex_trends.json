@@ -1,12 +1,6 @@
 {
  "history": [
   {
-   "ts": 1791211638,
-   "kwater": 415,
-   "related_1y": 17677,
-   "journal_corpus": 103623
-  },
-  {
    "ts": 1791245152,
    "kwater": 415,
    "related_1y": 4607,
@@ -719,9 +713,15 @@
    "kwater": 417,
    "related_1y": 17656,
    "journal_corpus": 117054
+  },
+  {
+   "ts": 1794695355,
+   "kwater": 417,
+   "related_1y": 17656,
+   "journal_corpus": 117054
   }
  ],
- "updated": 1794679786,
+ "updated": 1794695355,
  "window_from": "2025-07-01",
  "institutes": {
   "INST-01": {
@@ -1140,7 +1140,7 @@
      "2026": 1
     }
    },
-   "cit_updated": 1794679786,
+   "cit_updated": 1794695355,
    "by_year_all": {
     "2022": 1016,
     "2023": 1191,
