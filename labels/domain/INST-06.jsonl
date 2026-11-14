@@ -5916,3 +5916,16 @@
 {"id": "W7163458658", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안림 식재 기초의 생육 환경", "problem": "식재된 검은 소나무의 저조한 생장 원인 규명"}
 {"id": "W4360984675", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Yazd 카운티의 도시 열섬", "problem": "LST와 토지 이용 유형 간의 관계 분석"}
 {"id": "W4375816993", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Mula right bank canal command area", "problem": "토지 이용 및 토지 피복의 퇴화 수준 평가"}
+{"id": "W7225855120", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "수자원 및 교통 인프라", "problem": "변형 모니터링 정확도 향상"}
+{"id": "W7225862712", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환경 화학 오염", "problem": "전통적인 반응적 접근에서의 근본적인 전환 필요"}
+{"id": "W7225860946", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 반건조 지역의 지하수 자원", "problem": "지하수 고갈 문제 해결"}
+{"id": "W7225899525", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "걸프 협력 회의(GCC) 지역의 대기 중 이산화질소(NO₂) 농도", "problem": "주간 및 월간 NO₂ 농도 추정"}
+{"id": "W7225755226", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 생태계 모니터링", "problem": "위성 데이터를 통한 수질 및 조류 발생 모니터링 개선"}
+{"id": "W7120345327", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "관개 농업 시스템에서의 실제 증발산(ET)", "problem": "물 자원 관리 개선을 위한 ET 추정"}
+{"id": "W4302330138", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "캘리포니아 습지", "problem": "영양염류 과다 문제 해결"}
+{"id": "W7117390890", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수의 수면 면적과 수온", "problem": "호수의 수면 면적과 수온 간의 관계 분석"}
+{"id": "W4210577838", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 조직 및 기능", "problem": "유역의 이질성을 정량화하고 이해하기"}
+{"id": "W4210803776", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "힌두쿠시 히말라야 지역의 눈 덮임 변화", "problem": "눈 덮임 감소 추세 분석"}
+{"id": "W4205453530", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산호초의 건강", "problem": "인간의 기후 변화 영향 이해하기"}
+{"id": "W4206393193", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다층 액체 구름층의 탐지", "problem": "구름 레이더 도플러 스펙트럼을 통한 액체 구름층 탐지 개선"}
+{"id": "W4226299439", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지구 시스템의 토지 표면 모델", "problem": "모델링 상태와 매개변수 업데이트를 위한 데이터 동화 최적화"}

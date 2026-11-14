@@ -1942,3 +1942,6 @@
 {"id": "W7225824234", "object": "Douro 강 댐", "problem": "과학 관광 제품 및 경험 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7117389475", "object": "지구의 수자원 및 자연 생태계", "problem": "물 저장 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4321793908", "object": "Upper Gilgel Abbay watershed의 수문학적 상태", "problem": "토지 이용/토지 피복 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225903646", "object": "수자원 시스템 및 생물학적 시스템", "problem": "복잡한 환경 문제 해결을 위한 통합 관리 솔루션 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225889773", "object": "Lake Victoria Basin의 수자원", "problem": "기후 변동성이 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225867698", "object": "아제르바이잔의 담수 자원", "problem": "인간 활동의 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}

@@ -3327,3 +3327,7 @@
 {"id": "W7225775407", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "관광지의 재정적 지속 가능성", "problem": "관광 확장에 따른 서비스 지속 가능성 평가"}
 {"id": "W7132410791", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지자체 수자원 기반 시설", "problem": "홍수 위험 평가 및 모델링"}
 {"id": "W4364350981", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 변화", "problem": "데이터 공유를 통한 기후 변화 해결"}
+{"id": "W7225864083", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 수자원 관리", "problem": "비수익 수자원 감소 추세 분석"}
+{"id": "W7225895089", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리 시스템", "problem": "비용과 복잡성 문제 해결"}
+{"id": "W7225902979", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 지오스민과 2-메틸이소보르네올", "problem": "음용수의 맛과 냄새 문제 해결"}
+{"id": "W7203844755", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 분배 시스템", "problem": "디지털 트윈 아키텍처를 통해 수자원 분배 시스템의 복잡성 해결"}

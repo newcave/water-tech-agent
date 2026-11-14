@@ -1306,3 +1306,5 @@
 {"id": "W4394046995", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7205709662", "object": "양쯔강 유역의 퇴적물 공급", "problem": "퇴적물 농도 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225791367", "object": "Faisalabad 지역의 지하수 품질", "problem": "금속 오염 검출을 위한 데이터 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225906149", "object": "빙하 눈선의 정확한 매핑", "problem": "빙하 눈선 매핑의 정확도를 비교하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225860946", "object": "인도의 반건조 지역의 지하수 자원", "problem": "지하수 고갈 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

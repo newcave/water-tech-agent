@@ -1095,3 +1095,6 @@
 {"id": "W7225794653", "object": "댐 변형 예측", "problem": "불확실성 정량화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225813209", "object": "수리 구조물", "problem": "지진 위험에 대한 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225791132", "object": "수력 발전소 하류 변동 역수역", "problem": "수력 변동의 전파 메커니즘과 에너지 소산 법칙 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225876210", "object": "juvenile Chinook Salmon", "problem": "상태 개선을 위한 어류 통과량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225871713", "object": "댐 지역의 계곡 변형", "problem": "계곡 변형의 진화 법칙 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225906498", "object": "저수지 댐의 표면 변형", "problem": "정적 및 동적 변형 모니터링", "relevant": true, "model": "gpt-4o-mini"}

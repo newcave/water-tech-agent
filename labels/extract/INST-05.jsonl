@@ -3356,3 +3356,12 @@
 {"id": "W7225791220", "object": "원격 지역의 전력 공급", "problem": "신뢰할 수 있는 전력 공급 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225781046", "object": "대규모 수력 발전소의 수위 조절", "problem": "홍수 안전 확보 및 발전 효율 극대화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7127846652", "object": "헨리 카운티 공공 서비스 당국의 물 공급", "problem": "물 공급 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225853335", "object": "다중 에너지 시스템의 전력 생성 비용", "problem": "비용 최소화 및 제약 조건 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225879075", "object": "메콩 지역 전력 시스템", "problem": "기후 변화에 따른 수력 발전 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225886058", "object": "재생 가능 에너지 시스템의 취약성", "problem": "극단적인 에너지 가뭄의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225889773", "object": "레이크 빅토리아 분지의 수자원", "problem": "기후 변동성이 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225891852", "object": "그리스 전력 시장의 시장 청산 가격(MCP)", "problem": "MCP 형성의 상호작용 구조 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225895862", "object": "볼리비아 수력 발전소의 재구성", "problem": "채권자 대안을 비교하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225914949", "object": "전력의 탄소 발자국 요인", "problem": "불확실성의 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225860708", "object": "수력 발전의 경제적, 환경적 및 지역적 효과", "problem": "수력 발전의 경제적 가치를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7206560246", "object": "캐나다의 수력 발전 댐과 환경적 소외 지표", "problem": "소외된 커뮤니티에 대한 댐 건설의 불균형적 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
