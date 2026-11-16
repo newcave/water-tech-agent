@@ -383,3 +383,4 @@
 {"ts": "2026-11-15T07:21:33Z", "forward": 0, "hist_year": 2026, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 23268, "failures": 84, "duration_s": 310}
 {"ts": "2026-11-15T19:09:00Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 23268, "failures": 0, "duration_s": 2}
 {"ts": "2026-11-16T07:29:34Z", "forward": 63, "hist_year": 2025, "hist": 210, "backfilled": 273, "extracted": 133, "assigned": 131, "total": 23399, "failures": 47, "duration_s": 421}
+{"ts": "2026-11-16T22:34:32Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 23399, "failures": 0, "duration_s": 2}
