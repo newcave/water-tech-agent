@@ -6484,3 +6484,27 @@
 {"id": "W4224243336", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 처리 기술", "problem": "폐수 처리에서 박테리오파지를 활용한 생물학적 제어 개선"}
 {"id": "W7120507577", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "딸기 생산성 및 품질", "problem": "처리된 가정 하수를 이용한 재배의 타당성 평가"}
 {"id": "W4206619116", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 삼국 국경 지역의 음용수", "problem": "음용수의 품질 평가 및 오염 문제 해결"}
+{"id": "W7228050261", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kampil Dam의 수질", "problem": "인간 활동의 영향 평가"}
+{"id": "W7233419169", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Awka 지역의 손으로 파낸 우물의 수질", "problem": "중금속 오염 및 미생물 부하 평가"}
+{"id": "W7225991820", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유아 돼지의 성장 성능 및 소화율", "problem": "영양소 소화율 개선"}
+{"id": "W7226002379", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 토양의 불소 함유 제올라이트 종", "problem": "불소 원천 식별 및 제거"}
+{"id": "W7226017451", "domain_primary": "W4", "domain_secondary": ["W6"], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 처리 슬러지", "problem": "지속 가능한 재활용 방안 모색"}
+{"id": "W7226019042", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시설", "problem": "LCA 결과의 변동성과 독립성 문제 해결"}
+{"id": "W7226027274", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동아프리카의 가정에서 개선된 음용수 서비스에 대한 접근성", "problem": "제한된 음용수 서비스 접근성을 예측하기 위한 기계 학습 모델 개발"}
+{"id": "W7226027777", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "항균 마스터배치", "problem": "미생물 성장 억제"}
+{"id": "W7226034083", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수의 불소 오염", "problem": "불소 제거 방법을 찾다"}
+{"id": "W7226034773", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "멕시코의 지하수", "problem": "중금속 오염의 지속성 평가"}
+{"id": "W7226005676", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "사춘기 발달 시기", "problem": "사춘기 발달 시기 지연 문제 해결"}
+{"id": "W7225233123", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우기 동안의 빗물", "problem": "물리적, 화학적 및 미생물 품질 개선"}
+{"id": "W7108083035", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "육계의 생산적 성능 및 생리적 특성", "problem": "나노 프로폴리스와 비타민 E, C 추가의 효과 조사"}
+{"id": "W4415716551", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "비유제품 발효 음료", "problem": "품질과 감각적 매력을 향상시키기"}
+{"id": "W4413693636", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mewar 지역 지하수", "problem": "TDS 및 박테리아 오염 제거"}
+{"id": "W4413434416", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지역 닭의 성장 및 생산성", "problem": "허브 용액 보충의 효과 평가"}
+{"id": "W4413435053", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IPB-D1 닭", "problem": "성장 성능 향상"}
+{"id": "W4412782612", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 품질", "problem": "정확한 측정 및 실시간 모니터링 제공"}
+{"id": "W7225966584", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "San Miguel rural community's drinking water quality", "problem": "improve drinking water safety"}
+{"id": "W4410786131", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Cacesse Zone 2 Neighborhood의 식수 공급 시스템", "problem": "식수 공급의 불만족 해결"}
+{"id": "W4410834667", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 면역력과 캐르카스 품질", "problem": "면역력과 캐르카스 품질 개선"}
+{"id": "W4406736544", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "황달 발생", "problem": "황달 발생 패턴 확인 및 영향을 받는 인구 식별"}
+{"id": "W4406708618", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물에서의 메토클로프라미드", "problem": "제거 방법 개선"}
+{"id": "W4406708661", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 미세오염물질", "problem": "아세틸살리실산 제거"}

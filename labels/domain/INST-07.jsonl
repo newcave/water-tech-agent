@@ -1271,3 +1271,18 @@
 {"id": "W7225791367", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Faisalabad 지역의 지하수 품질", "problem": "금속 오염 검출을 위한 데이터 분석"}
 {"id": "W7225906149", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "빙하 눈선의 정확한 매핑", "problem": "빙하 눈선 매핑의 정확도를 비교하고 개선하기"}
 {"id": "W7225860946", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인도의 반건조 지역의 지하수 자원", "problem": "지하수 고갈 문제 해결"}
+{"id": "W7226026450", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 예측의 연구와 운영 간의 격차", "problem": "연구와 운영 간의 격차 해소"}
+{"id": "W7226039982", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지속 가능한 수자원 관리", "problem": "AI/ML 도구의 적용 부족 해결"}
+{"id": "W7226157965", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7226304646", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7227031742", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7227856377", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7228583938", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7229069956", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7229748744", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7230845978", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7226158443", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W7228050275", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 모델링", "problem": "예측 성능과 기계적 해석 가능성 간의 긴장 해결하기"}
+{"id": "W4412499149", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산림 지역의 변화", "problem": "산림 파괴 탐지"}
+{"id": "W7207996995", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "에티오피아 타나호의 수생 식물 호테이아오이", "problem": "시공간적 변동 분석 및 수질 영향 평가"}
+{"id": "W4407056998", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 유량 시뮬레이션", "problem": "정확한 유량 패턴 시뮬레이션 개선"}

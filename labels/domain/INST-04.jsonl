@@ -1085,3 +1085,10 @@
 {"id": "W7225876210", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "juvenile Chinook Salmon", "problem": "상태 개선을 위한 어류 통과량 추정"}
 {"id": "W7225871713", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "댐 지역의 계곡 변형", "problem": "계곡 변형의 진화 법칙 분석"}
 {"id": "W7225906498", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 댐의 표면 변형", "problem": "정적 및 동적 변형 모니터링"}
+{"id": "W7225892993", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고농도 테일링의 응집 특성", "problem": "응집 거동 개선"}
+{"id": "W7225901282", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대형 제방의 안전성", "problem": "제방 붕괴 시의 압력 변화와 유출 특성 분석"}
+{"id": "W7116219746", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐쇄된 배출 저장 시설의 물리적 상태", "problem": "물리적 안정성 향상"}
+{"id": "W7116224277", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "tailings storage facilities (TSFs)", "problem": "안전성 및 관리 향상"}
+{"id": "W7116598057", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 저장 시설의 안전성", "problem": "실시간 모니터링을 통한 위험 감지"}
+{"id": "W7225210919", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수에서의 장내세균군", "problem": "장내세균군의 특성 조사"}
+{"id": "W7225854930", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Daroongar earth dam", "problem": "안정성 평가 및 모니터링 정확성 향상"}

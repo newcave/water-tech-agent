@@ -3288,3 +3288,24 @@
 {"id": "W7225914949", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력의 탄소 발자국 요인", "problem": "불확실성의 원인 규명"}
 {"id": "W7225860708", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전의 경제적, 환경적 및 지역적 효과", "problem": "수력 발전의 경제적 가치를 평가하기"}
 {"id": "W7206560246", "domain_primary": "W2", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "캐나다의 수력 발전 댐과 환경적 소외 지표", "problem": "소외된 커뮤니티에 대한 댐 건설의 불균형적 영향 분석"}
+{"id": "W7226014016", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "계단식 수력 에너지 저장 시스템", "problem": "유연성 향상 및 변동성 재생 가능 에너지 수용"}
+{"id": "W7226021713", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 시스템", "problem": "예측 및 제어 기술 최적화"}
+{"id": "W7225310042", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오프그리드 하이브리드 태양광-양수 저장 수력 시스템", "problem": "전력 공급의 신뢰성 문제 해결"}
+{"id": "W7164733027", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 플로팅 태양광-수력 시스템", "problem": "물-에너지 상호작용을 동적으로 모델링"}
+{"id": "W7229603134", "domain_primary": "W1", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "상류 황하 유역의 수자원 관리", "problem": "농업 정책에 따른 관개 수요 변화"}
+{"id": "W7117464583", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 시스템", "problem": "제한된 역사적 데이터로부터 정확한 예측 생성"}
+{"id": "W7117114532", "domain_primary": "W7", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kluet Dam의 구조적 실패로 인한 홍수 피해", "problem": "댐 실패로 인한 홍수 범위 및 유동 행동 분석"}
+{"id": "W4415697050", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "피코 수력 발전 시스템", "problem": "제조 비용과 설계 유연성 문제 해결"}
+{"id": "W4415621340", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중력 수력 발전소의 소용돌이 특성", "problem": "소용돌이의 자유 표면 프로파일 예측"}
+{"id": "W7208004450", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "사막 지역의 환경 및 식량 생산", "problem": "사막 지역 축소 및 CO2 배출 감소"}
+{"id": "W4412642309", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 수력 발전", "problem": "수력 발전의 발전 속도 저조 문제 해결"}
+{"id": "W4412043345", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수계 유량 예측", "problem": "정확한 유량 예측"}
+{"id": "W4411811932", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "베트남의 수력 발전 자원", "problem": "수력 발전 자원 개발"}
+{"id": "W4411253757", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 양수 저장 발전소의 운영 및 스케줄링", "problem": "최적의 수력 및 태양광 발전 통합 극대화"}
+{"id": "W4410516402", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 공급 및 전자 이동 수단", "problem": "에너지 생성과 소비의 시간 및 용량 균형 맞추기"}
+{"id": "W4410235070", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 원자력 발전 환경 영향", "problem": "탄소 배출 강도 분석"}
+{"id": "W4409538901", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우간다의 안전과 평화", "problem": "중국 인프라 개발의 비교 효과 조사"}
+{"id": "W4406969236", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "CATIA V6의 단면도 생성 기능", "problem": "단면도 생성의 제약 해결"}
+{"id": "W7117339186", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 가능성", "problem": "기후 변화로 인한 수력 발전 잠재력 감소"}
+{"id": "W4412713651", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "탈규제 전력 시스템의 주파수 조정", "problem": "성능과 안정성 향상"}
+{"id": "W4410244163", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아마존 지역의 전력 접근성", "problem": "소규모 전력 생산 시스템의 효율성 개선"}

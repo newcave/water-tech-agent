@@ -1945,3 +1945,18 @@
 {"id": "W7225903646", "object": "수자원 시스템 및 생물학적 시스템", "problem": "복잡한 환경 문제 해결을 위한 통합 관리 솔루션 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225889773", "object": "Lake Victoria Basin의 수자원", "problem": "기후 변동성이 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225867698", "object": "아제르바이잔의 담수 자원", "problem": "인간 활동의 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7155121448", "object": "메갈레이크 차드의 수문학적 특성", "problem": "고대 호수의 수리 패턴 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414788405", "object": "Nevado del Ruiz 화산의 눈 덮임 변화", "problem": "눈 덮임의 변동성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4416813341", "object": "주택의 취약성", "problem": "주택의 홍수 취약성 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105644542", "object": "홍수 식생", "problem": "홍수 지역의 정확한 매핑 및 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105648619", "object": "니제르 강 유역의 수자원 관리", "problem": "유량 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105649407", "object": "수면 수위", "problem": "SWOT 데이터의 접근성과 활용을 개선하려는 노력", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105651412", "object": "아마존 유역의 수문학적 시스템", "problem": "모델링 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105651510", "object": "알프스 빙하의 표면 높이", "problem": "SWOT를 이용한 빙하 표면 높이 측정의 정확성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105651526", "object": "홍수 예측 시스템", "problem": "홍수 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105656368", "object": "갠지스 강의 수리 변수", "problem": "강 유량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105657328", "object": "전 세계 하천 시스템", "problem": "하천 모니터링을 통한 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105664678", "object": "내륙 수역의 수위 데이터", "problem": "전 세계 내륙 수역의 수위 측정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105698646", "object": "미국과 캐나다의 수면 고도", "problem": "SWOT 수면 고도의 정확성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105701616", "object": "강 유량 추정", "problem": "정확한 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7105702625", "object": "알래스카 노아탁 강의 수문학", "problem": "강 유량, 부유 침전물 운반 및 탁도의 변동성 이해하기", "relevant": true, "model": "gpt-4o-mini"}

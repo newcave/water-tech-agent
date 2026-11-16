@@ -5980,3 +5980,35 @@
 {"id": "W4205453530", "object": "산호초의 건강", "problem": "인간의 기후 변화 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4206393193", "object": "다층 액체 구름층의 탐지", "problem": "구름 레이더 도플러 스펙트럼을 통한 액체 구름층 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4226299439", "object": "지구 시스템의 토지 표면 모델", "problem": "모델링 상태와 매개변수 업데이트를 위한 데이터 동화 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7231767881", "object": "해안 근처 해빙 상태", "problem": "일일 해빙 우세 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7232398936", "object": "식물의 수분 역학", "problem": "위성 데이터와 현장 측정의 불일치 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225989242", "object": "수면 수자원", "problem": "수면 수자원 탐지 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225993966", "object": "가르다 호수의 생태적 상태", "problem": "호수 모니터링 및 관리 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225998746", "object": "그린란드 칼랄리트 누나트 지역의 해수면 높이 및 기타 신호 관측을 위한 GNSS 시스템", "problem": "조사 및 위험 경고 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226012990", "object": "얕은 해안 수역의 바닥 유형 특징", "problem": "바닥 유형 특징 추출의 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226015914", "object": "Posidonia oceanica 초원", "problem": "변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226018832", "object": "조스 메트로폴리스의 도시 공터", "problem": "도시 공터의 시공간적 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226037617", "object": "저수지의 수면 상태", "problem": "위성 데이터를 활용한 수면 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226039517", "object": "작은 언덕 저수지의 바닥 너비", "problem": "저수지 깊이 추정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225896996", "object": "농업 생산성 및 지속 가능성", "problem": "데이터 분석을 통한 농업 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226028633", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7232058487", "object": "원격 감지 이미지 캡셔닝", "problem": "도메인 일반화 및 의미적 풍부함 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7232787505", "object": "토지 이용 및 토지 피복 변화", "problem": "산업 활동에 따른 환경 모니터링 필요성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225982851", "object": "Panchaganga 강의 홍수 행동", "problem": "홍수의 원인 분석 및 개선 방안 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233175979", "object": "인도 내 센티넬-2 위성 이미지의 활용", "problem": "센티넬-2 이미지의 활용 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226011813", "object": "Khotyn Upland의 토양 생태계", "problem": "토양 침식 위험과 퇴화를 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7116935443", "object": "몽골 고원 지역의 식생 변화", "problem": "기후 변화에 따른 식생 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205254518", "object": "프랑스 호수의 수질", "problem": "수질 원격 감시를 위한 정확한 측정 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412786208", "object": "지속 가능한 농업", "problem": "디지털 기술을 통한 자원 효율성 향상 및 환경 영향 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412642292", "object": "오염된 수역", "problem": "모니터링 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412867138", "object": "식생 건강", "problem": "토지 이용 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410708202", "object": "Synthetic Aperture Radar (SAR) 위성 이미지", "problem": "인간이 만든 변화와 자연 변동 구분하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410698062", "object": "해양 생물 다양성", "problem": "위성 분석을 통한 생물 다양성 지수 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409274580", "object": "식생 피복 상태", "problem": "환경 요인의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408873749", "object": "Pari Island의 저수역 생물 서식지", "problem": "저수역 생물 서식지 분류 및 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408873679", "object": "Ujung Genteng의 수심 얕은 해양 바닥 서식지", "problem": "해양 바닥 서식지 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408802739", "object": "돌로미티 지역의 빙하", "problem": "빙하의 급속한 감소와 소멸", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408467003", "object": "모젤 강의 수질", "problem": "수질 모니터링의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120708698", "object": "말리의 농업 지속 가능성 및 식량 안전성", "problem": "토양 침식 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406708816", "object": "Saiss Basin의 수분 및 식생 상태", "problem": "대규모 증발산량 추정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406475271", "object": "Mangalore taluk의 지하수 잠재력 구역", "problem": "지하수 가용성 평가", "relevant": true, "model": "gpt-4o-mini"}
