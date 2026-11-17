@@ -3464,3 +3464,21 @@
 {"id": "W4412593841", "object": "도시 물 관리", "problem": "효율적인 물 분배와 투명성 확보", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213587346", "object": "EBRD의 환경 성과", "problem": "환경 성과를 검토하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4411284774", "object": "Thiokoye River Basin", "problem": "수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233601927", "object": "미국 중소 규모의 수도 및 폐수 유틸리티", "problem": "기술 거버넌스 및 보안 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403353232", "object": "Kisumu County의 수자원 접근성", "problem": "수자원 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399234739", "object": "Umuahia North 지역의 공립 중학교", "problem": "학교 위치의 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398169924", "object": "키르기스스탄의 수자원 관리", "problem": "효과적인 물 소비 통제 및 서비스 제공 비용 조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395683298", "object": "농업 기계의 내비게이션 시스템", "problem": "적응형 경관 농업을 위한 내비게이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394743105", "object": "콜레라 대응을 위한 물탱크의 이용 관행", "problem": "주민의 위생 기준과 물 공급의 불규칙성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399989636", "object": "미국 서부의 물 자원", "problem": "물 자원의 감소 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401424444", "object": "물 분배 시스템의 누수 수준", "problem": "경제적으로 적합한 누수 수준 정의하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399412937", "object": "공공 인프라 및 유틸리티 효율성", "problem": "민간 투자와 GDP 간의 관계 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404130203", "object": "유틸리티 터널 건설 효율성", "problem": "건설 효율성을 향상시키기 위한 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4406903380", "object": "수처리 과정", "problem": "운영 소스 수질 불확실성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133288094", "object": "St. Anns Bank 해양 보호 구역", "problem": "MPA의 보전 목표 모니터링을 위한 데이터 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399377847", "object": "전력 품질", "problem": "전력 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399478318", "object": "인간 신뢰성 분석(HRA)", "problem": "HRA 방법의 정확성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399748843", "object": "농민의 토지 및 물 사용 결정", "problem": "사회적 관계가 농민 결정에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400841574", "object": "음용수 네트워크", "problem": "자산 관리 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402306832", "object": "자산 관리 및 유지보수 엔지니어링 기능", "problem": "운영 시너지 향상 및 자원 배분 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403837230", "object": "덴마크의 물 관리 시스템", "problem": "디지털 물 기술의 통합과 사회적 요소의 재삽입", "relevant": true, "model": "gpt-4o-mini"}

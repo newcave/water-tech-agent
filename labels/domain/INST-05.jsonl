@@ -3309,3 +3309,28 @@
 {"id": "W7117339186", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 가능성", "problem": "기후 변화로 인한 수력 발전 잠재력 감소"}
 {"id": "W4412713651", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "탈규제 전력 시스템의 주파수 조정", "problem": "성능과 안정성 향상"}
 {"id": "W4410244163", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아마존 지역의 전력 접근성", "problem": "소규모 전력 생산 시스템의 효율성 개선"}
+{"id": "W4409646049", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 중앙집중형 재생 가능 발전소", "problem": "재생 가능 용량 확장 가능성 분석"}
+{"id": "W7162490123", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템의 운영 일정", "problem": "전압 위반 및 전력 부족 문제 해결"}
+{"id": "W4405762873", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동아시아 및 동남아시아의 에너지 안전성", "problem": "에너지 공급의 안전성 및 다양성 개선"}
+{"id": "W4404545295", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저압 수원에서의 수력 발전 장치", "problem": "수력 터빈의 기하학적 형태와 노즐 수가 수류의 속도 및 압력 변화에 미치는 영향 분석"}
+{"id": "W4403692090", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 산업의 탄소 배출", "problem": "탄소 배출 감소를 위한 요인 분석 및 기술 개선"}
+{"id": "W4403313051", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 유닛의 가이드 베인", "problem": "장비의 상태 모니터링 및 이상 경고"}
+{"id": "W4401830922", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아의 전력 산업", "problem": "전력 생산이 경제 성장에 미치는 영향 분석"}
+{"id": "W4401468829", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 재생 가능 에너지 발전 산업", "problem": "재생 가능 에너지 발전의 시장 점유율을 높이고 에너지 공급과 환경 보호를 조정하기"}
+{"id": "W4401444520", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 수력 발전 시스템", "problem": "발전 가용성 보장"}
+{"id": "W4400899144", "domain_primary": "W3", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 접근성 및 품질", "problem": "인간 활동으로 인한 수자원 변화 해결"}
+{"id": "W4400741820", "domain_primary": "W8", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "소형 수력 발전소의 에너지 생산", "problem": "생태 유량을 고려한 에너지 생산 평가"}
+{"id": "W4400741485", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Arges-Vedea 수계의 기존 수문 구조물", "problem": "기존 수문 구조물의 수력 발전 잠재력 평가"}
+{"id": "W4400523794", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 발전소", "problem": "최대 발전량 달성하기"}
+{"id": "W4399130188", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하이브리드 재생 가능 에너지 시스템", "problem": "재생 가능 에너지의 변동성 보상"}
+{"id": "W4396919493", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "메콩강 삼각주 지역의 물, 식량, 에너지 자원", "problem": "물-식량-에너지 연결성을 이해하고 개선하려는 연구"}
+{"id": "W4399578766", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 기후 정책", "problem": "국제 기후 보호에서의 자유 탑승 문제 해결"}
+{"id": "W4395041990", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 수압 해머", "problem": "수압 해머 분석 수행"}
+{"id": "W4390987546", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Pelton 수력 터빈의 성능", "problem": "최적의 제트 펌프 설계로 성능 조절"}
+{"id": "W4399056119", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파도 에너지 수확기", "problem": "전기 에너지 생산 개선"}
+{"id": "W4399910579", "domain_primary": "W0", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "생물 다양성 및 사회적 영향", "problem": "수력 발전 댐으로 인한 생태적 및 사회문화적 단편화 해결"}
+{"id": "W4401384486", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 전력 수요", "problem": "전력 공급 부족 문제 해결"}
+{"id": "W4404147581", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 에너지 시스템", "problem": "에너지 시스템의 위기 해결"}
+{"id": "W4403782894", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Karun 4 저수지 발전소", "problem": "기후 변화에 따른 전력 생산 감소"}
+{"id": "W4401113660", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔 전력 시스템의 안정성", "problem": "전력 시스템 안정성 문제 평가"}
+{"id": "W4404791466", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "run-of-river 수력 발전소", "problem": "전력 생산 최적화 및 비용 최소화"}

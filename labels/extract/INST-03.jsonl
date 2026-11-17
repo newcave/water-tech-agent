@@ -6618,3 +6618,27 @@
 {"id": "W4406736544", "object": "황달 발생", "problem": "황달 발생 패턴 확인 및 영향을 받는 인구 식별", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406708618", "object": "수돗물에서의 메토클로프라미드", "problem": "제거 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406708661", "object": "약물 미세오염물질", "problem": "아세틸살리실산 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233552751", "object": "고혈압과 불안 관련 장애", "problem": "불안 행동에 대한 ARB의 영향 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225985882", "object": "온실 재배에서의 질소 균형", "problem": "과도한 질소 비료로 인한 환경 손실 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7230506550", "object": "북경오리의 성장 성능과 육질", "problem": "성장 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233558420", "object": "설명된 신경 차단 및 치료 기술", "problem": "안전한 신경 차단 및 치료 기술 적용 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225865902", "object": "농촌 음용수 처리 시스템", "problem": "전통 오염물질과 미세플라스틱 동시 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218226171", "object": "지하수의 철(Fe) 및 망간(Mn) 농도", "problem": "농도 감소를 위한 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403950701", "object": "PFAS 수준", "problem": "정확한 검출 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404762000", "object": "Jambon Village의 수돗물 품질", "problem": "수돗물 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404617813", "object": "수질", "problem": "수질 개선 및 접근성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404617854", "object": "제약 산업의 폐수", "problem": "유해 물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403850706", "object": "나이지리아의 음용수 원천", "problem": "마이코톡신의 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394586220", "object": "염증성 장 질환(UC)", "problem": "UC의 보호 효과 검증 및 관련 메커니즘 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402063935", "object": "음용수 원천 및 수도관의 수질", "problem": "오존 정화 시스템을 통한 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402066316", "object": "육계의 성장 및 면역 상태", "problem": "프로바이오틱스 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401063230", "object": "캄풍 닭의 성장 성능과 소화율", "problem": "프로바이오틱스와 식이 람토로 잎 분말의 상호작용 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401062546", "object": "산란계의 생산성 및 계란 품질", "problem": "스피룰리나 첨가의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7111689630", "object": "대사 기능 장애와 관련된 지방간 질환(MASLD)", "problem": "지방간 질환의 새로운 치료법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398787132", "object": "소독제의 안정성", "problem": "소독제의 안정성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398771418", "object": "알호세이마 담수화 플랜트에서 생산된 물의 품질", "problem": "미네랄 균형을 회복하고 품질을 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395701509", "object": "가정용 식수의 품질", "problem": "저장 용기 개선을 통한 수질 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395703781", "object": "성인 암컷 생쥐", "problem": "비소로 인한 혈액학적 및 생화학적 변화와 장기 발달 이상 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391364666", "object": "여성의 우울 증상", "problem": "우울 증상의 발현에 미치는 물의 종류 영향", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225797939", "object": "간 건강", "problem": "크롬 노출로 인한 간 손상 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7147742694", "object": "염분이 제거된 음용수 품질", "problem": "습지를 이용한 염분 제거", "relevant": true, "model": "gpt-4o-mini"}

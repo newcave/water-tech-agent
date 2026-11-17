@@ -1960,3 +1960,15 @@
 {"id": "W7105698646", "object": "미국과 캐나다의 수면 고도", "problem": "SWOT 수면 고도의 정확성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7105701616", "object": "강 유량 추정", "problem": "정확한 유량 추정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7105702625", "object": "알래스카 노아탁 강의 수문학", "problem": "강 유량, 부유 침전물 운반 및 탁도의 변동성 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225868841", "object": "Barakar 강 유역", "problem": "침식 및 수자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7127847462", "object": "Upper Mississippi River의 생태계", "problem": "서식지의 질과 다양성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225907940", "object": "Balkh River의 수자원 관리", "problem": "수자원 변동성 이해 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394608648", "object": "농업과 생태계의 수자원", "problem": "수자원 감소 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392602802", "object": "강수 측정 기기", "problem": "측정 오류 최소화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213704853", "object": "황하 투다오구아이 수문 관측소의 유출수 및 퇴적물 플럭스", "problem": "유출수 및 퇴적물 플럭스의 변화 특성 분석 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120775088", "object": "세아라 주의 저수지 네트워크", "problem": "가뭄의 영향 이해 및 물 자원 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135283216", "object": "Umgeni Catchment의 지하수와 표면수", "problem": "지하수 재충전 과정과 표면수와의 연결 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7152951831", "object": "하천 유량 예측", "problem": "정확한 강수 예측의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213345919", "object": "인도의 가뭄 발생 및 영향", "problem": "과거 가뭄 분석을 위한 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213726085", "object": "내몽골 초원 내륙 하천 유역의 수문 주기 요소", "problem": "식생 변화와 기후 변화에 대한 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213733998", "object": "Shule River Basin의 수면 증발", "problem": "수면 증발의 변화 특성과 미래 진화 추세를 밝히기", "relevant": true, "model": "gpt-4o-mini"}

@@ -6012,3 +6012,16 @@
 {"id": "W7120708698", "object": "말리의 농업 지속 가능성 및 식량 안전성", "problem": "토양 침식 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406708816", "object": "Saiss Basin의 수분 및 식생 상태", "problem": "대규모 증발산량 추정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4406475271", "object": "Mangalore taluk의 지하수 잠재력 구역", "problem": "지하수 가용성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7205261720", "object": "물 저장소의 수문학적 역학", "problem": "위성 이미지를 사용하여 물 저장소의 역학을 이해하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404743247", "object": "Ningi-Burra 복합체의 지하수 잠재력", "problem": "지하수 잠재력 구역을 표현하기 위한 선형 구조 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402806000", "object": "Panchet 저수지 주변의 토지 이용 및 토지 피복 변화", "problem": "토지 이용 및 피복 변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402534265", "object": "Ihiala Local Government Area의 숲 생태계", "problem": "숲 생태계 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220276067", "object": "요르단 중앙 고산 지역의 녹지 면적", "problem": "가뭄 수준 분석 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400958994", "object": "석유 탐사", "problem": "탐사 효율성과 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403120216", "object": "내륙 수역의 남조류", "problem": "남조류 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396760074", "object": "북극 해빙의 광학적 특성", "problem": "계절적 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391685106", "object": "Ykem 유역의 수자원", "problem": "기후 변화의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391695874", "object": "실제 증발산량 (ETa)", "problem": "정확한 잠열 플럭스 (LE) 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391126224", "object": "Muaragembong 해안의 수질", "problem": "TSS 농도 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390913843", "object": "NDVI 플롯", "problem": "대비 개선 및 토지 피복 유형 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390914037", "object": "태양광 발전을 위한 이용 가능한 토지", "problem": "이용 가능한 토지 요소를 식별하고 평가하기", "relevant": true, "model": "gpt-4o-mini"}
