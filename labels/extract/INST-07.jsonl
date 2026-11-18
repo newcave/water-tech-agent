@@ -1323,3 +1323,4 @@
 {"id": "W4412499149", "object": "산림 지역의 변화", "problem": "산림 파괴 탐지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207996995", "object": "에티오피아 타나호의 수생 식물 호테이아오이", "problem": "시공간적 변동 분석 및 수질 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407056998", "object": "유역의 유량 시뮬레이션", "problem": "정확한 유량 패턴 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234158240", "object": "슬로베니아의 작은 유역", "problem": "홍수 경고의 정확성을 개선하려는", "relevant": true, "model": "gpt-4o-mini"}

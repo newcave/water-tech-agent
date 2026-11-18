@@ -6642,3 +6642,27 @@
 {"id": "W4391364666", "object": "여성의 우울 증상", "problem": "우울 증상의 발현에 미치는 물의 종류 영향", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225797939", "object": "간 건강", "problem": "크롬 노출로 인한 간 손상 회복", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7147742694", "object": "염분이 제거된 음용수 품질", "problem": "습지를 이용한 염분 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225692898", "object": "식수의 품질", "problem": "잔류 농약 검출 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233700587", "object": "수자원 관리 시스템", "problem": "수자원의 보존 및 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233922454", "object": "Shivnath River의 수질", "problem": "물리화학적 수질 및 중금속 오염 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233927104", "object": "내분비 교란 화학물질(EDCs)", "problem": "효율적인 제거 방법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234214779", "object": "식수 처리 시스템의 미생물 군집", "problem": "미생물의 지속성과 농축 메커니즘 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234359941", "object": "음용수 처리 공장", "problem": "처리 기차 생성 및 KPI 계산", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234461927", "object": "어린이의 뼈 미네랄 밀도", "problem": "음료수 미네랄 조성과 뼈 미네랄 밀도 간의 관계 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234523439", "object": "비 오는 물에서의 중금속 농도", "problem": "중금속 농도 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234125378", "object": "성인 토끼의 영양소 소화율 및 생화학적 지표", "problem": "열 스트레스 조건에서 영양소 소화율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234401595", "object": "인간 건강", "problem": "RO 수처리 기술의 영향을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225788678", "object": "카드뮴(Cd) 노출에 의한 세포 기능", "problem": "미토콘드리아 및 리보솜 기능 장애", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390556330", "object": "염증성 장 질환(UC)", "problem": "염증과 산화 스트레스 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390556447", "object": "고혈압성 심장병", "problem": "콜린의 영향으로 심장 기능 저하", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4389476978", "object": "자연 수원에서의 정수", "problem": "부유물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388183187", "object": "nodding syndrome", "problem": "nodding syndrome의 원인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386197464", "object": "브로일러 혈액 매개변수", "problem": "허브를 통한 혈액 매개변수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385353340", "object": "식품의 품질", "problem": "초음파 처리 중 단백질 변성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385273195", "object": "수질에서의 글리포세이트 제거", "problem": "저비용 흡착제 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385210640", "object": "시멘트 기반 재료의 내구성", "problem": "알카리-실리카 반응 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4382896075", "object": "두부 산업 근로자의 탈수 상태", "problem": "음료수 종류에 따른 탈수 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4378620231", "object": "젊은 코코넛 물 프로바이오틱 음료", "problem": "총 유산균과 총 용해 고형물의 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4368374870", "object": "estações de tratamento de água", "problem": "custos de energia e reagentes", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4361765473", "object": "브로일러 닭에서 전염성 기관지염", "problem": "전염성 기관지염 치료", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4323027001", "object": "장티푸스", "problem": "장티푸스 발생 억제", "relevant": true, "model": "gpt-4o-mini"}

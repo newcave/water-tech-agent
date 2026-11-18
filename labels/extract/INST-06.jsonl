@@ -6025,3 +6025,18 @@
 {"id": "W4391126224", "object": "Muaragembong 해안의 수질", "problem": "TSS 농도 추정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4390913843", "object": "NDVI 플롯", "problem": "대비 개선 및 토지 피복 유형 식별", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4390914037", "object": "태양광 발전을 위한 이용 가능한 토지", "problem": "이용 가능한 토지 요소를 식별하고 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233829449", "object": "토양 수분", "problem": "정확한 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233851003", "object": "Ajmer 지역의 토지 이용 및 토지 피복 변화", "problem": "정확한 변화 탐지 및 LULC 매핑", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7233981697", "object": "목성의 얼음 위성", "problem": "거주 가능한 환경을 지원할 수 있는 조건 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234426513", "object": "작물의 증발산량 추정", "problem": "정확한 작물 계수 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234149467", "object": "Ellikqal’a 지역의 식생 커버", "problem": "식생 모니터링 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4389897045", "object": "Gunungsewu 카르스트 계곡 토지", "problem": "토지 생산성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388503883", "object": "Bachok 지역의 지하수 잠재 구역", "problem": "지하수 자원 확보를 위한 가능성 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4387884225", "object": "Nansi Lake의 생태 환경", "problem": "환경 상태 개선 및 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386048337", "object": "Ingoda River의 열 오염", "problem": "도시 환경의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385732566", "object": "발트해 연안 수역의 부영양화 수준", "problem": "부영양화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385701541", "object": "토지 피복", "problem": "토지 피복 분류", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385433755", "object": "안지 카운티의 토양 및 수자원 보존", "problem": "디지털 수준 개선 및 통합 관리 실현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223453175", "object": "짐마 타운의 도시 확장 및 토지 이용/토지 피복 변화", "problem": "도시 성장에 따른 토지 이용 계획 및 관리 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4367593330", "object": "Jalna tehsil의 가뭄 상황", "problem": "가뭄 평가를 위한 강수 데이터 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4322581825", "object": "허드슨 만의 수역", "problem": "기후 변화와 수력 발전 규제로 인한 강 플룸 분산 패턴 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}

@@ -3367,3 +3367,23 @@
 {"id": "W4400841574", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 네트워크", "problem": "자산 관리 관행 개선"}
 {"id": "W4402306832", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자산 관리 및 유지보수 엔지니어링 기능", "problem": "운영 시너지 향상 및 자원 배분 개선"}
 {"id": "W4403837230", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "덴마크의 물 관리 시스템", "problem": "디지털 물 기술의 통합과 사회적 요소의 재삽입"}
+{"id": "W7234380559", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "일본 가막살나무 (Reynoutria japonica)", "problem": "성장 억제"}
+{"id": "W7234569842", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 수자원 인프라 관리", "problem": "합법성 재구성"}
+{"id": "W7234181367", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 내 물 관련 자연 기반 솔루션(NbS)", "problem": "재정 지원 경로 식별하기"}
+{"id": "W7234327035", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "피에몬트 지역의 수자원", "problem": "기후 변화에 따른 가뭄 모니터링 및 예측 개선"}
+{"id": "W7233590827", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 처리 시설", "problem": "홍수 사건으로 인한 피해를 정량화"}
+{"id": "W4387831359", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 정의", "problem": "환경 정의를 위한 규제 설계 개선"}
+{"id": "W4385498608", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "nectarine orchard의 식물 수분 상태", "problem": "정확한 관개 관리"}
+{"id": "W7234344140", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수압 분배 네트워크의 누수", "problem": "누수 위치 파악"}
+{"id": "W4401288483", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "드니프로 수력 발전소 저수지의 얼음 현상 발생 날짜", "problem": "얼음 현상 발생 날짜 예측 개선"}
+{"id": "W4385500926", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "압력 파이프라인의 전기 소비", "problem": "온도 요인의 영향을 평가하기"}
+{"id": "W4386646279", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Ctenopharyngodon idella (grass carp)", "problem": "어종 제거를 위한 미끼 자동 배급"}
+{"id": "W4386844698", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 공공 서비스의 재정 및 인프라 관리", "problem": "거버넌스 평가"}
+{"id": "W4387349144", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 및 하수도 서비스 제공", "problem": "서비스 제공 개선"}
+{"id": "W4388307345", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "자궁내막 병변", "problem": "악성 및 양성 병변 구별하기"}
+{"id": "W4388814866", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소아의 저산소증 발생", "problem": "고유량 비강 캐뉼라와 저유량 비강 캐뉼라 비교"}
+{"id": "W4389342995", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "말라카 주의 물 공급 시스템", "problem": "물 부족 문제를 예측하고 해결하기"}
+{"id": "W4389632817", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "CKDu 환자의 친척", "problem": "소변 농축 능력 평가"}
+{"id": "W4391012068", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mucormycosis 환자", "problem": "환자의 삶에 미치는 영향 분석"}
+{"id": "W4391737027", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지자체 기업의 관리 개념", "problem": "구성 요소의 자본 균형을 개선하려는 문제"}
+{"id": "W4394372392", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이주성 메뚜기 개체군", "problem": "해충 관리 및 식량 안전성 개선"}

@@ -1893,3 +1893,14 @@
 {"id": "W7213345919", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "인도의 가뭄 발생 및 영향", "problem": "과거 가뭄 분석을 위한 데이터 부족 해결"}
 {"id": "W7213726085", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내몽골 초원 내륙 하천 유역의 수문 주기 요소", "problem": "식생 변화와 기후 변화에 대한 반응 분석"}
 {"id": "W7213733998", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shule River Basin의 수면 증발", "problem": "수면 증발의 변화 특성과 미래 진화 추세를 밝히기"}
+{"id": "W7234152754", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수 surface water 및 groundwater", "problem": "기후 변동성과 토지 이용 변화의 영향 분석"}
+{"id": "W7234647129", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 지역의 수자원 관리", "problem": "도시의 수자원 흐름을 평가하고 개선하기"}
+{"id": "W7213734900", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Xiuhe River Basin의 수자원 관리", "problem": "토지 이용 변화가 유출에 미치는 영향 분석"}
+{"id": "W7213693249", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 수자원 및 수생태 관리", "problem": "생태 관리가 유출 변화에 미치는 영향 분석"}
+{"id": "W7213713308", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nuomin River Basin", "problem": "기후 변화에 따른 유출 변화 패턴 이해"}
+{"id": "W4393303537", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 지속 가능성", "problem": "인간 활동이 도시화 맥락에서 물 지속 가능성에 미치는 영향 이해하기"}
+{"id": "W4394076395", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "피라시카바의 경량 강우", "problem": "경량 강우의 통계적 기준 설정"}
+{"id": "W4394291144", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "GRACE 및 GRACE-FO 데이터", "problem": "데이터의 결측값을 보완하고 기후 조정"}
+{"id": "W7162220794", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 환경 시스템", "problem": "환경 문제 해결 및 지속 가능한 솔루션 개발"}
+{"id": "W7171001589", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수평야 습지 생태계", "problem": "수문학적 요인이 생태계의 먹이망 및 자원 제공에 미치는 영향 이해하기"}
+{"id": "W7213716041", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jiuzhaigou 유역의 수자원", "problem": "산림 피복 변화에 따른 유출 반응 연구"}
