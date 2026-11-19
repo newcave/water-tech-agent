@@ -3353,3 +3353,27 @@
 {"id": "W4389063608", "domain_primary": "W8", "domain_secondary": ["W1"], "confidence": 0.8, "domain_ver": "v0.1", "object": "브라질의 수력 발전 시스템", "problem": "불확실한 강수 흐름 관리"}
 {"id": "W4389473028", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "세르비아 전력 시스템의 주파수 안정성", "problem": "주파수 안정성을 저해하는 시스템 관성 감소 문제 해결"}
 {"id": "W4390389260", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전 세계 물 가용성", "problem": "역사적 및 미래의 물 가용성 시뮬레이션"}
+{"id": "W7234977602", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "네팔의 전력 공급 안정성", "problem": "재해로 인한 재정적 손실 평가"}
+{"id": "W7235041166", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스위스 전력 시스템", "problem": "전력 저장을 위한 수소의 역할 개선"}
+{"id": "W7233745304", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "재생 가능 에너지 시스템", "problem": "기술, 인프라, 정책의 통합 개발"}
+{"id": "W7235827425", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Omo-Gibe 유역", "problem": "에너지, 식량 안보, 생계 및 생태계의 균형을 맞추기 위한 의사결정 지원"}
+{"id": "W7234844182", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "펠톤 터빈의 성능", "problem": "노즐 개방이 유체 흐름 특성에 미치는 영향 이해하기"}
+{"id": "W7234917881", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "연속적인 산업 에너지 생산을 위한 폐쇄 회로 수력 시스템", "problem": "신뢰할 수 있는 전력 공급"}
+{"id": "W4410165360", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파키스탄의 재생 가능 에너지 인력", "problem": "인력 부족을 예방하고 기술 요구 사항 관리하기"}
+{"id": "W4312782393", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 운영 효율성", "problem": "운영 모드 최적화"}
+{"id": "W4285111665", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기니의 수자원 관리 및 수력 발전 프로젝트", "problem": "현지 수문학적 데이터 부족 해결"}
+{"id": "W4285139739", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "댐과 그 주변 지역", "problem": "댐과 지역 간의 복잡한 관계 해결"}
+{"id": "W4285257069", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다목적 저수지 시스템", "problem": "최적 운영 방안 도출"}
+{"id": "W4285293034", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Arkun 다목적 저수지", "problem": "에너지 생산 잠재력 과대 추정 문제 해결"}
+{"id": "W4285146409", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "섬 상태의 수력 발전 유닛", "problem": "동적 특성 분석"}
+{"id": "W4280583036", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수소 생산을 위한 재생 가능 에너지", "problem": "재생 가능 에너지원으로 수소 생산의 장애물 및 비용 식별"}
+{"id": "W7234692384", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "thủy điện", "problem": "phát điện hiệu quả hơn"}
+{"id": "W4206657407", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 생산 산업의 탄소 배출", "problem": "탄소 배출 모델 구축"}
+{"id": "W7162827811", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소금 동굴 수소 저장", "problem": "대규모 수소 저장 문제 해결"}
+{"id": "W4287155438", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mwenga 수력 발전소의 주파수 안정성", "problem": "주파수 불안정 문제 해결"}
+{"id": "W4285141944", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "열 에너지 공급을 위한 효율성 개선"}
+{"id": "W4288056909", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "미국의 수력 발전소", "problem": "연간 순 발전량 데이터 제공"}
+{"id": "W4294688761", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중국의 산업 경제", "problem": "청정 에너지로의 전환 가능성 평가"}
+{"id": "W4312331078", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 시장", "problem": "수력 발전의 동향 분석"}
+{"id": "W4210710840", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템", "problem": "기후 변화가 전력 용량 확장 계획에 미치는 영향 탐색"}
+{"id": "W4394107367", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 터빈 가이드 베어링", "problem": "베어링의 결함 예측 및 상태 모니터링"}

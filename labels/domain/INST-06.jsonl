@@ -5988,3 +5988,11 @@
 {"id": "W7223453175", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "짐마 타운의 도시 확장 및 토지 이용/토지 피복 변화", "problem": "도시 성장에 따른 토지 이용 계획 및 관리 필요성 해결"}
 {"id": "W4367593330", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jalna tehsil의 가뭄 상황", "problem": "가뭄 평가를 위한 강수 데이터 분석"}
 {"id": "W4322581825", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "허드슨 만의 수역", "problem": "기후 변화와 수력 발전 규제로 인한 강 플룸 분산 패턴 변화 모니터링"}
+{"id": "W7235237811", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지질 기술 인프라 및 재해 후 복구", "problem": "모니터링 및 평가의 어려움 해결"}
+{"id": "W7235530951", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "저수지 수위 및 저장량", "problem": "위성 데이터의 정확성 평가"}
+{"id": "W7235765496", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "하류 황하의 전이형 강곡", "problem": "예측 가능성 한계 이해하기"}
+{"id": "W4320084243", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "해양 환경에서의 식물 플랑크톤과 오염물질 분포", "problem": "물질의 존재를 탐지하기 위한 알고리즘 개발"}
+{"id": "W4312231237", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대기 수증기 분포", "problem": "정확한 습도 재구성"}
+{"id": "W4212970638", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 부문", "problem": "디지털 혁신을 통한 농업 관리 개선"}
+{"id": "W7234650013", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "벼 재배 지역", "problem": "벼 생육 주기 예측 및 수확량 평가"}
+{"id": "W4205659982", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "채굴 지역의 생태 환경", "problem": "생태 복원 동적 모니터링 및 평가"}

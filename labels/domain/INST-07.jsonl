@@ -1287,3 +1287,4 @@
 {"id": "W7207996995", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "에티오피아 타나호의 수생 식물 호테이아오이", "problem": "시공간적 변동 분석 및 수질 영향 평가"}
 {"id": "W4407056998", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 유량 시뮬레이션", "problem": "정확한 유량 패턴 시뮬레이션 개선"}
 {"id": "W7234158240", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "슬로베니아의 작은 유역", "problem": "홍수 경고의 정확성을 개선하려는"}
+{"id": "W7235286819", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "서울 서초구의 침수 위험", "problem": "극단적인 강우에 대한 대응 방안 모색"}

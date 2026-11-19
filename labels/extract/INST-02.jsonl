@@ -1984,3 +1984,14 @@
 {"id": "W7162220794", "object": "수자원 및 환경 시스템", "problem": "환경 문제 해결 및 지속 가능한 솔루션 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7171001589", "object": "홍수평야 습지 생태계", "problem": "수문학적 요인이 생태계의 먹이망 및 자원 제공에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7213716041", "object": "Jiuzhaigou 유역의 수자원", "problem": "산림 피복 변화에 따른 유출 반응 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234727583", "object": "로널드 호수의 목장비버 서식지", "problem": "서식지 선택에 영향을 미치는 요인 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4300919935", "object": "우크라이나의 수문 화학 용어", "problem": "수문 화학 용어의 통일성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4310027057", "object": "수자원 관리", "problem": "기후 변화와 인간 활동의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312571844", "object": "수문학 용어", "problem": "수문학 용어의 통일성 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312646824", "object": "모압시의 수원과 지하수 자원", "problem": "수자원 지속 가능성 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4317885064", "object": "물 자원 관리", "problem": "자원의 과도한 착취로 인한 환경 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4320027487", "object": "수자원 관리 시스템", "problem": "수자원 품질 보호 및 수문학적 위험 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7112511837", "object": "하늘 강과 기후 변화에 대한 지역 사회의 회복력", "problem": "기후 변화에 대한 지역 사회의 회복력 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126303707", "object": "북극 입구 수문학", "problem": "역사적 발전 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133428253", "object": "Gwydir 강의 수생 무척추동물", "problem": "수생 무척추동물의 생태적 구조 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7137879922", "object": "서부 미국의 담수 자원", "problem": "담수 자원의 가용성 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}

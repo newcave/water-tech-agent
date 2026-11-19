@@ -1092,3 +1092,4 @@
 {"id": "W7116598057", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "배수 저장 시설의 안전성", "problem": "실시간 모니터링을 통한 위험 감지"}
 {"id": "W7225210919", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수에서의 장내세균군", "problem": "장내세균군의 특성 조사"}
 {"id": "W7225854930", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Daroongar earth dam", "problem": "안정성 평가 및 모니터링 정확성 향상"}
+{"id": "W7235662563", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐의 변위 시간 시계열", "problem": "모니터링 데이터 분석 개선"}

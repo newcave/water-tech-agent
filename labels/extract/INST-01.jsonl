@@ -3502,3 +3502,4 @@
 {"id": "W4391012068", "object": "Mucormycosis 환자", "problem": "환자의 삶에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391737027", "object": "지자체 기업의 관리 개념", "problem": "구성 요소의 자본 균형을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4394372392", "object": "이주성 메뚜기 개체군", "problem": "해충 관리 및 식량 안전성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235314371", "object": "러시아 연방의 지원 정착촌", "problem": "사회경제적 발전 동향 및 요인 분석", "relevant": true, "model": "gpt-4o-mini"}

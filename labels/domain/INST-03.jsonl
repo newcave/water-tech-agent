@@ -6556,3 +6556,25 @@
 {"id": "W4368374870", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "estações de tratamento de água", "problem": "custos de energia e reagentes"}
 {"id": "W4361765473", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭에서 전염성 기관지염", "problem": "전염성 기관지염 치료"}
 {"id": "W4323027001", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "장티푸스", "problem": "장티푸스 발생 억제"}
+{"id": "W7235307893", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "환경 오염 및 공공 건강", "problem": "감염병 위험 평가 및 긴급 공공 건강 조치 안내"}
+{"id": "W7234133467", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Budhi Gandak River의 수질", "problem": "수질 오염 문제 해결"}
+{"id": "W7234863812", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 시설 슬러지의 미생물 군집 구조", "problem": "슬러지 관리 전략 개선"}
+{"id": "W7234883610", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콜롬비아의 수돗물 공급 시스템에서의 클로로폼 발생", "problem": "클로로폼 농도와 수질 지표 간의 관계 규명"}
+{"id": "W7234911193", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS(퍼플루오로알킬물질)", "problem": "PFAS 제거 문제 해결"}
+{"id": "W7234918325", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "위장관 기능", "problem": "초기 위장관 기능 장애를 규명하다"}
+{"id": "W7235182335", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 처리 시스템", "problem": "MBR 기술을 통한 하수 처리 개선"}
+{"id": "W7235498433", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대장 건강과 전신 에너지 균형", "problem": "대장 염증과 에너지 대사 조절"}
+{"id": "W7235704307", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 미생물 군집 구조", "problem": "미생물 군집의 지속성 결정 요인 규명"}
+{"id": "W7234018019", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Alcala, Cagayan의 수자원 관리 시스템", "problem": "지속 가능한 수자원 관리 개선"}
+{"id": "W7235559162", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "S. cerevisiae 효모에서의 베타-글루칸", "problem": "베타-글루칸의 추출"}
+{"id": "W7235212308", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Wistar albino rats", "problem": "칼륨 휴메이트의 효과를 조사하다"}
+{"id": "W7225906794", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심혈관 리모델링", "problem": "심혈관 리모델링 완화"}
+{"id": "W4313021156", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "여름 먼 목초지의 양질의 음용수", "problem": "오염된 물의 통합 처리 기술 개발"}
+{"id": "W4312448167", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "즉석 코코아 음료의 품질", "problem": "폴리페놀 및 커큐민 수준과 항산화 활성을 결정하기"}
+{"id": "W4293688563", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 품질", "problem": "신속하고 시각적으로 평가하기"}
+{"id": "W4282945913", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "타이후 호수 주변의 음용수", "problem": "음용수 안전 보장 노력 필요"}
+{"id": "W4298261628", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 분배 네트워크에서 멀리 떨어진 지역의 수질 개선", "problem": "자연 숯을 이용한 필터의 오염 제거 과정 연구"}
+{"id": "W4290564402", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "AQ2 대수층의 지하수", "problem": "지하수의 물리화학적 품질 평가 및 미네랄화 과정 이해"}
+{"id": "W4210482830", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "대장염", "problem": "DSS 유도 대장염 개선"}
+{"id": "W4290718359", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "활성탄", "problem": "저렴한 원료로 활성탄을 준비하는 방법 개선"}
+{"id": "W4212803694", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조류 살모넬라증", "problem": "박테리아 수 감소"}
