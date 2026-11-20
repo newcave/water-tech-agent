@@ -1995,3 +1995,17 @@
 {"id": "W7126303707", "object": "북극 입구 수문학", "problem": "역사적 발전 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7133428253", "object": "Gwydir 강의 수생 무척추동물", "problem": "수생 무척추동물의 생태적 구조 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7137879922", "object": "서부 미국의 담수 자원", "problem": "담수 자원의 가용성 변화 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236521973", "object": "지하수에서의 비소(As) 종 분포", "problem": "비소 종 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226049174", "object": "구리 생산을 위한 물 자원", "problem": "기후 변화에 따른 수자원 부족 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7141465462", "object": "Koshi River megafan의 수위 및 유량 데이터", "problem": "데이터와 코드의 재현 및 검증", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204739103", "object": "말라위 중앙 지역의 리파리안 유역", "problem": "농업 개발 잠재력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133484886", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7204916219", "object": "메인랜드 동남아시아 농업", "problem": "기후 변동성에 대한 예측 능력 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207527156", "object": "물 자원 관리", "problem": "문화적 관점에서 물 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7207542975", "object": "Lake Denny의 생태계 건강", "problem": "물질적 질 저하 및 토착 생물 다양성 위협 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211958038", "object": "도시 하천의 미량 유기 오염물", "problem": "미량 유기 오염물의 발생, 이동 및 감쇠 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212379639", "object": "지속 가능한 농업 생산", "problem": "기후 변화에 따른 농업 생산 지원 조건 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213906375", "object": "Jaraikela sub-basin의 수자원", "problem": "유량 시계열 생성 및 연장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214321918", "object": "한강 유역의 수자원", "problem": "기후 변화와 인간 활동의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7219338793", "object": "유정 및 수자원", "problem": "미세 입자의 이동과 형성 손상 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221787826", "object": "산업 시스템의 복잡성 및 자원 관리", "problem": "다양한 공학 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

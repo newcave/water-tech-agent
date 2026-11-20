@@ -1093,3 +1093,18 @@
 {"id": "W7225210919", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면수에서의 장내세균군", "problem": "장내세균군의 특성 조사"}
 {"id": "W7225854930", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Daroongar earth dam", "problem": "안정성 평가 및 모니터링 정확성 향상"}
 {"id": "W7235662563", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아치 댐의 변위 시간 시계열", "problem": "모니터링 데이터 분석 개선"}
+{"id": "W7236077836", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 구조물의 지반 변형", "problem": "정확한 변형 모니터링 개선"}
+{"id": "W7236238068", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 운영 시스템", "problem": "게이트 제어 지연 문제 해결"}
+{"id": "W7236332370", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "원수 탁도", "problem": "탁도 예측하기"}
+{"id": "W7213348061", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bituminous Geomembrane (BGM)", "problem": "노후화 및 내구성 평가"}
+{"id": "W7225968908", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "콘크리트 누수 모니터링", "problem": "누수 위치 식별 개선"}
+{"id": "W7167666320", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "barragens de rejeitos", "problem": "위험을 예방하고 관리하기"}
+{"id": "W7163717507", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동일한 지반 댐", "problem": "댐의 안정성 저하 문제 해결"}
+{"id": "W7225910268", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어류의 안전하고 효율적인 하류 통과", "problem": "하류 통과를 위한 수리 구조물의 설계 및 효율성 평가"}
+{"id": "W7236550053", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Enguri 수력 발전소", "problem": "운영 및 관리의 분열된 소유권 문제 해결"}
+{"id": "W7225888804", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 저수지에서의 미세플라스틱 오염", "problem": "미세플라스틱 오염의 현재 상태 평가 및 관리 방안 제안"}
+{"id": "W7225913846", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "경사면의 변형 및 파괴 메커니즘", "problem": "경사면의 변형-파괴 결합 메커니즘을 밝혀내기"}
+{"id": "W7225921076", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "초고층 콘크리트 면암거더 댐", "problem": "복합 구조의 안전성과 합리성 평가"}
+{"id": "W7124469110", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "온도 측정 시스템", "problem": "고해상도 온도 감지 구현"}
+{"id": "W7165005431", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "어린이의 치과 치료", "problem": "불안과 협조 부족으로 인한 치료 지연 해결"}
+{"id": "W7171026312", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Râuşor 댐", "problem": "댐의 동적 반응 및 내부 구조 이해"}

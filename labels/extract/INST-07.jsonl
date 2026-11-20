@@ -1325,3 +1325,13 @@
 {"id": "W4407056998", "object": "유역의 유량 시뮬레이션", "problem": "정확한 유량 패턴 시뮬레이션 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7234158240", "object": "슬로베니아의 작은 유역", "problem": "홍수 경고의 정확성을 개선하려는", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7235286819", "object": "서울 서초구의 침수 위험", "problem": "극단적인 강우에 대한 대응 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236521973", "object": "지하수에서의 비소(As) 스페시이션", "problem": "비소 스페시이션 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225883001", "object": "청해-티베트 고원에서의 이산화탄소 플럭스", "problem": "이산화탄소 플럭스의 시공간 패턴과 메커니즘 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7161836281", "object": "Brahmaputra 강의 부유 침전물 하중", "problem": "부유 침전물 하중 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226049661", "object": "북아일랜드의 이탄지", "problem": "이탄지의 가치와 지식을 이해하고 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7143286048", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7125818502", "object": "수문학적 과정의 모델", "problem": "데이터로부터 모델 유도하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7222989560", "object": "Nanning City의 붕괴 취약성", "problem": "붕괴 취약성 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223021966", "object": "중국 바이허 강 유역의 총 질소 플럭스", "problem": "총 질소 플럭스 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225033776", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7225138780", "object": "도시 홍수 취약성", "problem": "홍수 취약성 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}

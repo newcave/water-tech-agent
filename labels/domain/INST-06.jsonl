@@ -5996,3 +5996,24 @@
 {"id": "W4212970638", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 부문", "problem": "디지털 혁신을 통한 농업 관리 개선"}
 {"id": "W7234650013", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "벼 재배 지역", "problem": "벼 생육 주기 예측 및 수확량 평가"}
 {"id": "W4205659982", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "채굴 지역의 생태 환경", "problem": "생태 복원 동적 모니터링 및 평가"}
+{"id": "W7235982522", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "디지털 정밀 농업", "problem": "지속 가능한 집약화 기여 여부 검토"}
+{"id": "W7235991191", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "화산 표면 변화에 대한 다중 센서 위성 관측", "problem": "위성 유래 화산 표면 변화 지표의 강건성과 해석 한계 평가"}
+{"id": "W7236269101", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바스라 지역의 식생 반응", "problem": "강수 변동성 이해 및 평가"}
+{"id": "W7236432537", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Abia 주의 수자원 및 토지 이용 동역학", "problem": "LULC 변화가 수문 특성과 배수 밀도에 미치는 영향 분석"}
+{"id": "W7236354076", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "토지 표면 온도", "problem": "고해상도 에너지 균형 시뮬레이션을 통한 온도 예측"}
+{"id": "W7236401686", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "Rahata Taluka의 도시 성장 패턴", "problem": "도시 성장 예측 및 이해하기"}
+{"id": "W7224996065", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네팔의 홍수 위험", "problem": "GLOF 위험 감소를 위한 통합 접근법 필요"}
+{"id": "W7236287799", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Рыбинское водохранилище의 얕은 수역", "problem": "수온 변화의 불균형 이해하기"}
+{"id": "W7225823024", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중부 유럽의 저지대 유역", "problem": "수문학적 동역학 모니터링 개선 및 이해"}
+{"id": "W4413004175", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "칠레의 수문 기후 특성", "problem": "기후 모델의 강수량 및 온도 추정 정확도 평가"}
+{"id": "W7225650143", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "기후 변화 예측 및 환경 모니터링", "problem": "AI를 활용한 기후 변화 예측 및 환경 감시의 개선"}
+{"id": "W7225957051", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가보로네 댐의 수질 매개변수", "problem": "위성 데이터를 통한 수질 모니터링 개선"}
+{"id": "W7203945212", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "나이지리아 연방 수도 지역의 토지 이용 및 토지 피복 변화", "problem": "지속 가능한 도시 계획 및 환경 관리를 위한 문제 해결"}
+{"id": "W7203472045", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "뿌리 영역의 수분 저장 용량", "problem": "데이터 불확실성이 수분 저장 용량 추정에 미치는 영향 평가"}
+{"id": "W7235825350", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수", "problem": "SAR 기반 홍수 매핑의 정확성과 신뢰성 향상"}
+{"id": "W7225703128", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "우크라이나의 지역 사회 환경 안전", "problem": "GIS 모니터링을 통한 공공 관리 개선"}
+{"id": "W7225731415", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Dniester River Delta의 수역", "problem": "클로로필 «a» 농도 원격 추정"}
+{"id": "W7162416743", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 모니터링", "problem": "센티넬-2 데이터를 통한 클로로필-a 검증"}
+{"id": "W7225894411", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지속 가능한 농업 생산성 및 자원 최적화", "problem": "기후 변화와 자원 손실에 대응하기 위한 농업 관리 개선"}
+{"id": "W7232107753", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "농작물 성장 및 스트레스 회복력", "problem": "물 부족 조건에서의 수자원 효율성 개선"}
+{"id": "W7236242419", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아시아 러시아의 토양 침식", "problem": "토양 침식 요인과 강도를 평가하기"}

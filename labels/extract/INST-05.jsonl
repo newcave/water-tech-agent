@@ -3456,3 +3456,20 @@
 {"id": "W4312331078", "object": "수력 발전 시장", "problem": "수력 발전의 동향 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4210710840", "object": "전력 시스템", "problem": "기후 변화가 전력 용량 확장 계획에 미치는 영향 탐색", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4394107367", "object": "수력 발전소의 터빈 가이드 베어링", "problem": "베어링의 결함 예측 및 상태 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235843254", "object": "다 미 수력 저수지의 환경 및 사회 생태적 영향", "problem": "환경 영향 원인 식별 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236496142", "object": "FPV-수력 발전 시스템", "problem": "운영 지능 및 실시간 시스템 제어 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236527449", "object": "Gubi Dam의 수력 발전 잠재력", "problem": "수력 발전 가능성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7223688032", "object": "고산 지역의 수력 발전", "problem": "빙하 변화로 인한 위협 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221190324", "object": "중앙아시아의 수자원", "problem": "지속 가능한 수자원 관리 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211951874", "object": "수력 발전", "problem": "정책과 환경 제약에 따른 수력 발전의 발전 방향 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7211961169", "object": "유럽의 지속 가능한 수력 발전 인재", "problem": "지속 가능한 수력 발전 인재 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7208810214", "object": "irrigatsiya kanallari va gidrotexnik inshootlar", "problem": "mikroGESlardan foydalanishni optimallashtirish", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204233238", "object": "전력 시스템 운영 및 정책 시나리오", "problem": "계약 의무를 명확히 표현하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204244484", "object": "전력 수출의 기후 및 경제적 이점", "problem": "전력 수출로 인한 탄소 배출 감소 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204473361", "object": "Kainji 및 Jebba 수력 발전소의 수량", "problem": "기후 변화가 수량에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202378618", "object": "Kainji Hydropower Generation", "problem": "기후 변화가 수력 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225646615", "object": "나이지리아의 소수력 발전", "problem": "소수력 발전의 도전과 기회 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171399022", "object": "La Vega 소형 수력 발전소의 성능", "problem": "임시 물 보유의 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160870463", "object": "소규모 수력 발전 투자 및 금융 구조", "problem": "위험 평가 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7215049525", "object": "저수지 관리", "problem": "수력 발전 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225776326", "object": "파키스탄의 에너지 부문", "problem": "지속 가능한 에너지 시스템으로의 전환", "relevant": true, "model": "gpt-4o-mini"}

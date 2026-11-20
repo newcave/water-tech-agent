@@ -3388,3 +3388,22 @@
 {"id": "W4391737027", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지자체 기업의 관리 개념", "problem": "구성 요소의 자본 균형을 개선하려는 문제"}
 {"id": "W4394372392", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "이주성 메뚜기 개체군", "problem": "해충 관리 및 식량 안전성 개선"}
 {"id": "W7235314371", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "러시아 연방의 지원 정착촌", "problem": "사회경제적 발전 동향 및 요인 분석"}
+{"id": "W7235874057", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "개발도상국의 비수익수 관리", "problem": "거버넌스와 행동 간의 관계를 이해하고 개선하기"}
+{"id": "W7236309443", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "법적으로 논란이 있는 유역의 비점오염", "problem": "비점오염 감소를 위한 계약적 보존 프레임워크 개발"}
+{"id": "W7236136960", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다중 건물 스마트 커뮤니티의 에너지-물-교통 관리 프레임워크", "problem": "시장 참여 및 사이버 보안 제약 조건을 고려한 자원 스케줄링"}
+{"id": "W7222835200", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tarlac City의 수돗물 서비스 품질", "problem": "고객 만족도를 향상시키기 위한 서비스 품질 개선"}
+{"id": "W7225861933", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐기물 관리", "problem": "지속 가능한 발전으로의 기여"}
+{"id": "W7214620530", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아체 주의 수자원 공급 인프라", "problem": "청정 수자원 부족 문제 해결"}
+{"id": "W7214309387", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "그린 도서관", "problem": "지속 가능한 개발 모델로서의 역할 개선"}
+{"id": "W7233786394", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국의 데이터 자산", "problem": "데이터 자산의 자본화 문제 해결"}
+{"id": "W7236362164", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shivalik foothills의 토양 침식 및 수확량", "problem": "토양 손실 및 유출 예측"}
+{"id": "W7213548966", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가정용 지속 가능한 에너지 및 자원 관리 시스템", "problem": "가정에서의 저탄소 생활 모델 구축"}
+{"id": "W7225890508", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공원과 녹지대", "problem": "폭풍우 수자원 관리 개선"}
+{"id": "W7171505703", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "필리핀 도시의 기후 회복력과 탄소 중립성", "problem": "도시 인프라의 지속 가능성 개선"}
+{"id": "W7165762803", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아프리카 강", "problem": "강의 지속 가능성 문제 해결"}
+{"id": "W7225828796", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전기 전도도 모니터링 시스템", "problem": "원격 모니터링을 통한 현장 검사 필요성 감소"}
+{"id": "W7235819272", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 수질", "problem": "수질 변화에 대한 대응 방안 모색"}
+{"id": "W7235827629", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 식수 공급 시스템", "problem": "미생물 오염 위험 관리 개선"}
+{"id": "W7225944454", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "주거 환경의 기반 시설 및 공공 서비스", "problem": "주거 환경의 기반 시설 품질 평가 및 개선 우선순위 파악"}
+{"id": "W7125937801", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "gestión de los Organismos Operadores de Agua (OOA) en México", "problem": "mejorar la eficiencia operativa, financiera y la sostenibilidad del servicio"}
+{"id": "W7155396405", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "콘도미니엄", "problem": "주거 공간의 경제적 가치와 사회적 관계를 형성하는 방식 이해하기"}

@@ -3377,3 +3377,20 @@
 {"id": "W4312331078", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전 시장", "problem": "수력 발전의 동향 분석"}
 {"id": "W4210710840", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템", "problem": "기후 변화가 전력 용량 확장 계획에 미치는 영향 탐색"}
 {"id": "W4394107367", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수력 발전소의 터빈 가이드 베어링", "problem": "베어링의 결함 예측 및 상태 모니터링"}
+{"id": "W7235843254", "domain_primary": "W2", "domain_secondary": ["W3"], "confidence": 0.8, "domain_ver": "v0.1", "object": "다 미 수력 저수지의 환경 및 사회 생태적 영향", "problem": "환경 영향 원인 식별 및 분석"}
+{"id": "W7236496142", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "FPV-수력 발전 시스템", "problem": "운영 지능 및 실시간 시스템 제어 개선"}
+{"id": "W7236527449", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gubi Dam의 수력 발전 잠재력", "problem": "수력 발전 가능성을 평가하기"}
+{"id": "W7223688032", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고산 지역의 수력 발전", "problem": "빙하 변화로 인한 위협 이해"}
+{"id": "W7221190324", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙아시아의 수자원", "problem": "지속 가능한 수자원 관리 필요"}
+{"id": "W7211951874", "domain_primary": "W8", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "수력 발전", "problem": "정책과 환경 제약에 따른 수력 발전의 발전 방향 최적화"}
+{"id": "W7211961169", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유럽의 지속 가능한 수력 발전 인재", "problem": "지속 가능한 수력 발전 인재 부족 해결"}
+{"id": "W7208810214", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "irrigatsiya kanallari va gidrotexnik inshootlar", "problem": "mikroGESlardan foydalanishni optimallashtirish"}
+{"id": "W7204233238", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 시스템 운영 및 정책 시나리오", "problem": "계약 의무를 명확히 표현하기"}
+{"id": "W7204244484", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전력 수출의 기후 및 경제적 이점", "problem": "전력 수출로 인한 탄소 배출 감소 추정"}
+{"id": "W7204473361", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kainji 및 Jebba 수력 발전소의 수량", "problem": "기후 변화가 수량에 미치는 영향 분석"}
+{"id": "W7202378618", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kainji Hydropower Generation", "problem": "기후 변화가 수력 발전에 미치는 영향 분석"}
+{"id": "W7225646615", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나이지리아의 소수력 발전", "problem": "소수력 발전의 도전과 기회 분석"}
+{"id": "W7171399022", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "La Vega 소형 수력 발전소의 성능", "problem": "임시 물 보유의 효과 평가"}
+{"id": "W7160870463", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "소규모 수력 발전 투자 및 금융 구조", "problem": "위험 평가 방법 개선"}
+{"id": "W7215049525", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지 관리", "problem": "수력 발전 최적화"}
+{"id": "W7225776326", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "파키스탄의 에너지 부문", "problem": "지속 가능한 에너지 시스템으로의 전환"}
