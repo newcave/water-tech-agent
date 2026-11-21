@@ -1296,3 +1296,5 @@
 {"id": "W7222989560", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nanning City의 붕괴 취약성", "problem": "붕괴 취약성 평가 개선"}
 {"id": "W7223021966", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중국 바이허 강 유역의 총 질소 플럭스", "problem": "총 질소 플럭스 예측 개선"}
 {"id": "W7225138780", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 취약성", "problem": "홍수 취약성 매핑 개선"}
+{"id": "W7236646634", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모니터링이 부족한 유역의 기후 위험", "problem": "수문 관측 부족으로 인한 기후 위험 평가의 한계 극복"}
+{"id": "W4408666796", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 시뮬레이션 정확도", "problem": "물리적 원칙을 통합하여 개선하기"}

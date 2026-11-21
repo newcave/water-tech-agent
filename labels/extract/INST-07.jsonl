@@ -1335,3 +1335,5 @@
 {"id": "W7223021966", "object": "중국 바이허 강 유역의 총 질소 플럭스", "problem": "총 질소 플럭스 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225033776", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
 {"id": "W7225138780", "object": "도시 홍수 취약성", "problem": "홍수 취약성 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236646634", "object": "모니터링이 부족한 유역의 기후 위험", "problem": "수문 관측 부족으로 인한 기후 위험 평가의 한계 극복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408666796", "object": "홍수 시뮬레이션 정확도", "problem": "물리적 원칙을 통합하여 개선하기", "relevant": true, "model": "gpt-4o-mini"}

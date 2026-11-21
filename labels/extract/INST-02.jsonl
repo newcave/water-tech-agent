@@ -2009,3 +2009,29 @@
 {"id": "W7214321918", "object": "한강 유역의 수자원", "problem": "기후 변화와 인간 활동의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7219338793", "object": "유정 및 수자원", "problem": "미세 입자의 이동과 형성 손상 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7221787826", "object": "산업 시스템의 복잡성 및 자원 관리", "problem": "다양한 공학 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236773857", "object": "다뉴브 유역의 수자원 저장량", "problem": "수자원 저장량 변화를 이해하고 개선하기 위한 데이터 수집", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235940165", "object": "Lower Mississippi River Basin의 수질", "problem": "과거 비료 사용으로 인한 잔여 인 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235821814", "object": "습지의 수문학적 모델링", "problem": "습지 모델링 방법의 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412918784", "object": "Jemma River Basin의 수자원", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235818974", "object": "환경 및 문화적 물", "problem": "물 보호를 위한 협력적 거버넌스 및 영향 평가 전략 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408487907", "object": "프랑스의 국가 수문학 예측 데이터셋", "problem": "기후 변화 적응을 위한 데이터 활용 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408488198", "object": "Mar Menor 연안 습지", "problem": "생태계 위기 예측 및 관리 도구 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235825998", "object": "산림 유역 생태계 서비스", "problem": "경제적 가치 분석 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408304573", "object": "신뢰할 수 있는 수생 생태계", "problem": "건강한 생태계를 위한 흐름과 수위 체계 정의", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408307907", "object": "콜로라도 강 유역의 수자원", "problem": "먼지로 인한 눈 녹음 가속화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408201925", "object": "Nianchu River Basin의 유출량", "problem": "기후 변화와 인간 활동이 유출량 변화에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408218756", "object": "수자원 및 토양 관리", "problem": "지속 가능한 관리 방안 모색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408159293", "object": "강 유량 추정", "problem": "정확한 유량 추정 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392600183", "object": "수자원", "problem": "기후 변화가 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392601010", "object": "경작된 이탄지의 수문학적 특성", "problem": "수문학적 반응의 포괄적 이해 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392601290", "object": "지하수 자원", "problem": "지하수 자원으로 인한 수직 토양 변위 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392601975", "object": "메콩 강 유역의 퇴적물 연결성", "problem": "댐 운영을 통해 퇴적물 역학 완화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392602895", "object": "전 세계 수문 서비스", "problem": "모델 성능 평가의 적합성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392602986", "object": "지하수 수위", "problem": "기후 변화에 따른 지하수 수위 변화 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392603327", "object": "수력 발전소의 유입 예측", "problem": "최적의 수문 모델 구성 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392603721", "object": "사하라 사막과 더 푸르고 강수량이 많은 세네갈 지역 사이의 사바나 생태계 내의 모래 토양", "problem": "모래 토양의 수리적 특성을 규명하고 공간적 변동성을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392604597", "object": "도시 토양의 수분 침투 및 수리학적 매개변수", "problem": "자동화된 Beerkan과 수동 Beerkan 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392616377", "object": "수자원 내 용질 운반", "problem": "이질성과 압축성의 결합 효과 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392617286", "object": "북부 경관의 수자원", "problem": "수자원 관리의 결과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392753701", "object": "수문학 모델", "problem": "모델 추가의 어려움 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392760366", "object": "유럽 강 네트워크의 흐름 간헐성", "problem": "기후 변화가 강의 흐름 간헐성에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}

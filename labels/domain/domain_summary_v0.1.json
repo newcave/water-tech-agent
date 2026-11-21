@@ -3,121 +3,121 @@
   "status": "v0.1 confirmed",
   "source": "OpenAlex, 7개 연구소 관련문헌 (전진 45일 스윕 + 역사 연도별 수집)",
   "method": "abstract→object/problem(mini)→domain assign(mini, primary)",
-  "generated_at": "2026-11-20 20:47 UTC",
-  "total": 23783,
+  "generated_at": "2026-11-21 07:53 UTC",
+  "total": 23980,
   "domains": {
     "W1": {
       "name": "유역·수문",
-      "count": 4690,
-      "pct": 19.7
+      "count": 4762,
+      "pct": 19.9
     },
     "W2": {
       "name": "댐·저수지 운영",
-      "count": 652,
+      "count": 655,
       "pct": 2.7
     },
     "W3": {
       "name": "수질·수생태",
-      "count": 4880,
+      "count": 4926,
       "pct": 20.5
     },
     "W4": {
       "name": "취·정수 공정",
-      "count": 975,
+      "count": 981,
       "pct": 4.1
     },
     "W5": {
       "name": "관망·급수 서비스",
-      "count": 814,
+      "count": 818,
       "pct": 3.4
     },
     "W6": {
       "name": "하수·재이용",
-      "count": 510,
+      "count": 513,
       "pct": 2.1
     },
     "W7": {
       "name": "물인프라 안전·자산",
-      "count": 1047,
+      "count": 1048,
       "pct": 4.4
     },
     "W8": {
       "name": "물에너지",
-      "count": 2053,
+      "count": 2062,
       "pct": 8.6
     },
     "W9": {
       "name": "관측 인프라",
-      "count": 257,
+      "count": 259,
       "pct": 1.1
     },
     "W0": {
       "name": "경영·정책·서비스",
-      "count": 2028,
+      "count": 2049,
       "pct": 8.5
     },
     "W0_UNCLASSIFIED": {
       "name": "위 어디에도 명확히 속하지 않음",
-      "count": 5877,
-      "pct": 24.7
+      "count": 5907,
+      "pct": 24.6
     }
   },
   "institutes": {
     "INST-01": {
       "name": "경영연구소",
-      "total": 3409,
-      "unclassified": 759,
-      "unclassified_pct": 22.3,
+      "total": 3421,
+      "unclassified": 760,
+      "unclassified_pct": 22.2,
       "by_domain": {
-        "W1": 367,
+        "W1": 368,
         "W2": 59,
-        "W3": 430,
+        "W3": 433,
         "W4": 39,
-        "W5": 425,
+        "W5": 428,
         "W6": 165,
-        "W7": 116,
+        "W7": 117,
         "W8": 76,
         "W9": 9,
-        "W0": 964,
-        "W0_UNCLASSIFIED": 759
+        "W0": 967,
+        "W0_UNCLASSIFIED": 760
       }
     },
     "INST-02": {
       "name": "수자원환경연구소",
-      "total": 1930,
+      "total": 1956,
       "unclassified": 194,
-      "unclassified_pct": 10.1,
+      "unclassified_pct": 9.9,
       "by_domain": {
-        "W1": 1124,
+        "W1": 1143,
         "W2": 58,
-        "W3": 243,
+        "W3": 246,
         "W4": 0,
         "W5": 12,
         "W6": 7,
         "W7": 7,
         "W8": 16,
         "W9": 6,
-        "W0": 263,
+        "W0": 267,
         "W0_UNCLASSIFIED": 194
       }
     },
     "INST-03": {
       "name": "상하수도연구소",
-      "total": 6621,
-      "unclassified": 2114,
+      "total": 6667,
+      "unclassified": 2126,
       "unclassified_pct": 31.9,
       "by_domain": {
         "W1": 34,
         "W2": 33,
-        "W3": 2577,
-        "W4": 932,
+        "W3": 2597,
+        "W4": 938,
         "W5": 274,
-        "W6": 315,
+        "W6": 318,
         "W7": 15,
         "W8": 22,
         "W9": 0,
-        "W0": 305,
-        "W0_UNCLASSIFIED": 2114
+        "W0": 310,
+        "W0_UNCLASSIFIED": 2126
       }
     },
     "INST-04": {
@@ -141,49 +141,49 @@
     },
     "INST-05": {
       "name": "물에너지연구소",
-      "total": 3396,
-      "unclassified": 496,
+      "total": 3413,
+      "unclassified": 497,
       "unclassified_pct": 14.6,
       "by_domain": {
-        "W1": 320,
+        "W1": 321,
         "W2": 261,
-        "W3": 72,
+        "W3": 73,
         "W4": 1,
         "W5": 20,
         "W6": 7,
         "W7": 67,
-        "W8": 1893,
+        "W8": 1902,
         "W9": 1,
-        "W0": 258,
-        "W0_UNCLASSIFIED": 496
+        "W0": 263,
+        "W0_UNCLASSIFIED": 497
       }
     },
     "INST-06": {
       "name": "수자원위성연구소",
-      "total": 6019,
-      "unclassified": 1973,
-      "unclassified_pct": 32.8,
+      "total": 6113,
+      "unclassified": 1989,
+      "unclassified_pct": 32.5,
       "by_domain": {
-        "W1": 1954,
-        "W2": 143,
-        "W3": 1393,
+        "W1": 2003,
+        "W2": 146,
+        "W3": 1412,
         "W4": 0,
-        "W5": 74,
+        "W5": 75,
         "W6": 13,
         "W7": 40,
         "W8": 23,
-        "W9": 218,
-        "W0": 188,
-        "W0_UNCLASSIFIED": 1973
+        "W9": 220,
+        "W0": 192,
+        "W0_UNCLASSIFIED": 1989
       }
     },
     "INST-07": {
       "name": "AI연구소",
-      "total": 1298,
+      "total": 1300,
       "unclassified": 237,
-      "unclassified_pct": 18.3,
+      "unclassified_pct": 18.2,
       "by_domain": {
-        "W1": 847,
+        "W1": 849,
         "W2": 18,
         "W3": 111,
         "W4": 0,
@@ -251,34 +251,35 @@
       "W9": 30
     },
     "2025": {
-      "W4": 334,
-      "W1": 1409,
-      "W3": 1604,
-      "W0_UNCLASSIFIED": 2043,
+      "W4": 339,
+      "W1": 1478,
+      "W3": 1640,
+      "W0_UNCLASSIFIED": 2067,
       "W7": 380,
-      "W0": 555,
-      "W6": 179,
-      "W2": 198,
-      "W5": 245,
-      "W8": 661,
-      "W9": 80
+      "W0": 570,
+      "W6": 182,
+      "W2": 201,
+      "W5": 249,
+      "W8": 669,
+      "W9": 82
     },
     "2026": {
       "W5": 351,
-      "W3": 2147,
-      "W0": 803,
-      "W0_UNCLASSIFIED": 2636,
-      "W7": 401,
-      "W8": 749,
-      "W1": 1806,
+      "W3": 2157,
+      "W0": 808,
+      "W0_UNCLASSIFIED": 2642,
+      "W7": 402,
+      "W8": 750,
+      "W1": 1809,
       "W6": 177,
-      "W4": 520,
+      "W4": 521,
       "W2": 288,
       "W9": 87
     },
     "2027": {
       "W0_UNCLASSIFIED": 3,
-      "W8": 1
+      "W8": 1,
+      "W0": 1
     }
   },
   "unclassified_analysis": {

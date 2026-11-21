@@ -3407,3 +3407,15 @@
 {"id": "W7225944454", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "주거 환경의 기반 시설 및 공공 서비스", "problem": "주거 환경의 기반 시설 품질 평가 및 개선 우선순위 파악"}
 {"id": "W7125937801", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "gestión de los Organismos Operadores de Agua (OOA) en México", "problem": "mejorar la eficiencia operativa, financiera y la sostenibilidad del servicio"}
 {"id": "W7155396405", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "콘도미니엄", "problem": "주거 공간의 경제적 가치와 사회적 관계를 형성하는 방식 이해하기"}
+{"id": "W7236581853", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 공공 시설 터널", "problem": "안전 위험 평가 및 조기 경고 진단"}
+{"id": "W7236644342", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "구강 고형 제형의 원료 의약품", "problem": "원료 의약품의 원소 불순물 위험 평가"}
+{"id": "W7236629814", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식품 안전성", "problem": "미생물 오염 문제 해결"}
+{"id": "W7235827303", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "호수 얼음 두께", "problem": "위성 고도계를 통한 호수 얼음 두께 추출"}
+{"id": "W7236517815", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "국가수자원공사(NWSC) 나카세로 지점의 성과", "problem": "전략적 관리 관행의 영향을 조사"}
+{"id": "W4391761146", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 분배 네트워크", "problem": "모델 오류 감소"}
+{"id": "W4412973229", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수도관 누수 상태", "problem": "누수 탐지 정확도 향상"}
+{"id": "W4409290132", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "베네치아 석호의 저서 무척추동물 군집", "problem": "저서 생물 다양성 이해하기"}
+{"id": "W4408248584", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "IKN Nusantara의 물 공급 시스템", "problem": "지속 가능하고 비용 효율적인 물 공급 시스템 구축"}
+{"id": "W7236780790", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유틸리티 소비 이상 탐지 및 수익 보호", "problem": "소비 이상 패턴 식별 및 수익 누수 탐지"}
+{"id": "W7235818003", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "호수 얼음 덮개", "problem": "기후 변화에 따른 호수 얼음 상태 모니터링"}
+{"id": "W7116380905", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 환경의 정보 통합 및 관리 시스템", "problem": "정보 단편화로 인한 시민 위험 증가 해결"}

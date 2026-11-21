@@ -3473,3 +3473,21 @@
 {"id": "W7160870463", "object": "소규모 수력 발전 투자 및 금융 구조", "problem": "위험 평가 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7215049525", "object": "저수지 관리", "problem": "수력 발전 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7225776326", "object": "파키스탄의 에너지 부문", "problem": "지속 가능한 에너지 시스템으로의 전환", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220685330", "object": "개발도상국의 식량 안보", "problem": "전력 생산 포트폴리오와 식량 가격 및 공급 안전성 간의 관계 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236666024", "object": "콜롬비아 금융 시스템", "problem": "기후 변화가 금융 리스크에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236648184", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7236791606", "object": "브라질 수력열 시스템의 운영 가치", "problem": "예측 정확도를 통한 운영 가치 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236485757", "object": "지구의 청정 에너지 시스템", "problem": "저온 환경 소스에서 전기 에너지 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234667804", "object": "수력 발전 시스템", "problem": "운영 개선을 위한 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236543804", "object": "상파울루 마르코스 유역의 물 자원", "problem": "농업과 에너지 부문 간의 경쟁으로 인한 물 스트레스 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234327786", "object": "재생 가능 에너지 공급 및 수요", "problem": "예측 정확도 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236933198", "object": "노르웨이 전력 시장의 전기 가격 형성", "problem": "전기 가격 변동성 분석 및 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235851603", "object": "러시아의 재생 가능 에너지 시장", "problem": "재생 가능 에너지의 발전 현황과 정부의 역할 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236362297", "object": "전력 시스템의 신뢰성과 지속 가능성", "problem": "분산 발전기의 최적 크기와 위치 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234685143", "object": "재생 가능 에너지 기술", "problem": "지속 가능한 발전 기술 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408074511", "object": "재생 가능 에너지 생산", "problem": "효율적인 통합 및 관리 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408655854", "object": "이탈리아 알프스 지역의 수자원", "problem": "기후 변화에 따른 수자원 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408360819", "object": "이탈리아의 수력 발전", "problem": "기후 변화가 수력 발전에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408305055", "object": "유럽의 강 생태계 서비스", "problem": "하이드로피킹의 영향 비교 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4408342385", "object": "재생 가능 에너지 생산", "problem": "생산 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235818345", "object": "리튬-황 배터리", "problem": "폴리설파이드 셔틀 효과 해결", "relevant": true, "model": "gpt-4o-mini"}
