@@ -2035,3 +2035,20 @@
 {"id": "W4392617286", "object": "북부 경관의 수자원", "problem": "수자원 관리의 결과 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392753701", "object": "수문학 모델", "problem": "모델 추가의 어려움 해결하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392760366", "object": "유럽 강 네트워크의 흐름 간헐성", "problem": "기후 변화가 강의 흐름 간헐성에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237074224", "object": "해안 생태계", "problem": "산불의 해안 영향 모니터링 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237123041", "object": "아부 하디르 분지의 물 공급", "problem": "빗물 수확을 통한 물 공급 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235814603", "object": "수자원 예측", "problem": "정확하고 일관된 다중 시계열 예측 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237017067", "object": "불규칙한 3차원 공간", "problem": "측정하고 최적화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400112400", "object": "플로리다의 기후 변화 교육 및 지역 사회 회복력", "problem": "기후 변화에 대한 이해 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392561448", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4392514605", "object": "예멘 고원 지역의 수자원 및 농업", "problem": "기후 변화가 수자원 및 농업에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392471046", "object": "지구의 물 순환", "problem": "극단적인 수자원 관련 사건 예측 및 모니터링 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392455885", "object": "Atbara River의 수자원", "problem": "기후 변화의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392466464", "object": "물 정의와 물 정의에 대한 사회적 관점", "problem": "물 정의에 대한 다양한 관점과 이해를 수용하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394681411", "object": "수자원 관리", "problem": "영구 보존 지역의 경계 설정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392363064", "object": "해안 지역의 음용수 연못과 지하수", "problem": "해수 염분 증가 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393238564", "object": "지역 수자원 시스템", "problem": "수자원 시스템의 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393198152", "object": "흑토 지역의 토양 침투 특성", "problem": "단기 보존 경작이 토양 침투 특성에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401318480", "object": "자연 자원의 관리 및 활용", "problem": "정확한 공간 변수 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392359993", "object": "수자원 시스템 평가", "problem": "모호한 정보를 처리하고 비선형 관계를 설명하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392932510", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}

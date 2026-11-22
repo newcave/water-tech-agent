@@ -6775,3 +6775,25 @@
 {"id": "W4392583670", "object": "브라마푸트라 강 평원의 지하수", "problem": "높은 철과 망간 수준 완화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392586024", "object": "담수 시스템의 수질 개선", "problem": "수질 오염 위험 예측 및 수처리 시스템 설계 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392603373", "object": "지하수의 미생물 운반 행동", "problem": "우선적인 미생물 운반 경로 식별 및 정량적 도구 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237007081", "object": "마하라슈트라 나시크 지역의 지하수", "problem": "지하수의 품질 및 음용 가능성 평가와 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237000425", "object": "음용수 및 폐수의 수질", "problem": "오염물질 산화 및 비활성화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237021879", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7237026631", "object": "지하수의 수질", "problem": "중금속과 박테리아 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237055281", "object": "어류 양식 폐수", "problem": "유기 비료로의 전환 및 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237082848", "object": "Lokoja Metropolis의 음용수 원천", "problem": "음용수의 세균 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236699708", "object": "물", "problem": "신속하고 효율적인 정수 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237311713", "object": "물 공급 시스템의 음용수 처리 시설", "problem": "운영 상태 진단 및 개선 전략 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237119177", "object": "수돗물 품질 및 신뢰성", "problem": "수돗물 품질 기준 충족을 위한 현대화 및 재구성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237166674", "object": "음용수의 품질", "problem": "음용수 품질을 위생 기준에 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7226008568", "object": "자가면역 갑상선염", "problem": "면역 균형 회복", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402688379", "object": "브로일러 고기", "problem": "고기의 화학적 및 물리적 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394845921", "object": "구자라트의 지하수", "problem": "중금속 오염 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401765013", "object": "폐수 관리", "problem": "AI의 안전하고 효과적인 배치 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391686334", "object": "Kankrej 소의 출산 전 행동", "problem": "출산 전 먹이 섭취 행동 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390638359", "object": "신장 손상", "problem": "비소 독성으로 인한 신장 독성 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390638360", "object": "신장 손상", "problem": "비소 유도 신독성 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392966361", "object": "여성 백색 생쥐의 혈액 매개변수", "problem": "Neocidol의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236539878", "object": "우간다의 폐수 처리 공장 방류수에서의 인 감소", "problem": "알루미늄 슬러지를 재사용하여 인을 흡착하는 방법 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391737489", "object": "Dibamba 유역의 음용수", "problem": "음용수의 미생물 및 물리화학적 품질 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4317492923", "object": "jamblang 나무 껍질에서 생산된 활성탄", "problem": "중금속 납(Pb) 수치 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396613685", "object": "역삼투막의 재생 가능성", "problem": "막 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

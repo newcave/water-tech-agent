@@ -1298,3 +1298,6 @@
 {"id": "W7225138780", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 홍수 취약성", "problem": "홍수 취약성 매핑 개선"}
 {"id": "W7236646634", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "모니터링이 부족한 유역의 기후 위험", "problem": "수문 관측 부족으로 인한 기후 위험 평가의 한계 극복"}
 {"id": "W4408666796", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "홍수 시뮬레이션 정확도", "problem": "물리적 원칙을 통합하여 개선하기"}
+{"id": "W7237155126", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "일일 유출량 예측", "problem": "정확한 유출량 예측 개선"}
+{"id": "W7236527700", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 예측 및 해석", "problem": "예측 정확도 및 해석력 향상"}
+{"id": "W4404656027", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "양쯔강 삼각주 도시 집단의 홍수 위험", "problem": "홍수 위험 평가를 위한 최적 기계 학습 모델 선택"}

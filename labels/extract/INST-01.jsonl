@@ -3534,3 +3534,22 @@
 {"id": "W7236780790", "object": "유틸리티 소비 이상 탐지 및 수익 보호", "problem": "소비 이상 패턴 식별 및 수익 누수 탐지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7235818003", "object": "호수 얼음 덮개", "problem": "기후 변화에 따른 호수 얼음 상태 모니터링", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7116380905", "object": "도시 환경의 정보 통합 및 관리 시스템", "problem": "정보 단편화로 인한 시민 위험 증가 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237040829", "object": "멕시코의 수자원 관리", "problem": "수자원 우선순위 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237108065", "object": "지속 가능한 프로젝트 포트폴리오", "problem": "최적의 포트폴리오 선택", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237128327", "object": "작업 환경의 안전성", "problem": "안전 비준수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237130031", "object": "공정 산업에서의 물의 품질 관리", "problem": "물의 품질을 개선하고 지속 가능성을 증진시키기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237204354", "object": "팜 오일 공장의 물 처리 품질", "problem": "물 처리 품질을 개선하기 위한 화학 물질 사용 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225319589", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7235816343", "object": "도시 홍수 위험 평가", "problem": "홍수 위험 불확실성 통합", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235583353", "object": "물 관리 부문", "problem": "물 스마트 사회로의 진전을 평가하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401519359", "object": "인도의 Bhima 분지 농민", "problem": "연속적인 가뭄에 대한 적응 반응 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236075196", "object": "비만 관리", "problem": "새로운 치료법 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236523585", "object": "인프라 시스템과 생활 방식 회복", "problem": "회복의 불평등 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236536251", "object": "유전의 석유 회수 효율", "problem": "유전 이질성으로 인한 석유 생산 감소 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235824762", "object": "캐나다 프레리 지역의 수자원 관리 계획", "problem": "수자원 관리 계획 수립을 위한 연구 및 데이터 격차 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391576525", "object": "외상성 척수 손상(tSCI)", "problem": "신경학적 결과 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394012335", "object": "إدارة الأزمات والظروف الاستثنائية", "problem": "تحسين دور استراتيجية التمكين الإداري", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393282869", "object": "교육 센터의 에너지 및 환경 성능", "problem": "에너지 및 환경 성능 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W3196633207", "object": "STEM 조기 대학생의 에너지 복합 시스템 이해", "problem": "복잡한 문제에 대한 이해 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396614033", "object": "카호프카 저수지", "problem": "저수지 복원 가능성 검토", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W2519502710", "object": "전력 소비 행동", "problem": "전력 소비 행동 개선", "relevant": true, "model": "gpt-4o-mini"}

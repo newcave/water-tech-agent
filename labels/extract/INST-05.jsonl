@@ -3491,3 +3491,19 @@
 {"id": "W4408305055", "object": "유럽의 강 생태계 서비스", "problem": "하이드로피킹의 영향 비교 및 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4408342385", "object": "재생 가능 에너지 생산", "problem": "생산 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7235818345", "object": "리튬-황 배터리", "problem": "폴리설파이드 셔틀 효과 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237247898", "object": "키르기스스탄 카라-다르야 강 유역의 소형 수력 발전소 설치 장소", "problem": "적합한 설치 장소를 선별하는 것", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237008406", "object": "연료전지 및 배터리 저장 시스템이 통합된 연속 계단형 마이크로그리드", "problem": "전력 공유 및 전압 조절 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404180906", "object": "염분 침입의 정도", "problem": "염분 침입의 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4401958848", "object": "우크라이나의 환경 안전", "problem": "Kakhovka 수력 발전소 댐 폭발의 환경적 결과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234661065", "object": "브라질의 풍력 발전", "problem": "실제 데이터를 활용한 예측 모델 부족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396846733", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4392816096", "object": "알래스카 레일벨트의 전력 시스템", "problem": "재생 가능 에너지 비율 증가에 따른 비용 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392706011", "object": "브라질의 전력 매트릭스", "problem": "에너지 생산의 다양화 필요성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392436332", "object": "Abbay 강 유역의 수자원", "problem": "수력 발전과 관개 개발 간의 균형 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392372289", "object": "수력 발전 부문", "problem": "수력 발전과 경제 성장 및 금융 발전 간의 관계를 이해하려는", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392357233", "object": "Bagisli 수력 발전소의 에너지 출력", "problem": "에너지 출력을 개선하는 주요 매개변수 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392620922", "object": "수력 점프에서 발생하는 에너지", "problem": "전력 생성에 활용하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393114436", "object": "Francis 터빈의 수조", "problem": "수조의 유동 제어 및 수력 성능 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392357136", "object": "하이보완 저수지", "problem": "퇴적물 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396792948", "object": "유역 내 수력 발전소의 발전 예측", "problem": "공간적 관계를 고려한 발전 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7198802370", "object": "에콰도르 전력 부문", "problem": "기후 변화가 장기 발전 확장에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}

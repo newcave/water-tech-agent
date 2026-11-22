@@ -6111,3 +6111,15 @@
 {"id": "W4392649924", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "네덜란드의 토지", "problem": "지반 침하 모니터링"}
 {"id": "W4392651121", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "건조지 생태계의 식생", "problem": "식생을 암석이나 그림자와 구별하기"}
 {"id": "W4392652226", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 가뭄", "problem": "정확한 표면 토양 수분 추정"}
+{"id": "W7154018414", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하류 황하의 관개 지역 내 관개 수자원 사용", "problem": "장기적인 감소 추세 분석"}
+{"id": "W7237006340", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gautam Buddha Nagar 지역의 도시 생태 균형", "problem": "도시화로 인한 생태적 불균형 분석"}
+{"id": "W7237074224", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안 생태계", "problem": "산불의 영향을 모니터링하는 방법을 개선하다"}
+{"id": "W7237101852", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tang Wang Cheng Site 주변의 고대 수로", "problem": "고대 수로 재구성을 통한 환경 변화 이해"}
+{"id": "W7236557379", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스마트 농업", "problem": "농업 생산성 향상 및 제품 품질 개선"}
+{"id": "W7236602964", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 데이터셋", "problem": "수질 평가를 위한 데이터 통합 및 품질 관리"}
+{"id": "W4404493256", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "중국의 일일 고해상도 일조 시간 데이터", "problem": "고해상도 일조 시간 데이터의 정확성을 검증하고 개선하기"}
+{"id": "W4404300590", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수면 수자원", "problem": "수면 수자원의 변화 평가"}
+{"id": "W4403943169", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "아마존 열대림의 구조와 다양성", "problem": "모델의 성능 평가"}
+{"id": "W4402088084", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "히말라야 지역의 빙하 호수", "problem": "빙하 호수의 공간적 및 시간적 변화 분석"}
+{"id": "W4392458507", "domain_primary": "W9", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "관측 기술", "problem": "관측 결과의 정확성 향상"}
+{"id": "W4392171107", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "동부 멕시코만의 심해 순환", "problem": "심해 순환의 주요 과정 이해하기"}
