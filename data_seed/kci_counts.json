@@ -1,7 +1,7 @@
 {
  "source": "KCI(한국학술지인용색인) 데이터 활용",
  "note": "연도별 건수 집계만 저장 (원천 데이터 미저장)",
- "updated": 1794788560,
+ "updated": 1795396071,
  "journals": {
   "J11": {
    "name": "한국수자원학회논문집",
@@ -83,8 +83,5 @@
     "대한토목학회논문집(정기학술대회논문집)": 64
    }
   }
- },
- "errors": [
-  "J12: HTTPSConnectionPool(host='open.kci.go.kr', port=443): Read timed out."
- ]
+ }
 }
