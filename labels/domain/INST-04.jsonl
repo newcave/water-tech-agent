@@ -1111,3 +1111,8 @@
 {"id": "W7237017067", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "불규칙한 3차원 공간", "problem": "측정하고 최적화하기"}
 {"id": "W7237192688", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "치과 시술의 안전성", "problem": "치과 시술 중 안전성 조정 방법 검토"}
 {"id": "W7234690580", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원", "problem": "물 안전 보장 및 지속 가능한 발전을 위한 조치 개발"}
+{"id": "W7237363357", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "환자 안전", "problem": "혈액 수혈 과정에서의 위험을 줄이기"}
+{"id": "W7225090865", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "구조적 잔여 토양", "problem": "구조적 붕괴 메커니즘 이해하기"}
+{"id": "W4390265912", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 기초의 상승 압력", "problem": "상승 압력 특성 평가"}
+{"id": "W4367302818", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "외상성 뇌손상(TBI)", "problem": "TBI와 경도 인지 장애(MCI), 모든 원인에 의한 치매 및 알츠하이머병 치매 간의 연관성 추정"}
+{"id": "W4382026354", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "메탄 하이드레이트", "problem": "형성 모니터링 최적화"}

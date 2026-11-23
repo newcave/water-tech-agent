@@ -2052,3 +2052,23 @@
 {"id": "W4401318480", "object": "자연 자원의 관리 및 활용", "problem": "정확한 공간 변수 분포 예측", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392359993", "object": "수자원 시스템 평가", "problem": "모호한 정보를 처리하고 비선형 관계를 설명하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4392932510", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4390135130", "object": "농업 계획 및 관개 수자원 요구 사항", "problem": "정확한 토지 피복 매핑 및 변화 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4395001128", "object": "Gorgan 강 유역의 수문학적 변화", "problem": "토지 이용 변화로 인한 유출 증가 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391435525", "object": "노보 아이랑 도시의 사회 생태계", "problem": "극한 수문기후 사건에 대한 지역 적응 관리 행동 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236549905", "object": "Gorganrood 유역의 홍수 위험 지역", "problem": "기후 변화에 따른 홍수 위험 예측 및 구역화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399543372", "object": "Bakhtiary River flow", "problem": "정확한 유량 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4387813588", "object": "브라질 전력 시스템의 유연성", "problem": "변동성 재생 가능 에너지 자원의 통합에 따른 운영 유연성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119451599", "object": "수자원 관리", "problem": "웹 환경에서 LASH 모델 구현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4385197999", "object": "가뭄", "problem": "가뭄의 원인과 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4384665710", "object": "가뭄 관리", "problem": "가뭄의 예측 및 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4388620579", "object": "지하수 자원", "problem": "지하수 수준 변동 예측 및 시뮬레이션", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4367317399", "object": "Dhansiri 강 유역의 사회경제적 영향", "problem": "강 침식 및 홍수 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7119347775", "object": "수자원 분포 및 수문학적 과정", "problem": "수문학적 모델의 처리 개선 및 보정 전략 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4319073240", "object": "Poechos 저수지의 퇴적물", "problem": "퇴적물 동역학의 변화 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202275741", "object": "비 오는 날과 홍수 자원", "problem": "자원 활용에 대한 오해 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4364861959", "object": "사막의 모래 언덕에서의 지하수 자원", "problem": "지하수 자원의 지속 가능한 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7225250091", "object": "Fakhran Watershed", "problem": "수자원 관리의 불균형 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4319865201", "object": "St. Louis River Basin의 수문학적 변화", "problem": "철광 채굴로 인한 수문학적 변화 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4323647415", "object": "지하수 과학 및 공학 교육", "problem": "법적 요소 통합을 통한 교육 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390354148", "object": "물 생산 서비스", "problem": "토지 이용 변화의 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7216814698", "object": "라구나 아마르고 라구나 치카의 수자원", "problem": "수자원의 순환 이해하기", "relevant": true, "model": "gpt-4o-mini"}

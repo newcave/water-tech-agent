@@ -3437,3 +3437,19 @@
 {"id": "W3196633207", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "STEM 조기 대학생의 에너지 복합 시스템 이해", "problem": "복잡한 문제에 대한 이해 개선"}
 {"id": "W4396614033", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카호프카 저수지", "problem": "저수지 복원 가능성 검토"}
 {"id": "W2519502710", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "전력 소비 행동", "problem": "전력 소비 행동 개선"}
+{"id": "W7237364388", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Benteng Gajah Village의 물 관리 시스템", "problem": "물 저장 용량을 개선하기 위한 시스템 구축"}
+{"id": "W7225113317", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 수질 통계", "problem": "수질 통계의 정확성 개선"}
+{"id": "W4407084702", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "루마니아의 물 서비스 접근성", "problem": "거버넌스 변화 이해하기"}
+{"id": "W7234923634", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shashemene 시의 전기 및 수도 서비스 제공", "problem": "서비스 제공의 질 향상"}
+{"id": "W4387872288", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "원예 작물의 성장과 생산", "problem": "작물 생리학과 스마트 원예의 통합 이해"}
+{"id": "W4387525871", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수돗물 및 폐수 처리 시스템", "problem": "사이버 보안 위험 관리 및 사고 대응 개선"}
+{"id": "W4387663439", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "새 서커스 공연의 안전 관리", "problem": "윤리적 딜레마를 탐구하다"}
+{"id": "W7235409168", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고등 교육 기관의 디지털 캠퍼스", "problem": "지속 가능성과 친환경 기술 통합"}
+{"id": "W4379389498", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "슬러지 처리 및 관리", "problem": "환경적으로 적절한 슬러지 처분 대안 제시"}
+{"id": "W7128109418", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가나의 물 서비스 및 인프라", "problem": "디지털 혁신이 물 서비스 제공에 미치는 영향 이해하기"}
+{"id": "W7237365140", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제조 비용", "problem": "제조 비용 요소의 이해"}
+{"id": "W4317809558", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결"}
+{"id": "W4388972771", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결"}
+{"id": "W4388982004", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결"}
+{"id": "W4394630855", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결"}
+{"id": "W4412225668", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 난방 및 냉방 시스템", "problem": "디지털화로 효율적이고 유연한 운영 보장"}

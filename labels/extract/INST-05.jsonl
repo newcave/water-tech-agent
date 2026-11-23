@@ -3507,3 +3507,17 @@
 {"id": "W4392357136", "object": "하이보완 저수지", "problem": "퇴적물 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4396792948", "object": "유역 내 수력 발전소의 발전 예측", "problem": "공간적 관계를 고려한 발전 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7198802370", "object": "에콰도르 전력 부문", "problem": "기후 변화가 장기 발전 확장에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237333439", "object": "지속 가능한 에너지 시스템", "problem": "청정 에너지 시스템으로의 전환 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237365060", "object": "동부 보스니아와 헤르체고비나의 사회적 공간 관계", "problem": "정치적 폭력의 복합성을 이해하고 연구하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390520036", "object": "탄소 중립 (넷 제로) 경험 콘텐츠", "problem": "시민의 이해와 관심 증진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4387021792", "object": "아이오와의 재생 가능 전기 생산", "problem": "재생 가능 전기 생산의 중요성에 대한 공공 의견 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390113759", "object": "Henry Borden 수력 발전소", "problem": "발전소의 수익 극대화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386844948", "object": "포르투갈의 에너지 안전성", "problem": "화석 연료 의존도 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400698041", "object": "하천의 수리학적 특성", "problem": "하천 소리와 유량 간의 관계 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4383069159", "object": "Dul Hasti 수력 발전소", "problem": "환경적 및 사회적 영향 고려하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4381432965", "object": "전력 프로젝트의 대출 상환 옵션", "problem": "가장 유리한 대출 상환 옵션 결정하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4382405516", "object": "뉴질랜드의 에너지 부문", "problem": "온실가스 배출 감소를 위한 정책 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4322096699", "object": "유역 개발 계획의 환경 영향", "problem": "환경 영향 평가의 효과성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386173298", "object": "에너지 전환", "problem": "에너지 전환의 복잡성과 불확실성 해결하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386697491", "object": "선진국의 경제 상태", "problem": "경제적 쇠퇴와 정체 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4315646640", "object": "인공 식물 세포", "problem": "인공 광합성을 위한 에너지 생성 개선", "relevant": true, "model": "gpt-4o-mini"}
