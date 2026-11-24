@@ -6268,3 +6268,23 @@
 {"id": "W4319069375", "object": "브라질 중남부 지역의 저수지", "problem": "수질 변동 분석 및 지역화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4378677162", "object": "식물 커뮤니티 및 생태계", "problem": "기후 변화의 영향을 연구하고 농업 관리를 위한 작물 모델 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4317737867", "object": "내륙의 혼탁하고 생산적인 수역에서의 클로로필-a 농도", "problem": "클로로필-a 농도 추정 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237867524", "object": "환경 및 생물학적 변화", "problem": "조기 탐지를 위한 신호 해석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236961822", "object": "북대서양 아열대 소용돌이", "problem": "모델의 동역학을 적절히 표현하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7236531157", "object": "Barrier islands의 지형", "problem": "미세조직이 지형적 과정에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4306659968", "object": "히말라야 지역의 수자원", "problem": "기후 변화에 따른 수자원 관리 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4306176888", "object": "수자원 관리", "problem": "수자원 악화의 근본 원인 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W3163074548", "object": "산호초", "problem": "산호초의 재발성 백화 현상 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312700604", "object": "지구 관측 데이터", "problem": "지구 상태 분석 및 응용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390997175", "object": "쿠라이 분지의 거대한 모래언덕", "problem": "형성 메커니즘 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234662394", "object": "지하수 잠재 구역", "problem": "효과적인 지하수 잠재 구역 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7234692119", "object": "Palar-Porundalar Dam의 수자원", "problem": "수자원 변화 탐지 및 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285111665", "object": "기니의 수자원 관리 및 수력 발전 프로젝트", "problem": "현지 수문학적 데이터 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220986632", "object": "스발바르 환경 상태", "problem": "항공 이미징 센서를 활용한 환경 이해 및 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235449807", "object": "Midhagdu 미소유역", "problem": "토양 침식 위험 평가 및 우선순위 지정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225264552", "object": "작물의 물 요구량", "problem": "정확한 작물 계수(Kc) 파라미터화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224306818", "object": "토양 수분", "problem": "위험 지역의 토양 수분을 시뮬레이션하여 위성 데이터의 해상도를 개선하려는 것", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220977694", "object": "지하수 저장 변화", "problem": "지하수 저장 이상을 세분화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221058408", "object": "남중국해의 해수에서의 입자성 무기탄소(PIC) 생산", "problem": "저생산 지역에서 PIC 생산 이해 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4221031728", "object": "해수질 매개변수", "problem": "정확한 예측을 위한 모델 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4226521918", "object": "포도밭의 실제 작물 증발산(ETa)", "problem": "작물의 물 요구량 평가 및 관개 일정 수립", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283391786", "object": "Manamelkudi block의 수면적", "problem": "수면적 측정 및 추정", "relevant": true, "model": "gpt-4o-mini"}

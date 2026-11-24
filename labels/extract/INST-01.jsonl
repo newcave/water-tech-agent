@@ -3569,3 +3569,32 @@
 {"id": "W4388982004", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4394630855", "object": "튀니지의 지하수 자원", "problem": "지하수 과다 착취 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4412225668", "object": "지역 난방 및 냉방 시스템", "problem": "디지털화로 효율적이고 유연한 운영 보장", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4310113657", "object": "지하 유틸리티 터널의 재난 관리", "problem": "재난 경고 메시지 전파 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4307922083", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4312763479", "object": "전력망의 사이버 보안", "problem": "사이버 공격으로부터 보호하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4306659968", "object": "히말라야 지역의 수자원", "problem": "기후 변화에 따른 수자원 관리 및 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237283118", "object": "재난 선언 절차", "problem": "재난 발생 시 자원 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283797183", "object": "수자원 공공 서비스의 책임성 모델", "problem": "수자원 공공 서비스의 책임성 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237366758", "object": "비재생 에너지 자원", "problem": "비재생 에너지의 생태적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4283760702", "object": "도시 물 관리", "problem": "도시 물 관리의 복잡성을 이해하고 개선하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225321654", "object": "인간 활동으로 형성된 환경 생태계 모자이크", "problem": "환경적 제약에 대한 대응 방안 제시", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4214908860", "object": "부정맥 관리 및 조기 발견을 위한 디지털 장치", "problem": "디지털 장치 사용에 대한 실용적인 지침 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213121651", "object": "스마트 시티의 자원 관리", "problem": "실시간으로 자원 소비 및 생산 계획 조정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225609619", "object": "PFAS가 포함된 수질", "problem": "PFAS 분석 및 처리 기술 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4213436521", "object": "수자원 관리 및 소비", "problem": "물 소비 행동 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296438590", "object": "Shule River Basin의 수자원", "problem": "수자원의 시공간적 변화를 평가하고 영향 요인을 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296416012", "object": "중국 동북 3성의 물-에너지 네트워크", "problem": "물-에너지 소비 구조 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296357012", "object": "자연 생태계에서 자생적인 어류 개체군", "problem": "하천 수력 발전소에서의 수위 변화에 대한 어류 반응 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4210284916", "object": "Petit Manan National Wildlife Refuge의 염습지", "problem": "염습지 관리 결정을 최적화하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393320004", "object": "토양 수리 특성 및 토양 건강", "problem": "프레리 스트립의 효과 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296357008", "object": "카사블랑카 도시의 물 분배 시스템", "problem": "누수 탐지 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296357507", "object": "수자원 관리", "problem": "실용적인 문제 해결을 위한 방법론 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296439983", "object": "농업용수의 자원 비용", "problem": "농업용수의 전체 비용 회수 달성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312416277", "object": "지역 지하수 모델", "problem": "주기적 경계 조건과 강제력의 영향을 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312731950", "object": "Kiamichi River의 생태계", "problem": "수자원 관리 변화가 생태계에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4313066839", "object": "Lower Platte River Basin의 수자원 관리", "problem": "지하수 모델링을 통한 수자원 평가 및 이해 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4316020007", "object": "지하수 자원 관리 및 보호", "problem": "지하수 흐름 및 방출량 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394378156", "object": "수생 생태계의 화학 오염 문제", "problem": "화학 물질의 수질 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4394399542", "object": "수생 생태계의 화학 오염 문제", "problem": "화학 물질의 수질 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402346442", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7112191697", "object": "물 공급 서비스 제공자의 관리 효과성", "problem": "관리 효과성을 향상시키기 위한 관계 분석", "relevant": true, "model": "gpt-4o-mini"}

@@ -1342,3 +1342,4 @@
 {"id": "W4404656027", "object": "양쯔강 삼각주 도시 집단의 홍수 위험", "problem": "홍수 위험 평가를 위한 최적 기계 학습 모델 선택", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4391354330", "object": "기상 레이더 기술", "problem": "기상 레이더의 발전과 응용 확대", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4388620579", "object": "지하수 자원", "problem": "지하수 수준 변동 예측 및 시뮬레이션", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312176165", "object": "홍수 예측", "problem": "홍수 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}

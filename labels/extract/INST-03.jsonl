@@ -6846,3 +6846,28 @@
 {"id": "W4321123151", "object": "브라질의 탄소 포집, 활용 및 저장", "problem": "탄소 배출 감소를 위한 기술 개발", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4316194046", "object": "식수에서의 박테리아 제거", "problem": "은, 아연 및 구리 나노입자를 이용한 소독 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4315978926", "object": "비만에서의 심방세동(AF)", "problem": "심방세동에 대한 민감성 증가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237960642", "object": "폐 염증 반응", "problem": "은 나노입자에 의한 염증 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237699335", "object": "Umudi 지역의 수원", "problem": "미생물 오염으로 인한 건강 위험 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238238961", "object": "포스트 위닝 성장 토끼", "problem": "성장 성능 및 항산화 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238438104", "object": "포스트 위닝 성장 토끼", "problem": "성장 성능 및 항산화 상태 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238633168", "object": "음용수의 탁도", "problem": "탁도 제거를 위한 최적 응집제 용량 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237803674", "object": "난민의 권리 보호", "problem": "난민 보호의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4307703259", "object": "실험적 대장염", "problem": "메모리 B 세포와 Bcl-6-Syk-BLNK 신호 전달 조절", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224221727", "object": "물", "problem": "물의 품질을 개선하고 제어하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4297282354", "object": "N-nitrosodimethylamine (NDMA)", "problem": "NDMA 제거를 위한 최적화된 표면 화학", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296998529", "object": "피부 단백질 발현", "problem": "DPP4i 관련 자가면역 질환의 발병 요인 규명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4292400793", "object": "대장염", "problem": "철사멸사 억제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4297359077", "object": "메인주 음용수의 PFAS 오염", "problem": "온실가스 배출량 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4288967541", "object": "Nizhny Novgorod 지역의 농촌 인구", "problem": "신장 결석 발생 원인 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4309994697", "object": "비가공 빗물", "problem": "인간 소비를 위한 안전한 수질 확보", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223637264", "object": "Wukari-Ibi 식수 처리 공장", "problem": "물의 오염물질 제거 효율 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4292259444", "object": "상수도 시스템의 수질", "problem": "미세시스틴-LR의 발생 및 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237647668", "object": "성인 수컷 쥐의 생식 및 생화학적 매개변수", "problem": "에너지 음료의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225254102", "object": "오하이오의 수돗물 품질", "problem": "처리 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223479598", "object": "음용수에서의 유해 오염물질", "problem": "유해 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224939131", "object": "L-tyrosine-metal complex", "problem": "염소화 반응에서의 분해 및 생성물 변화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224231667", "object": "Cape Cod의 담수 공급원인 빙하 대수층", "problem": "음용수 보호 및 질소 부하 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220775997", "object": "Al-Bsaber 시의 수돗물 공급", "problem": "수돗물 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4225386853", "object": "오리 생산", "problem": "수소수의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4211196960", "object": "수질 및 생태계", "problem": "은 나노입자의 장기적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4205827621", "object": "인간 췌도", "problem": "기능 개선 및 세포 증식 촉진", "relevant": true, "model": "gpt-4o-mini"}

@@ -3521,3 +3521,19 @@
 {"id": "W4386173298", "object": "에너지 전환", "problem": "에너지 전환의 복잡성과 불확실성 해결하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4386697491", "object": "선진국의 경제 상태", "problem": "경제적 쇠퇴와 정체 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4315646640", "object": "인공 식물 세포", "problem": "인공 광합성을 위한 에너지 생성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237454648", "object": "노르웨이의 해상 풍력 지역", "problem": "유럽 재생 가능 에너지 확장에 따른 시스템 가치 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237523493", "object": "Sapta Kosi High Dam Multipurpose Project", "problem": "저수지 운영 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W3087839643", "object": "안데스 지역의 수력 저장소", "problem": "기후 변동이 수력 저장소의 수명에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4312629212", "object": "유역 수력 발전 기업의 전력 생산 자재 관리", "problem": "전력 생산 자재 관리의 현황 및 문제 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4308708337", "object": "지구의 기후 회복", "problem": "기후 변화에 대한 긴급한 대응 촉구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393388515", "object": "카므바라타-1 수력발전소의 저수지", "problem": "환경 영향 평가를 위한 모든 매개변수 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4223528930", "object": "타지키스탄의 전력 시스템", "problem": "전력 생산 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4224272834", "object": "터키의 수자원", "problem": "전력 생산을 위한 수자원 활용 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285518935", "object": "잠비아 전력 시스템", "problem": "변동성 재생 가능 에너지 통합 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4220779543", "object": "한국의 전력 시스템", "problem": "전력 공급을 위한 기술적 합의 도출", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296357505", "object": "10 MW 카플란 터빈", "problem": "회전자의 비대칭 움직임으로 인한 전자기 및 구조적 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4293192958", "object": "저수지 운영", "problem": "탄소 목표 달성을 위한 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285238454", "object": "Krasnoyarsk 수력 발전소 하류의 안개", "problem": "안개 발생 메커니즘 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296357399", "object": "오염된 강의 쓰레기", "problem": "쓰레기 제거 및 유입 방지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4285174998", "object": "러시아의 재생 가능 에너지 시장", "problem": "정부의 역할과 시장 형성 및 규제 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4296260551", "object": "바이에른 인 강의 홍수 피크", "problem": "홍수 피크 감소를 위한 지능형 제어 정의", "relevant": true, "model": "gpt-4o-mini"}

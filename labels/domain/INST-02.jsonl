@@ -1989,3 +1989,34 @@
 {"id": "W4323647415", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 과학 및 공학 교육", "problem": "법적 요소 통합을 통한 교육 개선"}
 {"id": "W4390354148", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 생산 서비스", "problem": "토지 이용 변화의 영향 분석"}
 {"id": "W7216814698", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "라구나 아마르고 라구나 치카의 수자원", "problem": "수자원의 순환 이해하기"}
+{"id": "W7237523493", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sapta Kosi High Dam Multipurpose Project", "problem": "저수지 운영 성능 평가"}
+{"id": "W7238626170", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "지속 가능한 식량 시스템", "problem": "관개 과학과 농생태학의 통합 부족 해결"}
+{"id": "W7220773207", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.7, "domain_ver": "v0.1", "object": "미국의 가상 물 저장 및 흐름", "problem": "가상 물 저장 및 이전을 이해하고 정량화하기"}
+{"id": "W4306659968", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "히말라야 지역의 수자원", "problem": "기후 변화에 따른 수자원 관리 및 평가"}
+{"id": "W4306176888", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "수자원 악화의 근본 원인 이해"}
+{"id": "W4313254884", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우베를란디아의 두 개 하천 유역", "problem": "초기 추상화 매개변수 찾기"}
+{"id": "W4200402585", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Gediz 강 유역의 강수량 분포", "problem": "장기 예상 강수량 정의"}
+{"id": "W7234662394", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 잠재 구역", "problem": "효과적인 지하수 구역 식별"}
+{"id": "W4283272068", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 유역의 CN 값", "problem": "CN 값을 결정하고 유출 추정 개선하기"}
+{"id": "W4224014406", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "환경 재해 예방"}
+{"id": "W4296357539", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "스페인의 강수의 동위원소 서명", "problem": "동위원소 서명의 공간 분포를 설명하고 해석하기"}
+{"id": "W4296357400", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 관리 시스템", "problem": "실시간 수자원 관리의 복잡한 문제 해결"}
+{"id": "W4312666289", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "난징의 녹색 인프라", "problem": "녹색 인프라 패턴 변화의 원인 분석"}
+{"id": "W4296357174", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "레드 강의 수자원 및 수문학적 과정", "problem": "수문학적 변수의 변화 이해하기"}
+{"id": "W4214607765", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Beichuan River Basin의 유량", "problem": "기후 변화와 토지 이용/피복 변화의 영향 분리"}
+{"id": "W4313002279", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "표면 수자원 범위", "problem": "수자원 범위 변화 이해하기"}
+{"id": "W4226050876", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서부 노스캐롤라이나의 농촌 학교", "problem": "물 과학 및 지역 물 문제에 대한 학생과 교사의 선입견 해결"}
+{"id": "W4226485766", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "오초코 산맥의 수자원", "problem": "수자원 관리의 도전 과제 이해하기"}
+{"id": "W4285182996", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강변 평야의 수자원 정보", "problem": "위성 원격 탐사 이미지를 통한 수자원 정보 추출"}
+{"id": "W4285232414", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상응 유량", "problem": "홍수 보고 능력 향상"}
+{"id": "W4296357297", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "타구스 강 유역의 수문학적 모델링", "problem": "기후 변화 영향 시뮬레이션 개선"}
+{"id": "W4296439698", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 자원 관리와 인간의 복지", "problem": "물 자원과 인간 시스템 간의 상호작용 개선"}
+{"id": "W4312426111", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "테네시주 지역 사회의 음용수 공급원", "problem": "수원 보호 지역의 취약성 및 복잡성 파악"}
+{"id": "W4312678123", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Mt. Laguna 지역의 수원", "problem": "수원 가용성 감소 문제 해결"}
+{"id": "W4312721076", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인디애나폴리스의 도시 수로", "problem": "수자원에 대한 관심과 이해 증진"}
+{"id": "W4312811516", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "유역의 질소", "problem": "생태 및 환경 문제 개선"}
+{"id": "W4312817619", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지하수 갈등", "problem": "오해를 해소하고 지하수 원리를 설명하기"}
+{"id": "W4312828720", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Tianshan 숲 지역의 수자원 관리", "problem": "수목 캐노피 차단 과정의 정확한 시뮬레이션 개선"}
+{"id": "W4312950784", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Dry Andes의 수자원 및 리튬 자원", "problem": "수자원의 지속 가능성 및 환경적 책임 개선"}
+{"id": "W4313047647", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원", "problem": "수자원 연구에서 새로운 기술과 경험을 통합하기"}
+{"id": "W4316020007", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원 관리 및 보호", "problem": "지하수 흐름 및 방출 식별"}

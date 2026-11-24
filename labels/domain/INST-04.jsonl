@@ -1116,3 +1116,6 @@
 {"id": "W4390265912", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 기초의 상승 압력", "problem": "상승 압력 특성 평가"}
 {"id": "W4367302818", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "외상성 뇌손상(TBI)", "problem": "TBI와 경도 인지 장애(MCI), 모든 원인에 의한 치매 및 알츠하이머병 치매 간의 연관성 추정"}
 {"id": "W4382026354", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "메탄 하이드레이트", "problem": "형성 모니터링 최적화"}
+{"id": "W4312096109", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 광산 폐기물 저수지", "problem": "저수지 붕괴의 주요 원인 식별 및 진단"}
+{"id": "W4322099661", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "四川甲居古滑坡", "problem": "지속적인 변형 모니터링 및 위험 완화"}
+{"id": "W4315851998", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치 댐", "problem": "변위 예측"}
