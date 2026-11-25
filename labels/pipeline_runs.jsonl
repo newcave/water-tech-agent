@@ -401,3 +401,4 @@
 {"ts": "2026-11-24T10:29:25Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 24388, "failures": 0, "duration_s": 1}
 {"ts": "2026-11-24T22:47:56Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 24388, "failures": 0, "duration_s": 2}
 {"ts": "2026-11-25T09:23:21Z", "forward": 34, "hist_year": 2026, "hist": 122, "backfilled": 156, "extracted": 153, "assigned": 148, "total": 24536, "failures": 49, "duration_s": 422}
+{"ts": "2026-11-25T22:00:31Z", "forward": 0, "hist_year": null, "hist": 0, "backfilled": 0, "extracted": 0, "assigned": 0, "total": 24536, "failures": 0, "duration_s": 2}
