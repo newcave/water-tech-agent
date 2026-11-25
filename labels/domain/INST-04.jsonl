@@ -1119,3 +1119,8 @@
 {"id": "W4312096109", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 광산 폐기물 저수지", "problem": "저수지 붕괴의 주요 원인 식별 및 진단"}
 {"id": "W4322099661", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "四川甲居古滑坡", "problem": "지속적인 변형 모니터링 및 위험 완화"}
 {"id": "W4315851998", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "고아치 댐", "problem": "변위 예측"}
+{"id": "W7238757811", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Shaidham Dam", "problem": "댐 손상의 원인 조사"}
+{"id": "W7238840474", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐 안전 모니터링", "problem": "이상 징후를 효과적으로 탐지하고 경고하는 방법 개선"}
+{"id": "W7236351267", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "변색된 비활성 치아", "problem": "미용적 회복을 위한 내부 표백"}
+{"id": "W7207611633", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "제방 댐의 변형", "problem": "정확한 점 좌표 결정 개선"}
+{"id": "W7167558655", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수리 구조물의 안전성", "problem": "안전성을 보장하기 위한 현대적 접근법 분석"}

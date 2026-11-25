@@ -3480,3 +3480,49 @@
 {"id": "W4394378156", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수생 생태계의 화학 오염 문제", "problem": "화학 물질의 수질 영향 평가"}
 {"id": "W4394399542", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수생 생태계의 화학 오염 문제", "problem": "화학 물질의 수질 영향 평가"}
 {"id": "W7112191697", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 공급 서비스 제공자의 관리 효과성", "problem": "관리 효과성을 향상시키기 위한 관계 분석"}
+{"id": "W7238868647", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "북미 수달", "problem": "탐지 개선"}
+{"id": "W7238850801", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "도시 물 관리", "problem": "정책과 과학의 통합 부족"}
+{"id": "W7213170439", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대도시 거버넌스", "problem": "데이터 기반 도시 관리로의 전환"}
+{"id": "W7212304333", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "반도체 산업의 초순수 수처리 시스템", "problem": "에너지 소비 특성 개선"}
+{"id": "W7237386321", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건물의 운영 및 유지 관리 비용", "problem": "운영 및 유지 관리 비용 분석"}
+{"id": "W7167584203", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 수집 시스템의 부식 및 악취 문제", "problem": "부식 및 악취의 근본 원인 파악"}
+{"id": "W7167619497", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지방 자치단체의 통합 계획", "problem": "통합 계획을 통한 수질 개선"}
+{"id": "W7167601578", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질 오염 방지 시스템(NPDES) 허가", "problem": "허가 문제 해결"}
+{"id": "W7237340834", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "하야타바드의 기후 변화 대응", "problem": "지방 정부의 기후 변화 대응 방안 개선"}
+{"id": "W7170115801", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "승마 스포츠 복합체", "problem": "기능적 성능과 안전한 조건 보장"}
+{"id": "W7238641085", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노수익수(non-revenue water)", "problem": "압력 의존 누수 감소"}
+{"id": "W7160634248", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Columbus City Utilities의 바이오솔리드", "problem": "운영의 유연성을 높이고 처리 비용을 줄이기 위한 솔루션 개발"}
+{"id": "W7160634708", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 슬러지", "problem": "VFA 생산 최적화"}
+{"id": "W7160525150", "domain_primary": "W5", "domain_secondary": ["W0"], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 수요 추정 및 누수 모니터링", "problem": "제한된 설치 조건에서 물 수요를 정확히 추정하고 누수를 효과적으로 모니터링하기"}
+{"id": "W7214128785", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "작고 복잡한 강의 유량", "problem": "위성 관측을 통한 유량 추정 개선"}
+{"id": "W7159980403", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "극한 환경 사건의 고대 환경 기록", "problem": "극한 사건에 대한 사회적 회복력 향상"}
+{"id": "W7202113593", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "스마트 시티 구현", "problem": "도시 환경 및 사회 조건 개선"}
+{"id": "W7140159060", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리 시스템", "problem": "전략적 실행 격차 해소"}
+{"id": "W7140165058", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 및 하수도 유틸리티", "problem": "내부 커뮤니케이션 개선하기"}
+{"id": "W7140182163", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 및 폐수 관리 유틸리티", "problem": "안전하고 저렴하며 신뢰할 수 있는 서비스 제공"}
+{"id": "W7140190875", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Cary의 장기 물 자원 관리", "problem": "성장 지원과 장기 물 신뢰성 유지"}
+{"id": "W7140193140", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "오스틴 수자원", "problem": "조직 및 문화적 도전 해결"}
+{"id": "W7140195055", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "포틀랜드의 수자원 관리 시스템", "problem": "신뢰 구축 및 투명성 향상"}
+{"id": "W7140199000", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공 유틸리티 프로젝트", "problem": "프로젝트 관리 역량 부족 해결"}
+{"id": "W7140201891", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 폐수 시스템", "problem": "대규모 유틸리티 합병 관리 및 물 공급 문제 해결"}
+{"id": "W7140228026", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "공공 유틸리티의 인력 관리", "problem": "경험 부족으로 인한 운영 연속성 위협 해결"}
+{"id": "W7140228794", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "포틀랜드의 물 관리 시스템", "problem": "물 관리의 통합과 협력 부족 해결"}
+{"id": "W7140175411", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물의 질과 순환 수자원 경제", "problem": "혁신적인 허가 프로세스를 통한 개선"}
+{"id": "W7140182454", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 유틸리티의 사이버 리스크 관리", "problem": "사이버 리스크를 정량화하여 비즈니스 용어로 변환하기"}
+{"id": "W7140193545", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물의 품질 보장", "problem": "지속적인 물의 품질 보장 및 규제 신뢰 구축"}
+{"id": "W7140194222", "domain_primary": "W1", "domain_secondary": ["W0"], "confidence": 0.8, "domain_ver": "v0.1", "object": "Arlington County의 폭우 관리 시스템", "problem": "재정적 부담을 공정하게 분배하기"}
+{"id": "W7140198785", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 및 폐수 유틸리티의 회복력", "problem": "일상 운영 문제 해결"}
+{"id": "W7140203185", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lancaster 시의 물 및 하수도 시스템", "problem": "재정 계획 및 요금 구조 평가 필요"}
+{"id": "W7140222127", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "공공 유틸리티의 거버넌스", "problem": "이사회 참여를 통한 전략적 영향력 강화"}
+{"id": "W7140161137", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유틸리티와 지역 사회 간의 파트너십", "problem": "신뢰 구축 및 지속 가능한 행동 촉진"}
+{"id": "W7140170690", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "몽고메리 카운티의 수자원 및 폐수 관리 시스템", "problem": "지속 가능한 운영을 위한 협력 방안 탐색"}
+{"id": "W7140189862", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "소규모 수도 및 폐수 프로젝트", "problem": "효율적인 조달 및 프로젝트 실행을 위한 계약 모델 개선"}
+{"id": "W7140190901", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "DC Water의 AI 및 데이터 거버넌스", "problem": "AI 이니셔티브의 데이터 통합 및 품질 개선"}
+{"id": "W7140193112", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 처리 솔루션", "problem": "비용 절감 및 효율성 향상"}
+{"id": "W7140201207", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물 유틸리티의 성과", "problem": "공공 신뢰와 정책 입안자 지원 강화"}
+{"id": "W7140201400", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Hillsborough County Water Resources Department의 고객 서비스", "problem": "고객의 요구에 효율적으로 대응하기"}
+{"id": "W7140221946", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 부문 유틸리티의 접근성 및 고객 신뢰", "problem": "장애인을 위한 ADA 준수 개선"}
+{"id": "W7140226798", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Hillsborough County의 물 및 폐수 시스템", "problem": "기존 시스템의 수요 증가에 대응하기"}
+{"id": "W7136228100", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "알 호세이마 지방의 기상 가뭄", "problem": "기상 가뭄 예측"}
+{"id": "W7128489951", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "내륙 저수지 수질", "problem": "수질 저하 문제 해결"}
+{"id": "W7154171853", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "고객 관계 관리(CRM) 효율성", "problem": "DSS 능력이 CRM 효율성을 향상시키는 과정 이해하기"}

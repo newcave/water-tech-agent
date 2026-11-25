@@ -3456,3 +3456,20 @@
 {"id": "W4296357399", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "오염된 강의 쓰레기", "problem": "쓰레기 제거 및 유입 방지"}
 {"id": "W4285174998", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "러시아의 재생 가능 에너지 시장", "problem": "정부의 역할과 시장 형성 및 규제 이해하기"}
 {"id": "W4296260551", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "바이에른 인 강의 홍수 피크", "problem": "홍수 피크 감소를 위한 지능형 제어 정의"}
+{"id": "W7238757144", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "말레이시아의 전력 공급", "problem": "저탄소 발전 기술의 윤리적 차원 검토"}
+{"id": "W7238804599", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Black Volta Basin의 토양 침식", "problem": "토양 침식 문제 해결"}
+{"id": "W7238861340", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "독일의 전력 생성 및 수요", "problem": "전력 예측 및 시장 분석 지원"}
+{"id": "W7238810210", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "베르메하레스 저수지의 수자원 저장량", "problem": "저수지 저장량 예측 및 수력 발전 평가"}
+{"id": "W7238892590", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "프랑스의 지역 물 부족 상황", "problem": "물 부족 시나리오와 물 관리 조치 평가"}
+{"id": "W7204744562", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "빙하화된 알프스 유역의 수자원 균형", "problem": "수자원 균형 요소를 정량화하기"}
+{"id": "W7236884960", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이 전력망의 배터리 에너지 저장 시스템", "problem": "배터리 성능과 경제적 타당성 향상"}
+{"id": "W7236868791", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이의 첫 번째 국립공원", "problem": "국립공원 설립 지연 문제 해결"}
+{"id": "W7161570978", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "전력 생성의 탄소 강도", "problem": "구조적 에너지 균형 요인의 영향을 평가하기"}
+{"id": "W7162518464", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "터키의 공공-민간 파트너십 전력 생성 프로젝트", "problem": "과거 PPP 프로젝트 평가 및 미래 프로젝트 모델 선택"}
+{"id": "W7154451114", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 지속 가능한 전력 생성", "problem": "전력 생성의 다각화 및 통합"}
+{"id": "W7154569982", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질의 지속 가능한 전력 시스템", "problem": "전력 시스템의 신뢰성과 확장성 향상"}
+{"id": "W7225264105", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "우간다의 전력 시스템", "problem": "비용 최적화 설계 조사"}
+{"id": "W7239015516", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "노르웨이의 태양광 발전과 건물 에너지 수요", "problem": "태양광 발전과 건물 에너지 수요의 상호작용 분석"}
+{"id": "W7130362560", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "3 kW급 펌프 터빈 시스템", "problem": "불안정한 S-곡선 특성 개선"}
+{"id": "W7126423589", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청해-티베트 고원의 수력 발전소 분포", "problem": "생태적 영향 평가 지원"}
+{"id": "W7140098744", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "다단계 수력 발전 시스템", "problem": "발전소 성능 개선을 위한 전력 유닛 그룹화 전략 비교"}

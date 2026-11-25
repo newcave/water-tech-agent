@@ -6871,3 +6871,41 @@
 {"id": "W4225386853", "object": "오리 생산", "problem": "수소수의 효과 조사", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4211196960", "object": "수질 및 생태계", "problem": "은 나노입자의 장기적 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4205827621", "object": "인간 췌도", "problem": "기능 개선 및 세포 증식 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238726178", "object": "바그다드의 음용수 처리 시설", "problem": "물 품질 및 화학 약품 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238754606", "object": "퍼로브스카이트 태양광 셀의 환경적 위험", "problem": "환경적 리스크 평가 확장하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238756807", "object": "학교 음용수의 중금속 오염", "problem": "어린이 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238757501", "object": "지하수에서의 우라늄(VI) 제거", "problem": "우라늄(VI) 제거 경로 및 잔여 고형물에서의 우라늄 안정성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238774634", "object": "달의 물", "problem": "물 자원의 추출 및 활용", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238777714", "object": "우물 물의 철분(Fe) 수준", "problem": "철분 수준 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238817783", "object": "파인애플-모링가 젤리 음료", "problem": "젤리 음료의 물리화학적 및 감각적 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238828965", "object": "소화 건강 보조제", "problem": "소화 불량 및 변비 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238761897", "object": "마리브로일러의 혈액학적 지표", "problem": "민트 잎 분말의 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238756944", "object": "대장염", "problem": "자연 식물 추출물의 보호 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417445434", "object": "음용수 공급 시스템의 항생제 내성 유전자 및 박테리아 군집 구성", "problem": "항생제 내성 유전자의 농도 및 분포 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237366992", "object": "리비아의 지하수 자원", "problem": "수질 저하 및 수위 감소 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224653754", "object": "신장 기능", "problem": "비타민 C의 신장 보호 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214901558", "object": "Pseudomonas aeruginosa", "problem": "음용수에서의 유전자 다양성과 항생제 내성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7224122575", "object": "Kufa River의 수질", "problem": "계절별 수질 관리 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7214793951", "object": "당뇨병 쥐의 백혈구 기능 상태", "problem": "백혈구의 산화 스트레스 조절 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237336567", "object": "آب شرب سالم برای شهر رفسنجان", "problem": "آرسنیک 제거 및 수질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4382203583", "object": "지하수의 품질", "problem": "지하수의 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7203554427", "object": "Nkoabang 지역 주민의 건강", "problem": "음용수의 건강 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204935995", "object": "Jawarandu 염소", "problem": "운송 스트레스에 의한 체중 감소 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7212304333", "object": "반도체 산업의 초순수 수처리 시스템", "problem": "에너지 소비 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237240129", "object": "Isandra 지역의 수질", "problem": "수질 안전성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239207940", "object": "질소 오염", "problem": "정확한 농업 기술을 통한 감소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7202275044", "object": "재생수의 간접 음용수 재사용 가능성", "problem": "부식 및 스케일링 위험 완화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171454027", "object": "물 정수 처리 시스템", "problem": "정수 처리 과정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171541922", "object": "안전한 식수 접근성", "problem": "농촌 및 외딴 지역의 물 처리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7156803602", "object": "헬리코박터 파일로리 감염", "problem": "감염 부담 감소 및 장기 합병증 예방", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7156635379", "object": "IKN Nusantara의 음용수 요금 체계", "problem": "공정하고 지속 가능한 요금 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140228794", "object": "포틀랜드의 물 관리 시스템", "problem": "물 관리의 통합과 효율성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140182454", "object": "수자원 유틸리티의 사이버 리스크 관리", "problem": "사이버 리스크를 정량화하여 비즈니스 용어로 변환하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140193545", "object": "물의 품질 보장", "problem": "지속적인 물의 품질 보장 및 규제 신뢰 구축", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7133948440", "object": "제주도 하천 및 폐수 처리 시설의 환경 안전성", "problem": "PFAS의 농도 및 분포 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7151818984", "object": "수생 환경에서의 새로운 미세오염물질(EMPs)", "problem": "EMPs의 관리 및 규제 체계 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7151974402", "object": "충청남도의 소규모 수돗물 공급 시설", "problem": "음용수 품질 기준 초과 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7152045994", "object": "강원대학교 캠퍼스 내 수돗물과 정수기의 수질", "problem": "수질 특성 비교 및 미생물 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238420291", "object": "산업 폐수", "problem": "물리화학 오염물질 및 중금속 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7138105741", "object": "Sepaku 강의 원수 품질 및 오염 하중", "problem": "계절적 변화에 따른 원수 품질 저하", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126086164", "object": "수질", "problem": "약물 오염물질 제거", "relevant": true, "model": "gpt-4o-mini"}

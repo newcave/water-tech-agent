@@ -6288,3 +6288,26 @@
 {"id": "W4221031728", "object": "해수질 매개변수", "problem": "정확한 예측을 위한 모델 성능 향상", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4226521918", "object": "포도밭의 실제 작물 증발산(ETa)", "problem": "작물의 물 요구량 평가 및 관개 일정 수립", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4283391786", "object": "Manamelkudi block의 수면적", "problem": "수면적 측정 및 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238726517", "object": "면화의 증발산", "problem": "SSEBop 모델과 FAO-56 방법 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238775459", "object": "수생 유기체의 이동성", "problem": "교량에서의 수생 연결성 제한 식별", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238824755", "object": "대기 중 수증기 관측", "problem": "정확한 수증기 측정 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238825454", "object": "남동부 미국의 산림 교란", "problem": "산림 교란 유형을 정확히 모니터링하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238863561", "object": "해양 기후 시스템", "problem": "기후 변화와 날씨 패턴 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238766384", "object": "홍수 상황", "problem": "홍수 범위 식별 및 공간적 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7235227963", "object": "포르투갈 북부의 비가림 포도밭", "problem": "기후 위험 평가 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7170236027", "object": "내수 생태계에서의 남조류 모니터링", "problem": "남조류 탐지의 어려움 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7221011765", "object": "내륙 저수지의 수질 매개변수", "problem": "수질 매개변수 회수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204254344", "object": "벵골만의 수생 생태계", "problem": "조류 발생으로 인한 생태계 악화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238657441", "object": "사우디 아라비아 동부 지역 맹그로브의 토양 유기 탄소", "problem": "토양 유기 탄소의 변동성 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7165670504", "object": "토양 구조", "problem": "파종 조건에 따른 필드 준비 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162094641", "object": "고농도 부유물질을 가진 강의 수심", "problem": "대규모 수심 분포 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7162125732", "object": "도시 열 위험", "problem": "열대 야간 발생의 위험 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7154840984", "object": "강 유량 모니터링", "problem": "정확한 유량 측정 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7159556416", "object": "Po Valley의 환경 상태", "problem": "집중 농업 관행의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160949099", "object": "Lesser Zab River", "problem": "형태 변화 탐지 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7160314864", "object": "토양 수분", "problem": "정확한 토양 수분 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7140075623", "object": "Harike Wetland", "problem": "생태적 조건 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7148574411", "object": "Untung Jawa Island의 환경 동역학", "problem": "지속 가능한 계획을 위한 데이터 기반 전략 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7126446201", "object": "상업용 위성", "problem": "상업 우주 항공 발전 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7128489951", "object": "내륙 저수지 수질", "problem": "수질 저하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7125101672", "object": "해양 경제", "problem": "지속 가능한 해양 자원 사용 촉진", "relevant": true, "model": "gpt-4o-mini"}

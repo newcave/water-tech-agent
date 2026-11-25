@@ -2020,3 +2020,15 @@
 {"id": "W4312950784", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Dry Andes의 수자원 및 리튬 자원", "problem": "수자원의 지속 가능성 및 환경적 책임 개선"}
 {"id": "W4313047647", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원", "problem": "수자원 연구에서 새로운 기술과 경험을 통합하기"}
 {"id": "W4316020007", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원 관리 및 보호", "problem": "지하수 흐름 및 방출 식별"}
+{"id": "W7238813618", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "티베트 고원에서의 눈 가뭄", "problem": "눈 가뭄의 시공간적 동태 조사"}
+{"id": "W7237064557", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "우크라이나의 지하수 자원 및 보호", "problem": "지하수 자원의 상태와 형성 조건 평가"}
+{"id": "W7203874558", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 공학 교육", "problem": "학생의 동기 부여 및 학습 심화"}
+{"id": "W7169677822", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이스마일리 요새의 위치와 건축", "problem": "지리적 변수가 요새 위치 선택에 미친 영향 평가"}
+{"id": "W7236956646", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "비버의 서식지 선택", "problem": "비버의 보금자리 위치 선택 이해하기"}
+{"id": "W7165959717", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해안 지하수 자원", "problem": "기후 변화와 인간 활동의 영향 분석"}
+{"id": "W7144269662", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수문학적 시계열", "problem": "정확한 예측을 위한 비선형 및 비정상성 문제 해결"}
+{"id": "W7128710332", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "히말라야 고산 수문학", "problem": "기후 변화가 수자원에 미치는 영향 이해하기"}
+{"id": "W7125101672", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해양 경제", "problem": "지속 가능한 해양 자원 사용 촉진"}
+{"id": "W7165267478", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "술락 강 삼각주", "problem": "삼각주 상태 모니터링 및 변화 분석"}
+{"id": "W7167837096", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tongass National Forest 내의 카르스트 수계", "problem": "카르스트 수계의 정확한 경계 설정"}
+{"id": "W7204530955", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 사회의 물 자원 관리", "problem": "지속 가능한 농업과 환경 보호의 균형 찾기"}
