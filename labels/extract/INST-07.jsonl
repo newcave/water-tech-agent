@@ -1351,3 +1351,12 @@
 {"id": "W7236873593", "object": "산사태 유발과 관련된 수문학적 신호", "problem": "신호 식별 및 경고 잠재력 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7128710332", "object": "히말라야 고산 수문학", "problem": "기후 변화가 수자원에 미치는 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7125101672", "object": "해양 경제", "problem": "지속 가능한 해양 자원 사용 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239388521", "object": "중앙 아시아의 가뭄 연쇄 현상", "problem": "가뭄 연쇄 현상의 중단 지점 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220766682", "object": "북극 생태계의 경관 변화", "problem": "기후 변화에 따른 식생 및 영구 동토의 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4414183038", "object": "홍수 위험 관리", "problem": "홍수의 원인과 영향을 이해하고 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413141049", "object": "해안 평야의 토양 염분 농도", "problem": "토양 염분 농도 예측 및 영향 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4412478479", "object": "양쯔강 유역의 유출량", "problem": "유출량 예측 정확도 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4407955752", "object": "적합한 토지", "problem": "토지 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7117780172", "object": "Upper Mississippi and Illinois Rivers의 수문 데이터 제품", "problem": "신뢰성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417217382", "object": "Salar de Pozuelos의 리튬 자원", "problem": "리튬 공급의 원천 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417217700", "object": "건조지대의 리파리안 구역", "problem": "식생 성장과 수문학적 피드백 이해하기", "relevant": true, "model": "gpt-4o-mini"}

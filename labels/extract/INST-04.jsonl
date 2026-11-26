@@ -1137,3 +1137,10 @@
 {"id": "W7236351267", "object": "변색된 비활성 치아", "problem": "미용적 회복을 위한 내부 표백", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7207611633", "object": "제방 댐의 변형", "problem": "정확한 점 좌표 결정 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7167558655", "object": "수리 구조물의 안전성", "problem": "안전성을 보장하기 위한 현대적 접근법 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415697013", "object": "Palasari Dam", "problem": "댐 운영 및 유지 관리의 위험 식별 및 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238811615", "object": "Damghan Dam의 수리적 안정성", "problem": "차수막 성능 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417218944", "object": "암석 공학 문제", "problem": "기후 변화와 인구 증가로 인한 암석 실패 사건 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417219575", "object": "로버트 S. 커 댐의 구조적 안정성", "problem": "구조적 이동 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7213391680", "object": "댐 인프라", "problem": "콘크리트 균열 및 금속 부식 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237318362", "object": "댐 인프라 및 개방 수로 수리", "problem": "현재 수리 공학의 산업 관행 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239471910", "object": "수력 인프라", "problem": "점검 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

@@ -2032,3 +2032,15 @@
 {"id": "W7165267478", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "술락 강 삼각주", "problem": "삼각주 상태 모니터링 및 변화 분석"}
 {"id": "W7167837096", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Tongass National Forest 내의 카르스트 수계", "problem": "카르스트 수계의 정확한 경계 설정"}
 {"id": "W7204530955", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 사회의 물 자원 관리", "problem": "지속 가능한 농업과 환경 보호의 균형 찾기"}
+{"id": "W7239388521", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "중앙 아시아의 가뭄 연쇄 현상", "problem": "가뭄 연쇄 현상의 중단 지점 이해하기"}
+{"id": "W7239434416", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.5, "domain_ver": "v0.1", "object": "기후, 해양, 빙권 과학의 지식 구조", "problem": "AI 응용 간의 연결 부족 해결"}
+{"id": "W7117371036", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "담수 생태계", "problem": "유해 조류 발생의 정확한 유발 요인 파악"}
+{"id": "W4415771704", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강수량 예측", "problem": "정확한 강수량 예측하기"}
+{"id": "W4414250407", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "서부 노스캐롤라이나의 인프라", "problem": "허리케인 헬렌의 피해 복구"}
+{"id": "W7126101509", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 공급 시스템", "problem": "공공 수자원 정책의 영향 평가 및 지속 가능한 솔루션 제안"}
+{"id": "W4413469956", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "증발산 용어 및 정의", "problem": "용어의 혼란과 불일치를 해결하려는"}
+{"id": "W4412357124", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유체, 수리학 및 수문학 실험실", "problem": "학생들에게 실습 경험 제공"}
+{"id": "W4412357716", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "산림 수자원 관리", "problem": "학생들의 참여와 학습 향상"}
+{"id": "W4412068519", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jequitinhonha 강 유역의 수자원 관리", "problem": "수자원 품질과 가용성 평가"}
+{"id": "W4407734805", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인간의 환경에 대한 대처", "problem": "환경에 대한 인간의 영향 이해하기"}
+{"id": "W4407980520", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 가용성 및 수질", "problem": "기후 변화로 인한 수자원 부족 문제 해결"}

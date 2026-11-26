@@ -3555,3 +3555,24 @@
 {"id": "W7130362560", "object": "3 kW급 펌프 터빈 시스템", "problem": "불안정한 S-곡선 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7126423589", "object": "청해-티베트 고원의 수력 발전소 분포", "problem": "생태적 영향 평가 지원", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7140098744", "object": "다단계 수력 발전 시스템", "problem": "발전소 성능 개선을 위한 전력 유닛 그룹화 전략 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239349071", "object": "가나의 수자원 및 수력 발전 인프라", "problem": "불법 소규모 금광 채굴로 인한 수자원 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239379167", "object": "수력 발전소의 시장 가치 저장", "problem": "주간 물의 시장 가치 포착량 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239397640", "object": "에콰도르의 수력 발전 시스템", "problem": "기후 변화에 대한 회복력 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239437031", "object": "수력 발전소의 시장 가치 저장", "problem": "주간 수력 발전소의 물 사용 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239380692", "object": "변속 펌프 저장 수력 발전소", "problem": "입찰 및 배치 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410160696", "object": "소형 수력 발전소의 운영", "problem": "에너지 생산과 생태적 지속 가능성의 균형 맞추기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4417315524", "object": "브라질의 하이브리드 태양광-수력 발전 시스템", "problem": "규제 환경 개선 및 경쟁력 강화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118067386", "object": "수직축 조류 터빈의 기초 안정성", "problem": "기초 주변의 침식 특성 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118071261", "object": "Barna 저수지", "problem": "퇴적물 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118072478", "object": "대규모 연속 저수지 시스템", "problem": "저수지 운영의 복잡한 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7118086269", "object": "수력 발전 시스템", "problem": "단기 스케줄링 성능 비교", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4415952219", "object": "부유식 태양광 발전의 환경적 영향", "problem": "환경 평가 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238557399", "object": "브라마푸트라 강 시스템의 수자원 관리", "problem": "중국의 수자원 기여에 대한 이해와 협력 필요성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4413193163", "object": "카자흐스탄의 재생 가능 에너지 활용", "problem": "재생 가능 에너지 활용의 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7170994598", "object": "전력 시스템의 주파수 안정성", "problem": "주파수 제어 제약 조건의 구현 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411160444", "object": "조강 유역의 수자원", "problem": "미세 수력 발전을 위한 수자원 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7171000563", "object": "이베리아 전력 시장", "problem": "핵 발전의 유연성이 전력 시장에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7114985085", "object": "인도네시아의 재생 가능 에너지 프로젝트", "problem": "재정 지원 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220783034", "object": "미국 전력망의 가상 물 전송", "problem": "계절, 기후 및 인프라 변화에 따른 변동 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409294734", "object": "태양광 발전소", "problem": "비용 절감 방안 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4410479977", "object": "소규모 수력 발전소의 최적 운영", "problem": "전력 생산 최적화", "relevant": true, "model": "gpt-4o-mini"}

@@ -6797,3 +6797,48 @@
 {"id": "W7238420291", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산업 폐수", "problem": "물리화학 오염물질 및 중금속 제거"}
 {"id": "W7138105741", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Sepaku 강의 원수 품질 및 오염 하중", "problem": "계절적 변화에 따른 원수 품질 저하"}
 {"id": "W7126086164", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질", "problem": "약물 오염물질 제거"}
+{"id": "W7239345463", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지의 수질 개선", "problem": "지속 가능한 사용을 위한 유지 관리 문제 해결"}
+{"id": "W7239387359", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "텍사스 콜로니아의 주거 환경", "problem": "주거 환경 개선을 위한 인프라 접근성 이해"}
+{"id": "W7239417091", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "보링홀 수돗물", "problem": "철 제거"}
+{"id": "W7239395361", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수컷 백색 쥐의 생리학적 및 조직학적 특성", "problem": "온수 및 냉수의 영향 조사"}
+{"id": "W7239669399", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "La Colina Drinking Water Treatment Plant", "problem": "최적의 응집제 용량 추정"}
+{"id": "W7239394550", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "유럽의 농업 시스템", "problem": "환경 및 농업 지속 가능성 개선"}
+{"id": "W7239405192", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식수의 탁도", "problem": "탁도 제거 효율 개선"}
+{"id": "W7133244720", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 오염 상태", "problem": "농약의 제거 효율 평가"}
+{"id": "W7125479850", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "음용수 공급 시스템", "problem": "산불의 영향 분석 및 대응 방안 제안"}
+{"id": "W7129075419", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 처리 슬러지", "problem": "슬러지의 적절한 관리 및 처분 방법 개발"}
+{"id": "W7238646419", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Caparrapí Drinking Water Treatment Plant", "problem": "효율성 개선 및 품질 보장"}
+{"id": "W4416338713", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "필수 떨림", "problem": "효과적인 대체 의학 치료 찾기"}
+{"id": "W4415701544", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상파울루 몬테스 벨로스의 상탄나 수처리 시설", "problem": "수처리 시설의 확장 필요성 해결"}
+{"id": "W4416190437", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 및 폐수 처리 시설 운영", "problem": "운영 효율성 향상"}
+{"id": "W4412366483", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 신흥 오염물질", "problem": "환경 및 건강 위험을 해결하려는 연구"}
+{"id": "W4412637122", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "안전한 음용수 접근성", "problem": "전통적인 소독 방법의 독성 부산물 문제 해결"}
+{"id": "W4414250220", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 회수 시설의 처리 성능", "problem": "유기물, 영양소 및 CEC 제거"}
+{"id": "W4414249749", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 처리 과정에서의 질소 감소", "problem": "위스키 증류 부산물 활용"}
+{"id": "W4414249804", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농촌 지역의 폐수 처리 시스템", "problem": "농촌 지역의 폐수 처리 기술 선택에 대한 정보 제공"}
+{"id": "W4414249827", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재사용 수돗물의 안전성", "problem": "유해 부산물 형성 문제 해결"}
+{"id": "W4414249919", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 공급 다양화", "problem": "정확한 비용 추정"}
+{"id": "W4414249984", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염원", "problem": "PFAS 오염원 관리 및 추적"}
+{"id": "W4414250458", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Fort Wayne의 물 시설", "problem": "전력 소비 감소 및 에너지 회복력 향상"}
+{"id": "W4414250680", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "오존화 공정", "problem": "트레이스 유기 오염물 제거 및 브로메이트 형성 최소화"}
+{"id": "W4414250877", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "매립지 침출수에서의 PFAS", "problem": "PFAS 제거 기술 평가"}
+{"id": "W4414251663", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "UV/AOP 처리 시스템의 성능", "problem": "UV/AOP 동역학의 정확한 제어 및 예측"}
+{"id": "W4414268215", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Immokalee Water & Sewer District의 하수도 시스템", "problem": "하수도 시스템의 침수 및 유입 문제 해결"}
+{"id": "W4414240099", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식품 가공을 위한 물 재사용", "problem": "물 재사용의 위험과 비용 이해하기"}
+{"id": "W4414250722", "domain_primary": "W6", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수에서의 PFAS 제거", "problem": "GAC의 PFAS 흡착 개선"}
+{"id": "W4414250841", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "저수지의 수질 목표", "problem": "영향을 미치는 클로로필-a 농도와 수질 사용 간의 관계를 정량적으로 규명하기"}
+{"id": "W4414251282", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "PFAS 오염물질", "problem": "PFAS 제거 효율 개선"}
+{"id": "W4414252063", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Anchorage Water and Wastewater Utility의 재난 복구 과정", "problem": "재난 복구에서의 도전과 교훈을 이해하고 관리하기"}
+{"id": "W4414268218", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐수 및 음용수 처리 공정", "problem": "화학 물질 사용량 및 전력 소비 감소"}
+{"id": "W4414575480", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "신장 산-염기 조절", "problem": "성별에 따른 차이를 이해하려는 연구"}
+{"id": "W4414458174", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Kadi River의 수질", "problem": "계절적 물리화학적 변화 평가"}
+{"id": "W4413817386", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "가정용 느린 모래 필터", "problem": "유지보수 필요성 감소"}
+{"id": "W4413748916", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Uromi 지역의 지하수", "problem": "플루오르와 비소의 오염 수준 평가"}
+{"id": "W4415947185", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Ogbia LGA의 지하수", "problem": "지하수의 오염 문제 해결"}
+{"id": "W4410499125", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수에서의 약물 잔여물", "problem": "효율적인 제거 기술 개발"}
+{"id": "W4411817464", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "폐의 기도 섬유증 및 수축성", "problem": "기도 반응성 변화 유도"}
+{"id": "W4410780152", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "심부전(HFpEF)", "problem": "CCR2+ 대식세포의 침윤 방지"}
+{"id": "W4411160227", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수돗물의 총 트리할로메탄(THMs)", "problem": "THMs 형성 문제 해결"}
+{"id": "W7222856962", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동물 영양에서의 포스트바이오틱스", "problem": "포스트바이오틱스의 이점 평가"}
+{"id": "W4411041385", "domain_primary": "W3", "domain_secondary": ["W6"], "confidence": 0.9, "domain_ver": "v0.1", "object": "채굴 지역의 기술적 수자원", "problem": "수질 개선 및 재사용 전략 개발"}
+{"id": "W4405570581", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 및 개인 관리 제품(PPCP)", "problem": "PPCP 제거를 위한 효과적인 처리 전략 식별"}
