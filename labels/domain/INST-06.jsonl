@@ -6284,3 +6284,22 @@
 {"id": "W4392659393", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동부 호주에서의 메탄 배출", "problem": "메탄 배출원 식별 및 연간 배출량 정량화"}
 {"id": "W4392652248", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "가상의 수위 관측소", "problem": "일일 강수량 추정의 시간적 빈도 개선"}
 {"id": "W4392655230", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "남알프스의 빙하 호수", "problem": "빙하 호수의 변화 모니터링"}
+{"id": "W7239427775", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 안전성", "problem": "홍수, 가뭄, 지하수 고갈 예측의 정확성 향상"}
+{"id": "W7239808518", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Lake Khanka의 수위", "problem": "과거 수위 변동 재구성 및 검증"}
+{"id": "W7239886715", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Gilbertiodendron dewevrei 숲", "problem": "이 숲의 분포와 보존 상태 이해하기"}
+{"id": "W7239892187", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Doñana National Park의 계절적 홍수 모니터링", "problem": "계절적 홍수 감지 및 분석"}
+{"id": "W7239900364", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수질", "problem": "수질 예측 및 모니터링 개선"}
+{"id": "W7239902037", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "남중국해 북부의 내부 고립파", "problem": "전파 특성을 이해하려는"}
+{"id": "W7239732921", "domain_primary": "W2", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "북부 페루의 저수지 운영 중단", "problem": "위성 기반 모니터링으로 비정상 운영 탐지"}
+{"id": "W7237345026", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "정밀 농업", "problem": "농업 의사 결정을 최적화하기 위한 데이터 활용"}
+{"id": "W4408654089", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "슬로벤스카 비스트리차의 도시 열섬", "problem": "도시 열섬의 특성 연구 및 건강과 생활 조건에 미치는 기후 영향 완화"}
+{"id": "W4405822206", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Al-Ratka Valley Basin의 수분 침식 정도", "problem": "수분 침식의 정도를 추정하기"}
+{"id": "W4403892849", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "원격 탐사를 통한 수자원 연구"}
+{"id": "W4403899036", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "농업 시스템 및 식량 안보", "problem": "원격 감지 기술을 통한 농업 분석 및 모니터링"}
+{"id": "W4414268255", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Meriç Delta의 토양 염분 상태", "problem": "토양 염분 문제 조사 및 해결 방안 제시"}
+{"id": "W4403209029", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브라질 중서부 지역의 대두 생산성", "problem": "대두 생산성 추정"}
+{"id": "W4402402637", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대두의 수분 소비", "problem": "수분 소비 평가"}
+{"id": "W7132157899", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "후안 고메스-돌로레스 습지 복합체의 수질", "problem": "수질 평가 및 모니터링"}
+{"id": "W7223457273", "domain_primary": "W1", "domain_secondary": ["W9"], "confidence": 0.8, "domain_ver": "v0.1", "object": "발트해 수역", "problem": "수역의 광학적 특성 이해 및 위성 원격 감지 제품 검증"}
+{"id": "W7208421545", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "발리 주 해안", "problem": "해수면 상승에 대한 취약성 평가"}
+{"id": "W7238714814", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "나무", "problem": "원거리 탐사 데이터에서 나무 추출 자동화"}

@@ -6842,3 +6842,37 @@
 {"id": "W7222856962", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "동물 영양에서의 포스트바이오틱스", "problem": "포스트바이오틱스의 이점 평가"}
 {"id": "W4411041385", "domain_primary": "W3", "domain_secondary": ["W6"], "confidence": 0.9, "domain_ver": "v0.1", "object": "채굴 지역의 기술적 수자원", "problem": "수질 개선 및 재사용 전략 개발"}
 {"id": "W4405570581", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "약물 및 개인 관리 제품(PPCP)", "problem": "PPCP 제거를 위한 효과적인 처리 전략 식별"}
+{"id": "W7168257609", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "카타르의 물 관리 시스템", "problem": "정책 일관성을 제한하는 요인 분석"}
+{"id": "W7239776039", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "캐나다의 생태계와 지역 사회", "problem": "산불로 인한 자연 및 사회경제적 영향 이해하기"}
+{"id": "W7239784745", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "에티오피아 메카네 셀람 복합 화산 고원 내 지하수", "problem": "지하수 관리의 지속 가능성 향상"}
+{"id": "W7239825204", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "습윤 산림 유역의 질소산화물 수출", "problem": "화재 강도와 기후 변동성이 질소산화물 수출에 미치는 영향 이해하기"}
+{"id": "W7239826136", "domain_primary": "W4", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 생물막 내 미생물 군집", "problem": "소독 처리에 따른 병원체 분포 조사"}
+{"id": "W7239889409", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "조류 블룸 관리", "problem": "탄소 중립적 방법으로 조류 유기물 재활용"}
+{"id": "W7238827861", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "브로일러 닭의 신장", "problem": "항생제 잔여물의 모니터링 및 철회 기간 결정"}
+{"id": "W7239892149", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "궤양성 대장염에서의 통증 관련 대장 신호", "problem": "UC 유래 미생물군을 DSS 유도 대장염에 추가하여 통증 관련 전사체 프로파일 생성 여부 확인"}
+{"id": "W4408299104", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Chironomus larvae", "problem": "생물학적 영향 분석"}
+{"id": "W4407233774", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수 처리 환경에서의 이산화염소", "problem": "이산화염소의 안정성 및 반응성 조사"}
+{"id": "W4404755437", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.0, "domain_ver": "v0.1", "object": "대장 운동성", "problem": "대장 운동성 장애 유발"}
+{"id": "W4414250245", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "간암 발생 과정", "problem": "간암의 다양한 단계 조사"}
+{"id": "W7238621327", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상수도 공급 프로세스", "problem": "내부 통제 시스템 구현을 통한 품질 개선"}
+{"id": "W4378974719", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 닭의 세균성 코크시디오시스", "problem": "코크시디오시스 치료 효과 평가"}
+{"id": "W4408568104", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 오염물질", "problem": "오염물질 제거 효율 평가"}
+{"id": "W4410405059", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "파키스탄의 빈곤", "problem": "구조적 장벽과 사회경제적 소외 해결하기"}
+{"id": "W4403746270", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재사용수의 전기 전도도", "problem": "전기 전도도 개선"}
+{"id": "W4403666227", "domain_primary": "W6", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 처리 시스템의 순환 경제", "problem": "하수 처리 폐기물 관리 개선"}
+{"id": "W4406339561", "domain_primary": "W5", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "젖소의 수분 섭취 및 행동", "problem": "단기적인 음수 접근 제한의 영향 조사"}
+{"id": "W4405028886", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Nippostrongylus brasiliensis 감염", "problem": "궤양성 대장염 완화"}
+{"id": "W4410078163", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "과체중 임산부의 아기 성장", "problem": "영양 상담의 효과 평가"}
+{"id": "W4401627896", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "식도 편평세포 암종", "problem": "P. gingivalis에 의한 염증 미세환경 유도"}
+{"id": "W4401550852", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "브로일러 치킨의 식용 조직", "problem": "티아물린 잔여물 분석 및 철회 시간 설정"}
+{"id": "W4401049348", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "음용수의 품질", "problem": "물의 미네랄화 수준 평가"}
+{"id": "W4399971566", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "물 안전성", "problem": "물의 품질 보장"}
+{"id": "W4399138252", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.0, "domain_ver": "v0.1", "object": "닭 뼈", "problem": "도키사이클린 잔여물의 존재 확인"}
+{"id": "W4381730815", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상업용 육계", "problem": "성장 성능 및 영양 이용 개선"}
+{"id": "W4396511190", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Pb-PO4 나노입자", "problem": "Pb-PO4 나노입자의 특성 이해 개선"}
+{"id": "W7120725502", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bisphenol-A", "problem": "오존을 이용한 제거 효율 평가"}
+{"id": "W4396851588", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "아르보리오 쌀 재배", "problem": "경제적 타당성 분석"}
+{"id": "W4392027884", "domain_primary": "W4", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "물 필터", "problem": "안정적이고 인쇄 가능한 세라믹 페이스트 개발"}
+{"id": "W4401721982", "domain_primary": "W6", "domain_secondary": ["W8"], "confidence": 0.9, "domain_ver": "v0.1", "object": "하수 처리 시설의 에너지 효율성", "problem": "하수 처리 과정에서 에너지 소비 최적화"}
+{"id": "W7238637875", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "청정 음용수", "problem": "물 부족 문제 해결"}
+{"id": "W4403518121", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "지역 꽃 기반의 분말 음료", "problem": "꽃의 종류와 물의 비율이 음료 특성에 미치는 영향 분석"}

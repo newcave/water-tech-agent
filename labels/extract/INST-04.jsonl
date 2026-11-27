@@ -1144,3 +1144,37 @@
 {"id": "W7213391680", "object": "댐 인프라", "problem": "콘크리트 균열 및 금속 부식 탐지", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7237318362", "object": "댐 인프라 및 개방 수로 수리", "problem": "현재 수리 공학의 산업 관행 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7239471910", "object": "수력 인프라", "problem": "점검 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239737339", "object": "Tonglüshan tailings dam", "problem": "댐의 변형 단계 분석 및 안전 모니터링 방법 탐색", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239732921", "object": "댐 운영 중단", "problem": "위험 신호 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239907245", "object": "댐 인프라의 안전성과 내구성", "problem": "실시간 이상 탐지로 댐 안전성 강화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402725416", "object": "Tianchi 댐의 내부 침하", "problem": "내부 침하 모니터링의 정확성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7220818036", "object": "구조물의 건강 상태", "problem": "구조물의 손상 및 이상 행동 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4398148686", "object": "댐의 수평 변위 모니터링", "problem": "정확한 측정값의 실시간 보정 및 출력 제공", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4396657034", "object": "Qarasu River의 지형적 품질", "problem": "지형적 상태 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392560554", "object": "콘크리트 댐", "problem": "변형 및 이동 감지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405538035", "object": "지반 모니터링 시스템", "problem": "댐 안전성을 개선하려는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405572509", "object": "댐의 지반 기술 기기", "problem": "자동화의 장단점 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229440", "object": "댐 안전", "problem": "댐 안전성을 극대화하기 위한 모니터링 방법 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411577509", "object": "댐 안전성 및 효율성", "problem": "균열 탐지 및 자동화된 운영 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399140786", "object": "웨스트버지니아의 최대 강수량(PMP) 및 산성 광산 배수(AMD) 슬러지", "problem": "최대 강수량 예측 및 AMD 슬러지 활용 방안 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405219357", "object": "브라질의 광산 댐", "problem": "수위 제어 수준에 따른 수압 안전성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405219383", "object": "댐 구조물의 안전성", "problem": "안전성 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229430", "object": "B1 댐", "problem": "댐의 법적 상황 정규화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229438", "object": "댐 안전성", "problem": "안전 관행 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229439", "object": "댐 구조물의 안전성", "problem": "댐의 안전성을 평가하고 모니터링하는 문제", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229444", "object": "상류에서 높여진 철광석 폐기물 댐", "problem": "안전성 향상 및 구조 안정화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229454", "object": "댐 폐쇄 구조물", "problem": "댐 폐쇄에 대한 지반 공학적 연구 수행", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229466", "object": "Francisco Gros 소수력 발전소의 발전 댐", "problem": "댐의 안정성 및 자유 수위 기준 충족", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229896", "object": "Lago Norte 댐", "problem": "댐의 경사 안정성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405229897", "object": "상류 방식의 제염 댐", "problem": "지반 공학적 특성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405280128", "object": "지반 구조물의 안전성", "problem": "AI 모델을 통한 지반 구조물의 모니터링 데이터 해석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405280153", "object": "댐 안전성", "problem": "댐 안전성 평가를 위한 데이터 분석 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405280282", "object": "콘크리트 면 암석 채움 댐(CFRD)", "problem": "수평 및 수직 변위 예측", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405424439", "object": "지반 구조물의 안전성", "problem": "지진 모니터링 시스템 구현의 도전 과제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405538205", "object": "댐의 안전성", "problem": "수위 변화 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405538307", "object": "댐의 안전성", "problem": "기계 작동으로 인한 진동 감지 및 위치 확인", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405539871", "object": "광산 댐의 안전성", "problem": "비상 상황에서 경고 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405540294", "object": "재해 방지 및 안전성 개선을 위한 폐기물 저장소", "problem": "폐기물 저장소의 이상 현상 분석 및 예방 조치 필요성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405572635", "object": "댐의 안전성", "problem": "안전성 저하에 대한 모니터링 및 의사결정 지원", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405710660", "object": "이타이푸 댐의 암석 기초", "problem": "변형 계수 결정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7135075836", "object": "타키아타시 수력 발전 단지의 구조물 상태", "problem": "구조물 결함 식별 및 제거", "relevant": true, "model": "gpt-4o-mini"}

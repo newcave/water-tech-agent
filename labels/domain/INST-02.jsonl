@@ -2044,3 +2044,20 @@
 {"id": "W4412068519", "domain_primary": "W1", "domain_secondary": ["W3"], "confidence": 0.9, "domain_ver": "v0.1", "object": "Jequitinhonha 강 유역의 수자원 관리", "problem": "수자원 품질과 가용성 평가"}
 {"id": "W4407734805", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "인간의 환경에 대한 대처", "problem": "환경에 대한 인간의 영향 이해하기"}
 {"id": "W4407980520", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 가용성 및 수질", "problem": "기후 변화로 인한 수자원 부족 문제 해결"}
+{"id": "W7239941404", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상류 유역의 보호 숲", "problem": "보호 능력 평가 기준 부족 해결"}
+{"id": "W7239961511", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Curé 강 유역의 물 관리", "problem": "지속 가능한 물 관리 촉진"}
+{"id": "W4403892849", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "원격 탐사를 통한 수자원 연구"}
+{"id": "W7239606853", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "Loma Alta 지역의 지하수 자원", "problem": "지하수 자원 관리 전략 제안"}
+{"id": "W4405912020", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 자원", "problem": "지하수 자원의 잠재력 파악"}
+{"id": "W4402900602", "domain_primary": "W3", "domain_secondary": ["W1"], "confidence": 0.8, "domain_ver": "v0.1", "object": "카르스트 지하수 및 지표수", "problem": "재충전 원천 및 수질 변화 이해"}
+{"id": "W7239999213", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "기후 변화와 토지 관리 관행이 수자원에 미치는 영향 평가"}
+{"id": "W4404024799", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "피라시카바 시의 수질 오염", "problem": "경작 환경에서 오염물질 운반 능력 이해"}
+{"id": "W7120548309", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Toledo River microbasin", "problem": "수자원의 지속 가능한 사용 계획"}
+{"id": "W4392589563", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산악 지역의 수자원 관리", "problem": "기후 변화가 수자원에 미치는 영향 평가"}
+{"id": "W4392589584", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산악 지역의 수자원 관리", "problem": "기후 변화에 따른 빙하 및 눈 덮임 변화의 영향 평가"}
+{"id": "W4392589625", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "산악 지역의 수자원 관리", "problem": "기후 변화에 따른 빙하 및 눈 덮임 변화의 영향 평가"}
+{"id": "W4392342860", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "대규모 하천 유역의 수자원", "problem": "빙하 표현 개선 필요"}
+{"id": "W4391277860", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Bouregreg 유역의 수자원", "problem": "기후 변화의 영향 설명"}
+{"id": "W4400889658", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "사회과학적 측면 통합하기"}
+{"id": "W4411459885", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다중 사이트 환경에서의 자원 제약 프로젝트 일정", "problem": "자원 제약 프로젝트 일정 문제 해결"}
+{"id": "W7239713624", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "기후 변화에 따른 영양소 부하 문제 해결"}

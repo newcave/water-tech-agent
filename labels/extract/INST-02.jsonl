@@ -2130,3 +2130,21 @@
 {"id": "W4412068519", "object": "Jequitinhonha 강 유역의 수자원 관리", "problem": "수자원 품질과 가용성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407734805", "object": "인간의 환경에 대한 대처", "problem": "환경에 대한 인간의 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4407980520", "object": "수자원 가용성 및 수질", "problem": "기후 변화로 인한 수자원 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239941404", "object": "상류 유역의 보호 숲", "problem": "보호 능력 평가 기준 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239961511", "object": "Curé 강 유역의 물 관리", "problem": "지속 가능한 물 관리 촉진", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4403892849", "object": "수자원", "problem": "원격 탐사를 통한 수자원 연구", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239606853", "object": "Loma Alta 지역의 지하수 자원", "problem": "지하수 자원 관리 전략 제안", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4405912020", "object": "지하수 자원", "problem": "지하수 자원의 잠재력 파악", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4402900602", "object": "카르스트 지하수 및 지표수", "problem": "재충전 원천 및 수질 변화 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239999213", "object": "수자원", "problem": "기후 변화와 토지 관리 관행이 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4404024799", "object": "피라시카바 시의 수질 오염", "problem": "경작 환경에서 오염물질 운반 능력 이해", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120548309", "object": "Toledo River microbasin", "problem": "수자원의 지속 가능한 사용 계획", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7111619013", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W4392589563", "object": "산악 지역의 수자원 관리", "problem": "기후 변화가 수자원에 미치는 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392589584", "object": "산악 지역의 수자원 관리", "problem": "기후 변화에 따른 빙하 및 눈 덮임 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392589625", "object": "산악 지역의 수자원 관리", "problem": "기후 변화에 따른 빙하 및 눈 덮임 변화의 영향 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392342860", "object": "대규모 하천 유역의 수자원", "problem": "빙하 표현 개선 필요", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4391277860", "object": "Bouregreg 유역의 수자원", "problem": "기후 변화의 영향 설명", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400889658", "object": "수자원 관리", "problem": "사회과학적 측면 통합하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4411459885", "object": "다중 사이트 환경에서의 자원 제약 프로젝트 일정", "problem": "자원 제약 프로젝트 일정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239713624", "object": "수자원", "problem": "기후 변화에 따른 영양소 부하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}

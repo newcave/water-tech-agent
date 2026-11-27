@@ -3576,3 +3576,17 @@
 {"id": "W7220783034", "object": "미국 전력망의 가상 물 전송", "problem": "계절, 기후 및 인프라 변화에 따른 변동 분석", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4409294734", "object": "태양광 발전소", "problem": "비용 절감 방안 탐색", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4410479977", "object": "소규모 수력 발전소의 최적 운영", "problem": "전력 생산 최적화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239719214", "object": "키르기스스탄의 농촌 지역 에너지 안정성", "problem": "계절적 에너지 불안정성 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239791060", "object": "재생 가능 수소 생산", "problem": "경제적 성과 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239783973", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
+{"id": "W7239857051", "object": "파키스탄 전력 부문", "problem": "지속 가능한 에너지 전환을 위한 제약 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7218053542", "object": "이탈리아의 담수 생태계", "problem": "담수 생물종의 서식지 선호도에 대한 지식 격차 해소", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4409103755", "object": "풍력 발전 예측", "problem": "단기 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7120833730", "object": "소규모 수력 발전소 주변의 환경 취약성", "problem": "수질과 법적 기준 간의 격차 측정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4400913221", "object": "네팔의 전기 요리 채택", "problem": "전기 요리 채택을 증가시키는 방법을 찾기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399807251", "object": "카자흐스탄의 수소 에너지", "problem": "수소 에너지 개발을 위한 로드맵 부족 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4393278309", "object": "초등학생의 수력 발전 효율성", "problem": "효율적인 댐 설계하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392026803", "object": "아사이 씨앗의 열적 특성", "problem": "습도가 LHV 및 휘발성 함량에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392027326", "object": "리우데자네이루의 옥상 태양광 발전", "problem": "옥상 태양광 발전을 통한 전력 생산 비용 절감", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4392027450", "object": "청정 수소 생산을 위한 전해조", "problem": "전해조의 전기화학적 거동 조사", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7134955025", "object": "재생 가능 에너지 저장 및 분배 시스템", "problem": "효율성 문제 최적화", "relevant": true, "model": "gpt-4o-mini"}

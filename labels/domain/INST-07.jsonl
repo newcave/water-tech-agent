@@ -1320,3 +1320,10 @@
 {"id": "W7117780172", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Upper Mississippi and Illinois Rivers의 수문 데이터 제품", "problem": "신뢰성 평가"}
 {"id": "W4417217382", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "Salar de Pozuelos의 리튬 자원", "problem": "리튬 공급의 원천 이해하기"}
 {"id": "W4417217700", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "건조지대의 리파리안 구역", "problem": "식생 성장과 수문학적 피드백 이해하기"}
+{"id": "W7239781608", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강수 예측 정확도", "problem": "강수 예측 성능 향상"}
+{"id": "W7239747654", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "지하수 오염 위험", "problem": "오염 위험을 매핑하기"}
+{"id": "W4403892849", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "원격 탐사를 통한 수자원 연구"}
+{"id": "W7220824336", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "해수의 안정적인 산소 동위원소 조성(δ18Osw)", "problem": "해양 순환과 수문학적 변수 간의 관계 이해"}
+{"id": "W7220788418", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원 관리 및 자연재해 대응", "problem": "복잡한 현상 이해 및 모델 정확도 향상"}
+{"id": "W7119380141", "domain_primary": "W1", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "상파울루 고날로 채널의 수위", "problem": "수위 예측 정확도 향상"}
+{"id": "W4399772459", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "수자원 관련 재해 탐지 및 관리 개선"}
