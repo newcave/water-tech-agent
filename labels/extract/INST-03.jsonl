@@ -6989,3 +6989,22 @@
 {"id": "W4401721982", "object": "하수 처리 시설의 에너지 효율성", "problem": "하수 처리 과정에서 에너지 소비 최적화", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7238637875", "object": "청정 음용수", "problem": "물 부족 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4403518121", "object": "지역 꽃 기반의 분말 음료", "problem": "꽃의 종류와 물의 비율이 음료 특성에 미치는 영향 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240048137", "object": "가정의 수돗물 공급원과 위생 상태", "problem": "가정의 수돗물 안전성 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240078111", "object": "꿀벌과 벌집 제품의 미세플라스틱 노출 경로", "problem": "미세플라스틱 오염 경로 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240028767", "object": "대사 기능 장애와 관련된 지방간염으로 인한 간 섬유증", "problem": "간 섬유증 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240088695", "object": "지하수 품질 및 염분 위험", "problem": "지하수 품질 저하 및 염분 위험 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240101227", "object": "음용수 처리 시스템", "problem": "음용수 품질 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240090785", "object": "하천 수질", "problem": "하천 수질 오염 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240078314", "object": "가정용 식수의 미생물학적 품질", "problem": "E. coli 오염 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7113683541", "object": "말레이시아의 폐수 관리 및 거버넌스 체계", "problem": "효과적인 폐수 관리 촉진을 위한 격차 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4390102190", "object": "Palu City의 2세 미만 아동", "problem": "영양실조 위험 요인 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7238683080", "object": "Vereda Yayatá의 음용수", "problem": "음용수 처리 시스템 설계", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4387404187", "object": "beige adipocytes", "problem": "lactate에 의한 beige adipocyte 형성 유도", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7204414281", "object": "신선한 물의 오염물질", "problem": "오염물질의 제어 및 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239248038", "object": "학교 연령 아동의 뎅기 출혈열(DHF)", "problem": "출혈 위험 관리", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386955528", "object": "미국의 음용수 품질", "problem": "음용수 오염의 노출 위험 프로파일 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4384786896", "object": "장내 미생물군", "problem": "과당과 자당의 대사에 미치는 차별적 영향 이해하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4382371680", "object": "육계의 괴사성 장염 및 코크시디오시스", "problem": "예방을 위한 백신 효과 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239418815", "object": "로즈드예스트베노 농촌 정착지의 음용수", "problem": "고품질 음용수 제공 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4321240709", "object": "음용수에서의 비소와 카드뮴", "problem": "다중 중금속 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4317752000", "object": "뉴욕시 주민의 크립토스포리디움 감염 사례", "problem": "크립토스포리디움 종의 출처 조사", "relevant": true, "model": "gpt-4o-mini"}

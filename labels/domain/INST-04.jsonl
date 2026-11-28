@@ -1165,3 +1165,6 @@
 {"id": "W4405572635", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 안전성", "problem": "안전성 저하에 대한 모니터링 및 의사결정 지원"}
 {"id": "W4405710660", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "이타이푸 댐의 암석 기초", "problem": "변형 계수 결정"}
 {"id": "W7135075836", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "타키아타시 수력 발전 단지의 구조물 상태", "problem": "구조물 결함 식별 및 제거"}
+{"id": "W4387581168", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 안전성", "problem": "웅덩이 변형으로 인한 댐 붕괴 침하 시뮬레이션"}
+{"id": "W7240005561", "domain_primary": "W7", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "댐의 변형 상태", "problem": "댐 변형 모니터링 시스템 개선"}
+{"id": "W4320897554", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "기도 관리 알고리즘", "problem": "기도 관리 오류를 줄이기 위한 개선 방안 제시"}

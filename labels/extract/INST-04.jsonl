@@ -1178,3 +1178,6 @@
 {"id": "W4405572635", "object": "댐의 안전성", "problem": "안전성 저하에 대한 모니터링 및 의사결정 지원", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4405710660", "object": "이타이푸 댐의 암석 기초", "problem": "변형 계수 결정", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7135075836", "object": "타키아타시 수력 발전 단지의 구조물 상태", "problem": "구조물 결함 식별 및 제거", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4387581168", "object": "댐의 안전성", "problem": "웅덩이 변형으로 인한 댐 붕괴 침하 시뮬레이션", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240005561", "object": "댐의 변형 상태", "problem": "댐 변형 모니터링 시스템 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4320897554", "object": "기도 관리 알고리즘", "problem": "기도 관리 오류를 줄이기 위한 개선 방안 제시", "relevant": true, "model": "gpt-4o-mini"}

@@ -3803,3 +3803,10 @@
 {"id": "W4390660579", "object": "인디언 및 킬 크릭 유역의 수질 개선", "problem": "하천 유동 특성 및 수문 변형 이해", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4399772257", "object": "수자원 관리 네트워크", "problem": "데이터 활용의 비효율성 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4399772891", "object": "물 공급 시스템", "problem": "물 압력 관리 및 자산 관리 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240057969", "object": "농업 토지 이용 및 커버(LULC)와 관개 유형", "problem": "정확한 농업 지도 생성", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240069007", "object": "수자원 배급 네트워크", "problem": "결정 지원 체계 개발", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240073207", "object": "송도 국제 도시의 지속 가능성과 회복력 목표", "problem": "데이터 센터 개발을 지원하도록 관리하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7237798417", "object": "기업의 물 자원 관리", "problem": "생산성 손실 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4380685535", "object": "작물 성장", "problem": "작물 성장 예측 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4366202095", "object": "수자원 관리 자산", "problem": "자산 관리의 서비스 수준 향상", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240095260", "object": "도시 가정의 물 소비", "problem": "물 소비 감소 및 누수 탐지", "relevant": true, "model": "gpt-4o-mini"}

@@ -3507,3 +3507,8 @@
 {"id": "W4392027326", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "리우데자네이루의 옥상 태양광 발전", "problem": "옥상 태양광 발전을 통한 전력 생산 비용 절감"}
 {"id": "W4392027450", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "청정 수소 생산을 위한 전해조", "problem": "전해조의 전기화학적 거동 조사"}
 {"id": "W7134955025", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "재생 가능 에너지 저장 및 분배 시스템", "problem": "효율성 문제 최적화"}
+{"id": "W7240024100", "domain_primary": "W8", "domain_secondary": ["W1"], "confidence": 0.8, "domain_ver": "v0.1", "object": "아프리카의 전력 시스템", "problem": "재생 가능 에너지 다각화와 가뭄 취약성 이해"}
+{"id": "W7240064665", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "대만의 재생 가능 에너지 발전", "problem": "정책 목표 달성을 위한 재생 가능 에너지의 전략적 우선순위 평가"}
+{"id": "W7240093831", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "강 유역 가상 발전소", "problem": "재생 가능 에너지 자원의 조정 문제 해결"}
+{"id": "W7144296924", "domain_primary": "W0_UNCLASSIFIED", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "과일 이미지 분류", "problem": "자동화된 과일 식별 문제 해결"}
+{"id": "W7111640648", "domain_primary": "W8", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "라오스의 전력 공급", "problem": "전력 부족 문제 해결"}

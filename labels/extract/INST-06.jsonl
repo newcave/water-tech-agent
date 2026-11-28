@@ -6357,3 +6357,14 @@
 {"id": "W7223457273", "object": "발트해 수역", "problem": "수역의 광학적 특성 이해 및 위성 원격 감지 제품 검증", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7208421545", "object": "발리 주 해안", "problem": "해수면 상승에 대한 취약성 평가", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7238714814", "object": "나무", "problem": "원거리 탐사 데이터에서 나무 추출 자동화", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240033052", "object": "지하수 재충전 지역", "problem": "정확한 재충전 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7239797245", "object": "멜버른의 도시 폭풍수 습지", "problem": "식생 덮개와 탁도 모니터링", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240057969", "object": "농업 토지 이용 및 커버(LULC)와 관개 유형", "problem": "정확한 농업 LULC 및 관개 유형 매핑 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240063555", "object": "전 세계의 수증기", "problem": "정확한 수증기 회수 개선", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240061450", "object": "공기, 물, 토양 오염", "problem": "정확한 오염 모니터링 및 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240093587", "object": "환경 오염", "problem": "지속 가능한 환경 모니터링 및 예측 시스템 구현", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240041908", "object": "농업 지역의 오염 모니터링 시스템", "problem": "중금속 및 농약 오염 탐지", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4399176013", "object": "Cheney Reservoir의 수질", "problem": "수질 탁도 추정", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4377143275", "object": "토지 이용 및 토지 피복 (LULC)", "problem": "혼합 픽셀 없이 토지 이용 분류하기", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4386696223", "object": "인도네시아의 새로운 수도 도시와 주변 도시의 도시 열섬 현상", "problem": "도시 열섬 현상 분석", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W4379985151", "object": "지하 토양 수분 및 식물 수분 함량", "problem": "위성 기반 원격 감지 요구 사항 정의", "relevant": true, "model": "gpt-4o-mini"}

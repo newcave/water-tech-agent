@@ -2061,3 +2061,4 @@
 {"id": "W4400889658", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "수자원 관리", "problem": "사회과학적 측면 통합하기"}
 {"id": "W4411459885", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "다중 사이트 환경에서의 자원 제약 프로젝트 일정", "problem": "자원 제약 프로젝트 일정 문제 해결"}
 {"id": "W7239713624", "domain_primary": "W3", "domain_secondary": [], "confidence": 0.9, "domain_ver": "v0.1", "object": "수자원", "problem": "기후 변화에 따른 영양소 부하 문제 해결"}
+{"id": "W7240072017", "domain_primary": "W0", "domain_secondary": [], "confidence": 0.8, "domain_ver": "v0.1", "object": "도시 물 저항력", "problem": "우선 지역을 결정하고 물 저항력을 향상시키기 위한 토지 적합성 평가"}

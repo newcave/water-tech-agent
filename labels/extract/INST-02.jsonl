@@ -2148,3 +2148,5 @@
 {"id": "W4400889658", "object": "수자원 관리", "problem": "사회과학적 측면 통합하기", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W4411459885", "object": "다중 사이트 환경에서의 자원 제약 프로젝트 일정", "problem": "자원 제약 프로젝트 일정 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
 {"id": "W7239713624", "object": "수자원", "problem": "기후 변화에 따른 영양소 부하 문제 해결", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7240072017", "object": "도시 물 저항력", "problem": "우선 지역을 결정하고 물 저항력을 향상시키기 위한 토지 적합성 평가", "relevant": true, "model": "gpt-4o-mini"}
+{"id": "W7112729242", "object": "", "problem": "", "relevant": false, "model": "gpt-4o-mini"}
